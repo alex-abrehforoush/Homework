@@ -1,0 +1,132 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{xepersian}
+
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف اول درس پایگاه داده‌ها 1}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+\input{titlepage}
+
+%\tableofcontents
+\newpage
+
+\section{}
+اگر سوال بخش\,بندی\,شده نباشد، پاسخ آن در این قسمت نوشته می\,شود.
+\subsection{}
+پاسخ بخش اول سوال در این قسمت نوشته می\,شود.
+\subsection{}
+پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
+\subsection{}
+پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
+
+\section{}
+در این قسمت با نحوه نوشتن متون دارای کلمات انگلیسی آشنا می\,شوید:\\
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    ویژگی‌ها & معماری دولایه & معماری سه‌لایه\\
+    \hline
+    سرعت & خانه شماره 5 & خانه شماره 6\\
+    \hline
+    امنیت & خانه شماره 8 & خانه شماره 9\\
+    \hline
+    افزونگی & خانه شماره 5 & خانه شماره 6\\
+    \hline
+    مقیاس‌پذیری & خانه شماره 8 & خانه شماره 9\\
+    \hline
+    انعطاف‌پذیری & خانه شماره 5 & خانه شماره 6\\
+    \hline
+    یک‌پارچگی & خانه شماره 8 & خانه شماره 9\\
+    \hline
+    \end{tabular}
+    \caption{جدول شماره 1}
+    \label{tab:tab1}
+\end{table}
+
+\section{}
+در این قسمت با نحوه درج فرمول\,های ریاضی آشنا می\,شوید:
+\begin{center}
+$E = m{c}^{2}$
+\end{center}
+
+\section{}
+در این قسمت با نحوه درج اشکال آشنا می\,شوید:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.4\textwidth]{IUT Logo.png}
+    \caption{شکل شماره 1}
+    \label{fig:fig1}
+\end{figure}
+
+\section{}
+در این قسمت با نحوه درج جداول آشنا می\,شوید:
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    خانه شماره 1 & خانه شماره 2 & خانه شماره 3\\
+    \hline
+    خانه شماره 4 & خانه شماره 5 & خانه شماره 6\\
+    \hline
+    خانه شماره 7 & خانه شماره 8 & خانه شماره 9\\
+    \hline
+    \end{tabular}
+    \caption{جدول شماره 1}
+    \label{tab:tab1}
+\end{table}
+
+\section{}
+در این قسمت با نحوه درج انواع لیست\,ها آشنا می\,شوید:
+\subsection{}
+\begin{itemize}
+    \item [$\bullet$] مورد اول
+    \item [$\bullet$] مورد دوم
+\end{itemize}
+\subsection{}
+\begin{enumerate}
+    \item مورد شماره 1
+    \item مورد شماره 2
+\end{enumerate}
+
+\section{}
+در این قسمت با نحوه ارجاع به سایر منابع آشنا می\,شوید:\\
+\indent
+به صفحه درس سیستم عامل دکتر محمّدرضا حیدرپور ارجاع داده می\,شود \cite{b1}.
+
+\section{ضمیمه}
+برای آشنایی بیشتر با \lr{\LaTeX}، با جست\,و\,جو در اینترنت منابع مفیدی خواهید یافت.
+
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1} http://mrheidar.ir/courses/operating\_system.html
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}
