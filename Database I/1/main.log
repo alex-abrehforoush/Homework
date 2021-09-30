@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  30 SEP 2021 20:40
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  30 SEP 2021 22:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -947,19 +947,25 @@ Overfull \hbox (66.30641pt too wide) in paragraph at lines 159--176
 
 [4
 
-] [5]
+]
+Overfull \hbox (36.47359pt too wide) in paragraph at lines 210--218
+[]$\OML/cmm/m/it/10 B \OMS/cmsy/m/n/10   \OT1/cmr/m/n/10 ^^E[](\OML/cmm/m/it/10
+ Member .[]/[] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Book .[]/[]$[]
+ []
+
+[5]
 File: figures/IUT Logo.png Graphic file (type bmp)
 <figures/IUT Logo.png>
  [6]
 
-LaTeX Warning: Citation 'b1' on page 7 undefined on input line 268.
+LaTeX Warning: Citation 'b1' on page 7 undefined on input line 275.
 
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 268.
+(Font)              scaled to size 11.99997pt on input line 275.
 Missing character: There is no b (U+0062) in font [B-NAZANIN.TTF]/OT:script=ara
 b;language=dflt;mapping=persian-tex-text;!
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 271.
+(Font)              scaled to size 7.0pt on input line 278.
 [7] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
