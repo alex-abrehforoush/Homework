@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage{graphicx}
+\usepackage{amsmath}
 \usepackage{fancyhdr}
 \usepackage[sorting=none]{biblatex}
 \usepackage[margin=1in]{geometry}
@@ -8,6 +9,7 @@
 \usepackage{placeins}
 \usepackage{xepersian}
 
+%\DeclareMathOperator*{\btie}{\bowtie}
 \addbibresource{bibliography.bib}
 \settextfont[Scale=1.2]{B-NAZANIN.TTF}
 \setlatintextfont[Scale=1]{Times New Roman}
@@ -196,7 +198,14 @@
 \section{}
 اگر سوال بخش\,بندی\,شده نباشد، پاسخ آن در این قسمت نوشته می\,شود.
 \subsection{}
-پاسخ بخش اول سوال در این قسمت نوشته می\,شود.
+
+$
+A
+\leftarrow
+\Pi_{(Title,\:ReturnDate)}
+(Borrow \bowtie_{(MemberID\:=\:1356\:\wedge\:IsReturned\:=\:False)} Book)
+$
+
 \subsection{}
 پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
 \subsection{}
