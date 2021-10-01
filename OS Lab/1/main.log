@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  1 OCT 2021 20:55
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  1 OCT 2021 20:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -959,7 +959,7 @@ File: figures/a.png Graphic file (type bmp)
 <figures/a.png>
  [3]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 122.
+(Font)              scaled to size 10.0pt on input line 121.
 File: figures/b.png Graphic file (type bmp)
 <figures/b.png>
 File: figures/5.png Graphic file (type bmp)
@@ -983,10 +983,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 15420 strings out of 476919
- 329119 string characters out of 5825424
- 1141488 words of memory out of 5000000
- 35179 multiletter control sequences out of 15000+600000
+ 15416 strings out of 476919
+ 329103 string characters out of 5825424
+ 1141476 words of memory out of 5000000
+ 35175 multiletter control sequences out of 15000+600000
  403686 words of font info for 59 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,10n,109p,1290b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
