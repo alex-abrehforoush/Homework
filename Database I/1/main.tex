@@ -198,29 +198,97 @@
 \section{}
 اگر سوال بخش\,بندی\,شده نباشد، پاسخ آن در این قسمت نوشته می\,شود.
 \subsection{}
-
 $
-A
-\leftarrow
-\Pi_{(Title,\:ReturnDate)}
-(Borrow \bowtie_{(MemberID\:=\:1356\:\wedge\:IsReturned\:=\:False)} Book)
+\Pi_{Title,\:ReturnDate}
+(Borrow \bowtie_{MemberID\:=\:1356\:\wedge\:IsReturned\:=\:False} Book)
 $
 
 \subsection{}
+$
+\Pi_{Name}
+(Member
+\bowtie_{Member.CategoryID\:=\:``Physics"}
+(Book \bowtie_{Book.BookID\:=\:Borrow.BookID\:\wedge\:CategoryID\:=\:``Physics"}\:Borrow))
+$
+\subsection{}
+$
+\Pi_{Name,\:Title}
+(Member
+\bowtie_{Member.CategoryID\:=\:Book.CategoryID}
+Book)
+\:-\:
+\newline
+\Pi_{Name,\:Title}
+(Borrow
+\bowtie_{Borrow.MemberID\:=\:Member.MemberID\:\wedge\:Borrow.BookID\:=\:Book.BookID}
+\newline
+(Member
+\bowtie_{Member.CategoryID\:=\:Book.CategoryID}
+Book))
+$
+\subsection{}
+$
+\Pi_{Name,\:Title}
+(Member
+\bowtie_{Member.MemberID\:=\:Borrow.MemberID}
+\newline
+(Borrow
+\bowtie_{CategoryID\:=\:``Drama"\:\wedge\:IsReturned\:=\:False\:\wedge\:Today\:-\:ReturnDate\:>\:10\:Days}
+Book))
+$
+\subsection{}
+ابتدا عبارت را به شکل زیر تفکیک می‌کنیم:
+\begin{center}
+$
+D
+\leftarrow
+Borrow
+\bowtie_{Borrow.BookID\:=\:Book.BookID}
+Book
+$
+\end{center}
+\begin{center}
+$
+C
+\leftarrow
+D
+\bowtie_{Borrow.MemberID\:=\:Member.MemberID}
+Member
+$
+\end{center}
+\begin{center}
 $
 B
 \leftarrow
-\Pi_{Name}
-(Member
-\bowtie_{(Member.CategoryID\:=\:``Physics")}
-(Book \bowtie_{(Book.BookID\:=\:Borrow.BookID\:\wedge\:CategoryID\:=\:``Physics")}\:Borrow))
+\sigma_{Borrow.NumDays\:\times\:Book.Penalty\:\geq\:100000}
+(C)
 $
-\subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
+\end{center}
+\begin{center}
+$
+A
+\leftarrow
+\Pi_{Member.Name,\:Book.Title}
+(B)
+$
+\end{center}
+\lr{D}
+لیست اطلاعات کتاب‌های امانت گرفته‌شده را همراه با اطلاعات امانت آن‌ها برمی‌گرداند.
+\newline
+\lr{C}
+لیست اطلاعات اعضا و اطلاعات کتاب‌های امانت گرفته‌شده آن‌ها را همراه با اطلاعات امانت آن‌ها برمی‌گرداند.
+\newline
+\lr{B}
+سطر‌هایی از
+\lr{C}
+را برمی‌گرداند که جریمه دیرکرد آن‌ها بزرگتر یا مساوی 100000 تومان باشد. 
+\newline
+\lr{A}
+که همان عبارت نهایی است ستون‌های نام عضو و نام کتاب را از
+\lr{B}
+برمی‌گرداند.
+\newline
+پس نتیجه عبارت، نام عضو و نام کتاب‌هایی که امانت گرفته‌اند و جریمه دیرکرد آن‌ها بزرگتر یا مساوی 100000 تومان است می‌باشد.
 \subsection{}
 پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
 
