@@ -1,12 +1,15 @@
 \documentclass{article}
 
 \usepackage{graphicx}
+\usepackage{amsmath}
 \usepackage{fancyhdr}
 \usepackage[sorting=none]{biblatex}
 \usepackage[margin=1in]{geometry}
 \usepackage[font={small,it}]{caption}
+\usepackage{placeins}
 \usepackage{xepersian}
 
+%\DeclareMathOperator*{\btie}{\bowtie}
 \addbibresource{bibliography.bib}
 \settextfont[Scale=1.2]{B-NAZANIN.TTF}
 \setlatintextfont[Scale=1]{Times New Roman}
@@ -27,183 +30,140 @@
 \newpage
 
 \section{}
-اگر سوال بخش\,بندی\,شده نباشد، پاسخ آن در این قسمت نوشته می\,شود.
+
 \subsection{}
-\begin{itemize}
-    \item [$\bullet$]
-    \lr{DBMS}
-    به عنوان واسطه بین کاربر و پایگاه داده عمل می‌کند. این ساختار پایگاه داده خود به عنوان مجموعه ای از فایل‌ها ذخیره می‌شود و تنها راه دسترسی به اطلاعات موجود در آن فایل‌ها از طریق 
-    \lr{DBMS}
-است.
-شکل 1.1 بر این نکته تأکید می کند که
-    \lr{DBMS}
-به کاربر (یا برنامه کاربردی) یک نمای واحد و یکپارچه از داده‌های موجود در پایگاه داده ارائه می دهد.
-    \lr{DBMS}
-همه 
-	\lr{request}
-‌های برنامه را دریافت و آن‌ها را به عملیات‌های پیچیده مورد نیاز برای پاسخ به 
-این
-	\lr{request}
-‌ها
-ترجمه می‌کند.
-بسیاری از پیچیدگی‌های داخلی پایگاه داده به وسیله 
-    \lr{DBMS}
-از برنامه های کاربردی و کاربران پنهان می‌شود.
-برنامه کاربردی ممکن است توسط یک برنامه‌نویس با استفاده از یک زبان برنامه‌نویسی مانند 
-	\lr{Visual Basic.NET}، \lr{Java}
-یا
-	\lr{C\#}
-نوشته شود یا ممکن است توسط یک
-	\lr{DBMS utility program}
-ساخته شود.
-داشتن یک
-	\lr{DBMS}
-بین
-	\lr{application}
-کاربر و پایگاه داده مزایای مهمی را به ارمغان می‌آورد. اولا
-	\lr{DBMS}
-به داده‌ها اجازه می‌دهد که بتوانند بین چندین برنامه به اشتراک گذاشته شوند. ثانیا
-	\lr{DBMS}
-بسیاری از دیدگاه(\lr{view})های مختلف کاربران از داده‌ها را با هم ادغام می‌کند و در یک مخزن همه جانبه ارائه می‌دهد.
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.7\textwidth]{figures/1.1.png}
+    \includegraphics[width=1.0\textwidth]{figures/1.1.png}
     \caption
 	{
-	\lr{DBMS}
-تعاملات بین کاربر و پایگاه داده را مدیریت می‌کند.
+با توجه به اینکه کاراکتر سوم در همه موارد
+\lr{w}
+است، هیچ دایرکتوری‌ای وجود ندارد که به مالک اجازه‌ی
+\lr{write}
+ندهد.
 	}
     \label{fig:fig1}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \item [$\bullet$] مورد دوم
-\end{itemize}
 \subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
-
-\section{}
-ابجدهوز
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/2.png}
+    \includegraphics[width=1.0\textwidth]{figures/1.2.png}
+    \caption
+	{
+زمان آخرین دسترسی به فایل 06:32 می‌باشد.
+	}
+    \label{fig:fig1}
+\end{figure}
+\FloatBarrier
+
+\subsection{}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/1.3.png}
+    \caption
+	{
+زمان آخرین دسترسی به فایل 06:35 می‌باشد.
+	}
+    \label{fig:fig1}
+\end{figure}
+\FloatBarrier
+
+\subsection{}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/1.4.png}
     \caption{}
     \label{fig:fig1}
 \end{figure}
-
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{|c|c|c|}
-    \hline
-    ویژگی‌ها & معماری دولایه & معماری سه‌لایه\\
-    \hline
-    سرعت & کمتر(کندتر) & بیشتر(سریعتر)\\
-    \hline
-    امنیت & کمتر(کلاینت می‌تواند مستقیما با پایگاه داده تعامل داشته باشد) & بیشتر(کلاینت مجاز به تعامل مستقیم با پایگاه داده نمی‌باشد)\\
-    \hline
-    افزونگی & خانه شماره 5 & خانه شماره 6\\
-    \hline
-    مقیاس‌پذیری & کمتر() & بیشتر()\\
-    \hline
-    انعطاف‌پذیری & خانه شماره 5 & خانه شماره 6\\
-    \hline
-    یک‌پارچگی & خانه شماره 8 & خانه شماره 9\\
-    \hline
-    \end{tabular}
-    \caption{جدول شماره 1}
-    \label{tab:tab1}
-\end{table}
+\FloatBarrier
 
 \section{}
-اگر سوال بخش\,بندی\,شده نباشد، پاسخ آن در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش اول سوال در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
-
-\section{}
-اگر سوال بخش\,بندی\,شده نباشد، پاسخ آن در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش اول سوال در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
-
-\section{}
-اگر سوال بخش\,بندی\,شده نباشد، پاسخ آن در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش اول سوال در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
-\subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
-
-\section{}
-در این قسمت با نحوه درج فرمول\,های ریاضی آشنا می\,شوید:
-\begin{center}
-$E = m{c}^{2}$
-\end{center}
-
-\section{}
-در این قسمت با نحوه درج اشکال آشنا می\,شوید:
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.4\textwidth]{figures/IUT Logo.png}
-    \caption{شکل شماره 1}
+    \includegraphics[width=1.0\textwidth]{figures/2.png}
+    \caption{}
     \label{fig:fig1}
 \end{figure}
+\FloatBarrier
+
 
 \section{}
-در این قسمت با نحوه درج جداول آشنا می\,شوید:
-\begin{table}[ht]
+\begin{figure}[ht]
     \centering
-    \begin{tabular}{|c|c|c|}
-    \hline
-    خانه شماره 1 & خانه شماره 2 & خانه شماره 3\\
-    \hline
-    خانه شماره 4 & خانه شماره 5 & خانه شماره 6\\
-    \hline
-    خانه شماره 7 & خانه شماره 8 & خانه شماره 9\\
-    \hline
-    \end{tabular}
-    \caption{جدول شماره 1}
-    \label{tab:tab1}
-\end{table}
+    \includegraphics[width=1.0\textwidth]{figures/3.png}
+    \caption
+	{
+\lr{Xorg}
+و
+\lr{gnome-shell}
+و
+\lr{vmtoolsd}
+سه برنامه درحال اجرا هستند که بیشترین مقدار حافظه اصلی را استفاده می‌کنند.
+	}
+    \label{fig:fig1}
+\end{figure}
+\FloatBarrier
 
 \section{}
-در این قسمت با نحوه درج انواع لیست\,ها آشنا می\,شوید:
-\subsection{}
-\begin{itemize}
-    \item [$\bullet$] مورد اول
-    \item [$\bullet$] مورد دوم
-\end{itemize}
-\subsection{}
-\begin{enumerate}
-    \item مورد شماره 1
-    \item مورد شماره 2
-\end{enumerate}
 
 \section{}
-در این قسمت با نحوه ارجاع به سایر منابع آشنا می\,شوید:\\
-\indent
-به صفحه درس سیستم عامل دکتر محمّدرضا حیدرپور ارجاع داده می\,شود \cite{b1}.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/a.png}
+    \caption{}
+    \label{fig:fig1}
+\end{figure}
+\FloatBarrier
 
-\section{ضمیمه}
-برای آشنایی بیشتر با \lr{\LaTeX}، با جست\,و\,جو در اینترنت منابع مفیدی خواهید یافت.
+\subsection{}
+7 تا مربوط به
+\lr{write}
+است.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/b.png}
+    \caption{}
+    \label{fig:fig1}
+\end{figure}
+\FloatBarrier
 
+\section{}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/5.png}
+    \caption{}
+    \label{fig:fig1}
+\end{figure}
+\FloatBarrier
+
+\section{}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/6.png}
+    \caption{}
+    \label{fig:fig1}
+\end{figure}
+\FloatBarrier
+
+\section{}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/7.png}
+    \caption{}
+    \label{fig:fig1}
+\end{figure}
+\FloatBarrier
+
+\section{}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/8.png}
+    \caption{}
+    \label{fig:fig1}
+\end{figure}
+\FloatBarrier
 
 \section*{منابع}
 \renewcommand{\section}[2]{}%
@@ -215,7 +175,11 @@ $E = m{c}^{2}$
 
 \resetlatinfont
 
-\bibitem{b1} http://mrheidar.ir/courses/operating\_system.html
+\bibitem{b1} https://www.geeksforgeeks.org/difference-between-two-tier-and-three-tier-database-architecture/
+\bibitem{b2} https://medium.com/@gacheruevans0/2-tier-vs-3-tier-architecture-26db56fe7e9c
+\bibitem{b3} https://www.softwaretestingclass.com/what-is-difference-between-two-tier-and-three-tier-architecture/
+\bibitem{b4} https://www.ibm.com/nl-en/cloud/learn/three-tier-architecture
+\bibitem{b5} https://nitrosphere.com/uncategorized/2-tier-vs-3-tier-application-architecture-could-the-winner-be-2-tier-2/
 \end{LTRitems}
 
 \end{thebibliography}
