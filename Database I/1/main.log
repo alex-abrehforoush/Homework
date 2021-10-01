@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  1 OCT 2021 10:53
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  1 OCT 2021 12:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -793,10 +793,10 @@ LaTeX Warning: Label `fig:fig1' multiply defined.
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
 
-LaTeX Warning: Label `tab:tab1' multiply defined.
-
-
 LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `tab:tab1' multiply defined.
 
 )
 \openout1 = `main.aux'.
@@ -948,25 +948,25 @@ Overfull \hbox (66.30641pt too wide) in paragraph at lines 159--176
 [4
 
 ]
-Overfull \hbox (0.33128pt too wide) in paragraph at lines 207--213
+Overfull \hbox (0.33128pt too wide) in paragraph at lines 206--212
 []$\OT1/cmr/m/n/10 ^^E[](\OML/cmm/m/it/10 Member .[]/[] \OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 Book .[]/[]$[]
  []
 
-[5]
+[5] [6]
 File: figures/IUT Logo.png Graphic file (type bmp)
 <figures/IUT Logo.png>
- [6]
+ [7]
 
-LaTeX Warning: Citation 'b1' on page 7 undefined on input line 343.
+LaTeX Warning: Citation 'b1' on page 8 undefined on input line 439.
 
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 343.
+(Font)              scaled to size 11.99997pt on input line 439.
 Missing character: There is no b (U+0062) in font [B-NAZANIN.TTF]/OT:script=ara
 b;language=dflt;mapping=persian-tex-text;!
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 346.
-[7] [8] (./main.aux)
+(Font)              scaled to size 7.0pt on input line 442.
+[8] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -988,7 +988,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  15558 strings out of 476919
  332176 string characters out of 5825424
- 1148490 words of memory out of 5000000
+ 1149493 words of memory out of 5000000
  35323 multiletter control sequences out of 15000+600000
  404148 words of font info for 62 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

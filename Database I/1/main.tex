@@ -196,11 +196,10 @@
 پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
 
 \section{}
-اگر سوال بخش\,بندی\,شده نباشد، پاسخ آن در این قسمت نوشته می\,شود.
 \subsection{}
 $
 \Pi_{Title,\:ReturnDate}
-(Borrow \bowtie_{MemberID\:=\:1356\:\wedge\:IsReturned\:=\:False} Book)
+(Borrow \bowtie_{MemberID\:=\:1356\:\wedge\:IsReturned\:=\:false} Book)
 $
 
 \subsection{}
@@ -233,7 +232,7 @@ $
 \bowtie_{Member.MemberID\:=\:Borrow.MemberID}
 \newline
 (Borrow
-\bowtie_{CategoryID\:=\:``Drama"\:\wedge\:IsReturned\:=\:False\:\wedge\:Today\:-\:ReturnDate\:>\:10\:Days}
+\bowtie_{CategoryID\:=\:``Drama"\:\wedge\:IsReturned\:=\:false\:\wedge\:Today\:-\:ReturnDate\:>\:10\:Days}
 Book))
 $
 \subsection{}
@@ -289,8 +288,105 @@ $
 برمی‌گرداند.
 \newline
 پس نتیجه عبارت، نام عضو و نام کتاب‌هایی که امانت گرفته‌اند و جریمه دیرکرد آن‌ها بزرگتر یا مساوی 100000 تومان است می‌باشد.
+%%%%%%%%%%%%
 \subsection{}
-پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
+ابتدا عبارت را به شکل زیر تفکیک می‌کنیم:
+\begin{center}
+$
+F
+\leftarrow
+Book
+\bowtie_{Book.AuthorID\:=\:Author.AuthorID}
+Author
+$
+\end{center}
+\begin{center}
+$
+E
+\leftarrow
+F
+\bowtie_{Book.CategoryID\:=\:Category.CategoryID}
+Category
+$
+\end{center}
+\begin{center}
+$
+D
+\leftarrow
+\sigma_{Category.CategoryName\:=\:``Philosophy"\:\wedge\:Author.Name\:\neq\:``Plato"}
+(E)
+$
+\end{center}
+\begin{center}
+$
+C
+\leftarrow
+(\sigma_{IsReturned\:=\:false}(Borrow))
+\bowtie_{Borrow.BookID\:=\:Book.BookID}
+Book
+$
+\end{center}
+\begin{center}
+$
+B
+\leftarrow
+\Pi_{Book.Title}(C)
+$
+\end{center}
+\begin{center}
+$
+A
+\leftarrow
+\Pi_{Book.Title}(D)
+$
+\end{center}
+\begin{center}
+$
+A\:-\:B
+$
+\end{center}
+\lr{F}
+اطلاعات کتاب‌ها را به همراه اطلاعات نویسنده‌ی آن‌ها برمی‌گرداند.
+\newline
+\lr{E}
+اطلاعات
+\lr{F}
+را به تفکیک اطلاعات موضوع آن‌ها برمی‌گرداند.
+\newline
+\lr{D}
+سطرهایی از
+\lr{E}
+با موضوع
+\lr{Philosophy}
+که نویسنده آن‌ها
+\lr{Plato}
+نیست را برمی‌گرداند.
+\newline
+\lr{C}
+اطلاعات کتاب‌های امانت داده شده اما بازگردانده نشده اند را برمی‌گرداند.
+\newline
+\lr{B}
+ستون نام کتاب از
+\lr{C}
+را برمی‌گرداند.
+\newline
+\lr{A}
+ستون نام کتاب از
+\lr{D}
+را برمی‌گرداند.
+\newline
+\lr{A\:-\:B}
+که همان عبارت نهایی است تفاضل
+\lr{B}
+از
+\lr{A}
+را برمی‌گرداند.
+\newline
+پس نتیجه عبارت، نام کتاب‌هایی با موضوع
+\lr{Philosophy}
+که نویسنده آن‌ها
+\lr{Plato}
+نیست و امانت داده شده اما بازگردانده نشده اند را برمی‌گرداند.
 
 \section{}
 در این قسمت با نحوه درج فرمول\,های ریاضی آشنا می\,شوید:
