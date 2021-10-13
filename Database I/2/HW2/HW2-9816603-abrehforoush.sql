@@ -28,12 +28,11 @@ select
 from
 	film as A,
 	language as B
-where
-	A.language_id = B.language_id
 group by
 	A.film_id,
 	B.language_id
 having
+	A.language_id = B.language_id and
 	A.rental_rate >
 	(
 		select
@@ -49,39 +48,20 @@ limit
 ---- Q4-C
 
 select
-	customer_id
+	A.customer_id
 from
-	rental
+	rental as A,
+	inventory as B,
+	film_actor as C,
+	actor as D
 where
-	inventory_id in
-	(
-		select
-			inventory_id
-		from
-			inventory
-		where
-			film_id in
-			(
-				select
-					film_id
-				from
-					film_actor
-				where
-					actor_id in
-					(
-						select
-							actor_id
-						from
-							actor
-						where
-							first_name = 'Ben'
-							and
-							last_name = 'Harris'
-					)
-			)
-	)
+	A.inventory_id = B.inventory_id and
+	B.film_id = C.film_id and
+	C.actor_id = D.actor_id and
+	D.first_name = 'Ben' and
+	D.last_name = 'Harris'
 group by
-	customer_id
+	A.customer_id
 having
 	count(*) >= 3
 
