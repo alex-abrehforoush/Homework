@@ -67,11 +67,37 @@ having
 
 ---- Q4-D
 
-
+select
+	A.address,
+	sum(B.amount)
+from
+	address as A,
+	payment as B,
+	store as C
+where
+	A.address_id = C.address_id and
+	B.staff_id = C.manager_staff_id
+group by
+	C.store_id, A.address_id
+order by
+	sum(B.amount) asc
+limit
+	1
 
 ---- Q4-E
 
-
+select distinct
+	A.rating,
+	count(*)
+from
+	film as A,
+	inventory as B,
+	rental as C
+where
+	A.film_id = B.film_id and
+	B.inventory_id = C.inventory_id
+group by
+	A.rating
 
 ---- Q4-F
 
@@ -79,15 +105,44 @@ having
 
 ---- Q5-A
 
-
+select
+	A.id,
+	A.name
+from
+	student as A
+where
+	A.name like 'M%a'
 
 ---- Q5-B
 
-
+select
+	A.title
+from
+	course as A,
+	teaches as B
+where
+	A.dept_name like '%Eng.' and
+	A.course_id = B.course_id and
+	B.semester = 'Fall' and
+	B.year = 2009
 
 ---- Q5-C
 
-
+select
+	A.name,
+	B.title
+from
+	student as A,
+	course as B,
+	takes as C
+where
+	A.id = C.id and
+	B.course_id = C.course_id
+group by
+	A.id,
+	B.course_id
+having
+	count(*) >= 3
 
 ---- Q5-D
 
