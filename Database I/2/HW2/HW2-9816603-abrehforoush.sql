@@ -146,11 +146,40 @@ having
 
 ---- Q5-D
 
-
+select
+	A.course_id,
+	sum(C.credits)
+from
+	course as A,
+	prereq as B,
+	course as C
+where
+	A.course_id = B.prereq_id and
+	B.course_id = C.course_id
+group by
+	A.course_id
+having
+	sum(C.credits) > 4
+order by
+	sum(C.credits) desc
 
 ---- Q5-E
 
-
+select
+	A.room_number
+from
+	classroom as A,
+	section as B,
+	time_slot as C
+where
+	A.room_number = B.room_number and
+	B.time_slot_id = C.time_slot_id and
+	B.semester = 'Spring' and
+	B.year = 2008
+group by
+	A.room_number, A.building
+having
+	sum(C.end_hr - C.start_hr) >= 2
 
 ---- Q5-F
 
