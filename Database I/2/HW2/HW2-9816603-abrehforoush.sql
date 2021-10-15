@@ -183,13 +183,76 @@ having
 
 ---- Q5-F
 
-	
+select
+	A.name,
+	count(*)
+from
+	instructor as A,
+	teaches as B,
+	section as C
+where
+	A.id = B.id and
+	B.sec_id = C.sec_id and
+	C.year = 2003
+group by
+	A.id
+having
+	count(*) < 
+	(
+		select
+			avg
+			(
+				E.D
+			)
+		from
+		(
+			select
+				count(*) as D
+			from
+				instructor as A,
+				teaches as B,
+				section as C
+			where
+				A.id = B.id and
+				B.sec_id = C.sec_id and
+				C.year = 2003
+			group by
+				A.id
+		) as E
+	)
 	
 ---- Q5-G
 
-
+select distinct
+	A.course_id,
+	A.sec_id,
+	A.semester
+from
+	section as A,
+	course as B,
+	time_slot as C
+	
+	
+where
+	A.course_id = B.course_id and
+	A.time_slot_id = C.time_slot_id and
+	A.year = 2007 and
+	A.building = 'Taylor' and
+	C.start_hr >= 8 and
+	C.start_hr < 12
 
 ---- Q5-H
 
-
-
+select
+	A.name,
+	sum(B.credits)
+from
+	student as A,
+	course as B,
+	takes as C
+where
+	A.id = C.id and
+	B.course_id = C.course_id and
+	(C.grade like 'A%' or C.grade like 'B%')
+group by
+	A.id

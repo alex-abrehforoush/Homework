@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  15 OCT 2021 00:18
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  15 OCT 2021 15:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -876,7 +876,44 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
 \@quotelevel=\count466
 \@quotereset=\count467
- (./main.aux)
+ (./main.aux
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
@@ -890,8 +927,7 @@ LaTeX Font Info:    ... okay on input line 43.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
 3.
-
-(c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
+ (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 43.
@@ -1010,21 +1046,55 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 [1]
 File: figures/4-a.png Graphic file (type bmp)
 <figures/4-a.png>
- [2] (./main.aux)
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
+(Font)              scaled to size 9.0pt on input line 124.
+File: figures/4-b.png Graphic file (type bmp)
+<figures/4-b.png>
+File: figures/4-c.png Graphic file (type bmp)
+<figures/4-c.png>
+File: figures/4-d.png Graphic file (type bmp)
+<figures/4-d.png>
+File: figures/4-e.png Graphic file (type bmp)
+<figures/4-e.png>
+File: figures/5-a.png Graphic file (type bmp)
+<figures/5-a.png>
+File: figures/5-b.png Graphic file (type bmp)
+<figures/5-b.png>
+File: figures/5-c.png Graphic file (type bmp)
+<figures/5-c.png>
+ [2]
+File: figures/5-d.png Graphic file (type bmp)
+<figures/5-d.png>
+File: figures/5-e.png Graphic file (type bmp)
+<figures/5-e.png>
+File: figures/5-f.png Graphic file (type bmp)
+<figures/5-f.png>
+File: figures/5-g.png Graphic file (type bmp)
+<figures/5-g.png>
+File: figures/5-h.png Graphic file (type bmp)
+<figures/5-h.png>
+
+Overfull \vbox (133.06354pt too high) has occurred while \output is active []
+
+
+[3] [4] [5] [6] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18344 strings out of 476919
- 371179 string characters out of 5825424
- 1220228 words of memory out of 5000000
- 38054 multiletter control sequences out of 15000+600000
- 404148 words of font info for 62 fonts, out of 8000000 for 9000
+ 18418 strings out of 476919
+ 372402 string characters out of 5825424
+ 1220265 words of memory out of 5000000
+ 38115 multiletter control sequences out of 15000+600000
+ 404156 words of font info for 63 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,12n,122p,1290b,2101s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (3 pages).
+Output written on main.pdf (7 pages).
