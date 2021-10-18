@@ -1,0 +1,123 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{xepersian}
+
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف اول درس سیستم‌های عامل 1 }
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+\input{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{عنوان سوال اول}
+اگر سوال بخش\,بندی\,شده نباشد، پاسخ آن در این قسمت نوشته می\,شود.
+\subsection{عنوان بخش اول سوال اول}
+پاسخ بخش اول سوال در این قسمت نوشته می\,شود.
+\subsection{عنوان بخش دوم سوال اول}
+پاسخ بخش دوم سوال در این قسمت نوشته می\,شود.
+
+\section{عنوان سوال دوم}
+\indent
+سیستم کال \lr{fork()} یک پروسس جدید به نام پروسس \lr{child} می‌سازد. پس از ایجاد پروسس \lr{child}، هر دو پروسس(\lr{child} و \lr{parent}ش)دستوراتی که پس از \lr{fork()} متناظرشان آمده اند را یک به یک اجرا می‌کنند. به این ترتیب پس از اولین \lr{fork()}، یک \lr{child} جدید، پس از دومین \lr{fork()}، دو \lr{child} جدید، پس از سومین \lr{fork()}، چهار \lr{child} جدید و $\ldots$، خواهیم داشت. درنتیجه پس از اجرای حلقه، تعداد \lr{child}های ایجاد شده برابر است با:
+
+\begin{center}
+$
+1+2+4+\ldots+2^{(\log_2 n)-1}=2^{\log_2 n}-1=n-1
+$
+\end{center}
+در نهایت با احتساب پروسس \lr{parent} اصلی، \lr{n} پروسس خواهیم داشت.
+
+\section{عنوان سوال سوم}
+در این قسمت با نحوه درج روابط و فرمول\,ها آشنا می\,شوید:
+\begin{center}
+$E = m{c}^{2}$
+\end{center}
+
+\section{عنوان سوال چهارم}
+در این قسمت با نحوه درج اشکال آشنا می\,شوید:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.4\textwidth]{IUT Logo.png}
+    \caption{شکل شماره 1}
+    \label{fig:fig1}
+\end{figure}
+
+\section{عنوان سوال پنجم}
+در این قسمت با نحوه درج جداول آشنا می\,شوید:
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    خانه شماره 1 & خانه شماره 2 & خانه شماره 3\\
+    \hline
+    خانه شماره 4 & خانه شماره 5 & خانه شماره 6\\
+    \hline
+    خانه شماره 7 & خانه شماره 8 & خانه شماره 9\\
+    \hline
+    \end{tabular}
+    \caption{جدول شماره 1}
+    \label{tab:tab1}
+\end{table}
+
+\section{عنوان سوال ششم}
+در این قسمت با نحوه درج انواع لیست\,ها آشنا می\,شوید:
+\subsection{عنوان بخش اول سوال ششم}
+\begin{itemize}
+    \item [$\bullet$] مورد اول
+    \item [$\bullet$] مورد دوم
+\end{itemize}
+\subsection{عنوان بخش دوم سوال ششم}
+\begin{enumerate}
+    \item مورد شماره 1
+    \item مورد شماره 2
+\end{enumerate}
+
+\section{عنوان سوال هفتم}
+در این قسمت با نحوه درج برنامه\,ها آشنا می\,شوید:
+\lr{\lstinputlisting[language=C, showstringspaces=false, basicstyle=\ttfamily]{Source.c}}
+
+\section{عنوان سوال هشتم}
+در این قسمت با نحوه ارجاع به سایر منابع آشنا می\,شوید:\\
+\indent
+به صفحه درس سیستم عامل دکتر محمّدرضا حیدرپور ارجاع داده می\,شود \cite{b1}.
+
+\section{ضمیمه}
+برای آشنایی بیشتر با \lr{\LaTeX}، با جست\,و\,جو در اینترنت منابع مفیدی خواهید یافت.
+
+%\printbibliography[title=منابع]
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1} http://mrheidar.ir/courses/operating\_system.html
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}

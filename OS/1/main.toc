@@ -1,0 +1,27 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}عنوان سوال اول}{2}{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}عنوان بخش اول سوال اول}{2}{subsection.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}عنوان بخش دوم سوال اول}{2}{subsection.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}عنوان سوال دوم}{2}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}عنوان سوال سوم}{2}{section.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}عنوان سوال چهارم}{2}{section.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}عنوان سوال پنجم}{2}{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}عنوان سوال ششم}{2}{section.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1}عنوان بخش اول سوال ششم}{3}{subsection.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2}عنوان بخش دوم سوال ششم}{3}{subsection.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}عنوان سوال هفتم}{3}{section.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}عنوان سوال هشتم}{4}{section.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}ضمیمه}{4}{section.9}%
