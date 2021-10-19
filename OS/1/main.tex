@@ -5,6 +5,7 @@
 \usepackage[sorting=none]{biblatex}
 \usepackage[margin=1in]{geometry}
 \usepackage{listings}
+\usepackage{float}
 \usepackage{hyperref}
 \usepackage{xepersian}
 
@@ -21,6 +22,10 @@
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
 
+%%%%%%%%%%%%%%%%
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+%%%%%%%%%%%%%%%%
 \begin{document}
 \input{titlepage}
 
@@ -63,7 +68,7 @@ $E = m{c}^{2}$
 
 \section{عنوان سوال چهارم}
 در این قسمت با نحوه درج اشکال آشنا می\,شوید:
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{IUT Logo.png}
     \caption{شکل شماره 1}
@@ -71,6 +76,54 @@ $E = m{c}^{2}$
 \end{figure}
 
 \section{عنوان سوال پنجم}
+\subsection{}
+\textbf{\lr{orphan process}:}
+پروسسی که \lr{parent}ش وجود ندارد(یا پایان یافته یا بدون اینکه برای متوقف شدن \lr{child}ش صبر کرده باشد، متوقف شده باشد)، \lr{orphan process} نامیده می‌شود.
+\newline
+\textbf{\lr{zombie process}:}
+پروسسی که اجرای آن پایان یافته است اما هنوز در جدول پروسس‌ها مقداری دارد که به پروسس \lr{parent} نسبت داده می‌شود، \lr{zombie process} نامیده می‌شود. یک پروسس \lr{child} همواره پیش از پاک شدن از جدول پروسس‌ها به یک \lr{zombie process} تبدیل می‌شود. پروسس \lr{parent}، \lr{exit status} پروسس \lr{child} را می‌خواند و پروسس \lr{child} از جدول پروسس‌ها حذف می‌شود.
+\subsection
+\indent
+برنامه‌ی 1 یک \lr{orphan process} ایجاد می‌کند. چون پروسس \lr{child} حدودا 101 ثانیه پس از پایان یافتن پروسس \lr{parent} به پایان می‌رسد. همینطور که در تصویر اول مشهود است، مقدار \lr{ppidِ}ِ پروسس \lr{child} پس از ثانیه اول برابر 2174(\lr{pidِ}ِ پروسس \lr{parent}) است اما پس از ثانیه سوم(پایان یافتن پروسس \lr{parent}) این مقدار برابر 1286(\lr{pid}ِ پروسس \lr{systemd} که نقش \lr{subreaper} را برای پروسس \lr{orphan} برعهده دارد و در قسمت بالای جدول پروسس‌ها قرار دارد) می‌باشد.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/5.2.1.1.png}
+    \caption{اجرای برنامه‌ی 1}
+    \label{fig:fig1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/5.2.1.2.png}
+    \caption{جدول پروسس‌ها(قسمت پایین)}
+    \label{fig:fig1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/5.2.1.3.png}
+    \caption{جدول پروسس‌ها(قسمت بالا)}
+    \label{fig:fig1}
+\end{figure}
+%%%%%%%%%%%%%
+
+برنامه‌ی 2 یک \lr{zombie process} ایجاد می‌کند. چون پروسس \lr{parent} حدودا 99 ثانیه پس از پایان یافتن پروسس \lr{child} به پایان می‌رسد. اگر در این بازه زمانی جدول پروسس‌ها را بررسی کنیم می‌بینیم که پروسسی با \lr{STAT}ِ \lr{Z} وجود دارد که \lr{pid}ش برابر \lr{pid}ِ پروسس \lr{child} است و این نشان‌دهنده این است که برنامه‌ی 2 یک \lr{zombie process} تولید کرده است. به تصاویر زیر توجه کنید:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/5.2.2.1.png}
+    \caption{اجرای برنامه‌ی 2}
+    \label{fig:fig1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/5.2.2.2.png}
+    \caption{جدول پروسس‌ها}
+    \label{fig:fig1}
+\end{figure}
+تتتتتتتتتتتتتتتتتتتتتتتت
+
+\section{عنوان سوال جدول}
 در این قسمت با نحوه درج جداول آشنا می\,شوید:
 \begin{table}[ht]
     \centering
