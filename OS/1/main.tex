@@ -79,6 +79,11 @@ $E = m{c}^{2}$
 \subsection{}
 \lr{\lstinputlisting[language=C, showstringspaces=false, basicstyle=\ttfamily]{sources/collatz_conjecture.c}}
 
+\subsection{}
+زیرا در \lr{UNIX/POSIX}، \lr{exit code}ِ یک برنامه از نوع \lr{unsigned 8-bit} تعریف شده است. به طور دقیق‌تر \lr{system call}های خانواده \lr{wait} در \lr{UNIX} نتیجه یک پروسس را به یک \lr{32-bit integer} کدگذاری می‌کنند. از این 32 بیت برای اطلاعاتی همچون وقوع یا عدم وقوع \lr{dump core} در پروسس، \lr{exit} به دلیل یک سیگنال(و چه سیگنالی)، و $\ldots$ تقسیم می‌شود. از این رو تنها 8 بیت از 32 بیت برای \lr{exit code} باقی می‌ماند.
+\subsection{}
+
+
 \section{عنوان سوال ششم}
 \subsection{}
 \textbf{\lr{orphan process}:}
