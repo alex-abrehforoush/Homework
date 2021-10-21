@@ -67,20 +67,22 @@ $E = m{c}^{2}$
 \end{center}
 
 \section{عنوان سوال چهارم}
-در این قسمت با نحوه درج اشکال آشنا می\,شوید:
+یک راه این است که مقدار رجیستری که به جدول وقفه(\lr{Interrupt Vector Table}) اشاره می‌کند را عوض کنیم. درواقع می‌توانیم مکان دلخواهی از حافظه را به عنوان مکان جدول وقفه مشخص کنیم. توسط دستور \lr{lidt} در \lr{x86} می‌توان این رجیستر را مقداردهی کرد. بنابراین این دستور است که مشخص می‌کند که این جدول کجای حافظه قرار گرفته است. بدیهی است که تنها سیستم عامل باید دسترسیِ استفاده از این دستور را داشته باشد. در غیراینصورت، اگر پروسسی بتواند از این دستور استفاده کند، می‌تواند هر کاری را روی سیستم انجام دهد. چون می‌تواند جدول وقفه را طبق نظر خودش تنظیم کند و سپس آدرس حافظه‌ای که به ابتدای آن جدول اشاره می‌کند را در داخل آن رجیستر خاص توسط دستور \lr{lidt} ثبت کند و در نتیجه بسیاری از مفاهیم و سرویس‌هایی که در مورد سیستم عامل مد نظر داشتیم نقض می‌شود.
+\lr{\lstinputlisting[language=C, showstringspaces=false, basicstyle=\ttfamily]{sources/lidt.c}}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\textwidth]{IUT Logo.png}
-    \caption{شکل شماره 1}
+    \includegraphics[width=0.8\textwidth]{figures/4.png}
+    \caption{خطای رخ داده پس از اجرای برنامه}
     \label{fig:fig1}
 \end{figure}
+با اجرای برنامه بالا مشاهده می‌شود که \lr{Segmentation fault (core dumped)} رخ می‌دهد. \lr{segmentation fault} یک خطا است که توسط سخت‌افزار در راستای \lr{memory protection}، به سیستم عامل اطلاع می‌دهد که یک برنامه تلاش کرده است که به یک بخش حفاظت شده از حافظه دسترسی پیدا کند(\lr{a memory access violation}). در کامپیوترهای استاندارد \lr{x86}، این یک فرم از \lr{general protection fault} است.
 
 \section{عنوان سوال پنجم}
 \subsection{}
 \lr{\lstinputlisting[language=C, showstringspaces=false, basicstyle=\ttfamily]{sources/collatz_conjecture.c}}
-
 \subsection{}
-زیرا در \lr{UNIX/POSIX}، \lr{exit code}ِ یک برنامه از نوع \lr{unsigned 8-bit} تعریف شده است. به طور دقیق‌تر \lr{system call}های خانواده \lr{wait} در \lr{UNIX} نتیجه یک پروسس را به یک \lr{32-bit integer} کدگذاری می‌کنند. از این 32 بیت برای اطلاعاتی همچون وقوع یا عدم وقوع \lr{dump core} در پروسس، \lr{exit} به دلیل یک سیگنال(و چه سیگنالی)، و $\ldots$ تقسیم می‌شود. از این رو تنها 8 بیت از 32 بیت برای \lr{exit code} باقی می‌ماند.
+زیرا در \lr{UNIX/POSIX}، \lr{exit code}ِ یک برنامه از نوع \lr{unsigned 8-bit} تعریف شده است. به طور دقیق‌تر \lr{system call}های خانواده \lr{wait} در \lr{UNIX} نتیجه یک پروسس را به یک \lr{32-bit integer} کدگذاری می‌کنند. از این 32 بیت برای اطلاعاتی همچون وقوع یا عدم وقوع \lr{dump core} در پروسس، \lr{exit} به دلیل یک سیگنال(و چه سیگنالی)، و $\ldots$ تقسیم می‌شود. از این رو تنها 8 بیت از 32 بیت برای \lr{exit code} باقی می‌ماند. پس در نتیجه مقادیر 0 تا 255 به این شکل قابل برگردانده شدن هستند.
+
 \subsection{}
 
 
@@ -96,22 +98,22 @@ $E = m{c}^{2}$
 برنامه‌ی 1 یک \lr{orphan process} ایجاد می‌کند. چون پروسس \lr{child} حدودا 101 ثانیه پس از پایان یافتن پروسس \lr{parent} به پایان می‌رسد. همینطور که در تصویر اول مشهود است، مقدار \lr{ppidِ}ِ پروسس \lr{child} پس از ثانیه اول برابر 2174(\lr{pidِ}ِ پروسس \lr{parent}) است اما پس از ثانیه سوم(پایان یافتن پروسس \lr{parent}) این مقدار برابر 1286(\lr{pid}ِ پروسس \lr{systemd} که نقش \lr{subreaper} را برای پروسس \lr{orphan} برعهده دارد و در قسمت بالای جدول پروسس‌ها قرار دارد) می‌باشد.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/5.2.1.1.png}
+    \includegraphics[width=0.8\textwidth]{figures/6.2.1.1.png}
     \caption{اجرای برنامه‌ی 1}
     \label{fig:fig1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/5.2.1.2.png}
-    \caption{جدول پروسس‌ها(قسمت پایین)}
+    \includegraphics[width=0.8\textwidth]{figures/6.2.1.3.png}
+    \caption{جدول پروسس‌ها(قسمت بالا)}
     \label{fig:fig1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/5.2.1.3.png}
-    \caption{جدول پروسس‌ها(قسمت بالا)}
+    \includegraphics[width=0.8\textwidth]{figures/6.2.1.2.png}
+    \caption{جدول پروسس‌ها(قسمت پایین)}
     \label{fig:fig1}
 \end{figure}
 %%%%%%%%%%%%%
@@ -119,19 +121,38 @@ $E = m{c}^{2}$
 برنامه‌ی 2 یک \lr{zombie process} ایجاد می‌کند. چون پروسس \lr{parent} حدودا 99 ثانیه پس از پایان یافتن پروسس \lr{child} به پایان می‌رسد. اگر در این بازه زمانی جدول پروسس‌ها را بررسی کنیم می‌بینیم که پروسسی با \lr{STAT}ِ \lr{Z} وجود دارد که \lr{pid}ش برابر \lr{pid}ِ پروسس \lr{child} است و این نشان‌دهنده این است که برنامه‌ی 2 یک \lr{zombie process} تولید کرده است. به تصاویر زیر توجه کنید:
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/5.2.2.1.png}
+    \includegraphics[width=0.8\textwidth]{figures/6.2.2.1.png}
     \caption{اجرای برنامه‌ی 2}
     \label{fig:fig1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/5.2.2.2.png}
+    \includegraphics[width=0.8\textwidth]{figures/6.2.2.2.png}
     \caption{جدول پروسس‌ها}
     \label{fig:fig1}
 \end{figure}
-تتتتتتتتتتتتتتتتتتتتتتتت
 
+\section{سوال هفتم}
+\subsection{سوال 6 فایل}
+با اجرای دستور سوال، یک پروسه دارای 3 دستور که از \lr{IOs} و سه پروسه هر کدام دارای 5 دستور که از \lr{CPU} استفاده می‌کنند برای اجرا آماده می‌شوند.
+\newline
+خیر-منابع به طور موثر و بهینه به کار گرفته نشده‌اند. همانطور که در تصویر اول می‌بینیم \lr{IOs} در بازه‌ی زمانی 7 تا 18 و همچنین \lr{CPU} در بازه‌ی زمانی 19 تا 23 و 26 تا 30 بی‌کار هستند و درنهایت در 31 واحد زمانی \lr{CPU} تنها 67/74 درصد مواقع، و \lr{IOs} تنها 48/39 درصد مواقع مشغول بوده‌اند. به عبارت دیگر در 31 واحد زمانی، \lr{CPU}، 21 واحد زمانی و \lr{IOs}، 15 واحد زمانی درحال استفاده بوده‌اند.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/7.1.png}
+    \caption{}
+    \label{fig:fig1}
+\end{figure}
+\subsection{سوال 7 فایل}
+تفاوتی که این حالت با حالت قبل دارد این است که عملکرد \lr{CPU} و \lr{IOs} در بازه‌های بیشتری همزمان به موازات یکدیگر رخ می‌دهند. درواقع در این حالت پس از پایان یافتن \lr{IO}، بلافاصله به این پروسس سوئیچ می‌کند و درنتیجه 5 دستور اجرای \lr{IO}(\lr{waiting})، با 5 دستور اجرای \lr{CPU} موازی می‌شود. با دقت در تصویر دوم می‌بینیم که زمان کل به 21 واحد کاهش یافته است، \lr{CPU} در کلِ 21 واحد مشغول بوده است، و \lr{IOs} نیز در 15 واحد درحال استفاده بوده است(درست است که در هر دو حالت، \lr{IOs} در 15 واحد زمانی استفاده شده است، اما در حالت قبل، \lr{IOs} تنها در 48/39 درصد مواقع مشغول بوده است، درحالی که در این حالت در 71/43 درصد مواقع درحال استفاده بوده است. پس در این سوال با شرایط ذکر موجود، اجرای بلافصل پروسسی که اخیرا \lr{I/O}ی آن کامل شده است ایده خوبی می‌تواند باشد.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/7.2.png}
+    \caption{}
+    \label{fig:fig1}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{عنوان سوال جدول}
 در این قسمت با نحوه درج جداول آشنا می\,شوید:
 \begin{table}[ht]
@@ -149,22 +170,8 @@ $E = m{c}^{2}$
     \label{tab:tab1}
 \end{table}
 
-\section{عنوان سوال ششم}
-در این قسمت با نحوه درج انواع لیست\,ها آشنا می\,شوید:
-\subsection{عنوان بخش اول سوال ششم}
-\begin{itemize}
-    \item [$\bullet$] مورد اول
-    \item [$\bullet$] مورد دوم
-\end{itemize}
-\subsection{عنوان بخش دوم سوال ششم}
-\begin{enumerate}
-    \item مورد شماره 1
-    \item مورد شماره 2
-\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{عنوان سوال هفتم}
-در این قسمت با نحوه درج برنامه\,ها آشنا می\,شوید:
-\lr{\lstinputlisting[language=C, showstringspaces=false, basicstyle=\ttfamily]{Source.c}}
 
 \section{عنوان سوال هشتم}
 در این قسمت با نحوه ارجاع به سایر منابع آشنا می\,شوید:\\

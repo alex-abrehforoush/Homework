@@ -22,9 +22,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}عنوان سوال چهارم}{3}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}عنوان سوال پنجم}{3}{section.5}%
+\contentsline {section}{\numberline {5}عنوان سوال پنجم}{4}{section.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}}{3}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.1}}{4}{subsection.5.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2}}{5}{subsection.5.2}%
 \defcounter {refsection}{0}\relax 
@@ -34,18 +34,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.1}}{5}{subsection.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}\indent }{5}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.2}\indent }{6}{subsection.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}عنوان سوال جدول}{7}{section.7}%
+\contentsline {section}{\numberline {7}سوال هفتم}{8}{section.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}عنوان سوال ششم}{8}{section.8}%
+\contentsline {subsection}{\numberline {7.1}سوال 6 فایل}{8}{subsection.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1}عنوان بخش اول سوال ششم}{8}{subsection.8.1}%
+\contentsline {subsection}{\numberline {7.2}سوال 7 فایل}{9}{subsection.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2}عنوان بخش دوم سوال ششم}{8}{subsection.8.2}%
+\contentsline {section}{\numberline {8}عنوان سوال جدول}{9}{section.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}عنوان سوال هفتم}{8}{section.9}%
+\contentsline {section}{\numberline {9}عنوان سوال هشتم}{9}{section.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}عنوان سوال هشتم}{8}{section.10}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11}ضمیمه}{8}{section.11}%
+\contentsline {section}{\numberline {10}ضمیمه}{9}{section.10}%
