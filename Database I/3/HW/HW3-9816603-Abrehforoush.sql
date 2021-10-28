@@ -138,7 +138,30 @@ where
 	uni_data.stu_dept_name = 'Physics'
 
 ---D
-
+with
+	dept_score (dept_name, score) as
+	(
+	select
+		uni_data.stu_dept_name,
+		avg(uni_data.score)
+	from
+		uni_data
+	group by
+		uni_data.stu_dept_name
+	)
+delete from
+	uni_data
+where
+	uni_data.score < 
+		(
+		select
+			dept_score.score
+		from
+			dept_score
+		where
+			uni_data.stu_dept_name = dept_score.dept_name
+		) and
+	uni_data.stu_name like 'T%'
 
 
 
