@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  28 OCT 2021 11:18
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  28 OCT 2021 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -162,6 +162,14 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 (c:/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
+(c:/texlive/2021/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count269
+\float@exts=\toks22
+\float@box=\box51
+\@float@everytoks=\toks23
+\@floatcapt=\box52
+)
 (c:/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
 
@@ -184,7 +192,7 @@ Package pdftexcmds Info: \pdfdraftmode not found.
 )
 (c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count269
+\etb@tempcnta=\count270
 )
 (c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
@@ -194,7 +202,7 @@ Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 ))
 (c:/texlive/2021/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count270
+\lrq@indent=\count271
 
 (c:/texlive/2021/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -206,48 +214,48 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count271
-\c@listtotal=\count272
-\c@listcount=\count273
-\c@liststart=\count274
-\c@liststop=\count275
-\c@citecount=\count276
-\c@citetotal=\count277
-\c@multicitecount=\count278
-\c@multicitetotal=\count279
-\c@instcount=\count280
-\c@maxnames=\count281
-\c@minnames=\count282
-\c@maxitems=\count283
-\c@minitems=\count284
-\c@citecounter=\count285
-\c@maxcitecounter=\count286
-\c@savedcitecounter=\count287
-\c@uniquelist=\count288
-\c@uniquename=\count289
-\c@refsection=\count290
-\c@refsegment=\count291
-\c@maxextratitle=\count292
-\c@maxextratitleyear=\count293
-\c@maxextraname=\count294
-\c@maxextradate=\count295
-\c@maxextraalpha=\count296
-\c@abbrvpenalty=\count297
-\c@highnamepenalty=\count298
-\c@lownamepenalty=\count299
-\c@maxparens=\count300
-\c@parenlevel=\count301
-\blx@tempcnta=\count302
-\blx@tempcntb=\count303
-\blx@tempcntc=\count304
-\blx@maxsection=\count305
-\blx@maxsegment@0=\count306
-\blx@notetype=\count307
-\blx@parenlevel@text=\count308
-\blx@parenlevel@foot=\count309
-\blx@sectionciteorder@0=\count310
-\blx@entrysetcounter=\count311
-\blx@biblioinstance=\count312
+\c@tabx@nest=\count272
+\c@listtotal=\count273
+\c@listcount=\count274
+\c@liststart=\count275
+\c@liststop=\count276
+\c@citecount=\count277
+\c@citetotal=\count278
+\c@multicitecount=\count279
+\c@multicitetotal=\count280
+\c@instcount=\count281
+\c@maxnames=\count282
+\c@minnames=\count283
+\c@maxitems=\count284
+\c@minitems=\count285
+\c@citecounter=\count286
+\c@maxcitecounter=\count287
+\c@savedcitecounter=\count288
+\c@uniquelist=\count289
+\c@uniquename=\count290
+\c@refsection=\count291
+\c@refsegment=\count292
+\c@maxextratitle=\count293
+\c@maxextratitleyear=\count294
+\c@maxextraname=\count295
+\c@maxextradate=\count296
+\c@maxextraalpha=\count297
+\c@abbrvpenalty=\count298
+\c@highnamepenalty=\count299
+\c@lownamepenalty=\count300
+\c@maxparens=\count301
+\c@parenlevel=\count302
+\blx@tempcnta=\count303
+\blx@tempcntb=\count304
+\blx@tempcntc=\count305
+\blx@maxsection=\count306
+\blx@maxsegment@0=\count307
+\blx@notetype=\count308
+\blx@parenlevel@text=\count309
+\blx@parenlevel@foot=\count310
+\blx@sectionciteorder@0=\count311
+\blx@entrysetcounter=\count312
+\blx@biblioinstance=\count313
 \labelnumberwidth=\skip61
 \labelalphawidth=\skip62
 \biblabelsep=\skip63
@@ -259,9 +267,9 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@bcfin=\read2
 \blx@bcfout=\write3
 \blx@langwohyphens=\language87
-\c@mincomprange=\count313
-\c@maxcomprange=\count314
-\c@mincompwidth=\count315
+\c@mincomprange=\count314
+\c@maxcomprange=\count315
+\c@mincompwidth=\count316
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -270,74 +278,74 @@ File: blx-dm.def 2020/12/31 v3.16 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count316
-\c@savedafterword=\count317
-\c@annotator=\count318
-\c@savedannotator=\count319
-\c@author=\count320
-\c@savedauthor=\count321
-\c@bookauthor=\count322
-\c@savedbookauthor=\count323
-\c@commentator=\count324
-\c@savedcommentator=\count325
-\c@editor=\count326
-\c@savededitor=\count327
-\c@editora=\count328
-\c@savededitora=\count329
-\c@editorb=\count330
-\c@savededitorb=\count331
-\c@editorc=\count332
-\c@savededitorc=\count333
-\c@foreword=\count334
-\c@savedforeword=\count335
-\c@holder=\count336
-\c@savedholder=\count337
-\c@introduction=\count338
-\c@savedintroduction=\count339
-\c@namea=\count340
-\c@savednamea=\count341
-\c@nameb=\count342
-\c@savednameb=\count343
-\c@namec=\count344
-\c@savednamec=\count345
-\c@translator=\count346
-\c@savedtranslator=\count347
-\c@shortauthor=\count348
-\c@savedshortauthor=\count349
-\c@shorteditor=\count350
-\c@savedshorteditor=\count351
-\c@labelname=\count352
-\c@savedlabelname=\count353
-\c@institution=\count354
-\c@savedinstitution=\count355
-\c@lista=\count356
-\c@savedlista=\count357
-\c@listb=\count358
-\c@savedlistb=\count359
-\c@listc=\count360
-\c@savedlistc=\count361
-\c@listd=\count362
-\c@savedlistd=\count363
-\c@liste=\count364
-\c@savedliste=\count365
-\c@listf=\count366
-\c@savedlistf=\count367
-\c@location=\count368
-\c@savedlocation=\count369
-\c@organization=\count370
-\c@savedorganization=\count371
-\c@origlocation=\count372
-\c@savedoriglocation=\count373
-\c@origpublisher=\count374
-\c@savedorigpublisher=\count375
-\c@publisher=\count376
-\c@savedpublisher=\count377
-\c@language=\count378
-\c@savedlanguage=\count379
-\c@origlanguage=\count380
-\c@savedoriglanguage=\count381
-\c@pageref=\count382
-\c@savedpageref=\count383
+\c@afterword=\count317
+\c@savedafterword=\count318
+\c@annotator=\count319
+\c@savedannotator=\count320
+\c@author=\count321
+\c@savedauthor=\count322
+\c@bookauthor=\count323
+\c@savedbookauthor=\count324
+\c@commentator=\count325
+\c@savedcommentator=\count326
+\c@editor=\count327
+\c@savededitor=\count328
+\c@editora=\count329
+\c@savededitora=\count330
+\c@editorb=\count331
+\c@savededitorb=\count332
+\c@editorc=\count333
+\c@savededitorc=\count334
+\c@foreword=\count335
+\c@savedforeword=\count336
+\c@holder=\count337
+\c@savedholder=\count338
+\c@introduction=\count339
+\c@savedintroduction=\count340
+\c@namea=\count341
+\c@savednamea=\count342
+\c@nameb=\count343
+\c@savednameb=\count344
+\c@namec=\count345
+\c@savednamec=\count346
+\c@translator=\count347
+\c@savedtranslator=\count348
+\c@shortauthor=\count349
+\c@savedshortauthor=\count350
+\c@shorteditor=\count351
+\c@savedshorteditor=\count352
+\c@labelname=\count353
+\c@savedlabelname=\count354
+\c@institution=\count355
+\c@savedinstitution=\count356
+\c@lista=\count357
+\c@savedlista=\count358
+\c@listb=\count359
+\c@savedlistb=\count360
+\c@listc=\count361
+\c@savedlistc=\count362
+\c@listd=\count363
+\c@savedlistd=\count364
+\c@liste=\count365
+\c@savedliste=\count366
+\c@listf=\count367
+\c@savedlistf=\count368
+\c@location=\count369
+\c@savedlocation=\count370
+\c@organization=\count371
+\c@savedorganization=\count372
+\c@origlocation=\count373
+\c@savedoriglocation=\count374
+\c@origpublisher=\count375
+\c@savedorigpublisher=\count376
+\c@publisher=\count377
+\c@savedpublisher=\count378
+\c@language=\count379
+\c@savedlanguage=\count380
+\c@origlanguage=\count381
+\c@savedoriglanguage=\count382
+\c@pageref=\count383
+\c@savedpageref=\count384
 \shorthandwidth=\skip69
 \shortjournalwidth=\skip70
 \shortserieswidth=\skip71
@@ -367,19 +375,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (c:/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
-\c@textcitecount=\count384
-\c@textcitetotal=\count385
-\c@textcitemaxnames=\count386
-\c@biburlbigbreakpenalty=\count387
-\c@biburlbreakpenalty=\count388
-\c@biburlnumpenalty=\count389
-\c@biburlucpenalty=\count390
-\c@biburllcpenalty=\count391
+\c@textcitecount=\count385
+\c@textcitetotal=\count386
+\c@textcitemaxnames=\count387
+\c@biburlbigbreakpenalty=\count388
+\c@biburlbreakpenalty=\count389
+\c@biburlnumpenalty=\count390
+\c@biburlucpenalty=\count391
+\c@biburllcpenalty=\count392
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count392
+\c@smartand=\count393
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -391,8 +399,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (c:/texlive/2021/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count393
-\c@bbx:relatedtotal=\count394
+\c@bbx:relatedcount=\count394
+\c@bbx:relatedtotal=\count395
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -423,9 +431,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count395
-\Gm@cntv=\count396
-\c@Gm@tempcnt=\count397
+\Gm@cnth=\count396
+\Gm@cntv=\count397
+\c@Gm@tempcnt=\count398
 \Gm@bindingoffset=\dimen154
 \Gm@wd@mp=\dimen155
 \Gm@odd@mp=\dimen156
@@ -434,7 +442,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen159
 \Gm@layouthoffset=\dimen160
 \Gm@layoutvoffset=\dimen161
-\Gm@dimlist=\toks22
+\Gm@dimlist=\toks24
 )
 (c:/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
@@ -450,8 +458,9 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen168
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count398
-\c@continuedfloat=\count399
+\c@caption@flags=\count399
+\c@continuedfloat=\count400
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 )
 (c:/texlive/2021/texmf-dist/tex/latex/placeins/placeins.sty
@@ -469,14 +478,14 @@ Package: expl3 2021-02-18 L3 programming layer (loader)
 File: l3backend-xetex.def 2021-03-18 L3 backend support: XeTeX
 
 (|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count400
-\l__color_backend_stack_int=\count401
-\g__color_backend_stack_int=\count402
-\g__graphics_track_int=\count403
-\l__pdf_internal_box=\box51
-\g__pdf_backend_object_int=\count404
-\g__pdf_backend_annotation_int=\count405
-\g__pdf_backend_link_int=\count406
+\c__kernel_sys_dvipdfmx_version_int=\count401
+\l__color_backend_stack_int=\count402
+\g__color_backend_stack_int=\count403
+\g__graphics_track_int=\count404
+\l__pdf_internal_box=\box53
+\g__pdf_backend_object_int=\count405
+\g__pdf_backend_annotation_int=\count406
+\g__pdf_backend_link_int=\count407
 ))
 (c:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty
 (c:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))
@@ -485,17 +494,17 @@ Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 (c:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count407
-\l__fontspec_language_int=\count408
-\l__fontspec_strnum_int=\count409
-\l__fontspec_tmp_int=\count410
-\l__fontspec_tmpa_int=\count411
-\l__fontspec_tmpb_int=\count412
-\l__fontspec_tmpc_int=\count413
-\l__fontspec_em_int=\count414
-\l__fontspec_emdef_int=\count415
-\l__fontspec_strong_int=\count416
-\l__fontspec_strongdef_int=\count417
+\l__fontspec_script_int=\count408
+\l__fontspec_language_int=\count409
+\l__fontspec_strnum_int=\count410
+\l__fontspec_tmp_int=\count411
+\l__fontspec_tmpa_int=\count412
+\l__fontspec_tmpb_int=\count413
+\l__fontspec_tmpc_int=\count414
+\l__fontspec_em_int=\count415
+\l__fontspec_emdef_int=\count416
+\l__fontspec_strong_int=\count417
+\l__fontspec_strongdef_int=\count418
 \l__fontspec_tmpa_dim=\dimen169
 \l__fontspec_tmpb_dim=\dimen170
 \l__fontspec_tmpc_dim=\dimen171
@@ -506,43 +515,43 @@ Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
 (c:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
 (c:/texlive/2021/texmf-dist/tex/xelatex/xepersian/xepersian-persiancal.sty
 Package: xepersian-persiancal 2012/07/25 v0.2 provides Persian calendar
-\XePersian@i=\count418
-\XePersian@y=\count419
-\XePersian@m=\count420
-\XePersian@d=\count421
-\XePersian@latini=\count422
-\XePersian@persiani=\count423
-\XePersian@latinii=\count424
-\XePersian@persianii=\count425
-\XePersian@latiniii=\count426
-\XePersian@persianiii=\count427
-\XePersian@latiniv=\count428
-\XePersian@persianiv=\count429
-\XePersian@latinv=\count430
-\XePersian@persianv=\count431
-\XePersian@latinvi=\count432
-\XePersian@persianvi=\count433
-\XePersian@latinvii=\count434
-\XePersian@persianvii=\count435
-\XePersian@latinviii=\count436
-\XePersian@persianviii=\count437
-\XePersian@latinix=\count438
-\XePersian@persianix=\count439
-\XePersian@latinx=\count440
-\XePersian@persianx=\count441
-\XePersian@latinxi=\count442
-\XePersian@persianxi=\count443
-\XePersian@latinxii=\count444
-\XePersian@persianxii=\count445
-\XePersian@persianxiii=\count446
-\XePersian@temp=\count447
-\XePersian@temptwo=\count448
-\XePersian@tempthree=\count449
-\XePersian@yModHundred=\count450
-\XePersian@thirtytwo=\count451
-\XePersian@dn=\count452
-\XePersian@sn=\count453
-\XePersian@mminusone=\count454
+\XePersian@i=\count419
+\XePersian@y=\count420
+\XePersian@m=\count421
+\XePersian@d=\count422
+\XePersian@latini=\count423
+\XePersian@persiani=\count424
+\XePersian@latinii=\count425
+\XePersian@persianii=\count426
+\XePersian@latiniii=\count427
+\XePersian@persianiii=\count428
+\XePersian@latiniv=\count429
+\XePersian@persianiv=\count430
+\XePersian@latinv=\count431
+\XePersian@persianv=\count432
+\XePersian@latinvi=\count433
+\XePersian@persianvi=\count434
+\XePersian@latinvii=\count435
+\XePersian@persianvii=\count436
+\XePersian@latinviii=\count437
+\XePersian@persianviii=\count438
+\XePersian@latinix=\count439
+\XePersian@persianix=\count440
+\XePersian@latinx=\count441
+\XePersian@persianx=\count442
+\XePersian@latinxi=\count443
+\XePersian@persianxi=\count444
+\XePersian@latinxii=\count445
+\XePersian@persianxii=\count446
+\XePersian@persianxiii=\count447
+\XePersian@temp=\count448
+\XePersian@temptwo=\count449
+\XePersian@tempthree=\count450
+\XePersian@yModHundred=\count451
+\XePersian@thirtytwo=\count452
+\XePersian@dn=\count453
+\XePersian@sn=\count454
+\XePersian@mminusone=\count455
 )
 (c:/texlive/2021/texmf-dist/tex/xelatex/xepersian/xepersian-mathsdigitspec.sty
 Package: xepersian-mathsdigitspec 2018/12/16 v1.1.7 Unicode Persian maths digit
@@ -578,23 +587,23 @@ Package: bidi 2020/05/17 v36.3 Bidirectional typesetting in plain TeX and LaTeX
 ****************************************************
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/biditools.sty
 Package: biditools 2020/05/13 v2 Programming tools for bidi package
-\@bidi@envbody=\toks23
-\@bidi@emptytoks=\toks24
-\bidi@poscount=\count455
+\@bidi@envbody=\toks25
+\@bidi@emptytoks=\toks26
+\bidi@poscount=\count456
 
 
 Package biditools Warning: Patching `\enddocument' failed on input line 916.
 
-\bidi@tempcountb=\count456
-\bidi@temptoksa=\toks25
-\bidi@temptoksb=\toks26
-\bidi@dummies=\count457
-\bidi@are@these@correct=\toks27
-\bidi@toks@lista=\toks28
-\bidi@toks@listb=\toks29
-\bidi@stack@length=\count458
-\bidi@empty@stack=\toks30
-\bidi@looprepeat@depth=\count459
+\bidi@tempcountb=\count457
+\bidi@temptoksa=\toks27
+\bidi@temptoksb=\toks28
+\bidi@dummies=\count458
+\bidi@are@these@correct=\toks29
+\bidi@toks@lista=\toks30
+\bidi@toks@listb=\toks31
+\bidi@stack@length=\count459
+\bidi@empty@stack=\toks32
+\bidi@looprepeat@depth=\count460
 ) (c:/texlive/2021/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
 
@@ -619,7 +628,7 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\c@abspage=\count460
+\c@abspage=\count461
 Package zref Info: New property: abspage on input line 66.
 )
 (c:/texlive/2021/texmf-dist/tex/latex/xkeyval/xkeyval.sty
@@ -627,10 +636,10 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 
 (c:/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (c:/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks31
-\XKV@tempa@toks=\toks32
+\XKV@toks=\toks33
+\XKV@tempa@toks=\toks34
 )
-\XKV@depth=\count461
+\XKV@depth=\count462
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \@bidi@copyins@=\insert252
@@ -638,14 +647,14 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/latex-xetex-bidi.def
 File: latex-xetex-bidi.def 2019/03/03 v1.3.7 bidi adaptations for `latex.ltx' f
 or XeTeX engine
-\bidi@n@everypar=\toks33
-\bidi@column@check@number=\count462
+\bidi@n@everypar=\toks35
+\bidi@column@check@number=\count463
 
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/footnote-xetex-bidi.def
 File: footnote-xetex-bidi.def 2017/08/09 v1.1 bidi footnote macros for XeTeX en
 gine
-\c@footdir@label=\count463
-\footdir@toks=\toks34
+\c@footdir@label=\count464
+\footdir@toks=\toks36
 )
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/article-xetex-bidi.def
 File: article-xetex-bidi.def 2017/06/09 v0.6 bidi adaptations for standard arti
@@ -678,6 +687,10 @@ File: xcolor-xetex-bidi.def 2013/04/08 v0.2 bidi adaptations for xcolor package
 LaTeX Info: Redefining \color on input line 46.
 LaTeX Info: Redefining \bidicolor on input line 89.
 )
+(c:/texlive/2021/texmf-dist/tex/xelatex/bidi/float-xetex-bidi.def
+File: float-xetex-bidi.def 2013/04/04 v0.2 bidi adaptations for float package f
+or XeTeX engine
+)
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/graphicx-xetex-bidi.def
 File: graphicx-xetex-bidi.def 2017/06/17 v0.5 bidi adaptations for graphicx pac
 kage for XeTeX engine
@@ -698,7 +711,7 @@ kage for XeTeX engine
 File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the
  last package loaded
 )
-\bidi@digits=\count464
+\bidi@digits=\count465
 \bidi@digits@charclass=\XeTeXcharclass1
 \bidi@sepmark@charclass=\XeTeXcharclass2
 )
@@ -725,7 +738,7 @@ File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the
 * Primary author of xepersian package: Vafa Khalighi.
 * 
 ****************************************************
-\xepersian@tcl=\count465
+\xepersian@tcl=\count466
 \xepersian@ilg=\dimen172
 \xepersian@strutilg=\dimen173
 (c:/texlive/2021/texmf-dist/tex/xelatex/xepersian/loadingorder-xepersian.def
@@ -807,7 +820,7 @@ mapping=persian-tex-text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 11.99997pt on input line 18.
+(Font)              scaled to size 11.99997pt on input line 19.
 
 Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 (fontspec)             New Roman' with options [Ligatures=TeX,Scale=1].
@@ -842,7 +855,7 @@ ext;"
 (fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
 text;"
 
-LaTeX Info: Redefining \latinfont on input line 19.
+LaTeX Info: Redefining \latinfont on input line 20.
 
 (c:/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -874,9 +887,27 @@ File: lstlang3.sty 2020/03/24 1.8d listings language file
 (c:/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
-\@quotelevel=\count466
-\@quotereset=\count467
+\@quotelevel=\count467
+\@quotereset=\count468
  (./main.aux
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
 
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
@@ -919,28 +950,28 @@ LaTeX Warning: Label `fig:fig1' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
-3.
+4.
  (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-\c@lstlisting=\count468
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+\c@lstlisting=\count469
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -966,8 +997,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' not found.
 
 No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 43.
-Package biblatex Info: Reference segment=0 on input line 43.
+Package biblatex Info: Reference section=0 on input line 44.
+Package biblatex Info: Reference segment=0 on input line 44.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1024,44 +1055,54 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 
 ])
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 17.27994pt on input line 50.
+(Font)              scaled to size 17.27994pt on input line 51.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 17.27994pt on input line 50.
+(Font)              scaled to size 17.27994pt on input line 51.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 51.
+(Font)              scaled to size 14.39996pt on input line 52.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 14.39996pt on input line 51.
+(Font)              scaled to size 14.39996pt on input line 52.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 51.
+(Font)              scaled to size 12.0pt on input line 52.
 File: figures/1-a.png Graphic file (type bmp)
 <figures/1-a.png>
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 59.
+(Font)              scaled to size 10.79997pt on input line 60.
 
 
 LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 59.
+(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 60.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 59.
+(Font)              scaled to size 9.0pt on input line 60.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 59.
+(Font)              scaled to size 10.79997pt on input line 60.
 File: figures/1-b.png Graphic file (type bmp)
 <figures/1-b.png>
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 81.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 81.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 83.
+File: figures/2-a.png Graphic file (type bmp)
+<figures/2-a.png>
 [1]
+File: figures/2-b.png Graphic file (type bmp)
+<figures/2-b.png>
+File: figures/2-c-before.png Graphic file (type bmp)
+<figures/2-c-before.png>
+File: figures/2-c-after.png Graphic file (type bmp)
+<figures/2-c-after.png>
+File: figures/2-b.png Graphic file (type bmp)
+<figures/2-b.png>
+ [2]
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
+(Font)              scaled to size 11.99997pt on input line 137.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 139.
+ [3]
 File: figures/4-a.png Graphic file (type bmp)
 <figures/4-a.png>
- [2]
 File: figures/4-b.png Graphic file (type bmp)
 <figures/4-b.png>
 File: figures/4-c.png Graphic file (type bmp)
 <figures/4-c.png>
+ [4]
 File: figures/4-d.png Graphic file (type bmp)
 <figures/4-d.png>
 File: figures/4-e.png Graphic file (type bmp)
@@ -1074,20 +1115,16 @@ File: figures/5-c.png Graphic file (type bmp)
 <figures/5-c.png>
 File: figures/5-d.png Graphic file (type bmp)
 <figures/5-d.png>
+ [5]
 File: figures/5-e.png Graphic file (type bmp)
 <figures/5-e.png>
 File: figures/5-f.png Graphic file (type bmp)
 <figures/5-f.png>
- [3]
 File: figures/5-g.png Graphic file (type bmp)
 <figures/5-g.png>
 File: figures/5-h.png Graphic file (type bmp)
 <figures/5-h.png>
-
-Overfull \vbox (133.06354pt too high) has occurred while \output is active []
-
-
-[4] [5] [6] [7] (./main.aux)
+ [6] [7] [8] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1099,12 +1136,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18432 strings out of 476919
- 372683 string characters out of 5825424
- 1220268 words of memory out of 5000000
- 38126 multiletter control sequences out of 15000+600000
- 404164 words of font info for 64 fonts, out of 8000000 for 9000
+ 18508 strings out of 476919
+ 373902 string characters out of 5825424
+ 1218641 words of memory out of 5000000
+ 38192 multiletter control sequences out of 15000+600000
+ 404156 words of font info for 63 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 97i,12n,122p,1290b,2773s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 97i,11n,122p,1290b,2101s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (8 pages).
+Output written on main.pdf (9 pages).

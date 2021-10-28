@@ -6,6 +6,7 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{textcomp}
+\usepackage{float}
 \usepackage[sorting=none]{biblatex}
 \usepackage[margin=1in]{geometry}
 \usepackage[font={small,it}]{caption}
@@ -50,7 +51,7 @@
 \section{1}
 \subsection{\lr{a}}
 نام دانشکده‌هایی را برمی‌گرداند که بودجه(مجموع حقوق اساتید)ی آن‌ها از میانگین بودجه‌ی همه دانشکده‌ها بیشتر یا مساوی است.
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.3\textwidth]{figures/1-a.png}
     \caption
@@ -62,7 +63,7 @@
 
 \subsection{\lr{b}}
 نام اساتیدی را بر‌می‌گرداند که تعداد درس‌های ارائه شده توسط آن‌ها در سال 2003 از میانگین تعداد درس‌های ارائه شده در آن سال بیشتر است.
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.3\textwidth]{figures/1-b.png}
     \caption
@@ -72,32 +73,84 @@
     \label{fig:fig1}
 \end{figure}
 
-%------------------------------------------------------------------------------------------
-\section{}
+
+\section{2}
+\subsection{\lr{a}}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/2-a.png}
+    \caption
+	{
+\lr{2-a}
+	}
+    \label{fig:fig1}
+\end{figure}
+
+\subsection{\lr{b}}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/2-b.png}
+    \caption
+	{
+\lr{2-b}
+	}
+    \label{fig:fig1}
+\end{figure}
+
+\subsection{\lr{c}}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/2-c-before.png}
+    \caption
+	{
+\lr{2-c(before running query)}
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/2-c-after.png}
+    \caption
+	{
+\lr{2-c(after running query)}
+	}
+    \label{fig:fig1}
+\end{figure}
+
+\subsection{\lr{d}}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/2-b.png}
+    \caption
+	{
+\lr{2-d}
+	}
+    \label{fig:fig1}
+\end{figure}
+
+
+\section{3}
 \begin{table}[ht]
     \centering
     \begin{tabular}{|c|c|c|}
     \hline
-    \textbf{داده} & \textbf{نوع متغیر(\lr{int}، \lr{varchar}، \lr{char}، $\ldots$)}\\
+    \textbf{بیشترین تعداد خروجی حاصل} & \textbf{کمترین تعداد خروجی حاصل} & \textbf{}\\
     \hline
-    سه حرف مخفف شده ماه‌های میلادی & \lr{char}\\
+    ا & 100 & \lr{users INNER JOIN numbers}\\
     \hline
-    قیمت دلاری محصولات که همگی دو رقم اعشار دارند &\lr{numeric}\\
+    ج & د & \lr{users LEFT OUTER JOIN numbers}\\
     \hline
-    نام و نام خانوادگی کاربر & \lr{varchar}\\
+    ه & و & \lr{users RIGHT OUTER JOIN numbers}\\
     \hline
-    کد ملی کاربر & \lr{char}\\
+    ز & ر & \lr{users FULL OUTER JOIN numbers}\\
     \hline
-    ذخیره قیمت لحظه‌ای ارز‌های دیجیتال دلار & \lr{numeric}\\
-    \hline
-    تعداد بازدید یک ویدئو & \lr{int}\\
-    \hline
+
     \end{tabular}
     \caption{جدول شماره 1}
     \label{tab:tab1}
 \end{table}
 
-
+%------------------------------------------------------------------------------------------
 \section{}
 \begin{latin}
 \begin{lstlisting}

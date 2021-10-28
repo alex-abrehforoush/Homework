@@ -72,13 +72,70 @@ group by
 
 ---- Q2
 ---A
-
+create table uni_data
+(
+	stu_id			varchar(20),
+	stu_name		varchar(20),
+	stu_dept_name	varchar(20),
+	year			numeric(4),
+	semester		varchar(6),
+	course_name		varchar(50),
+	score			numeric(3),
+	is_rank			bool
+)
 
 ---B
-
+insert into
+	uni_data
+select
+	student.id,
+	student.name,
+	student.dept_name,
+	section.year,
+	section.semester,
+	course.title,
+	case takes.grade
+		when 'A+' then 100
+		when 'A' then 95
+		when 'A-' then 90
+		when 'B+' then 85
+		when 'B' then 80
+		when 'B-' then 75
+		when 'C+' then 70
+		when 'C' then 65
+		when 'C-' then 60
+		else 0
+	end,
+	case takes.grade
+		when 'A+' then 1
+		when 'A' then 1
+		when 'A-' then 1
+		when 'B+' then 1
+		when 'B' then 1
+		when 'B-' then 1
+		else 0
+	end
+from
+	student,
+	section,
+	course,
+	takes
+where
+	student.id = takes.id and
+	section.course_id = course.course_id and
+	course.course_id = takes.course_id
 
 ---C
-
+update
+	uni_data
+set
+	score = 
+	case
+		when uni_data.score < 75 then uni_data.score + 10
+		else uni_data.score + 15
+	end
+where
+	uni_data.stu_dept_name = 'Physics'
 
 ---D
 
