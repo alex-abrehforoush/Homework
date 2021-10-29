@@ -227,7 +227,32 @@ from
 
 
 ---- Q7
-
+create view
+	v1
+as
+	(
+	select
+		student.id,
+		student.name,
+		case
+			when student.dept_name like '%Eng%' then 'Engineer'
+			else 'Scientist'
+		end as dept_type,
+		'STU' as person_type
+	from
+		student
+	union
+	select
+		instructor.id,
+		instructor.name,
+		case
+			when instructor.dept_name like '%Eng%' then 'Engineer'
+			else 'Scientist'
+		end as dept_type,
+		'INS' as person_type
+	from
+		instructor
+	)
 	
 	
 ---- Q8
