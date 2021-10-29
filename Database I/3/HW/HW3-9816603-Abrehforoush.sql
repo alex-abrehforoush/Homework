@@ -180,16 +180,46 @@ where
 
 ---- Q5
 ---A
-
+select
+	production.product.name,
+	sales.salesorderdetail.salesorderid
+from
+	production.product left outer join sales.salesorderdetail on production.product.productid = sales.salesorderdetail.productid
 
 ---B
-
+select
+	production.product.name,
+	sales.salesorderdetail.salesorderid
+from
+	production.product left outer join sales.salesorderdetail on production.product.productid = sales.salesorderdetail.productid
+where
+	sales.salesorderdetail.productid is null
 
 ---C
-
+select
+	sales.customer.customerid,
+	production.product.name
+from
+	(
+		(
+			sales.customer inner join
+			sales.salesorderheader on sales.customer.customerid = sales.salesorderheader.customerid
+		) inner join
+		sales.salesorderdetail on sales.salesorderheader.salesorderid = sales.salesorderdetail.salesorderid
+	) inner join
+	production.product on sales.salesorderdetail.productid = production.product.productid
 
 ---D
-
+select
+	sales.customer.customerid,
+	sales.salesorderheader.salesorderid,
+	sales.salesterritory.name
+from
+	sales.salesorderheader right outer join
+	(
+		sales.customer inner join
+		sales.salesterritory on sales.customer.territoryid = sales.salesterritory.territoryid
+	) on sales.salesorderheader.customerid = sales.customer.customerid
 
 
 ---- Q6
