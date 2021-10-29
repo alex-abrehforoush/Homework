@@ -256,10 +256,52 @@ as
 	
 	
 ---- Q8
+with
+	numberOfStudentsPerDepartment (dept_name, number) as
+	(
+	select
+		student.dept_name,
+		count(*)
+	from
+		student
+	group by
+		student.dept_name
+	),
+	studentExpensePerDepartment (dept_name, expense) as
+	(
+	select
+		department.dept_name,
+		department.budget/numberOfStudentsPerDepartment.number
+	from
+		department,
+		numberOfStudentsPerDepartment
+	where
+		department.dept_name = numberOfStudentsPerDepartment.dept_name
+	)
+select
+	v1.name,
+	v1.person_type,
+	studentExpensePerDepartment.expense
+from
+	v1,
+	student,
+	studentExpensePerDepartment
+where
+	v1.person_type = 'STU' and
+	v1.id = student.id and
+	student.dept_name = studentExpensePerDepartment.dept_name
 
+union
 
-
-
-
-
-
+select
+	v1.name,
+	v1.person_type,
+	(instructor.salary/department.budget)*100 as calc_number
+from
+	v1,
+	instructor,
+	department
+where
+	v1.person_type = 'INS' and
+	v1.id = instructor.id and
+	instructor.dept_name = department.dept_name
