@@ -167,15 +167,79 @@ where
 
 ---- Q4
 ---A
-
+select
+	*
+from
+	course inner join section using(course_id)
+union
+select
+	course.course_id, course.title, course.dept_name, course.credits, null, null, null, null, null, null, null
+from
+	course
+where
+	course.course_id not in
+	(
+	select
+		section.course_id
+	from
+		section
+	)
 
 ---B
-
+select
+	*
+from
+	course inner join section using(course_id)
+union
+select
+	null, null, null, null, section.sec_id, section.semester, section.year, section.building, section.room_number, section.time_slot_id, section.idi
+from
+	section
+where
+	section.course_id not in
+	(
+	select
+		course.course_id
+	from
+		course
+	)
 
 ---C
-
-
-
+select
+	*
+from
+	course inner join section using(course_id)
+union
+select
+	*
+from
+	course inner join section using(course_id)
+union
+select
+	course.course_id, course.title, course.dept_name, course.credits, null, null, null, null, null, null, null
+from
+	course
+where
+	course.course_id not in
+	(
+	select
+		section.course_id
+	from
+		section
+	)
+union
+select
+	null, null, null, null, section.sec_id, section.semester, section.year, section.building, section.room_number, section.time_slot_id, section.idi
+from
+	section
+where
+	section.course_id not in
+	(
+	select
+		course.course_id
+	from
+		course
+	)
 
 
 ---- Q5
@@ -223,8 +287,40 @@ from
 
 
 ---- Q6
-
-
+create view
+	v2
+as
+	(
+	select
+		*
+	from
+	(
+		select
+			A.productsubcategoryid,
+			A.name,
+			count(*)
+		from
+			production.workorderrouting as B inner join production.product as C using(productid) 
+			inner join production.productsubcategory as A using(productsubcategoryid)
+			inner join
+			(
+			select
+				workorderid
+			from
+				production.workorder 
+			order by
+				enddate desc
+			limit
+				1000
+			) as X using(workorderid)
+		where
+			B.operationsequence < 7
+		group by
+			A.productsubcategoryid
+		) as A
+	order by
+		count desc
+	)
 
 ---- Q7
 create view

@@ -1,0 +1,56 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xepersian}
+
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{پروژه اول درس سیستم‌های عامل 1}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%%%%%%%%%%%%%%%%
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+%%%%%%%%%%%%%%%%
+\begin{document}
+\input{titlepage}
+
+\tableofcontents
+\newpage
+\section{}
+\section{}
+\section{}
+\section{خواسته‌های پروژه}
+
+\subsection{الف}
+\lr{trap} برای سیستم‌کال‌ها، \lr{syscall} را فراخوانی می‌کند. \lr{syscall} شماره‌ی سیستم‌کال را از \lr{trap frame}(که دارای \lr{\%eax} ذخیره شده است) و اندیس را در جدول سیستم‌کال بارگذاری می‌کند. \lr{\%eax} برای اولین سیستم‌کال حاوی مقدار \lr{SYS\_exec} است، و \lr{syscall}، \lr{SYS\_exe}امین ورودی را از جدول سیستم‌کالِ مطابق \lr{sys\_exec} فراخوانی خواهد کرد.
+\newline
+\lr{syscall} مقدار بازگشتیِ تابع سیستم‌کال در \lr{\_eax} را ذخیره می‌کند. هنگامی که \lr{trap} به \lr{user space} بازمی‌گردد، مقادیر را از \lr{cp->tf} در رجیسترهای ماشین بارگذاری می‌کند. پس هنگامی که \lr{exec} \lr{return} می‌کند، مقداری که هندلرِ سیستم‌کال بازگردانده است را بازمی‌گرداند. سیستم‌کال‌ها معمولا برای نشان دادن وقوع خطاها مقدار منفی و برای نشان دادن موفق بودن سیستم‌کال مقدار مثبت بازمی‌گرداند. اگر مقدار سیستم‌کال نامعتبر باشد، \lr{syscall} یک خطا پرینت می‌کند و 
+$-1$
+ بازمی‌گرداند.
+
+\subsection{ب}
+به پوشه \lr{xv6-public} مراجعه شود.
+\subsection{ج}
+به پوشه \lr{xv6-public} مراجعه شود.
+\subsection{د}
+به پوشه \lr{xv6-public} مراجعه شود.
+
+
+
+
+\end{document}

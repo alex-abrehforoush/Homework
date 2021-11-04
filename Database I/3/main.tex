@@ -130,19 +130,19 @@
 
 
 \section{3}
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|}
     \hline
     \textbf{بیشترین تعداد خروجی حاصل} & \textbf{کمترین تعداد خروجی حاصل} & \textbf{}\\
     \hline
-    ا & 100 & \lr{users INNER JOIN numbers}\\
+    100 & 100 & \lr{users INNER JOIN numbers}\\
     \hline
-    ج & د & \lr{users LEFT OUTER JOIN numbers}\\
+    199 & 100 & \lr{users LEFT OUTER JOIN numbers}\\
     \hline
-    ه & و & \lr{users RIGHT OUTER JOIN numbers}\\
+    100 & 100 & \lr{users RIGHT OUTER JOIN numbers}\\
     \hline
-    ز & ر & \lr{users FULL OUTER JOIN numbers}\\
+    199 & 100 & \lr{users FULL OUTER JOIN numbers}\\
     \hline
 
     \end{tabular}
@@ -150,54 +150,11 @@
     \label{tab:tab1}
 \end{table}
 
-%------------------------------------------------------------------------------------------
-\section{}
-\begin{latin}
-\begin{lstlisting}
-create table data
-(
-  month      	char(3),
-  item_price    numeric(20, 2),
-  name      	varchar(30) not null,
-  national_id	char(10) not null,
-  curr_price    numeric(20, 10),
-  views_no    	int,
-  primary key (national_id),
-  foreign key (national_id) references users(social_number)
-)
-\end{lstlisting}
-\end{latin}
-
-\section{}
-\subsection{}
-\begin{latin}
-\begin{lstlisting}
-WHERE 1 <= (SELECT count(name) FROM student)
-\end{lstlisting}
-\end{latin}
-
-قسمت منابع بررسی شود.
-
-\subsection{}
-\begin{latin}
-\begin{lstlisting}
-WHERE first_name SIMILAR TO 'me%' AND last_name SIMILAR TO '%avi'
-\end{lstlisting}
-\end{latin}
-
-\subsection{}
-\begin{latin}
-\begin{lstlisting}
-SELECT concat(first_name, last_name)
-\end{lstlisting}
-\end{latin}
-
-\section{}
-
-\subsection{}
-\begin{figure}[ht]
+\section{4}
+\subsection{\lr{a}}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{figures/4-a.png}
+    \includegraphics[width=0.8\textwidth]{figures/4-a.png}
     \caption
 	{
 \lr{4-a}
@@ -205,10 +162,10 @@ SELECT concat(first_name, last_name)
     \label{fig:fig1}
 \end{figure}
 
-\subsection{}
-\begin{figure}[ht]
+\subsection{\lr{b}}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{figures/4-b.png}
+    \includegraphics[width=0.8\textwidth]{figures/4-b.png}
     \caption
 	{
 \lr{4-b}
@@ -216,10 +173,10 @@ SELECT concat(first_name, last_name)
     \label{fig:fig1}
 \end{figure}
 
-\subsection{}
-\begin{figure}[ht]
+\subsection{\lr{c}}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{figures/4-c.png}
+    \includegraphics[width=0.8\textwidth]{figures/4-c.png}
     \caption
 	{
 \lr{4-c}
@@ -227,35 +184,11 @@ SELECT concat(first_name, last_name)
     \label{fig:fig1}
 \end{figure}
 
-\subsection{}
-\begin{figure}[ht]
+\section{5}
+\subsection{\lr{a}}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{figures/4-d.png}
-    \caption
-	{
-\lr{4-d}
-	}
-    \label{fig:fig1}
-\end{figure}
-
-\subsection{}
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.3\textwidth]{figures/4-e.png}
-    \caption
-	{
-\lr{4-e}
-	}
-    \label{fig:fig1}
-\end{figure}
-
-%%%%%%%%%%%%%
-
-\section{}
-\subsection{}
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.3\textwidth]{figures/5-a.png}
+    \includegraphics[width=0.8\textwidth]{figures/5-a.png}
     \caption
 	{
 \lr{5-a}
@@ -263,10 +196,10 @@ SELECT concat(first_name, last_name)
     \label{fig:fig1}
 \end{figure}
 
-\subsection{}
-\begin{figure}[ht]
+\subsection{\lr{b}}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{figures/5-b.png}
+    \includegraphics[width=0.8\textwidth]{figures/5-b.png}
     \caption
 	{
 \lr{5-b}
@@ -274,10 +207,10 @@ SELECT concat(first_name, last_name)
     \label{fig:fig1}
 \end{figure}
 
-\subsection{}
-\begin{figure}[ht]
+\subsection{\lr{c}}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{figures/5-c.png}
+    \includegraphics[width=0.8\textwidth]{figures/5-c.png}
     \caption
 	{
 \lr{5-c}
@@ -285,10 +218,10 @@ SELECT concat(first_name, last_name)
     \label{fig:fig1}
 \end{figure}
 
-\subsection{}
-\begin{figure}[ht]
+\subsection{\lr{c}}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{figures/5-d.png}
+    \includegraphics[width=0.8\textwidth]{figures/5-d.png}
     \caption
 	{
 \lr{5-d}
@@ -296,49 +229,39 @@ SELECT concat(first_name, last_name)
     \label{fig:fig1}
 \end{figure}
 
-\subsection{}
-\begin{figure}[ht]
+\section{6}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{figures/5-e.png}
+    \includegraphics[width=0.8\textwidth]{figures/6.png}
     \caption
 	{
-\lr{5-e}
+\lr{6}
 	}
     \label{fig:fig1}
 \end{figure}
 
-\subsection{}
-\begin{figure}[ht]
+\section{7}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{figures/5-f.png}
+    \includegraphics[width=0.8\textwidth]{figures/7.png}
     \caption
 	{
-\lr{5-f}
+\lr{7}
 	}
     \label{fig:fig1}
 \end{figure}
 
-\subsection{}
-\begin{figure}[ht]
+\section{8}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{figures/5-g.png}
+    \includegraphics[width=0.8\textwidth]{figures/8.png}
     \caption
 	{
-\lr{5-g}
+\lr{8}
 	}
     \label{fig:fig1}
 \end{figure}
-
-\subsection{}
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.3\textwidth]{figures/5-h.png}
-    \caption
-	{
-\lr{5-h}
-	}
-    \label{fig:fig1}
-\end{figure}
+%------------------------------------------------------------------------------------------
 
 
 \section*{منابع}
@@ -351,7 +274,7 @@ SELECT concat(first_name, last_name)
 
 \resetlatinfont
 
-\bibitem{b1} https://www.geeksforgeeks.org/sql-unique-constraint/
+\bibitem{b1} https://searchoracle.techtarget.com/answer/LEFT-OUTER-JOIN-without-using-LEFT-OUTER-JOIN
 \end{LTRitems}
 
 \end{thebibliography}
