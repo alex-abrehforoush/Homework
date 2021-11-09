@@ -1,0 +1,76 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xepersian}
+
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف دوم درس ریزپردازنده}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%%%%%%%%%%%%%%%%
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+%%%%%%%%%%%%%%%%
+\begin{document}
+\input{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{سوال اول}
+\lr{\lstinputlisting[language={[x86masm]Assembler}, showstringspaces=false, basicstyle=\ttfamily]{sources/1.asm}}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/1.1.png}
+    \caption{خروجی}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/1.2.png}
+    \caption{وضعیت پردازنده}
+    \label{fig:fig1}
+\end{figure}
+در این جمع \lr{Carry} و \lr{Half Carry}(\lr{Carry} از بیت 3) وجود دارد. در نتیجه رجیسترهای وضعیت \lr{H} و \lr{C}، 1 هستند.
+\section{سوال دوم}
+ی
+\section{سوال سوم}
+\subsection{بخش آ}
+
+
+\section{عنوان سوال چهارم}
+ی
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1}https://www.geeksforgeeks.org/zombie-and-orphan-processes-in-c/
+
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}
