@@ -1,0 +1,26 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega32"</DEVICE>
+ <WORKING_DIR>C:\Users\Alireza\Desktop\HW\Homework\Microprocessor\2\3\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Alireza\Desktop\HW\Homework\Microprocessor\2\3\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc\m32def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Alireza\Desktop\HW\Homework\Microprocessor\2\3\Debug\3.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>3.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>3.map</FILE>
+  <FILE>3.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+ </LABELS>
+</ASSEMBLER_INFO>

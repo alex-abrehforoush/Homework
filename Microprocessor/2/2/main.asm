@@ -1,8 +1,8 @@
 ;
-; 1.asm
+; 2.asm
 ;
-; Created: 11/9/2021 1:53:20 PM
-; Author : Alireza Abrehforoush
+; Created: 11/9/2021 4:13:53 PM
+; Author : Alireza
 ;
 
 
@@ -11,3 +11,4 @@
 LDI R16, 0b11111111
 LDI R17, 0b11001010
 MULS R16, R17
+NOP
