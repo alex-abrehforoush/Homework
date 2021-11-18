@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  18 NOV 2021 18:42
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  19 NOV 2021 01:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1035,48 +1035,49 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 57.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 93.
+(Font)              scaled to size 14.39996pt on input line 81.
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
+(Font)              scaled to size 14.39996pt on input line 81.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 81.
+ [1]
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
+(Font)              scaled to size 10.79997pt on input line 131.
 
 
 LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 93.
+(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 131.
 
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 93.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 98.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 14.39996pt on input line 98.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 98.
+(Font)              scaled to size 10.79997pt on input line 131.
 File: figures/4-a.png Graphic file (type bmp)
 <figures/4-a.png>
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 105.
-[1]
+(Font)              scaled to size 9.0pt on input line 143.
+[2]
 File: figures/4-b.png Graphic file (type bmp)
 <figures/4-b.png>
 File: figures/4-c.png Graphic file (type bmp)
 <figures/4-c.png>
 File: figures/5-a.png Graphic file (type bmp)
 <figures/5-a.png>
- [2]
+ [3]
 File: figures/5-b.png Graphic file (type bmp)
 <figures/5-b.png>
 File: figures/5-c.png Graphic file (type bmp)
 <figures/5-c.png>
- [3]
+ [4]
 File: figures/5-d.png Graphic file (type bmp)
 <figures/5-d.png>
 File: figures/6.png Graphic file (type bmp)
 <figures/6.png>
- [4]
+ [5]
 File: figures/7.png Graphic file (type bmp)
 <figures/7.png>
- [5]
+ [6]
 File: figures/8.png Graphic file (type bmp)
 <figures/8.png>
- [6] [7] (./main.aux)
+ [7] [8] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1090,10 +1091,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  17260 strings out of 476919
  356582 string characters out of 5825424
- 1215643 words of memory out of 5000000
+ 1217643 words of memory out of 5000000
  36954 multiletter control sequences out of 15000+600000
  404156 words of font info for 63 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,11n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (8 pages).
+Output written on main.pdf (9 pages).

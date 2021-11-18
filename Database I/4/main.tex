@@ -73,7 +73,45 @@
 آیا \lr{ERD}ِ نهایی سیستم داده را به دقت مجسم می‌کند؟
 \end{enumerate}
 
-\section{}
+\section{2}
+د
+\section{3}
+د
+\section{4}
+\subsection{\lr{a}}
+\lr{entity}های \lr{Bank Branch}، \lr{Account} و \lr{Loan} موجودیت‌های \lr{weak}، و سایر \lr{entity}ها موجودیت‌های \lr{strong}، هستند.
+\subsection{\lr{b}}
+\begin{itemize}
+    \item [$\bullet$] رابطه‌ی \lr{Branches}:
+هر بانک یک تا چند(\lr{N}) شعبه را پوشش‌دهی می‌کند و هر شعبه تحت پوشش دقیقا یک بانک است.
+    \item [$\bullet$] رابطه‌ی \lr{Accts}:
+هر شعبه صفر تا چند(\lr{N}) حساب را پوشش‌دهی می‌کند و هر حساب تحت پوشش دقیقا یک شعبه است.
+    \item [$\bullet$] رابطه‌ی \lr{Loans}:
+هر شعبه صفر تا چند(\lr{N}) وام را اعطا می‌کند و هر وام توسط دقیقا یک شعبه اعطا می‌شود.
+    \item [$\bullet$] رابطه‌ی \lr{A-C}:
+هر حساب متعلق به یک تا چند(\lr{N}) مشتری است و هر مشتری دارای یک تا چند(\lr{M}) حساب است.
+    \item [$\bullet$] رابطه‌ی \lr{L-C}:
+هر وام می‌تواند به یک تا چند(\lr{N}) مشتری اعطا شود و هر مشتری می‌تواند صفر تا چند(\lr{M}) وام بگیرد.
+
+\end{itemize}
+\subsection{\lr{c}}
+\begin{itemize}
+    \item [$\bullet$] لیست مشخصات مشتری‌هایی که مانده حساب بیشتر از 1 میلیون دارند
+    \item [$\bullet$] مجموع مبلغ وام‌های داده شده توسط یک شعبه خاص
+    \item [$\bullet$] تعداد حساب‌های یک مشتری خاص
+\end{itemize}
+\subsection{\lr{d}}
+به ترتیب:
+\begin{itemize}
+    \item [$\bullet$] فیلدهای \lr{Customer} از \lr{inner join}ِ \lr{Customer} و \lr{A-C} و \lr{Account} به شرط یکسان بودن \lr{SSN}ها در \lr{Customer} و \lr{A-C}، و \lr{AccNo}ها در \lr{A-C} و \lr{Account} و مجموع \lr{Balance}های بیشتر از 1 میلیون به تفکیک \lr{SSN}ها.
+    \item [$\bullet$] مجموع روی فیلد \lr{Amount} از \lr{inner join}ِ \lr{Loan} و \lr{Loans} و \lr{Bank Branch} به شرط یکسان بودن \lr{LoanNo}ها در \lr{Loan} و \lr{Loans}، و \lr{BrNo}ها در \lr{Loans} و \lr{Bank Branch} به تفکیک \lr{BrNo}.
+    \item [$\bullet$] شمارش روی رکوردهای \lr{A-C} به تفکیک \lr{SSN}.
+\end{itemize}
+\subsection{\lr{e}}
+اضافه کردن \lr{attribute} به نام \lr{sponsor\_ssn} در \lr{entity}ی \lr{Loan} که کلید خارجی از \lr{entity}ی \lr{Customer} است.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|}
