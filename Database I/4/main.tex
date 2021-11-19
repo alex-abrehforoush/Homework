@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage{graphicx}
+\usepackage{rotating}
 \usepackage{amsmath}
 \usepackage{fancyhdr}
 \usepackage{listings}
@@ -110,7 +111,30 @@
 \subsection{\lr{e}}
 اضافه کردن \lr{attribute} به نام \lr{sponsor\_ssn} در \lr{entity}ی \lr{Loan} که کلید خارجی از \lr{entity}ی \lr{Customer} است.
 
-
+\section{}
+\subsection{\lr{a}}
+%begintable
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llllllllllllll}
+                           & \textbf{\lr{Branch}} & \textbf{\lr{Manager}} & \textbf{\lr{Provider}} & \textbf{\lr{Cook}}  & \textbf{\lr{Waiter}} & \textbf{\lr{Worker}} & \textbf{\lr{Driver}} & \textbf{\lr{Time}} & \textbf{\lr{Food}} & \textbf{\lr{Organization}} & \textbf{\lr{Complaint}} & \textbf{\lr{Customer}} & \textbf{\lr{Ingredient}} \\
+\textbf{\lr{Branch}}       &                      & \lr{Managed by}       & \lr{Provided by}       & \lr{Employes}       & \lr{Employes}        & \lr{Employes}        & \lr{Employes}        &                    & \lr{Serves}        & \lr{Caters}                & \lr{Has}                & \lr{Services}          &                          \\
+\textbf{\lr{Manager}}      & \lr{Manages}         & \lr{Superior to}      &                        &                     &                      &                      &                      &                    &                    &                            &                         &                        &                          \\
+\textbf{\lr{Provider}}     & \lr{Provides}        &                       &                        &                     &                      &                      &                      &                    &                    &                            &                         &                        &                          \\
+\textbf{\lr{Cook}}         & \lr{Employed by}     &                       &                        &                     &                      &                      &                      & \lr{Works in}      &                    &                            &                         &                        &                          \\
+\textbf{\lr{Waiter}}       & \lr{Employed by}     &                       &                        &                     &                      &                      &                      & \lr{Works in}      &                    &                            &                         &                        &                          \\
+\textbf{\lr{Worker}}       & \lr{Employed by}     &                       &                        &                     &                      &                      &                      & \lr{Works in}      &                    &                            &                         &                        &                          \\
+\textbf{\lr{Driver}}       & \lr{Employed by}     &                       &                        &                     &                      &                      &                      & \lr{Works in}      &                    &                            &                         &                        &                          \\
+\textbf{\lr{Time}}         &                      &                       &                        & \lr{Is assigned to} & \lr{Is assigned to}  & \lr{Is assigned to}  & \lr{Is assigned to}  &                    &                    &                            &                         &                        &                          \\
+\textbf{\lr{Food}}         & \lr{Served by}       &                       &                        &                     &                      &                      &                      &                    &                    &                            &                         & \lr{Graded by}         & \lr{Is made of}          \\
+\textbf{\lr{Organization}} & \lr{Catered by}      &                       &                        &                     &                      &                      &                      &                    &                    &                            &                         &                        &                          \\
+\textbf{\lr{Complaint}}    & \lr{Assigned to}     &                       &                        &                     &                      &                      &                      &                    &                    &                            &                         & \lr{Installed by}      &                          \\
+\textbf{\lr{Customer}}     & \lr{Eats at}         &                       &                        &                     &                      &                      &                      &                    & \lr{Grades}        &                            & \lr{Installs}           &                        &                          \\
+\textbf{\lr{Ingredient}}   &                      &                       &                        &                     &                      &                      &                      &                    & \lr{Make}          &                            &                         &                        &                         
+\end{tabular}%
+}
+\end{table}
+%endtable
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[H]
     \centering
