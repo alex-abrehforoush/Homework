@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  20 NOV 2021 17:54
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  20 NOV 2021 23:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -913,30 +913,6 @@ LaTeX Warning: Label `fig:fig1' multiply defined.
 
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
@@ -1063,46 +1039,26 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
 File: figures/D1.jpg Graphic file (type bmp)
 <figures/D1.jpg>
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 155.
+(Font)              scaled to size 10.79997pt on input line 156.
 
 
 LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 155.
+(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 156.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 155.
+(Font)              scaled to size 9.0pt on input line 156.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 155.
+(Font)              scaled to size 10.79997pt on input line 156.
 [3]
 File: figures/D2.jpg Graphic file (type bmp)
 <figures/D2.jpg>
  [4]
-File: figures/4-a.png Graphic file (type bmp)
-<figures/4-a.png>
+File: figures/D3.jpg Graphic file (type bmp)
+<figures/D3.jpg>
  [5]
-File: figures/4-b.png Graphic file (type bmp)
-<figures/4-b.png>
-File: figures/4-c.png Graphic file (type bmp)
-<figures/4-c.png>
-File: figures/5-a.png Graphic file (type bmp)
-<figures/5-a.png>
- [6]
-File: figures/5-b.png Graphic file (type bmp)
-<figures/5-b.png>
-File: figures/5-c.png Graphic file (type bmp)
-<figures/5-c.png>
- [7]
-File: figures/5-d.png Graphic file (type bmp)
-<figures/5-d.png>
-File: figures/6.png Graphic file (type bmp)
-<figures/6.png>
- [8]
-File: figures/7.png Graphic file (type bmp)
-<figures/7.png>
- [9]
-File: figures/8.png Graphic file (type bmp)
-<figures/8.png>
- [10] [11] (./main.aux)
+File: figures/D4.jpg Graphic file (type bmp)
+<figures/D4.jpg>
+ [6] [7] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1114,12 +1070,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17346 strings out of 476919
- 357962 string characters out of 5825424
- 1221815 words of memory out of 5000000
- 37029 multiletter control sequences out of 15000+600000
+ 17296 strings out of 476919
+ 357206 string characters out of 5825424
+ 1221803 words of memory out of 5000000
+ 36987 multiletter control sequences out of 15000+600000
  404156 words of font info for 63 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,12n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (12 pages).
+Output written on main.pdf (8 pages).

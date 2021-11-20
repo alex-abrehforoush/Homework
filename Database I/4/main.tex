@@ -74,14 +74,15 @@
 آیا \lr{ERD}ِ نهایی سیستم داده را به دقت مجسم می‌کند؟
 \end{enumerate}
 
-\section{2}
+\section{}
 \subsection{\lr{Composite Attribute}}
 برای پیاده‌سازی فیزیکی این نوع \lr{attribute}ها می‌توان هر عنصرِ آن‌ها را در هر \lr{entity} همانند \lr{attribute}های عادیِ آن \lr{entity} به \lr{entity} اضافه می‌کرد. در طراحی برای متمایز کردنشان می‌توان از \lr{indent} استفاده کرد.
 \subsection{\lr{Multivalued Attribute}}
 برای پیاده‌سازی فیزیکی این نوع \lr{attribute}ها می‌توان یک \lr{table} متناظر با آن \lr{attribute} ایجاد کرد و کلید خارجی از \lr{entity}ی اولیه برای آن تعریف کرد.
-\section{3}
-\lr{weak entity set}، \lr{entity set}ی است که برای تعریف کلید خودش به یک \lr{entity}ی دیگر وابسته است و بدون این کلید خارجی قادر به مشخص کردن هر رکورد به صورت یکتا نیست. \lr{entity set}ی که \lr{weak} نباشد \lr{strong} است.
-\section{4}
+
+\section{}
+\lr{weak entity set}، \lr{entity set}ی است که برای تعریف کلید خودش به یک \lr{entity}ی دیگر وابسته است و بدون این کلید خارجی قادر به مشخص کردن هر رکورد به صورت یکتا نیست. \lr{entity set}ی که \lr{weak} نباشد \lr{strong} است. درست است که با این کار پایگاه‌داده‌ی فیزیکی کارش را درست انجام می‌دهد، اما از نظر مدل نتیجه مد نظرمان را نداریم و مفاهیم مورد نظرمان به طور کامل منتقل نمی‌شوند.
+\section{}
 \subsection{\lr{a}}
 \lr{entity}های \lr{Bank Branch}، \lr{Account} و \lr{Loan} موجودیت‌های \lr{weak}، و سایر \lr{entity}ها موجودیت‌های \lr{strong}، هستند.
 \subsection{\lr{b}}
@@ -162,142 +163,62 @@
     \includegraphics[width=1\textwidth]{figures/D2.jpg}
     \caption
 	{
-\lr{4-a}
+\lr{4-b}
 	}
     \label{fig:fig1}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{}
+\begin{itemize}
+    \item [$\bullet$] هر \lr{Reservation} متعلق به دقیقا یک مشتری است.
+    \item [$\bullet$] کاردینالیتی‌های بیشتر از 1 به \lr{Many} نظیر شده اند.
+\end{itemize}
+
+%beigintable
 \begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|}
-    \hline
-    \textbf{بیشترین تعداد خروجی حاصل} & \textbf{کمترین تعداد خروجی حاصل} & \textbf{}\\
-    \hline
-    100 & 100 & \lr{users INNER JOIN numbers}\\
-    \hline
-    199 & 100 & \lr{users LEFT OUTER JOIN numbers}\\
-    \hline
-    100 & 100 & \lr{users RIGHT OUTER JOIN numbers}\\
-    \hline
-    199 & 100 & \lr{users FULL OUTER JOIN numbers}\\
-    \hline
-
-    \end{tabular}
-    \caption{جدول شماره 1}
-    \label{tab:tab1}
+\resizebox{\textwidth}{!}
+{
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline                          & \textbf{\lr{Customer}} & \textbf{\lr{Reservation}} & \textbf{\lr{Flight}} & \textbf{\lr{Stewardess}} & \textbf{\lr{Pilot}} & \textbf{\lr{Airport}} & \textbf{\lr{City}} \\
+\hline\textbf{\lr{Customer}}    &                        & \lr{Reserves}             &                      &                          &                     &                       &                    \\
+\hline\textbf{\lr{Reservation}} & \lr{Reserved by}       &                           & \lr{Services}        &                          &                     &                       &                    \\
+\hline\textbf{\lr{Flight}}      &                        & \lr{Is the service of}    &                      & \lr{Has}                 & \lr{Has}            & \lr{From, To}         & \lr{From, To}      \\
+\hline\textbf{\lr{Stewardess}}  &                        &                           & \lr{Attends at}      &                          &                     & \lr{Works at}         &                    \\
+\hline\textbf{\lr{Pilot}}       &                        &                           & \lr{Attends at}      &                          &                     & \lr{Works at}         &                    \\
+\hline\textbf{\lr{Airport}}     &                        &                           &                      & \lr{Works with}          & \lr{Works with}     &                       & \lr{Is located in} \\
+\hline\textbf{\lr{City}}        &                        &                           &                      &                          &                     & \lr{Has}              &                   
+\end{tabular}%
+}
 \end{table}
+%endtable
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/D3.jpg}
+    \caption
+	{
+\lr{6-a}
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/D4.jpg}
+    \caption
+	{
+\lr{6-b}
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{itemize}
+    \item [$\bullet$] درصورت عدم وضوح کافی تصاویر، فایلِ \lr{Visio}ی دیاگرام‌ها در فایل زیپ موجود است.
+\end{itemize}
 
-\section{4}
+\section{}
 \subsection{\lr{a}}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/4-a.png}
-    \caption
-	{
-\lr{5-a}
-	}
-    \label{fig:fig1}
-\end{figure}
-
+داخل فایل \lr{SQL}
 \subsection{\lr{b}}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/4-b.png}
-    \caption
-	{
-\lr{5-b}
-	}
-    \label{fig:fig1}
-\end{figure}
-
-\subsection{\lr{c}}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/4-c.png}
-    \caption
-	{
-\lr{4-c}
-	}
-    \label{fig:fig1}
-\end{figure}
-
-\section{5}
-\subsection{\lr{a}}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/5-a.png}
-    \caption
-	{
-\lr{5-a}
-	}
-    \label{fig:fig1}
-\end{figure}
-
-\subsection{\lr{b}}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/5-b.png}
-    \caption
-	{
-\lr{5-b}
-	}
-    \label{fig:fig1}
-\end{figure}
-
-\subsection{\lr{c}}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/5-c.png}
-    \caption
-	{
-\lr{5-c}
-	}
-    \label{fig:fig1}
-\end{figure}
-
-\subsection{\lr{c}}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/5-d.png}
-    \caption
-	{
-\lr{5-d}
-	}
-    \label{fig:fig1}
-\end{figure}
-
-\section{6}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/6.png}
-    \caption
-	{
-\lr{6}
-	}
-    \label{fig:fig1}
-\end{figure}
-
-\section{7}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/7.png}
-    \caption
-	{
-\lr{7}
-	}
-    \label{fig:fig1}
-\end{figure}
-
-\section{8}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/8.png}
-    \caption
-	{
-\lr{8}
-	}
-    \label{fig:fig1}
-\end{figure}
+داخل فایل \lr{SQL}
 %------------------------------------------------------------------------------------------
 
 
@@ -311,7 +232,7 @@
 
 \resetlatinfont
 
-\bibitem{b1} https://searchoracle.techtarget.com/answer/LEFT-OUTER-JOIN-without-using-LEFT-OUTER-JOIN
+\bibitem{b1} None
 \end{LTRitems}
 
 \end{thebibliography}
