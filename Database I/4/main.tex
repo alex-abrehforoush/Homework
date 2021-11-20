@@ -75,9 +75,12 @@
 \end{enumerate}
 
 \section{2}
-د
+\subsection{\lr{Composite Attribute}}
+برای پیاده‌سازی فیزیکی این نوع \lr{attribute}ها می‌توان هر عنصرِ آن‌ها را در هر \lr{entity} همانند \lr{attribute}های عادیِ آن \lr{entity} به \lr{entity} اضافه می‌کرد. در طراحی برای متمایز کردنشان می‌توان از \lr{indent} استفاده کرد.
+\subsection{\lr{Multivalued Attribute}}
+برای پیاده‌سازی فیزیکی این نوع \lr{attribute}ها می‌توان یک \lr{table} متناظر با آن \lr{attribute} ایجاد کرد و کلید خارجی از \lr{entity}ی اولیه برای آن تعریف کرد.
 \section{3}
-د
+\lr{weak entity set}، \lr{entity set}ی است که برای تعریف کلید خودش به یک \lr{entity}ی دیگر وابسته است و بدون این کلید خارجی قادر به مشخص کردن هر رکورد به صورت یکتا نیست. \lr{entity set}ی که \lr{weak} نباشد \lr{strong} است.
 \section{4}
 \subsection{\lr{a}}
 \lr{entity}های \lr{Bank Branch}، \lr{Account} و \lr{Loan} موجودیت‌های \lr{weak}، و سایر \lr{entity}ها موجودیت‌های \lr{strong}، هستند.
@@ -118,34 +121,51 @@
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
-                           & \textbf{\lr{Branch}} & \textbf{\lr{Manager}} & \textbf{\lr{Provider}} & \textbf{\lr{Staff}} & \textbf{\lr{Time}} & \textbf{\lr{Food}} & \textbf{\lr{Organization}} & \textbf{\lr{Complaint}} & \textbf{\lr{Customer}} & \textbf{\lr{Ingredient}} \\
-\hline
-\textbf{\lr{Branch}}       &                      & \lr{Managed by}       & \lr{Provided by}       & \lr{Employes}       &                    & \lr{Serves}        & \lr{Caters}                & \lr{Has}                & \lr{Services}          &                          \\
-\hline
-\textbf{\lr{Manager}}      & \lr{Manages}         & \lr{Superior to}      &                        &                     &                    &                    &                            &                         &                        &                          \\
-\hline
-\textbf{\lr{Provider}}     & \lr{Provides}        &                       &                        &                     &                    &                    &                            &                         &                        &                          \\
-\hline
-\textbf{\lr{Staff}}        & \lr{Employed by}     &                       &                        &                     & \lr{Works in}      &                    &                            &                         &                        &                          \\
-\hline
-\textbf{\lr{Time}}         &                      &                       &                        & \lr{Is assigned to} &                    &                    &                            &                         &                        &                          \\
-\hline
-\textbf{\lr{Food}}         & \lr{Served by}       &                       &                        &                     &                    &                    &                            &                         & \lr{Graded by}         & \lr{Is made of}          \\
-\hline
-\textbf{\lr{Organization}} & \lr{Catered by}      &                       &                        &                     &                    &                    &                            &                         &                        &                          \\
-\hline
-\textbf{\lr{Complaint}}    & \lr{Assigned to}     &                       &                        &                     &                    &                    &                            &                         & \lr{Installed by}      &                          \\
-\hline
-\textbf{\lr{Customer}}     & \lr{Eats at}         &                       &                        &                     &                    & \lr{Grades}        &                            & \lr{Installs}           &                        &                          \\
-\hline
-\textbf{\lr{Ingredient}}   &                      &                       &                        &                     &                    & \lr{Make}          &                            &                         &                        &                         
-
+                           & \textbf{\lr{Branch}} & \textbf{\lr{Manager}} & \textbf{\lr{Provider}} & \textbf{\lr{Staff}} & \textbf{\lr{Time}} & \textbf{\lr{Food}}  & \textbf{\lr{Organization}} & \textbf{\lr{Complaint}} & \textbf{\lr{Customer}}     & \textbf{\lr{Ingredient}} \\
+\hline\textbf{\lr{Branch}}       &                      & \lr{Managed by}       & \lr{Supplied by}       & \lr{Employes}       &                    &                     & \lr{Caters}                & \lr{Has}                &                            &                          \\
+\hline\textbf{\lr{Manager}}      & \lr{Manages}         & \lr{Superior to}      &                        &                     &                    &                     &                            &                         &                            &                          \\
+\hline\textbf{\lr{Provider}}     & \lr{Supplies}        &                       &                        &                     &                    &                     &                            &                         &                            & \lr{Provides}   \\
+\hline\textbf{\lr{Staff}}        & \lr{Employed by}     &                       &                        &                     & \lr{Works in}      &                     &                            &                         &                            &                          \\
+\hline\textbf{\lr{Time}}         &                      &                       &                        & \lr{Is assigned to} &                    &                     &                            &                         &                            &                          \\
+\hline\textbf{\lr{Food}}         &                      &                       &                        &                     &                    &                     &                            &                         & \lr{Ordered by, Graded by} & \lr{Is made of}          \\
+\hline\textbf{\lr{Organization}} & \lr{Catered by}      &                       &                        &                     &                    &                     &                            &                         &                            &                          \\
+\hline\textbf{\lr{Complaint}}    & \lr{Assigned to}     &                       &                        &                     &                    &                     &                            &                         & \lr{Installed by}          &                          \\
+\hline\textbf{\lr{Customer}}     &                      &                       &                        &                     &                    & \lr{Orders, Grades} &                            & \lr{Installs}           &                            &                          \\
+\hline\textbf{\lr{Ingredient}}   &                      &                       & \lr{Provided by}       &                     &                    & \lr{Make}           &                            &                         &                            &                         
 \end{tabular}%
 }
 \end{table}
 %endtable
 
+\subsection{\lr{b}}
+\begin{itemize}
+    \item [$\bullet$] نام شعبه در در سفارشات و غذاها مشخص نمی‌شود.
+    \item [$\bullet$] هر تامین‌کننده می‌تواند با صفر تا چند شعبه کار کند.
+    \item [$\bullet$] هر سازمان دقیقا با یک شعبه قرارداد دارد.
+    \item [$\bullet$] به هر مشتری صرف نظر از اینکه مشترک هست یا موردی یک شناسه اختصاص می‌دهیم.
+    \item [$\bullet$] اینکه شکایت مربوط به چه سرویسی یا چه غذایی است لحاظ نمی‌شود.
+    \item [$\bullet$] هر مشتری تنها پس از صرف غذا نمره می‌دهد و نمره‌دهی بدون صرف غذا نداریم.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/D1.jpg}
+    \caption
+	{
+\lr{4-a}
+	}
+    \label{fig:fig1}
+\end{figure}
 
+\subsection{\lr{b}}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/D2.jpg}
+    \caption
+	{
+\lr{4-a}
+	}
+    \label{fig:fig1}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[H]
     \centering
@@ -174,7 +194,7 @@
     \includegraphics[width=0.8\textwidth]{figures/4-a.png}
     \caption
 	{
-\lr{4-a}
+\lr{5-a}
 	}
     \label{fig:fig1}
 \end{figure}
@@ -185,7 +205,7 @@
     \includegraphics[width=0.8\textwidth]{figures/4-b.png}
     \caption
 	{
-\lr{4-b}
+\lr{5-b}
 	}
     \label{fig:fig1}
 \end{figure}
