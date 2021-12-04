@@ -1,0 +1,30 @@
+;Enabling output
+	LDI R21, 0xFF
+	OUT DDRB, R21
+;Outputing in port B
+	LDI XL, $90
+	OUT XH, $00
+	LD R20, X
+	OUT PORTB, R20
+
+	LDI XL, $91
+	OUT XH, $00
+	LD R20, X
+	OUT PORTB, R20
+
+	LDI XL, $92
+	OUT XH, $00
+	LD R20, X
+	OUT PORTB, R20
+
+	LDI XL, $93
+	OUT XH, $00
+	LD R20, X
+	OUT PORTB, R20
+
+	LDI XL, $94
+	OUT XH, $00
+	LD R20, X
+	OUT PORTB, R20
+;End
+	NOP

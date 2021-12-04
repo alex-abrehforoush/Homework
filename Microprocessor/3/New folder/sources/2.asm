@@ -1,0 +1,9 @@
+;Enabling read
+	LDI R19, 0x00
+	OUT DDRB, R19
+	IN R20, PINB
+	BST R20, 4
+	BLD R21, 0
+	STS $200, R21
+;end
+	NOP
