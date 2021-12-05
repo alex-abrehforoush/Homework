@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  5 DEC 2021 11:26
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  5 DEC 2021 16:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -903,17 +903,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
 \@quotelevel=\count468
 \@quotereset=\count469
- (./main.aux
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-)
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
@@ -927,7 +917,8 @@ LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
 5.
- (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 45.
@@ -1037,44 +1028,30 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 78.
  [1] [2] [3] [4] [5]
-File: figures/D1.jpg Graphic file (type bmp)
-<figures/D1.jpg>
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 341.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 311.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 311.
+ [6] [7]
+Overfull \hbox (2.56862pt too wide) in paragraph at lines 420--424
+[][]$\OML/cmm/m/it/10 R \OMS/cmsy/m/n/10 ^^@ f\OML/cmm/m/it/10 Offering[]dept; 
+Credit[]hours; Course[]level; No[]of[]students; Instructor[]ssn\OMS/cmsy/m/n/10
+ g ^^@ f\OML/cmm/m/it/10 Semester; Year\OMS/cmsy/m/n/10 g[] $[]
+ []
 
-
-LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 341.
-
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 341.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 341.
-[6]
-File: figures/D2.jpg Graphic file (type bmp)
-<figures/D2.jpg>
- [7]
-File: figures/D3.jpg Graphic file (type bmp)
-<figures/D3.jpg>
- [8]
-File: figures/D4.jpg Graphic file (type bmp)
-<figures/D4.jpg>
- [9] [10] (./main.aux)
+[8] [9] [10] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17294 strings out of 476919
- 357188 string characters out of 5825424
- 1221781 words of memory out of 5000000
- 36987 multiletter control sequences out of 15000+600000
+ 17257 strings out of 476919
+ 356610 string characters out of 5825424
+ 1215731 words of memory out of 5000000
+ 36955 multiletter control sequences out of 15000+600000
  404156 words of font info for 63 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,12n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s

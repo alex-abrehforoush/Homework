@@ -300,106 +300,285 @@ F_{3}=\\
 $
 \end{latin}
 
-\section{}
-\subsection{\lr{a}}
-%begintable
-\begin{table}[H]
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
-                           & \textbf{\lr{Branch}} & \textbf{\lr{Manager}} & \textbf{\lr{Provider}} & \textbf{\lr{Staff}} & \textbf{\lr{Time}} & \textbf{\lr{Food}}  & \textbf{\lr{Organization}} & \textbf{\lr{Complaint}} & \textbf{\lr{Customer}}     & \textbf{\lr{Ingredient}} \\
-\hline\textbf{\lr{Branch}}       &                      & \lr{Managed by}       & \lr{Supplied by}       & \lr{Employes}       &                    &                     & \lr{Caters}                & \lr{Has}                &                            &                          \\
-\hline\textbf{\lr{Manager}}      & \lr{Manages}         & \lr{Superior to}      &                        &                     &                    &                     &                            &                         &                            &                          \\
-\hline\textbf{\lr{Provider}}     & \lr{Supplies}        &                       &                        &                     &                    &                     &                            &                         &                            & \lr{Provides}   \\
-\hline\textbf{\lr{Staff}}        & \lr{Employed by}     &                       &                        &                     & \lr{Works in}      &                     &                            &                         &                            &                          \\
-\hline\textbf{\lr{Time}}         &                      &                       &                        & \lr{Is assigned to} &                    &                     &                            &                         &                            &                          \\
-\hline\textbf{\lr{Food}}         &                      &                       &                        &                     &                    &                     &                            &                         & \lr{Ordered by, Graded by} & \lr{Is made of}          \\
-\hline\textbf{\lr{Organization}} & \lr{Catered by}      &                       &                        &                     &                    &                     &                            &                         &                            &                          \\
-\hline\textbf{\lr{Complaint}}    & \lr{Assigned to}     &                       &                        &                     &                    &                     &                            &                         & \lr{Installed by}          &                          \\
-\hline\textbf{\lr{Customer}}     &                      &                       &                        &                     &                    & \lr{Orders, Grades} &                            & \lr{Installs}           &                            &                          \\
-\hline\textbf{\lr{Ingredient}}   &                      &                       & \lr{Provided by}       &                     &                    & \lr{Make}           &                            &                         &                            &                         
-\end{tabular}%
-}
-\end{table}
-%endtable
 
-\subsection{\lr{b}}
+
+\section{}%5
+\begin{latin}
+$
+\\
+R=
+\{
+Course\_no, Sec\_no, Offering\_dept, Credit\_hours, Course\_level,\\Instructor\_ssn, Semester, Year, Days\_hours, Room\_no, No\_of\_students
+\}\\
+\\
+F=\\
+\{\\
+\{Course\_no\}\longrightarrow\{Offering\_dept, Credit\_hours, Course\_level\},\\
+\{Course\_no, Sec\_no, Semester, Year\}\longrightarrow\{Days\_hours, Room\_no, No\_of\_students, Instructor\_ssn\},\\
+\{Room\_no, Days\_hours, Semester, Year\}\longrightarrow\{Instructor\_ssn, Course\_no, Sec\_no\}\\
+\}
+$
+\end{latin}
+
+ابتدا پوش کانونی را به شکل زیر محاسبه می‌کنیم:
+
 \begin{itemize}
-    \item [$\bullet$] نام شعبه در در سفارشات و غذاها مشخص نمی‌شود.
-    \item [$\bullet$] هر تامین‌کننده می‌تواند با صفر تا چند شعبه کار کند.
-    \item [$\bullet$] هر سازمان دقیقا با یک شعبه قرارداد دارد.
-    \item [$\bullet$] به هر مشتری صرف نظر از اینکه مشترک هست یا موردی یک شناسه اختصاص می‌دهیم.
-    \item [$\bullet$] اینکه شکایت مربوط به چه سرویسی یا چه غذایی است لحاظ نمی‌شود.
-    \item [$\bullet$] هر مشتری تنها پس از صرف غذا نمره می‌دهد و نمره‌دهی بدون صرف غذا نداریم.
+    \item [$\bullet$] ابتدا وابستگی تابعی را به یک وابستگی تابعی با یک \lr{attribute} در سمت راست تبدیل می‌کنیم.
+
+\begin{latin}
+$
+\\F=\\
+\{\\
+\{Course\_no\}\longrightarrow\{Offering\_dept\},\\
+\{Course\_no \}\longrightarrow\{Credit\_hours\},\\
+\{Course\_no \}\longrightarrow\{Course\_level\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Days\_hours\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Room\_no\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{No\_of\_students\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Instructor\_ssn\},\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Instructor\_ssn\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Course\_no\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Sec\_no\}\\
+\}
+$
+\end{latin}
+    \item [$\bullet$] حال وابستگی‌های تابعی بدیهی را پاک می‌کنیم.
+\begin{latin}
+$
+\\F=\\
+\{\\
+\{Course\_no\}\longrightarrow\{Offering\_dept\},\\
+\{Course\_no \}\longrightarrow\{Credit\_hours\},\\
+\{Course\_no \}\longrightarrow\{Course\_level\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Days\_hours\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Room\_no\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{No\_of\_students\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Instructor\_ssn\},\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Instructor\_ssn\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Course\_no\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Sec\_no\}\\
+\}
+$
+\end{latin}
+    \item [$\bullet$] سپس \lr{attribute}های سمت چپ هر وابستگی تابعی را کمینه می‌کنیم.
+
+\begin{latin}
+$
+\\F=\\
+\{\\
+\{Course\_no\}\longrightarrow\{Offering\_dept\},\\
+\{Course\_no \}\longrightarrow\{Credit\_hours\},\\
+\{Course\_no \}\longrightarrow\{Course\_level\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Days\_hours\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Room\_no\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{No\_of\_students\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Instructor\_ssn\},\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Instructor\_ssn\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Course\_no\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Sec\_no\}\\
+\}
+$
+\end{latin}
+    \item [$\bullet$] در نهایت وابستگی‌های تابعی تکراری(که از سایر وابستگی‌ها نتیجه می‌شوند) را حذف می‌کنیم.
+
+\begin{latin}
+$
+\\F=\\
+\{\\
+\{Course\_no\}\longrightarrow\{Offering\_dept\},\\
+\{Course\_no \}\longrightarrow\{Credit\_hours\},\\
+\{Course\_no \}\longrightarrow\{Course\_level\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Days\_hours\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Room\_no\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{No\_of\_students\},\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Instructor\_ssn\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Course\_no\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Sec\_no\}\\
+\}
+$
+\end{latin}
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{figures/D1.jpg}
-    \caption
-	{
-\lr{4-a}
-	}
-    \label{fig:fig1}
-\end{figure}
-
-\subsection{\lr{b}}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{figures/D2.jpg}
-    \caption
-	{
-\lr{4-b}
-	}
-    \label{fig:fig1}
-\end{figure}
-
-\section{}
+پوش کانونی به دست آمد. حال مجموعه‌ی همه‌ی \lr{attribute}هایی که در سمت راست هیچ وابستگی تابعی قرار ندارند را به دست می‌آوریم. هر کلید کاندید باید شامل این \lr{attribute}ها باشد. این مجموعه برابر است با:
+\begin{latin}
+$
+\{Semester, Year\}
+$
+\end{latin}
+همچنین مجموعه‌ی همه‌ی \lr{attribute}هایی که در سمت راست حداقل یک وابستگی تابعی قرار داشته باشد ولی در سمت چپ هیچ وابستگی تابعی قرار ندارند را نیز به دست می‌آوریم. این \lr{attribute}ها نباید در هیچ یک از کلیدهای کاندید باشند. این مجموعه برابر است با:
+\begin{latin}
+$
+\{Offering\_dept, Credit\_hours, Course\_level, No\_of\_students, Instructor\_ssn\}
+$
+\end{latin}
+بستارِ مجموعه‌ی 
+$
+\{Semester, Year\}
+$
+خودش است.
+حال تلاش می‌کنیم که یکی از \lr{attribute}های مجموعه‌ی
+\begin{latin}
+$
+R-\{Offering\_dept, Credit\_hours, Course\_level, No\_of\_students, Instructor\_ssn\}-\{Semester, Year\}\\
+=\{Course\_no, Sec\_no, Days\_hours, Room\_no\}
+$
+\end{latin}
+را به مجموعه‌ی
+$
+\{Semester, Year\}
+$
+به گونه‌ای اضافه کنیم که یک سوپرکلید تشکیل دهند. درصورتی که سوپرکلید باشند با بررسی اینکه آیا زیرمجموعه‌ی سره‌ای که سوپرکلید باشند دارند یا خیر کلید کاندید بودن آن‌ها را احراز می‌کنیم.
 \begin{itemize}
-    \item [$\bullet$] هر \lr{Reservation} متعلق به دقیقا یک مشتری است.
-    \item [$\bullet$] کاردینالیتی‌های بیشتر از 1 به \lr{Many} نظیر شده اند.
-\end{itemize}
+    \item [$\bullet$]
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Course\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
 
-%beigintable
-\begin{table}[H]
-\resizebox{\textwidth}{!}
-{
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-\hline                          & \textbf{\lr{Customer}} & \textbf{\lr{Reservation}} & \textbf{\lr{Flight}} & \textbf{\lr{Stewardess}} & \textbf{\lr{Pilot}} & \textbf{\lr{Airport}} & \textbf{\lr{City}} \\
-\hline\textbf{\lr{Customer}}    &                        & \lr{Reserves}             &                      &                          &                     &                       &                    \\
-\hline\textbf{\lr{Reservation}} & \lr{Reserved by}       &                           & \lr{Services}        &                          &                     &                       &                    \\
-\hline\textbf{\lr{Flight}}      &                        & \lr{Is the service of}    &                      & \lr{Has}                 & \lr{Has}            & \lr{From, To}         & \lr{From, To}      \\
-\hline\textbf{\lr{Stewardess}}  &                        &                           & \lr{Attends at}      &                          &                     & \lr{Works at}         &                    \\
-\hline\textbf{\lr{Pilot}}       &                        &                           & \lr{Attends at}      &                          &                     & \lr{Works at}         &                    \\
-\hline\textbf{\lr{Airport}}     &                        &                           &                      & \lr{Works with}          & \lr{Works with}     &                       & \lr{Is located in} \\
-\hline\textbf{\lr{City}}        &                        &                           &                      &                          &                     & \lr{Has}              &                   
-\end{tabular}%
-}
-\end{table}
-%endtable
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{figures/D3.jpg}
-    \caption
-	{
-\lr{6-a}
-	}
-    \label{fig:fig1}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{figures/D4.jpg}
-    \caption
-	{
-\lr{6-b}
-	}
-    \label{fig:fig1}
-\end{figure}
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Sec\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Days\_hours\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Room\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+\end{itemize}
+حال دو \lr{attribute} را از مجموعه‌ی مذکور به 
+مجموعه‌ی
+$
+\{Semester, Year\}
+$
+اضافه می‌کنیم. پس 6 حالت زیر را داریم:
 \begin{itemize}
-    \item [$\bullet$] درصورت عدم وضوح کافی تصاویر، فایلِ \lr{Visio}ی دیاگرام‌ها در فایل زیپ موجود است.
+    \item [$\bullet$]
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Course\_no, Sec\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید است و هیچ زیرمجموعه‌ی سره‌ای که سوپرکلید باشد ندارد. پس یک کلید کاندید است.
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Course\_no, Days\_hours\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Course\_no, Room\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Days\_hours, Sec\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Room\_no, Sec\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Days\_hours, Room\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید است و هیچ زیرمجموعه‌ی سره‌ای که سوپرکلید باشد ندارد. پس یک کلید کاندید است.
 \end{itemize}
 
-\section{}
+حال دو \lr{attribute} را از مجموعه‌ی مذکور به مجموعه‌ی
+$
+\{Semester, Year\}
+$
+اضافه می‌کنیم.
+\begin{itemize}
+    \item [$\bullet$]
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Course\_no, Days\_hours, Room\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید است اما یک زیرمجموعه‌ی سره دارد که سوپرکلید است. پس کلید کاندید نیست.
+\end{itemize}
+ چون دیگر کلید کاندید نداریم دیگر ادامه نمی‌دهیم. پس کلیدهای کاندید ما دو مجموعه‌ی زیر هستند:
+\begin{latin}
+$
+\\CK_{1}=\{Semester, Year, Course\_no, Sec\_no\}\\
+CK_{2}=\{Semester, Year, Days\_hours, Room\_no\}
+$
+\end{latin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+حال با تجزیه‌ی $R$ به \lr{relation}های 
+$R_{1}$ و $R_{2}$ 
+و $F$ به \lr{FD}های 
+$F_{1}$ و $F_{2}$ 
+به شکل زیر، \lr{partial dependency}ها را حذف می‌کنیم و به فرم نرمال دوم می‌رسیم.
+
+\begin{latin}
+$
+\\
+R_{1}=\{Course\_no, Offering\_dept, Credit\_hours, Course\_level\}\\
+F_{1}=\\
+\{\\
+\{Course\_no\}\longrightarrow\{Offering\_dept, Credit\_hours, Course\_level\},\\
+\}
+\\
+\\
+R_{2}=\{Course\_no, Sec\_no, Instructor\_ssn, Semester, Year, Days\_hours, Room\_no, No\_of\_students\}\\
+F_{2}=\\
+\{\\
+\{Course\_no, Sec\_no, Semester, Year\}\longrightarrow\{Room\_no, Days\_hours\},\\
+\{Days\_hours, Room\_no, Semester, Year\}\longrightarrow\{Sec\_no, Course\_no, Instructor\_ssn, No\_of\_students\},\\
+\}
+$
+\end{latin}
+برای دستیابی به فرم نرمال سوم باید \lr{transitive dependency}ها را حذف کنیم. با توجه به اینکه هیچ \lr{FD}ای وجود ندارد که سمت چپ آن یک \lr{attribute}ِ \lr{nonprime} باشد، فرم نرمال سوم همان فرم به دست آمده در مرحله قبل است.
+\begin{latin}
+$
+\\
+R_{1}=\{Course\_no, Offering\_dept, Credit\_hours, Course\_level\}\\
+F_{1}=\\
+\{\\
+\{Course\_no\}\longrightarrow\{Offering\_dept, Credit\_hours, Course\_level\},\\
+\}
+\\
+\\
+R_{2}=\{Course\_no, Sec\_no, Instructor\_ssn, Semester, Year, Days\_hours, Room\_no, No\_of\_students\}\\
+F_{2}=\\
+\{\\
+\{Course\_no, Sec\_no, Semester, Year\}\longrightarrow\{Room\_no, Days\_hours\},\\
+\{Days\_hours, Room\_no, Semester, Year\}\longrightarrow\{Sec\_no, Course\_no, Instructor\_ssn, No\_of\_students\},\\
+\}
+$
+\end{latin}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{}%6
 \subsection{\lr{a}}
 داخل فایل \lr{SQL}
 \subsection{\lr{b}}
