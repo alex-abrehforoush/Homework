@@ -50,7 +50,7 @@
 
 
 \section{}%1
-\subsection{الف}
+\subsection{\lr{a}}
 \begin{latin}
 \begin{table}[H]
 \centering
@@ -71,7 +71,7 @@
 \end{latin}
 دلیل اینکه می‌گوییم \lr{BCNF} شکل قوی‌تری از \lr{3NF} است، این است که \lr{BCNF} شرط دومِ \lr{3NF} را که اجازه می‌داد که سمت راست یک \lr{FD} یک \lr{prime attribute} باشد را حذف می‌کند.
 
-\subsection{ب}
+\subsection{\lr{b}}
 یک \lr{transitive dependency} زمانی وجود دارد که \lr{FD}ها این چنین باشند:
 \begin{latin}
 $
@@ -88,7 +88,66 @@ X\longrightarrow Z,\\
 $
 یک \lr{transitive dependency} است. زیرا \lr{X} مقدار \lr{Z} را از طریق 
 \lr{Y} تعیین می‌کند. وجودِ یک وابستگی میان \lr{attribute}های \lr{nonprime}، نشان‌دهنده‌ی وجود \lr{transitive dependency} است.
+\subsection{\lr{c}}
+یک \lr{relation} زمانی در \lr{BCNF} است که هر یک از \lr{FD}های آن یا بدیهی باشند یا سمت چپ آن‌ها سوپرکلید نباشد.
+\\
+چهار حالت زیر را درنظر می‌گیریم:
+\begin{itemize}
+    \item [$\bullet$] تعداد \lr{FD}ها صفر باشد.
 
+\begin{latin}
+$
+\{A_{1}\}\longrightarrow\{A_{2}\}
+$
+\end{latin}
+در این حالت چون هیچ \lr{FD}ای وجود ندارد شرط \lr{BCNF} خود به خود ارضا می‌شود.
+%
+    \item [$\bullet$] تعداد \lr{FD}ها یک باشد و وابستگی به شکل زیر باشد:
+
+\begin{latin}
+$
+\{A_{1}\}\longrightarrow\{A_{2}\}
+$
+\end{latin}
+در این حالت، سمت چپِ \lr{FD}،
+$
+A_{1}
+$
+،کلید است و هیچ تناقضی در \lr{BCNF} رخ نمی‌دهد.
+%
+    \item [$\bullet$] تعداد \lr{FD}ها یک باشد و وابستگی به شکل زیر باشد:
+
+\begin{latin}
+$
+\{A_{2}\}\longrightarrow\{A_{1}\}
+$
+\end{latin}
+در این حالت، سمت چپِ \lr{FD}،
+$
+A_{2}
+$
+،کلید است و هیچ تناقضی در \lr{BCNF} رخ نمی‌دهد.
+%
+    \item [$\bullet$] تعداد \lr{FD}ها دو باشد.
+
+\begin{latin}
+
+$
+\{A_{1}\}\longrightarrow\{A_{2}\},\\
+\{A_{1}\}\longrightarrow\{A_{2}\}
+$
+\end{latin}
+در این حالت سمت چپِ هر دو وابستگی،
+$
+A_{1}
+$
+و
+$
+A_{2}
+$
+کلید است و هیچ تناقضی در \lr{BCNF} رخ نمی‌دهد.
+\end{itemize}
+در نتیجه هر جدول با دو \lr{attribute} همیشه \lr{BCNF} است.
 
 \section{}%2
 \begin{latin}
@@ -673,7 +732,7 @@ $
 
 \resetlatinfont
 
-\bibitem{b1} None
+\bibitem{b1}https://www.tutorialspoint.com/difference-between-normalization-and-denormalization
 \end{LTRitems}
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  5 DEC 2021 18:57
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  5 DEC 2021 19:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -903,7 +903,11 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
 \@quotelevel=\count468
 \@quotereset=\count469
- (./main.aux)
+ (./main.aux
+
+LaTeX Warning: Label `tab:my-table' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
@@ -917,8 +921,7 @@ LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
 5.
-
-(c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
+ (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 45.
@@ -1019,6 +1022,8 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
 (Font)              scaled to size 14.39996pt on input line 53.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 (Font)              scaled to size 14.39996pt on input line 53.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 53.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 54.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
@@ -1032,27 +1037,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--84
 [][]
  []
 
-[1] [2] [3] [4] [5] [6]
+[1] [2] [3] [4] [5] [6] [7]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 339.
+(Font)              scaled to size 7.0pt on input line 398.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 339.
- [7] [8]
-Overfull \hbox (2.56862pt too wide) in paragraph at lines 448--452
+(Font)              scaled to size 5.0pt on input line 398.
+ [8] [9]
+Overfull \hbox (2.56862pt too wide) in paragraph at lines 507--511
 [][]$\OML/cmm/m/it/10 R \OMS/cmsy/m/n/10 ^^@ f\OML/cmm/m/it/10 Offering[]dept; 
 Credit[]hours; Course[]level; No[]of[]students; Instructor[]ssn\OMS/cmsy/m/n/10
  g ^^@ f\OML/cmm/m/it/10 Semester; Year\OMS/cmsy/m/n/10 g[] $[]
  []
 
-[9] [10]
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 605.
- [11] [12] (./main.aux)
+[10] [11] [12] [13] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
@@ -1061,10 +1063,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  17268 strings out of 476919
  356897 string characters out of 5825424
- 1215742 words of memory out of 5000000
+ 1215781 words of memory out of 5000000
  36964 multiletter control sequences out of 15000+600000
  404172 words of font info for 65 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,14n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (13 pages).
+Output written on main.pdf (14 pages).
