@@ -144,7 +144,7 @@ $
 در آخر وابستگی‌های تکراری را حذف می‌کنیم.
 \begin{latin}
 $
-\\F=\\
+\\F_{c}=\\
 \{\\
 	\{M\}\longrightarrow\{Q\},\\
 	\{Q\}\longrightarrow\{N\},\\
@@ -214,7 +214,7 @@ $
 
 \begin{latin}
 $
-\\F=\\
+\\F_{c}=\\
 \{\\
 \{A, B\}\longrightarrow\{C\},\\
 \{A\}\longrightarrow\{D\},\\
@@ -383,7 +383,7 @@ $
 
 \begin{latin}
 $
-\\F=\\
+\\F_{c}=\\
 \{\\
 \{Course\_no\}\longrightarrow\{Offering\_dept\},\\
 \{Course\_no \}\longrightarrow\{Credit\_hours\},\\
@@ -571,18 +571,67 @@ F_{2}=\\
 $
 \end{latin}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \section{}%6
 \subsection{\lr{a}}
-داخل فایل \lr{SQL}
+\begin{latin}
+$
+\\
+REFRIG=
+\{
+Model\#, Year, Price, Manuf\_plant, Color
+\}
+=\{M, Y, P, MP, C\}
+\\
+\\
+F=\\
+\{\\
+\{M\}\longrightarrow\{MP\},\\
+\{M, Y\}\longrightarrow\{P\},\\
+\{MP\}\longrightarrow\{C\}\\
+\}
+$
+\end{latin}
+ابتدا پوش کانونی را به دست می‌آوریم:
+\begin{latin}
+$
+\\F_{c}=\\
+\{\\
+\{M\}\longrightarrow\{MP\},\\
+\{M, Y\}\longrightarrow\{P\},\\
+\{MP\}\longrightarrow\{C\}\\
+\}
+$
+\end{latin}
+
+\begin{itemize}
+    \item [$\bullet$] 
+\lr{\{M\}} سوپرکلید نیست. چون قادر نیست به صورت یکتا \lr{attribute}ِ \lr{Y} و \lr{P} را تعیین کند.
+
+    \item [$\bullet$] 
+\lr{\{M, Y\}} سوپرکلید است. چون قادر است به صورت یکتا همه‌ی \lr{attribute}ها را تعیین کند. همچنین هیچ زیرمجموعه‌ی سره‌ای ندارد که سوپرکلید باشد. پس کلید کاندید است.
+
+    \item [$\bullet$] 
+\lr{\{M, C\}} سوپرکلید نیست. چون قادر نیست به صورت یکتا همه‌ی \lr{attribute}ها را تعیین کند(\lr{attribute}ِ \lr{Y} و \lr{P}).
+\end{itemize}
 \subsection{\lr{b}}
-داخل فایل \lr{SQL}
+\begin{itemize}
+    \item [$\bullet$] 
+همه‌ی کلیدهای کاندید را پیدا می‌کنیم. تنها کلید کاندید، کلیدِ
+\lr{\{M, Y\}}
+است. حال به ازای هر \lr{FD} بررسی می‌کنیم که آیا سمت چپ آن یک سوپرکلید است یا سمت راست آن شامل همه‌ی \lr{attribute}های کلید است یا خیر. چون \lr{FD}ی
+$
+\{M\}\longrightarrow\{MP\}
+$
+غیر بدیهی است، سمت چپ آن یک سوپرکلید نیست و سمت راست آن شامل یک \lr{attribute}ِ \lr{nonprime} است، \lr{3NF} نقض می‌شود. پس رابطه‌ی \lr{REFRIG} در \lr{3NF} نیست.
+    \item [$\bullet$] 
+یک \lr{relation} در \lr{BCNF} است اگر و تنها اگر سمت چپ هر یک از \lr{FD}های غیر بدیهی یک سوپرکلید وجود داشته باشد. چون \lr{FD}ی
+$
+\{M\}\longrightarrow\{MP\}
+$
+غیر بدیهی است و سمت چپ آن یک سوپرکلید نیست، این \lr{BCNF} را نقض می‌کند. پس رابطه‌ی \lr{REFRIG} در \lr{BCNF} نیست.
+\end{itemize}
 %------------------------------------------------------------------------------------------
 
 
