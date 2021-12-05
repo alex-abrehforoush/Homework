@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  5 DEC 2021 17:42
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  5 DEC 2021 18:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1015,45 +1015,56 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
 (Font)              scaled to size 17.27994pt on input line 52.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 (Font)              scaled to size 17.27994pt on input line 52.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 55.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 55.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 58.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 78.
+(Font)              scaled to size 14.39996pt on input line 53.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 14.39996pt on input line 78.
+(Font)              scaled to size 14.39996pt on input line 53.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 54.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 57.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
+(Font)              scaled to size 9.0pt on input line 57.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 78.
- [1] [2] [3] [4] [5]
+(Font)              scaled to size 10.0pt on input line 61.
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--84
+[][]
+ []
+
+[1] [2] [3] [4] [5] [6]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 311.
+(Font)              scaled to size 7.0pt on input line 339.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 311.
- [6] [7]
-Overfull \hbox (2.56862pt too wide) in paragraph at lines 420--424
+(Font)              scaled to size 5.0pt on input line 339.
+ [7] [8]
+Overfull \hbox (2.56862pt too wide) in paragraph at lines 448--452
 [][]$\OML/cmm/m/it/10 R \OMS/cmsy/m/n/10 ^^@ f\OML/cmm/m/it/10 Offering[]dept; 
 Credit[]hours; Course[]level; No[]of[]students; Instructor[]ssn\OMS/cmsy/m/n/10
  g ^^@ f\OML/cmm/m/it/10 Semester; Year\OMS/cmsy/m/n/10 g[] $[]
  []
 
-[8] [9] [10] [11] (./main.aux)
+[9] [10]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 605.
+ [11] [12] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17257 strings out of 476919
- 356610 string characters out of 5825424
- 1215734 words of memory out of 5000000
- 36955 multiletter control sequences out of 15000+600000
- 404156 words of font info for 63 fonts, out of 8000000 for 9000
+ 17268 strings out of 476919
+ 356897 string characters out of 5825424
+ 1215742 words of memory out of 5000000
+ 36964 multiletter control sequences out of 15000+600000
+ 404172 words of font info for 65 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 97i,12n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 97i,14n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (12 pages).
+Output written on main.pdf (13 pages).

@@ -50,35 +50,63 @@
 
 
 \section{}%1
-مراحل ده‌گانه‌ی طراحی پایگاه داده به شرح زیر است.
-\begin{enumerate}
-    \item \textbf{\lr{Identify Entities}:}
-نقش‌ها، رویدادها، مکان‌ها، اشیاءِ ملموس، یا مفاهیمی که نهایتا کاربر درباره‌ی آن‌ها داده نگه‌داری می‌کند را مشخص کنید.
-    \item \textbf{\lr{Find Relationships}:}
-وابستگی طبیعی بین هر جفت از \lr{entity}ها را با استفاده از یک ماتریس رابطه پیدا کنید.
-	\item \textbf{\lr{Draw Rough ERD}:}
-\lr{entity}ها را در مستطیل‌ها و روابط را روی قسمت‌های خطی که \lr{entity}ها را به هم ربط می‌دهند قرار دهید.
-	\item \textbf{\lr{Fill in Cardinality}:}
-تعداد وقوع یک \lr{entity} را به ازای وقوع یکتای \lr{entity} مربوط به آن تعیین کنید.
-	\item \textbf{\lr{Define Primary Keys}:}
-\lr{attribute} یا \lr{attribute}هایی که وقوع دقیقا یک رکورد از هر \lr{entity} را مشخص می‌کند را مشخص کنید.
-	\item \textbf{\lr{Draw Key-Based ERD}:}
-روابطِ \lr{Many-to-Many} را حذف کنید و کلید‌های اصلی و خارجی را در هر \lr{entity} وارد کنید.
-	\item \textbf{\lr{Identify Attributes}:}
-جزئیات اطلاعاتی(فیلدها) که برای سیستم درحال توسعه الزامی هستند را نام‌گذاری کنید.
-	\item \textbf{\lr{Map Attributes}:}
-هر \lr{attribute} را با دقیقا یک \lr{entity} که آن را توصیف می‌کند، نظیر کنید.
-	\item \textbf{\lr{Draw Fully Attributed ERD}:}
-\lr{ERD}ِ گام ششم را با \lr{entity}ها و روابط کشف شده در گام هشتم سازگار کنید.
-	\item \textbf{\lr{Check Results}:}
-آیا \lr{ERD}ِ نهایی سیستم داده را به دقت مجسم می‌کند؟
-\end{enumerate}
+\subsection{الف}
+\begin{latin}
+\begin{table}[H]
+\centering
+\caption{}
+\label{tab:my-table}
+\begin{tabular}{|c|l|l|}
+\hline
+            & \multicolumn{1}{c|}{\textbf{3NF}}                                                                                                                                                    & \multicolumn{1}{c|}{\textbf{BCNF}}                                                                                      \\ \hline
+\textbf{1.} & \begin{tabular}[c]{@{}l@{}}In 3NF there should be no transitive\\ dependency that is no non prime \\ attribute should be transitively\\ dependent on the candidate key.\end{tabular} & \begin{tabular}[c]{@{}l@{}}In BCNF for any relation A->B,\\ A should be a super key of relation.\end{tabular}           \\ \hline
+\textbf{2.} & It is less stronger than BCNF.                                                                                                                                                       & \begin{tabular}[c]{@{}l@{}}It is comparatively more stronger\\ than 3NF.\end{tabular}                                   \\ \hline
+\textbf{3.} & \begin{tabular}[c]{@{}l@{}}In 3NF the functional dependencies\\ are already in 1NF and 2NF.\end{tabular}                                                                             & \begin{tabular}[c]{@{}l@{}}In BCNF the functional dependencies\\ are already in 1NF, 2NF and 3NF.\end{tabular}          \\ \hline
+\textbf{4.} & The redundancy is high in 3NF.                                                                                                                                                       & \begin{tabular}[c]{@{}l@{}}The redundancy is comparatively\\ low in BCNF.\end{tabular}                                  \\ \hline
+\textbf{5.} & \begin{tabular}[c]{@{}l@{}}In 3NF there is preservation\\ of all functional dependencies.\end{tabular}                                                                               & \begin{tabular}[c]{@{}l@{}}In BCNF there may or may not be\\ preservationof all functional\\ dependencies.\end{tabular} \\ \hline
+\textbf{6.} & It is comparatively easier to achieve.                                                                                                                                               & It is difficult to achieve.                                                                                             \\ \hline
+\textbf{7.} & \begin{tabular}[c]{@{}l@{}}Lossless decomposition can\\ be achieved by 3NF.\end{tabular}                                                                                             & \begin{tabular}[c]{@{}l@{}}Lossless decomposition is\\ hard to achieve in BCNF.\end{tabular}                            \\ \hline
+\end{tabular}
+\end{table}
+\end{latin}
+دلیل اینکه می‌گوییم \lr{BCNF} شکل قوی‌تری از \lr{3NF} است، این است که \lr{BCNF} شرط دومِ \lr{3NF} را که اجازه می‌داد که سمت راست یک \lr{FD} یک \lr{prime attribute} باشد را حذف می‌کند.
+
+\subsection{ب}
+یک \lr{transitive dependency} زمانی وجود دارد که \lr{FD}ها این چنین باشند:
+\begin{latin}
+$
+\\
+X\longrightarrow Y,\\
+Y\longrightarrow Z,\\
+PK=X\\
+\\
+$
+\end{latin}
+در این حالت وابستگیِ
+$
+X\longrightarrow Z,\\
+$
+یک \lr{transitive dependency} است. زیرا \lr{X} مقدار \lr{Z} را از طریق 
+\lr{Y} تعیین می‌کند. وجودِ یک وابستگی میان \lr{attribute}های \lr{nonprime}، نشان‌دهنده‌ی وجود \lr{transitive dependency} است.
+
 
 \section{}%2
-\subsection{\lr{Composite Attribute}}
-برای پیاده‌سازی فیزیکی این نوع \lr{attribute}ها می‌توان هر عنصرِ آن‌ها را در هر \lr{entity} همانند \lr{attribute}های عادیِ آن \lr{entity} به \lr{entity} اضافه می‌کرد. در طراحی برای متمایز کردنشان می‌توان از \lr{indent} استفاده کرد.
-\subsection{\lr{Multivalued Attribute}}
-برای پیاده‌سازی فیزیکی این نوع \lr{attribute}ها می‌توان یک \lr{table} متناظر با آن \lr{attribute} ایجاد کرد و کلید خارجی از \lr{entity}ی اولیه برای آن تعریف کرد.
+\begin{latin}
+\begin{table}[H]
+\centering
+\caption{}
+\label{tab:my-table}
+\begin{tabular}{|c|l|l|l|}
+\hline
+            & \multicolumn{1}{c|}{\textbf{Key}}                                     & \multicolumn{1}{c|}{\textbf{Normalization}}                                                                                                                                                                   & \multicolumn{1}{c|}{\textbf{Denormalization}}                                                                                                                             \\ \hline
+\textbf{1.} & \textbf{Implementation}                                               & \begin{tabular}[c]{@{}l@{}}Normalization is used to remove\\ redundant data from the database\\ and to store non-redundant and\\ consistent data into it.\end{tabular}                                        & \begin{tabular}[c]{@{}l@{}}Denormalization is used to\\ combinemultiple table data\\ intoone so that it can be\\ queried quickly.\end{tabular}                            \\ \hline
+\textbf{2.} & \textbf{Focus}                                                        & \begin{tabular}[c]{@{}l@{}}Normalization mainly focuses\\ on clearing the database from\\ unused data and to reduce the\\ data redundancy and\\ inconsistency.\end{tabular}                                   & \begin{tabular}[c]{@{}l@{}}Denormalization on the\\ other hand focus on to\\ achieve the faster execution\\ of the queries through\\ introducing redundancy.\end{tabular} \\ \hline
+\textbf{3.} & \textbf{\begin{tabular}[c]{@{}l@{}}Memory\\ consumption\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Normalization uses optimized\\ memory and hence faster in\\ performance.\end{tabular}                                                                                              & \begin{tabular}[c]{@{}l@{}}On the other hand,\\ Denormalization introduces\\ some sort of wastage of\\ memory.\end{tabular}                                               \\ \hline
+\textbf{4.} & \textbf{Data integrity}                                               & \begin{tabular}[c]{@{}l@{}}Normalization maintains\\ data integrity i.e. any addition\\ or deletion of data from the\\ table will not create any\\ mismatch in the relationship\\ of the tables.\end{tabular} & \begin{tabular}[c]{@{}l@{}}Denormalization does not\\ maintain any data integrity.\end{tabular}                                                                           \\ \hline
+\textbf{5.} & \textbf{Where to use}                                                 & \begin{tabular}[c]{@{}l@{}}Normalization is generally\\ used where number of\\ insert/update/delete operations\\ are performed and joins of\\ those tables are not expensive.\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}On the other hand\\ Denormalization is used\\ where joins are expensive\\ and frequent query is\\ executed on the tables.\end{tabular}         \\ \hline
+\end{tabular}
+\end{table}
+\end{latin}
 
 \section{}%3
 \begin{latin}
