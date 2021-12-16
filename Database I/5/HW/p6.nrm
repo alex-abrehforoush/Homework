@@ -1,0 +1,5 @@
+M,Y,P,MP,C
+
+M -> MP
+M,Y -> P
+MP -> C

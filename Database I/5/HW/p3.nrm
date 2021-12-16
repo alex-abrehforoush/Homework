@@ -1,0 +1,8 @@
+L,M,N,P,Q
+
+M -> Q
+Q -> N
+N -> L,M
+N -> L
+P -> L
+P -> N

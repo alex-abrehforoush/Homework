@@ -1,0 +1,5 @@
+Course_no,Sec_no,Offering_dept,Credit_hours,Course_level,Instructor_ssn,Semester,Year,Days_hours,Room_no,No_of_students
+
+Course_no -> Offering_dept,Credit_hours,Course_level
+Course_no,Sec_no,Semester,Year -> Days_hours,Room_no,No_of_students,Instructor_ssn
+Room_no,Days_hours,Semester,Year -> Instructor_ssn,Course_no,Sec_no
