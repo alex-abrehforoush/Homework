@@ -4,7 +4,17 @@
 
 
 ---- Q1
-
+create table if not exists public.trader
+(
+    trader_id integer,
+    trader_name character varying(45),
+    birth_date timestamp without time zone,
+    Joined_date timestamp without time zone,
+	Salary numeric(15, 2),
+	check(Salary >= 1000),
+	check(birth_date >= '01-01-1900'),
+	check(Joined_date >= birth_date)
+)
 
 
 ---- Q2
@@ -116,6 +126,7 @@ begin
 	);
 end;$$
 
+
 ---Q10
 create or replace procedure
 	myProc(ttl1 varchar(255), ttl2 varchar(255))
@@ -158,3 +169,4 @@ begin
 		;
 	commit;
 end;$$
+
