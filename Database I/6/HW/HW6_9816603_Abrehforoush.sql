@@ -63,19 +63,42 @@ where
 
 ---- Q7
 ---A
+create role role1;
+grant select on instructor to role1 with grant option;
 
 
 ---B
+create role role2;
+grant role1 to role2;
+grant update, delete, insert on course, student to role2;
 
 
 ---C
-
+create role role3;
+grant update (dept_name) on student to role3;
+revoke update (dept_name) on student from role3;
 
 
 ---D	
-	
----- Q8
+create role role4;
+create or replace view v1 as
+	(
+	select
+		A.name,
+		B.title
+	from
+		student as A,
+		course as B,
+		takes as C
+	where
+		A.id = C.id
+		and B.course_id = C.course_id
+		and (A.dept_name = 'Elec. Eng.' or A.dept_name = 'Comp. Sci.')
+	);
+grant select on v1 to role4;
 
+
+---- Q8
 ---A
 
 
