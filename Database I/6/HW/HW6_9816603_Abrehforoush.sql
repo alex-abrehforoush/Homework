@@ -133,27 +133,28 @@ begin
 		where
 			A.title = myProc.ttl1
 	)
-	;
-	update
-		film
-	set
-		rating = 
-		(
-			select
-				A.rating
-			from
-				film as A
-			where
-				A.title = myProc.ttl2
-		)
-	where
-		title = myProc.ttl1
-	;
-	update
-		film
-	set
-		rating = tmp_rt
-	where
-		title = myProc.ttl2
-	;
+	begin;
+		update
+			film
+		set
+			rating = 
+			(
+				select
+					A.rating
+				from
+					film as A
+				where
+					A.title = myProc.ttl2
+			)
+		where
+			title = myProc.ttl1
+		;
+		update
+			film
+		set
+			rating = tmp_rt
+		where
+			title = myProc.ttl2
+		;
+	commit;
 end;$$
