@@ -18,8 +18,12 @@ create table if not exists public.trader
 
 
 ---- Q2
-
-
+alter table
+	public.section 
+add constraint
+	section_time_slot_id_check 
+check
+	(time_slot_id != 'A');
 
 
 ---- Q3
