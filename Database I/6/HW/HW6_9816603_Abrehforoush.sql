@@ -117,5 +117,43 @@ begin
 end;$$
 
 ---Q10
-
-
+create or replace procedure
+	myProc(ttl1 varchar(255), ttl2 varchar(255))
+	language plpgsql
+as $$
+declare
+	tmp_rt mpaa_rating;
+begin
+	tmp_rt := 
+	(
+		select
+			A.rating
+		from
+			film as A
+		where
+			A.title = myProc.ttl1
+	)
+	;
+	update
+		film
+	set
+		rating = 
+		(
+			select
+				A.rating
+			from
+				film as A
+			where
+				A.title = myProc.ttl2
+		)
+	where
+		title = myProc.ttl1
+	;
+	update
+		film
+	set
+		rating = tmp_rt
+	where
+		title = myProc.ttl2
+	;
+end;$$
