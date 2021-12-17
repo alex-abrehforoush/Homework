@@ -1,4 +1,23 @@
-LDI R20, $67
-LDI R21, $99
-ADD R20, R21
-NOP
+#include <avr/io.h>
+
+int main(void)
+{
+	DDRB = 0x00;
+	DDRC = 0xFF;
+	DDRD = 0xFF;	
+    while (true)
+    {
+		unsigned char tmp;
+		tmp = PINB;
+		if(tmp & 0x01)
+		{
+			PORTD = 'O';
+		}
+		else
+		{
+			PORTC = 'E';
+		}
+    }
+	return 0;
+}
+
