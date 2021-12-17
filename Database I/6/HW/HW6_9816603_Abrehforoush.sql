@@ -51,7 +51,14 @@ create index myIdx ON film using btree (title);
 
 
 ---- Q6
-
+select
+	A.indexname,
+	A.tablename,
+	A.indexdef
+from
+	pg_indexes as A
+where
+	A.schemaname = 'sales'
 
 
 ---- Q7
