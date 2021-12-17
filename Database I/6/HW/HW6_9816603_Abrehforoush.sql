@@ -47,7 +47,7 @@ where
 
 
 ---- Q5
-
+create index myIdx ON film using btree (title);
 
 
 ---- Q6
