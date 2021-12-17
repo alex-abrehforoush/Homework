@@ -27,8 +27,23 @@ check
 
 
 ---- Q3
-
-
+select
+	A.first_name,
+	A.last_name,
+	B.title,
+	E.payment_date - C.rental_date
+from
+	customer as A,
+	film as B,
+	rental as C,
+	inventory as D,
+	payment as E
+where
+	C.customer_id = A.customer_id
+	and C.inventory_id = D.inventory_id
+	and B.film_id = D.film_id
+	and C.rental_id = E.rental_id
+	and E.payment_date - C.rental_date > '1 year 3 months 15 days'
 
 
 ---- Q5
