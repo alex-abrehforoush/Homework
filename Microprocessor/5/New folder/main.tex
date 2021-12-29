@@ -1,0 +1,64 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xepersian}
+
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف پنجم درس ریزپردازنده}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%%%%%%%%%%%%%%%%
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+%%%%%%%%%%%%%%%%
+\begin{document}
+\input{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{سوال اول}
+\lr{\lstinputlisting[language={[x86masm]Assembler}, showstringspaces=false, basicstyle=\ttfamily]{sources/1.asm}}
+
+\section{سوال دوم}
+\lr{\lstinputlisting[language={[x86masm]Assembler}, showstringspaces=false, basicstyle=\ttfamily]{sources/2.asm}}
+
+\section{سوال سوم}
+\lr{\lstinputlisting[language=C, showstringspaces=false, basicstyle=\ttfamily]{sources/3.c}}
+
+\section{سوال چهارم}
+\lr{\lstinputlisting[language=C, showstringspaces=false, basicstyle=\ttfamily]{sources/4.c}}
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1}
+
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}

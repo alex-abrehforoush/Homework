@@ -1,0 +1,178 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xepersian}
+
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف سوم درس سیستم‌های عامل 1 }
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%%%%%%%%%%%%%%%%
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+%%%%%%%%%%%%%%%%
+\begin{document}
+\input{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{سوال اول}
+
+\subsection{آ}
+\begin{latin}
+\begin{table}[H]
+\centering
+\caption{}
+\label{tab:my-table}
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{}                          & \multicolumn{1}{c|}{\textbf{Process}}                                                                                                          & \multicolumn{1}{c|}{\textbf{Thread}}                                                                                                                                                                                          \\ \hline
+\textbf{1.}                        & \begin{tabular}[c]{@{}l@{}}Process means any program\\ is in execution.\end{tabular}                                                           & Thread means segment of a process.                                                                                                                                                                                            \\ \hline
+\textbf{2.}                        & \begin{tabular}[c]{@{}l@{}}Process takes more time\\ to terminate.\end{tabular}                                                                & Thread takes less time to terminate.                                                                                                                                                                                          \\ \hline
+\textbf{3.}                        & It takes more time for creation.                                                                                                               & It takes less time for creation.                                                                                                                                                                                              \\ \hline
+\textbf{4.}                        & \begin{tabular}[c]{@{}l@{}}It also takes more time for\\ context switching.\end{tabular}                                                       & \begin{tabular}[c]{@{}l@{}}It takes less time for context\\ switching.\end{tabular}                                                                                                                                           \\ \hline
+\textbf{5.}                        & \begin{tabular}[c]{@{}l@{}}Process is less efficient in term\\ of communication.\end{tabular}                                                  & \begin{tabular}[c]{@{}l@{}}Thread is more efficient in term\\ of communication.\end{tabular}                                                                                                                                  \\ \hline
+\textbf{6.}                        & \begin{tabular}[c]{@{}l@{}}Multi programming holds the\\ concepts of multi process.\end{tabular}                                               & \begin{tabular}[c]{@{}l@{}}We don’t need multi programs\\ in action for multiple threads\\ because a single process consists\\ of multiple threads.\end{tabular}                                                              \\ \hline
+\textbf{7.}                        & Process is isolated.                                                                                                                           & Threads share memory.                                                                                                                                                                                                         \\ \hline
+\textbf{8.}                        & \begin{tabular}[c]{@{}l@{}}Process is called heavy weight\\ process.\end{tabular}                                                              & \begin{tabular}[c]{@{}l@{}}A Thread is lightweight as each\\ thread in a process shares code,\\ data and resources.\end{tabular}                                                                                              \\ \hline
+\textbf{9.}                        & \begin{tabular}[c]{@{}l@{}}Process switching uses interface\\ in operating system.\end{tabular}                                                & \begin{tabular}[c]{@{}l@{}}Thread switching does not require\\ to call a operating system and\\ cause an interrupt to the kernel.\end{tabular}                                                                                \\ \hline
+\multicolumn{1}{|l|}{\textbf{10.}} & \begin{tabular}[c]{@{}l@{}}If one process is blocked then it\\ will not effect the execution of\\ other process\end{tabular}                   & \begin{tabular}[c]{@{}l@{}}Second thread in the same task\\ could not run, while one server\\ thread is blocked.\end{tabular}                                                                                                 \\ \hline
+\multicolumn{1}{|l|}{\textbf{11.}} & \begin{tabular}[c]{@{}l@{}}Process has its own Process\\ Control Block, Stack and\\ Address Space.\end{tabular}                                & \begin{tabular}[c]{@{}l@{}}Thread has Parents’ PCB, its own\\ Thread Control Block and Stack\\ and common Address space.\end{tabular}                                                                                         \\ \hline
+\multicolumn{1}{|l|}{\textbf{12.}} & \begin{tabular}[c]{@{}l@{}}If one process is blocked, then\\ no other process can execute\\ until the first process is unblocked.\end{tabular} & \begin{tabular}[c]{@{}l@{}}While one thread is blocked and\\ waiting, a second thread in the\\ same task can run.\end{tabular}                                                                                                \\ \hline
+\multicolumn{1}{|l|}{\textbf{13.}} & \begin{tabular}[c]{@{}l@{}}Changes to the parent process\\ does not affect child processes.\end{tabular}                                       & \begin{tabular}[c]{@{}l@{}}Since all threads of the same process\\ share address space and other \\ resources so any changes to the main\\ thread may affect the behavior of the\\ other threads of the process.\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
+\end{latin}
+\subsection{ب}
+\begin{itemize}
+    \item [$\bullet$] \lr{register set}ِ \lr{thread}ها بین \lr{thread}ها غیر مشترک است. این رجیسترها وضعیت پردازنده را مشخص می‌کنند و \lr{thread}ها عملیات محاسباتی مستقل از یکدیگر دارند بنابراین \lr{virtual register}های نمیتوانند مشترک باشند. مثلا  \lr{Program Counter(PC)} و  \lr{Stack Pointer(SP)} در هر \lr{thread} مجزا و مخصوص به همان \lr{thread} است.
+
+    \item [$\bullet$] \lr{TID}ِ هر \lr{thread} یکتا و مختص همان \lr{thread} است. در واقع داخل یک پروسس، \lr{TID} وجه تمییز بین \lr{thread}های یک پروسس است. پس نمی‌تواند مشترک باشد.
+
+   \item [$\bullet$] \lr{stack}ِ هر \lr{thread}، متغیرهای محلی و آدرس بازگشتی را به صورت مجزا ذخیره می‌کنند.
+\end{itemize}
+
+\subsection{ج}
+برای مدلسازی بسیاری از مسائل موجود در دنیای واقعی که به نحوی چند کار باهم همزمانی دارند به برنامه‌های \lr{concurrent} نیاز داریم و نمی‌توانیم تنها به متدهای برنامه‌نویسیِ خطی و ترتیبی اتکا کنیم. برنامه‌نویسی چندنخی در این زمینه به ما کمک می‌کند، به طوریکه به هر یک از کارهای همزمان یک \lr{thread} نظیر می‌کنیم و این تعاملِ \lr{thread}ها باهم روند یک کار را به طور دقیق مدل می‌کند.
+\subsection{د}
+در پردازنده‌های تک هسته‌ای هنگامی که یک \lr{thread} منتظر \lr{I/O} سنکرون است، \lr{scheduler}،  \lr{thread}های دیگر را(برای مثال \lr{read()}) \lr{schedule} می‌کند و هدر رفت زمان کمتر رخ می‌دهد. از دیگر مزایای برنامه‌نویسی چندنخی در پردازنده‌های تک هسته‌ای عدم جا‌به‌جایی ترتیب اجرای دستورات در بسیاری از پیاده‌سازی‌ها است. مشکل \lr{data race} نیز به دلیل عدم وجود پیچیدگی در ترتیب اجرای دستورات، رفع می‌شود.
+\subsection{ه}
+ججججججججججججججججج
+
+\subsection{و}
+\lr{Ticketlock}ها بر خلاف \lr{Spinlock}ها مشکل گرسنگی مفرط ندارند. \lr{Fetch and Add} نیز دچار گرسنگی مفرط نمی‌شود.
+\subsection{ز}
+4 منبع و 3 رشته داریم. درنتیجه حداقل یکی از رشته‌ها حداقل 2 تا از منابع را اشغال می‌کند و \lr{circular wait} رخ نمی‌دهد. پس \lr{Deadlock} نمی‌تواند رخ دهد.
+\newpage
+\section{سوال دوم}
+\subsection{طول بافر محدود}
+\lr{\lstinputlisting[language=C, showstringspaces=false, basicstyle=\ttfamily]{sources/2.1.c}}
+\subsection{طول بافر بی‌نهایت}
+\lr{\lstinputlisting[language=C, showstringspaces=false, basicstyle=\ttfamily]{sources/2.2.c}}
+
+\section{سوال سوم}
+ابتدا بررسی می‌کنیم که \lr{TLB Miss} رخ داده است یا \lr{TLB Hit}. این کار در 1 نانو ثانیه انجام می‌شود. سپس دو حالت زیر را در نظر می‌گیریم:
+\begin{itemize}
+    \item [$\bullet$] \lr{TLB Miss} رخ دهد. در این حالت داریم:
+$
+P_{TLBMiss}(2*T_{DRAM}+P_{PageFault}*T_{Disk})=4ns
+$
+    \item [$\bullet$] \lr{TLB Miss} رخ ندهد. در این حالت داریم:
+$
+(1-P_{TLBMiss})*(T_{Cache}+P_{CacheMiss}*P_{PageFault}*T_{Disk})=2.97ns
+$
+در نهایت ميانگين زمان دسترسي به صفحات حافظه برابر است با:
+$
+1ns+4ns+2.97ns=7.97ns
+$
+\end{itemize}
+\section{سوال چهارم}
+\subsection{الف}
+گام اول: تجزیه‌ی آدرس مجازی به \lr{Seg}، \lr{VPN}، و \lr{Offset}:
+\newline
+2 بیت پرارزش مربوط به سگمنت است، چون صفحه‌ها 32 بایتی هستند پس 5 بیت برای نشان دادن آن‌ها نیاز داریم که از راست برای آفست جدا می‌کنیم و 5 بیت باقی‌مانده برای \lr{VPN} است.
+\newline
+\lr{0x45d\ =\ 01\ 00010\ 11101}
+\newline
+\lr{SN\ =\ 01}
+\newline
+\lr{VPN\ =\ 00010 =\ 2}
+\newline
+\lr{Offset\ =\ 11101 =\ 29}
+\newline
+\newline
+\lr{Address of PTE\ =\ Base[SN]\ +\ VPN*sizeof(PTE) = 64 + 2*1 = 66}
+\newline
+بایت 66 در صفحه‌ی با \lr{PFN = 2} قرار دارد و بایت سوم آن است.
+\newline
+\lr{Page with PFN = 2: c3}
+\newline
+\lr{c3 =\ 1\ 1000011 =\ 67}
+\newline
+\lr{valid bit =\ 1}
+\newline
+\lr{PFN =\ 67}
+\newline
+آفست 29 در صفحه‌ی 67 که آدرس 40 است. پس براي ترجمه آدرس مجازي به آدرس فيزيكي، به صفحات 2 و 67 رجوع مي‌شود.
+\newline
+بله چون بیتِ \lr{valid} یک است و بایت مورد نظر \lr{c3} است که در صفحه‌ی 2 قرار دارد.
+\subsection{ب}
+گام اول: تجزیه‌ی آدرس مجازی به \lr{Seg}، \lr{VPN}، و \lr{Offset}:
+\newline
+2 بیت پرارزش مربوط به سگمنت است، چون صفحه‌ها 32 بایتی هستند پس 5 بیت برای نشان دادن آن‌ها نیاز داریم که از راست برای آفست جدا می‌کنیم و 5 بیت باقی‌مانده برای \lr{VPN} است.
+\newline
+\lr{0xc85\ =\ 11\ 00100\ 00101}
+\newline
+\lr{SN\ =\ 11}
+\newline
+\lr{VPN\ =\ 00100 =\ 4}
+\newline
+\lr{Offset\ =\ 00101 =\ 5}
+\newline
+\newline
+\lr{Address of PTE\ =\ Base[SN]\ +\ VPN*sizeof(PTE) = 640 + 4*1 = 644}
+\newline
+بایت 644 در صفحه‌ی با \lr{PFN = 20} قرار دارد و بایت پنجم آن است.
+\newline
+\lr{Page with PFN = 20: 20}
+\newline
+\lr{20 =\ 0\ 0100000}
+\newline
+\lr{valid bit =\ 0}
+\newline
+خیر چون بیتِ \lr{valid} صفر است، اين آدرس مجازي به اين پروسس تخصيص داده نشده است و تنها به صفحه‌ی 20 رجوع می‌شود.
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1}https://gateoverflow.in/150841/Tlb-and-page-fault
+
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}
