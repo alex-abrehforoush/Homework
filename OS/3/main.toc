@@ -26,6 +26,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}سوال چهارم}{9}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}الف}{9}{subsection.4.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}ب}{9}{subsection.4.2}%
+\contentsline {section}{\numberline {5}سوال پنجم}{9}{section.5}%

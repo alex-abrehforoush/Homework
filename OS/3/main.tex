@@ -80,6 +80,7 @@
 \subsection{ز}
 4 منبع و 3 رشته داریم. درنتیجه حداقل یکی از رشته‌ها حداقل 2 تا از منابع را اشغال می‌کند و \lr{circular wait} رخ نمی‌دهد. پس \lr{Deadlock} نمی‌تواند رخ دهد.
 \newpage
+
 \section{سوال دوم}
 \subsection{طول بافر محدود}
 \lr{\lstinputlisting[language=C, showstringspaces=false, basicstyle=\ttfamily]{sources/2.1.c}}
@@ -87,76 +88,33 @@
 \lr{\lstinputlisting[language=C, showstringspaces=false, basicstyle=\ttfamily]{sources/2.2.c}}
 
 \section{سوال سوم}
-ابتدا بررسی می‌کنیم که \lr{TLB Miss} رخ داده است یا \lr{TLB Hit}. این کار در 1 نانو ثانیه انجام می‌شود. سپس دو حالت زیر را در نظر می‌گیریم:
+برای اینکه ثابت کنیم روش ارائه شده مسئله \lr{Critical Section} را حل می‌کند باید ثابت کنیم که:
 \begin{itemize}
-    \item [$\bullet$] \lr{TLB Miss} رخ دهد. در این حالت داریم:
-$
-P_{TLBMiss}(2*T_{DRAM}+P_{PageFault}*T_{Disk})=4ns
-$
-    \item [$\bullet$] \lr{TLB Miss} رخ ندهد. در این حالت داریم:
-$
-(1-P_{TLBMiss})*(T_{Cache}+P_{CacheMiss}*P_{PageFault}*T_{Disk})=2.97ns
-$
-در نهایت ميانگين زمان دسترسي به صفحات حافظه برابر است با:
-$
-1ns+4ns+2.97ns=7.97ns
-$
+    \item [$\bullet$] در هر زمان تنها یک پروسس می‌تواند داخل \lr{critical section} باشد. اگر پروسس‌های دیگری بخواهند به \lr{critical section} دسترسی پیدا کنند باید صبر کنند تا آزاد شود.(\lr{Mutual Exclusion})
+
+    \item [$\bullet$] اگر یک پروسس از \lr{critical section} استفاده نمی‌کند نباید پروسس دیگری را از دسترسی به آن بازدارد. به عبارت دیگر هر پروسسی می‌تواند وارد یک \lr{critical section} شود اگر آزاد باشد.(\lr{Progress})
+
+    \item [$\bullet$] هر پروسس الزاما باید یک زمان انتظار محدود داشته باشد و تا ابد برای دسترسی به \lr{critical section} منتظر نماند.(\lr{Bounded Waiting})
 \end{itemize}
+حال هر یک از موارد بالا را ثابت می‌کنیم.
+\newpage
+
+\begin{itemize}
+    \item [$\bullet$] \lr{Mutual Exclusion}: توجه شود که یک پروسس تنها زمانی که شرط ذیل ارضا شود، وارد \lr{critical section} می‌شود:
+\newline
+مقدار \lr{flag}ِ هیچ پروسس دیگری برابر \lr{in\_cs} نشود. از آنجایی که پروسس قبل از اینکه وضعیت پروسس‌های دیگر را چک کند مقدار \lr{flag}ِ خود را برابر با \lr{in\_cs} قرار می‌دهد، تضمین می‌شود که هیچ دو پروسسی به طور همزمان وارد \lr{critical section} نخواهند شد.
+
+    \item [$\bullet$] \lr{Progress}: شرایطی را در نظر بگیرید که چند پروسس به طور همزمان بخواهند مقادیر \lr{flag}شان را برابر با \lr{in\_cs} قرار دهند و سپس چک کنند که آیا پروسس دیگری \lr{flag}ش را برابر با \lr{in\_cs} قرار داده است یا خیر. وقتی این اتفاق رخ می‌دهد، همه پروسس‌ها متوجه می‌شوند که پروسس‌های رقیب وجود دارند و وارد پیمایش بعدیِ \lr{while(1)}ِ بیرونی می‌شوند و مقادیر \lr{flag}شان به \lr{want\_in} برمی‌گردانند. حال تنها پروسسی که مقدارِ \lr{turn}ش را برابر با \lr{in\_cs} قرار می‌دهد، پروسسی است که نزدیک ترین \lr{index} به \lr{turn} را دارد. هرچند ممکن است که پروسس‌هایی جدید با \lr{index}های حتی نزدیک‌تر به \lr{turn} وجود داشته باشند که تصمیم بگیرند در این نقطه وارد \lr{critical section} شوند ونتیجتا قادر باشند به شکل همزمان مقدار \lr{flag}ِ خود را برابر با \lr{in\_cs} قرار بدهند. این پروسس‌ها درنهایت متوجه می‌شوند که پروسس‌های رقیبی وجود دارند که ممکن است پروسسی که درحال وارد شدن به \lr{critical section} است را بازنشانی کند. هرچند در هر پیمایش، مقادیر \lr{index}ِ پروسس‌هایی که مقادیر \lr{flag}ِ خود را برابر با \lr{in\_cs} قرار داده‌اند، به \lr{turn} نزدیک‌تر شده و در نهایت به شرط ذیل می‌رسند:
+\newline
+تنها یک پروسس \lr{flag}ش را برابر با \lr{in\_cs} قرار می‌دهد و هیچ پروسس دیگری که \lr{index}ش بین این پروسس و \lr{turn} قرار دارد، \lr{flag}ش را برابر با \lr{in\_cs} قرار نمی‌دهد. پس این تنها پروسسی است که وارد \lr{critical section} می‌شود.
+
+    \item [$\bullet$] \lr{Bounded Waiting}: این شرط به این دلیل ارضا می‌شود که هرگاه پروسسِ \lr{k} بخواهد وارد \lr{critical section} شود \lr{flag}ش دیگر برابر با \lr{idle} نمی‌باشد. در نتیجه، هر پروسسی که \lr{index}ش بین \lr{k} و \lr{turn} قرار نداشته باشد نمی‌تواند وارد \lr{critical section} بشود. در این حال، همه پروسس‌هایی که \lr{index}شان بین \lr{k} و \lr{turn} قرار دارد و مایلند که وارد \lr{critical section} شوند(باتوجه به اینکه سیستم همواره پیشروی می‌کند)، فورا وارد \lr{critical section} می‌شوند و مقدار \lr{turn} به طور یکنواخت به \lr{k} نزدیک می‌شود. درنهایت چه \lr{turn} با \lr{k} برابر شود و چه هیچ پروسسی وجود نداشته باشد که \lr{index}ش بین \lr{k} و \lr{turn} قرار داشته باشد، پروسسِ \lr{k} وارد \lr{critical section} می‌شود.
+\end{itemize}
+
 \section{سوال چهارم}
-\subsection{الف}
-گام اول: تجزیه‌ی آدرس مجازی به \lr{Seg}، \lr{VPN}، و \lr{Offset}:
-\newline
-2 بیت پرارزش مربوط به سگمنت است، چون صفحه‌ها 32 بایتی هستند پس 5 بیت برای نشان دادن آن‌ها نیاز داریم که از راست برای آفست جدا می‌کنیم و 5 بیت باقی‌مانده برای \lr{VPN} است.
-\newline
-\lr{0x45d\ =\ 01\ 00010\ 11101}
-\newline
-\lr{SN\ =\ 01}
-\newline
-\lr{VPN\ =\ 00010 =\ 2}
-\newline
-\lr{Offset\ =\ 11101 =\ 29}
-\newline
-\newline
-\lr{Address of PTE\ =\ Base[SN]\ +\ VPN*sizeof(PTE) = 64 + 2*1 = 66}
-\newline
-بایت 66 در صفحه‌ی با \lr{PFN = 2} قرار دارد و بایت سوم آن است.
-\newline
-\lr{Page with PFN = 2: c3}
-\newline
-\lr{c3 =\ 1\ 1000011 =\ 67}
-\newline
-\lr{valid bit =\ 1}
-\newline
-\lr{PFN =\ 67}
-\newline
-آفست 29 در صفحه‌ی 67 که آدرس 40 است. پس براي ترجمه آدرس مجازي به آدرس فيزيكي، به صفحات 2 و 67 رجوع مي‌شود.
-\newline
-بله چون بیتِ \lr{valid} یک است و بایت مورد نظر \lr{c3} است که در صفحه‌ی 2 قرار دارد.
-\subsection{ب}
-گام اول: تجزیه‌ی آدرس مجازی به \lr{Seg}، \lr{VPN}، و \lr{Offset}:
-\newline
-2 بیت پرارزش مربوط به سگمنت است، چون صفحه‌ها 32 بایتی هستند پس 5 بیت برای نشان دادن آن‌ها نیاز داریم که از راست برای آفست جدا می‌کنیم و 5 بیت باقی‌مانده برای \lr{VPN} است.
-\newline
-\lr{0xc85\ =\ 11\ 00100\ 00101}
-\newline
-\lr{SN\ =\ 11}
-\newline
-\lr{VPN\ =\ 00100 =\ 4}
-\newline
-\lr{Offset\ =\ 00101 =\ 5}
-\newline
-\newline
-\lr{Address of PTE\ =\ Base[SN]\ +\ VPN*sizeof(PTE) = 640 + 4*1 = 644}
-\newline
-بایت 644 در صفحه‌ی با \lr{PFN = 20} قرار دارد و بایت پنجم آن است.
-\newline
-\lr{Page with PFN = 20: 20}
-\newline
-\lr{20 =\ 0\ 0100000}
-\newline
-\lr{valid bit =\ 0}
-\newline
-خیر چون بیتِ \lr{valid} صفر است، اين آدرس مجازي به اين پروسس تخصيص داده نشده است و تنها به صفحه‌ی 20 رجوع می‌شود.
+
+\section{سوال پنجم}
+
 
 \section*{منابع}
 \renewcommand{\section}[2]{}%
