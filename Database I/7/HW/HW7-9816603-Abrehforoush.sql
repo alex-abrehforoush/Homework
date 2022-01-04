@@ -304,25 +304,210 @@ begin
 	;
 end;
 $$;
+--function to return a new rental_id
+create or replace function generateNewRentalId()
+   returns integer
+   language plpgsql
+  as
+$$
+declare
+	rnt_id integer;
+begin
+	select
+		max(A.rental_id) + 1
+	into
+		rnt_id
+	from
+		rental as A
+
+	;
+	return
+		rnt_id
+	;
+end;
+$$;
+--function to return Rent_Count of a customer
+create or replace function getRentCount(n_customer_id integer)
+   returns integer
+   language plpgsql
+  as
+$$
+declare
+	rnt_cnt integer;
+begin
+	select
+		A.Rent_Count
+	into
+		rnt_cnt
+	from
+		customer as A
+	where
+		A.customer_id = n_customer_id
+	;
+	return
+		rnt_cnt
+	;
+end;
+$$;
+--trigger to update rent_count or insert recommended film
+create function rentCountUpdateFunction()
+    returns trigger 
+    language plpgsql
+as
+$$
+begin
+    if (getRentCount(new.customer_id) < 4) then
+		update
+			customer
+		set
+			Rent_Count = Rent_Count + 1
+		where
+			customer_id = new.customer_id
+		;
+	
+	else
+		update
+			customer
+		set
+			Rent_Count = -1
+		where
+			customer_id = new.customer_id
+		;
+		insert into
+			public.rental(rental_id, rental_date, inventory_id, customer_id, return_date, staff_id, last_update, customer_rate)
+		values
+			(generateNewRentalId(), now(), recommendInventory(new.customer_id), new.customer_id, null, new.staff_id, now(), 50)
+		;
+	end if
+	;
+	return null
+	;
+end;
+$$
+;
+--trigger to update rent_count
+create trigger rentCountUpdateTrigger
+	after insert on rental
+	execute procedure rentCountUpdateFunction()
+;
+
 
 ---B
+insert into
+	public.rental(rental_id, rental_date, inventory_id, customer_id, return_date, staff_id, last_update, customer_rate)
+values
+	(generateNewRentalId(), now(), '196', '524', null, '1', now(), 50)
+insert into
+	public.rental(rental_id, rental_date, inventory_id, customer_id, return_date, staff_id, last_update, customer_rate)
+values
+	(generateNewRentalId(), now(), '197', '524', null, '1', now(), 50)
+insert into
+	public.rental(rental_id, rental_date, inventory_id, customer_id, return_date, staff_id, last_update, customer_rate)
+values
+	(generateNewRentalId(), now(), '198', '524', null, '1', now(), 50)
+insert into
+	public.rental(rental_id, rental_date, inventory_id, customer_id, return_date, staff_id, last_update, customer_rate)
+values
+	(generateNewRentalId(), now(), '199', '524', null, '1', now(), 50)
 
 ---- Q4
 
 
 
----- Q5
----A
 
+---- Q5
+select
+	A.rating,
+	date_part('year', D.payment_date),
+	date_part('month', D.payment_date),
+	sum(D.amount) over
+						(
+							partition by
+								date_part('month', D.payment_date)
+							order by
+								D.payment_date
+							range between '1 month' preceding and '1 month' following
+						)
+from
+	film as A,
+	inventory as B,
+	rental as C,
+	payment as D
+where
+	A.film_id = B.film_id
+	and B.inventory_id = C.inventory_id
+	and C.rental_id = D.rental_id
+group by
+	A.rating
+order by
+	D.payment_date
+
+---- Q6
+---A
+select
+	A.film_id,
+	H.city_id,
+	F.store_id,
+	E.staff_id,
+	avg(A.rental_rate) as rental_rate_avg 
+from
+	film as A,
+	inventory as B,
+	rental as C,
+	payment as D,
+	staff as E,
+	store as F,
+	address as G,
+	city as H
+where
+	A.film_id = B.film_id
+	and B.inventory_id = C.inventory_id
+	and C.rental_id = D.rental_id
+	and D.staff_id = E.staff_id
+	and E.store_id = F.store_id
+	and F.address_id = G.address_id
+	and G.city_id = H.city_id
+group by
+	A.film_id,
+	cube(H.city_id, F.store_id, E.staff_id)
+order by
+	rental_rate_avg desc
 
 ---B
-
-
-
-
-
-
-
-
-
-
+select
+	A.film_id,
+	H.city_id,
+	F.store_id,
+	E.staff_id,
+	avg(A.rental_rate) as rental_rate_avg 
+from
+	film as A,
+	inventory as B,
+	rental as C,
+	payment as D,
+	staff as E,
+	store as F,
+	address as G,
+	city as H
+where
+	A.film_id = B.film_id
+	and B.inventory_id = C.inventory_id
+	and C.rental_id = D.rental_id
+	and D.staff_id = E.staff_id
+	and E.store_id = F.store_id
+	and F.address_id = G.address_id
+	and G.city_id = H.city_id
+group by
+	grouping sets
+		(
+			(A.film_id, H.city_id, F.store_id, E.staff_id),
+			(A.film_id, H.city_id, F.store_id),
+			(A.film_id, F.store_id, E.staff_id),
+			(A.film_id, E.staff_id, H.city_id),
+			(A.film_id, H.city_id),
+			(A.film_id, F.store_id),
+			(A.film_id, E.staff_id),
+			(A.film_id)
+		)
+order by
+	rental_rate_avg desc
