@@ -1,0 +1,106 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xepersian}
+
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{پروژه درس ریزپردازنده}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%%%%%%%%%%%%%%%%
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+%%%%%%%%%%%%%%%%
+\begin{document}
+\input{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{1}
+
+
+\subsection{کد}
+\lr{\lstinputlisting[language=C, showstringspaces=false, basicstyle=\ttfamily]{sources/main.c}}
+
+\subsection{شبیه‌سازی}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/1.png}
+    \caption
+	{
+پیش از فعال‌سازی اینتراپت
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/2.png}
+    \caption
+	{
+فعال‌سازی اینتراپت 0
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/3.png}
+    \caption
+	{
+فعال‌سازی اینتراپت 1
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/4.png}
+    \caption
+	{
+فعال‌سازی اینتراپت 1
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/5.png}
+    \caption
+	{
+رجیسترها
+	}
+    \label{fig:fig1}
+\end{figure}
+
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1}
+
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}

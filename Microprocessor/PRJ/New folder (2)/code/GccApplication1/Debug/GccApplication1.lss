@@ -1,0 +1,457 @@
+
+GccApplication1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000222  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000005a  00800060  00000222  00000296  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      00000030  00000000  00000000  000002f0  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000320  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000050  00000000  00000000  0000035c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000c4b  00000000  00000000  000003ac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000066b  00000000  00000000  00000ff7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000004f1  00000000  00000000  00001662  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000a8  00000000  00000000  00001b54  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000003a0  00000000  00000000  00001bfc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000004fc  00000000  00000000  00001f9c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000040  00000000  00000000  00002498  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+   8:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+   c:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  10:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  14:	0c 94 ee 00 	jmp	0x1dc	; 0x1dc <__vector_5>
+  18:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  1c:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  20:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  24:	0c 94 ca 00 	jmp	0x194	; 0x194 <__vector_9>
+  28:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  2c:	0c 94 a6 00 	jmp	0x14c	; 0x14c <__vector_11>
+  30:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  34:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  38:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  3c:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  40:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  44:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  48:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  4c:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  50:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_copy_data>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	e2 e2       	ldi	r30, 0x22	; 34
+  68:	f2 e0       	ldi	r31, 0x02	; 2
+  6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
+  6c:	05 90       	lpm	r0, Z+
+  6e:	0d 92       	st	X+, r0
+  70:	aa 3b       	cpi	r26, 0xBA	; 186
+  72:	b1 07       	cpc	r27, r17
+  74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
+  76:	0e 94 63 00 	call	0xc6	; 0xc6 <main>
+  7a:	0c 94 0f 01 	jmp	0x21e	; 0x21e <_exit>
+
+0000007e <__bad_interrupt>:
+  7e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000082 <operate>:
+		break;
+		case 1:
+		TIMSK = (1 << TOIE0 | 1 << TOIE1);
+		break;
+		case 2:
+		TIMSK = (1 << TOIE0 | 1 << TOIE1 | 1 << TOIE2);
+  82:	85 bb       	out	0x15, r24	; 21
+  84:	90 98       	cbi	0x12, 0	; 18
+  86:	91 98       	cbi	0x12, 1	; 18
+  88:	92 9a       	sbi	0x12, 2	; 18
+  8a:	00 00       	nop
+  8c:	92 98       	cbi	0x12, 2	; 18
+  8e:	81 e2       	ldi	r24, 0x21	; 33
+  90:	8a 95       	dec	r24
+  92:	f1 f7       	brne	.-4      	; 0x90 <operate+0xe>
+  94:	00 00       	nop
+  96:	08 95       	ret
+
+00000098 <print>:
+  98:	dc 01       	movw	r26, r24
+  9a:	9c 91       	ld	r25, X
+  9c:	99 23       	and	r25, r25
+  9e:	91 f0       	breq	.+36     	; 0xc4 <print+0x2c>
+  a0:	20 e0       	ldi	r18, 0x00	; 0
+  a2:	95 bb       	out	0x15, r25	; 21
+  a4:	90 9a       	sbi	0x12, 0	; 18
+  a6:	91 98       	cbi	0x12, 1	; 18
+  a8:	92 9a       	sbi	0x12, 2	; 18
+  aa:	00 00       	nop
+  ac:	92 98       	cbi	0x12, 2	; 18
+  ae:	81 e2       	ldi	r24, 0x21	; 33
+  b0:	8a 95       	dec	r24
+  b2:	f1 f7       	brne	.-4      	; 0xb0 <print+0x18>
+  b4:	00 00       	nop
+  b6:	2f 5f       	subi	r18, 0xFF	; 255
+  b8:	fd 01       	movw	r30, r26
+  ba:	e2 0f       	add	r30, r18
+  bc:	f1 1d       	adc	r31, r1
+  be:	90 81       	ld	r25, Z
+  c0:	91 11       	cpse	r25, r1
+  c2:	ef cf       	rjmp	.-34     	; 0xa2 <print+0xa>
+  c4:	08 95       	ret
+
+000000c6 <main>:
+	}
+}
+
+int main()
+{
+	TCNT0 = -32;
+  c6:	90 ee       	ldi	r25, 0xE0	; 224
+  c8:	92 bf       	out	0x32, r25	; 50
+	TCCR0 = 0x01;
+  ca:	81 e0       	ldi	r24, 0x01	; 1
+  cc:	83 bf       	out	0x33, r24	; 51
+	TCNT1 = -32;
+  ce:	20 ee       	ldi	r18, 0xE0	; 224
+  d0:	3f ef       	ldi	r19, 0xFF	; 255
+  d2:	3d bd       	out	0x2d, r19	; 45
+  d4:	2c bd       	out	0x2c, r18	; 44
+	TCCR1A = 0x00;
+  d6:	1f bc       	out	0x2f, r1	; 47
+	TCCR1B = 0x01;
+  d8:	8e bd       	out	0x2e, r24	; 46
+	TCNT2 = -32;
+  da:	94 bd       	out	0x24, r25	; 36
+	TCCR2 = 0x01;
+  dc:	85 bd       	out	0x25, r24	; 37
+void setTimer(unsigned char t_index)
+{
+	switch(t_index)
+	{
+		case 0:
+		TIMSK = (1 << TOIE0);
+  de:	89 bf       	out	0x39, r24	; 57
+	TCCR1A = 0x00;
+	TCCR1B = 0x01;
+	TCNT2 = -32;
+	TCCR2 = 0x01;
+	setTimer(0);
+	DDRC = 0xFF;
+  e0:	8f ef       	ldi	r24, 0xFF	; 255
+  e2:	84 bb       	out	0x14, r24	; 20
+	DDRD = 0xFF;
+  e4:	81 bb       	out	0x11, r24	; 17
+	PORTD &= ~(1<<2);
+  e6:	92 98       	cbi	0x12, 2	; 18
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  e8:	83 ef       	ldi	r24, 0xF3	; 243
+  ea:	91 e0       	ldi	r25, 0x01	; 1
+  ec:	01 97       	sbiw	r24, 0x01	; 1
+  ee:	f1 f7       	brne	.-4      	; 0xec <main+0x26>
+  f0:	00 c0       	rjmp	.+0      	; 0xf2 <main+0x2c>
+  f2:	00 00       	nop
+	_delay_us(2000);
+	operate(0x38);
+  f4:	88 e3       	ldi	r24, 0x38	; 56
+  f6:	0e 94 41 00 	call	0x82	; 0x82 <operate>
+	operate(0x0E);
+  fa:	8e e0       	ldi	r24, 0x0E	; 14
+  fc:	0e 94 41 00 	call	0x82	; 0x82 <operate>
+	operate(0x01);
+ 100:	81 e0       	ldi	r24, 0x01	; 1
+ 102:	0e 94 41 00 	call	0x82	; 0x82 <operate>
+ 106:	83 ef       	ldi	r24, 0xF3	; 243
+ 108:	91 e0       	ldi	r25, 0x01	; 1
+ 10a:	01 97       	sbiw	r24, 0x01	; 1
+ 10c:	f1 f7       	brne	.-4      	; 0x10a <main+0x44>
+ 10e:	00 c0       	rjmp	.+0      	; 0x110 <main+0x4a>
+ 110:	00 00       	nop
+	_delay_us(2000);
+	operate(0x06);
+ 112:	86 e0       	ldi	r24, 0x06	; 6
+ 114:	0e 94 41 00 	call	0x82	; 0x82 <operate>
+	PORTC = 0x80;
+ 118:	80 e8       	ldi	r24, 0x80	; 128
+ 11a:	85 bb       	out	0x15, r24	; 21
+	PORTD &= ~(1 << 0);
+ 11c:	90 98       	cbi	0x12, 0	; 18
+	PORTD &= ~(1 << 1);
+ 11e:	91 98       	cbi	0x12, 1	; 18
+	PORTD |= (1 << 2);
+ 120:	92 9a       	sbi	0x12, 2	; 18
+ 122:	00 00       	nop
+	_delay_us(1);
+	PORTD &= ~(1 << 2);
+ 124:	92 98       	cbi	0x12, 2	; 18
+ 126:	92 e4       	ldi	r25, 0x42	; 66
+ 128:	9a 95       	dec	r25
+ 12a:	f1 f7       	brne	.-4      	; 0x128 <main+0x62>
+ 12c:	00 c0       	rjmp	.+0      	; 0x12e <main+0x68>
+	_delay_us(200);
+	print("\ninitializing...");
+ 12e:	80 e6       	ldi	r24, 0x60	; 96
+ 130:	90 e0       	ldi	r25, 0x00	; 0
+ 132:	0e 94 4c 00 	call	0x98	; 0x98 <print>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 136:	2f e7       	ldi	r18, 0x7F	; 127
+ 138:	8a e1       	ldi	r24, 0x1A	; 26
+ 13a:	96 e0       	ldi	r25, 0x06	; 6
+ 13c:	21 50       	subi	r18, 0x01	; 1
+ 13e:	80 40       	sbci	r24, 0x00	; 0
+ 140:	90 40       	sbci	r25, 0x00	; 0
+ 142:	e1 f7       	brne	.-8      	; 0x13c <main+0x76>
+ 144:	00 c0       	rjmp	.+0      	; 0x146 <main+0x80>
+ 146:	00 00       	nop
+	_delay_ms(2000);
+	sei();
+ 148:	78 94       	sei
+ 14a:	ff cf       	rjmp	.-2      	; 0x14a <main+0x84>
+
+0000014c <__vector_11>:
+	while(1);
+}
+
+ISR(TIMER0_OVF_vect)
+{
+ 14c:	1f 92       	push	r1
+ 14e:	0f 92       	push	r0
+ 150:	0f b6       	in	r0, 0x3f	; 63
+ 152:	0f 92       	push	r0
+ 154:	11 24       	eor	r1, r1
+	PORTC = 0x80;
+ 156:	80 e8       	ldi	r24, 0x80	; 128
+ 158:	85 bb       	out	0x15, r24	; 21
+	PORTD &= ~(1 << 0);
+ 15a:	90 98       	cbi	0x12, 0	; 18
+	PORTD &= ~(1 << 1);
+ 15c:	91 98       	cbi	0x12, 1	; 18
+	PORTD |= (1 << 2);
+ 15e:	92 9a       	sbi	0x12, 2	; 18
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 160:	00 00       	nop
+	_delay_us(1);
+	PORTD &= ~(1 << 2);
+ 162:	92 98       	cbi	0x12, 2	; 18
+ 164:	22 e4       	ldi	r18, 0x42	; 66
+ 166:	2a 95       	dec	r18
+ 168:	f1 f7       	brne	.-4      	; 0x166 <__vector_11+0x1a>
+ 16a:	00 c0       	rjmp	.+0      	; 0x16c <__vector_11+0x20>
+	_delay_us(200);
+	operate(1);
+ 16c:	81 e0       	ldi	r24, 0x01	; 1
+ 16e:	0e 94 41 00 	call	0x82	; 0x82 <operate>
+	print("\ninterrupt 0 triggered!");
+ 172:	81 e7       	ldi	r24, 0x71	; 113
+ 174:	90 e0       	ldi	r25, 0x00	; 0
+ 176:	0e 94 4c 00 	call	0x98	; 0x98 <print>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 17a:	8f e7       	ldi	r24, 0x7F	; 127
+ 17c:	9a e1       	ldi	r25, 0x1A	; 26
+ 17e:	26 e0       	ldi	r18, 0x06	; 6
+ 180:	81 50       	subi	r24, 0x01	; 1
+ 182:	90 40       	sbci	r25, 0x00	; 0
+ 184:	20 40       	sbci	r18, 0x00	; 0
+ 186:	e1 f7       	brne	.-8      	; 0x180 <__vector_11+0x34>
+ 188:	00 c0       	rjmp	.+0      	; 0x18a <__vector_11+0x3e>
+ 18a:	00 00       	nop
+	{
+		case 0:
+		TIMSK = (1 << TOIE0);
+		break;
+		case 1:
+		TIMSK = (1 << TOIE0 | 1 << TOIE1);
+ 18c:	85 e0       	ldi	r24, 0x05	; 5
+ 18e:	89 bf       	out	0x39, r24	; 57
+	_delay_us(200);
+	operate(1);
+	print("\ninterrupt 0 triggered!");
+	_delay_ms(2000);
+	setTimer(1);
+	sei();
+ 190:	78 94       	sei
+ 192:	ff cf       	rjmp	.-2      	; 0x192 <__vector_11+0x46>
+
+00000194 <__vector_9>:
+	while (1);
+	TCNT0 = -32;
+}
+
+ISR(TIMER1_OVF_vect)
+{
+ 194:	1f 92       	push	r1
+ 196:	0f 92       	push	r0
+ 198:	0f b6       	in	r0, 0x3f	; 63
+ 19a:	0f 92       	push	r0
+ 19c:	11 24       	eor	r1, r1
+	PORTC = 0x80;
+ 19e:	80 e8       	ldi	r24, 0x80	; 128
+ 1a0:	85 bb       	out	0x15, r24	; 21
+	PORTD &= ~(1 << 0);
+ 1a2:	90 98       	cbi	0x12, 0	; 18
+	PORTD &= ~(1 << 1);
+ 1a4:	91 98       	cbi	0x12, 1	; 18
+	PORTD |= (1 << 2);
+ 1a6:	92 9a       	sbi	0x12, 2	; 18
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1a8:	00 00       	nop
+	_delay_us(1);
+	PORTD &= ~(1 << 2);
+ 1aa:	92 98       	cbi	0x12, 2	; 18
+ 1ac:	22 e4       	ldi	r18, 0x42	; 66
+ 1ae:	2a 95       	dec	r18
+ 1b0:	f1 f7       	brne	.-4      	; 0x1ae <__vector_9+0x1a>
+ 1b2:	00 c0       	rjmp	.+0      	; 0x1b4 <__vector_9+0x20>
+	_delay_us(200);
+	operate(1);
+ 1b4:	81 e0       	ldi	r24, 0x01	; 1
+ 1b6:	0e 94 41 00 	call	0x82	; 0x82 <operate>
+	print ("\ninterrupt 1 triggered!");
+ 1ba:	89 e8       	ldi	r24, 0x89	; 137
+ 1bc:	90 e0       	ldi	r25, 0x00	; 0
+ 1be:	0e 94 4c 00 	call	0x98	; 0x98 <print>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1c2:	8f e7       	ldi	r24, 0x7F	; 127
+ 1c4:	9a e1       	ldi	r25, 0x1A	; 26
+ 1c6:	26 e0       	ldi	r18, 0x06	; 6
+ 1c8:	81 50       	subi	r24, 0x01	; 1
+ 1ca:	90 40       	sbci	r25, 0x00	; 0
+ 1cc:	20 40       	sbci	r18, 0x00	; 0
+ 1ce:	e1 f7       	brne	.-8      	; 0x1c8 <__vector_9+0x34>
+ 1d0:	00 c0       	rjmp	.+0      	; 0x1d2 <__vector_9+0x3e>
+ 1d2:	00 00       	nop
+		break;
+		case 1:
+		TIMSK = (1 << TOIE0 | 1 << TOIE1);
+		break;
+		case 2:
+		TIMSK = (1 << TOIE0 | 1 << TOIE1 | 1 << TOIE2);
+ 1d4:	85 e4       	ldi	r24, 0x45	; 69
+ 1d6:	89 bf       	out	0x39, r24	; 57
+	_delay_us(200);
+	operate(1);
+	print ("\ninterrupt 1 triggered!");
+	_delay_ms(2000);
+	setTimer(2);
+	sei();
+ 1d8:	78 94       	sei
+ 1da:	ff cf       	rjmp	.-2      	; 0x1da <__vector_9+0x46>
+
+000001dc <__vector_5>:
+	while (1);
+	TCNT1 = -32;
+}
+
+ISR(TIMER2_OVF_vect)
+{
+ 1dc:	1f 92       	push	r1
+ 1de:	0f 92       	push	r0
+ 1e0:	0f b6       	in	r0, 0x3f	; 63
+ 1e2:	0f 92       	push	r0
+ 1e4:	11 24       	eor	r1, r1
+	PORTC = 0x80;
+ 1e6:	80 e8       	ldi	r24, 0x80	; 128
+ 1e8:	85 bb       	out	0x15, r24	; 21
+	PORTD &= ~(1 << 0);
+ 1ea:	90 98       	cbi	0x12, 0	; 18
+	PORTD &= ~(1 << 1);
+ 1ec:	91 98       	cbi	0x12, 1	; 18
+	PORTD |= (1 << 2);
+ 1ee:	92 9a       	sbi	0x12, 2	; 18
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1f0:	00 00       	nop
+	_delay_us(1);
+	PORTD &= ~(1 << 2);
+ 1f2:	92 98       	cbi	0x12, 2	; 18
+ 1f4:	22 e4       	ldi	r18, 0x42	; 66
+ 1f6:	2a 95       	dec	r18
+ 1f8:	f1 f7       	brne	.-4      	; 0x1f6 <__vector_5+0x1a>
+ 1fa:	00 c0       	rjmp	.+0      	; 0x1fc <__vector_5+0x20>
+	_delay_us(200);
+	operate(1);
+ 1fc:	81 e0       	ldi	r24, 0x01	; 1
+ 1fe:	0e 94 41 00 	call	0x82	; 0x82 <operate>
+	print("\ninterrupt 2 triggered!");
+ 202:	81 ea       	ldi	r24, 0xA1	; 161
+ 204:	90 e0       	ldi	r25, 0x00	; 0
+ 206:	0e 94 4c 00 	call	0x98	; 0x98 <print>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 20a:	8f e7       	ldi	r24, 0x7F	; 127
+ 20c:	9a e1       	ldi	r25, 0x1A	; 26
+ 20e:	26 e0       	ldi	r18, 0x06	; 6
+ 210:	81 50       	subi	r24, 0x01	; 1
+ 212:	90 40       	sbci	r25, 0x00	; 0
+ 214:	20 40       	sbci	r18, 0x00	; 0
+ 216:	e1 f7       	brne	.-8      	; 0x210 <__vector_5+0x34>
+ 218:	00 c0       	rjmp	.+0      	; 0x21a <__vector_5+0x3e>
+ 21a:	00 00       	nop
+ 21c:	ff cf       	rjmp	.-2      	; 0x21c <__vector_5+0x40>
+
+0000021e <_exit>:
+ 21e:	f8 94       	cli
+
+00000220 <__stop_program>:
+ 220:	ff cf       	rjmp	.-2      	; 0x220 <__stop_program>
