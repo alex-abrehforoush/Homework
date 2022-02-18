@@ -1,0 +1,794 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage[font={small,it}]{caption}
+\usepackage{placeins}
+\usepackage{xepersian}
+
+%\DeclareMathOperator*{\btie}{\bowtie}
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف اول درس مبانی بینایی کامپیوتر}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+%%%%%%%%%%
+\lstset
+{
+    language=[latex]tex,
+    basicstyle=\ttfamily,
+    commentstyle=\color{black},
+    columns=fullflexible,
+    keepspaces=true,
+    upquote=true,
+    showstringspaces=false,
+    morestring=[s]\\\%,
+    stringstyle=\color{black},
+}
+%%%%%%%%%%
+%beginMatlab
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%endMatlab
+\begin{document}
+%beginMatlab
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%endMatlab
+\input{titlepage}
+
+%\tableofcontents
+\newpage
+
+
+\section{}%1
+ابتدا فایل تصویر را با نرم‌افزار \lr{Notepad} باز می‌کنیم. با توجه به شکل زیر، ابعاد تصویر
+852
+$\times$
+1282 است و همچنین ماکسیممِ سطح روشناییِ هر کانال رنگیِ هر پیکسل 255 است. در نهایت می‌توان حدس زد که دیتای تصویر از کاراکتر هفدهم به بعد باشد.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/1a.jpg}
+    \caption
+	{
+تصویر
+	}
+    \label{fig:fig1}
+\end{figure}
+حال تصویر را هم با دستور \lr{fopen} و \lr{fread} و هم با استفاده از دستور \lr{imtool} باز می‌کنیم. اگر به تصاویر زیر دقت کنیم می‌بینیم که حدس ما برای اولین کاراکتر دیتای تصویر درست است و سطح روشنایی اولین پیکسل تصویر در بایت هفدهم این فایل قرار دارد. همچنین با مشاهده خروجی دستور \lr{imtool} و مقایسه با آرایه‌ی نظیر فایل می‌بینیم که سطح روشنایی نظیر رنگ‌های قرمز، سبز و آبی به ترتیب در اندیس‌های مضرب 3 به علاوه‌ی 2، مضرب 3 و مضرب 3 به علاوه‌ی 1 ذخیره شده‌اند.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/1b.jpg}
+    \caption
+	{
+تصویر
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/1c.jpg}
+    \caption
+	{
+تصویر
+	}
+    \label{fig:fig1}
+\end{figure}
+پس برای خواندن تصویر ورودی در محیط برنامه‌نویسی مورد نظر و دسترسی به داده‌های آن به شکل زیر عمل می‌کنیم.
+\begin{latin}
+\lstinputlisting{sources/p1.m}
+\end{latin}
+و در آخر می‌بینیم که خروجی‌ها یکسان هستند.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/1d.jpg}
+    \caption
+	{
+تصویر
+	}
+    \label{fig:fig1}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{}
+\subsection{\lr{a}}
+
+\subsection{\lr{b}}
+یک \lr{transitive dependency} زمانی وجود دارد که \lr{FD}ها این چنین باشند:
+\begin{latin}
+$
+\\
+X\longrightarrow Y,\\
+Y\longrightarrow Z,\\
+PK=X\\
+\\
+$
+\end{latin}
+در این حالت وابستگیِ
+$
+X\longrightarrow Z,\\
+$
+یک \lr{transitive dependency} است. زیرا \lr{X} مقدار \lr{Z} را از طریق 
+\lr{Y} تعیین می‌کند. وجودِ یک وابستگی میان \lr{attribute}های \lr{nonprime}، نشان‌دهنده‌ی وجود \lr{transitive dependency} است.
+\subsection{\lr{c}}
+یک \lr{relation} زمانی در \lr{BCNF} است که هر یک از \lr{FD}های آن یا بدیهی باشند یا سمت چپ آن‌ها سوپرکلید نباشد.
+\\
+چهار حالت زیر را درنظر می‌گیریم:
+\begin{itemize}
+    \item [$\bullet$] تعداد \lr{FD}ها صفر باشد.
+
+\begin{latin}
+$
+\{A_{1}\}\longrightarrow\{A_{2}\}
+$
+\end{latin}
+در این حالت چون هیچ \lr{FD}ای وجود ندارد شرط \lr{BCNF} خود به خود ارضا می‌شود.
+%
+    \item [$\bullet$] تعداد \lr{FD}ها یک باشد و وابستگی به شکل زیر باشد:
+
+\begin{latin}
+$
+\{A_{1}\}\longrightarrow\{A_{2}\}
+$
+\end{latin}
+در این حالت، سمت چپِ \lr{FD}،
+$
+A_{1}
+$
+،کلید است و هیچ تناقضی در \lr{BCNF} رخ نمی‌دهد.
+%
+    \item [$\bullet$] تعداد \lr{FD}ها یک باشد و وابستگی به شکل زیر باشد:
+
+\begin{latin}
+$
+\{A_{2}\}\longrightarrow\{A_{1}\}
+$
+\end{latin}
+در این حالت، سمت چپِ \lr{FD}،
+$
+A_{2}
+$
+،کلید است و هیچ تناقضی در \lr{BCNF} رخ نمی‌دهد.
+%
+    \item [$\bullet$] تعداد \lr{FD}ها دو باشد.
+
+\begin{latin}
+
+$
+\{A_{1}\}\longrightarrow\{A_{2}\},\\
+\{A_{1}\}\longrightarrow\{A_{2}\}
+$
+\end{latin}
+در این حالت سمت چپِ هر دو وابستگی،
+$
+A_{1}
+$
+و
+$
+A_{2}
+$
+کلید است و هیچ تناقضی در \lr{BCNF} رخ نمی‌دهد.
+\end{itemize}
+در نتیجه هر جدول با دو \lr{attribute} همیشه \lr{BCNF} است.
+
+\section{}%2
+\begin{latin}
+\begin{table}[H]
+\centering
+\caption{}
+\label{tab:my-table}
+\begin{tabular}{|c|l|l|l|}
+\hline
+            & \multicolumn{1}{c|}{\textbf{Key}}                                     & \multicolumn{1}{c|}{\textbf{Normalization}}                                                                                                                                                                   & \multicolumn{1}{c|}{\textbf{Denormalization}}                                                                                                                             \\ \hline
+\textbf{1.} & \textbf{Implementation}                                               & \begin{tabular}[c]{@{}l@{}}Normalization is used to remove\\ redundant data from the database\\ and to store non-redundant and\\ consistent data into it.\end{tabular}                                        & \begin{tabular}[c]{@{}l@{}}Denormalization is used to\\ combinemultiple table data\\ intoone so that it can be\\ queried quickly.\end{tabular}                            \\ \hline
+\textbf{2.} & \textbf{Focus}                                                        & \begin{tabular}[c]{@{}l@{}}Normalization mainly focuses\\ on clearing the database from\\ unused data and to reduce the\\ data redundancy and\\ inconsistency.\end{tabular}                                   & \begin{tabular}[c]{@{}l@{}}Denormalization on the\\ other hand focus on to\\ achieve the faster execution\\ of the queries through\\ introducing redundancy.\end{tabular} \\ \hline
+\textbf{3.} & \textbf{\begin{tabular}[c]{@{}l@{}}Memory\\ consumption\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Normalization uses optimized\\ memory and hence faster in\\ performance.\end{tabular}                                                                                              & \begin{tabular}[c]{@{}l@{}}On the other hand,\\ Denormalization introduces\\ some sort of wastage of\\ memory.\end{tabular}                                               \\ \hline
+\textbf{4.} & \textbf{Data integrity}                                               & \begin{tabular}[c]{@{}l@{}}Normalization maintains\\ data integrity i.e. any addition\\ or deletion of data from the\\ table will not create any\\ mismatch in the relationship\\ of the tables.\end{tabular} & \begin{tabular}[c]{@{}l@{}}Denormalization does not\\ maintain any data integrity.\end{tabular}                                                                           \\ \hline
+\textbf{5.} & \textbf{Where to use}                                                 & \begin{tabular}[c]{@{}l@{}}Normalization is generally\\ used where number of\\ insert/update/delete operations\\ are performed and joins of\\ those tables are not expensive.\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}On the other hand\\ Denormalization is used\\ where joins are expensive\\ and frequent query is\\ executed on the tables.\end{tabular}         \\ \hline
+\end{tabular}
+\end{table}
+\end{latin}
+
+\section{}%3
+\begin{latin}
+$
+F=
+\{
+	\{M\}\longrightarrow\{Q\},
+	\{Q\}\longrightarrow\{N\},
+	\{N\}\longrightarrow\{L, M\},
+	\{N\}\longrightarrow\{L\},
+	\{P\}\longrightarrow\{L\},
+	\{P\}\longrightarrow\{N\},
+\}
+$
+\end{latin}
+ابتدا وابستگی‌های تابعی را به گونه‌ای که تنها یک \lr{attribute} در سمت راست آن‌ها قرار داشته باشد بازنویسی می‌کنیم.
+\begin{latin}
+$
+\\F=\\
+\{\\
+	\{M\}\longrightarrow\{Q\},\\
+	\{Q\}\longrightarrow\{N\},\\
+	\{N\}\longrightarrow\{L\},\\
+	\{N\}\longrightarrow\{M\},\\
+	\{N\}\longrightarrow\{L\},\\
+	\{P\}\longrightarrow\{L\},\\
+	\{P\}\longrightarrow\{N\},\\
+\}
+$
+\end{latin}
+حال وابستگی‌های بدیهی را حذف می‌کنیم(چون هیچ وابستگی‌ای که سمت راستش در سمت چپش وجود داشته باشد نداریم پس وابستگی بدیهی وجود ندارد).
+\begin{latin}
+$
+\\F=\\
+\{\\
+	\{M\}\longrightarrow\{Q\},\\
+	\{Q\}\longrightarrow\{N\},\\
+	\{N\}\longrightarrow\{L\},\\
+	\{N\}\longrightarrow\{M\},\\
+	\{N\}\longrightarrow\{L\},\\
+	\{P\}\longrightarrow\{L\},\\
+	\{P\}\longrightarrow\{N\},\\
+\}
+$
+\end{latin}
+
+سپس سمت چپ هر یک از وابستگی‌ها را کمینه می‌کنیم(کمینه هستند).
+\begin{latin}
+$
+\\F=\\
+\{\\
+	\{M\}\longrightarrow\{Q\},\\
+	\{Q\}\longrightarrow\{N\},\\
+	\{N\}\longrightarrow\{L\},\\
+	\{N\}\longrightarrow\{M\},\\
+	\{N\}\longrightarrow\{L\},\\
+	\{P\}\longrightarrow\{L\},\\
+	\{P\}\longrightarrow\{N\},\\
+\}
+$
+\end{latin}
+
+در آخر وابستگی‌های تکراری را حذف می‌کنیم.
+\begin{latin}
+$
+\\F_{c}=\\
+\{\\
+	\{M\}\longrightarrow\{Q\},\\
+	\{Q\}\longrightarrow\{N\},\\
+	\{N\}\longrightarrow\{M\},\\
+	\{N\}\longrightarrow\{L\},\\
+	\{P\}\longrightarrow\{N\},\\
+\}
+$
+\end{latin}
+
+
+\section{}%4
+ابتدا پوش کانونی را به شکل زیر محاسبه می‌کنیم:
+%\newline
+\begin{itemize}
+    \item [$\bullet$] ابتدا وابستگی تابعی را به یک وابستگی تابعی با یک \lr{attribute} در سمت راست تبدیل می‌کنیم.
+
+\begin{latin}
+$
+\\F=\\
+\{\\
+\{A, B\}\longrightarrow\{C\},\\
+\{A\}\longrightarrow\{D\},\\
+\{A\}\longrightarrow\{E\},\\
+\{B\}\longrightarrow\{F\},\\
+\{F\}\longrightarrow\{G\},\\
+\{F\}\longrightarrow\{H\},\\
+\{D\}\longrightarrow\{I\},\\
+\{D\}\longrightarrow\{J\}\\
+\}
+$
+\end{latin}
+    \item [$\bullet$] حال وابستگی‌های تابعی بدیهی را پاک می‌کنیم.
+\begin{latin}
+$
+\\F=\\
+\{\\
+\{A, B\}\longrightarrow\{C\},\\
+\{A\}\longrightarrow\{D\},\\
+\{A\}\longrightarrow\{E\},\\
+\{B\}\longrightarrow\{F\},\\
+\{F\}\longrightarrow\{G\},\\
+\{F\}\longrightarrow\{H\},\\
+\{D\}\longrightarrow\{I\},\\
+\{D\}\longrightarrow\{J\}\\
+\}
+$
+\end{latin}
+    \item [$\bullet$] سپس \lr{attribute}های سمت چپ هر وابستگی تابعی را کمینه می‌کنیم.
+
+\begin{latin}
+$
+\\F=\\
+\{\\
+\{A, B\}\longrightarrow\{C\},\\
+\{A\}\longrightarrow\{D\},\\
+\{A\}\longrightarrow\{E\},\\
+\{B\}\longrightarrow\{F\},\\
+\{F\}\longrightarrow\{G\},\\
+\{F\}\longrightarrow\{H\},\\
+\{D\}\longrightarrow\{I\},\\
+\{D\}\longrightarrow\{J\}\\
+\}
+$
+\end{latin}
+    \item [$\bullet$] در نهایت وابستگی‌های تابعی تکراری(که از سایر وابستگی‌ها نتیجه می‌شوند) را حذف می‌کنیم.
+
+\begin{latin}
+$
+\\F_{c}=\\
+\{\\
+\{A, B\}\longrightarrow\{C\},\\
+\{A\}\longrightarrow\{D\},\\
+\{A\}\longrightarrow\{E\},\\
+\{B\}\longrightarrow\{F\},\\
+\{F\}\longrightarrow\{G\},\\
+\{F\}\longrightarrow\{H\},\\
+\{D\}\longrightarrow\{I\},\\
+\{D\}\longrightarrow\{J\}\\
+\}
+$
+\end{latin}
+\end{itemize}
+پوش کانونی به دست آمد. حال مجموعه‌ی همه‌ی \lr{attribute}هایی که در سمت راست هیچ وابستگی تابعی قرار ندارند را به دست می‌آوریم. هر کلید کاندید باید شامل این \lr{attribute}ها باشد. این مجموعه برابر است با:
+\begin{latin}
+$
+\{A, B\}
+$
+\end{latin}
+$
+\{A, B\}
+$
+سوپرکلید است، پس تنها کلید کاندید است.
+\newline
+حال با تجزیه‌ی $R$ به \lr{relation}های 
+$R_{1}$، $R_{2}$ و $R_{3}$
+و $F$ به
+ \lr{FD}های $F_{1}$، $F_{2}$ و $F_{3}$ 
+به شکل زیر،
+ \lr{partial dependency}ها را حذف می‌کنیم و به فرم نرمال دوم می‌رسیم.
+
+\begin{latin}
+$
+\\
+R_{1}=\{A, D, E, I, J\}\\
+F_{1}=\\
+\{\\
+\{A\}\longrightarrow\{D, E\},\\
+\{D\}\longrightarrow\{I, J\},\\
+\}
+\\
+\\
+R_{2}=\{B, F, G, H\}\\
+F_{2}=\\
+\{\\
+\{B\}\longrightarrow\{F\},\\
+\{F\}\longrightarrow\{G, H\},\\
+\}
+\\
+\\
+R_{3}=\{A, B, C\}\\
+F_{3}=\\
+\{\\
+\{A, B\}\longrightarrow\{C\},\\
+\}
+$
+\end{latin}
+برای دستیابی به فرم نرمال سوم باید \lr{transitive dependency}ها را حذف کنیم. با توجه به اینکه هیچ \lr{FD}ای وجود ندارد که سمت چپ آن یک \lr{attribute}ِ \lr{nonprime} باشد، فرم نرمال سوم همان فرم به دست آمده در مرحله قبل است.
+\begin{latin}
+$
+\\
+R_{1}=\{A, D, E, I, J\}\\
+F_{1}=\\
+\{\\
+\{A\}\longrightarrow\{D, E\},\\
+\{D\}\longrightarrow\{I, J\},\\
+\}
+\\
+\\
+R_{2}=\{B, F, G, H\}\\
+F_{2}=\\
+\{\\
+\{B\}\longrightarrow\{F\},\\
+\{F\}\longrightarrow\{G, H\},\\
+\}
+\\
+\\
+R_{3}=\{A, B, C\}\\
+F_{3}=\\
+\{\\
+\{A, B\}\longrightarrow\{C\},\\
+\}
+$
+\end{latin}
+
+
+
+\section{}%5
+\begin{latin}
+$
+\\
+R=
+\{
+Course\_no, Sec\_no, Offering\_dept, Credit\_hours, Course\_level,\\Instructor\_ssn, Semester, Year, Days\_hours, Room\_no, No\_of\_students
+\}\\
+\\
+F=\\
+\{\\
+\{Course\_no\}\longrightarrow\{Offering\_dept, Credit\_hours, Course\_level\},\\
+\{Course\_no, Sec\_no, Semester, Year\}\longrightarrow\{Days\_hours, Room\_no, No\_of\_students, Instructor\_ssn\},\\
+\{Room\_no, Days\_hours, Semester, Year\}\longrightarrow\{Instructor\_ssn, Course\_no, Sec\_no\}\\
+\}
+$
+\end{latin}
+
+ابتدا پوش کانونی را به شکل زیر محاسبه می‌کنیم:
+
+\begin{itemize}
+    \item [$\bullet$] ابتدا وابستگی تابعی را به یک وابستگی تابعی با یک \lr{attribute} در سمت راست تبدیل می‌کنیم.
+
+\begin{latin}
+$
+\\F=\\
+\{\\
+\{Course\_no\}\longrightarrow\{Offering\_dept\},\\
+\{Course\_no \}\longrightarrow\{Credit\_hours\},\\
+\{Course\_no \}\longrightarrow\{Course\_level\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Days\_hours\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Room\_no\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{No\_of\_students\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Instructor\_ssn\},\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Instructor\_ssn\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Course\_no\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Sec\_no\}\\
+\}
+$
+\end{latin}
+    \item [$\bullet$] حال وابستگی‌های تابعی بدیهی را پاک می‌کنیم.
+\begin{latin}
+$
+\\F=\\
+\{\\
+\{Course\_no\}\longrightarrow\{Offering\_dept\},\\
+\{Course\_no \}\longrightarrow\{Credit\_hours\},\\
+\{Course\_no \}\longrightarrow\{Course\_level\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Days\_hours\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Room\_no\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{No\_of\_students\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Instructor\_ssn\},\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Instructor\_ssn\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Course\_no\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Sec\_no\}\\
+\}
+$
+\end{latin}
+    \item [$\bullet$] سپس \lr{attribute}های سمت چپ هر وابستگی تابعی را کمینه می‌کنیم.
+
+\begin{latin}
+$
+\\F=\\
+\{\\
+\{Course\_no\}\longrightarrow\{Offering\_dept\},\\
+\{Course\_no \}\longrightarrow\{Credit\_hours\},\\
+\{Course\_no \}\longrightarrow\{Course\_level\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Days\_hours\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Room\_no\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{No\_of\_students\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Instructor\_ssn\},\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Instructor\_ssn\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Course\_no\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Sec\_no\}\\
+\}
+$
+\end{latin}
+    \item [$\bullet$] در نهایت وابستگی‌های تابعی تکراری(که از سایر وابستگی‌ها نتیجه می‌شوند) را حذف می‌کنیم.
+
+\begin{latin}
+$
+\\F_{c}=\\
+\{\\
+\{Course\_no\}\longrightarrow\{Offering\_dept\},\\
+\{Course\_no \}\longrightarrow\{Credit\_hours\},\\
+\{Course\_no \}\longrightarrow\{Course\_level\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Days\_hours\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{Room\_no\},\\
+\{Course\_no, Sec\_no, Semester, Year \}\longrightarrow\{No\_of\_students\},\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Instructor\_ssn\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Course\_no\}\\
+\{Room\_no, Days\_hours, Semester, Year \}\longrightarrow\{Sec\_no\}\\
+\}
+$
+\end{latin}
+\end{itemize}
+پوش کانونی به دست آمد. حال مجموعه‌ی همه‌ی \lr{attribute}هایی که در سمت راست هیچ وابستگی تابعی قرار ندارند را به دست می‌آوریم. هر کلید کاندید باید شامل این \lr{attribute}ها باشد. این مجموعه برابر است با:
+\begin{latin}
+$
+\{Semester, Year\}
+$
+\end{latin}
+همچنین مجموعه‌ی همه‌ی \lr{attribute}هایی که در سمت راست حداقل یک وابستگی تابعی قرار داشته باشد ولی در سمت چپ هیچ وابستگی تابعی قرار ندارند را نیز به دست می‌آوریم. این \lr{attribute}ها نباید در هیچ یک از کلیدهای کاندید باشند. این مجموعه برابر است با:
+\begin{latin}
+$
+\{Offering\_dept, Credit\_hours, Course\_level, No\_of\_students, Instructor\_ssn\}
+$
+\end{latin}
+بستارِ مجموعه‌ی 
+$
+\{Semester, Year\}
+$
+خودش است.
+حال تلاش می‌کنیم که یکی از \lr{attribute}های مجموعه‌ی
+\begin{latin}
+$
+R-\{Offering\_dept, Credit\_hours, Course\_level, No\_of\_students, Instructor\_ssn\}-\{Semester, Year\}\\
+=\{Course\_no, Sec\_no, Days\_hours, Room\_no\}
+$
+\end{latin}
+را به مجموعه‌ی
+$
+\{Semester, Year\}
+$
+به گونه‌ای اضافه کنیم که یک سوپرکلید تشکیل دهند. درصورتی که سوپرکلید باشند با بررسی اینکه آیا زیرمجموعه‌ی سره‌ای که سوپرکلید باشند دارند یا خیر کلید کاندید بودن آن‌ها را احراز می‌کنیم.
+\begin{itemize}
+    \item [$\bullet$]
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Course\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Sec\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Days\_hours\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Room\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+\end{itemize}
+حال دو \lr{attribute} را از مجموعه‌ی مذکور به 
+مجموعه‌ی
+$
+\{Semester, Year\}
+$
+اضافه می‌کنیم. پس 6 حالت زیر را داریم:
+\begin{itemize}
+    \item [$\bullet$]
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Course\_no, Sec\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید است و هیچ زیرمجموعه‌ی سره‌ای که سوپرکلید باشد ندارد. پس یک کلید کاندید است.
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Course\_no, Days\_hours\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Course\_no, Room\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Days\_hours, Sec\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Room\_no, Sec\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید نیست. پس کلید کاندید نیست.
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Days\_hours, Room\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید است و هیچ زیرمجموعه‌ی سره‌ای که سوپرکلید باشد ندارد. پس یک کلید کاندید است.
+\end{itemize}
+
+حال دو \lr{attribute} را از مجموعه‌ی مذکور به مجموعه‌ی
+$
+\{Semester, Year\}
+$
+اضافه می‌کنیم.
+\begin{itemize}
+    \item [$\bullet$]
+\begin{latin}
+$
+\{Semester, Year\}\cup\{Course\_no, Days\_hours, Room\_no\}
+$
+\end{latin}
+مجموعه‌ی بالا سوپرکلید است اما یک زیرمجموعه‌ی سره دارد که سوپرکلید است. پس کلید کاندید نیست.
+\end{itemize}
+ چون دیگر کلید کاندید نداریم دیگر ادامه نمی‌دهیم. پس کلیدهای کاندید ما دو مجموعه‌ی زیر هستند:
+\begin{latin}
+$
+\\CK_{1}=\{Semester, Year, Course\_no, Sec\_no\}\\
+CK_{2}=\{Semester, Year, Days\_hours, Room\_no\}
+$
+\end{latin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+حال با تجزیه‌ی $R$ به \lr{relation}های 
+$R_{1}$ و $R_{2}$ 
+و $F$ به \lr{FD}های 
+$F_{1}$ و $F_{2}$ 
+به شکل زیر، \lr{partial dependency}ها را حذف می‌کنیم و به فرم نرمال دوم می‌رسیم.
+
+\begin{latin}
+$
+\\
+R_{1}=\{Course\_no, Offering\_dept, Credit\_hours, Course\_level\}\\
+F_{1}=\\
+\{\\
+\{Course\_no\}\longrightarrow\{Offering\_dept, Credit\_hours, Course\_level\},\\
+\}
+\\
+\\
+R_{2}=\{Course\_no, Sec\_no, Instructor\_ssn, Semester, Year, Days\_hours, Room\_no, No\_of\_students\}\\
+F_{2}=\\
+\{\\
+\{Course\_no, Sec\_no, Semester, Year\}\longrightarrow\{Room\_no, Days\_hours\},\\
+\{Days\_hours, Room\_no, Semester, Year\}\longrightarrow\{Sec\_no, Course\_no, Instructor\_ssn, No\_of\_students\},\\
+\}
+$
+\end{latin}
+برای دستیابی به فرم نرمال سوم باید \lr{transitive dependency}ها را حذف کنیم. با توجه به اینکه هیچ \lr{FD}ای وجود ندارد که سمت چپ آن یک \lr{attribute}ِ \lr{nonprime} باشد، فرم نرمال سوم همان فرم به دست آمده در مرحله قبل است.
+\begin{latin}
+$
+\\
+R_{1}=\{Course\_no, Offering\_dept, Credit\_hours, Course\_level\}\\
+F_{1}=\\
+\{\\
+\{Course\_no\}\longrightarrow\{Offering\_dept, Credit\_hours, Course\_level\},\\
+\}
+\\
+\\
+R_{2}=\{Course\_no, Sec\_no, Instructor\_ssn, Semester, Year, Days\_hours, Room\_no, No\_of\_students\}\\
+F_{2}=\\
+\{\\
+\{Course\_no, Sec\_no, Semester, Year\}\longrightarrow\{Room\_no, Days\_hours\},\\
+\{Days\_hours, Room\_no, Semester, Year\}\longrightarrow\{Sec\_no, Course\_no, Instructor\_ssn, No\_of\_students\},\\
+\}
+$
+\end{latin}
+
+
+
+\section{}%6
+\subsection{\lr{a}}
+\begin{latin}
+$
+\\
+REFRIG=
+\{
+Model\#, Year, Price, Manuf\_plant, Color
+\}
+=\{M, Y, P, MP, C\}
+\\
+\\
+F=\\
+\{\\
+\{M\}\longrightarrow\{MP\},\\
+\{M, Y\}\longrightarrow\{P\},\\
+\{MP\}\longrightarrow\{C\}\\
+\}
+$
+\end{latin}
+ابتدا پوش کانونی را به دست می‌آوریم:
+\begin{latin}
+$
+\\F_{c}=\\
+\{\\
+\{M\}\longrightarrow\{MP\},\\
+\{M, Y\}\longrightarrow\{P\},\\
+\{MP\}\longrightarrow\{C\}\\
+\}
+$
+\end{latin}
+
+\begin{itemize}
+    \item [$\bullet$] 
+\lr{\{M\}} سوپرکلید نیست. چون قادر نیست به صورت یکتا \lr{attribute}ِ \lr{Y} و \lr{P} را تعیین کند.
+
+    \item [$\bullet$] 
+\lr{\{M, Y\}} سوپرکلید است. چون قادر است به صورت یکتا همه‌ی \lr{attribute}ها را تعیین کند. همچنین هیچ زیرمجموعه‌ی سره‌ای ندارد که سوپرکلید باشد. پس کلید کاندید است.
+
+    \item [$\bullet$] 
+\lr{\{M, C\}} سوپرکلید نیست. چون قادر نیست به صورت یکتا همه‌ی \lr{attribute}ها را تعیین کند(\lr{attribute}ِ \lr{Y} و \lr{P}).
+\end{itemize}
+\subsection{\lr{b}}
+\begin{itemize}
+    \item [$\bullet$] 
+همه‌ی کلیدهای کاندید را پیدا می‌کنیم. تنها کلید کاندید، کلیدِ
+\lr{\{M, Y\}}
+است. حال به ازای هر \lr{FD} بررسی می‌کنیم که آیا سمت چپ آن یک سوپرکلید است یا سمت راست آن شامل همه‌ی \lr{attribute}های کلید است یا خیر. چون \lr{FD}ی
+$
+\{M\}\longrightarrow\{MP\}
+$
+غیر بدیهی است، سمت چپ آن یک سوپرکلید نیست و سمت راست آن شامل یک \lr{attribute}ِ \lr{nonprime} است، \lr{3NF} نقض می‌شود. پس رابطه‌ی \lr{REFRIG} در \lr{3NF} نیست.
+    \item [$\bullet$] 
+یک \lr{relation} در \lr{BCNF} است اگر و تنها اگر سمت چپ هر یک از \lr{FD}های غیر بدیهی یک سوپرکلید وجود داشته باشد. چون \lr{FD}ی
+$
+\{M\}\longrightarrow\{MP\}
+$
+غیر بدیهی است و سمت چپ آن یک سوپرکلید نیست، این \lr{BCNF} را نقض می‌کند. پس رابطه‌ی \lr{REFRIG} در \lr{BCNF} نیست.
+\end{itemize}
+%------------------------------------------------------------------------------------------
+
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1}https://www.tutorialspoint.com/difference-between-normalization-and-denormalization
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}

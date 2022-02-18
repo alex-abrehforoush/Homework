@@ -10,9 +10,9 @@ R = I(:, :, 1);
 G = I(:, :, 2);
 B = I(:, :, 3);
 
-% %showing original image
+% % showing original image
 % imshow(I, []);
-% %showing extracted rgb images in grayscale in seperate figure
+% % showing extracted rgb images in grayscale in seperate figure
 % figure, imshow([R G B], []);
 
 % %concating rgb channels to make the original picture
@@ -54,4 +54,41 @@ B = I(:, :, 3);
 % end
 % imshow([D I_FH; I_FH D], []);
 
-% 
+% a circle in center of image
+% R1 = 500;
+% L = D;
+% for i = 1: size(D, 1)
+%     for j = 1: size(D, 2)
+%         %if round(sqrt((i - size(D, 1) / 2) ^ 2 + (j - size(D, 2) / 2) ^ 2)) >= R1
+%         %if round(sqrt((i - size(D, 1) / 2) ^ 2 + (j - size(D, 2) / 2) ^ 2)) == R1
+%         if round(sqrt((i - size(D, 1) / 2) ^ 2 + (j - size(D, 2) / 2) ^ 2)) <= R1
+%             L(i, j, 1) = 0;
+%             L(i, j, 2) = 0;
+%             L(i, j, 3) = 0;
+%         end
+%     end
+% end
+% figure, imshow(L, []);
+
+% %cropping
+% w1 = 300;
+% w2 = 800;
+% l1 = 800;
+% l2 = 1100;
+% M = D(w1: w2, l1: l2, :);
+% figure, imshow(M, []);
+
+%writing in file
+% R1 = 500;
+% O = [400, 800];
+% L = D;
+% for i = 1: size(D, 1)
+%     for j = 1: size(D, 2)
+%         if round(sqrt((i - O(1)) ^ 2 + (j - O(2)) ^ 2)) == R1
+%             L(i, j, 1) = 1;
+%             L(i, j, 2) = 0;
+%             L(i, j, 3) = 0;
+%         end
+%     end
+% end
+% imwrite(L, "img\mypic.jpg");

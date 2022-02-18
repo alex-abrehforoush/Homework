@@ -1,7 +1,7 @@
 clc
 clear
 close all
-f = fopen("img/sample_5184×3456.pgm");
+f = fopen("img/pic1.pgm");
 file_contant = fread(f, "uint8");
 image_data = file_contant(18:end);
 I = zeros(3456, 5184);
