@@ -23,7 +23,8 @@ for i = 1: size(I, 1)
     for j = 1: size(I, 2)
         x = column / 2 - j;
         y = row / 2 - i;
-        if (x ^ 2) / (a ^ 2) + (y ^ 2) / (b ^ 2) <= 1
+        if %round(((i - size(I, 1) / 2) ^ 2) / ((ellipse_height / 2) ^ 2) + ((j - size(I, 2) / 2) ^ 2) / ((ellipse_width / 2) ^ 2)) <= 1
+            round((x ^ 2) / (a ^ 2) + (y ^ 2) / (b ^ 2))
             J(i, j, 1) = 255;
             J(i, j, 2) = 0;
             J(i, j, 3) = 0;

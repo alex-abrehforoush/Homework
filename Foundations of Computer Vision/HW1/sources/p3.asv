@@ -1,0 +1,18 @@
+%clearing command window and workspace and closing all open figures
+clc
+clear
+close all
+%reading image data
+I = imread("images\Test_01.ppm");
+%defining variables
+row = 852;
+column = 1282;
+
+
+J = zeros(row, column, 3);
+k = 1;
+for i = 1: row
+    for j = 1: column
+        J(rotatePixel(i, j, degree), 1)
+    end
+end
