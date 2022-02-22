@@ -1,5 +1,5 @@
 %defining function to calculate new coordinates
-function [i_p, j_p] = rotatePixel(row, column, i, j, theta)
+function [i_p, j_p] = rotatePixel(row, column, i, j, degree)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %defining variables
     x0 = 0;
@@ -8,6 +8,7 @@ function [i_p, j_p] = rotatePixel(row, column, i, j, theta)
     y1 = 0;
     x2 = 0;
     y2 = 0;
+    theta = deg2rad(degree);
     %converting to cartesian coordinate
     if i <= row / 2
         y0 = abs(i - row / 2);
@@ -20,8 +21,8 @@ function [i_p, j_p] = rotatePixel(row, column, i, j, theta)
         x0 = abs(j - column / 2);
     end
     %calculating rotated cartesian coordinate
-    x1 = x0 * cosd(theta) - y0 * sind(theta);
-    y1 = x0 * sind(theta) + y0 * cosd(theta);
+    x1 = x0 * cos(theta) - y0 * sin(theta);
+    y1 = x0 * sin(theta) + y0 * cos(theta);
     %converting to pixel coordinate
     x2 = abs(x1);
     y2 = abs(y1);
@@ -35,5 +36,4 @@ function [i_p, j_p] = rotatePixel(row, column, i, j, theta)
     else
         i_p = round(row / 2 + y2);
     end
-
 end
