@@ -2,7 +2,6 @@
 clc
 clear
 close all
-imtool close all
 %opening image file and reading its content
 f = fopen("images/Test_01.ppm");
 file_content = fread(f, "uint8");
