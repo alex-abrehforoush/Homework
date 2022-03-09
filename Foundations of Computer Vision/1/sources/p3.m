@@ -5,6 +5,6 @@ close all
 imtool close all
 %reading image data
 I = imread("images\Test_01.ppm");
-theta = 60;
+theta = 220;
 J = rotateImage(I, theta);
 figure, imshow(J, []);
