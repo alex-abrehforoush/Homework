@@ -1,0 +1,16 @@
+clc
+clear
+close all
+imtool close all
+%%%%%%%%%%%%%%%%
+I = imread("C:\Users\Alireza\Desktop\ccc.jpg");
+J = I(:, :, 1);
+K = zeros(size(J));
+for i = 1: size(J, 1)
+    for j = 1: size(J, 2)
+        if(abs(255 - J(i, j)) >= abs(J(i, j)))
+            K(i, j) = 
+        end
+    end
+end
+figure, imshow(I(:, :, 1), []);

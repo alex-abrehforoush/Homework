@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  10 MAR 2022 11:18
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  10 MAR 2022 15:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1065,19 +1065,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--156
 File: figures/1a.jpg Graphic file (type bmp)
 <figures/1a.jpg>
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 171.
+(Font)              scaled to size 10.79997pt on input line 176.
 
 LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 171.
+(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 176.
 
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 171.
+(Font)              scaled to size 10.79997pt on input line 176.
 [2] (./sources/p1.m
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 (Font)              scaled to size 5.0pt on input line 1.
  [3])
 
-LaTeX Warning: Empty `thebibliography' environment on input line 201.
+LaTeX Warning: Empty `thebibliography' environment on input line 206.
 
 [4] (./main.aux)
 
