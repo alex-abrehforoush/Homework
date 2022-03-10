@@ -22,7 +22,7 @@
 \renewcommand{\baselinestretch}{1.5}
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{تکلیف اول درس مبانی بینایی کامپیوتر}
+\rhead{تکلیف دوم درس مبانی بینایی کامپیوتر}
 \lhead{\thepage}
 \rfoot{علیرضا ابره فروش}
 \lfoot{9816603}
@@ -72,10 +72,96 @@
 
 
 \section{}%1
-ابتدا فایل تصویر را با نرم‌افزار \lr{Notepad} باز می‌کنیم. با توجه به شکل زیر، ابعاد تصویر
-852
-$\times$
-1282 است و همچنین ماکسیممِ سطح روشناییِ هر کانال رنگیِ هر پیکسل 255 است. در نهایت می‌توان حدس زد که دیتای تصویر از کاراکتر هفدهم به بعد باشد.
+ابتدا متغیرهای زیر را تعریف می‌کنیم.
+\newline
+$H$ و $W$: ابعاد تصویر
+\newline
+$I$: تصویر اصلی
+\newline
+$J$: تصویر مورد بررسی
+\newline
+$MAX_{I}$: بزرگ‌ترین سطح روشنایی محتمل در تصویر (مقدار پیش‌فرض 255)
+\newline
+$MIN_{I}$: کوچک‌ترین سطح روشنایی محتمل در تصویر (مقدار پیش‌فرض 0)
+
+\subsection{\lr{MAE}}
+\subsubsection{حداکثر}
+حالتی را تصور می‌کنیم که اختلاف سطح روشنایی هر دو پیکسل متناظر در تصویر حداکثر باشد. بنابراین به ازای هر $i$ و $j$ دامنه، $I(i, j)$ برابر $MAX_{I}$ و $J(i, j)$ برابر $MIN_{J}$ یا بالعکس. پس داریم:
+\newline
+\begin{latin}
+$
+\max(\frac{1}{H.W}\sum_{i=1}^{H}\sum_{j=1}^{W}\left| I(i, j) - J(i, j) \right|)=\frac{1}{H.W}\times H.W\times \left| MAX_{I} - MIN_{J} \right|=\left| MAX_{I} - MIN_{J} \right|
+$
+\end{latin}
+که در حالت پیش‌فرض این مقدار برابر 255 است.
+\subsubsection{حداقل}
+حالتی را تصور می‌کنیم که اختلاف سطح روشنایی هر دو پیکسل متناظر در تصویر حداقل باشد. بنابراین به ازای هر $i$ و $j$ دامنه، $I(i, j)$ برابر $J(i, j)$ است. پس داریم:
+\newline
+\begin{latin}
+$
+\min(\frac{1}{H.W}\sum_{i=1}^{H}\sum_{j=1}^{W}\left| I(i, j) - J(i, j) \right|)=\frac{1}{H.W}\times H.W\times \left| I(i, j) - I(i, j) \right|=0
+$
+\end{latin}
+
+
+\subsection{\lr{MSE}}
+\subsubsection{حداکثر}
+مشابه قسمت قبل، حالتی را تصور می‌کنیم که اختلاف سطح روشنایی هر دو پیکسل متناظر در تصویر حداکثر باشد. بنابراین به ازای هر $i$ و $j$ دامنه، $I(i, j)$ برابر $MAX_{I}$ و $J(i, j)$ برابر $MIN_{J}$ یا بالعکس. پس داریم:
+\newline
+\begin{latin}
+$
+\max(\frac{1}{H.W}\sum_{i=1}^{H}\sum_{j=1}^{W} (I(i, j) - J(i, j))^{2})=\frac{1}{H.W}\times H.W\times (MAX_{I} - MIN_{J})^{2}=(MAX_{I} - MIN_{J})^{2}
+$
+\end{latin}
+که در حالت پیش‌فرض این مقدار برابر 65025 است.
+\subsubsection{حداقل}
+مشابه قسمت قبل، حالتی را تصور می‌کنیم که اختلاف سطح روشنایی هر دو پیکسل متناظر در تصویر حداقل باشد. بنابراین به ازای هر $i$ و $j$ دامنه، $I(i, j)$ برابر $J(i, j)$ است. پس داریم:
+\newline
+\begin{latin}
+$
+\min(\frac{1}{H.W}\sum_{i=1}^{H}\sum_{j=1}^{W} (I(i, j) - J(i, j))^{2})=\frac{1}{H.W}\times H.W\times (I(i, j) - I(i, j))^{2}=0
+$
+\end{latin}
+
+
+\subsection{\lr{PSNR}}
+برای بیشینه (کمینه) کردن تابعِ 
+$
+10\log_{10}(\frac{MAX_{I}^{2}}{MSE})
+$
+کافیست تابعِ
+$
+\frac{MAX_{I}^{2}}{MSE}
+$
+بیشینه (کمینه) کنیم.
+\subsubsection{حداکثر}
+با فرض ناصفر بودن مقدار $MAX_{I}$ داریم:
+\newline
+\begin{latin}
+$
+\max(10\log_{10}(\frac{MAX_{I}^{2}}{MSE}))=\lim_{MSE \to 0 } (10\log_{10}(\frac{MAX_{I}^{2}}{MSE}))=\infty
+$
+\end{latin}
+پس به ازای دو تصویر با \lr{MSE}ِ نزدیک به صفر (دو تصویر تقریبا برابر)، مقدار \lr{PSNR} به بی‌نهایت میل می‌کند.
+\subsubsection{حداقل}
+داریم:
+\newline
+\begin{latin}
+$
+\min(10\log_{10}(\frac{MAX_{I}^{2}}{MSE}))=10\log_{10}(\frac{MAX_{I}^{2}}{(MAX_{I}-MIN_{J})^{2}})
+$
+\end{latin}
+که در حالت پیش‌فرض برابر است با:
+\newline
+\begin{latin}
+$
+10\log_{10}(\frac{255^{2}}{65025})=0
+$
+\end{latin}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/1a.jpg}
@@ -85,87 +171,13 @@ $\times$
 	}
     \label{fig:fig1}
 \end{figure}
-حال تصویر را هم با دستور \lr{fopen} و \lr{fread} و هم با استفاده از دستور \lr{imtool} باز می‌کنیم. اگر به تصاویر زیر دقت کنیم می‌بینیم که حدس ما برای اولین کاراکتر دیتای تصویر درست است و سطح روشنایی اولین پیکسل تصویر در بایت هفدهم این فایل قرار دارد. همچنین با مشاهده خروجی دستور \lr{imtool} و مقایسه با آرایه‌ی نظیر فایل می‌بینیم که سطح روشنایی نظیر رنگ‌های قرمز، سبز و آبی به ترتیب در اندیس‌های مضرب 3 به علاوه‌ی 2، مضرب 3 و مضرب 3 به علاوه‌ی 1 ذخیره شده‌اند.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/1b.jpg}
-    \caption
-	{
-تصویر
-	}
-    \label{fig:fig1}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/1c.jpg}
-    \caption
-	{
-تصویر
-	}
-    \label{fig:fig1}
-\end{figure}
-پس برای خواندن تصویر ورودی در محیط برنامه‌نویسی مورد نظر و دسترسی به داده‌های آن به شکل زیر عمل می‌کنیم.
+
 \begin{latin}
 \lstinputlisting{sources/p1.m}
 \end{latin}
-و در آخر می‌بینیم که خروجی‌ها یکسان هستند.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{figures/1d.jpg}
-    \caption
-	{
-تصویر خروجی سوال 1
-	}
-    \label{fig:fig1}
-\end{figure}
 
 
-\section{}%2
-برای این کار می‌توان ابتدا تصویر را \lr{Grayscale} کرد، سپس ناحیه‌ی بیضی شکل را قرمز کرد و در نهایت ناحیه لوزی شکل را با مقادیر اولیه‌ی تصویر مقداردهی کرد.
-\begin{latin}
-\lstinputlisting{sources/p2.m}
-\end{latin}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{figures/2a.jpg}
-    \caption
-	{
-تصویر خروجی سوال 2
-	}
-    \label{fig:fig1}
-\end{figure}
-
-
-\section{}%3
-ابتدا با استفاده از روابط زیر طول و عرض جدید تصویر را محاسبه می‌کنیم:
-\newline
-$
-h_{new} = \left\lceil \left| w \times sin(\theta) \right| + \left| h \times cos(\theta) \right| \right\rceil
-\newline
-w_{new} = \left\lceil \left| h \times sin(\theta) \right| + \left| w \times cos(\theta) \right| \right\rceil
-\newline
-$
-سپس با استفاده از روابط ماتریس دوران، مختصات پیکسلِ نظیرِ پیکسلِ دوران یافته را پیدا می‌کنیم و مقادیر \lr{RGB}اش را برابر آن پیکسل قرار می‌دهیم. تابع \lr{rotateImage} این کار را انجام می‌دهد.
-
-
-\begin{latin}
-\lstinputlisting{sources/rotateImage.m}
-\end{latin}
-در نهایت تابع را به ازای زاویه‌ی 60 درجه فراخوانی می‌کنیم.
-\begin{latin}
-\lstinputlisting{sources/p3.m}
-\end{latin}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{figures/3a.jpg}
-    \caption
-	{
-نمونه تصویر خروجی سوال 3 برای زاویه‌ی 60 درجه
-	}
-    \label{fig:fig1}
-\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
