@@ -1,0 +1,32 @@
+function J = floydSteinberg(I)
+%FLOYDSTEINBERG Summary of this function goes here
+    J = zeros(size(I));
+    for i = 1: size(I, 1)
+        for j = 1: size(I, 2)
+            old_value = I(i, j, 1);
+            if(255 - I(i, j, 1) < I(i, j, 1))
+                I(i, j, :) = 255;
+            else
+                I(i, j, :) = 0;
+            end
+            remaining = int8(old_value - I(i, j, 1));
+            if(remaining < 0)
+                alpha = 0;
+            end
+            if(j < size(J, 2))
+                I(i, j + 1, :) = I(i, j + 1, :) + (7 / 16) * remaining;
+                if(i < size(J, 1))
+                    I(i + 1, j + 1, :) = I(i + 1, j + 1, :) + (1 / 16) * remaining;
+                end
+            end
+            if(i < size(I, 1))
+                I(i + 1, j, :) = I(i + 1, j, :) + (5 / 16) * remaining;
+                if(j > 1)
+                    I(i + 1, j - 1, :) = I(i + 1, j - 1, :) + (3 / 16) * remaining;
+                end
+            end
+        end
+    end
+    J = I;
+end
+
