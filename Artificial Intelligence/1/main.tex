@@ -1,0 +1,124 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage[font={small,it}]{caption}
+\usepackage{placeins}
+\usepackage{xepersian}
+
+%\DeclareMathOperator*{\btie}{\bowtie}
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف سوم درس شبکه‌های کامپیوتری 2}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+%%%%%%%%%%
+\lstset
+{
+    language=[latex]tex,
+    basicstyle=\ttfamily,
+    commentstyle=\color{black},
+    columns=fullflexible,
+    keepspaces=true,
+    upquote=true,
+    showstringspaces=false,
+    morestring=[s]\\\%,
+    stringstyle=\color{black},
+}
+%%%%%%%%%%
+%beginMatlab
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%endMatlab
+\begin{document}
+%beginMatlab
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%endMatlab
+\input{titlepage}
+
+%\tableofcontents
+\newpage
+
+
+\section{\lr{Mininet}}%1
+\subsection{معرفی}
+\lr{Mininet} یک شبیه‌ساز شبکه است که قادر است شبکه‌ای از \lr{Host}ها، \lr{Switch}ها، \lr{Controller}ها و \lr{Link}ها بسازد. هاست‌های \lr{Mininet} نرم‌افزار شبکه‌ی لینوکس استاندارد را اجرا می‌کنند و سوئیچ‌های آن برای مسیریابیِ انعطاف‌پذیرِ \lr{Custom} از \lr{OpenFlow} پشتیبانی می‌کنند. همچنین \lr{Mininet} جهت تحقیق، توسعه، آموزش، پروتوتایپینگ، تست، دیباگ و یا هر عمل دیگری که در آن از وجود یک شبکه‌ی کاملا آزمایشگاهی بهره‌گیری می‌شود، به کار می‌رود.
+\subsection{قابلیت‌ها و توانایی‌ها}
+\begin{itemize}
+    \item [$\bullet$] \lr{Mininet} یک بستر شبکه‌ی ساده و ارزان جهت توسعه‌ی اپلیکیشن‌های \lr{OpenFlow} ارائه می‌دهد.
+    \item [$\bullet$] \lr{Mininet} به توسعه‌دهندگان امکان این را می‌دهد که به صورت موازی و مستقل بر روی یک توپولوژی یکسان کار کنند.
+    \item [$\bullet$] \lr{Mininet} از \lr{system-level regression tests} که قابلیت تکرار و بسته‌بندی ساده را دارند پشتیبانی می‌کند.
+    \item [$\bullet$] \lr{Mininet} امکان تست توپولوژی‌های پیچیده بدون نیاز به سیم‌کشی فیزیکی شبکه را می‌دهد.
+    \item [$\bullet$] \lr{Mininet} دارای یک \lr{CLI}ِ خاص است که با توپولوژی و \lr{OpenFlow} آشنایی دارد و برای دیباگ یا اجرای تست‌های سرتاسری شبکه مناسب است.
+    \item [$\bullet$] \lr{Mininet} از \lr{arbitrary custom topologies} پشتیبانی می‌کند و دارای مجموعه‌ای پایه از توپولوژی‌های \lr{parametrized} است.
+    \item [$\bullet$] \lr{Mininet} قابل استفاده بدون نیاز به برنامه‌نویسی و به صورت \lr{out of the box} است درحالی که یک اِی‌پی‌آیِ روان و قابل توسعه در بستر پایتون برای ساخت شبکه و آزمایش آن ارائه می‌دهد.
+
+\end{itemize}
+
+\subsection{نحوه‌ی نصب}
+جهت نصب این نرم‌افزار در لینوکس به ترتیب زیر عمل می‌کنیم:
+\newline
+ابتدا گیت را نصب می‌کنیم و سپس مخزن شامل نرم‌افزار در گیت‌هاب را کلون می‌کنیم.
+\begin{latin}
+\$ sudo apt install git
+\newline
+\$ sudo git clone https://github.com/mininet/mininet
+\end{latin}
+سپس وارد پوشه‌ی \lr{mininet/util} شده و به ترتیب زیر نرم‌افزار را نصب می‌کنیم.
+\begin{latin}
+\$ ./install.sh -a
+\newline
+\$ sudo mn --test pingall
+\end{latin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1} http://mininet.org/overview/
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}

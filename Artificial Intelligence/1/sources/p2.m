@@ -2,12 +2,11 @@
 clc
 clear
 close all
-imtool close all
 %reading image data
 I = imread("images\Test_01.ppm");
 %defining variables
-row = size(I, 1);
-column = size(I, 2);
+row = 852;
+column = 1282;
 ellipse_height = 800;
 ellipse_width = 400;
 rhombus_height = 400;

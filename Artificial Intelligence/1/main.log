@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  10 MAR 2022 16:49
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  5 MAR 2022 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1017,83 +1017,40 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
 (Font)              scaled to size 17.27994pt on input line 74.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 (Font)              scaled to size 17.27994pt on input line 74.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 87.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 14.39996pt on input line 87.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 87.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 88.
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
-[][]
- []
-
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 91.
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--111
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--120
-[][]
- []
-
-[1]
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--149
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--156
-[][]
- []
-
-File: figures/1a.jpg Graphic file (type bmp)
-<figures/1a.jpg>
+(Font)              scaled to size 14.4pt on input line 74.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 184.
-
-LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 184.
-
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 184.
-[2] (./sources/p1.m
+(Font)              scaled to size 14.39996pt on input line 75.
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
+(Font)              scaled to size 14.39996pt on input line 75.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 1.
- [3])
-
-LaTeX Warning: Empty `thebibliography' environment on input line 214.
-
-[4] (./main.aux)
+(Font)              scaled to size 10.0pt on input line 76.
+ [1] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17988 strings out of 476919
- 364877 string characters out of 5825424
- 1343854 words of memory out of 5000000
- 37676 multiletter control sequences out of 15000+600000
- 404156 words of font info for 63 fonts, out of 8000000 for 9000
+ 17277 strings out of 476919
+ 356796 string characters out of 5825424
+ 1211811 words of memory out of 5000000
+ 36976 multiletter control sequences out of 15000+600000
+ 404132 words of font info for 60 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 97i,12n,122p,1290b,2197s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 97i,11n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (5 pages).
+Output written on main.pdf (2 pages).
