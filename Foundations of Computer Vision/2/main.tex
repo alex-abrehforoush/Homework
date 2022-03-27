@@ -172,22 +172,46 @@ $
 
 
 \section{}%3
-\subsection{}
+\subsection{الف}
+\begin{latin}
+\lstinputlisting{sources/p3a.m}
+\end{latin}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{ب}
+\begin{latin}
+\lstinputlisting{sources/p3b.m}
+\end{latin}
+
+\subsection{ج}
+\begin{latin}
+\lstinputlisting{sources/p3c.m}
+\end{latin}
+با مقایسه‌ی \lr{PSNR} در دو تصویر تولید شده در قسمت‌های قبل درمی‌یابیم که بهتر بودن \lr{PSNR}ِ یک تصویر نسبت به تصویر دیگر الزاما به معنی بهتر بودن کیفیت بصری آن تصویر نیست. همانطور که می‌بینیم، تصویر تولید شده توسط الگوریتم \lr{Floyd-Steinberg} با وجود داشتن \lr{PSNR}ِ پایین‌تر نسبت به تصویر تولید شده توسط الگوریتم حریصانه (تابع \lr{toBlackWhite}) جزئیات تصویر را بهتر مشخص می‌کند و کیفیت بصری بهتری دارد. پس نتیجه می‌گیریم که \lr{PSNR} در همه جا معیار دقیقی برای مقایسه‌ی کیفیت تصاویر نیست.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figures/1a.jpg}
+    \includegraphics[width=0.25\textwidth]{figures/3c1.jpg}
     \caption
 	{
-تصویر
+خروجی الگوریتم \lr{Floyd-Steinberg}
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/3c2.jpg}
+    \caption
+	{
+خروجی الگوریتم حریصانه
 	}
     \label{fig:fig1}
 \end{figure}
 
-\begin{latin}
-\lstinputlisting{sources/p1.m}
-\end{latin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\begin{latin}
+%\lstinputlisting{sources/p1.m}
+%\end{latin}
 
 
 

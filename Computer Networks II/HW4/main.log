@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  26 MAR 2022 20:04
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  20 MAR 2022 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1021,73 +1021,33 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 (Font)              scaled to size 17.27994pt on input line 74.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 87.
+(Font)              scaled to size 14.39996pt on input line 75.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 14.39996pt on input line 87.
+(Font)              scaled to size 14.39996pt on input line 75.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 87.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 88.
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
-[][]
- []
-
+(Font)              scaled to size 12.0pt on input line 75.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 91.
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--111
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--120
-[][]
- []
-
-[1]
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--149
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--156
-[][]
- []
-
-(./sources/p3a.m
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 1.
- [2]) (./sources/p3b.m) (./sources/p3c.m [3])
-File: figures/3c1.jpg Graphic file (type bmp)
-<figures/3c1.jpg>
+(Font)              scaled to size 10.0pt on input line 76.
+File: figures/a.jpg Graphic file (type bmp)
+<figures/a.jpg>
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 196.
+(Font)              scaled to size 10.79997pt on input line 98.
 
 
 LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 196.
+(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 98.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 196.
+(Font)              scaled to size 9.0pt on input line 98.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 196.
-File: figures/3c2.jpg Graphic file (type bmp)
-<figures/3c2.jpg>
+(Font)              scaled to size 10.79997pt on input line 98.
+File: figures/b.jpg Graphic file (type bmp)
+<figures/b.jpg>
+[1] [2]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 238.
+LaTeX Warning: Empty `thebibliography' environment on input line 137.
 
-[4] (./main.aux)
+[3] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1099,12 +1059,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17986 strings out of 476919
- 365052 string characters out of 5825424
- 1300893 words of memory out of 5000000
- 37666 multiletter control sequences out of 15000+600000
- 404164 words of font info for 64 fonts, out of 8000000 for 9000
+ 17304 strings out of 476919
+ 357332 string characters out of 5825424
+ 1206894 words of memory out of 5000000
+ 36998 multiletter control sequences out of 15000+600000
+ 404148 words of font info for 62 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 97i,12n,122p,1290b,2197s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 97i,11n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (5 pages).
+Output written on main.pdf (4 pages).
