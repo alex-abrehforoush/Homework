@@ -144,20 +144,16 @@ $
 \end{latin}
 پس به ازای دو تصویر با \lr{MSE}ِ نزدیک به صفر (دو تصویر تقریبا برابر)، مقدار \lr{PSNR} به بی‌نهایت میل می‌کند.
 \subsubsection{حداقل}
-داریم:
+اگر $I$ تصویر تمام سیاه ($MAX_{I}$ ناچیز باشد)، و $J$ تصویر غیر تمام سیاه باشد، آنگاه چون
+$MAX_{I}$
+تقریبا صفر است داریم:
 \newline
 \begin{latin}
 $
-\min(10\log_{10}(\frac{MAX_{I}^{2}}{MSE}))=10\log_{10}(\frac{MAX_{I}^{2}}{(MAX_{I}-MIN_{J})^{2}})
+\min(10\log_{10}(\frac{MAX_{I}^{2}}{MSE}))=\lim_{MAX_{I} \to 0 } (10\log_{10}(\frac{MAX_{I}^{2}}{MSE}))=-\infty
 $
 \end{latin}
-که در حالت پیش‌فرض برابر است با:
-\newline
-\begin{latin}
-$
-10\log_{10}(\frac{255^{2}}{65025})=0
-$
-\end{latin}
+
 
 
 
@@ -173,11 +169,21 @@ $
 
 \section{}%3
 \subsection{الف}
+\subsubsection{\lr{Function}}
+\begin{latin}
+\lstinputlisting{sources/toBlackWhite.m}
+\end{latin}
+\subsubsection{\lr{Driver code}}
 \begin{latin}
 \lstinputlisting{sources/p3a.m}
 \end{latin}
 
 \subsection{ب}
+\subsubsection{\lr{Function}}
+\begin{latin}
+\lstinputlisting{sources/floydSteinberg.m}
+\end{latin}
+\subsubsection{\lr{Driver code}}
 \begin{latin}
 \lstinputlisting{sources/p3b.m}
 \end{latin}
@@ -206,6 +212,45 @@ $
     \label{fig:fig1}
 \end{figure}
 
+
+\section{}%4
+\subsection{\lr{Function}}
+\begin{latin}
+\lstinputlisting{sources/My_Imresize_BL.m}
+\end{latin}
+\subsection{\lr{Driver code}}
+\begin{latin}
+\lstinputlisting{sources/p4.m}
+\end{latin}
+
+
+\section{}%5
+بتسم
+
+
+\section{}%6
+\subsection{الف}
+\subsubsection{\lr{Function}}
+\begin{latin}
+\lstinputlisting{sources/myHist.m}
+\end{latin}
+\subsubsection{\lr{Driver code}}
+\begin{latin}
+\lstinputlisting{sources/p6a.m}
+\end{latin}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/p6a.jpg}
+    \caption
+	{
+هیستوگرام تصویر \lr{Image.tif}
+	}
+    \label{fig:fig1}
+\end{figure}
+
+
+\subsection{ب}
+همانطور که در بخش قبل دیدیم، سطح روشنایی‌های صفر و نزدیک به صفر بیشتر پیکسل‌های این تصویر را تشکیل داده‌اند. اما سطح روشنایی‌های بزرگ‌تر و نزدیک به 255 هم 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

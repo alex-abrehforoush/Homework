@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  27 MAR 2022 22:13
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  9 MAR 2022 10:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -182,6 +182,18 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks24
 \@floatcapt=\box53
 )
+(c:/texlive/2021/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box54
+\beforetitleunit=\skip63
+\aftertitleunit=\skip64
+\ttl@plus=\dimen154
+\ttl@minus=\dimen155
+\ttl@toksa=\toks25
+\titlewidth=\dimen156
+\titlewidthlast=\dimen157
+\titlewidthfirst=\dimen158
+)
 (c:/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
 
@@ -265,14 +277,14 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@sectionciteorder@0=\count312
 \blx@entrysetcounter=\count313
 \blx@biblioinstance=\count314
-\labelnumberwidth=\skip63
-\labelalphawidth=\skip64
-\biblabelsep=\skip65
-\bibitemsep=\skip66
-\bibnamesep=\skip67
-\bibinitsep=\skip68
-\bibparsep=\skip69
-\bibhang=\skip70
+\labelnumberwidth=\skip65
+\labelalphawidth=\skip66
+\biblabelsep=\skip67
+\bibitemsep=\skip68
+\bibnamesep=\skip69
+\bibinitsep=\skip70
+\bibparsep=\skip71
+\bibhang=\skip72
 \blx@bcfin=\read2
 \blx@bcfout=\write3
 \blx@langwohyphens=\language87
@@ -355,20 +367,20 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedoriglanguage=\count383
 \c@pageref=\count384
 \c@savedpageref=\count385
-\shorthandwidth=\skip71
-\shortjournalwidth=\skip72
-\shortserieswidth=\skip73
-\shorttitlewidth=\skip74
-\shortauthorwidth=\skip75
-\shorteditorwidth=\skip76
-\locallabelnumberwidth=\skip77
-\locallabelalphawidth=\skip78
-\localshorthandwidth=\skip79
-\localshortjournalwidth=\skip80
-\localshortserieswidth=\skip81
-\localshorttitlewidth=\skip82
-\localshortauthorwidth=\skip83
-\localshorteditorwidth=\skip84
+\shorthandwidth=\skip73
+\shortjournalwidth=\skip74
+\shortserieswidth=\skip75
+\shorttitlewidth=\skip76
+\shortauthorwidth=\skip77
+\shorteditorwidth=\skip78
+\locallabelnumberwidth=\skip79
+\locallabelalphawidth=\skip80
+\localshorthandwidth=\skip81
+\localshortjournalwidth=\skip82
+\localshortserieswidth=\skip83
+\localshorttitlewidth=\skip84
+\localshortauthorwidth=\skip85
+\localshorteditorwidth=\skip86
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -443,28 +455,28 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@cnth=\count397
 \Gm@cntv=\count398
 \c@Gm@tempcnt=\count399
-\Gm@bindingoffset=\dimen154
-\Gm@wd@mp=\dimen155
-\Gm@odd@mp=\dimen156
-\Gm@even@mp=\dimen157
-\Gm@layoutwidth=\dimen158
-\Gm@layoutheight=\dimen159
-\Gm@layouthoffset=\dimen160
-\Gm@layoutvoffset=\dimen161
-\Gm@dimlist=\toks25
+\Gm@bindingoffset=\dimen159
+\Gm@wd@mp=\dimen160
+\Gm@odd@mp=\dimen161
+\Gm@even@mp=\dimen162
+\Gm@layoutwidth=\dimen163
+\Gm@layoutheight=\dimen164
+\Gm@layouthoffset=\dimen165
+\Gm@layoutvoffset=\dimen166
+\Gm@dimlist=\toks26
 )
 (c:/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
 (c:/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen162
-\captionmargin@=\dimen163
-\captionwidth=\dimen164
-\caption@tempdima=\dimen165
-\caption@indent=\dimen166
-\caption@parindent=\dimen167
-\caption@hangindent=\dimen168
+\captionmargin=\dimen167
+\captionmargin@=\dimen168
+\captionwidth=\dimen169
+\caption@tempdima=\dimen170
+\caption@indent=\dimen171
+\caption@parindent=\dimen172
+\caption@hangindent=\dimen173
 Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count400
@@ -492,7 +504,7 @@ File: l3backend-xetex.def 2021-03-18 L3 backend support: XeTeX
 \l__color_backend_stack_int=\count403
 \g__color_backend_stack_int=\count404
 \g__graphics_track_int=\count405
-\l__pdf_internal_box=\box54
+\l__pdf_internal_box=\box55
 \g__pdf_backend_object_int=\count406
 \g__pdf_backend_annotation_int=\count407
 \g__pdf_backend_link_int=\count408
@@ -515,9 +527,9 @@ X
 \l__fontspec_emdef_int=\count417
 \l__fontspec_strong_int=\count418
 \l__fontspec_strongdef_int=\count419
-\l__fontspec_tmpa_dim=\dimen169
-\l__fontspec_tmpb_dim=\dimen170
-\l__fontspec_tmpc_dim=\dimen171
+\l__fontspec_tmpa_dim=\dimen174
+\l__fontspec_tmpb_dim=\dimen175
+\l__fontspec_tmpc_dim=\dimen176
 
 (c:/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
@@ -597,22 +609,22 @@ Package: bidi 2020/05/17 v36.3 Bidirectional typesetting in plain TeX and LaTeX
 ****************************************************
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/biditools.sty
 Package: biditools 2020/05/13 v2 Programming tools for bidi package
-\@bidi@envbody=\toks26
-\@bidi@emptytoks=\toks27
+\@bidi@envbody=\toks27
+\@bidi@emptytoks=\toks28
 \bidi@poscount=\count457
 
 
 Package biditools Warning: Patching `\enddocument' failed on input line 916.
 
 \bidi@tempcountb=\count458
-\bidi@temptoksa=\toks28
-\bidi@temptoksb=\toks29
+\bidi@temptoksa=\toks29
+\bidi@temptoksb=\toks30
 \bidi@dummies=\count459
-\bidi@are@these@correct=\toks30
-\bidi@toks@lista=\toks31
-\bidi@toks@listb=\toks32
+\bidi@are@these@correct=\toks31
+\bidi@toks@lista=\toks32
+\bidi@toks@listb=\toks33
 \bidi@stack@length=\count460
-\bidi@empty@stack=\toks33
+\bidi@empty@stack=\toks34
 \bidi@looprepeat@depth=\count461
 ) (c:/texlive/2021/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
@@ -646,8 +658,8 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 
 (c:/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (c:/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks34
-\XKV@tempa@toks=\toks35
+\XKV@toks=\toks35
+\XKV@tempa@toks=\toks36
 )
 \XKV@depth=\count463
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
@@ -657,14 +669,14 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/latex-xetex-bidi.def
 File: latex-xetex-bidi.def 2019/03/03 v1.3.7 bidi adaptations for `latex.ltx' f
 or XeTeX engine
-\bidi@n@everypar=\toks36
+\bidi@n@everypar=\toks37
 \bidi@column@check@number=\count464
 
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/footnote-xetex-bidi.def
 File: footnote-xetex-bidi.def 2017/08/09 v1.1 bidi footnote macros for XeTeX en
 gine
 \c@footdir@label=\count465
-\footdir@toks=\toks37
+\footdir@toks=\toks38
 )
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/article-xetex-bidi.def
 File: article-xetex-bidi.def 2017/06/09 v0.6 bidi adaptations for standard arti
@@ -717,6 +729,10 @@ kage for XeTeX engine
 File: listings-xetex-bidi.def 2018/09/15 v1.5 bidi adaptations for listings pac
 kage for XeTeX engine
 )
+(c:/texlive/2021/texmf-dist/tex/xelatex/bidi/titlesec-xetex-bidi.def
+File: titlesec-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for titlesec pac
+kage for XeTeX engine
+)
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/rotating-xetex-bidi.def
 File: rotating-xetex-bidi.def 2013/05/22 v0.2 bidi adaptations for rotating pac
 kage for XeTeX engine
@@ -753,8 +769,8 @@ File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the
 * 
 ****************************************************
 \xepersian@tcl=\count467
-\xepersian@ilg=\dimen172
-\xepersian@strutilg=\dimen173
+\xepersian@ilg=\dimen177
+\xepersian@strutilg=\dimen178
 (c:/texlive/2021/texmf-dist/tex/xelatex/xepersian/loadingorder-xepersian.def
 File: loadingorder-xepersian.def 2018/09/29 v0.5 making sure that xepersian is 
 the last package loaded
@@ -834,7 +850,7 @@ mapping=persian-tex-text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 11.99997pt on input line 21.
+(Font)              scaled to size 11.99997pt on input line 22.
 
 Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 (fontspec)             New Roman' with options [Ligatures=TeX,Scale=1].
@@ -869,7 +885,7 @@ ext;"
 (fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
 text;"
 
-LaTeX Info: Redefining \latinfont on input line 22.
+LaTeX Info: Redefining \latinfont on input line 23.
 
 (c:/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -910,30 +926,90 @@ LaTeX Warning: Label `fig:fig1' multiply defined.
 
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `b1' multiply defined.
+
+
+LaTeX Warning: Label `b1' multiply defined.
+
+
+LaTeX Warning: Label `b1' multiply defined.
+
+
+LaTeX Warning: Label `b1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
-9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
+0.
  (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
 \c@lstlisting=\count470
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -960,8 +1036,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' not found.
 
 No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 49.
-Package biblatex Info: Reference segment=0 on input line 49.
+Package biblatex Info: Reference section=0 on input line 50.
+Package biblatex Info: Reference segment=0 on input line 50.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1020,80 +1096,95 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 
 ])
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 17.27994pt on input line 74.
+(Font)              scaled to size 17.27994pt on input line 75.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 17.27994pt on input line 74.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 87.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 14.39996pt on input line 87.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 87.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 88.
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
-[][]
- []
-
+(Font)              scaled to size 17.27994pt on input line 75.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 91.
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--111
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--120
-[][]
- []
-
-[1]
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--151
-[][]
- []
-
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 172.
-(./sources/toBlackWhite.m
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 1.
- [2]) (./sources/p3a.m) (./sources/floydSteinberg.m
-[3]) (./sources/p3b.m [4]) (./sources/p3c.m)
-File: figures/3c1.jpg Graphic file (type bmp)
-<figures/3c1.jpg>
+(Font)              scaled to size 10.0pt on input line 79.
+File: figures/2a.jpg Graphic file (type bmp)
+<figures/2a.jpg>
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 202.
+(Font)              scaled to size 10.79997pt on input line 103.
 
 
 LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 202.
+(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 103.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 202.
+(Font)              scaled to size 9.0pt on input line 103.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 202.
-File: figures/3c2.jpg Graphic file (type bmp)
-<figures/3c2.jpg>
-[5] (./sources/My_Imresize_BL.m [6] [7]) (./sources/p4.m) (./sources/myHist.m
-[8]) (./sources/p6a.m)
-File: figures/p6a.jpg Graphic file (type bmp)
-<figures/p6a.jpg>
+(Font)              scaled to size 10.79997pt on input line 103.
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
+(Font)              scaled to size 14.39996pt on input line 107.
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
+(Font)              scaled to size 14.39996pt on input line 107.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 107.
+File: figures/2b.jpg Graphic file (type bmp)
+<figures/2b.jpg>
+[1]
+File: figures/2c.jpg Graphic file (type bmp)
+<figures/2c.jpg>
+File: figures/2d.jpg Graphic file (type bmp)
+<figures/2d.jpg>
+ [2]
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
+(Font)              scaled to size 11.99997pt on input line 159.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 159.
 
+Underfull \hbox (badness 10000) in paragraph at lines 160--164
+[][]
+ []
 
-LaTeX Warning: Empty `thebibliography' environment on input line 283.
+[3]
+File: figures/3a.jpg Graphic file (type bmp)
+<figures/3a.jpg>
 
-[9] (./main.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 201--205
+[][]
+ []
+
+[4]
+File: figures/3b.jpg Graphic file (type bmp)
+<figures/3b.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--234
+[][]
+ []
+
+File: figures/3c.jpg Graphic file (type bmp)
+<figures/3c.jpg>
+[5]
+File: figures/3d.jpg Graphic file (type bmp)
+<figures/3d.jpg>
+File: figures/3d1.jpg Graphic file (type bmp)
+<figures/3d1.jpg>
+File: figures/3d2.jpg Graphic file (type bmp)
+<figures/3d2.jpg>
+File: figures/3d3.jpg Graphic file (type bmp)
+<figures/3d3.jpg>
+ [6]
+File: figures/3e.jpg Graphic file (type bmp)
+<figures/3e.jpg>
+File: figures/3e1.jpg Graphic file (type bmp)
+<figures/3e1.jpg>
+ [7]
+File: figures/3e2.jpg Graphic file (type bmp)
+<figures/3e2.jpg>
+File: figures/3e3.jpg Graphic file (type bmp)
+<figures/3e3.jpg>
+ [8]
+File: figures/3f.jpg Graphic file (type bmp)
+<figures/3f.jpg>
+File: figures/3f1.jpg Graphic file (type bmp)
+<figures/3f1.jpg>
+File: figures/3f2.jpg Graphic file (type bmp)
+<figures/3f2.jpg>
+ [9]
+File: figures/3f3.jpg Graphic file (type bmp)
+<figures/3f3.jpg>
+ [10] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1105,12 +1196,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18144 strings out of 476919
- 367186 string characters out of 5825424
- 1508892 words of memory out of 5000000
- 37805 multiletter control sequences out of 15000+600000
- 404172 words of font info for 65 fonts, out of 8000000 for 9000
+ 17702 strings out of 476919
+ 362928 string characters out of 5825424
+ 1221796 words of memory out of 5000000
+ 37371 multiletter control sequences out of 15000+600000
+ 404156 words of font info for 63 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 97i,12n,122p,1290b,2197s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 97i,12n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (10 pages).
+Output written on main.pdf (11 pages).
