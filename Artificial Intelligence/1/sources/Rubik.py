@@ -11,32 +11,34 @@ def calcValue(cube):
 
 def getNeighbors(cube):
 	neighbor = np.zeros((12, 6, 9), dtype = int)
-	neighbor[0] = front(cube)
-	neighbor[1] = anti_front(cube)
-	neighbor[2] = back(cube)
-	neighbor[3] = anti_back(cube)
-	neighbor[4] = right(cube)
-	neighbor[5] = anti_right(cube)
-	neighbor[6] = left(cube)
-	neighbor[7] = anti_left(cube)
-	neighbor[8] = up(cube)
-	neighbor[9] = anti_up(cube)
-	neighbor[10] = down(cube)
-	neighbor[11] = anti_down(cube)
+	neighbor[0] = front(cube.copy())
+	neighbor[1] = anti_front(cube.copy())
+	neighbor[2] = back(cube.copy())
+	neighbor[3] = anti_back(cube.copy())
+	neighbor[4] = right(cube.copy())
+	neighbor[5] = anti_right(cube.copy())
+	neighbor[6] = left(cube.copy())
+	neighbor[7] = anti_left(cube.copy())
+	neighbor[8] = up(cube.copy())
+	neighbor[9] = anti_up(cube.copy())
+	neighbor[10] = down(cube.copy())
+	neighbor[11] = anti_down(cube.copy())
 	
 	return neighbor
 
 def decide(cube, neighbors):
 	#neighbors = getNeighbors(cube)
-	current_value = calcValue(cube)
+	initial_value = calcValue(cube)
 	value_of_neighbors = np.zeros((12), dtype = int)
 	result = 0
 	index_of_max = 0
+	current_value = 0
 	for i in range(12):
 		value_of_neighbors[i] = calcValue(neighbors[i])
 		if value_of_neighbors[i] > current_value:
+			current_value = value_of_neighbors[i]
 			index_of_max = i
-	if np.amax(value_of_neighbors) > current_value:
+	if np.amax(value_of_neighbors) > initial_value:
 		result = index_of_max
 	else:
 		sum_of_values = np.sum(value_of_neighbors)
@@ -53,7 +55,7 @@ def decide(cube, neighbors):
 
 
 def rotate(cube, i):
-	new_cube = cube
+	new_cube = cube.copy()
 	new_cube[i][0] = cube[i][6]
 	new_cube[i][1] = cube[i][3]
 	new_cube[i][2] = cube[i][0]
@@ -66,7 +68,7 @@ def rotate(cube, i):
 	return new_cube
 
 def anti_rotate(cube, i):
-	new_cube = cube
+	new_cube = cube.copy()
 	new_cube[i][0] = cube[i][2]
 	new_cube[i][1] = cube[i][5]
 	new_cube[i][2] = cube[i][8]
@@ -81,7 +83,7 @@ def anti_rotate(cube, i):
 
 #define moves
 def front(cube):
-	new_cube = cube
+	new_cube = cube.copy()
 	#white
 	new_cube[0][6] = cube[1][8]
 	new_cube[0][7] = cube[1][5]
@@ -105,7 +107,7 @@ def front(cube):
 	return new_cube
 
 def anti_front(cube):
-	new_cube = cube
+	new_cube = cube.copy()
 	#white
 	new_cube[0][6] = cube[3][0]
 	new_cube[0][7] = cube[3][3]
@@ -129,7 +131,7 @@ def anti_front(cube):
 	return new_cube
 
 def back(cube):
-	new_cube = cube
+	new_cube = cube.copy()
 	#white
 	new_cube[0][0] = cube[3][2]
 	new_cube[0][1] = cube[3][5]
@@ -153,7 +155,7 @@ def back(cube):
 	return new_cube
 
 def anti_back(cube):
-	new_cube = cube
+	new_cube = cube.copy()
 	#white
 	new_cube[0][0] = cube[1][6]
 	new_cube[0][1] = cube[1][3]
@@ -177,7 +179,7 @@ def anti_back(cube):
 	return new_cube
 
 def right(cube):
-	new_cube = cube
+	new_cube = cube.copy()
 	#white
 	new_cube[0][2] = cube[2][2]
 	new_cube[0][5] = cube[2][5]
@@ -201,7 +203,7 @@ def right(cube):
 	return new_cube
 
 def anti_right(cube):
-	new_cube = cube
+	new_cube = cube.copy()
 	#white
 	new_cube[0][2] = cube[4][6]
 	new_cube[0][5] = cube[4][3]
@@ -225,7 +227,7 @@ def anti_right(cube):
 	return new_cube
 
 def left(cube):
-	new_cube = cube
+	new_cube = cube.copy()
 	#white
 	new_cube[0][0] = cube[4][8]
 	new_cube[0][3] = cube[4][5]
@@ -249,7 +251,7 @@ def left(cube):
 	return new_cube
 
 def anti_left(cube):
-	new_cube = cube
+	new_cube = cube.copy()
 	#white
 	new_cube[0][0] = cube[2][0]
 	new_cube[0][3] = cube[2][3]
@@ -273,7 +275,7 @@ def anti_left(cube):
 	return new_cube
 
 def up(cube):
-	new_cube = cube
+	new_cube = cube.copy()
 	#white
 	new_cube = rotate(new_cube, 0)
 	#green
@@ -297,7 +299,7 @@ def up(cube):
 	return new_cube
 
 def anti_up(cube):
-	new_cube = cube
+	new_cube = cube.copy()
 	#white
 	new_cube = anti_rotate(new_cube, 0)
 	#green
@@ -321,7 +323,7 @@ def anti_up(cube):
 	return new_cube
 
 def down(cube):
-	new_cube = cube
+	new_cube = cube.copy()
 	#white
 	#green
 	new_cube[1][6] = cube[4][6]
@@ -345,7 +347,7 @@ def down(cube):
 	return new_cube
 
 def anti_down(cube):
-	new_cube = cube
+	new_cube = cube.copy()
 	#white
 	#green
 	new_cube[1][6] = cube[2][6]
@@ -385,8 +387,8 @@ def main():
 	#print(rubik_cube)
 	solution = ""
 	while calcValue(rubik_cube) < 54:
-		neighbors = getNeighbors(rubik_cube)
-		target_neighbor_index = decide(rubik_cube, neighbors)
+		neighbors = getNeighbors(rubik_cube.copy())
+		target_neighbor_index = decide(rubik_cube.copy(), neighbors.copy())
 		rubik_cube = neighbors[target_neighbor_index]
 		solution += moves[target_neighbor_index] + " "
 	print(solution)
