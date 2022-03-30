@@ -1,59 +1,9 @@
 import numpy as np
 import random as rnd
+import math
+from matplotlib import pyplot as plt
 
-def calcValue(cube):
-	value = 0.0
-	for i in range(6):
-		for j in range(9):
-			if (cube[i][j] == i):
-				value += 1
-	return value
-
-def getNeighbors(cube):
-	neighbor = np.zeros((12, 6, 9), dtype = int)
-	neighbor[0] = front(cube.copy())
-	neighbor[1] = anti_front(cube.copy())
-	neighbor[2] = back(cube.copy())
-	neighbor[3] = anti_back(cube.copy())
-	neighbor[4] = right(cube.copy())
-	neighbor[5] = anti_right(cube.copy())
-	neighbor[6] = left(cube.copy())
-	neighbor[7] = anti_left(cube.copy())
-	neighbor[8] = up(cube.copy())
-	neighbor[9] = anti_up(cube.copy())
-	neighbor[10] = down(cube.copy())
-	neighbor[11] = anti_down(cube.copy())
-	
-	return neighbor
-
-def decide(cube, neighbors):
-	#neighbors = getNeighbors(cube)
-	initial_value = calcValue(cube)
-	value_of_neighbors = np.zeros((12), dtype = int)
-	result = 0
-	index_of_max = 0
-	current_value = 0
-	for i in range(12):
-		value_of_neighbors[i] = calcValue(neighbors[i])
-		if value_of_neighbors[i] > current_value:
-			current_value = value_of_neighbors[i]
-			index_of_max = i
-	if np.amax(value_of_neighbors) > initial_value:
-		result = index_of_max
-	else:
-		sum_of_values = np.sum(value_of_neighbors)
-		random_choice = rnd.random()
-		for i in range(12):
-			lower_bound = np.sum(value_of_neighbors[0: i]) / sum_of_values
-			upper_bound = np.sum(value_of_neighbors[0: i + 1]) / sum_of_values
-			if random_choice >= lower_bound and random_choice < upper_bound:
-				result = i
-				break
-	return result
-
-
-
-
+#define moves
 def rotate(cube, i):
 	new_cube = cube.copy()
 	new_cube[i][0] = cube[i][6]
@@ -81,7 +31,7 @@ def anti_rotate(cube, i):
 	return new_cube
 
 
-#define moves
+
 def front(cube):
 	new_cube = cube.copy()
 	#white
@@ -370,8 +320,62 @@ def anti_down(cube):
 
 	return new_cube
 
+
+
+def calcValue(cube):
+	value = 0.0
+	for i in range(6):
+		for j in range(9):
+			if (cube[i][j] == i):
+				value += 1
+	return value
+
+def getNeighbors(cube):
+	neighbor = np.zeros((12, 6, 9), dtype = int)
+	neighbor[0] = front(cube.copy())
+	neighbor[1] = anti_front(cube.copy())
+	neighbor[2] = back(cube.copy())
+	neighbor[3] = anti_back(cube.copy())
+	neighbor[4] = right(cube.copy())
+	neighbor[5] = anti_right(cube.copy())
+	neighbor[6] = left(cube.copy())
+	neighbor[7] = anti_left(cube.copy())
+	neighbor[8] = up(cube.copy())
+	neighbor[9] = anti_up(cube.copy())
+	neighbor[10] = down(cube.copy())
+	neighbor[11] = anti_down(cube.copy())
+	
+	return neighbor
+
+def schedule(t):
+	return 1 / t
+
+
+#make decision approach 2:
+def simulatedAnealing(cube, neighbors):
+	initial_value = calcValue(cube)
+	value_of_neighbors = np.zeros((12), dtype = int)
+	result = -1
+	i = rnd.randint(0, 11)
+	value_of_neighbors[i] = calcValue(neighbors[i])
+	delta = value_of_neighbors[i] - initial_value
+	prob = np.exp(delta / schedule(my_timer))
+	if delta > 0:
+		result = i
+	else:
+		random_choice = rnd.random()
+		if (random_choice < prob):
+			result = i
+	return result
+		
+	
+
+
+
+
 ##########################################################
 def main():
+	global my_timer
 	moves = ["F", "F'", "B", "B'", "R", "R'", "L", "L'", "U", "U'", "D", "D'"]
 	rubik_cube = np.zeros((6, 9), dtype = int)
 	for i in range(6):
@@ -386,11 +390,26 @@ def main():
 			input()
 	#print(rubik_cube)
 	solution = ""
-	while calcValue(rubik_cube) < 54:
+	p_counter = 0
+	p_x = []
+	p_y = []
+	while calcValue(rubik_cube) < 54 and p_counter < 50000:
+		p_counter += 1
+		my_timer += 1
 		neighbors = getNeighbors(rubik_cube.copy())
-		target_neighbor_index = decide(rubik_cube.copy(), neighbors.copy())
-		rubik_cube = neighbors[target_neighbor_index]
-		solution += moves[target_neighbor_index] + " "
+		target_neighbor_index = simulatedAnealing(rubik_cube.copy(), neighbors.copy())
+		p_x.append(p_counter)
+		p_y.append(calcValue(rubik_cube))
+		if target_neighbor_index < 0:
+			continue
+		else:
+			rubik_cube = neighbors[target_neighbor_index]
+			solution += moves[target_neighbor_index] + " "
+		
+	plt.plot(p_x, p_y)
+	plt.show()
 	print(solution)
 
+##################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+my_timer = 1
 main()
