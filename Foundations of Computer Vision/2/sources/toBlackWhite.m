@@ -17,4 +17,3 @@ function J = toBlackWhite(I)
         end
     end
 end
-

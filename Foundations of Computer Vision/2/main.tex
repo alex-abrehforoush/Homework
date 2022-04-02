@@ -9,6 +9,7 @@
 \usepackage{color}
 \usepackage{textcomp}
 \usepackage{float}
+\usepackage{multirow}
 \usepackage[sorting=none]{biblatex}
 \usepackage[margin=1in]{geometry}
 \usepackage[font={small,it}]{caption}
@@ -222,6 +223,25 @@ $
 \begin{latin}
 \lstinputlisting{sources/p4.m}
 \end{latin}
+\subsection{نمونه خروجی}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/4a.jpg}
+    \caption
+	{
+تصویر اصلی
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/4b.jpg}
+    \caption
+	{
+تصویر با ابعاد 30 درصد ابعاد تصویر اصلی
+	}
+    \label{fig:fig1}
+\end{figure}
 
 
 \section{}%5
@@ -250,7 +270,33 @@ $
 	{}
     \label{fig:fig1}
 \end{figure}
-در گام بعد، سطح روشنایی پیکسل‌های باقی‌مانده را برابر میانگین پیکسل‌های مجاور (بالا، پایین، چپ و راست) قرار می‌دهیم. سطح روشنایی پیکسل‌های مرزی هم به طریق مشابه تعیین می‌شوند.
+در گام بعد، سطح روشنایی پیکسل‌های باقی‌مانده را برابر میانگین پیکسل‌های مجاور (بالا، پایین، چپ و راست) قرار می‌دهیم. سطح روشنایی پیکسل‌های مرزی هم به طریق مشابه تعیین می‌شوند. این الگوریتم در تابعِ \lr{doubleDimensions} به شکل زیر پیاده‌سازی شده است.
+\subsection{\lr{Function}}
+\begin{latin}
+\lstinputlisting{sources/doubleDimensions.m}
+\end{latin}
+\subsection{\lr{Driver Code}}
+\begin{latin}
+\lstinputlisting{sources/p5.m}
+\end{latin}
+جدول مقادیرِ \lr{PSNR} به شکل زیر می‌باشد.
+
+%table
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[H]
+\begin{tabular}{|ccccc|c|}
+\hline
+\multicolumn{5}{|c|}{\textbf{مقدار \lr{PSNR} به ازای \lr{Resizing\_Factor} برابر با 2}}                                                                                                                                                        & \multirow{2}{*}{\textbf{نام تصویر}} \\ \cline{1-5}
+\multicolumn{1}{|c|}{\textbf{زمان اجرا بر حسب ثانیه}} & \multicolumn{1}{c|}{\textbf{روش پیشنهادی شما}} & \multicolumn{1}{c|}{\textbf{روش \lr{Bicubic}}} & \multicolumn{1}{c|}{\textbf{روش \lr{Bilinear}}} & \textbf{روش \lr{Nearest Neighbor}} &                                     \\ \hline
+\multicolumn{1}{|c|}{\textbf{\lr{0.899658}}}          & \multicolumn{1}{c|}{\textbf{\lr{28.8864}}}     & \multicolumn{1}{c|}{\textbf{\lr{26.9296}}}     & \multicolumn{1}{c|}{\textbf{\lr{27.1040}}}      & \textbf{\lr{25.5147}}              & \textbf{\lr{Boat}}                  \\ \hline
+\multicolumn{1}{|c|}{\textbf{\lr{0.941563}}}          & \multicolumn{1}{c|}{\textbf{\lr{32.1106}}}     & \multicolumn{1}{c|}{\textbf{\lr{29.7193}}}     & \multicolumn{1}{c|}{\textbf{\lr{29.9490}}}      & \textbf{\lr{28.1116}}              & \textbf{\lr{Peppers}}               \\ \hline
+\multicolumn{1}{|c|}{\textbf{\lr{0.913748}}}          & \multicolumn{1}{c|}{\textbf{\lr{34.6318}}}     & \multicolumn{1}{c|}{\textbf{\lr{30.4896}}}     & \multicolumn{1}{c|}{\textbf{\lr{30.3392}}}      & \textbf{\lr{28.0316}}              & \textbf{\lr{Cameraman}}             \\ \hline
+\multicolumn{1}{|c|}{\textbf{\lr{0.228155}}}          & \multicolumn{1}{c|}{\textbf{\lr{31.5815}}}     & \multicolumn{1}{c|}{\textbf{\lr{29.2722}}}     & \multicolumn{1}{c|}{\textbf{\lr{29.3679}}}      & \textbf{\lr{27.5452}}              & \textbf{\lr{House}}                 \\ \hline
+\multicolumn{1}{|c|}{\textbf{}}                       & \multicolumn{1}{c|}{\textbf{\lr{31.802575}}}   & \multicolumn{1}{c|}{\textbf{\lr{29.102675}}}   & \multicolumn{1}{c|}{\textbf{\lr{29.190475}}}    & \textbf{\lr{27.30075}}             & \textbf{متوسط \lr{PSNR}}            \\ \hline
+\end{tabular}
+\end{table}
+%table
 
 
 
@@ -266,7 +312,7 @@ $
 \end{latin}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figures/p6a.jpg}
+    \includegraphics[width=1\textwidth]{figures/6a.jpg}
     \caption
 	{
 هیستوگرام تصویر \lr{Image.tif}
@@ -276,7 +322,22 @@ $
 
 
 \subsection{ب}
-همانطور که در بخش قبل دیدیم، سطح روشنایی‌های صفر و نزدیک به صفر بیشتر پیکسل‌های این تصویر را تشکیل داده‌اند. اما سطح روشنایی‌های بزرگ‌تر و نزدیک به 255 هم 
+همانطور که در هیستوگرام دیدیم، سطح روشنایی‌های صفر و نزدیک به صفر بیشتر پیکسل‌های این تصویر را تشکیل داده‌اند. اما سطح روشنایی‌های بزرگ‌تر و نزدیک به 255 هم در این تصویر وجود دارد. برای بهبود کیفیت تصویر برای سطح روشنایی‌های پایین (سطح روشنایی کمتر مساوی  \lr{k})، تابع تبدیلی می‌تواند مناسب باشد که بتواند سطوح روشنایی پایین را به محدوده وسیع‌تری نگاشت کند و از سوی دیگر قابلیت حفظ تقریبی سطوح روشنایی بالای قبلی را هم داشته باشد. بنابراین از تابع تبدیل لگاریتمی می‌توانیم استفاده کنیم. همچنین برای بهبود کیفیت تصویر برای سطح روشنایی‌های بالا (سطح روشنایی بزرگ‌تر از \lr{k})، بخش عمده‌ای از پیکسل‌ها دارای سطح روشنایی بالا هستند، ولی مناطقی شامل پیکسل‌هایی با سطح روشنایی پایین نیز در تصویر وجود دارد. این تبدیل، سطوح روشنایی بالا (نواحی روشن تصویر) را به محدوده گسترده‌تری نگاشت می‌کند. بنابراین تابع تبدیل معکوس لگاریتمی می‌تواند مناسب باشد (برای وضوح بیشتر قسمت سفید مقدار گاما را برابر با $1.2$ قرار داده‌ایم و  \lr{k} می‌تواند 127 باشد). توابع استفاده شده به ترتیب $J = 31.875\times \log (I+1)$ و $J = \frac{1}{255}I^{2}$ هستند. خروجی تصویر به شکل زیر می‌باشد.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/6b.jpg}
+    \caption
+	{
+خروجی تابع تبدیل
+	}
+    \label{fig:fig1}
+\end{figure}
+
+\subsection{\lr{Code}}
+\begin{latin}
+\lstinputlisting{sources/p6b.m}
+\end{latin}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

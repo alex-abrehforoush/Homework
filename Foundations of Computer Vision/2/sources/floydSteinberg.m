@@ -29,4 +29,3 @@ function J = floydSteinberg(I)
     end
     J = uint8(I);
 end
-

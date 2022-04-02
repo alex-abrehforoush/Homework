@@ -4,7 +4,7 @@ close all
 imtool close all
 %%%%%%%%%%%%%%%
 I = imread("images\Image.tif");
-gamma = 1;
+gamma = 1.2;
 alpha = double(255) ^ (1 - gamma);
 for i = 1: size(I, 1)
     for j = 1: size(I, 2)
@@ -16,6 +16,3 @@ for i = 1: size(I, 1)
     end
 end
 imtool(imadjust(J));
-
-
-

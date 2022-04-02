@@ -10,4 +10,3 @@ function hist_vector = myHist(I)
     hist_vector = y_axis;
     figure, bar(x_axis, y_axis);
 end
-
