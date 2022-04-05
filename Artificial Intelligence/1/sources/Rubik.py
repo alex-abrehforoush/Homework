@@ -348,7 +348,7 @@ def getNeighbors(cube):
 	return neighbor
 
 def schedule(t):
-	return 1 / t
+	return 1 / np.log(t)
 
 
 #make decision approach 2:
@@ -367,10 +367,6 @@ def simulatedAnealing(cube, neighbors):
 		if (random_choice < prob):
 			result = i
 	return result
-		
-	
-
-
 
 
 ##########################################################
@@ -393,23 +389,33 @@ def main():
 	p_counter = 0
 	p_x = []
 	p_y = []
-	while calcValue(rubik_cube) < 54 and p_counter < 50000:
-		p_counter += 1
-		my_timer += 1
-		neighbors = getNeighbors(rubik_cube.copy())
-		target_neighbor_index = simulatedAnealing(rubik_cube.copy(), neighbors.copy())
-		p_x.append(p_counter)
-		p_y.append(calcValue(rubik_cube))
-		if target_neighbor_index < 0:
-			continue
-		else:
-			rubik_cube = neighbors[target_neighbor_index]
-			solution += moves[target_neighbor_index] + " "
-		
+	is_good = 0
+	for i in range(10000):
+		while p_counter < 1000:
+			p_counter += 1
+			my_timer += 1
+			neighbors = getNeighbors(rubik_cube.copy())
+			target_neighbor_index = simulatedAnealing(rubik_cube.copy(), neighbors.copy())
+			p_x.append(p_counter)
+			p_y.append(calcValue(rubik_cube))
+			if target_neighbor_index < 0:
+				continue
+			else:
+				rubik_cube = neighbors[target_neighbor_index]
+				solution += moves[target_neighbor_index] + " "
+			if (calcValue(rubik_cube) == 54):
+				p_x.append(p_counter)
+				p_y.append(calcValue(rubik_cube))
+				is_good = 1
+				break
+		if (is_good):
+			break
+	print(p_y)
 	plt.plot(p_x, p_y)
+	print(is_good)
 	plt.show()
 	print(solution)
 
 ##################################################################################################################################################################################################################################################################################################################################################################################################################################################################
-my_timer = 1
+my_timer = 1000
 main()
