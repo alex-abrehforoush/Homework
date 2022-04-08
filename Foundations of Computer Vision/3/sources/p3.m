@@ -20,8 +20,3 @@ for i = 3: size(name_of_images, 2)
 end
 correct_guesses = my_result == ground_truth;
 percentage = (sum(correct_guesses) - 2) / (size(my_result, 2) - 2)
-
-
-%%%%%%%%%%%%%%%%%%%
-% I = imread("images\Q3\Image_11_29.png");
-% x = sumOnImage(I);
