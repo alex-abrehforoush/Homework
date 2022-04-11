@@ -23,7 +23,7 @@
 \renewcommand{\baselinestretch}{1.5}
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{تکلیف دوم درس مبانی بینایی کامپیوتر}
+\rhead{تکلیف سوم درس مبانی بینایی کامپیوتر}
 \lhead{\thepage}
 \rfoot{علیرضا ابره فروش}
 \lfoot{9816603}
@@ -73,127 +73,26 @@
 
 
 \section{}%1
-ابتدا متغیرهای زیر را تعریف می‌کنیم.
-\newline
-$H$ و $W$: ابعاد تصویر
-\newline
-$I$: تصویر اصلی
-\newline
-$J$: تصویر مورد بررسی
-\newline
-$MAX_{I}$: بزرگ‌ترین سطح روشنایی محتمل در تصویر (مقدار پیش‌فرض 255)
-\newline
-$MIN_{I}$: کوچک‌ترین سطح روشنایی محتمل در تصویر (مقدار پیش‌فرض 0)
-
-\subsection{\lr{MAE}}
-\subsubsection{حداکثر}
-حالتی را تصور می‌کنیم که اختلاف سطح روشنایی هر دو پیکسل متناظر در تصویر حداکثر باشد (تصویر تمام سیاه و تمام سفید). بنابراین به ازای هر $i$ و $j$ دامنه، $I(i, j)$ برابر $MAX_{I}$ و $J(i, j)$ برابر $MIN_{J}$ یا بالعکس. پس داریم:
-\newline
-\begin{latin}
-$
-\max(\frac{1}{H.W}\sum_{i=1}^{H}\sum_{j=1}^{W}\left| I(i, j) - J(i, j) \right|)=\frac{1}{H.W}\times H.W\times \left| MAX_{I} - MIN_{J} \right|=\left| MAX_{I} - MIN_{J} \right|
-$
-\end{latin}
-که در حالت پیش‌فرض این مقدار برابر 255 است.
-\subsubsection{حداقل}
-حالتی را تصور می‌کنیم که اختلاف سطح روشنایی هر دو پیکسل متناظر در تصویر حداقل باشد (تصاویر برابر باشند). بنابراین به ازای هر $i$ و $j$ دامنه، $I(i, j)$ برابر $J(i, j)$ است. پس داریم:
-\newline
-\begin{latin}
-$
-\min(\frac{1}{H.W}\sum_{i=1}^{H}\sum_{j=1}^{W}\left| I(i, j) - J(i, j) \right|)=\frac{1}{H.W}\times H.W\times \left| I(i, j) - I(i, j) \right|=0
-$
-\end{latin}
-
-
-\subsection{\lr{MSE}}
-\subsubsection{حداکثر}
-مشابه قسمت قبل، حالتی را تصور می‌کنیم که اختلاف سطح روشنایی هر دو پیکسل متناظر در تصویر حداکثر باشد (تصویر تمام سیاه و تمام سفید). بنابراین به ازای هر $i$ و $j$ دامنه، $I(i, j)$ برابر $MAX_{I}$ و $J(i, j)$ برابر $MIN_{J}$ یا بالعکس. پس داریم:
-\newline
-\begin{latin}
-$
-\max(\frac{1}{H.W}\sum_{i=1}^{H}\sum_{j=1}^{W} (I(i, j) - J(i, j))^{2})=\frac{1}{H.W}\times H.W\times (MAX_{I} - MIN_{J})^{2}=(MAX_{I} - MIN_{J})^{2}
-$
-\end{latin}
-که در حالت پیش‌فرض این مقدار برابر 65025 است.
-\subsubsection{حداقل}
-مشابه قسمت قبل، حالتی را تصور می‌کنیم که اختلاف سطح روشنایی هر دو پیکسل متناظر در تصویر حداقل باشد (تصاویر برابر باشند). بنابراین به ازای هر $i$ و $j$ دامنه، $I(i, j)$ برابر $J(i, j)$ است. پس داریم:
-\newline
-\begin{latin}
-$
-\min(\frac{1}{H.W}\sum_{i=1}^{H}\sum_{j=1}^{W} (I(i, j) - J(i, j))^{2})=\frac{1}{H.W}\times H.W\times (I(i, j) - I(i, j))^{2}=0
-$
-\end{latin}
-
-
-\subsection{\lr{PSNR}}
-برای بیشینه (کمینه) کردن تابعِ 
-$
-10\log_{10}(\frac{MAX_{I}^{2}}{MSE})
-$
-کافیست تابعِ
-$
-\frac{MAX_{I}^{2}}{MSE}
-$
-بیشینه (کمینه) کنیم.
-\subsubsection{حداکثر}
-با فرض ناصفر بودن مقدار $MAX_{I}$ داریم:
-\newline
-\begin{latin}
-$
-\max(10\log_{10}(\frac{MAX_{I}^{2}}{MSE}))=\lim_{MSE \to 0 } (10\log_{10}(\frac{MAX_{I}^{2}}{MSE}))=\infty
-$
-\end{latin}
-پس به ازای دو تصویر با \lr{MSE}ِ نزدیک به صفر (دو تصویر تقریبا برابر)، مقدار \lr{PSNR} به بی‌نهایت میل می‌کند.
-\subsubsection{حداقل}
-اگر $I$ تصویر تمام سیاه ($MAX_{I}$ ناچیز باشد)، و $J$ تصویر غیر تمام سیاه باشد، آنگاه چون
-$MAX_{I}$
-تقریبا صفر است داریم:
-\newline
-\begin{latin}
-$
-\min(10\log_{10}(\frac{MAX_{I}^{2}}{MSE}))=\lim_{MAX_{I} \to 0 } (10\log_{10}(\frac{MAX_{I}^{2}}{MSE}))=-\infty
-$
-\end{latin}
-
-
-
-
-
-
-
-\section{}%2
-سطح روشنایی هر پیکسل در تصویر خاکستری‌گونه از $MIN_{I}$ (پیش‌فرض 0) تا $MAX_{I}$ (پیش‌فرض 255) متغیر است. بدترین \lr{MSE} که در واقع بزرگ‌ترین \lr{MSE} است زمانی رخ می‌دهد که اختلاف سطح روشنایی هر دو پیکسل متناظر در تصاویر ماکسیمم باشد. در نتیجه برای ساخت چنین تصویری فاصله‌ی سطح روشنایی هر پیکسل در تصویر اولیه را از مقادیر $MIN_{I}$ و $MAX_{I}$ به دست می‌آوریم (قدر مطلق تفاضل). در صورتی که سطح روشنایی به $MIN_{I}$ (سیاه) نزدیک‌تر بود، مقدار $MAX_{I}$ (سفید) و در صورتی که به $MAX_{I}$ (سفید) نزدیک‌تر بود، مقدار $MIN_{I}$ (سیاه) را در پیکسل متناظر قرار می‌دهیم. در این حالت چون قدر مطلق تفاضل‌ها به ازای همه پیکسل‌های تصویر ماکسیمم هستند پس تضمین می‌شود که ماکسیمم \lr{MSE}(بدترین \lr{MSE}) را نسبت به تصویر ورودی داریم.
-
-
-
-
-
-\section{}%3
-\subsection{الف}
-\subsubsection{\lr{Function}}
-\begin{latin}
-\lstinputlisting{sources/toBlackWhite.m}
-\end{latin}
-\subsubsection{\lr{Driver code}}
-\begin{latin}
-\lstinputlisting{sources/p3a.m}
-\end{latin}
-
-\subsection{ب}
-\subsubsection{\lr{Function}}
-\begin{latin}
-\lstinputlisting{sources/floydSteinberg.m}
-\end{latin}
-\subsubsection{\lr{Driver code}}
-\begin{latin}
-\lstinputlisting{sources/p3b.m}
-\end{latin}
-
-\subsection{ج}
-\begin{latin}
-\lstinputlisting{sources/p3c.m}
-\end{latin}
-با مقایسه‌ی \lr{PSNR} در دو تصویر تولید شده در قسمت‌های قبل درمی‌یابیم که بهتر بودن \lr{PSNR}ِ یک تصویر نسبت به تصویر دیگر الزاما به معنی بهتر بودن کیفیت بصری آن تصویر نیست. همانطور که می‌بینیم، تصویر تولید شده توسط الگوریتم \lr{Floyd-Steinberg} با وجود داشتن \lr{PSNR}ِ پایین‌تر نسبت به تصویر تولید شده توسط الگوریتم حریصانه (تابع \lr{toBlackWhite}) جزئیات تصویر را بهتر مشخص می‌کند و کیفیت بصری بهتری دارد. پس نتیجه می‌گیریم که \lr{PSNR} در همه جا معیار دقیقی برای مقایسه‌ی کیفیت تصاویر نیست.
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\begin{tabular}{|lclclclc|c|}
+\hline
+\multicolumn{8}{|c|}{\textbf{مقدار \lr{PSNR}}}                                                                                                                                                                                                                                                                                                 & \multirow{3}{*}{\textbf{مقدار نویز}} \\ \cline{1-8}
+\multicolumn{2}{|c|}{\textbf{\lr{House}}}                                               & \multicolumn{2}{c|}{\textbf{\lr{Peppers}}}                                             & \multicolumn{2}{c|}{\textbf{\lr{Boat}}}                                                & \multicolumn{2}{c|}{\textbf{\lr{Bridge}}}                          &                                      \\ \cline{1-8}
+\multicolumn{1}{|c|}{\textbf{روش شما}}      & \multicolumn{1}{c|}{\textbf{\lr{Median}}} & \multicolumn{1}{c|}{\textbf{روش شما}}      & \multicolumn{1}{c|}{\textbf{\lr{Median}}} & \multicolumn{1}{c|}{\textbf{روش شما}}      & \multicolumn{1}{c|}{\textbf{\lr{Median}}} & \multicolumn{1}{c|}{\textbf{روش شما}}      & \textbf{\lr{Median}}  &                                      \\ \hline
+\multicolumn{1}{|l|}{\lr{41.0918}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{40.5355}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{38.5271}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{35.6041}}          & \multicolumn{1}{l|}{} & \textbf{10\%}                        \\ \hline
+\multicolumn{1}{|l|}{\lr{37.6764}}          & \multicolumn{1}{c|}{\textbf{}}            & \multicolumn{1}{l|}{\lr{37.2407}}          & \multicolumn{1}{c|}{\textbf{}}            & \multicolumn{1}{l|}{\lr{35.1210}}          & \multicolumn{1}{c|}{\textbf{}}            & \multicolumn{1}{l|}{\lr{32.2999}}          & \textbf{}             & \textbf{20\%}                        \\ \hline
+\multicolumn{1}{|l|}{\lr{35.5489}}          & \multicolumn{1}{c|}{\textbf{}}            & \multicolumn{1}{l|}{\lr{34.7513}}          & \multicolumn{1}{c|}{\textbf{}}            & \multicolumn{1}{l|}{\lr{33.0213}}          & \multicolumn{1}{c|}{\textbf{}}            & \multicolumn{1}{l|}{\lr{30.3335}}          & \textbf{}             & \textbf{30\%}                        \\ \hline
+\multicolumn{1}{|l|}{\lr{33.9188}}          & \multicolumn{1}{c|}{\textbf{}}            & \multicolumn{1}{l|}{\lr{33.1892}}          & \multicolumn{1}{c|}{\textbf{}}            & \multicolumn{1}{l|}{\lr{31.3788}}          & \multicolumn{1}{c|}{\textbf{}}            & \multicolumn{1}{l|}{\lr{28.7560}}          & \textbf{}             & \textbf{40\%}                        \\ \hline
+\multicolumn{1}{|l|}{\lr{31.9723}}          & \multicolumn{1}{c|}{\textbf{}}            & \multicolumn{1}{l|}{\lr{31.6760}}          & \multicolumn{1}{c|}{\textbf{}}            & \multicolumn{1}{l|}{\lr{29.9086}}          & \multicolumn{1}{c|}{\textbf{}}            & \multicolumn{1}{l|}{\lr{27.2288}}          & \textbf{}             & \textbf{50\%}                        \\ \hline
+\multicolumn{1}{|l|}{\lr{30.1413}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{29.9283}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{28.3520}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{25.9116}}          & \multicolumn{1}{l|}{} & \textbf{60\%}                        \\ \hline
+\multicolumn{1}{|l|}{\lr{28.1426}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{28.2096}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{26.7180}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{24.3086}}          & \multicolumn{1}{l|}{} & \textbf{70\%}                        \\ \hline
+\multicolumn{1}{|l|}{\lr{25.6781}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{25.9253}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{24.5809}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{22.5699}}          & \multicolumn{1}{l|}{} & \textbf{80\%}                        \\ \hline
+\multicolumn{1}{|l|}{\lr{22.2244}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{22.3489}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{21.8285}}          & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{\lr{20.1590}}          & \multicolumn{1}{l|}{} & \textbf{90\%}                        \\ \hline
+\multicolumn{1}{|c|}{\textbf{\lr{31.8216}}} & \multicolumn{1}{c|}{\textbf{\lr{2323}}}   & \multicolumn{1}{c|}{\textbf{\lr{31.5339}}} & \multicolumn{1}{c|}{\textbf{\lr{2323}}}   & \multicolumn{1}{c|}{\textbf{\lr{29.9373}}} & \multicolumn{1}{c|}{\textbf{\lr{2323}}}   & \multicolumn{1}{c|}{\textbf{\lr{27.4635}}} & \textbf{\lr{2323}}    & \textbf{میانگین}                     \\ \hline
+\end{tabular}
+\end{table}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.25\textwidth]{figures/3c1.jpg}
@@ -214,129 +113,7 @@ $
 \end{figure}
 
 
-\section{}%4
-\subsection{\lr{Function}}
-\begin{latin}
-\lstinputlisting{sources/My_Imresize_BL.m}
-\end{latin}
-\subsection{\lr{Driver code}}
-\begin{latin}
-\lstinputlisting{sources/p4.m}
-\end{latin}
-\subsection{نمونه خروجی}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.25\textwidth]{figures/4a.jpg}
-    \caption
-	{
-تصویر اصلی
-	}
-    \label{fig:fig1}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.25\textwidth]{figures/4b.jpg}
-    \caption
-	{
-تصویر با ابعاد 30 درصد ابعاد تصویر اصلی
-	}
-    \label{fig:fig1}
-\end{figure}
 
-
-\section{}%5
-پیکسل‌های تصویر را به طور یک در میان به شکل زیر می‌چینیم:
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.25\textwidth]{figures/5a.jpg}
-    \caption
-	{}
-    \label{fig:fig1}
-\end{figure}
-سطح روشنایی پیکسل‌های قرار گرفته در سطر زوج و ستون زوج را برابر با میانگین پیکسل‌های مجاور (4 پیکسل مشخص شده در شکل زیر در صورت وجود) قرار می‌دهیم. سطح روشنایی پیکسل‌های مرزی که دارای 2 همسایه‌ی مورب و 1 همسایه‌ی مورب هستند را هم به همین صورت مقداردهی می‌کنیم.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth]{figures/5b.jpg}
-    \caption
-	{}
-    \label{fig:fig1}
-\end{figure}
-پیکسل‌ها تصویر به شکل زیر در می‌آیند:
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.25\textwidth]{figures/5c.jpg}
-    \caption
-	{}
-    \label{fig:fig1}
-\end{figure}
-در گام بعد، سطح روشنایی پیکسل‌های باقی‌مانده را برابر میانگین پیکسل‌های مجاور (بالا، پایین، چپ و راست) قرار می‌دهیم. سطح روشنایی پیکسل‌های مرزی هم به طریق مشابه تعیین می‌شوند. این الگوریتم در تابعِ \lr{doubleDimensions} به شکل زیر پیاده‌سازی شده است.
-\subsection{\lr{Function}}
-\begin{latin}
-\lstinputlisting{sources/doubleDimensions.m}
-\end{latin}
-\subsection{\lr{Driver Code}}
-\begin{latin}
-\lstinputlisting{sources/p5.m}
-\end{latin}
-جدول مقادیرِ \lr{PSNR} به شکل زیر می‌باشد.
-
-%table
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
-\begin{table}[H]
-\begin{tabular}{|ccccc|c|}
-\hline
-\multicolumn{5}{|c|}{\textbf{مقدار \lr{PSNR} به ازای \lr{Resizing\_Factor} برابر با 2}}                                                                                                                                                        & \multirow{2}{*}{\textbf{نام تصویر}} \\ \cline{1-5}
-\multicolumn{1}{|c|}{\textbf{زمان اجرا بر حسب ثانیه}} & \multicolumn{1}{c|}{\textbf{روش پیشنهادی شما}} & \multicolumn{1}{c|}{\textbf{روش \lr{Bicubic}}} & \multicolumn{1}{c|}{\textbf{روش \lr{Bilinear}}} & \textbf{روش \lr{Nearest Neighbor}} &                                     \\ \hline
-\multicolumn{1}{|c|}{\textbf{\lr{0.899658}}}          & \multicolumn{1}{c|}{\textbf{\lr{28.8864}}}     & \multicolumn{1}{c|}{\textbf{\lr{26.9296}}}     & \multicolumn{1}{c|}{\textbf{\lr{27.1040}}}      & \textbf{\lr{25.5147}}              & \textbf{\lr{Boat}}                  \\ \hline
-\multicolumn{1}{|c|}{\textbf{\lr{0.941563}}}          & \multicolumn{1}{c|}{\textbf{\lr{32.1106}}}     & \multicolumn{1}{c|}{\textbf{\lr{29.7193}}}     & \multicolumn{1}{c|}{\textbf{\lr{29.9490}}}      & \textbf{\lr{28.1116}}              & \textbf{\lr{Peppers}}               \\ \hline
-\multicolumn{1}{|c|}{\textbf{\lr{0.913748}}}          & \multicolumn{1}{c|}{\textbf{\lr{34.6318}}}     & \multicolumn{1}{c|}{\textbf{\lr{30.4896}}}     & \multicolumn{1}{c|}{\textbf{\lr{30.3392}}}      & \textbf{\lr{28.0316}}              & \textbf{\lr{Cameraman}}             \\ \hline
-\multicolumn{1}{|c|}{\textbf{\lr{0.228155}}}          & \multicolumn{1}{c|}{\textbf{\lr{31.5815}}}     & \multicolumn{1}{c|}{\textbf{\lr{29.2722}}}     & \multicolumn{1}{c|}{\textbf{\lr{29.3679}}}      & \textbf{\lr{27.5452}}              & \textbf{\lr{House}}                 \\ \hline
-\multicolumn{1}{|c|}{\textbf{}}                       & \multicolumn{1}{c|}{\textbf{\lr{31.802575}}}   & \multicolumn{1}{c|}{\textbf{\lr{29.102675}}}   & \multicolumn{1}{c|}{\textbf{\lr{29.190475}}}    & \textbf{\lr{27.30075}}             & \textbf{متوسط \lr{PSNR}}            \\ \hline
-\end{tabular}
-\end{table}
-%table
-
-
-
-\section{}%6
-\subsection{الف}
-\subsubsection{\lr{Function}}
-\begin{latin}
-\lstinputlisting{sources/myHist.m}
-\end{latin}
-\subsubsection{\lr{Driver code}}
-\begin{latin}
-\lstinputlisting{sources/p6a.m}
-\end{latin}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{figures/6a.jpg}
-    \caption
-	{
-هیستوگرام تصویر \lr{Image.tif}
-	}
-    \label{fig:fig1}
-\end{figure}
-
-
-\subsection{ب}
-همانطور که در هیستوگرام دیدیم، سطح روشنایی‌های صفر و نزدیک به صفر بیشتر پیکسل‌های این تصویر را تشکیل داده‌اند. اما سطح روشنایی‌های بزرگ‌تر و نزدیک به 255 هم در این تصویر وجود دارد. برای بهبود کیفیت تصویر برای سطح روشنایی‌های پایین (سطح روشنایی کمتر مساوی  \lr{k})، تابع تبدیلی می‌تواند مناسب باشد که بتواند سطوح روشنایی پایین را به محدوده وسیع‌تری نگاشت کند و از سوی دیگر قابلیت حفظ تقریبی سطوح روشنایی بالای قبلی را هم داشته باشد. بنابراین از تابع تبدیل لگاریتمی می‌توانیم استفاده کنیم. همچنین برای بهبود کیفیت تصویر برای سطح روشنایی‌های بالا (سطح روشنایی بزرگ‌تر از \lr{k})، بخش عمده‌ای از پیکسل‌ها دارای سطح روشنایی بالا هستند، ولی مناطقی شامل پیکسل‌هایی با سطح روشنایی پایین نیز در تصویر وجود دارد. این تبدیل، سطوح روشنایی بالا (نواحی روشن تصویر) را به محدوده گسترده‌تری نگاشت می‌کند. بنابراین تابع تبدیل معکوس لگاریتمی می‌تواند مناسب باشد (برای وضوح بیشتر قسمت سفید مقدار گاما را برابر با $1.2$ قرار داده‌ایم و  \lr{k} می‌تواند 127 باشد). توابع استفاده شده به ترتیب $J = 31.875\times \log (I+1)$ و $J = \frac{1}{255}I^{2}$ هستند. خروجی تصویر به شکل زیر می‌باشد.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figures/6b.jpg}
-    \caption
-	{
-خروجی تابع تبدیل
-	}
-    \label{fig:fig1}
-\end{figure}
-
-\subsection{\lr{Code}}
-\begin{latin}
-\lstinputlisting{sources/p6b.m}
-\end{latin}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -19,4 +19,4 @@ for i = 3: size(name_of_images, 2)
     my_result(i) = m_r;
 end
 correct_guesses = my_result == ground_truth;
-percentage = (sum(correct_guesses) - 2) / (size(my_result, 2) - 2)
+percentage = 100 * (sum(correct_guesses) - 2) / (size(my_result, 2) - 2)

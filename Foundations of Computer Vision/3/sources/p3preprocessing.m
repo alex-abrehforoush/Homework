@@ -3,6 +3,7 @@ clear
 close all
 imtool close all
 %%%%%%%%%%%%%%%%
+%generating template image of numbers to compare each element of image with
 for k = 0: 9
     I = imread(['images\' num2str(k) '.png']);
     min_row = 1000;

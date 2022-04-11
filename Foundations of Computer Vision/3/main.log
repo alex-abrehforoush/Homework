@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  2 APR 2022 23:55
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  11 APR 2022 22:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -914,27 +914,6 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
@@ -1048,98 +1027,35 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
 (Font)              scaled to size 17.27994pt on input line 75.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 (Font)              scaled to size 17.27994pt on input line 75.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 88.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 78.
+
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 14.39996pt on input line 88.
+(Font)              scaled to size 11.99997pt on input line 81.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 88.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 89.
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--92
-[][]
- []
-
+(Font)              scaled to size 10.0pt on input line 81.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 92.
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--101
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--112
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--121
-[][]
- []
-
-[1]
-Underfull \hbox (badness 10000) in paragraph at lines 139--141
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 148--152
-[][]
- []
-
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 173.
-(./sources/toBlackWhite.m
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 1.
- [2]) (./sources/p3a.m) (./sources/floydSteinberg.m
-[3]) (./sources/p3b.m [4]) (./sources/p3c.m)
+(Font)              scaled to size 10.0pt on input line 84.
 File: figures/3c1.jpg Graphic file (type bmp)
 <figures/3c1.jpg>
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 203.
-
+(Font)              scaled to size 10.79997pt on input line 102.
 
 LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 203.
+(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 102.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 203.
+(Font)              scaled to size 9.0pt on input line 102.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 203.
+(Font)              scaled to size 10.79997pt on input line 102.
 File: figures/3c2.jpg Graphic file (type bmp)
 <figures/3c2.jpg>
-[5] (./sources/My_Imresize_BL.m [6]) (./sources/p4.m [7])
-File: figures/4a.jpg Graphic file (type bmp)
-<figures/4a.jpg>
-File: figures/4b.jpg Graphic file (type bmp)
-<figures/4b.jpg>
-File: figures/5a.jpg Graphic file (type bmp)
-<figures/5a.jpg>
- [8]
-File: figures/5b.jpg Graphic file (type bmp)
-<figures/5b.jpg>
- [9]
-File: figures/5c.jpg Graphic file (type bmp)
-<figures/5c.jpg>
- [10]
-(./sources/doubleDimensions.m [11] [12]) (./sources/p5.m)
-Overfull \hbox (24.59607pt too wide) in paragraph at lines 288--298
-[][][] []
- []
 
-[13] (./sources/myHist.m) (./sources/p6a.m)
-File: figures/6a.jpg Graphic file (type bmp)
-<figures/6a.jpg>
- [14]
-File: figures/6b.jpg Graphic file (type bmp)
-<figures/6b.jpg>
- [15] (./sources/p6b.m [16])
+LaTeX Warning: Empty `thebibliography' environment on input line 147.
 
-LaTeX Warning: Empty `thebibliography' environment on input line 370.
-
-[17] (./main.aux)
+[1] [2] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1151,12 +1067,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18299 strings out of 476919
- 369399 string characters out of 5825424
- 1585446 words of memory out of 5000000
- 37940 multiletter control sequences out of 15000+600000
- 404172 words of font info for 65 fonts, out of 8000000 for 9000
+ 17360 strings out of 476919
+ 358156 string characters out of 5825424
+ 1220443 words of memory out of 5000000
+ 37051 multiletter control sequences out of 15000+600000
+ 404140 words of font info for 61 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 97i,12n,122p,1290b,2197s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 97i,12n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (18 pages).
+Output written on main.pdf (3 pages).
