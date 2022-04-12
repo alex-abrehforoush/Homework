@@ -39,9 +39,9 @@ for k = 0: 9
         end
     end
     
-    imtool(I);
-    imtool(Red);
-    imtool(Blue);
+%     imtool(I);
+%     imtool(Red);
+%     imtool(Blue);
     imwrite(Red, ['images\p' int2str(k) '.png']);
     imwrite(Blue, ['images\n' int2str(k) '.png']);
 end

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  12 APR 2022 12:07
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  12 APR 2022 14:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1048,22 +1048,22 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 (Font)              scaled to size 14.39996pt on input line 97.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 97.
-[1]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 100.
- (./sources/removeNoise.m
+(Font)              scaled to size 10.0pt on input line 98.
+(./sources/p3preprocessing.m
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 (Font)              scaled to size 5.0pt on input line 1.
-) (./sources/p4.m [2])
+ [1] [2]) (./sources/sumOnImage.m [3] [4] [5])
+(./sources/p3.m [6]) [7] (./sources/removeNoise.m) (./sources/p4.m [8])
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 116.
+(Font)              scaled to size 11.99997pt on input line 134.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 116.
+(Font)              scaled to size 10.0pt on input line 134.
 
 
-LaTeX Warning: Empty `thebibliography' environment on input line 166.
+LaTeX Warning: Empty `thebibliography' environment on input line 184.
 
-[3] (./main.aux)
+[9] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1075,12 +1075,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18051 strings out of 476919
- 366106 string characters out of 5825424
- 1434443 words of memory out of 5000000
- 37729 multiletter control sequences out of 15000+600000
+ 18227 strings out of 476919
+ 368455 string characters out of 5825424
+ 1499445 words of memory out of 5000000
+ 37896 multiletter control sequences out of 15000+600000
  404172 words of font info for 65 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 97i,12n,122p,1290b,1626s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 97i,12n,122p,1290b,2197s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (4 pages).
+Output written on main.pdf (10 pages).
