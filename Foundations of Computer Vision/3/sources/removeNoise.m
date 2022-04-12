@@ -3,7 +3,8 @@ function K = removeNoise(J)
     K = J;
     for i = 1: size(K, 1)
         for j = 1: size(K, 2)
-            if (K(i, j) == 0 || K(i, j) == 255)
+            if (K(i, j) == 0 || K(i, j) == 255)%comment this to include
+%             all pixels
                 arr = [];
                 for k = i - 1: i + 1
                     for l = j - 1: j + 1
@@ -15,7 +16,7 @@ function K = removeNoise(J)
                     end
                 end
                 K(i, j) = mean(arr);
-            end
+            end%comment this to include all pixels
         end
     end
 end

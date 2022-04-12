@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  12 APR 2022 14:52
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  12 APR 2022 21:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -910,11 +910,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
 \@quotelevel=\count469
 \@quotereset=\count470
- (./main.aux
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-)
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
@@ -928,7 +924,8 @@ LaTeX Font Info:    ... okay on input line 50.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
 0.
- (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 50.
@@ -1027,60 +1024,42 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
 (Font)              scaled to size 17.27994pt on input line 75.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 (Font)              scaled to size 17.27994pt on input line 75.
-File: figures/3c1.jpg Graphic file (type bmp)
-<figures/3c1.jpg>
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 82.
-
-
-LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 82.
-
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 82.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 82.
-File: figures/3c2.jpg Graphic file (type bmp)
-<figures/3c2.jpg>
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 97.
+(Font)              scaled to size 14.39996pt on input line 76.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 14.39996pt on input line 97.
+(Font)              scaled to size 14.39996pt on input line 76.
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
+(Font)              scaled to size 11.99997pt on input line 77.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 97.
+(Font)              scaled to size 10.0pt on input line 77.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 98.
-(./sources/p3preprocessing.m
+(Font)              scaled to size 10.0pt on input line 83.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 99.
+ (./sources/p3preprocessing.m
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 (Font)              scaled to size 5.0pt on input line 1.
- [1] [2]) (./sources/sumOnImage.m [3] [4] [5])
-(./sources/p3.m [6]) [7] (./sources/removeNoise.m) (./sources/p4.m [8])
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 134.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 134.
+ [1] [2]) (./sources/sumOnImage.m [3] [4]
+[5]) (./sources/p3.m [6]) [7] (./sources/removeNoise.m) (./sources/p4.m
+[8]) [9]
 
+LaTeX Warning: Empty `thebibliography' environment on input line 211.
 
-LaTeX Warning: Empty `thebibliography' environment on input line 184.
-
-[9] (./main.aux)
+[10] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18227 strings out of 476919
- 368455 string characters out of 5825424
- 1499445 words of memory out of 5000000
- 37896 multiletter control sequences out of 15000+600000
- 404172 words of font info for 65 fonts, out of 8000000 for 9000
+ 18205 strings out of 476919
+ 367966 string characters out of 5825424
+ 1499398 words of memory out of 5000000
+ 37879 multiletter control sequences out of 15000+600000
+ 404156 words of font info for 63 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,12n,122p,1290b,2197s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (10 pages).
+Output written on main.pdf (11 pages).

@@ -12,7 +12,15 @@ for d = 0.1: 0.1: 0.9
     while (ismember(0, K) || ismember(255, K))
         K = removeNoise(K);
     end
-    L = medfilt2(J);
+    L_prime = medfilt2(J);
+    L = J;
+    for i = 1: size(L, 1)%to apply to all pixels comment this loop and use L_prime instead of L
+        for j = 1: size(L, 2)
+            if (L(i, j) == 0 || L(i, j) == 255)
+                L(i, j) = L_prime(i, j);
+            end
+        end
+    end
     my_psnr_values(end + 1) = psnr(K, I);
     med_psnr_values(end + 1) = psnr(L, I);
 end
