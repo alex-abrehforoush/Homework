@@ -15,7 +15,6 @@ function K = removeNoise(J)
                     end
                 end
                 K(i, j) = mean(arr);
-                %K(i, j) = median(arr);
             end
         end
     end

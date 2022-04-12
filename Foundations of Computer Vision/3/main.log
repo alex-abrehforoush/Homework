@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  11 APR 2022 22:32
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  12 APR 2022 12:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1027,35 +1027,43 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
 (Font)              scaled to size 17.27994pt on input line 75.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 (Font)              scaled to size 17.27994pt on input line 75.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 78.
-
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 81.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 81.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 84.
 File: figures/3c1.jpg Graphic file (type bmp)
 <figures/3c1.jpg>
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 102.
+(Font)              scaled to size 10.79997pt on input line 82.
+
 
 LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 102.
+(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 82.
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 102.
+(Font)              scaled to size 9.0pt on input line 82.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 102.
+(Font)              scaled to size 10.79997pt on input line 82.
 File: figures/3c2.jpg Graphic file (type bmp)
 <figures/3c2.jpg>
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
+(Font)              scaled to size 14.39996pt on input line 97.
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
+(Font)              scaled to size 14.39996pt on input line 97.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 97.
+[1]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 100.
+ (./sources/removeNoise.m
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 1.
+) (./sources/p4.m [2])
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
+(Font)              scaled to size 11.99997pt on input line 116.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 116.
 
-LaTeX Warning: Empty `thebibliography' environment on input line 147.
 
-[1] [2] (./main.aux)
+LaTeX Warning: Empty `thebibliography' environment on input line 166.
+
+[3] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1067,12 +1075,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17360 strings out of 476919
- 358156 string characters out of 5825424
- 1220443 words of memory out of 5000000
- 37051 multiletter control sequences out of 15000+600000
- 404140 words of font info for 61 fonts, out of 8000000 for 9000
+ 18051 strings out of 476919
+ 366106 string characters out of 5825424
+ 1434443 words of memory out of 5000000
+ 37729 multiletter control sequences out of 15000+600000
+ 404172 words of font info for 65 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 97i,12n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 97i,12n,122p,1290b,1626s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (3 pages).
+Output written on main.pdf (4 pages).
