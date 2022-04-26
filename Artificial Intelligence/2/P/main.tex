@@ -1,0 +1,108 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage[font={small,it}]{caption}
+\usepackage{placeins}
+\usepackage{xepersian}
+
+%\DeclareMathOperator*{\btie}{\bowtie}
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف اول درس هوش مصنوعی (بخش عملی)}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+%%%%%%%%%%
+\lstset
+{
+    language=[latex]tex,
+    basicstyle=\ttfamily,
+    commentstyle=\color{black},
+    columns=fullflexible,
+    keepspaces=true,
+    upquote=true,
+    showstringspaces=false,
+    morestring=[s]\\\%,
+    stringstyle=\color{black},
+}
+%%%%%%%%%%
+%beginMatlab
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%endMatlab
+\begin{document}
+%beginMatlab
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%endMatlab
+\input{titlepage}
+
+%\tableofcontents
+\newpage
+
+
+\section{حل مکعب \lr{Rubik}}
+برای حل این مسئله از الگوریتم \lr{SA} استفاده کرده‌ایم. هر همسایگی از انجام یکی از 12 حرکت ممکن در حالت وضعیت فعلی مکعب ساخته می‌شود. در نتیجه در هر مرحله 12 همسایگی تعریف می‌شود. همچنین \lr{Fitness function} را برابر تعداد سلول‌هایی که در جای درست خود قرار گرفته‌اند قرار می‌دهیم. تابع \lr{Scheduler} را تعریف می‌کنیم
+$
+\frac{1}{\log t}
+$
+که $t$ی اولیه برابر 1000 است و در هر مرحله 1 واحد از آن کاسته می‌شود. برای هر یک از 12 حرکت ممکن روی مکعب روبیک یک تابع تعریف میکنیم (توجه شود که حرکات ساعت‌گرد بدون کاراکتر \lr{quotation mark} هستند و حرکات پادساعت‌گرد بدون \lr{quotation mark}). هم‌چنین تابع \lr{getNeighbors} همسایگی‌ها را برمی‌گردانند و تابع \lr{calcValue} مقدار \lr{fitness} را برمی‌گرداند.
+
+
+\section{حل مسئله رنگ آميزي گراف}
+برای حل این مسئله از \lr{Tabu Search} استفاده کرده‌ایم. وضعیت \lr{initial} را با تعداد رنگ برابر تعداد رئوس گراف آغاز می‌کنیم. در هر مرحله از میان همسایگی‌هایی که شرط متفاوت بودن رنگ دو راس مجاور را نقض نمی‌کنند، آن همسایگی ‌ای را که کمینه رنگ ممکن دارد را انتخاب می‌کنیم.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1}
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}
