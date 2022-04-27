@@ -38,17 +38,23 @@ for i = 1: r: row
             [min_value, min_index] = min(values);
             J(i: i + r - 1, j: j + r - 1, :) = patches(min_index, :, :, :);
             solution(ceil(i / r), ceil(j / r)) = min_index;
-            %imtool(J);
+            imtool(J);
         else
             base = J(i - r: i - 1, j: j + r - 1, :);
             values = uint32(zeros(1, number_of_pieces));
             for k = 1: number_of_pieces
                 values(k) = borderDiff(rgb2gray(base), rgb2gray(squeeze(patches(k, :, :, :))), 0);
             end
+            if (j > 1)
+                base = J(i: i + r - 1, j - r: j - 1, :);
+                for k = 1: number_of_pieces
+                    values(k) = values(k) + borderDiff(rgb2gray(base), rgb2gray(squeeze(patches(k, :, :, :))), 1);
+                end
+            end
             [min_value, min_index] = min(values);
             J(i: i + r - 1, j: j + r - 1, :) = patches(min_index, :, :, :);
             solution(ceil(i / r), ceil(j / r)) = min_index;
-            %imtool(J);
+            imtool(J);
         end
     end
 end

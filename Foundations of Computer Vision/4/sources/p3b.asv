@@ -46,9 +46,9 @@ for i = 1: r: row
                 values(k) = borderDiff(rgb2gray(base), rgb2gray(squeeze(patches(k, :, :, :))), 0);
             end
             if (j > 1)
-                base = J(i: i + r - 1, j - r: j - 1, :);
+                base = J()
                 for k = 1: number_of_pieces
-                    values(k) = values(k) + borderDiff(rgb2gray(base), rgb2gray(squeeze(patches(k, :, :, :))), 1);
+                    values(k) = values(k) + borderDiff(rgb2gray(base), rgb2gray(squeeze(patches(k, :, :, :))), 0);
                 end
             end
             [min_value, min_index] = min(values);
