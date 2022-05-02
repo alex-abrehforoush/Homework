@@ -3,6 +3,8 @@
 \usepackage{graphicx}
 \usepackage{rotating}
 \usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{nccmath}
 \usepackage{fancyhdr}
 \usepackage{listings}
 \usepackage{xcolor}
@@ -73,10 +75,49 @@
 
 
 \section{نوید زندانی}
-\subsection{}
-\subsubsection{\lr{binary}}
+\subsection{قیدهای \lr{binary} و \lr{unary}}
+\begin{fleqn}
+\begin{equation}
+\begin{aligned}
+\forall i\in \left\{ 1,2,3,4,5,6 \right\}\:\:\:\:\:\: Y_{i} = \begin{cases}
+    0 & X_{i} = \text{زندان} \\
+    1 & X_{i} = \text{خروج} \\
+    2 & X_{i} = \text{چاه}
+\end{cases}
+\end{aligned}
+\end{equation}
+\end{fleqn}
 
-\subsubsection{\lr{unary}}
+
+\begin{fleqn}
+\begin{equation}
+\begin{aligned}
+C_{1} = \left\langle \left( X_{1},\: X_{2} \right),\: \max\left\{ Y_{1},\: Y_{2} \right\} = 1 \right\rangle \\
+C_{2} = \left\langle \left( X_{2},\: X_{3} \right),\: \max\left\{ Y_{2},\: Y_{3} \right\} = 1 \right\rangle \\
+C_{3} = \left\langle \left( X_{3},\: X_{4} \right),\: \max\left\{ Y_{3},\: Y_{4} \right\} = 2 \right\rangle \\
+C_{4} = \left\langle \left( X_{4},\: X_{5} \right),\: \max\left\{ Y_{4},\: Y_{5} \right\} = 2 \right\rangle \\
+C_{5} = \left\langle \left( X_{5},\: X_{6} \right),\: \max\left\{ Y_{5},\: Y_{6} \right\} = 2 \right\rangle \\
+C_{6} = \left\langle \left( X_{6},\: X_{1} \right),\: \max\left\{ Y_{6},\: Y_{1} \right\} = 2 \right\rangle
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+C_{7} = \left\langle \left( X_{1},\: X_{2} \right),\: Y_{1} \times Y_{2} \neq 1 \right\rangle \\
+C_{8} = \left\langle \left( X_{2},\: X_{3} \right),\: Y_{2} \times Y_{3} \neq 1 \right\rangle \\
+C_{9} = \left\langle \left( X_{3},\: X_{4} \right),\: Y_{3} \times Y_{4} \neq 1 \right\rangle \\
+C_{10} = \left\langle \left( X_{4},\: X_{5} \right),\: Y_{4} \times Y_{5} \neq 1 \right\rangle \\
+C_{11} = \left\langle \left( X_{5},\: X_{6} \right),\: Y_{5} \times Y_{6} \neq 1 \right\rangle \\
+C_{12} = \left\langle \left( X_{6},\: X_{1} \right),\: Y_{6} \times Y_{1} \neq 1 \right\rangle
+\end{aligned}
+\end{equation}
+\end{fleqn}
+
+
+
+
+
+
 
 \subsection{}
 \subsection{}
