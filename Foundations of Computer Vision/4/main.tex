@@ -73,108 +73,166 @@
 
 
 \section{}%1
-\subsection{الف}
-\subsubsection{\lr{mirror padding}}
-در این روش مقادیر خارج از مرز با مقادیر متناظرشان (قرینه نسبت به محور مرزی افقی یا عمودی) مقداردهی می‌شوند.
-\subsubsection{میانگین پیکسل‌های همسایه‌های موجود}
-در این روش میانگین سطح روشنایی بین پیکسل‌هایی از کرنل گرفته می‌شود که وجود دارند. به عبارت دیگر به پیکسل‌هایی که در کرنل وجود ندارند مقدار میانگین پیکسل‌های موجود را می‌دهیم و فیلتر میانگین را روی همه‌ی پیکسل‌های مرزی اجرا می‌کنیم.
+\subsection{\lr{Prewitt}}
+سطح روشنایی پیکسل‌های \lr{h}، \lr{m} و \lr{r} در تصویر فرضی زیر پس از اعمال یک فیلتر هموارکننده‌ی افقی با وزن‌های $\alpha$، $\beta$ و $\gamma$ (نسبت 1:1:1 وزن‌ها (متناظر فیلتر \lr{Prewitt} در جهت افقی) و نسبت 1:2:1 (متناظر فیلتر \lr{Sobel} در جهت افقی) حالات خاص هستند) به ترتیب برابر است با
+$
+\alpha g + \beta h + \gamma i
+$،
+$
+\alpha l + \beta m + \gamma n
+$
+و
+$
+\alpha q + \beta r + \gamma s
+$.
+پس از اعمال فیلتر مشتق‌گیر عمودی سطح روشنایی پیکسل \lr{m} برابر است با 
+$
+\alpha (q - g) + \beta (r - h) + \gamma (s - i)
+$. \\
+از طرفی با اعمال فیلتر \lr{Prewitt} روی تصویر، مقدار پیکسل \lr{m} برابر با 
+$
+(q - g) + (r - h) + (s - i)
+$
+می‌شود. از برابری سطح روشنایی‌های به دست آمده از دو روش نتیجه می‌گیریم که اعمال توالی فیلترهای یک بعدی هموارکننده افقی و بعد مشتق‌گیری عمودی معادل با اعمال فیلتر \lr{Prewitt} در جهت عمودی خواهد بود.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/1p1.jpg}
+    \caption
+	{
+مقایسه‌ی لبه‌ی راست قطعه‌ی گوشه‌ی چپ بالا با چند قطعه
+	}
+    \label{fig:fig1}
+\end{figure}
 
-\subsection{ب}
-وزن پیکسل‌های نزدیک به مرکز در فیلتر گوسی بیشتر از وزن این پیکسل‌ها در فیلتر میانگین است. از آنجایی که در \lr{zero-padding}، پیکسل‌های خراج از مرز با صفر مقداردهی می‌شوند، هنگام اعمال فیلتر میانگین، وزن آن‌ها (پیکسل‌های صفر) نسبت به فیلتر گوسی بیشتر است و نقاط مرزی را تیره‌تر می‌کند.
+\subsection{\lr{Sobel}}
 
 
 \section{}%2
-چون جمع وزن پیکسل‌ها در کرنل میانگین برابر یک است پس مجموع سطح روشنایی پیکسل‌ها قبل و بعد از اعمال فیلتر میانگین باهم برابر است. در مورد فیلتر گوسی نیز همین قضیه رخ می‌دهد. از آنجایی که انتگرال $-\inf$ تا $\inf$ تابعِ
-$
-w(x, y)=\frac{1}{2\pi\sigma^{2}}e^{-\frac{x^{2}+y^{2}}{2\sigma^{2}}}
-$
-برابر یک است، پس قبل و بعد از اعمال فیلتر گوسی مجموع سطح روشنایی پیکسل‌ها باهم برابر می‌شود. توجه شود که در مثال مطرح شده در آموزش مجازی این مجموع اندکی قبل و بعد از اعمال فیلترها متفاوت است و به این دلیل است که با مقادیر تقریبی سروکار داریم برای مثال در فیلتر میانگین وقتی سطح روشنایی 100 را بر 9 تقسیم می‌کنیم، مقدارِ
-$11.\overline{1}$
-به دست می‌آید، اما در محاسبات از
-$
-0.\overline{1}
-$
-صرف نظر می‌شود. به همین ترتیب درمورد فیلتر گوسی این اتفاق رخ می‎دهد.
+
 \section{}%3
 \subsection{\lr{Algorithm}}
-ابتدا تصاویر آبی و قرمز معیار برای ارقام 1 تا 9 تولید می‌کنیم (پیش‌پردازش). هر تصویر را می‌خوانیم و در هر مرحله (تا زمانی که پیکسل آبی یا قرمز وجود داشته باشد) موقعیت مکانی رقم رنگی‌ای که بالاتر و چپ‌تر است را پیدا می‌کنیم و مقدار \lr{MSE} (متناظرا نرم 1) بین آن قطعه از تصویر و تمام ارقام معیار هم‌رنگ تولید شده در مرحله‌ی پیش‌پردازش (و دارای ابعاد برابر با قطعه‌ی پیدا شده (با استفاده از \lr{resize})) را محاسبه می‌کنیم. مینیمم این مقادیر با احتمال بسیار بالا مربوط به رقم مورد نظر است. آن را به آرایه‌ی ارقام درون تصویر اضافه می‌کنیم و سپس آن قطعه را تماما سیاه می‌کنیم تا در مرحله بعد رقم بعدی پیدا شود. به این شکل جمع ارقام موجود در همه تصاویر با دقت 100 درصد به دست می‌آید.
-\subsection{\lr{Preprocessing}}
-\begin{latin}
-\lstinputlisting{sources/p3preprocessing.m}
-\end{latin}
+ابتدا 4 گوشه‌ی تصویر را فیکس می‌کنیم. برای پیدا کردن قطعه‌ی متناظر با موقعیت فعلی از میزان شباهت لبه‌ها با یکدیگر استفاده می‌کنیم. برای سنجش شباهت بین دو قطعه از پازل برای همسایگی در یک سطر (ستون)، بردار ویژگی‌های قطعه‌ی سمت چپ (بالا) را برابر سطح روشنایی‌های پیکسل‌های لبه‌ی راست (پایین) و بردار ویژگی‌های قطعه‌ی سمت راست (پایین) را برابر سطح روشنایی‌های پیکسل‌های لبه‌ی چپ (بالا) در نظر می‌گیریم. پیمایش تصویر را از گوشه‌ی چپ و بالا شروع می‌کنیم و توان 2ی فاصله اقلیدسی بردار ویژگی‌های تصویر خاکستری‌گونه‌ی همه‌ی قطعه‌های موجود را با تصویر خاکستری‌گونه‌ی قطعه‌ی فیکس شده حساب می‌کنیم. مینیمم همه این مقادیر مربوط به تصویری است که لبه‌ی آن بیشترین شباهت را از لحاظ سطح روشنایی با لبه‌ی تصویر فیکس شده دارد.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/1p3.jpg}
+    \caption
+	{
+مقایسه‌ی لبه‌ی راست قطعه‌ی گوشه‌ی چپ بالا با چند قطعه
+	}
+    \label{fig:fig1}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/2p3p.jpg}
+    \caption
+	{
+لبه‌ها (نمای دور)
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/2p3.jpg}
+    \caption
+	{
+لبه‌ها (نمای نزدیک)
+	}
+    \label{fig:fig1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/3p3p.jpg}
+    \caption
+	{
+لبه‌ها (نمای دور)
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/3p3.jpg}
+    \caption
+	{
+لبه‌ها (نمای نزدیک)
+	}
+    \label{fig:fig1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/4p3p.jpg}
+    \caption
+	{
+لبه‌ها (نمای دور)
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/4p3.jpg}
+    \caption
+	{
+لبه‌ها (نمای نزدیک)
+	}
+    \label{fig:fig1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/5p3p.jpg}
+    \caption
+	{
+لبه‌ها (نمای دور)
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/5p3.jpg}
+    \caption
+	{
+لبه‌ها (نمای نزدیک)
+	}
+    \label{fig:fig1}
+\end{figure}
+
+
 \subsection{\lr{Function}}
 \begin{latin}
-\lstinputlisting{sources/sumOnImage.m}
-\end{latin}
-\subsection{\lr{Driver code}}
-\begin{latin}
-\lstinputlisting{sources/p3.m}
-\end{latin}
-
-
-
-\section{}%4
-\subsection{\lr{Algorithm}}
-برای هر پیکسل دارای نویز فلفل نمکی (سطح روشنایی 0 و 255) یک کرنل 3 در 3 نظر می‌گیریم و آن را با میانگین سطح روشنایی پیکسل‌های همسایه‌اش در کرنل 3 در 3 که دارای نویز نیستند (در صورت وجود) مقداردهی می‌کنیم.سطح روشنایی سایر پیکسل‌ها (که یا همه‌ی همسایه‌هاشان نویز هستند یا خودشان فاقد نویز) را بدون تغییر می‌گذاریم. با فرض اینکه تصویر اصلی فاقد سطح روشنایی 0 یا 255 باشد (یا به تعداد کم) الگوریتم را تا جایی که هیچ پیکسل با سطح روشنایی 0 یا 255 باقی نماند تکرار می‌کنیم. این کار در تصاویر با نویز بالا که در آن بسیاری از پیکسل‌ها در همسایگی‌های 3 در 3ی خود همسایه‌ی غیر نویز ندارند می‌تواند تا حدی کیفیت تصاویر را ارتقا دهد. توجه شود که در صورتی که تصویر اصلی تعداد زیادی پیکسل 0 یا 255 داشته باشد آنگاه این الگوریتم ناکارآمد است. همچنین با توجه به اینکه ممکن است الگوریتم به تعداد زیادی اجرا شود (با توجه به درصد نویز و میزان پراکندگی آن) در کاربردهایی که زمان اهمیت دارد می‌تواند نا کارآمد باشد.
-\subsection{\lr{Function}}
-\begin{latin}
-\lstinputlisting{sources/removeNoise.m}
+\lstinputlisting{sources/borderDiff.m}
 \end{latin}
 
 \subsection{\lr{Driver code}}
+\subsubsection{الف}
 \begin{latin}
-\lstinputlisting{sources/p4.m}
+\lstinputlisting{sources/p3a.m}
+\end{latin}
+\subsubsection{ب}
+\begin{latin}
+\lstinputlisting{sources/p3b.m}
 \end{latin}
 
 \subsection{\lr{Results}}
-\subsubsection{اعمال الگوریتم روی پیکسل‌های دارای نویز}
-%table
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
-\begin{table}[H]
-\begin{tabular}{|cccccccc|c|}
-\hline
-\multicolumn{8}{|c|}{\textbf{مقدار \lr{PSNR}}}                                                                                                                                                                                                                                                                                                    & \multirow{3}{*}{\textbf{مقدار نویز}} \\ \cline{1-8}
-\multicolumn{2}{|c|}{\textbf{\lr{House}}}                                                & \multicolumn{2}{c|}{\textbf{\lr{Peppers}}}                                              & \multicolumn{2}{c|}{\textbf{\lr{Boat}}}                                                 & \multicolumn{2}{c|}{\textbf{\lr{Bridge}}}                          &                                      \\ \cline{1-8}
-\multicolumn{1}{|c|}{\textbf{روش شما}}      & \multicolumn{1}{c|}{\textbf{\lr{Median}}}  & \multicolumn{1}{c|}{\textbf{روش شما}}      & \multicolumn{1}{c|}{\textbf{\lr{Median}}}  & \multicolumn{1}{c|}{\textbf{روش شما}}      & \multicolumn{1}{c|}{\textbf{\lr{Median}}}  & \multicolumn{1}{c|}{\textbf{روش شما}}      & \textbf{\lr{Median}}  &                                      \\ \hline
-\multicolumn{1}{|c|}{\lr{41.2446}}          & \multicolumn{1}{c|}{\lr{37.5208}}          & \multicolumn{1}{c|}{\lr{39.8929}}          & \multicolumn{1}{c|}{\lr{39.5897}}          & \multicolumn{1}{c|}{\lr{38.4299}}          & \multicolumn{1}{c|}{\lr{36.9305}}          & \multicolumn{1}{c|}{\lr{35.5608}}          & \lr{34.2685}          & \textbf{10\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{38.0098}}          & \multicolumn{1}{c|}{\lr{30.8793}}          & \multicolumn{1}{c|}{\lr{36.9182}}          & \multicolumn{1}{c|}{\lr{31.6369}}          & \multicolumn{1}{c|}{\lr{35.1030}}          & \multicolumn{1}{c|}{\lr{30.8115}}          & \multicolumn{1}{c|}{\lr{32.3510}}          & \lr{29.1947}          & \textbf{20\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{35.6030}}          & \multicolumn{1}{c|}{\lr{25.3376}}          & \multicolumn{1}{c|}{\lr{35.0742}}          & \multicolumn{1}{c|}{\lr{25.7074}}          & \multicolumn{1}{c|}{\lr{33.0565}}          & \multicolumn{1}{c|}{\lr{24.9933}}          & \multicolumn{1}{c|}{\lr{30.3418}}          & \lr{24.2216}          & \textbf{30\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{33.6473}}          & \multicolumn{1}{c|}{\lr{20.3952}}          & \multicolumn{1}{c|}{\lr{33.0959}}          & \multicolumn{1}{c|}{\lr{20.7401}}          & \multicolumn{1}{c|}{\lr{31.3515}}          & \multicolumn{1}{c|}{\lr{20.4020}}          & \multicolumn{1}{c|}{\lr{28.7748}}          & \lr{19.8592}          & \textbf{40\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{31.8117}}          & \multicolumn{1}{c|}{\lr{16.4084}}          & \multicolumn{1}{c|}{\lr{31.6668}}          & \multicolumn{1}{c|}{\lr{16.5719}}          & \multicolumn{1}{c|}{\lr{29.9160}}          & \multicolumn{1}{c|}{\lr{16.6014}}          & \multicolumn{1}{c|}{\lr{27.2865}}          & \lr{16.2266}          & \textbf{50\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{30.3997}}          & \multicolumn{1}{c|}{\lr{13.6071}}          & \multicolumn{1}{c|}{\lr{30.1246}}          & \multicolumn{1}{c|}{\lr{13.3855}}          & \multicolumn{1}{c|}{\lr{28.4420}}          & \multicolumn{1}{c|}{\lr{13.4030}}          & \multicolumn{1}{c|}{\lr{25.8880}}          & \lr{13.1765}          & \textbf{60\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{28.2111}}          & \multicolumn{1}{c|}{\lr{10.8164}}          & \multicolumn{1}{c|}{\lr{28.1435}}          & \multicolumn{1}{c|}{\lr{10.7682}}          & \multicolumn{1}{c|}{\lr{26.7086}}          & \multicolumn{1}{c|}{\lr{10.9112}}          & \multicolumn{1}{c|}{\lr{24.3311}}          & \lr{10.6323}          & \textbf{70\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{25.6044}}          & \multicolumn{1}{c|}{\lr{8.7580}}           & \multicolumn{1}{c|}{\lr{25.9394}}          & \multicolumn{1}{c|}{\lr{8.6039}}           & \multicolumn{1}{c|}{\lr{24.7861}}          & \multicolumn{1}{c|}{\lr{8.7927}}           & \multicolumn{1}{c|}{\lr{22.5335}}          & \lr{8.4913}           & \textbf{80\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{22.6665}}          & \multicolumn{1}{c|}{\lr{6.9176}}           & \multicolumn{1}{c|}{\lr{22.3678}}          & \multicolumn{1}{c|}{\lr{6.8026}}           & \multicolumn{1}{c|}{\lr{21.8315}}          & \multicolumn{1}{c|}{\lr{6.9537}}           & \multicolumn{1}{c|}{\lr{20.0949}}          & \lr{6.7577}           & \textbf{90\%}                        \\ \hline
-\multicolumn{1}{|c|}{\textbf{\lr{31.9109}}} & \multicolumn{1}{c|}{\textbf{\lr{18.9600}}} & \multicolumn{1}{c|}{\textbf{\lr{31.4693}}} & \multicolumn{1}{c|}{\textbf{\lr{19.3118}}} & \multicolumn{1}{c|}{\textbf{\lr{29.9583}}} & \multicolumn{1}{c|}{\textbf{\lr{18.8666}}} & \multicolumn{1}{c|}{\textbf{\lr{27.4625}}} & \textbf{\lr{18.0921}} & \textbf{میانگین}                     \\ \hline
-\end{tabular}
-\end{table}
-%table
-\subsubsection{اعمال الگوریتم روی تمام پیکسل‌ها}
-%table
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
-\begin{table}[H]
-\begin{tabular}{|cccccccc|c|}
-\hline
-\multicolumn{8}{|c|}{\textbf{مقدار \lr{PSNR}}}                                                                                                                                                                                                                                                                                                    & \multirow{3}{*}{\textbf{مقدار نویز}} \\ \cline{1-8}
-\multicolumn{2}{|c|}{\textbf{\lr{House}}}                                                & \multicolumn{2}{c|}{\textbf{\lr{Peppers}}}                                              & \multicolumn{2}{c|}{\textbf{\lr{Boat}}}                                                 & \multicolumn{2}{c|}{\textbf{\lr{Bridge}}}                          &                                      \\ \cline{1-8}
-\multicolumn{1}{|c|}{\textbf{روش شما}}      & \multicolumn{1}{c|}{\textbf{\lr{Median}}}  & \multicolumn{1}{c|}{\textbf{روش شما}}      & \multicolumn{1}{c|}{\textbf{\lr{Median}}}  & \multicolumn{1}{c|}{\textbf{روش شما}}      & \multicolumn{1}{c|}{\textbf{\lr{Median}}}  & \multicolumn{1}{c|}{\textbf{روش شما}}      & \textbf{\lr{Median}}  &                                      \\ \hline
-\multicolumn{1}{|c|}{\lr{31.5807}}          & \multicolumn{1}{c|}{\lr{31.0373}}          & \multicolumn{1}{c|}{\lr{30.9779}}          & \multicolumn{1}{c|}{\lr{33.0908}}          & \multicolumn{1}{c|}{\lr{28.9522}}          & \multicolumn{1}{c|}{\lr{29.5318}}          & \multicolumn{1}{c|}{\lr{26.4315}}          & \lr{26.4097}          & \textbf{10\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{31.1686}}          & \multicolumn{1}{c|}{\lr{27.0972}}          & \multicolumn{1}{c|}{\lr{30.5863}}          & \multicolumn{1}{c|}{\lr{28.4362}}          & \multicolumn{1}{c|}{\lr{28.6520}}          & \multicolumn{1}{c|}{\lr{26.7574}}          & \multicolumn{1}{c|}{\lr{26.1935}}          & \lr{24.7094}          & \textbf{20\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{30.6399}}          & \multicolumn{1}{c|}{\lr{22.2786}}          & \multicolumn{1}{c|}{\lr{30.1847}}          & \multicolumn{1}{c|}{\lr{23.4262}}          & \multicolumn{1}{c|}{\lr{28.2411}}          & \multicolumn{1}{c|}{\lr{22.7045}}          & \multicolumn{1}{c|}{\lr{25.8358}}          & \lr{21.6243}          & \textbf{30\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{29.9686}}          & \multicolumn{1}{c|}{\lr{18.3987}}          & \multicolumn{1}{c|}{\lr{29.6208}}          & \multicolumn{1}{c|}{\lr{18.7552}}          & \multicolumn{1}{c|}{\lr{27.7388}}          & \multicolumn{1}{c|}{\lr{18.5878}}          & \multicolumn{1}{c|}{\lr{25.3857}}          & \lr{17.9888}          & \textbf{40\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{27.7914}}          & \multicolumn{1}{c|}{\lr{14.8342}}          & \multicolumn{1}{c|}{\lr{28.8453}}          & \multicolumn{1}{c|}{\lr{15.1718}}          & \multicolumn{1}{c|}{\lr{27.0795}}          & \multicolumn{1}{c|}{\lr{14.9653}}          & \multicolumn{1}{c|}{\lr{24.7770}}          & \lr{14.6814}          & \textbf{50\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{27.6941}}          & \multicolumn{1}{c|}{\lr{12.0371}}          & \multicolumn{1}{c|}{\lr{27.7857}}          & \multicolumn{1}{c|}{\lr{12.2067}}          & \multicolumn{1}{c|}{\lr{26.0641}}          & \multicolumn{1}{c|}{\lr{12.1876}}          & \multicolumn{1}{c|}{\lr{23.1835}}          & \lr{11.8506}          & \textbf{60\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{25.6126}}          & \multicolumn{1}{c|}{\lr{9.9807}}           & \multicolumn{1}{c|}{\lr{26.2016}}          & \multicolumn{1}{c|}{\lr{9.8579}}           & \multicolumn{1}{c|}{\lr{24.3833}}          & \multicolumn{1}{c|}{\lr{9.9448}}           & \multicolumn{1}{c|}{\lr{22.8620}}          & \lr{9.7641}           & \textbf{70\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{23.6689}}          & \multicolumn{1}{c|}{\lr{8.0554}}           & \multicolumn{1}{c|}{\lr{23.6133}}          & \multicolumn{1}{c|}{\lr{7.9377}}           & \multicolumn{1}{c|}{\lr{22.9033}}          & \multicolumn{1}{c|}{\lr{8.1638}}           & \multicolumn{1}{c|}{\lr{21.1757}}          & \lr{7.9810}           & \textbf{80\%}                        \\ \hline
-\multicolumn{1}{|c|}{\lr{21.1087}}          & \multicolumn{1}{c|}{\lr{6.6111}}           & \multicolumn{1}{c|}{\lr{20.6154}}          & \multicolumn{1}{c|}{\lr{6.4928}}           & \multicolumn{1}{c|}{\lr{20.7581}}          & \multicolumn{1}{c|}{\lr{6.6635}}           & \multicolumn{1}{c|}{\lr{19.2518}}          & \lr{6.4092}           & \textbf{90\%}                        \\ \hline
-\multicolumn{1}{|c|}{\textbf{\lr{27.6926}}} & \multicolumn{1}{c|}{\textbf{\lr{16.7034}}} & \multicolumn{1}{c|}{\textbf{\lr{27.6034}}} & \multicolumn{1}{c|}{\textbf{\lr{17.2639}}} & \multicolumn{1}{c|}{\textbf{\lr{26.0858}}} & \multicolumn{1}{c|}{\textbf{\lr{16.6118}}} & \multicolumn{1}{c|}{\textbf{\lr{23.8996}}} & \textbf{\lr{15.7132}} & \textbf{میانگین}                     \\ \hline
-\end{tabular}
-\end{table}
-%table
+\subsubsection{الف}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/p3a.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
 
-
+\subsubsection{ب}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/p3b.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
 
 
 

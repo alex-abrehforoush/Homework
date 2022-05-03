@@ -18,7 +18,7 @@ J(1: r, 1: r, :) = C11;
 J(1: r, column - r + 1: column, :) = C18;
 J(row - r + 1: row, 1: r, :) = C51;
 J(row - r + 1: row, column - r + 1: column, :) = C58;
-%imtool(J);
+
 patches = uint8(zeros(number_of_pieces, r, r, 3));
 for i = 1: number_of_pieces
     patches(i, :, :, :) = imread(['images\Q3\Puzzle_2_160\' 'Patch_' num2str(i) '.tif']);
@@ -38,7 +38,7 @@ for i = 1: r: row
             [min_value, min_index] = min(values);
             J(i: i + r - 1, j: j + r - 1, :) = patches(min_index, :, :, :);
             solution(ceil(i / r), ceil(j / r)) = min_index;
-            %imtool(J);
+            imshow(J, []);
         else
             base = J(i - r: i - 1, j: j + r - 1, :);
             values = uint32(zeros(1, number_of_pieces));
@@ -54,7 +54,7 @@ for i = 1: r: row
             [min_value, min_index] = min(values);
             J(i: i + r - 1, j: j + r - 1, :) = patches(min_index, :, :, :);
             solution(ceil(i / r), ceil(j / r)) = min_index;
-            %imtool(J);
+            imshow(J, []);
         end
     end
 end
