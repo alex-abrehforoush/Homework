@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  3 MAY 2022 17:02
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  4 MAY 2022 08:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -941,6 +941,9 @@ LaTeX Warning: Label `fig:fig1' multiply defined.
 
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1065,54 +1068,54 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 File: figures/1p1.jpg Graphic file (type bmp)
 <figures/1p1.jpg>
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 103.
+(Font)              scaled to size 10.79997pt on input line 101.
 
 
 LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 103.
+(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 101.
 
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 103.
+(Font)              scaled to size 10.79997pt on input line 101.
 File: figures/1p3.jpg Graphic file (type bmp)
 <figures/1p3.jpg>
-[1]
+[1] [2]
 File: figures/2p3p.jpg Graphic file (type bmp)
 <figures/2p3p.jpg>
 File: figures/2p3.jpg Graphic file (type bmp)
 <figures/2p3.jpg>
- [2] [3]
+ [3] [4]
 File: figures/3p3p.jpg Graphic file (type bmp)
 <figures/3p3p.jpg>
 File: figures/3p3.jpg Graphic file (type bmp)
 <figures/3p3.jpg>
- [4] [5]
+ [5] [6]
 File: figures/4p3p.jpg Graphic file (type bmp)
 <figures/4p3p.jpg>
 File: figures/4p3.jpg Graphic file (type bmp)
 <figures/4p3.jpg>
- [6] [7]
+ [7] [8]
 File: figures/5p3p.jpg Graphic file (type bmp)
 <figures/5p3p.jpg>
 File: figures/5p3.jpg Graphic file (type bmp)
 <figures/5p3.jpg>
- [8] [9] (./sources/borderDiff.m
+ [9] [10] (./sources/borderDiff.m
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 (Font)              scaled to size 5.0pt on input line 1.
- [10])
+ [11])
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 209.
+(Font)              scaled to size 11.99997pt on input line 227.
 
-(./sources/p3a.m [11]) [12] (./sources/p3b.m [13])
+(./sources/p3a.m [12]) [13] (./sources/p3b.m [14])
 File: figures/p3a.jpg Graphic file (type bmp)
 <figures/p3a.jpg>
- [14]
+ [15]
 File: figures/p3b.jpg Graphic file (type bmp)
 <figures/p3b.jpg>
 
 
-LaTeX Warning: Empty `thebibliography' environment on input line 269.
+LaTeX Warning: Empty `thebibliography' environment on input line 287.
 
-[15] [16] (./main.aux)
+[16] [17] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1132,4 +1135,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  97i,12n,122p,1290b,2197s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (17 pages).
+Output written on main.pdf (18 pages).

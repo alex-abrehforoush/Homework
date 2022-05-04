@@ -5,9 +5,8 @@ imtool close all
 %%%%%%%%%%%%%%%%
 temp = imread("images\Q3\Puzzle_2_160\Corner_1_1.tif");
 r = size(temp, 1);
-temp = imread("images\Q3\Puzzle_2_160\Shuffled_Patches.tif");
-row = size(temp, 1);
-column = size(temp, 2);
+row = 1200;
+column = 1920;
 number_of_pieces = (row / r) * (column / r) - 4;
 C11 = imread("images\Q3\Puzzle_2_160\Corner_1_1.tif");
 C18 = imread("images\Q3\Puzzle_2_160\Corner_1_16.tif");
