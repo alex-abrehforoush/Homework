@@ -5,6 +5,7 @@
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{nccmath}
+\usepackage{tikz}
 \usepackage{fancyhdr}
 \usepackage{listings}
 \usepackage{xcolor}
@@ -17,6 +18,8 @@
 \usepackage[font={small,it}]{caption}
 \usepackage{placeins}
 \usepackage{xepersian}
+
+
 
 %\DeclareMathOperator*{\btie}{\bowtie}
 \addbibresource{bibliography.bib}
@@ -159,37 +162,18 @@ $f(i, j)\times d(\phi(i), \phi(j))$
 
 
 \section{مدل‌سازی}
-\subsection{\lr{representation (definition of individuals)}}
-نمایش جایگشت نمایش مناسبی برای این مسئله است. هر \lr{individual} در این مسئله را می‌توان به $d!$ بردار
-$1 \times n$
-نظیر کرد به طوری $n$ تعداد بسته‌ها و $d$ تعداد جعبه‌های مورد نیاز برای یک \lr{individual}  است و نحوه‌ی قرار گرفتن تعدادی بسته در هر جعبه به این شکل است که جایگشت را از چپ به راست پیمایش می‌کنیم و به صورت حریصانه تا جایی که ممکن است بسته در جعبه‌ی فعلی قرار می‌دهیم و در صورتی که جعبه جا نداشت سراغ جعبه‌ی جدید می‌رویم. البته هر دو جایگشت مختلف الزاما متناظر با دو \lr{individual} متفاوت نیستند و می‌توانند نظیر یک \lr{individual} یکتا باشند (جعبه‌ها یکسان‌اند و ترتیب قرارگیری جعبه‌ها اهمیتی ندارد و صرفا قرارگیری یا عدم قرارگیری تعدادی بسته در یک جعبه باعث تمایز \lr{individual}ها می‌شود. پس تعداد حالات $d!$ می‌شود.)
-\newline
-مجموعه‌ی شامل همه‌ی جایگشت‌های اعداد 1 تا $n$ را با $P_{n}$ نشان می‌دهیم.
-\subsection{\lr{evaluation function (or fitness function)}}
-حال \lr{fitness function} را می‌توانیم به شکل زیر تعریف کنیم:
-\begin{latin}
-$
-\newline
-f: P_{n} \to \mathbb{W}
-\newline
-x \in P_{n}
-\newline
-f(x) = Number \space of \space required \space boxes \space for \space x
-$
-\end{latin}
+\subsection{}
+شهرها را با $C_{i}$ و جمعیت آن‌ها را با $p_{i}$ نمایش می‌دهیم. به ازای هر جاده بین دو شهر $C_{i}$ و $C_{j}$ قیدِ
+\begin{equation}
+\left| p_{i} - p_{j} \right| \ge 2000
+\end{equation}
+را داریم. همچنین برای براي جلوگيري از به وجود آمدن كلان‌شهر قیدِ
+\begin{equation}
+\max_{i}\left\{ p_{i} \right\} \le 3\min_{j}\left\{ p_{j} \right\}
+\end{equation}
+را داریم.
 
-
-\subsection{\lr{population}}
-جمعیت اولیه را می‌توان متشکل از تعدادی (مثلا 4) جایگشت تصادفی از $P_{n}$ پنداشت.
-\subsection{\lr{parent selection mechanism}}
-می‌توان متناسب با مقدار \lr{fitness} هر عضو از جمعیت، یک احتمال والد شدن به آن عضو نسبت داد و والد را از اعضای جمعیت با یک احتمال خاص انتخاب کرد (مانند مسئله‌ی $n$وزیر).
-\subsection{\lr{variation operators, recombination and mutation}}
-\subsubsection{\lr{recombination (crossover)}}
-یک موضع دلخواه انتخاب می‌کنیم و دو والد را از آن موضعِ یکتا به دو بخش تقسیم می‌کنیم. بخش اول فرزند اول (دوم) را به ترتیب از بخش اول والد اول (دوم) انتخاب می‌کنیم و برای بخش دوم فرزند اول (دوم) والد دوم (اول) را از چپ پیمایش می‌کنیم و هر درایه‌ای که در بخش اول ظاهر نشده بود را به همان ترتیبی که در والد واقع شده است وارد فرزند می‌کنیم تا حالت جایگشت بودن حفظ شود.
-\subsubsection{\lr{mutation}}
-\lr{2-swap} می‌تواند یک \lr{mutation} مناسب برای این مسئله باشد. در واقع با یک احتمال دو درایه در فرزند را باهم جابه‌جا می‌کنیم. به این شکل جایگشت حفظ می‌شود.
-\subsection{\lr{survivor selection mechanism (replacement)}}
-مکانیسک انتخاب بازمانده می‌تواند به صورت \lr{fitness-based} یا \lr{age-based} باشد که در واقع در مکانیسم اول همه اعضای جمعیت را بر اساس \lr{fitness}شان رتبه بندی می‌کنیم و رتبه‌های بالا را به عنوان نسل بعد انتخاب می‌کنیم و در مکانیسم دوم می‌توان اعضای جوان‌تر (فرزندها) را صرفا حفظ کرد و والدها را کلا کنار بگذاریم.
+\subsection{}
 
 
 
@@ -199,66 +183,49 @@ $
 
 
 \section{برنامه‌ریزی کلاس‌ها}
-\subsection{\lr{representation (definition of individuals)}}
-نمایش جایگشت نمایش مناسبی برای این مسئله است. هر \lr{individual} در این مسئله را می‌توان به یک بردار
-$1 \times n^2$
-نظیر کرد به طوری که درایه‌ی $i$ام آن، نظیر درایه‌ی سطرِ
+\subsection{}
+مسئله را به شکل \lr{CSP}ِ زیر مدل می‌کنیم: \\
 $
-\left\lceil \frac{i}{n} \right\rceil
-$
-و ستونِ
-$
-i \equiv r \pmod{n} 
-$
-(که $r$ باقی‌مانده است) در ماتریس \lr{Magic Square} است.
-\newline
-مجموعه‌ی شامل همه‌ی جایگشت‌های اعداد 1 تا $i$ را با $P_{i}$ نشان می‌دهیم.
-
-
-
-
-
-\subsection{\lr{evaluation function (or fitness function)}}
-حالت ایده‌آل زمانی است که مجموع همه‌ی درایه‌های سطرها(یا ستون‌ها یا قطرها) باهم برابر شوند. پس مجموع درایه‌های هر سطر، ستون یا قطر ($S$) برابر است با:
-
-\begin{latin}
-$
-n \times S = \sum_{i = 1}^{n^2}i = \frac{n^2 \times(1 + n^2)}{2}
-\Longrightarrow
-S = \frac{n \times(1 + n^2)}{2}
-$
-\end{latin}
-حال به عنوان \lr{fitness function} می‌توانیم مجموعِ فاصله‌های جمعِ درایه‌های هر سطر، ستون یا قطر را از ایده‌آل محاسبه کنیم. پس \lr{fitness function}  به شکل زیر تعریف می‌شود:
-
-\begin{latin}
-$
-\newline
-f: P_{n^2} \to \mathbb{Z}
-\newline
-f(x) =
-n (n+1) (n^2 + 1)-
-(   \sum_{i=1}^{n}(\sum_{j=1}^{n} \left| S - x_{i, j} \right|)
-+ \sum_{j=1}^{n}(\sum_{i=1}^{n} \left| S - x_{i, j} \right|)
-+ \sum_{i=1}^{n}\left| S - x_{i, i} \right|
-+ \sum_{i=1}^{n}\left| S - x_{i, n-i+1} \right|)
-$
-\end{latin}
-توجه شود چون معمولا در الگوریتم‌های تکامل مسئله را بیشینه‌سازی در نظر می‌گیرند، در اینجا عبارت را از یک مقدار بیشینه کم کردیم تا با یک مسئله‌ی بیشینه‌سازی رو‌به‌رو باشیم. در واقع فیتنسِ بهترین \lr{individual} برابر
-$
-n (n+1) (n^2 + 1)
+X_{1} = \text{استاد کلاس 1} \\
+X_{2} = \text{استاد کلاس 2} \\
+X_{3} = \text{استاد کلاس 3} \\
+X_{4} = \text{استاد کلاس 4} \\
+X_{5} = \text{استاد کلاس 5} \\
+\\
+D_{1} = \left\{ \text{پ} \right\} \\
+D_{2} = \left\{ \text{ب}, \: \text{پ} \right\} \\
+D_{3} = \left\{ \text{الف}, \: \text{ب}, \: \text{پ} \right\} \\
+D_{4} = \left\{ \text{الف}, \: \text{ب}, \: \text{پ} \right\} \\
+D_{5} = \left\{ \text{ب}, \: \text{پ} \right\} \\
+\\
+C_{1} = \left\langle \left( X_{1},\: X_{2} \right),\: X_{1} \neq X_{2} \right\rangle \\
+C_{2} = \left\langle \left( X_{2},\: X_{3} \right),\: X_{2} \neq X_{3} \right\rangle \\
+C_{3} = \left\langle \left( X_{3},\: X_{4} \right),\: X_{3} \neq X_{4} \right\rangle \\
+C_{4} = \left\langle \left( X_{4},\: X_{2} \right),\: X_{4} \neq X_{2} \right\rangle \\
+C_{5} = \left\langle \left( X_{4},\: X_{5} \right),\: X_{4} \neq X_{5} \right\rangle \\
+C_{6} = \left\langle \left( X_{5},\: X_{3} \right),\: X_{5} \neq X_{3} \right\rangle \\
+\\
+\\
+X = \left\{ X_{1},\: X_{2},\: X_{3},\: X_{4},\: X_{5} \right\} \\
+D = \left\{ D_{1},\: D_{2},\: D_{3},\: D_{4},\: D_{5} \right\} \\
+C = \left\{ C_{1},\: C_{2},\: C_{3},\: C_{4},\: C_{5},\: C_{6} \right\} \\
 $
 
-\subsection{\lr{population}}
-جمعیت اولیه را می‌توان متشکل از تعدادی (مثلا 4) جایگشت تصادفی از $P_{n^2}$ پنداشت.
-\subsection{\lr{parent selection mechanism}}
-می‌توان متناسب با مقدار \lr{fitness} هر عضو از جمعیت، یک احتمال والد شدن به آن عضو نسبت داد و والد را از اعضای جمعیت با یک احتمال خاص انتخاب کرد (مانند مسئله‌ی $n$وزیر).
-\subsection{\lr{variation operators, recombination and mutation}}
-\subsubsection{\lr{recombination (crossover)}}
-یک موضع دلخواه انتخاب می‌کنیم و دو والد را از آن موضعِ یکتا به دو بخش تقسیم می‌کنیم. بخش اول فرزند اول (دوم) را به ترتیب از بخش اول والد اول (دوم) انتخاب می‌کنیم و برای بخش دوم فرزند اول (دوم) والد دوم (اول) را از چپ پیمایش می‌کنیم و هر درایه‌ای که در بخش اول ظاهر نشده بود را به همان ترتیبی که در والد واقع شده است وارد فرزند می‌کنیم تا حالت جایگشت بودن حفظ شود.
-\subsubsection{\lr{mutation}}
-\lr{2-swap} می‌تواند یک \lr{mutation} مناسب برای این مسئله باشد. در واقع با یک احتمال دو درایه در فرزند را باهم جابه‌جا می‌کنیم. به این شکل جایگشت حفظ می‌شود.
-\subsection{\lr{survivor selection mechanism (replacement)}}
-مکانیسک انتخاب بازمانده می‌تواند به صورت \lr{fitness-based} یا \lr{age-based} باشد که در واقع در مکانیسم اول همه اعضای جمعیت را بر اساس \lr{fitness}شان رتبه بندی می‌کنیم و رتبه‌های بالا را به عنوان نسل بعد انتخاب می‌کنیم و در مکانیسم دوم می‌توان اعضای جوان‌تر (فرزندها) را صرفا حفظ کرد و والدها را کلا کنار بگذاریم.
+\subsection{}
+%graph
+\begin{tikzpicture}
+  [scale=.8,auto=left,every node/.style={circle,fill=black!20}]
+  \node (n1) at (0,3.3125) {$X_{1}$};
+  \node (n2) at (3.197,0.91475)  {$X_{2}$};
+  \node (n3) at (1.9285,-2.5)  {$X_{3}$};
+  \node (n4) at (-1.9285,-2.5) {$X_{4}$};
+  \node (n5) at (-3.197,0.91475)  {$X_{5}$};
+
+  \foreach \from/\to in {n1/n2,n2/n3,n2/n4,n3/n4,n3/n5,n4/n5}
+    \draw (\from) -- (\to);
+
+\end{tikzpicture}
+%graph
 
 \section{\lr{Puzzle Cryptarithmetic}}
 
