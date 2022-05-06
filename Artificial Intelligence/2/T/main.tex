@@ -124,42 +124,68 @@ C_{12} = \left\langle \left( X_{6},\: X_{1} \right),\: Y_{6} \times Y_{1} \neq 1
 
 \subsection{}
 \subsection{}
+با توجه به اینکه دامنه‌های متغیرهای \lr{$X_{4}$} و \lr{$X_{6}$} تک عضوی است و سایر متغیرها دامنه‌های بیش از یک عضوی دارند، طبق \lr{MRV} متغیرهای \lr{$X_{4}$} و \lr{$X_{6}$} پیش از بقیه مقداردهی می‌شوند.
 \subsection{}
+در این صورت داریم: \\
+\begin{fleqn}
+\begin{equation}
+\begin{aligned}
+X_{5} = \text{زندان} \:\:\:\: \Rightarrow \:\:\:\:
+Y_{5} = 0
+\end{aligned}
+\end{equation}
+\end{fleqn}
+برای اینکه قیدهای \lr{$C_{4}$} و \lr{$C_{5}$} ارضا شوند، دامنه‌های \lr{$X_{4}$} و \lr{$X_{6}$} برابر $\left\{ چاه \right\}$ می‌شود. با انتخاب مقدار چاه برای دو متغیر، و برای ارضای قیود \lr{$C_{1}$} و \lr{$C_{2}$} و \lr{$C_{7}$} و \lr{$C_{8}$}، دو راه‌حل ممکن زیر برای این مسئله وجود دارد: \\
+\begin{fleqn}
+\begin{equation}
+\begin{aligned}
+X = \left( \text{زندان}, \: \text{خروج}, \: \text{زندان}, \: \text{چاه}, \: \text{زندان}, \: \text{چاه} \right) \\
+X = \left( \text{خروج}, \: \text{زندان}, \: \text{خروج}, \: \text{چاه}, \: \text{زندان}, \: \text{چاه} \right) \\
+\end{aligned}
+\end{equation}
+\end{fleqn}
+
 \subsection{}
 \subsection{}
 
 
 
 \section{مسئله سه رنگ}
-هر \lr{Candidate solution} در این مسئله را می‌توان نظیر یک رشته به طول $n$ از اعداد موجود در مجموعه‌ی $G_{l}$ در نظر گرفت (نمایش اعداد صحیح) به طوری که $i$ بودن کاراکترِ $m$ام به معنی قرار گرفتن جسمِ $m$ام در ستونِ $i$ام است. همچنین مجموعه‌ی همسایگی نظیر یک \lr{Candidate solution} را می‌توان به شکل مجموعه‌ی همه‌ی رشته‌هایی که با رشته مذکور دقیقا در یک کاراکتر اختلاف دارند، تعریف کرد.
+از آنجایی که هیچ راسی وجود ندارد که با مقداردهی آن دامنه‌ی راسی دیگر تهی شود پس  \lr{arc-consistency} برقرار است. همچنین از آنجایی که هیچ دو راسی وجود ندارد که با مقداردهی آن‌ها، دامنه‌ی راسی دیگر تهی شود \lr{path-consistency} نیز در این مسئله برقرار است. اما چون اگر سه راس را با سه رنگ متفاوت رنگ کنیم، برای راس چهارم رنگی باقی نمی‌ماند پس \lr{4-consistency} برقرار نمی‌باشد. با اضافه کردن قیود باینری زیر می‌توانیم مسئله را \lr{4-consistent} کنیم ($X_{i}$ها رنگ‌های نظیر راس‌های گراف هستند). \\
+\begin{fleqn}
+\begin{equation}
+\begin{aligned}
+C_{1} = \left\langle \left( X_{1},\: X_{2} \right),\: X_{1} \neq X_{2} \right\rangle \\
+C_{2} = \left\langle \left( X_{2},\: X_{3} \right),\: X_{2} \neq X_{3} \right\rangle \\
+C_{3} = \left\langle \left( X_{3},\: X_{4} \right),\: X_{3} \neq X_{4} \right\rangle \\
+C_{4} = \left\langle \left( X_{4},\: X_{1} \right),\: X_{4} \neq X_{1} \right\rangle \\
+C_{5} = \left\langle \left( X_{1},\: X_{3} \right),\: X_{1} \neq X_{3} \right\rangle \\
+C_{6} = \left\langle \left( X_{4},\: X_{2} \right),\: X_{4} \neq X_{2} \right\rangle
+\end{aligned}
+\end{equation}
+\end{fleqn}
 
 
 
 \section{\lr{consistency}}
-هر \lr{Candidate solution} در این مسئله را می‌توان به یک جایگشت از اعداد 1 تا $n$ نظیر کرد به طوری که $i$ بودنِ جایگاه $m$ام به معنی نگاشتِ مرکز رفاهیِ $i$ به مکانِ $m$ است. مجموعه‌ی شامل همه‌ی جایگشت‌های اعداد 1 تا $n$ را با $P_{n}$ نشان می‌دهیم.
-به ازای هر جایگشت در $P_{n}$، تابعِ $\phi$ را تعریف می‌کنیم نگاشت از مرکز رفاهی به مکان نظیرِ آن مرکز رفاهی در آن جایگشت. همچنین مجموعه‌ی 
-$
-S_{n}
-$
-را تعریف می‌کنیم مجموعه‌ی همه‌ی $\phi$ها. 
- تابعِ 
-$
-d(i, j)
-$
-فاصله‌ی بین دو مکان و تابعِ 
-$
-f(i, j)
-$
-جریان بین دو مرکز رفاهی را برمی‌گرداند. در واقع کمینه‌سازیِ تابع هدف به شکل زیر شکل می‌گیرد:
-\begin{latin}
-$
-min_{\phi \in S_{n}}(\sum_{i=1}^{n}\sum_{j=1}^{n} f(i, j)\times d(\phi(i), \phi(j)))
-$
-\end{latin}
-در جایگشت همسایگی‌ها به شکل \lr{2-swap} می‌توانند تعریف شوند که در این صورت تابعِ هدف نظیر همسایه‌ی یک \lr{Candidate solution} تنها با تغییر
-$f(i, j)\times d(\phi(i), \phi(j))$
-به ازای $i$ و $j$های جایگزین شده میسر است و لازم به محاسبه مجدد همه‌ی عبارات نیست.
-
+\subsection{}
+خیر. الزامی وجود ندارد. در واقع می‌توان با مقداردهی مناسب، درجات بالای سازگاری را محقق کنیم، درحالی که درجات پایین سازگاری برقرار نباشند. برای مثال در \lr{CSP}ِ $P$ \lr{arc-consistency} برقرار می‌باشد، اما \lr{node-consistency} نداریم. \\
+\begin{fleqn}
+\begin{equation}
+\begin{aligned}
+P = (X,\:D,\:C) \\ \\
+X = \left\{ X_{1},\:X_{2} \right\} \\
+D = \left\{ D_{1},\:D_{2} \right\} \\
+C = \left\{ C_{1},\:C_{2} \right\} \\ \\
+D_{1} = \left\{ 1,\:2,\:3,\:4 \right\} \\
+D_{2} = \left\{ 1,\:2,\:3,\:4 \right\} \\
+C = \left\{ C_{1},\:C_{2} \right\}\\
+C_{1} = \left\langle \left( X_{1} \right),\: X_{1} \le 3 \right\rangle\\
+C_{2} = \left\langle \left( X_{1},\: X_{2} \right),\: X_{1} = X_{2} \right\rangle
+\end{aligned}
+\end{equation}
+\end{fleqn}
+\subsection{}
 
 \section{مدل‌سازی}
 \subsection{}

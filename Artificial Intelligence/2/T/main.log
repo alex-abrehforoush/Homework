@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  4 MAY 2022 17:05
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  6 MAY 2022 18:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1360,19 +1360,42 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
 (Font)              scaled to size 5.99998pt on input line 86.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 134.
+(Font)              scaled to size 10.0pt on input line 127.
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--131
+[][]
+ []
+
+Missing character: There is no چ ("686) in font cmmi10!
+Missing character: There is no ا ("627) in font cmmi10!
+Missing character: There is no ه ("647) in font cmmi10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--140
+[][]
+ []
+
+[1]
+Underfull \hbox (badness 10000) in paragraph at lines 154--156
+[][]
+ []
+
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 138.
- [1]
-Underfull \hbox (badness 10000) in paragraph at lines 187--213
+(Font)              scaled to size 14.4pt on input line 170.
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--174
 [][]
  []
 
 [2]
+Underfull \hbox (badness 10000) in paragraph at lines 213--239
+[][]
+ []
 
-LaTeX Warning: Empty `thebibliography' environment on input line 250.
+[3]
 
-[3] (./main.aux)
+LaTeX Warning: Empty `thebibliography' environment on input line 276.
+
+[4] [5] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1389,4 +1412,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  97i,17n,122p,4798b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (4 pages).
+Output written on main.pdf (6 pages).
