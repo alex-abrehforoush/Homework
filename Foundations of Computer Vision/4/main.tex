@@ -126,10 +126,41 @@ $
 
 
 \section{}%2
-
-
-
-
+حین عبور از لبه‌ها در تصویر، یک جهش در اختلاف سطح روشنایی دو پیکسل مجاور رخ می‌دهد. کرنل زیر را در نظر بگیرید:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/2a.jpg}
+    \caption
+	{
+کرنل مشتق دوم افقی
+	}
+    \label{fig:fig1}
+\end{figure}
+با گذارندن این کرنل از روی لبه، چون همواره پیکسل وسط کرنل یا روی سمت راست لبه است یا سمت چپ لبه، مقدار مشتق دوم در پیکسل قرار گرفته در لبه‌ی با سطح روشنایی کمتر (بیشتر)، مثبت (منفی). در تصویر زیر اگر داشته باشیم
+ $a \ge b$ ($b \ge a$) 
+مقدار مشتق دوم برای پیکسل وسط برابر $a-b$ می‌شود که با توجه به فرض مقدار مثبت (منفی) است. همچنین مقدار مشتق دوم برای پیکسل دوم از سمت چپ برابر $b-a$ می‌شود که با توجه به فرض مقدار منفی (مثبت) است. بنابراین \lr{zero-crossing} رخ می‌دهد.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/2c.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+مثال زیر را در نظر بگیرید.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/2d.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/2e.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
 
 \section{}%3
 \subsection{\lr{Algorithm}}

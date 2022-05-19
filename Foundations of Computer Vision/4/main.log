@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  4 MAY 2022 08:02
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  18 MAY 2022 00:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -944,6 +944,18 @@ LaTeX Warning: Label `fig:fig1' multiply defined.
 
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1076,9 +1088,18 @@ LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
 
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
 (Font)              scaled to size 10.79997pt on input line 101.
+File: figures/2a.jpg Graphic file (type bmp)
+<figures/2a.jpg>
+[1]
+File: figures/2c.jpg Graphic file (type bmp)
+<figures/2c.jpg>
+File: figures/2d.jpg Graphic file (type bmp)
+<figures/2d.jpg>
+File: figures/2e.jpg Graphic file (type bmp)
+<figures/2e.jpg>
 File: figures/1p3.jpg Graphic file (type bmp)
 <figures/1p3.jpg>
-[1] [2]
+ [2]
 File: figures/2p3p.jpg Graphic file (type bmp)
 <figures/2p3p.jpg>
 File: figures/2p3.jpg Graphic file (type bmp)
@@ -1103,7 +1124,7 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 (Font)              scaled to size 5.0pt on input line 1.
  [11])
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 227.
+(Font)              scaled to size 11.99997pt on input line 262.
 
 (./sources/p3a.m [12]) [13] (./sources/p3b.m [14])
 File: figures/p3a.jpg Graphic file (type bmp)
@@ -1113,7 +1134,7 @@ File: figures/p3b.jpg Graphic file (type bmp)
 <figures/p3b.jpg>
 
 
-LaTeX Warning: Empty `thebibliography' environment on input line 287.
+LaTeX Warning: Empty `thebibliography' environment on input line 322.
 
 [16] [17] (./main.aux)
 
@@ -1127,10 +1148,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18187 strings out of 476919
- 367954 string characters out of 5825424
- 1575449 words of memory out of 5000000
- 37856 multiletter control sequences out of 15000+600000
+ 18208 strings out of 476919
+ 368242 string characters out of 5825424
+ 1569449 words of memory out of 5000000
+ 37873 multiletter control sequences out of 15000+600000
  404156 words of font info for 63 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,12n,122p,1290b,2197s stack positions out of 5000i,500n,10000p,200000b,80000s
