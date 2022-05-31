@@ -23,17 +23,17 @@ pca.fit(alpha_v)
 ##########################################################
 pca = PCA(n_components = 3)
 pca.fit(alpha_v)
-print(str(100 * np.sum(pca.explained_variance_ratio_)) + " percent of data is preserved in 3 dimensions!")
+#print(str(100 * np.sum(pca.explained_variance_ratio_)) + " percent of data is preserved in 3 dimensions!")
 min_dim = 0
 pca = PCA(n_components = 8)
 pca.fit(alpha_v)
-for i in range(1, dim):
-    pca = PCA(n_components = i)
-    pca.fit(alpha_v)
-    if (np.sum(pca.explained_variance_ratio_) >= 0.9):
-        min_dim = i
-        break
-print("Almost " + str(100 * np.sum(pca.explained_variance_ratio_)) + " percent of data is preserved in at least " + str(min_dim) + " dimensions!")
+# for i in range(1, dim):
+#     pca = PCA(n_components = i)
+#     pca.fit(alpha_v)
+#     if (np.sum(pca.explained_variance_ratio_) >= 0.9):
+#         min_dim = i
+#         break
+#print("Almost " + str(100 * np.sum(pca.explained_variance_ratio_)) + " percent of data is preserved in at least " + str(min_dim) + " dimensions!")
 
 
 
@@ -58,54 +58,54 @@ B = image[:, :, 2]
 # print(G.shape)
 # print(B.shape)
 ##########################################################
-k = 10
-rpca = PCA(n_components = k)
-gpca = PCA(n_components = k)
-bpca = PCA(n_components = k)
+# k = 10
+# rpca = PCA(n_components = k)
+# gpca = PCA(n_components = k)
+# bpca = PCA(n_components = k)
 
-rpca.fit(R)
-gpca.fit(G)
-bpca.fit(B)
+# rpca.fit(R)
+# gpca.fit(G)
+# bpca.fit(B)
 
-print("First " + str(k) + "components of Red Matrix have " + str(100 * np.sum(rpca.explained_variance_ratio_)) + " percent of data.")
-print("First " + str(k) + "components of Green Matrix have " + str(100 * np.sum(gpca.explained_variance_ratio_)) + " percent of data.")
-print("First " + str(k) + "components of Blue Matrix have " + str(100 * np.sum(bpca.explained_variance_ratio_)) + " percent of data.")
+# # print("Almost " + str(100 * np.sum(rpca.explained_variance_ratio_)) + " percent of red matrix is preserved!")
+# # print("Almost " + str(100 * np.sum(gpca.explained_variance_ratio_)) + " percent of green matrix is preserved!")
+# # print("Almost " + str(100 * np.sum(bpca.explained_variance_ratio_)) + " percent of blue matrix is preserved!")
 
-# plt.bar([i for i in range(k)], rpca.explained_variance_ratio_, color ='red', width = 0.4)
-# plt.xlabel("Red Components")
-# plt.ylabel("Variance %")
-# plt.show()
+# # plt.bar([i for i in range(k)], rpca.explained_variance_ratio_, color ='red', width = 0.4)
+# # plt.xlabel("Red Components")
+# # plt.ylabel("Variance %")
+# # plt.show()
 
-# plt.bar([i for i in range(k)], gpca.explained_variance_ratio_, color ='green', width = 0.4)
-# plt.xlabel("Green Components")
-# plt.ylabel("Variance %")
-# plt.show()
+# # plt.bar([i for i in range(k)], gpca.explained_variance_ratio_, color ='green', width = 0.4)
+# # plt.xlabel("Green Components")
+# # plt.ylabel("Variance %")
+# # plt.show()
 
-# plt.bar([i for i in range(k)], bpca.explained_variance_ratio_, color ='blue', width = 0.4)
-# plt.xlabel("Blue Components")
-# plt.ylabel("Variance %")
-# plt.show()
+# # plt.bar([i for i in range(k)], bpca.explained_variance_ratio_, color ='blue', width = 0.4)
+# # plt.xlabel("Blue Components")
+# # plt.ylabel("Variance %")
+# # plt.show()
 # ##########################################################
-Transform_R = rpca.transform(R)
-Transform_B = gpca.transform(G)
-Transform_G = bpca.transform(B)
-Reduced_R = rpca.inverse_transform(Transform_R)
-Reduced_G = gpca.inverse_transform(Transform_G)
-Reduced_B = bpca.inverse_transform(Transform_B)
+# Transform_R = rpca.transform(R)
+# Transform_B = gpca.transform(G)
+# Transform_G = bpca.transform(B)
+# Reduced_R = rpca.inverse_transform(Transform_R)
+# Reduced_G = gpca.inverse_transform(Transform_G)
+# Reduced_B = bpca.inverse_transform(Transform_B)
 
-print('Transform Matrix Shape = ', Transform_R.shape)
-print('Inverse Transform Matrix Shape = ', Reduced_R.shape)
+# # print('Transform Matrix Shape = ', Transform_R.shape)
+# # print('Inverse Transform Matrix Shape = ', Reduced_R.shape)
 
 # ##########################################################
-Reduced_R = Reduced_R.reshape((dim[0], dim[1], 1))
-Reduced_G = Reduced_G.reshape((dim[0], dim[1], 1))
-Reduced_B = Reduced_B.reshape((dim[0], dim[1], 1))
+# Reduced_R = Reduced_R.reshape((dim[0], dim[1], 1))
+# Reduced_G = Reduced_G.reshape((dim[0], dim[1], 1))
+# Reduced_B = Reduced_B.reshape((dim[0], dim[1], 1))
 
-reduced_image = np.dstack((Reduced_R, Reduced_G, Reduced_B))
-final_image = reduced_image.astype(int)
-print('final_image shape = ', final_image.shape)
-plt.imshow(final_image)
-plt.show()
+# reduced_image = np.dstack((Reduced_R, Reduced_G, Reduced_B))
+# final_image = reduced_image.astype(int)
+# # print('final_image shape = ', final_image.shape)
+# # plt.imshow(final_image)
+# # plt.show()
 ##########################################################
 ##########################################################
 ##########################################################
@@ -129,8 +129,8 @@ Reduced_R = rpca.inverse_transform(Transform_R)
 Reduced_G = gpca.inverse_transform(Transform_G)
 Reduced_B = bpca.inverse_transform(Transform_B)
 
-print('Transform Matrix Shape = ', Transform_R.shape)
-print('Inverse Transform Matrix Shape = ', Reduced_R.shape)
+# print('Transform Matrix Shape = ', Transform_R.shape)
+# print('Inverse Transform Matrix Shape = ', Reduced_R.shape)
 
 ##########################################################
 Reduced_R = Reduced_R.reshape((dim[0], dim[1], 1))
