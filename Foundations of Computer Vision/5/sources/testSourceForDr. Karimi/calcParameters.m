@@ -10,7 +10,7 @@ fn = 0;
 
 for i = 1: size(I, 1)
     for j = 1: size(I, 2)
-        if (I(i, j) == 1 && gt(i, j) == 1)%for first manual 255 and for second manual 1
+        if (I(i, j) == 1 && gt(i, j) == 255)
             tp = tp + 1;
         end
         if (I(i, j) == 0 && gt(i, j) == 0)
@@ -19,7 +19,7 @@ for i = 1: size(I, 1)
         if (I(i, j) == 1 && gt(i, j) == 0)
             fp = fp + 1;
         end
-        if (I(i, j) == 0 && gt(i, j) == 1)
+        if (I(i, j) == 0 && gt(i, j) == 255)
             fn = fn + 1;
         end
     end

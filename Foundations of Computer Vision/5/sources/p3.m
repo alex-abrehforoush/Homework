@@ -1,14 +1,12 @@
 clc
 clear
-%close all
-%imtool close all
+close all
+imtool close all
 %%%%%%%%%%%%%%%%
 n = 20;
-path1 = 'images\Q3\DRIVE\Test\';
-path2 = 'images\Q3\DRIVE\Training\';
-path = path1;
+path = 'images\Q3\DRIVE\Test\';
 temp1 = imread([path 'images\1_test.tif']);
-temp2 = imread([path '1st_manual\1_manual1.gif']);
+temp2 = imread([path '2nd_manual\1_manual2.gif']);
 images = uint8(zeros([n size(temp1)]));
 first_manual = uint8(zeros([n size(temp2)]));
 second_manual = uint8(zeros([n size(temp2)]));
@@ -19,8 +17,21 @@ for i = 1: n
     second_manual(i, :, :, :) = imread([path '2nd_manual\' num2str(i) '_manual2.gif']);
     mask(i, :, :, :) = imread([path 'mask\' num2str(i) '_test_mask.gif']);
 end
+%%%%%%%%%%%%%%%%%%%%%%%%mask
+masked_images = images;
+for i = 1: n
+    for j = 1: size(masked_images(i, :, :, :), 2)
+        for k = 1: size(masked_images(i, :, :, :), 3)
+            if (mask(i, j, k) == 0)
+                masked_images(i, j, k, 1) = 0;
+                masked_images(i, j, k, 2) = 0;
+                masked_images(i, j, k, 3) = 0;
+            end
+        end
+    end
+end
 %%%%%%%%%%%%%%%%%%%%%%%%enhancing lines in 12 directions using opening operation
-linearly_opened_images = images;
+linearly_opened_images = masked_images;
 for i = 1: n
     for j = 1: 15: 180
         se = strel('line', 7, j);
@@ -30,25 +41,30 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%sharpening
 sharped_images = linearly_opened_images;
 for i = 1: n
-    sharped_images(i, :, :, :) = 255 - imsharpen(squeeze(sharped_images(i, :, :, :)), 'Radius', 10, 'Amount', 10);
+    sharped_images(i, :, :, :) = imsharpen(squeeze(sharped_images(i, :, :, :)), 'Radius', 1, 'Amount', 5);
 end
-%%%%%%%%%%%%%%%%%%%%%%%%reduce noise
-noise_canceled_images = sharped_images;
-% for i = 1: n
-%     noise_canceled_images(i, :, :, 1) = modefilt(squeeze(noise_canceled_images(i, :, :, 1)), [7 7]);
-%     noise_canceled_images(i, :, :, 2) = modefilt(squeeze(noise_canceled_images(i, :, :, 2)), [7 7]);
-%     noise_canceled_images(i, :, :, 3) = modefilt(squeeze(noise_canceled_images(i, :, :, 3)), [7 7]);
-% end
-%%%%%%%%%%%%%%%%%%%%%%%%thresholding
-otsu_images = noise_canceled_images;
+%%%%%%%%%%%%%%%%%%%%%%%%adaptive thresholding
+thresh_images = sharped_images;
 for i = 1: n
-    S = imfilter(squeeze(otsu_images(i, :, :, :)), fspecial('average', [21 21]));
-    K = 1.02;
+    S = imfilter(squeeze(thresh_images(i, :, :, :)), fspecial('average', [21 21]));
+    K = 0.93;
     T = K * S;
-    otsu_images(i, :, :, :) = squeeze(otsu_images(i, :, :, :)) > T;
+    thresh_images(i, :, :, :) = squeeze(thresh_images(i, :, :, :)) < T;
 end
-%%%%%%%%%%%%%%%%%%%%%%%%mask
-final_images = otsu_images;
+%%%%%%%%%%%%%%%%%%%%%%%reduce noise
+noise_canceled_images = thresh_images;
+se = strel('line', 6, 0);
+for i = 1: n
+    noise_canceled_images(i, :, :, :) = imdilate(squeeze(noise_canceled_images(i, :, :, :)), se);
+end
+%
+for i = 1: n
+    noise_canceled_images(i, :, :, 1) = medfilt2(squeeze(noise_canceled_images(i, :, :, 1)), [3 3]);
+    noise_canceled_images(i, :, :, 2) = medfilt2(squeeze(noise_canceled_images(i, :, :, 2)), [3 3]);
+    noise_canceled_images(i, :, :, 3) = medfilt2(squeeze(noise_canceled_images(i, :, :, 3)), [3 3]);
+end
+%%%%%%%%%%%%%%%%%%%%%%%mask
+final_images = noise_canceled_images;
 for i = 1: n
     for j = 1: size(final_images(i, :, :, :), 2)
         for k = 1: size(final_images(i, :, :, :), 3)
@@ -59,16 +75,16 @@ for i = 1: n
             end
         end
     end
+    %imwrite(imadjust(squeeze(final_images(i, :, :, 2))), ['images\Q3_results\1\' num2str(i) '.tif']);
+    imwrite(imadjust(squeeze(final_images(i, :, :, 2))), ['images\Q3_results\2\' num2str(i) '.tif']);
 end
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%calc parameters
+%%%%%%%%%%%%%%%%%%%%%%%calc parameters
 sensitivity = double(zeros([1 n]));
 specificity = double(zeros([1 n]));
 accuracy = double(zeros([1 n]));
 for i = 1: n
-    [tp, tn, fp, fn] = calcParameters(squeeze(final_images(i, :, :, 2)), squeeze(first_manual(i, :, :)));
+    [tp, tn, fp, fn] = calcParameters(squeeze(final_images(i, :, :, 2)), squeeze(second_manual(i, :, :)));
     sensitivity(i) = double(tp / (tp + fn));
     specificity(i) = double(tn / (tn + fp));
     accuracy(i) = double((tp + tn) / (tp + tn + fp + fn));
@@ -76,27 +92,6 @@ end
 sen_mean = mean(sensitivity)
 spe_mean = mean(specificity)
 acc_mean = mean(accuracy)
-% 
-% sen_mean + spe_mean + acc_mean
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%blur
-% blured_images = sharped_images;
-% h = fspecial('gaussian', 7, 0.5);
-% for i = 1: n
-%     blured_images(i, :, :, :) = imfilter(squeeze(blured_images(i, :, :, :)), h);
-% end
-%%%%%%%%%%%%%%%%%%%%%%%%thresholding
-%otsu_images = sharped_images;
-% for i = 1: n
-%     level = multithresh(otsu_images(i, :, :, :), 3);
-%     otsu_images(i, :, :, :) = otsu_images(i, :, :, :) > level(3);
-% end
+sensitivity;
+specificity;
+accuracy;
