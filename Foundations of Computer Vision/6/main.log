@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  3 JUL 2022 01:46
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  3 JUL 2022 14:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -917,6 +917,9 @@ LaTeX Warning: Label `fig:fig1' multiply defined.
 
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1032,42 +1035,56 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 (Font)              scaled to size 17.27994pt on input line 75.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 89.
-Missing character: There is no i (U+0069) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 133.
+(Font)              scaled to size 14.39996pt on input line 102.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 14.39996pt on input line 133.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 133.
- [1]
-Missing character: There is no i (U+0069) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
- (./sources/findCenters.m
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 1.
- [2]) (./sources/p4.m [3])
-File: figures/1.jpg Graphic file (type bmp)
-<figures/1.jpg>
+(Font)              scaled to size 14.39996pt on input line 102.
+File: figures/4.jpg Graphic file (type bmp)
+<figures/4.jpg>
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 168.
+(Font)              scaled to size 10.79997pt on input line 125.
 
 
 LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 168.
+(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 125.
 
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 168.
-[4] [5]
+(Font)              scaled to size 10.79997pt on input line 125.
+
+Overfull \hbox (11.16011pt too wide) in paragraph at lines 129--137
+[]\TU/B-NAZANIN.TTF(0)/m/n/10 می‌دهند که شیب بیشینه (کمینه) باشد. البته عرض از 
+مبدا خط عمودی در تصویر تعریف نشده است. پس $\OML/cmm/m/it/10 c \OMS/cmsy/m/n/10 
+2 []$\TU/B-NAZANIN.TTF(0)/m/n/10 .[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
+[][]
+ []
+
+[1]
+Missing character: There is no i (U+0069) in font [B-NAZANIN.TTF]/OT:script=ara
+b;language=dflt;mapping=persian-tex-text;!
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 166.
+Missing character: There is no i (U+0069) in font [B-NAZANIN.TTF]/OT:script=ara
+b;language=dflt;mapping=persian-tex-text;!
+ [2] (./sources/findCenters.m
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 1.
+) (./sources/p4.m [3] [4])
+File: figures/1.jpg Graphic file (type bmp)
+<figures/1.jpg>
+ [5] [6]
 File: figures/2.jpg Graphic file (type bmp)
 <figures/2.jpg>
 File: figures/3.jpg Graphic file (type bmp)
 <figures/3.jpg>
 
 
-LaTeX Warning: Empty `thebibliography' environment on input line 229.
+LaTeX Warning: Empty `thebibliography' environment on input line 252.
 
-[6] [7] (./main.aux)
+[7] [8] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1079,12 +1096,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18139 strings out of 476919
- 366955 string characters out of 5825424
- 1390443 words of memory out of 5000000
- 37818 multiletter control sequences out of 15000+600000
- 404156 words of font info for 63 fonts, out of 8000000 for 9000
+ 18160 strings out of 476919
+ 367180 string characters out of 5825424
+ 1406443 words of memory out of 5000000
+ 37831 multiletter control sequences out of 15000+600000
+ 406431 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 97i,12n,122p,1290b,2197s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 97i,12n,122p,1290b,1626s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (8 pages).
+Output written on main.pdf (9 pages).
