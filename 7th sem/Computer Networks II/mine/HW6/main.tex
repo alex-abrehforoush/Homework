@@ -1,0 +1,169 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage[font={small,it}]{caption}
+\usepackage{placeins}
+\usepackage{xepersian}
+
+%\DeclareMathOperator*{\btie}{\bowtie}
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف ششم درس شبکه‌های کامپیوتری 2}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+%%%%%%%%%%
+\lstset
+{
+    language=[latex]tex,
+    basicstyle=\ttfamily,
+    commentstyle=\color{black},
+    columns=fullflexible,
+    keepspaces=true,
+    upquote=true,
+    showstringspaces=false,
+    morestring=[s]\\\%,
+    stringstyle=\color{black},
+}
+%%%%%%%%%%
+%beginMatlab
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%endMatlab
+\begin{document}
+%beginMatlab
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%endMatlab
+\input{titlepage}
+
+%\tableofcontents
+\newpage
+
+\section{فصل 3}
+\subsection{سوال 40}
+\subsubsection{\lr{a}}
+مکانیزم \lr{slowstart} در بازه‌های 
+$[1,\: 6]$
+و
+$[23,\: 26]$
+درحال اجرا است.
+
+\subsubsection{\lr{b}}
+مکانیزم \lr{congestion avoidance} در بازه‌های 
+$[6,\: 16]$
+و
+$[17,\: 22]$
+درحال اجرا است.
+\subsubsection{\lr{c}}
+از آنجایی که در 16امین \lr{transmission round}، \lr{Congestion window size} برابر 1 نشده است، پس نمی‌تواند \lr{timeout} رخ داده باشد. پس \lr{triple duplicate ACK} رخ داده است.
+\subsubsection{\lr{d}}
+از آنجایی که در 22امین \lr{transmission round}، \lr{Congestion window size} برابر 1 شده است، پس \lr{timeout} رخ داده است.
+\subsubsection{\lr{e}}
+\lr{ssthresh} 32 است. مکانیزم \lr{congestion avoidance} با توقف مکانیزم \lr{slowstart} شروع به کار کرده است.
+\subsubsection{\lr{f}}
+با رخ دادن \lr{packet loss} در 16امین \lr{transmission round} اندازه‌ی \lr{ssthresh} نصف می‌شود. پس در 18امین \lr{transmission round} اندازه‌ی \lr{ssthresh} برابر $42/2=21$ است.
+\subsubsection{\lr{g}}
+با رخ دادن \lr{packet loss} در 22امین \lr{transmission round} اندازه‌ی \lr{threshold} برابر نصف  \lr{Congestion window size} می‌شود. پس \lr{ssthresh} برابر 
+$\left\lfloor \frac{29}{2} \right\rfloor = 14$
+می‌شود.
+\subsubsection{\lr{h}}
+حین 1امین \lr{transmission round} پکت 1، حین 2امین \lr{transmission round} پکت‌های 2 و 3،  حین 3امین \lr{transmission round} پکت‌های 4 تا 7، حین 4امین \lr{transmission round} پکت‌های 8 تا 15، حین 5امین \lr{transmission round} پکت‌های 16 تا 31، حین 6امین \lr{transmission round} پکت‌های 32 تا 63، حین 7امین \lr{transmission round} پکت‌های 64 تا 96 ارسال می‌شوند که در نتیجه پکت 70 حین 7امین \lr{transmission round} ارسال می‌شود.
+\subsubsection{\lr{i}}
+\lr{threshold} برابر 4 که نصف اندازه‌ی فعلی پنجره می‌شود. همچنین اندازه‌ی پنجره برابر اندازه‌ی جدید \lr{threshold} به علاوه‌ی 3 می‌شود که برابر با 7 است.
+\subsubsection{\lr{j}}
+\lr{threshold} و \lr{congestion window size} به ترتیب برابر 21 و 1 می‌شود.
+\subsubsection{\lr{k}}
+$
+1+2+4+8+16+21=52
+$
+پکت در \lr{transmission round}های 17 تا 22 ارسال شده است.
+
+
+\subsection{سوال 46}
+\subsubsection{\lr{a}}
+فرض می‌کنیم \lr{W} بیشینه اندازه‌ی پنجره در مقایس سگمنت باشد. پس داریم:
+$
+\frac{W\times MSS}{RTT} = 10\:Mbps\Rightarrow W = \frac{10\times 10^6\times 0.15}{1500\times 8} = 125
+$
+
+
+\subsubsection{\lr{b}}
+از آنجایی که اندازه‌ی \lr{congestion window} در رنج 
+$
+\frac{W}{2}
+$
+تا 
+$
+W
+$
+تغییر می‌کند، آنگاه متوسط اندازه‌ی پنجره برابر 
+$
+0.75W = \left\lceil 93.75 \right\rceil = 94
+$
+سگمنت است. متوسط \lr{throughput} برابر است با:
+$
+\frac{94\times1500\times8}{0.15}=7.52\:Mbps.
+$
+
+\subsubsection{\lr{c}}
+با گم شدن بسته اندازه‌ی پنجره از $\frac{W}{2}$ به $W$ تغییر می‌کند. به عبارتی دیگر 
+$
+\left\lfloor \frac{125}{2} \right\rfloor=62
+$
+پس داریم:
+$
+(125 - 62)\times 0.15 = 9.45\:seconds
+$
+از آنجایی که تعداد \lr{RTT}های مورد نیاز \lr{TCP connection}ها برای افزایش اندازه‌ی پنجره از 62 به 125  برابر 63 است، در هر \lr{RTT} اندازه‌ی پنجره 1 واحد زیاد می‌شود.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1}
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}

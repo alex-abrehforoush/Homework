@@ -1,0 +1,196 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage[font={small,it}]{caption}
+\usepackage{placeins}
+\usepackage{xepersian}
+
+%\DeclareMathOperator*{\btie}{\bowtie}
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف دوم درس شبکه‌های کامپیوتری 2}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+%%%%%%%%%%
+\lstset
+{
+    language=[latex]tex,
+    basicstyle=\ttfamily,
+    commentstyle=\color{black},
+    columns=fullflexible,
+    keepspaces=true,
+    upquote=true,
+    showstringspaces=false,
+    morestring=[s]\\\%,
+    stringstyle=\color{black},
+}
+%%%%%%%%%%
+%beginMatlab
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%endMatlab
+\begin{document}
+%beginMatlab
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%endMatlab
+\input{titlepage}
+
+%\tableofcontents
+\newpage
+
+
+\section{سوال 1}%1
+\subsection{}
+\begin{latin}
+\begin{table}[H]
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Destination Address} & \textbf{Link Interface} \\ \hline
+H3                           & 3                       \\ \hline
+\end{tabular}
+\end{table}
+\end{latin}
+\subsection{}
+خیر، چون \lr{forwarding} تنها به مقصد وابسته است و بین بسته‌های با مبدا متفاوت و مقصد یکسان تفاوتی قائل نمی‌شود.
+
+\section{سوال 19}
+\begin{latin}
+\begin{table}[H]
+\begin{tabular}{|lc|}
+\hline
+\multicolumn{2}{|c|}{\textbf{S2 Flow Table}}                                                   \\ \hline
+\multicolumn{1}{|c|}{\textbf{Match}}                                         & \textbf{Action} \\ \hline
+\multicolumn{1}{|l|}{Ingress Port = 1; IP Src = 10.3.*.*; IP Dst = 10.1.*.*} & Forward(2)      \\ \hline
+\multicolumn{1}{|l|}{Ingress Port = 2; IP Src = 10.1.*.*; IP Dst = 10.3.*.*} & Forward(1)      \\ \hline
+\multicolumn{1}{|l|}{Ingress Port = 1; IP Src = *.*.*.*; IP Dst = 10.2.0.3}  & Forward(3)      \\ \hline
+\multicolumn{1}{|l|}{Ingress Port = 1; IP Src = *.*.*.*; IP Dst = 10.2.0.4}  & Forward(4)      \\ \hline
+\multicolumn{1}{|l|}{Ingress Port = 2; IP Src = *.*.*.*; IP Dst = 10.2.0.3}  & Forward(3)      \\ \hline
+\multicolumn{1}{|l|}{Ingress Port = 2; IP Src = *.*.*.*; IP Dst = 10.2.0.4}  & Forward(4)      \\ \hline
+\multicolumn{1}{|l|}{Ingress Port = 3; IP Src = *.*.*.*; IP Dst = *.*.*.*}   & Forward(4)      \\ \hline
+\multicolumn{1}{|l|}{Ingress Port = 4; IP Src = *.*.*.*; IP Dst = *.*.*.*}   & Forward(3)      \\ \hline
+\end{tabular}
+\end{table}
+\end{latin}
+
+\section{سوال 21}
+\begin{latin}
+\begin{table}[H]
+\begin{tabular}{|lc|}
+\hline
+\multicolumn{2}{|c|}{\textbf{S1 Flow Table}}                                 \\ \hline
+\multicolumn{1}{|c|}{\textbf{Match}}                       & \textbf{Action} \\ \hline
+\multicolumn{1}{|l|}{IP Src = 10.2.*.*; IP Dst = 10.1.0.1} & Forward(2)      \\ \hline
+\multicolumn{1}{|l|}{IP Src = 10.2.*.*; IP Dst = 10.1.0.2} & Forward(3)      \\ \hline
+\multicolumn{1}{|l|}{IP Src = 10.2.*.*; IP Dst = 10.3.*.*} & Forward(1)      \\ \hline
+\end{tabular}
+\end{table}
+\end{latin}
+
+\begin{latin}
+\begin{table}[H]
+\begin{tabular}{|lc|}
+\hline
+\multicolumn{2}{|c|}{\textbf{S3 Flow Table}}                                                 \\ \hline
+\multicolumn{1}{|c|}{\textbf{Match}}                       & \textbf{Action}                 \\ \hline
+\multicolumn{1}{|l|}{IP Src = 10.2.*.*; IP Dst = 10.1.*.*} & \multicolumn{1}{l|}{Forward(3)} \\ \hline
+\multicolumn{1}{|l|}{IP Src = 10.2.*.*; IP Dst = 10.3.0.5} & Forward(2)                      \\ \hline
+\multicolumn{1}{|l|}{IP Src = 10.2.*.*; IP Dst = 10.3.0.6} & Forward(1)                      \\ \hline
+\end{tabular}
+\end{table}
+\end{latin}
+
+\section{سوال 22}
+\begin{latin}
+\begin{table}[H]
+\begin{tabular}{|lc|}
+\hline
+\multicolumn{2}{|c|}{\textbf{S2 Flow Table}}                                                 \\ \hline
+\multicolumn{1}{|c|}{\textbf{Match}}                       & \textbf{Action}                 \\ \hline
+\multicolumn{1}{|l|}{IP Src = 10.1.0.1; IP Dst = 10.2.0.3} & \multicolumn{1}{l|}{Forward(3)} \\ \hline
+\multicolumn{1}{|l|}{IP Src = 10.1.0.1; IP Dst = 10.2.0.4} & Forward(4)                      \\ \hline
+\multicolumn{1}{|l|}{IP Src = 10.3.0.6; IP Dst = 10.2.0.3} & Forward(3)                      \\ \hline
+\multicolumn{1}{|l|}{IP Src = 10.3.0.6; IP Dst = 10.2.0.4} & \multicolumn{1}{l|}{Forward(4)} \\ \hline
+\end{tabular}
+\end{table}
+%%%%%%
+\begin{table}[H]
+\begin{tabular}{|lc|}
+\hline
+\multicolumn{2}{|c|}{\textbf{S2 Flow Table}}                                                            \\ \hline
+\multicolumn{1}{|c|}{\textbf{Match}}                                  & \textbf{Action}                 \\ \hline
+\multicolumn{1}{|l|}{IP Src = *.*.*.*; IP Dst = 10.2.0.3; port = TCP} & \multicolumn{1}{l|}{Forward(3)} \\ \hline
+\multicolumn{1}{|l|}{IP Src = *.*.*.*; IP Dst = 10.2.0.4; port = TCP} & Forward(4)                      \\ \hline
+\end{tabular}
+\end{table}
+%%%%%%
+\begin{table}[H]
+\begin{tabular}{|cl|}
+\hline
+\multicolumn{2}{|c|}{\textbf{S2 Flow Table}}                                                     \\ \hline
+\multicolumn{1}{|c|}{\textbf{Match}}                      & \multicolumn{1}{c|}{\textbf{Action}} \\ \hline
+\multicolumn{1}{|l|}{IP Src = *.*.*.*; IP Dst = 10.2.0.3} & Forward(3)                           \\ \hline
+\end{tabular}
+\end{table}
+%%%%%%
+\begin{table}[H]
+\begin{tabular}{|cl|}
+\hline
+\multicolumn{2}{|c|}{\textbf{S2 Flow Table}}                                                                  \\ \hline
+\multicolumn{1}{|c|}{\textbf{Match}}                                   & \multicolumn{1}{c|}{\textbf{Action}} \\ \hline
+\multicolumn{1}{|l|}{IP Src = 10.1.0.1; IP Dst = 10.2.0.3; port = UDP} & Forward(3)                           \\ \hline
+\end{tabular}
+\end{table}
+\end{latin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1}
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}

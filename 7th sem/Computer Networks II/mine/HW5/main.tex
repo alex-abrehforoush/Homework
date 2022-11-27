@@ -1,0 +1,131 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage[font={small,it}]{caption}
+\usepackage{placeins}
+\usepackage{xepersian}
+
+%\DeclareMathOperator*{\btie}{\bowtie}
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف پنجم درس شبکه‌های کامپیوتری 2}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+%%%%%%%%%%
+\lstset
+{
+    language=[latex]tex,
+    basicstyle=\ttfamily,
+    commentstyle=\color{black},
+    columns=fullflexible,
+    keepspaces=true,
+    upquote=true,
+    showstringspaces=false,
+    morestring=[s]\\\%,
+    stringstyle=\color{black},
+}
+%%%%%%%%%%
+%beginMatlab
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%endMatlab
+\begin{document}
+%beginMatlab
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%endMatlab
+\input{titlepage}
+
+%\tableofcontents
+\newpage
+
+\section{فصل 1}
+\subsection{سوال 26}
+\subsubsection{\lr{a}}
+\begin{latin}
+$
+d_{prop}=20000 \: kilometers\times \frac{1}{2.5\times 10^{8} \: meters/sec}=0.08 \: sec
+\\
+R.d_{prop}=1\: Gbps\times 0.08 \: sec=8\times10^{7}\: bit
+$
+\end{latin}
+\subsubsection{\lr{b}}
+\begin{latin}
+$
+min(8\times10^{7}\: bit, \: 800000\:bit)
+$
+\end{latin}
+\subsubsection{\lr{c}}
+\begin{latin}
+$
+width=\frac{20000\: kilometers}{8\times 10^{7}\: bit}=0.25\: meters/bit
+$
+\end{latin}
+
+\subsection{سوال 27}
+از آنجایی که سرعت لینک بین سرور و روتر دو برابر سرعت لینک بین روتر و کلاینت است، از هر دو پیامی که در واحد زمان به روتر می‌رسد، یکی از روتر به کلاینت می‌رسد و دومی بافر می‌شود. در نتیجه برای بافر شدن 4 پیام و دراپ شدن پیام بعدی، باید 9 پیام ارسال شده باشد که پیام 9ام دراپ می‌شود.
+
+\section{فصل 3}
+\subsection{سوال 28}
+از آنجایی که سرعت لینک \lr{100 Mbps} است، سرعت ارسال هاست \lr{A} در حالت بیشینه \lr{100 Mbps} می‌تواند باشد. سرعت پر شدن بافر از سرعت خالی شدن آن بیشتر است و در واقع بافر با نرخ
+$
+100 \: Mbps - 50 \: Mbps = 50 \: Mbps
+$
+پر می‌شود. هنگامی که بافر پر می‌شود، هاست \lr{B} مقدار \lr{RcvWindow} را برابر با صفر قرار می‌دهد که با این کار به هاست \lr{A} پیغام می‌دهد که بافر پر شده است. هاست \lr{B}، ارسال اطلاعات را تا زمانی که سگمنتی با \lr{RcvWindow} بزرگ‌تر از صفر دریافت کند، متوقف می‌کند. در واقع هاست \lr{B}، بر اساس مقادیر \lr{RcvWindow}ی که هاست \lr{B} تعیین می‌کند ارسال یا توقف بسته را انجام می‌دهد. سرعت نهایی (در بلند مدت) ارسال داده از \lr{A} به \lr{B} به طور متوسط بیشتر از
+$
+50 \: Mbps
+$
+نخواهد بود.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1}
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}

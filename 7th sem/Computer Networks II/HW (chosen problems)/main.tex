@@ -1,0 +1,208 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage[font={small,it}]{caption}
+\usepackage{placeins}
+\usepackage{xepersian}
+
+%\DeclareMathOperator*{\btie}{\bowtie}
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{پاسخ مسائل منتخب تکالیف 1 تا 4 درس شبکه‌های کامپیوتری 2}
+\lhead{\thepage}
+\lfoot{پاییز 1401}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+%%%%%%%%%%
+\lstset
+{
+    language=[latex]tex,
+    basicstyle=\ttfamily,
+    commentstyle=\color{black},
+    columns=fullflexible,
+    keepspaces=true,
+    upquote=true,
+    showstringspaces=false,
+    morestring=[s]\\\%,
+    stringstyle=\color{black},
+}
+%%%%%%%%%%
+%beginMatlab
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%endMatlab
+\begin{document}
+%beginMatlab
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%endMatlab
+\input{titlepage}
+
+%\tableofcontents
+\newpage
+
+
+\section{تکلیف 1 مسئله  7 فصل 5}%1
+\subsection{\lr{a}}
+\begin{latin}
+\begin{table}[H]
+\begin{tabular}{ccccccccccccccccccccccc}
+\cline{1-5} \cline{7-11} \cline{13-17} \cline{19-23}
+\multicolumn{1}{|c|}{\textbf{(u)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{(u)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{(u)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{(u)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} \\ \cline{1-5} \cline{7-11} \cline{13-17} \cline{19-23} 
+\multicolumn{1}{|c|}{u}            & 0                      & 9                      & $\infty$               & 11                     & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{u}            & 0                      & 9                      & 15                     & 10                     & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{u}            & 0                      & 9                      & 14                     & 10                     & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{u}            & 0                      & 9                      & 14                     & 10                     \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+\multicolumn{1}{|c|}{w}            & -                      & -                      & -                      & -                      & \multicolumn{1}{c|}{$\longrightarrow$} & \multicolumn{1}{c|}{w}            & 9                      & 0                      & 6                      & 1                      & \multicolumn{1}{c|}{$\longrightarrow$} & \multicolumn{1}{c|}{w}            & 9                      & 0                      & 5                      & 1                      & \multicolumn{1}{c|}{$\longrightarrow$} & \multicolumn{1}{c|}{w}            & 9                      & 0                      & 5                      & 1                      \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+\multicolumn{1}{|c|}{x}            & -                      & -                      & -                      & -                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{x}            & $\infty$               & 6                      & 0                      & 4                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{x}            & 15                     & 5                      & 0                      & 4                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{x}            & 14                     & 5                      & 0                      & 4                      \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+\multicolumn{1}{|c|}{y}            & -                      & -                      & -                      & -                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{y}            & 11                     & 1                      & 4                      & 0                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{y}            & 10                     & 1                      & 4                      & 0                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{y}            & 10                     & 1                      & 4                      & 0                      \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+                                   &                        &                        &                        &                        &                                        &                                   &                        &                        &                        &                        &                                        &                                   &                        &                        &                        &                        &                                        &                                   &                        &                        &                        &                        \\ \cline{1-5} \cline{7-11} \cline{13-17} \cline{19-23} 
+\multicolumn{1}{|c|}{\textbf{(w)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{(w)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{(w)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{(w)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} \\ \cline{1-5} \cline{7-11} \cline{13-17} \cline{19-23} 
+\multicolumn{1}{|c|}{u}            & -                      & -                      & -                      & -                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{u}            & 0                      & 9                      & $\infty$               & 11                     & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{u}            & 0                      & 9                      & 15                     & 10                     & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{u}            & 0                      & 9                      & 14                     & 10                     \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+\multicolumn{1}{|c|}{w}            & 9                      & 0                      & 6                      & 1                      & \multicolumn{1}{c|}{$\longrightarrow$} & \multicolumn{1}{c|}{w}            & 9                      & 0                      & 5                      & 1                      & \multicolumn{1}{c|}{$\longrightarrow$} & \multicolumn{1}{c|}{w}            & 9                      & 0                      & 5                      & 1                      & \multicolumn{1}{c|}{$\longrightarrow$} & \multicolumn{1}{c|}{w}            & 9                      & 0                      & 5                      & 1                      \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+\multicolumn{1}{|c|}{x}            & -                      & -                      & -                      & -                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{x}            & $\infty$               & 6                      & 0                      & 4                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{x}            & 15                     & 5                      & 0                      & 4                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{x}            & 14                     & 5                      & 0                      & 4                      \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+\multicolumn{1}{|c|}{y}            & -                      & -                      & -                      & -                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{y}            & 11                     & 1                      & 4                      & 0                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{y}            & 10                     & 1                      & 4                      & 0                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{y}            & 10                     & 1                      & 4                      & 0                      \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+                                   &                        &                        &                        &                        &                                        &                                   &                        &                        &                        &                        &                                        &                                   &                        &                        &                        &                        &                                        &                                   &                        &                        &                        &                        \\ \cline{1-5} \cline{7-11} \cline{13-17} \cline{19-23} 
+\multicolumn{1}{|c|}{\textbf{(x)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{(x)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{(x)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{(x)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} \\ \cline{1-5} \cline{7-11} \cline{13-17} \cline{19-23} 
+\multicolumn{1}{|c|}{u}            & -                      & -                      & -                      & -                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{u}            & 0                      & 9                      & $\infty$               & 11                     & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{u}            & 0                      & 9                      & 15                     & 10                     & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{u}            & 0                      & 9                      & 14                     & 10                     \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+\multicolumn{1}{|c|}{w}            & -                      & -                      & -                      & -                      & \multicolumn{1}{c|}{$\longrightarrow$} & \multicolumn{1}{c|}{w}            & 9                      & 0                      & 6                      & 1                      & \multicolumn{1}{c|}{$\longrightarrow$} & \multicolumn{1}{c|}{w}            & 9                      & 0                      & 5                      & 1                      & \multicolumn{1}{c|}{$\longrightarrow$} & \multicolumn{1}{c|}{w}            & 9                      & 0                      & 5                      & 1                      \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+\multicolumn{1}{|c|}{x}            & $\infty$               & 6                      & 0                      & 4                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{x}            & 15                     & 5                      & 0                      & 4                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{x}            & 14                     & 5                      & 0                      & 4                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{x}            & 14                     & 5                      & 0                      & 4                      \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+\multicolumn{1}{|c|}{y}            & -                      & -                      & -                      & -                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{y}            & 11                     & 1                      & 4                      & 0                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{y}            & 10                     & 1                      & 4                      & 0                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{y}            & 10                     & 1                      & 4                      & 0                      \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+                                   &                        &                        &                        &                        &                                        &                                   &                        &                        &                        &                        &                                        &                                   &                        &                        &                        &                        &                                        &                                   &                        &                        &                        &                        \\ \cline{1-5} \cline{7-11} \cline{13-17} \cline{19-23} 
+\multicolumn{1}{|c|}{\textbf{(y)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{(y)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{(y)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{\textbf{(y)}} & \multicolumn{1}{c|}{u} & \multicolumn{1}{c|}{w} & \multicolumn{1}{c|}{x} & \multicolumn{1}{c|}{y} \\ \cline{1-5} \cline{7-11} \cline{13-17} \cline{19-23} 
+\multicolumn{1}{|c|}{u}            & -                      & -                      & -                      & -                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{u}            & 0                      & 9                      & $\infty$               & 11                     & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{u}            & 0                      & 9                      & 15                     & 10                     & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{u}            & 0                      & 9                      & 14                     & 10                     \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+\multicolumn{1}{|c|}{w}            & -                      & -                      & -                      & -                      & \multicolumn{1}{c|}{$\longrightarrow$} & \multicolumn{1}{c|}{w}            & 9                      & 0                      & 6                      & 1                      & \multicolumn{1}{c|}{$\longrightarrow$} & \multicolumn{1}{c|}{w}            & 9                      & 0                      & 5                      & 1                      & \multicolumn{1}{c|}{$\longrightarrow$} & \multicolumn{1}{c|}{w}            & 9                      & 0                      & 5                      & 1                      \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+\multicolumn{1}{|c|}{x}            & -                      & -                      & -                      & -                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{x}            & $\infty$               & 6                      & 0                      & 4                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{x}            & 15                     & 5                      & 0                      & 4                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{x}            & 14                     & 5                      & 0                      & 4                      \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+\multicolumn{1}{|c|}{y}            & 11                     & 1                      & 4                      & 0                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{y}            & 10                     & 1                      & 4                      & 0                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{y}            & 10                     & 1                      & 4                      & 0                      & \multicolumn{1}{c|}{}                  & \multicolumn{1}{c|}{y}            & 10                     & 1                      & 4                      & 0                      \\ \cline{1-1} \cline{7-7} \cline{13-13} \cline{19-19}
+\end{tabular}
+\end{table}
+
+$\Rightarrow$
+
+\begin{table}[H]
+\begin{tabular}{cl}
+\cline{1-1}
+\multicolumn{1}{|c|}{DV in x:} &  \\ \cline{1-1}
+$D_x(u) = 14$                  &  \\
+$D_x(w) = 5$                   &  \\
+$D_x(y) = 4$                   & 
+\end{tabular}
+\end{table}
+\end{latin}
+\subsection{\lr{b}}
+اگر به $c(x, w)$ مقداری کمتر از 5 و یا به $c(x, y)$ مقداری بیشتر از 5 نسبت دهیم، پس از اجرای الگوریتم \lr{distance vector}، روتر \lr{x} مسیر بهینه‌ی \lr{xwu} را به همسایگانش معرفی می‌کند.
+\subsection{\lr{c}}
+اگر به $c(x, w)$ مقداری بیشتر از 5 و یا به $c(x, y)$ مقداری کمتر از 5 نسبت دهیم، پس از اجرای الگوریتم \lr{distance vector}، روتر \lr{x} مسیر بهینه‌ی جدیدی را به همسایگانش معرفی نمی‌کند و مسیر بهینه همان \lr{xywu} خواهد بود.
+
+
+\section{تکلیف 2 مسئله 21 فصل 4}
+\begin{latin}
+\begin{table}[H]
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{2}{|c|}{\textbf{s2 Flow Table}}                                                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Match}}                                                   & \textbf{Action} \\ \hline
+\multicolumn{1}{|l|}{Ingress Port = 1; IP Src = 10.3.*.*; IP Dst = 10.1.*.*}           & Forward(2)      \\ \hline
+\multicolumn{1}{|l|}{Ingress Port = 2; IP Src = 10.1.*.*; IP Dst = 10.3.*.*}           & Forward(1)      \\ \hline
+\multicolumn{1}{|l|}{Ingress Port = 1;                              IP Dst = 10.2.0.3} & Forward(3)      \\ \hline
+\multicolumn{1}{|l|}{Ingress Port = 2;                              IP Dst = 10.2.0.3} & Forward(3)      \\ \hline
+\multicolumn{1}{|l|}{Ingress Port = 1;                              IP Dst = 10.2.0.4} & Forward(4)      \\ \hline
+\multicolumn{1}{|l|}{Ingress Port = 2;                              IP Dst = 10.2.0.4} & Forward(4)      \\ \hline
+\multicolumn{1}{|l|}{IP Src = 10.2.0.3; IP Dst = 10.2.0.4}                             & Forward(4)      \\ \hline
+\multicolumn{1}{|l|}{IP Src = 10.2.0.4; IP Dst = 10.2.0.3}                             & Forward(3)      \\ \hline
+\end{tabular}
+\end{table}
+\end{latin}
+
+
+
+
+
+
+
+\section{تکلیف 3 مسئله 17 فصل 5}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/a.jpg}
+    \caption
+	{
+نمای \lr{X} از توپولوژی
+	}
+    \label{fig:fig1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/b.jpg}
+    \caption
+	{
+نمای \lr{W} از توپولوژی
+	}
+    \label{fig:fig1}
+\end{figure}
+در این راه‌حل، از آنجایی که \lr{X} \lr{advertisement} مسیر به \lr{w} یا \lr{y} شامل لینک \lr{AC} را دریافت نکرده است، اطلاعی از لینک بین \lr{A} و \lr{C} ندارد. در واقع \lr{X} هیچ \lr{advertisement}ی شامل هر دوی \lr{AS A} و \lr{AS C} در مسیر مقصد ندارد.
+
+\section{تکلیف 3 مسئله 19 فصل 5}
+\lr{A} باید 2 مسیرِ \lr{A-W} و \lr{A-V} را به \lr{B} پیشنهاد دهد.
+\newline
+\lr{A} باید تنها مسیرِ \lr{A-V} را به \lr{C} پیشنهاد دهد.
+\newline
+\lr{C} \lr{AS}مسیرهای \lr{B-A-W}، \lr{B-A-V} و \lr{A-V} را دریافت می‌کند.
+\section{تکلیف 3 مسئله 20 فصل 5}
+از آنجایی که \lr{Z} می‌خواهد ترافیک \lr{Y} را انتقال دهد، مسیر را برای \lr{Y} \lr{advertize} می‌کند. در این رابطه وقتی که \lr{Y} دیتاگرامی به مقصدِ آی‌پی‌ای که قابلیت دسترسی با استفاده از \lr{Z} دارد را دارد، \lr{Y} می‌تواند دیتاگرام را توسط \lr{Z} بفرستد. هرچند اگر \lr{Z} مسیرها را برای \lr{Y} \lr{advertize} کند، \lr{Y} می‌تواند آن مسیرها را برای \lr{X} \lr{re-advertize} کند. در نتیجه، در این مورد، \lr{Z} هیچ کاری نمی‌تواند بکند تا جلوی انتقال ترافیک از \lr{X} توسط \lr{Z} را بگیرد.
+
+\section{تکلیف 4 مسئله 15 فصل 3}
+$
+RTT = 30 ms \\
+d_{trans} = \frac{1500 \times 8 b}{10 Gbps} = 1.2 \mu s \\
+u = 0.98 = n \times \frac{1.2 \mu s}{30 ms + 1.2 \mu s} \\
+\Rightarrow n = 2450.98 \simeq 2451 \\
+$
+
+\section{تکلیف 4 مسئله 28 فصل 3}
+با توجه به اینکه حداکثر نرخ \lr{A}، برابر $1 Gbps$ است پس نرخ حداکثر فرستادن هاست \lr{A} نیز $1 Gbps$ است. سرعت فرستادن دیتا توسط هاست \lr{A} بیشتر از خواندن دیتا از بافر توسط هاست \lr{B} است. وقتی بافر پر است هاست \lr{B} سیگنالی به هاست \lr{A} می‌فرستد تا فرستادن دیتا را متوقف کند که این سیگنال همان صفر کردن سایز پنجره‌ی ورودی فرستنده (\lr{RcvWindow}) است. سپس هاست \lr{A} فرستادن را متوقف می‌کند و تا زمانی که یک سگمنت \lr{TCP} با \lr{RcvWindow} بزرگتر از 0 دریافت کند. بنابراین هاست \lr{A} به طور مکرر متوقف می‌شود و فرستاده می‌شودبه عنوان تابعی از مقادیر \lr{RcvWindow} که از هاست \lr{B} دریافت می‌کند. بنابراین به طور متوسط می‌توان تعیین کرد که در بلندمدت نرخ ارسال داده توسط هاست \lr{A} به هاست \lr{B} نمی‌تواند بیشتر از $600 Mbps$ شود.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1}
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}
