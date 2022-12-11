@@ -1,0 +1,915 @@
+2022-12-03 00:17:30,214 [INFO]  
+========== start: fit model
+2022-12-03 00:17:30,217 [WARNING]  Already bound, ignoring bind()
+2022-12-03 00:17:30,525 [INFO]  Epoch[0] Batch [0-240]	Speed: 12896.68 samples/sec	cross-entropy=10.826072	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:30,861 [INFO]  Epoch[0] Train-cross-entropy=10.825341
+2022-12-03 00:17:30,862 [INFO]  Epoch[0] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:30,864 [INFO]  Epoch[0] Time cost=0.642
+2022-12-03 00:17:30,874 [INFO]  Saved checkpoint to "imputer_model\model-0000.params"
+2022-12-03 00:17:30,911 [INFO]  Epoch[0] Validation-cross-entropy=9.843059
+2022-12-03 00:17:30,913 [INFO]  Epoch[0] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:31,283 [INFO]  Epoch[1] Batch [0-240]	Speed: 10470.98 samples/sec	cross-entropy=10.151366	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:31,628 [INFO]  Epoch[1] Train-cross-entropy=10.412969
+2022-12-03 00:17:31,629 [INFO]  Epoch[1] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:31,631 [INFO]  Epoch[1] Time cost=0.717
+2022-12-03 00:17:31,639 [INFO]  Saved checkpoint to "imputer_model\model-0001.params"
+2022-12-03 00:17:31,686 [INFO]  Epoch[1] Validation-cross-entropy=9.750346
+2022-12-03 00:17:31,687 [INFO]  Epoch[1] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:32,062 [INFO]  Epoch[2] Batch [0-240]	Speed: 10415.95 samples/sec	cross-entropy=10.046755	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:32,432 [INFO]  Epoch[2] Train-cross-entropy=10.308323
+2022-12-03 00:17:32,434 [INFO]  Epoch[2] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:32,435 [INFO]  Epoch[2] Time cost=0.745
+2022-12-03 00:17:32,442 [INFO]  Saved checkpoint to "imputer_model\model-0002.params"
+2022-12-03 00:17:32,471 [INFO]  Epoch[2] Validation-cross-entropy=9.705733
+2022-12-03 00:17:32,474 [INFO]  Epoch[2] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:32,810 [INFO]  Epoch[3] Batch [0-240]	Speed: 11567.73 samples/sec	cross-entropy=9.980977	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:33,209 [INFO]  Epoch[3] Train-cross-entropy=10.235951
+2022-12-03 00:17:33,210 [INFO]  Epoch[3] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:33,212 [INFO]  Epoch[3] Time cost=0.736
+2022-12-03 00:17:33,216 [INFO]  Saved checkpoint to "imputer_model\model-0003.params"
+2022-12-03 00:17:33,257 [INFO]  Epoch[3] Validation-cross-entropy=9.666369
+2022-12-03 00:17:33,259 [INFO]  Epoch[3] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:33,594 [INFO]  Epoch[4] Batch [0-240]	Speed: 11537.27 samples/sec	cross-entropy=9.920130	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:33,937 [INFO]  Epoch[4] Train-cross-entropy=10.161604
+2022-12-03 00:17:33,939 [INFO]  Epoch[4] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:33,940 [INFO]  Epoch[4] Time cost=0.680
+2022-12-03 00:17:33,947 [INFO]  Saved checkpoint to "imputer_model\model-0004.params"
+2022-12-03 00:17:33,989 [INFO]  Epoch[4] Validation-cross-entropy=9.602412
+2022-12-03 00:17:33,991 [INFO]  Epoch[4] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:34,343 [INFO]  Epoch[5] Batch [0-240]	Speed: 11015.27 samples/sec	cross-entropy=9.858095	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:34,677 [INFO]  Epoch[5] Train-cross-entropy=10.090300
+2022-12-03 00:17:34,678 [INFO]  Epoch[5] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:34,678 [INFO]  Epoch[5] Time cost=0.686
+2022-12-03 00:17:34,686 [INFO]  Saved checkpoint to "imputer_model\model-0005.params"
+2022-12-03 00:17:34,722 [INFO]  Epoch[5] Validation-cross-entropy=9.551302
+2022-12-03 00:17:34,725 [INFO]  Epoch[5] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:35,085 [INFO]  Epoch[6] Batch [0-240]	Speed: 10755.11 samples/sec	cross-entropy=9.802662	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:35,403 [INFO]  Epoch[6] Train-cross-entropy=10.029118
+2022-12-03 00:17:35,406 [INFO]  Epoch[6] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:35,407 [INFO]  Epoch[6] Time cost=0.682
+2022-12-03 00:17:35,416 [INFO]  Saved checkpoint to "imputer_model\model-0006.params"
+2022-12-03 00:17:35,460 [INFO]  Epoch[6] Validation-cross-entropy=9.510950
+2022-12-03 00:17:35,462 [INFO]  Epoch[6] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:35,820 [INFO]  Epoch[7] Batch [0-240]	Speed: 10876.36 samples/sec	cross-entropy=9.760535	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:36,121 [INFO]  Epoch[7] Train-cross-entropy=9.983675
+2022-12-03 00:17:36,124 [INFO]  Epoch[7] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:36,124 [INFO]  Epoch[7] Time cost=0.661
+2022-12-03 00:17:36,130 [INFO]  Saved checkpoint to "imputer_model\model-0007.params"
+2022-12-03 00:17:36,167 [INFO]  Epoch[7] Validation-cross-entropy=9.470479
+2022-12-03 00:17:36,169 [INFO]  Epoch[7] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:36,544 [INFO]  Epoch[8] Batch [0-240]	Speed: 10386.27 samples/sec	cross-entropy=9.729310	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:36,874 [INFO]  Epoch[8] Train-cross-entropy=9.949164
+2022-12-03 00:17:36,875 [INFO]  Epoch[8] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:36,877 [INFO]  Epoch[8] Time cost=0.707
+2022-12-03 00:17:36,884 [INFO]  Saved checkpoint to "imputer_model\model-0008.params"
+2022-12-03 00:17:36,913 [INFO]  Epoch[8] Validation-cross-entropy=9.441023
+2022-12-03 00:17:36,914 [INFO]  Epoch[8] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:37,323 [INFO]  Epoch[9] Batch [0-240]	Speed: 9450.14 samples/sec	cross-entropy=9.704818	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:37,708 [INFO]  Epoch[9] Train-cross-entropy=9.922802
+2022-12-03 00:17:37,710 [INFO]  Epoch[9] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:37,710 [INFO]  Epoch[9] Time cost=0.796
+2022-12-03 00:17:37,718 [INFO]  Saved checkpoint to "imputer_model\model-0009.params"
+2022-12-03 00:17:37,759 [INFO]  Epoch[9] Validation-cross-entropy=9.405533
+2022-12-03 00:17:37,760 [INFO]  Epoch[9] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:38,093 [INFO]  Epoch[10] Batch [0-240]	Speed: 11702.93 samples/sec	cross-entropy=9.686584	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:38,445 [INFO]  Epoch[10] Train-cross-entropy=9.903275
+2022-12-03 00:17:38,447 [INFO]  Epoch[10] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:38,449 [INFO]  Epoch[10] Time cost=0.688
+2022-12-03 00:17:38,455 [INFO]  Saved checkpoint to "imputer_model\model-0010.params"
+2022-12-03 00:17:38,494 [INFO]  Epoch[10] Validation-cross-entropy=9.382073
+2022-12-03 00:17:38,496 [INFO]  Epoch[10] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:38,815 [INFO]  Epoch[11] Batch [0-240]	Speed: 12125.23 samples/sec	cross-entropy=9.668854	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:39,178 [INFO]  Epoch[11] Train-cross-entropy=9.885125
+2022-12-03 00:17:39,180 [INFO]  Epoch[11] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:39,181 [INFO]  Epoch[11] Time cost=0.683
+2022-12-03 00:17:39,188 [INFO]  Saved checkpoint to "imputer_model\model-0011.params"
+2022-12-03 00:17:39,216 [INFO]  Epoch[11] Validation-cross-entropy=9.356528
+2022-12-03 00:17:39,218 [INFO]  Epoch[11] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:39,624 [INFO]  Epoch[12] Batch [0-240]	Speed: 9604.24 samples/sec	cross-entropy=9.653980	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:39,952 [INFO]  Epoch[12] Train-cross-entropy=9.872744
+2022-12-03 00:17:39,953 [INFO]  Epoch[12] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:39,954 [INFO]  Epoch[12] Time cost=0.735
+2022-12-03 00:17:39,962 [INFO]  Saved checkpoint to "imputer_model\model-0012.params"
+2022-12-03 00:17:40,006 [INFO]  Epoch[12] Validation-cross-entropy=9.337102
+2022-12-03 00:17:40,008 [INFO]  Epoch[12] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:40,389 [INFO]  Epoch[13] Batch [0-240]	Speed: 10176.56 samples/sec	cross-entropy=9.642175	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:40,736 [INFO]  Epoch[13] Train-cross-entropy=9.862393
+2022-12-03 00:17:40,738 [INFO]  Epoch[13] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:40,740 [INFO]  Epoch[13] Time cost=0.732
+2022-12-03 00:17:40,748 [INFO]  Saved checkpoint to "imputer_model\model-0013.params"
+2022-12-03 00:17:40,793 [INFO]  Epoch[13] Validation-cross-entropy=9.324314
+2022-12-03 00:17:40,795 [INFO]  Epoch[13] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:41,144 [INFO]  Epoch[14] Batch [0-240]	Speed: 11104.30 samples/sec	cross-entropy=9.635601	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:41,433 [INFO]  Epoch[14] Train-cross-entropy=9.856139
+2022-12-03 00:17:41,435 [INFO]  Epoch[14] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:41,436 [INFO]  Epoch[14] Time cost=0.641
+2022-12-03 00:17:41,444 [INFO]  Saved checkpoint to "imputer_model\model-0014.params"
+2022-12-03 00:17:41,473 [INFO]  Epoch[14] Validation-cross-entropy=9.313527
+2022-12-03 00:17:41,474 [INFO]  Epoch[14] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:41,835 [INFO]  Epoch[15] Batch [0-240]	Speed: 10717.53 samples/sec	cross-entropy=9.626541	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:42,221 [INFO]  Epoch[15] Train-cross-entropy=9.847077
+2022-12-03 00:17:42,222 [INFO]  Epoch[15] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:42,223 [INFO]  Epoch[15] Time cost=0.748
+2022-12-03 00:17:42,233 [INFO]  Saved checkpoint to "imputer_model\model-0015.params"
+2022-12-03 00:17:42,269 [INFO]  Epoch[15] Validation-cross-entropy=9.312143
+2022-12-03 00:17:42,270 [INFO]  Epoch[15] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:42,618 [INFO]  Epoch[16] Batch [0-240]	Speed: 11134.72 samples/sec	cross-entropy=9.622998	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:42,929 [INFO]  Epoch[16] Train-cross-entropy=9.841695
+2022-12-03 00:17:42,930 [INFO]  Epoch[16] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:42,932 [INFO]  Epoch[16] Time cost=0.661
+2022-12-03 00:17:42,938 [INFO]  Saved checkpoint to "imputer_model\model-0016.params"
+2022-12-03 00:17:42,965 [INFO]  Epoch[16] Validation-cross-entropy=9.300155
+2022-12-03 00:17:42,965 [INFO]  Epoch[16] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:43,269 [INFO]  Epoch[17] Batch [0-240]	Speed: 12873.78 samples/sec	cross-entropy=9.615508	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:43,560 [INFO]  Epoch[17] Train-cross-entropy=9.834351
+2022-12-03 00:17:43,561 [INFO]  Epoch[17] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:43,561 [INFO]  Epoch[17] Time cost=0.596
+2022-12-03 00:17:43,567 [INFO]  Saved checkpoint to "imputer_model\model-0017.params"
+2022-12-03 00:17:43,595 [INFO]  Epoch[17] Validation-cross-entropy=9.288027
+2022-12-03 00:17:43,596 [INFO]  Epoch[17] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:43,900 [INFO]  Epoch[18] Batch [0-240]	Speed: 12780.79 samples/sec	cross-entropy=9.607102	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:44,195 [INFO]  Epoch[18] Train-cross-entropy=9.828406
+2022-12-03 00:17:44,196 [INFO]  Epoch[18] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:44,197 [INFO]  Epoch[18] Time cost=0.600
+2022-12-03 00:17:44,203 [INFO]  Saved checkpoint to "imputer_model\model-0018.params"
+2022-12-03 00:17:44,240 [INFO]  Epoch[18] Validation-cross-entropy=9.282034
+2022-12-03 00:17:44,241 [INFO]  Epoch[18] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:44,561 [INFO]  Epoch[19] Batch [0-240]	Speed: 12073.18 samples/sec	cross-entropy=9.602690	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:44,858 [INFO]  Epoch[19] Train-cross-entropy=9.821163
+2022-12-03 00:17:44,859 [INFO]  Epoch[19] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:44,860 [INFO]  Epoch[19] Time cost=0.618
+2022-12-03 00:17:44,865 [INFO]  Saved checkpoint to "imputer_model\model-0019.params"
+2022-12-03 00:17:44,893 [INFO]  Epoch[19] Validation-cross-entropy=9.275688
+2022-12-03 00:17:44,894 [INFO]  Epoch[19] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:45,148 [INFO]  Epoch[20] Batch [0-240]	Speed: 15280.96 samples/sec	cross-entropy=9.596440	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:45,494 [INFO]  Epoch[20] Train-cross-entropy=9.816169
+2022-12-03 00:17:45,496 [INFO]  Epoch[20] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:45,497 [INFO]  Epoch[20] Time cost=0.602
+2022-12-03 00:17:45,504 [INFO]  Saved checkpoint to "imputer_model\model-0020.params"
+2022-12-03 00:17:45,544 [INFO]  Epoch[20] Validation-cross-entropy=9.268308
+2022-12-03 00:17:45,545 [INFO]  Epoch[20] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:45,862 [INFO]  Epoch[21] Batch [0-240]	Speed: 12246.81 samples/sec	cross-entropy=9.596135	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:46,172 [INFO]  Epoch[21] Train-cross-entropy=9.814653
+2022-12-03 00:17:46,174 [INFO]  Epoch[21] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:46,175 [INFO]  Epoch[21] Time cost=0.629
+2022-12-03 00:17:46,180 [INFO]  Saved checkpoint to "imputer_model\model-0021.params"
+2022-12-03 00:17:46,215 [INFO]  Epoch[21] Validation-cross-entropy=9.263555
+2022-12-03 00:17:46,216 [INFO]  Epoch[21] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:46,525 [INFO]  Epoch[22] Batch [0-240]	Speed: 12614.40 samples/sec	cross-entropy=9.587785	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:46,821 [INFO]  Epoch[22] Train-cross-entropy=9.809515
+2022-12-03 00:17:46,823 [INFO]  Epoch[22] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:46,824 [INFO]  Epoch[22] Time cost=0.607
+2022-12-03 00:17:46,829 [INFO]  Saved checkpoint to "imputer_model\model-0022.params"
+2022-12-03 00:17:46,852 [INFO]  Epoch[22] Validation-cross-entropy=9.258384
+2022-12-03 00:17:46,853 [INFO]  Epoch[22] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:47,152 [INFO]  Epoch[23] Batch [0-240]	Speed: 12956.22 samples/sec	cross-entropy=9.581614	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:47,468 [INFO]  Epoch[23] Train-cross-entropy=9.802209
+2022-12-03 00:17:47,469 [INFO]  Epoch[23] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:47,471 [INFO]  Epoch[23] Time cost=0.617
+2022-12-03 00:17:47,476 [INFO]  Saved checkpoint to "imputer_model\model-0023.params"
+2022-12-03 00:17:47,504 [INFO]  Epoch[23] Validation-cross-entropy=9.247021
+2022-12-03 00:17:47,506 [INFO]  Epoch[23] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:47,810 [INFO]  Epoch[24] Batch [0-240]	Speed: 12774.78 samples/sec	cross-entropy=9.576109	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:48,083 [INFO]  Epoch[24] Train-cross-entropy=9.797711
+2022-12-03 00:17:48,085 [INFO]  Epoch[24] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:48,087 [INFO]  Epoch[24] Time cost=0.581
+2022-12-03 00:17:48,092 [INFO]  Saved checkpoint to "imputer_model\model-0024.params"
+2022-12-03 00:17:48,133 [INFO]  Epoch[24] Validation-cross-entropy=9.250190
+2022-12-03 00:17:48,135 [INFO]  Epoch[24] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:48,469 [INFO]  Epoch[25] Batch [0-240]	Speed: 11652.93 samples/sec	cross-entropy=9.573631	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:48,789 [INFO]  Epoch[25] Train-cross-entropy=9.793614
+2022-12-03 00:17:48,790 [INFO]  Epoch[25] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:48,791 [INFO]  Epoch[25] Time cost=0.655
+2022-12-03 00:17:48,796 [INFO]  Saved checkpoint to "imputer_model\model-0025.params"
+2022-12-03 00:17:48,832 [INFO]  Epoch[25] Validation-cross-entropy=9.245277
+2022-12-03 00:17:48,833 [INFO]  Epoch[25] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:49,123 [INFO]  Epoch[26] Batch [0-240]	Speed: 13421.66 samples/sec	cross-entropy=9.567295	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:49,385 [INFO]  Epoch[26] Train-cross-entropy=9.790635
+2022-12-03 00:17:49,387 [INFO]  Epoch[26] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:49,388 [INFO]  Epoch[26] Time cost=0.554
+2022-12-03 00:17:49,393 [INFO]  Saved checkpoint to "imputer_model\model-0026.params"
+2022-12-03 00:17:49,429 [INFO]  Epoch[26] Validation-cross-entropy=9.255717
+2022-12-03 00:17:49,430 [INFO]  Epoch[26] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:49,738 [INFO]  Epoch[27] Batch [0-240]	Speed: 12577.72 samples/sec	cross-entropy=9.564634	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:50,042 [INFO]  Epoch[27] Train-cross-entropy=9.784888
+2022-12-03 00:17:50,043 [INFO]  Epoch[27] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:50,044 [INFO]  Epoch[27] Time cost=0.613
+2022-12-03 00:17:50,050 [INFO]  Saved checkpoint to "imputer_model\model-0027.params"
+2022-12-03 00:17:50,081 [INFO]  Epoch[27] Validation-cross-entropy=9.248446
+2022-12-03 00:17:50,083 [INFO]  Epoch[27] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:50,339 [INFO]  Epoch[28] Batch [0-240]	Speed: 15196.27 samples/sec	cross-entropy=9.560437	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:50,608 [INFO]  Epoch[28] Train-cross-entropy=9.780880
+2022-12-03 00:17:50,610 [INFO]  Epoch[28] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:50,611 [INFO]  Epoch[28] Time cost=0.527
+2022-12-03 00:17:50,617 [INFO]  Saved checkpoint to "imputer_model\model-0028.params"
+2022-12-03 00:17:50,644 [INFO]  Epoch[28] Validation-cross-entropy=9.242220
+2022-12-03 00:17:50,645 [INFO]  Epoch[28] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:50,912 [INFO]  Epoch[29] Batch [0-240]	Speed: 14619.86 samples/sec	cross-entropy=9.557485	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:51,198 [INFO]  Epoch[29] Train-cross-entropy=9.776906
+2022-12-03 00:17:51,200 [INFO]  Epoch[29] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:51,202 [INFO]  Epoch[29] Time cost=0.554
+2022-12-03 00:17:51,208 [INFO]  Saved checkpoint to "imputer_model\model-0029.params"
+2022-12-03 00:17:51,239 [INFO]  Epoch[29] Validation-cross-entropy=9.242354
+2022-12-03 00:17:51,241 [INFO]  Epoch[29] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:51,536 [INFO]  Epoch[30] Batch [0-240]	Speed: 13148.45 samples/sec	cross-entropy=9.552532	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:51,780 [INFO]  Epoch[30] Train-cross-entropy=9.773736
+2022-12-03 00:17:51,781 [INFO]  Epoch[30] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:51,781 [INFO]  Epoch[30] Time cost=0.539
+2022-12-03 00:17:51,787 [INFO]  Saved checkpoint to "imputer_model\model-0030.params"
+2022-12-03 00:17:51,822 [INFO]  Epoch[30] Validation-cross-entropy=9.236391
+2022-12-03 00:17:51,824 [INFO]  Epoch[30] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:52,091 [INFO]  Epoch[31] Batch [0-240]	Speed: 14505.86 samples/sec	cross-entropy=9.553276	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:52,373 [INFO]  Epoch[31] Train-cross-entropy=9.772633
+2022-12-03 00:17:52,374 [INFO]  Epoch[31] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:52,375 [INFO]  Epoch[31] Time cost=0.551
+2022-12-03 00:17:52,385 [INFO]  Saved checkpoint to "imputer_model\model-0031.params"
+2022-12-03 00:17:52,416 [INFO]  Epoch[31] Validation-cross-entropy=9.229847
+2022-12-03 00:17:52,417 [INFO]  Epoch[31] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:52,707 [INFO]  Epoch[32] Batch [0-240]	Speed: 13387.03 samples/sec	cross-entropy=9.548030	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:53,052 [INFO]  Epoch[32] Train-cross-entropy=9.766926
+2022-12-03 00:17:53,053 [INFO]  Epoch[32] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:53,054 [INFO]  Epoch[32] Time cost=0.636
+2022-12-03 00:17:53,062 [INFO]  Saved checkpoint to "imputer_model\model-0032.params"
+2022-12-03 00:17:53,088 [INFO]  Epoch[32] Validation-cross-entropy=9.225208
+2022-12-03 00:17:53,089 [INFO]  Epoch[32] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:53,371 [INFO]  Epoch[33] Batch [0-240]	Speed: 13690.61 samples/sec	cross-entropy=9.547490	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:53,631 [INFO]  Epoch[33] Train-cross-entropy=9.764611
+2022-12-03 00:17:53,633 [INFO]  Epoch[33] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:53,634 [INFO]  Epoch[33] Time cost=0.545
+2022-12-03 00:17:53,639 [INFO]  Saved checkpoint to "imputer_model\model-0033.params"
+2022-12-03 00:17:53,672 [INFO]  Epoch[33] Validation-cross-entropy=9.211659
+2022-12-03 00:17:53,673 [INFO]  Epoch[33] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:53,976 [INFO]  Epoch[34] Batch [0-240]	Speed: 12737.53 samples/sec	cross-entropy=9.543425	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:54,320 [INFO]  Epoch[34] Train-cross-entropy=9.761676
+2022-12-03 00:17:54,321 [INFO]  Epoch[34] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:54,323 [INFO]  Epoch[34] Time cost=0.649
+2022-12-03 00:17:54,328 [INFO]  Saved checkpoint to "imputer_model\model-0034.params"
+2022-12-03 00:17:54,357 [INFO]  Epoch[34] Validation-cross-entropy=9.218137
+2022-12-03 00:17:54,359 [INFO]  Epoch[34] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:54,630 [INFO]  Epoch[35] Batch [0-240]	Speed: 14327.29 samples/sec	cross-entropy=9.553160	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:54,877 [INFO]  Epoch[35] Train-cross-entropy=9.766458
+2022-12-03 00:17:54,878 [INFO]  Epoch[35] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:54,878 [INFO]  Epoch[35] Time cost=0.519
+2022-12-03 00:17:54,884 [INFO]  Saved checkpoint to "imputer_model\model-0035.params"
+2022-12-03 00:17:54,915 [INFO]  Epoch[35] Validation-cross-entropy=9.204389
+2022-12-03 00:17:54,916 [INFO]  Epoch[35] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:55,250 [INFO]  Epoch[36] Batch [0-240]	Speed: 11615.34 samples/sec	cross-entropy=9.540862	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:55,539 [INFO]  Epoch[36] Train-cross-entropy=9.758290
+2022-12-03 00:17:55,540 [INFO]  Epoch[36] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:55,540 [INFO]  Epoch[36] Time cost=0.624
+2022-12-03 00:17:55,546 [INFO]  Saved checkpoint to "imputer_model\model-0036.params"
+2022-12-03 00:17:55,575 [INFO]  Epoch[36] Validation-cross-entropy=9.204345
+2022-12-03 00:17:55,577 [INFO]  Epoch[36] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:55,882 [INFO]  Epoch[37] Batch [0-240]	Speed: 12779.21 samples/sec	cross-entropy=9.537461	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:56,201 [INFO]  Epoch[37] Train-cross-entropy=9.756207
+2022-12-03 00:17:56,202 [INFO]  Epoch[37] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:56,203 [INFO]  Epoch[37] Time cost=0.623
+2022-12-03 00:17:56,210 [INFO]  Saved checkpoint to "imputer_model\model-0037.params"
+2022-12-03 00:17:56,236 [INFO]  Epoch[37] Validation-cross-entropy=9.188586
+2022-12-03 00:17:56,239 [INFO]  Epoch[37] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:56,539 [INFO]  Epoch[38] Batch [0-240]	Speed: 12942.81 samples/sec	cross-entropy=9.534779	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:56,839 [INFO]  Epoch[38] Train-cross-entropy=9.751511
+2022-12-03 00:17:56,841 [INFO]  Epoch[38] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:56,841 [INFO]  Epoch[38] Time cost=0.600
+2022-12-03 00:17:56,849 [INFO]  Saved checkpoint to "imputer_model\model-0038.params"
+2022-12-03 00:17:56,874 [INFO]  Epoch[38] Validation-cross-entropy=9.187004
+2022-12-03 00:17:56,875 [INFO]  Epoch[38] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:57,130 [INFO]  Epoch[39] Batch [0-240]	Speed: 15272.57 samples/sec	cross-entropy=9.533904	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:57,397 [INFO]  Epoch[39] Train-cross-entropy=9.753737
+2022-12-03 00:17:57,399 [INFO]  Epoch[39] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:57,400 [INFO]  Epoch[39] Time cost=0.524
+2022-12-03 00:17:57,407 [INFO]  Saved checkpoint to "imputer_model\model-0039.params"
+2022-12-03 00:17:57,444 [INFO]  Epoch[39] Validation-cross-entropy=9.197899
+2022-12-03 00:17:57,447 [INFO]  Epoch[39] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:57,738 [INFO]  Epoch[40] Batch [0-240]	Speed: 13334.80 samples/sec	cross-entropy=9.524187	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:58,037 [INFO]  Epoch[40] Train-cross-entropy=9.742758
+2022-12-03 00:17:58,038 [INFO]  Epoch[40] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:58,039 [INFO]  Epoch[40] Time cost=0.592
+2022-12-03 00:17:58,045 [INFO]  Saved checkpoint to "imputer_model\model-0040.params"
+2022-12-03 00:17:58,086 [INFO]  Epoch[40] Validation-cross-entropy=9.202861
+2022-12-03 00:17:58,088 [INFO]  Epoch[40] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:58,444 [INFO]  Epoch[41] Batch [0-240]	Speed: 10833.60 samples/sec	cross-entropy=9.523908	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:58,756 [INFO]  Epoch[41] Train-cross-entropy=9.741922
+2022-12-03 00:17:58,758 [INFO]  Epoch[41] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:58,758 [INFO]  Epoch[41] Time cost=0.671
+2022-12-03 00:17:58,763 [INFO]  Saved checkpoint to "imputer_model\model-0041.params"
+2022-12-03 00:17:58,801 [INFO]  Epoch[41] Validation-cross-entropy=9.196335
+2022-12-03 00:17:58,803 [INFO]  Epoch[41] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:59,073 [INFO]  Epoch[42] Batch [0-240]	Speed: 14344.24 samples/sec	cross-entropy=9.521509	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:59,382 [INFO]  Epoch[42] Train-cross-entropy=9.739063
+2022-12-03 00:17:59,384 [INFO]  Epoch[42] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:17:59,385 [INFO]  Epoch[42] Time cost=0.582
+2022-12-03 00:17:59,393 [INFO]  Saved checkpoint to "imputer_model\model-0042.params"
+2022-12-03 00:17:59,429 [INFO]  No improvement detected for 5 epochs compared to 9.188585638999939 last error obtained: 9.195652665915313, stopping here
+2022-12-03 00:17:59,431 [INFO]  
+========== done (29.217458963394165 s) fit model
+2022-12-03 00:25:03,505 [INFO]  
+========== start: fit model
+2022-12-03 00:25:03,514 [WARNING]  Already bound, ignoring bind()
+2022-12-03 00:25:04,389 [INFO]  Epoch[0] Batch [0-240]	Speed: 4460.11 samples/sec	cross-entropy=10.826072	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:05,237 [INFO]  Epoch[0] Train-cross-entropy=10.825341
+2022-12-03 00:25:05,239 [INFO]  Epoch[0] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:05,240 [INFO]  Epoch[0] Time cost=1.718
+2022-12-03 00:25:05,253 [INFO]  Saved checkpoint to "imputer_model\model-0000.params"
+2022-12-03 00:25:05,324 [INFO]  Epoch[0] Validation-cross-entropy=9.843059
+2022-12-03 00:25:05,326 [INFO]  Epoch[0] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:06,240 [INFO]  Epoch[1] Batch [0-240]	Speed: 4243.42 samples/sec	cross-entropy=10.151366	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:07,096 [INFO]  Epoch[1] Train-cross-entropy=10.412969
+2022-12-03 00:25:07,100 [INFO]  Epoch[1] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:07,105 [INFO]  Epoch[1] Time cost=1.775
+2022-12-03 00:25:07,117 [INFO]  Saved checkpoint to "imputer_model\model-0001.params"
+2022-12-03 00:25:07,201 [INFO]  Epoch[1] Validation-cross-entropy=9.750346
+2022-12-03 00:25:07,204 [INFO]  Epoch[1] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:07,956 [INFO]  Epoch[2] Batch [0-240]	Speed: 5156.60 samples/sec	cross-entropy=10.046755	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:08,676 [INFO]  Epoch[2] Train-cross-entropy=10.308323
+2022-12-03 00:25:08,679 [INFO]  Epoch[2] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:08,682 [INFO]  Epoch[2] Time cost=1.475
+2022-12-03 00:25:08,694 [INFO]  Saved checkpoint to "imputer_model\model-0002.params"
+2022-12-03 00:25:08,770 [INFO]  Epoch[2] Validation-cross-entropy=9.705733
+2022-12-03 00:25:08,774 [INFO]  Epoch[2] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:09,634 [INFO]  Epoch[3] Batch [0-240]	Speed: 4504.13 samples/sec	cross-entropy=9.980977	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:10,535 [INFO]  Epoch[3] Train-cross-entropy=10.235951
+2022-12-03 00:25:10,537 [INFO]  Epoch[3] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:10,539 [INFO]  Epoch[3] Time cost=1.762
+2022-12-03 00:25:10,555 [INFO]  Saved checkpoint to "imputer_model\model-0003.params"
+2022-12-03 00:25:10,638 [INFO]  Epoch[3] Validation-cross-entropy=9.666369
+2022-12-03 00:25:10,640 [INFO]  Epoch[3] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:11,526 [INFO]  Epoch[4] Batch [0-240]	Speed: 4372.71 samples/sec	cross-entropy=9.920130	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:12,314 [INFO]  Epoch[4] Train-cross-entropy=10.161604
+2022-12-03 00:25:12,317 [INFO]  Epoch[4] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:12,319 [INFO]  Epoch[4] Time cost=1.676
+2022-12-03 00:25:12,334 [INFO]  Saved checkpoint to "imputer_model\model-0004.params"
+2022-12-03 00:25:12,420 [INFO]  Epoch[4] Validation-cross-entropy=9.602412
+2022-12-03 00:25:12,422 [INFO]  Epoch[4] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:13,265 [INFO]  Epoch[5] Batch [0-240]	Speed: 4591.39 samples/sec	cross-entropy=9.858095	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:14,090 [INFO]  Epoch[5] Train-cross-entropy=10.090300
+2022-12-03 00:25:14,095 [INFO]  Epoch[5] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:14,098 [INFO]  Epoch[5] Time cost=1.672
+2022-12-03 00:25:14,111 [INFO]  Saved checkpoint to "imputer_model\model-0005.params"
+2022-12-03 00:25:14,194 [INFO]  Epoch[5] Validation-cross-entropy=9.551302
+2022-12-03 00:25:14,198 [INFO]  Epoch[5] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:15,019 [INFO]  Epoch[6] Batch [0-240]	Speed: 4718.08 samples/sec	cross-entropy=9.802662	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:15,860 [INFO]  Epoch[6] Train-cross-entropy=10.029118
+2022-12-03 00:25:15,862 [INFO]  Epoch[6] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:15,866 [INFO]  Epoch[6] Time cost=1.666
+2022-12-03 00:25:15,875 [INFO]  Saved checkpoint to "imputer_model\model-0006.params"
+2022-12-03 00:25:15,954 [INFO]  Epoch[6] Validation-cross-entropy=9.510950
+2022-12-03 00:25:15,957 [INFO]  Epoch[6] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:16,839 [INFO]  Epoch[7] Batch [0-240]	Speed: 4384.99 samples/sec	cross-entropy=9.760535	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:17,647 [INFO]  Epoch[7] Train-cross-entropy=9.983675
+2022-12-03 00:25:17,652 [INFO]  Epoch[7] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:17,655 [INFO]  Epoch[7] Time cost=1.695
+2022-12-03 00:25:17,663 [INFO]  Saved checkpoint to "imputer_model\model-0007.params"
+2022-12-03 00:25:17,720 [INFO]  Epoch[7] Validation-cross-entropy=9.470479
+2022-12-03 00:25:17,723 [INFO]  Epoch[7] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:18,517 [INFO]  Epoch[8] Batch [0-240]	Speed: 4869.39 samples/sec	cross-entropy=9.729310	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:19,287 [INFO]  Epoch[8] Train-cross-entropy=9.949164
+2022-12-03 00:25:19,290 [INFO]  Epoch[8] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:19,292 [INFO]  Epoch[8] Time cost=1.569
+2022-12-03 00:25:19,305 [INFO]  Saved checkpoint to "imputer_model\model-0008.params"
+2022-12-03 00:25:19,391 [INFO]  Epoch[8] Validation-cross-entropy=9.441023
+2022-12-03 00:25:19,395 [INFO]  Epoch[8] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:20,169 [INFO]  Epoch[9] Batch [0-240]	Speed: 4999.86 samples/sec	cross-entropy=9.704818	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:21,000 [INFO]  Epoch[9] Train-cross-entropy=9.922802
+2022-12-03 00:25:21,002 [INFO]  Epoch[9] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:21,004 [INFO]  Epoch[9] Time cost=1.606
+2022-12-03 00:25:21,016 [INFO]  Saved checkpoint to "imputer_model\model-0009.params"
+2022-12-03 00:25:21,074 [INFO]  Epoch[9] Validation-cross-entropy=9.405533
+2022-12-03 00:25:21,076 [INFO]  Epoch[9] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:21,888 [INFO]  Epoch[10] Batch [0-240]	Speed: 4783.04 samples/sec	cross-entropy=9.686584	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:22,681 [INFO]  Epoch[10] Train-cross-entropy=9.903275
+2022-12-03 00:25:22,684 [INFO]  Epoch[10] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:22,689 [INFO]  Epoch[10] Time cost=1.611
+2022-12-03 00:25:22,697 [INFO]  Saved checkpoint to "imputer_model\model-0010.params"
+2022-12-03 00:25:22,738 [INFO]  Epoch[10] Validation-cross-entropy=9.382073
+2022-12-03 00:25:22,741 [INFO]  Epoch[10] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:23,619 [INFO]  Epoch[11] Batch [0-240]	Speed: 4400.68 samples/sec	cross-entropy=9.668854	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:24,398 [INFO]  Epoch[11] Train-cross-entropy=9.885125
+2022-12-03 00:25:24,401 [INFO]  Epoch[11] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:24,403 [INFO]  Epoch[11] Time cost=1.659
+2022-12-03 00:25:24,416 [INFO]  Saved checkpoint to "imputer_model\model-0011.params"
+2022-12-03 00:25:24,506 [INFO]  Epoch[11] Validation-cross-entropy=9.356528
+2022-12-03 00:25:24,510 [INFO]  Epoch[11] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:25,350 [INFO]  Epoch[12] Batch [0-240]	Speed: 4619.08 samples/sec	cross-entropy=9.653980	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:26,118 [INFO]  Epoch[12] Train-cross-entropy=9.872744
+2022-12-03 00:25:26,120 [INFO]  Epoch[12] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:26,122 [INFO]  Epoch[12] Time cost=1.608
+2022-12-03 00:25:26,133 [INFO]  Saved checkpoint to "imputer_model\model-0012.params"
+2022-12-03 00:25:26,187 [INFO]  Epoch[12] Validation-cross-entropy=9.337102
+2022-12-03 00:25:26,189 [INFO]  Epoch[12] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:27,057 [INFO]  Epoch[13] Batch [0-240]	Speed: 4473.10 samples/sec	cross-entropy=9.642175	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:27,840 [INFO]  Epoch[13] Train-cross-entropy=9.862393
+2022-12-03 00:25:27,842 [INFO]  Epoch[13] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:27,845 [INFO]  Epoch[13] Time cost=1.652
+2022-12-03 00:25:27,859 [INFO]  Saved checkpoint to "imputer_model\model-0013.params"
+2022-12-03 00:25:27,924 [INFO]  Epoch[13] Validation-cross-entropy=9.324314
+2022-12-03 00:25:27,926 [INFO]  Epoch[13] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:28,800 [INFO]  Epoch[14] Batch [0-240]	Speed: 4421.00 samples/sec	cross-entropy=9.635601	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:29,640 [INFO]  Epoch[14] Train-cross-entropy=9.856139
+2022-12-03 00:25:29,643 [INFO]  Epoch[14] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:29,645 [INFO]  Epoch[14] Time cost=1.717
+2022-12-03 00:25:29,659 [INFO]  Saved checkpoint to "imputer_model\model-0014.params"
+2022-12-03 00:25:29,737 [INFO]  Epoch[14] Validation-cross-entropy=9.313527
+2022-12-03 00:25:29,741 [INFO]  Epoch[14] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:30,594 [INFO]  Epoch[15] Batch [0-240]	Speed: 4545.90 samples/sec	cross-entropy=9.626541	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:31,440 [INFO]  Epoch[15] Train-cross-entropy=9.847077
+2022-12-03 00:25:31,443 [INFO]  Epoch[15] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:31,445 [INFO]  Epoch[15] Time cost=1.701
+2022-12-03 00:25:31,463 [INFO]  Saved checkpoint to "imputer_model\model-0015.params"
+2022-12-03 00:25:31,543 [INFO]  Epoch[15] Validation-cross-entropy=9.312143
+2022-12-03 00:25:31,545 [INFO]  Epoch[15] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:32,383 [INFO]  Epoch[16] Batch [0-240]	Speed: 4637.31 samples/sec	cross-entropy=9.622998	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:33,261 [INFO]  Epoch[16] Train-cross-entropy=9.841695
+2022-12-03 00:25:33,266 [INFO]  Epoch[16] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:33,269 [INFO]  Epoch[16] Time cost=1.719
+2022-12-03 00:25:33,282 [INFO]  Saved checkpoint to "imputer_model\model-0016.params"
+2022-12-03 00:25:33,367 [INFO]  Epoch[16] Validation-cross-entropy=9.300155
+2022-12-03 00:25:33,369 [INFO]  Epoch[16] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:34,271 [INFO]  Epoch[17] Batch [0-240]	Speed: 4294.15 samples/sec	cross-entropy=9.615508	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:35,082 [INFO]  Epoch[17] Train-cross-entropy=9.834351
+2022-12-03 00:25:35,086 [INFO]  Epoch[17] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:35,090 [INFO]  Epoch[17] Time cost=1.718
+2022-12-03 00:25:35,102 [INFO]  Saved checkpoint to "imputer_model\model-0017.params"
+2022-12-03 00:25:35,185 [INFO]  Epoch[17] Validation-cross-entropy=9.288027
+2022-12-03 00:25:35,187 [INFO]  Epoch[17] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:36,038 [INFO]  Epoch[18] Batch [0-240]	Speed: 4552.56 samples/sec	cross-entropy=9.607102	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:36,779 [INFO]  Epoch[18] Train-cross-entropy=9.828406
+2022-12-03 00:25:36,781 [INFO]  Epoch[18] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:36,783 [INFO]  Epoch[18] Time cost=1.594
+2022-12-03 00:25:36,792 [INFO]  Saved checkpoint to "imputer_model\model-0018.params"
+2022-12-03 00:25:36,835 [INFO]  Epoch[18] Validation-cross-entropy=9.282034
+2022-12-03 00:25:36,836 [INFO]  Epoch[18] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:37,628 [INFO]  Epoch[19] Batch [0-240]	Speed: 4892.17 samples/sec	cross-entropy=9.602690	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:38,497 [INFO]  Epoch[19] Train-cross-entropy=9.821163
+2022-12-03 00:25:38,502 [INFO]  Epoch[19] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:38,503 [INFO]  Epoch[19] Time cost=1.665
+2022-12-03 00:25:38,515 [INFO]  Saved checkpoint to "imputer_model\model-0019.params"
+2022-12-03 00:25:38,594 [INFO]  Epoch[19] Validation-cross-entropy=9.275688
+2022-12-03 00:25:38,596 [INFO]  Epoch[19] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:39,412 [INFO]  Epoch[20] Batch [0-240]	Speed: 4746.53 samples/sec	cross-entropy=9.596440	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:40,192 [INFO]  Epoch[20] Train-cross-entropy=9.816169
+2022-12-03 00:25:40,194 [INFO]  Epoch[20] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:40,196 [INFO]  Epoch[20] Time cost=1.596
+2022-12-03 00:25:40,207 [INFO]  Saved checkpoint to "imputer_model\model-0020.params"
+2022-12-03 00:25:40,287 [INFO]  Epoch[20] Validation-cross-entropy=9.268308
+2022-12-03 00:25:40,291 [INFO]  Epoch[20] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:41,111 [INFO]  Epoch[21] Batch [0-240]	Speed: 4737.70 samples/sec	cross-entropy=9.596135	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:41,962 [INFO]  Epoch[21] Train-cross-entropy=9.814653
+2022-12-03 00:25:41,965 [INFO]  Epoch[21] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:41,968 [INFO]  Epoch[21] Time cost=1.675
+2022-12-03 00:25:41,979 [INFO]  Saved checkpoint to "imputer_model\model-0021.params"
+2022-12-03 00:25:42,029 [INFO]  Epoch[21] Validation-cross-entropy=9.263555
+2022-12-03 00:25:42,032 [INFO]  Epoch[21] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:42,931 [INFO]  Epoch[22] Batch [0-240]	Speed: 4294.25 samples/sec	cross-entropy=9.587785	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:43,713 [INFO]  Epoch[22] Train-cross-entropy=9.809515
+2022-12-03 00:25:43,717 [INFO]  Epoch[22] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:43,721 [INFO]  Epoch[22] Time cost=1.687
+2022-12-03 00:25:43,734 [INFO]  Saved checkpoint to "imputer_model\model-0022.params"
+2022-12-03 00:25:43,798 [INFO]  Epoch[22] Validation-cross-entropy=9.258384
+2022-12-03 00:25:43,801 [INFO]  Epoch[22] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:44,655 [INFO]  Epoch[23] Batch [0-240]	Speed: 4538.13 samples/sec	cross-entropy=9.581614	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:45,474 [INFO]  Epoch[23] Train-cross-entropy=9.802209
+2022-12-03 00:25:45,476 [INFO]  Epoch[23] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:45,478 [INFO]  Epoch[23] Time cost=1.675
+2022-12-03 00:25:45,491 [INFO]  Saved checkpoint to "imputer_model\model-0023.params"
+2022-12-03 00:25:45,570 [INFO]  Epoch[23] Validation-cross-entropy=9.247021
+2022-12-03 00:25:45,572 [INFO]  Epoch[23] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:46,426 [INFO]  Epoch[24] Batch [0-240]	Speed: 4536.00 samples/sec	cross-entropy=9.576109	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:47,260 [INFO]  Epoch[24] Train-cross-entropy=9.797711
+2022-12-03 00:25:47,263 [INFO]  Epoch[24] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:47,266 [INFO]  Epoch[24] Time cost=1.692
+2022-12-03 00:25:47,279 [INFO]  Saved checkpoint to "imputer_model\model-0024.params"
+2022-12-03 00:25:47,339 [INFO]  Epoch[24] Validation-cross-entropy=9.250190
+2022-12-03 00:25:47,342 [INFO]  Epoch[24] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:48,150 [INFO]  Epoch[25] Batch [0-240]	Speed: 4782.40 samples/sec	cross-entropy=9.573631	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:48,990 [INFO]  Epoch[25] Train-cross-entropy=9.793614
+2022-12-03 00:25:48,993 [INFO]  Epoch[25] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:48,995 [INFO]  Epoch[25] Time cost=1.650
+2022-12-03 00:25:49,008 [INFO]  Saved checkpoint to "imputer_model\model-0025.params"
+2022-12-03 00:25:49,092 [INFO]  Epoch[25] Validation-cross-entropy=9.245277
+2022-12-03 00:25:49,095 [INFO]  Epoch[25] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:49,757 [INFO]  Epoch[26] Batch [0-240]	Speed: 5871.14 samples/sec	cross-entropy=9.567295	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:50,223 [INFO]  Epoch[26] Train-cross-entropy=9.790635
+2022-12-03 00:25:50,226 [INFO]  Epoch[26] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:50,228 [INFO]  Epoch[26] Time cost=1.130
+2022-12-03 00:25:50,235 [INFO]  Saved checkpoint to "imputer_model\model-0026.params"
+2022-12-03 00:25:50,281 [INFO]  Epoch[26] Validation-cross-entropy=9.255717
+2022-12-03 00:25:50,284 [INFO]  Epoch[26] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:50,758 [INFO]  Epoch[27] Batch [0-240]	Speed: 8197.45 samples/sec	cross-entropy=9.564634	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:51,257 [INFO]  Epoch[27] Train-cross-entropy=9.784888
+2022-12-03 00:25:51,259 [INFO]  Epoch[27] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:51,262 [INFO]  Epoch[27] Time cost=0.976
+2022-12-03 00:25:51,270 [INFO]  Saved checkpoint to "imputer_model\model-0027.params"
+2022-12-03 00:25:51,336 [INFO]  Epoch[27] Validation-cross-entropy=9.248446
+2022-12-03 00:25:51,338 [INFO]  Epoch[27] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:51,928 [INFO]  Epoch[28] Batch [0-240]	Speed: 6567.85 samples/sec	cross-entropy=9.560437	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:52,551 [INFO]  Epoch[28] Train-cross-entropy=9.780880
+2022-12-03 00:25:52,553 [INFO]  Epoch[28] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:52,554 [INFO]  Epoch[28] Time cost=1.213
+2022-12-03 00:25:52,562 [INFO]  Saved checkpoint to "imputer_model\model-0028.params"
+2022-12-03 00:25:52,609 [INFO]  Epoch[28] Validation-cross-entropy=9.242220
+2022-12-03 00:25:52,611 [INFO]  Epoch[28] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:53,182 [INFO]  Epoch[29] Batch [0-240]	Speed: 6802.74 samples/sec	cross-entropy=9.557485	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:53,681 [INFO]  Epoch[29] Train-cross-entropy=9.776906
+2022-12-03 00:25:53,683 [INFO]  Epoch[29] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:53,684 [INFO]  Epoch[29] Time cost=1.072
+2022-12-03 00:25:53,691 [INFO]  Saved checkpoint to "imputer_model\model-0029.params"
+2022-12-03 00:25:53,735 [INFO]  Epoch[29] Validation-cross-entropy=9.242354
+2022-12-03 00:25:53,737 [INFO]  Epoch[29] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:54,190 [INFO]  Epoch[30] Batch [0-240]	Speed: 8549.53 samples/sec	cross-entropy=9.552532	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:54,734 [INFO]  Epoch[30] Train-cross-entropy=9.773736
+2022-12-03 00:25:54,736 [INFO]  Epoch[30] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:54,737 [INFO]  Epoch[30] Time cost=0.997
+2022-12-03 00:25:54,742 [INFO]  Saved checkpoint to "imputer_model\model-0030.params"
+2022-12-03 00:25:54,784 [INFO]  Epoch[30] Validation-cross-entropy=9.236391
+2022-12-03 00:25:54,786 [INFO]  Epoch[30] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:55,332 [INFO]  Epoch[31] Batch [0-240]	Speed: 7113.07 samples/sec	cross-entropy=9.553276	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:55,784 [INFO]  Epoch[31] Train-cross-entropy=9.772633
+2022-12-03 00:25:55,787 [INFO]  Epoch[31] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:55,789 [INFO]  Epoch[31] Time cost=0.999
+2022-12-03 00:25:55,801 [INFO]  Saved checkpoint to "imputer_model\model-0031.params"
+2022-12-03 00:25:55,873 [INFO]  Epoch[31] Validation-cross-entropy=9.229847
+2022-12-03 00:25:55,876 [INFO]  Epoch[31] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:56,506 [INFO]  Epoch[32] Batch [0-240]	Speed: 6162.94 samples/sec	cross-entropy=9.548030	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:57,187 [INFO]  Epoch[32] Train-cross-entropy=9.766926
+2022-12-03 00:25:57,188 [INFO]  Epoch[32] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:57,190 [INFO]  Epoch[32] Time cost=1.312
+2022-12-03 00:25:57,197 [INFO]  Saved checkpoint to "imputer_model\model-0032.params"
+2022-12-03 00:25:57,238 [INFO]  Epoch[32] Validation-cross-entropy=9.225208
+2022-12-03 00:25:57,240 [INFO]  Epoch[32] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:57,840 [INFO]  Epoch[33] Batch [0-240]	Speed: 6456.00 samples/sec	cross-entropy=9.547490	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:58,668 [INFO]  Epoch[33] Train-cross-entropy=9.764611
+2022-12-03 00:25:58,671 [INFO]  Epoch[33] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:58,676 [INFO]  Epoch[33] Time cost=1.433
+2022-12-03 00:25:58,688 [INFO]  Saved checkpoint to "imputer_model\model-0033.params"
+2022-12-03 00:25:58,762 [INFO]  Epoch[33] Validation-cross-entropy=9.211659
+2022-12-03 00:25:58,764 [INFO]  Epoch[33] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:25:59,572 [INFO]  Epoch[34] Batch [0-240]	Speed: 4796.64 samples/sec	cross-entropy=9.543425	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:00,342 [INFO]  Epoch[34] Train-cross-entropy=9.761676
+2022-12-03 00:26:00,345 [INFO]  Epoch[34] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:00,346 [INFO]  Epoch[34] Time cost=1.579
+2022-12-03 00:26:00,355 [INFO]  Saved checkpoint to "imputer_model\model-0034.params"
+2022-12-03 00:26:00,400 [INFO]  Epoch[34] Validation-cross-entropy=9.218137
+2022-12-03 00:26:00,403 [INFO]  Epoch[34] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:01,173 [INFO]  Epoch[35] Batch [0-240]	Speed: 5051.40 samples/sec	cross-entropy=9.553160	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:01,942 [INFO]  Epoch[35] Train-cross-entropy=9.766458
+2022-12-03 00:26:01,946 [INFO]  Epoch[35] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:01,948 [INFO]  Epoch[35] Time cost=1.542
+2022-12-03 00:26:01,960 [INFO]  Saved checkpoint to "imputer_model\model-0035.params"
+2022-12-03 00:26:02,027 [INFO]  Epoch[35] Validation-cross-entropy=9.204389
+2022-12-03 00:26:02,030 [INFO]  Epoch[35] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:02,802 [INFO]  Epoch[36] Batch [0-240]	Speed: 5006.82 samples/sec	cross-entropy=9.540862	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:03,691 [INFO]  Epoch[36] Train-cross-entropy=9.758290
+2022-12-03 00:26:03,694 [INFO]  Epoch[36] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:03,696 [INFO]  Epoch[36] Time cost=1.663
+2022-12-03 00:26:03,710 [INFO]  Saved checkpoint to "imputer_model\model-0036.params"
+2022-12-03 00:26:03,780 [INFO]  Epoch[36] Validation-cross-entropy=9.204345
+2022-12-03 00:26:03,783 [INFO]  Epoch[36] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:04,618 [INFO]  Epoch[37] Batch [0-240]	Speed: 4634.78 samples/sec	cross-entropy=9.537461	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:05,483 [INFO]  Epoch[37] Train-cross-entropy=9.756207
+2022-12-03 00:26:05,486 [INFO]  Epoch[37] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:05,490 [INFO]  Epoch[37] Time cost=1.705
+2022-12-03 00:26:05,502 [INFO]  Saved checkpoint to "imputer_model\model-0037.params"
+2022-12-03 00:26:05,579 [INFO]  Epoch[37] Validation-cross-entropy=9.188586
+2022-12-03 00:26:05,583 [INFO]  Epoch[37] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:06,295 [INFO]  Epoch[38] Batch [0-240]	Speed: 5444.02 samples/sec	cross-entropy=9.534779	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:07,185 [INFO]  Epoch[38] Train-cross-entropy=9.751511
+2022-12-03 00:26:07,187 [INFO]  Epoch[38] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:07,189 [INFO]  Epoch[38] Time cost=1.603
+2022-12-03 00:26:07,206 [INFO]  Saved checkpoint to "imputer_model\model-0038.params"
+2022-12-03 00:26:07,293 [INFO]  Epoch[38] Validation-cross-entropy=9.187004
+2022-12-03 00:26:07,296 [INFO]  Epoch[38] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:08,208 [INFO]  Epoch[39] Batch [0-240]	Speed: 4242.64 samples/sec	cross-entropy=9.533904	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:09,050 [INFO]  Epoch[39] Train-cross-entropy=9.753737
+2022-12-03 00:26:09,053 [INFO]  Epoch[39] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:09,055 [INFO]  Epoch[39] Time cost=1.757
+2022-12-03 00:26:09,070 [INFO]  Saved checkpoint to "imputer_model\model-0039.params"
+2022-12-03 00:26:09,158 [INFO]  Epoch[39] Validation-cross-entropy=9.197899
+2022-12-03 00:26:09,162 [INFO]  Epoch[39] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:10,027 [INFO]  Epoch[40] Batch [0-240]	Speed: 4471.97 samples/sec	cross-entropy=9.524187	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:10,879 [INFO]  Epoch[40] Train-cross-entropy=9.742758
+2022-12-03 00:26:10,882 [INFO]  Epoch[40] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:10,884 [INFO]  Epoch[40] Time cost=1.720
+2022-12-03 00:26:10,899 [INFO]  Saved checkpoint to "imputer_model\model-0040.params"
+2022-12-03 00:26:10,975 [INFO]  Epoch[40] Validation-cross-entropy=9.202861
+2022-12-03 00:26:10,977 [INFO]  Epoch[40] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:11,811 [INFO]  Epoch[41] Batch [0-240]	Speed: 4650.13 samples/sec	cross-entropy=9.523908	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:12,650 [INFO]  Epoch[41] Train-cross-entropy=9.741922
+2022-12-03 00:26:12,652 [INFO]  Epoch[41] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:12,655 [INFO]  Epoch[41] Time cost=1.676
+2022-12-03 00:26:12,669 [INFO]  Saved checkpoint to "imputer_model\model-0041.params"
+2022-12-03 00:26:12,746 [INFO]  Epoch[41] Validation-cross-entropy=9.196335
+2022-12-03 00:26:12,748 [INFO]  Epoch[41] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:13,607 [INFO]  Epoch[42] Batch [0-240]	Speed: 4512.12 samples/sec	cross-entropy=9.521509	Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:14,482 [INFO]  Epoch[42] Train-cross-entropy=9.739063
+2022-12-03 00:26:14,485 [INFO]  Epoch[42] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-03 00:26:14,488 [INFO]  Epoch[42] Time cost=1.736
+2022-12-03 00:26:14,500 [INFO]  Saved checkpoint to "imputer_model\model-0042.params"
+2022-12-03 00:26:14,575 [INFO]  No improvement detected for 5 epochs compared to 9.188585638999939 last error obtained: 9.195652665915313, stopping here
+2022-12-03 00:26:14,578 [INFO]  
+========== done (71.07371711730957 s) fit model
+2022-12-04 22:16:16,492 [INFO]  
+========== start: fit model
+2022-12-04 22:16:16,495 [WARNING]  Already bound, ignoring bind()
+2022-12-04 22:16:16,708 [INFO]  Epoch[0] Batch [0-240]	Speed: 19547.03 samples/sec	cross-entropy=10.826072	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:16,934 [INFO]  Epoch[0] Train-cross-entropy=10.825341
+2022-12-04 22:16:16,935 [INFO]  Epoch[0] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:16,936 [INFO]  Epoch[0] Time cost=0.438
+2022-12-04 22:16:16,947 [INFO]  Saved checkpoint to "imputer_model\model-0000.params"
+2022-12-04 22:16:16,983 [INFO]  Epoch[0] Validation-cross-entropy=9.843059
+2022-12-04 22:16:16,984 [INFO]  Epoch[0] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:17,225 [INFO]  Epoch[1] Batch [0-240]	Speed: 16109.93 samples/sec	cross-entropy=10.151366	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:17,464 [INFO]  Epoch[1] Train-cross-entropy=10.412969
+2022-12-04 22:16:17,465 [INFO]  Epoch[1] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:17,466 [INFO]  Epoch[1] Time cost=0.481
+2022-12-04 22:16:17,471 [INFO]  Saved checkpoint to "imputer_model\model-0001.params"
+2022-12-04 22:16:17,496 [INFO]  Epoch[1] Validation-cross-entropy=9.750346
+2022-12-04 22:16:17,498 [INFO]  Epoch[1] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:17,759 [INFO]  Epoch[2] Batch [0-240]	Speed: 14923.44 samples/sec	cross-entropy=10.046755	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:18,045 [INFO]  Epoch[2] Train-cross-entropy=10.308323
+2022-12-04 22:16:18,046 [INFO]  Epoch[2] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:18,047 [INFO]  Epoch[2] Time cost=0.547
+2022-12-04 22:16:18,052 [INFO]  Saved checkpoint to "imputer_model\model-0002.params"
+2022-12-04 22:16:18,073 [INFO]  Epoch[2] Validation-cross-entropy=9.705733
+2022-12-04 22:16:18,075 [INFO]  Epoch[2] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:18,330 [INFO]  Epoch[3] Batch [0-240]	Speed: 15218.54 samples/sec	cross-entropy=9.980977	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:18,575 [INFO]  Epoch[3] Train-cross-entropy=10.235951
+2022-12-04 22:16:18,576 [INFO]  Epoch[3] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:18,577 [INFO]  Epoch[3] Time cost=0.502
+2022-12-04 22:16:18,584 [INFO]  Saved checkpoint to "imputer_model\model-0003.params"
+2022-12-04 22:16:18,612 [INFO]  Epoch[3] Validation-cross-entropy=9.666369
+2022-12-04 22:16:18,612 [INFO]  Epoch[3] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:18,875 [INFO]  Epoch[4] Batch [0-240]	Speed: 14808.75 samples/sec	cross-entropy=9.920130	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:19,132 [INFO]  Epoch[4] Train-cross-entropy=10.161604
+2022-12-04 22:16:19,133 [INFO]  Epoch[4] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:19,134 [INFO]  Epoch[4] Time cost=0.521
+2022-12-04 22:16:19,138 [INFO]  Saved checkpoint to "imputer_model\model-0004.params"
+2022-12-04 22:16:19,162 [INFO]  Epoch[4] Validation-cross-entropy=9.602412
+2022-12-04 22:16:19,163 [INFO]  Epoch[4] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:19,460 [INFO]  Epoch[5] Batch [0-240]	Speed: 13012.31 samples/sec	cross-entropy=9.858095	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:19,705 [INFO]  Epoch[5] Train-cross-entropy=10.090300
+2022-12-04 22:16:19,707 [INFO]  Epoch[5] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:19,708 [INFO]  Epoch[5] Time cost=0.544
+2022-12-04 22:16:19,713 [INFO]  Saved checkpoint to "imputer_model\model-0005.params"
+2022-12-04 22:16:19,743 [INFO]  Epoch[5] Validation-cross-entropy=9.551302
+2022-12-04 22:16:19,744 [INFO]  Epoch[5] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:20,013 [INFO]  Epoch[6] Batch [0-240]	Speed: 14420.55 samples/sec	cross-entropy=9.802662	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:20,283 [INFO]  Epoch[6] Train-cross-entropy=10.029118
+2022-12-04 22:16:20,284 [INFO]  Epoch[6] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:20,285 [INFO]  Epoch[6] Time cost=0.540
+2022-12-04 22:16:20,297 [INFO]  Saved checkpoint to "imputer_model\model-0006.params"
+2022-12-04 22:16:20,324 [INFO]  Epoch[6] Validation-cross-entropy=9.510950
+2022-12-04 22:16:20,325 [INFO]  Epoch[6] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:20,586 [INFO]  Epoch[7] Batch [0-240]	Speed: 14865.92 samples/sec	cross-entropy=9.760535	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:20,843 [INFO]  Epoch[7] Train-cross-entropy=9.983675
+2022-12-04 22:16:20,844 [INFO]  Epoch[7] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:20,845 [INFO]  Epoch[7] Time cost=0.519
+2022-12-04 22:16:20,850 [INFO]  Saved checkpoint to "imputer_model\model-0007.params"
+2022-12-04 22:16:20,869 [INFO]  Epoch[7] Validation-cross-entropy=9.470479
+2022-12-04 22:16:20,870 [INFO]  Epoch[7] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:21,111 [INFO]  Epoch[8] Batch [0-240]	Speed: 16168.65 samples/sec	cross-entropy=9.729310	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:21,350 [INFO]  Epoch[8] Train-cross-entropy=9.949164
+2022-12-04 22:16:21,350 [INFO]  Epoch[8] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:21,351 [INFO]  Epoch[8] Time cost=0.480
+2022-12-04 22:16:21,358 [INFO]  Saved checkpoint to "imputer_model\model-0008.params"
+2022-12-04 22:16:21,385 [INFO]  Epoch[8] Validation-cross-entropy=9.441023
+2022-12-04 22:16:21,386 [INFO]  Epoch[8] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:21,617 [INFO]  Epoch[9] Batch [0-240]	Speed: 17036.53 samples/sec	cross-entropy=9.704818	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:21,878 [INFO]  Epoch[9] Train-cross-entropy=9.922802
+2022-12-04 22:16:21,879 [INFO]  Epoch[9] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:21,881 [INFO]  Epoch[9] Time cost=0.493
+2022-12-04 22:16:21,885 [INFO]  Saved checkpoint to "imputer_model\model-0009.params"
+2022-12-04 22:16:21,905 [INFO]  Epoch[9] Validation-cross-entropy=9.405533
+2022-12-04 22:16:21,906 [INFO]  Epoch[9] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:22,140 [INFO]  Epoch[10] Batch [0-240]	Speed: 16619.26 samples/sec	cross-entropy=9.686584	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:22,369 [INFO]  Epoch[10] Train-cross-entropy=9.903275
+2022-12-04 22:16:22,370 [INFO]  Epoch[10] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:22,371 [INFO]  Epoch[10] Time cost=0.464
+2022-12-04 22:16:22,376 [INFO]  Saved checkpoint to "imputer_model\model-0010.params"
+2022-12-04 22:16:22,405 [INFO]  Epoch[10] Validation-cross-entropy=9.382073
+2022-12-04 22:16:22,406 [INFO]  Epoch[10] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:22,623 [INFO]  Epoch[11] Batch [0-240]	Speed: 17992.03 samples/sec	cross-entropy=9.668854	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:22,876 [INFO]  Epoch[11] Train-cross-entropy=9.885125
+2022-12-04 22:16:22,877 [INFO]  Epoch[11] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:22,878 [INFO]  Epoch[11] Time cost=0.471
+2022-12-04 22:16:22,886 [INFO]  Saved checkpoint to "imputer_model\model-0011.params"
+2022-12-04 22:16:22,917 [INFO]  Epoch[11] Validation-cross-entropy=9.356528
+2022-12-04 22:16:22,918 [INFO]  Epoch[11] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:23,152 [INFO]  Epoch[12] Batch [0-240]	Speed: 16813.54 samples/sec	cross-entropy=9.653980	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:23,377 [INFO]  Epoch[12] Train-cross-entropy=9.872744
+2022-12-04 22:16:23,377 [INFO]  Epoch[12] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:23,378 [INFO]  Epoch[12] Time cost=0.457
+2022-12-04 22:16:23,383 [INFO]  Saved checkpoint to "imputer_model\model-0012.params"
+2022-12-04 22:16:23,407 [INFO]  Epoch[12] Validation-cross-entropy=9.337102
+2022-12-04 22:16:23,407 [INFO]  Epoch[12] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:23,728 [INFO]  Epoch[13] Batch [0-240]	Speed: 12107.75 samples/sec	cross-entropy=9.642175	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:23,969 [INFO]  Epoch[13] Train-cross-entropy=9.862393
+2022-12-04 22:16:23,970 [INFO]  Epoch[13] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:23,970 [INFO]  Epoch[13] Time cost=0.562
+2022-12-04 22:16:23,979 [INFO]  Saved checkpoint to "imputer_model\model-0013.params"
+2022-12-04 22:16:24,009 [INFO]  Epoch[13] Validation-cross-entropy=9.324314
+2022-12-04 22:16:24,009 [INFO]  Epoch[13] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:24,204 [INFO]  Epoch[14] Batch [0-240]	Speed: 20057.19 samples/sec	cross-entropy=9.635601	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:24,408 [INFO]  Epoch[14] Train-cross-entropy=9.856139
+2022-12-04 22:16:24,409 [INFO]  Epoch[14] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:24,409 [INFO]  Epoch[14] Time cost=0.399
+2022-12-04 22:16:24,415 [INFO]  Saved checkpoint to "imputer_model\model-0014.params"
+2022-12-04 22:16:24,440 [INFO]  Epoch[14] Validation-cross-entropy=9.313527
+2022-12-04 22:16:24,441 [INFO]  Epoch[14] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:24,661 [INFO]  Epoch[15] Batch [0-240]	Speed: 17610.74 samples/sec	cross-entropy=9.626541	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:24,837 [INFO]  Epoch[15] Train-cross-entropy=9.847077
+2022-12-04 22:16:24,838 [INFO]  Epoch[15] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:24,839 [INFO]  Epoch[15] Time cost=0.399
+2022-12-04 22:16:24,844 [INFO]  Saved checkpoint to "imputer_model\model-0015.params"
+2022-12-04 22:16:24,864 [INFO]  Epoch[15] Validation-cross-entropy=9.312143
+2022-12-04 22:16:24,866 [INFO]  Epoch[15] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:25,052 [INFO]  Epoch[16] Batch [0-240]	Speed: 20925.45 samples/sec	cross-entropy=9.622998	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:25,254 [INFO]  Epoch[16] Train-cross-entropy=9.841695
+2022-12-04 22:16:25,255 [INFO]  Epoch[16] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:25,255 [INFO]  Epoch[16] Time cost=0.389
+2022-12-04 22:16:25,259 [INFO]  Saved checkpoint to "imputer_model\model-0016.params"
+2022-12-04 22:16:25,293 [INFO]  Epoch[16] Validation-cross-entropy=9.300155
+2022-12-04 22:16:25,294 [INFO]  Epoch[16] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:25,548 [INFO]  Epoch[17] Batch [0-240]	Speed: 15279.06 samples/sec	cross-entropy=9.615508	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:25,797 [INFO]  Epoch[17] Train-cross-entropy=9.834351
+2022-12-04 22:16:25,797 [INFO]  Epoch[17] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:25,798 [INFO]  Epoch[17] Time cost=0.503
+2022-12-04 22:16:25,803 [INFO]  Saved checkpoint to "imputer_model\model-0017.params"
+2022-12-04 22:16:25,828 [INFO]  Epoch[17] Validation-cross-entropy=9.288027
+2022-12-04 22:16:25,829 [INFO]  Epoch[17] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:26,058 [INFO]  Epoch[18] Batch [0-240]	Speed: 16961.51 samples/sec	cross-entropy=9.607102	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:26,296 [INFO]  Epoch[18] Train-cross-entropy=9.828406
+2022-12-04 22:16:26,298 [INFO]  Epoch[18] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:26,298 [INFO]  Epoch[18] Time cost=0.469
+2022-12-04 22:16:26,303 [INFO]  Saved checkpoint to "imputer_model\model-0018.params"
+2022-12-04 22:16:26,335 [INFO]  Epoch[18] Validation-cross-entropy=9.282034
+2022-12-04 22:16:26,337 [INFO]  Epoch[18] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:26,550 [INFO]  Epoch[19] Batch [0-240]	Speed: 18161.58 samples/sec	cross-entropy=9.602690	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:26,747 [INFO]  Epoch[19] Train-cross-entropy=9.821163
+2022-12-04 22:16:26,748 [INFO]  Epoch[19] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:26,750 [INFO]  Epoch[19] Time cost=0.412
+2022-12-04 22:16:26,755 [INFO]  Saved checkpoint to "imputer_model\model-0019.params"
+2022-12-04 22:16:26,791 [INFO]  Epoch[19] Validation-cross-entropy=9.275688
+2022-12-04 22:16:26,792 [INFO]  Epoch[19] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:27,052 [INFO]  Epoch[20] Batch [0-240]	Speed: 14923.40 samples/sec	cross-entropy=9.596440	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:27,248 [INFO]  Epoch[20] Train-cross-entropy=9.816169
+2022-12-04 22:16:27,249 [INFO]  Epoch[20] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:27,249 [INFO]  Epoch[20] Time cost=0.456
+2022-12-04 22:16:27,258 [INFO]  Saved checkpoint to "imputer_model\model-0020.params"
+2022-12-04 22:16:27,287 [INFO]  Epoch[20] Validation-cross-entropy=9.268308
+2022-12-04 22:16:27,288 [INFO]  Epoch[20] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:27,547 [INFO]  Epoch[21] Batch [0-240]	Speed: 15040.03 samples/sec	cross-entropy=9.596135	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:27,837 [INFO]  Epoch[21] Train-cross-entropy=9.814653
+2022-12-04 22:16:27,838 [INFO]  Epoch[21] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:27,839 [INFO]  Epoch[21] Time cost=0.551
+2022-12-04 22:16:27,847 [INFO]  Saved checkpoint to "imputer_model\model-0021.params"
+2022-12-04 22:16:27,875 [INFO]  Epoch[21] Validation-cross-entropy=9.263555
+2022-12-04 22:16:27,876 [INFO]  Epoch[21] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:28,118 [INFO]  Epoch[22] Batch [0-240]	Speed: 16109.91 samples/sec	cross-entropy=9.587785	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:28,329 [INFO]  Epoch[22] Train-cross-entropy=9.809515
+2022-12-04 22:16:28,330 [INFO]  Epoch[22] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:28,331 [INFO]  Epoch[22] Time cost=0.453
+2022-12-04 22:16:28,337 [INFO]  Saved checkpoint to "imputer_model\model-0022.params"
+2022-12-04 22:16:28,370 [INFO]  Epoch[22] Validation-cross-entropy=9.258384
+2022-12-04 22:16:28,371 [INFO]  Epoch[22] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:28,631 [INFO]  Epoch[23] Batch [0-240]	Speed: 14873.12 samples/sec	cross-entropy=9.581614	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:28,850 [INFO]  Epoch[23] Train-cross-entropy=9.802209
+2022-12-04 22:16:28,851 [INFO]  Epoch[23] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:28,853 [INFO]  Epoch[23] Time cost=0.481
+2022-12-04 22:16:28,858 [INFO]  Saved checkpoint to "imputer_model\model-0023.params"
+2022-12-04 22:16:28,890 [INFO]  Epoch[23] Validation-cross-entropy=9.247021
+2022-12-04 22:16:28,891 [INFO]  Epoch[23] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:29,181 [INFO]  Epoch[24] Batch [0-240]	Speed: 13368.91 samples/sec	cross-entropy=9.576109	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:29,431 [INFO]  Epoch[24] Train-cross-entropy=9.797711
+2022-12-04 22:16:29,433 [INFO]  Epoch[24] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:29,433 [INFO]  Epoch[24] Time cost=0.542
+2022-12-04 22:16:29,438 [INFO]  Saved checkpoint to "imputer_model\model-0024.params"
+2022-12-04 22:16:29,467 [INFO]  Epoch[24] Validation-cross-entropy=9.250190
+2022-12-04 22:16:29,468 [INFO]  Epoch[24] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:29,740 [INFO]  Epoch[25] Batch [0-240]	Speed: 14260.34 samples/sec	cross-entropy=9.573631	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:29,961 [INFO]  Epoch[25] Train-cross-entropy=9.793614
+2022-12-04 22:16:29,962 [INFO]  Epoch[25] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:29,963 [INFO]  Epoch[25] Time cost=0.495
+2022-12-04 22:16:29,971 [INFO]  Saved checkpoint to "imputer_model\model-0025.params"
+2022-12-04 22:16:29,992 [INFO]  Epoch[25] Validation-cross-entropy=9.245277
+2022-12-04 22:16:29,992 [INFO]  Epoch[25] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:30,254 [INFO]  Epoch[26] Batch [0-240]	Speed: 14809.31 samples/sec	cross-entropy=9.567295	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:30,487 [INFO]  Epoch[26] Train-cross-entropy=9.790635
+2022-12-04 22:16:30,488 [INFO]  Epoch[26] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:30,490 [INFO]  Epoch[26] Time cost=0.497
+2022-12-04 22:16:30,496 [INFO]  Saved checkpoint to "imputer_model\model-0026.params"
+2022-12-04 22:16:30,524 [INFO]  Epoch[26] Validation-cross-entropy=9.255717
+2022-12-04 22:16:30,525 [INFO]  Epoch[26] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:30,762 [INFO]  Epoch[27] Batch [0-240]	Speed: 16454.13 samples/sec	cross-entropy=9.564634	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:30,975 [INFO]  Epoch[27] Train-cross-entropy=9.784888
+2022-12-04 22:16:30,976 [INFO]  Epoch[27] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:30,977 [INFO]  Epoch[27] Time cost=0.451
+2022-12-04 22:16:30,983 [INFO]  Saved checkpoint to "imputer_model\model-0027.params"
+2022-12-04 22:16:31,000 [INFO]  Epoch[27] Validation-cross-entropy=9.248446
+2022-12-04 22:16:31,001 [INFO]  Epoch[27] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:31,235 [INFO]  Epoch[28] Batch [0-240]	Speed: 16535.11 samples/sec	cross-entropy=9.560437	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:31,447 [INFO]  Epoch[28] Train-cross-entropy=9.780880
+2022-12-04 22:16:31,448 [INFO]  Epoch[28] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:31,448 [INFO]  Epoch[28] Time cost=0.446
+2022-12-04 22:16:31,454 [INFO]  Saved checkpoint to "imputer_model\model-0028.params"
+2022-12-04 22:16:31,475 [INFO]  Epoch[28] Validation-cross-entropy=9.242220
+2022-12-04 22:16:31,476 [INFO]  Epoch[28] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:31,688 [INFO]  Epoch[29] Batch [0-240]	Speed: 18313.59 samples/sec	cross-entropy=9.557485	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:31,901 [INFO]  Epoch[29] Train-cross-entropy=9.776906
+2022-12-04 22:16:31,902 [INFO]  Epoch[29] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:31,902 [INFO]  Epoch[29] Time cost=0.425
+2022-12-04 22:16:31,907 [INFO]  Saved checkpoint to "imputer_model\model-0029.params"
+2022-12-04 22:16:31,929 [INFO]  Epoch[29] Validation-cross-entropy=9.242354
+2022-12-04 22:16:31,930 [INFO]  Epoch[29] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:32,169 [INFO]  Epoch[30] Batch [0-240]	Speed: 16177.70 samples/sec	cross-entropy=9.552532	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:32,402 [INFO]  Epoch[30] Train-cross-entropy=9.773736
+2022-12-04 22:16:32,403 [INFO]  Epoch[30] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:32,403 [INFO]  Epoch[30] Time cost=0.472
+2022-12-04 22:16:32,408 [INFO]  Saved checkpoint to "imputer_model\model-0030.params"
+2022-12-04 22:16:32,437 [INFO]  Epoch[30] Validation-cross-entropy=9.236391
+2022-12-04 22:16:32,438 [INFO]  Epoch[30] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:32,686 [INFO]  Epoch[31] Batch [0-240]	Speed: 15525.32 samples/sec	cross-entropy=9.553276	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:32,927 [INFO]  Epoch[31] Train-cross-entropy=9.772633
+2022-12-04 22:16:32,927 [INFO]  Epoch[31] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:32,928 [INFO]  Epoch[31] Time cost=0.490
+2022-12-04 22:16:32,934 [INFO]  Saved checkpoint to "imputer_model\model-0031.params"
+2022-12-04 22:16:32,965 [INFO]  Epoch[31] Validation-cross-entropy=9.229847
+2022-12-04 22:16:32,965 [INFO]  Epoch[31] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:33,236 [INFO]  Epoch[32] Batch [0-240]	Speed: 14313.28 samples/sec	cross-entropy=9.548030	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:33,459 [INFO]  Epoch[32] Train-cross-entropy=9.766926
+2022-12-04 22:16:33,460 [INFO]  Epoch[32] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:33,461 [INFO]  Epoch[32] Time cost=0.496
+2022-12-04 22:16:33,466 [INFO]  Saved checkpoint to "imputer_model\model-0032.params"
+2022-12-04 22:16:33,492 [INFO]  Epoch[32] Validation-cross-entropy=9.225208
+2022-12-04 22:16:33,493 [INFO]  Epoch[32] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:33,707 [INFO]  Epoch[33] Batch [0-240]	Speed: 18160.62 samples/sec	cross-entropy=9.547490	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:33,953 [INFO]  Epoch[33] Train-cross-entropy=9.764611
+2022-12-04 22:16:33,954 [INFO]  Epoch[33] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:33,955 [INFO]  Epoch[33] Time cost=0.462
+2022-12-04 22:16:33,958 [INFO]  Saved checkpoint to "imputer_model\model-0033.params"
+2022-12-04 22:16:33,981 [INFO]  Epoch[33] Validation-cross-entropy=9.211659
+2022-12-04 22:16:33,982 [INFO]  Epoch[33] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:34,186 [INFO]  Epoch[34] Batch [0-240]	Speed: 19155.65 samples/sec	cross-entropy=9.543425	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:34,378 [INFO]  Epoch[34] Train-cross-entropy=9.761676
+2022-12-04 22:16:34,379 [INFO]  Epoch[34] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:34,380 [INFO]  Epoch[34] Time cost=0.397
+2022-12-04 22:16:34,385 [INFO]  Saved checkpoint to "imputer_model\model-0034.params"
+2022-12-04 22:16:34,416 [INFO]  Epoch[34] Validation-cross-entropy=9.218137
+2022-12-04 22:16:34,417 [INFO]  Epoch[34] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:34,619 [INFO]  Epoch[35] Batch [0-240]	Speed: 19251.61 samples/sec	cross-entropy=9.553160	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:34,864 [INFO]  Epoch[35] Train-cross-entropy=9.766458
+2022-12-04 22:16:34,864 [INFO]  Epoch[35] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:34,865 [INFO]  Epoch[35] Time cost=0.448
+2022-12-04 22:16:34,872 [INFO]  Saved checkpoint to "imputer_model\model-0035.params"
+2022-12-04 22:16:34,891 [INFO]  Epoch[35] Validation-cross-entropy=9.204389
+2022-12-04 22:16:34,891 [INFO]  Epoch[35] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:35,128 [INFO]  Epoch[36] Batch [0-240]	Speed: 16453.78 samples/sec	cross-entropy=9.540862	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:35,314 [INFO]  Epoch[36] Train-cross-entropy=9.758290
+2022-12-04 22:16:35,315 [INFO]  Epoch[36] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:35,315 [INFO]  Epoch[36] Time cost=0.423
+2022-12-04 22:16:35,319 [INFO]  Saved checkpoint to "imputer_model\model-0036.params"
+2022-12-04 22:16:35,345 [INFO]  Epoch[36] Validation-cross-entropy=9.204345
+2022-12-04 22:16:35,346 [INFO]  Epoch[36] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:35,586 [INFO]  Epoch[37] Batch [0-240]	Speed: 16291.64 samples/sec	cross-entropy=9.537461	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:35,852 [INFO]  Epoch[37] Train-cross-entropy=9.756207
+2022-12-04 22:16:35,854 [INFO]  Epoch[37] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:35,854 [INFO]  Epoch[37] Time cost=0.507
+2022-12-04 22:16:35,859 [INFO]  Saved checkpoint to "imputer_model\model-0037.params"
+2022-12-04 22:16:35,892 [INFO]  Epoch[37] Validation-cross-entropy=9.188586
+2022-12-04 22:16:35,894 [INFO]  Epoch[37] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:36,146 [INFO]  Epoch[38] Batch [0-240]	Speed: 15481.78 samples/sec	cross-entropy=9.534779	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:36,363 [INFO]  Epoch[38] Train-cross-entropy=9.751511
+2022-12-04 22:16:36,364 [INFO]  Epoch[38] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:36,364 [INFO]  Epoch[38] Time cost=0.468
+2022-12-04 22:16:36,369 [INFO]  Saved checkpoint to "imputer_model\model-0038.params"
+2022-12-04 22:16:36,397 [INFO]  Epoch[38] Validation-cross-entropy=9.187004
+2022-12-04 22:16:36,398 [INFO]  Epoch[38] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:36,621 [INFO]  Epoch[39] Batch [0-240]	Speed: 17411.90 samples/sec	cross-entropy=9.533904	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:36,864 [INFO]  Epoch[39] Train-cross-entropy=9.753737
+2022-12-04 22:16:36,865 [INFO]  Epoch[39] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:36,866 [INFO]  Epoch[39] Time cost=0.467
+2022-12-04 22:16:36,871 [INFO]  Saved checkpoint to "imputer_model\model-0039.params"
+2022-12-04 22:16:36,898 [INFO]  Epoch[39] Validation-cross-entropy=9.197899
+2022-12-04 22:16:36,899 [INFO]  Epoch[39] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:37,151 [INFO]  Epoch[40] Batch [0-240]	Speed: 15352.47 samples/sec	cross-entropy=9.524187	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:37,358 [INFO]  Epoch[40] Train-cross-entropy=9.742758
+2022-12-04 22:16:37,359 [INFO]  Epoch[40] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:37,360 [INFO]  Epoch[40] Time cost=0.460
+2022-12-04 22:16:37,365 [INFO]  Saved checkpoint to "imputer_model\model-0040.params"
+2022-12-04 22:16:37,384 [INFO]  Epoch[40] Validation-cross-entropy=9.202861
+2022-12-04 22:16:37,386 [INFO]  Epoch[40] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:37,638 [INFO]  Epoch[41] Batch [0-240]	Speed: 15462.93 samples/sec	cross-entropy=9.523908	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:37,860 [INFO]  Epoch[41] Train-cross-entropy=9.741922
+2022-12-04 22:16:37,861 [INFO]  Epoch[41] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:37,862 [INFO]  Epoch[41] Time cost=0.475
+2022-12-04 22:16:37,867 [INFO]  Saved checkpoint to "imputer_model\model-0041.params"
+2022-12-04 22:16:37,890 [INFO]  Epoch[41] Validation-cross-entropy=9.196335
+2022-12-04 22:16:37,891 [INFO]  Epoch[41] Validation-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:38,125 [INFO]  Epoch[42] Batch [0-240]	Speed: 16524.78 samples/sec	cross-entropy=9.521509	Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:38,343 [INFO]  Epoch[42] Train-cross-entropy=9.739063
+2022-12-04 22:16:38,344 [INFO]  Epoch[42] Train-Item_Outlet_Sales-accuracy=0.000000
+2022-12-04 22:16:38,345 [INFO]  Epoch[42] Time cost=0.455
+2022-12-04 22:16:38,350 [INFO]  Saved checkpoint to "imputer_model\model-0042.params"
+2022-12-04 22:16:38,379 [INFO]  No improvement detected for 5 epochs compared to 9.188585638999939 last error obtained: 9.195652665915313, stopping here
+2022-12-04 22:16:38,380 [INFO]  
+========== done (21.888985872268677 s) fit model
