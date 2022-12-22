@@ -1,0 +1,464 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage[font={small,it}]{caption}
+\usepackage{placeins}
+\usepackage{xepersian}
+
+%\DeclareMathOperator*{\btie}{\bowtie}
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف اول درس مهندسی فناوری اطلاعات}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+%%%%%%%%%%
+\lstset
+{
+    language=[latex]tex,
+    basicstyle=\ttfamily,
+    commentstyle=\color{black},
+    columns=fullflexible,
+    keepspaces=true,
+    upquote=true,
+    showstringspaces=false,
+    morestring=[s]\\\%,
+    stringstyle=\color{black},
+}
+%%%%%%%%%%
+%beginMatlab
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%endMatlab
+\begin{document}
+%beginMatlab
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%endMatlab
+\input{titlepage}
+
+%\tableofcontents
+\newpage
+
+
+%1
+\section{}
+$
+m = (00110010)_2 = (50)_{10} \\
+p = 23, q = 19 \\
+n = pq = 23 \times 19 = 437 \\
+z = (p-1)(q-1) = 22 \times 18 = 396 \\
+e = 97 \Rightarrow  e < n,\: (e, z) = 1 \\
+d = 49 \Rightarrow ed \equiv 1 (mod\:z) \\ \\
+c = (m ^ e \equiv 1 (mod \: n)) \Rightarrow c = 335 \\
+m = (c ^ d \equiv 1 (mod \: n)) \Rightarrow m = 50 \\ \\
+K^+ = e = 97 \\
+K^- = d = 49 \\
+$
+
+
+%2
+\section{}
+\lr{Trudy} می‌تواند به سیستم نفوذ کند و محتوای ارسال شده را تغییر دهد. به این صورت که $M$ و $H(M) + S$ را از هم جدا می‌کند. سپس با محاسبه‌ی \lr{hash}ِ پیامِ $M$ و حذف آن از $H(M)+S$ (به شکل $H(M) + S - H(M)$) به \lr{shared secret} دست پیدا می‌کند. سپس پیام مورد نظر خود ($M^{\prime}$) را به همراه $H(M^{\prime})$ و $S$ برای فرد به شکل
+$\left( M^{\prime}, H(M^{\prime}) + S \right)$
+ارسال می‌کند.
+
+
+%3
+\section{}
+ستون \lr{A} که به نسبت سایر ستون‌ها ضرایب بزرگتری دارد فاقد \lr{regularization term} است. پس مربوط به تابع هزینه‌ی اول است.\\
+ستون \lr{B} فاقد ضرایب صفر است. می‌دانیم که امکان صفر شدن ضرایب در \lr{lasso regression} موجود است. پس مربوط به تابع دوم است.\\
+ستون \lr{C} دارای ضرایب صفر است. می‌دانیم که در \lr{ridge regression} هرگز ضرایب صفر نمی‌شوند. پس مربوط به تابع سوم است.
+
+%4
+\section{}
+هزاران نفر قصد دارند پیام \lr{Alice} را دریافت کنند و \lr{Alice} آماده است که پیام را به هر متقاضی بفرستد. برای تضمین صحت پیام، \lr{Alice} می‌تواند ابتدا \lr{hash}ِ پیام را با \lr{private key}ِ خود رمز کند و همراه پیام
+($(m, K_{A}^{-}(H(m)))$)
+به هر یک از متقاضیان بفرستد. چون \lr{Alice} تنها کسی است که \lr{private key} خود را دارد و پیامی که با \lr{private key} رمز شده است تنها با \lr{public key} نظیر همان \lr{private key} قابل رمزگشایی است، در این صورت هر یک از دریافت‌کننده‌های پیام می‌توانند صحت این پیام را احراز کنند. به این صورت که هر یک از دریافت‌کننده‌ها $K_{A}^{-}(H(m))$ و $m$ را از هم جدا می‌کند. سپس با استفاده از \lr{public key}ِ \lr{Alice} $H(m)$ را به شکلِ
+$H(m) = K_{A}^{+}(K_{A}^{-}(H(m)))$
+به دست می‌آورد. در نهایت با گرفتن \lr{hash} از $m$ِ جدا شده و بررسی برابریِ آن با $H(m)$ به دست آمده در مرحله‌ی قبل صحت پیام احراز می‌شود. توجه شود که برای دستیابی به صحت می‌توانستیم به جای مکانیزم امضای دیجیتال از \lr{MAC} استفاده کنیم. اما در این حالت \lr{Alice} باید به ازای هر دریافت‌کننده
+$(m, H(m + s))$
+را محاسبه کند که خود این کار با توجه به تعداد زیاد دریافت‌کننده‌های پیام می‌تواند \lr{overhead} قابل توجهی داشته باشد و همچنین لازم بود که به ازای هر دریافت‌کننده یک \lr{shared secret} داشته باشد که مدیریت آن‌ها می‌تواند ساده نباشد. \\
+پس در این جا استفاده از \lr{digital-signature-based integrity scheme} نسبت به \lr{MAC algorithm scheme} بهتر است.
+
+
+%5
+\section{}
+$
+p \left( \mu | X \right) \propto p \left( x_k | \mu \right) . p \left( \mu \right) \\ \\ \\
+p \left( \mu | X \right) = \left[ \prod_{k = 1} ^ {n} \frac{1}{\sqrt{2\pi\sigma ^ {'2}}}e ^ {-\frac{\left( x_k-\mu \right) ^ 2}{2\sigma ^ {'2}}} \right] . \frac{1}{\left(2\pi \right) ^ \frac{l}{2}\sigma_\mu^2}e ^ {-\frac{\left\| \mu - \mu_0\right\| ^ 2}{2\sigma_\mu^2}} \\ \\ \\
+\ln \left( p \left( \mu | X \right) \right) = \sum_{k = 1} ^ {n} \left[ -\ln \left( \sqrt{2\pi\sigma ^ {'2}} \right)-\frac{\left( x_k-\mu \right) ^ 2}{2\sigma ^ {'2}}  \right] - \ln \left( \left( 2\pi\right) ^ \frac{l}{2}\sigma_\mu^2 \right) - \frac{\left\| \mu - \mu_0\right\| ^ 2}{2\sigma_\mu^2}\\ \\ \\
+\frac{\partial }{\partial \mu} \ln \left( p \left( \mu | X \right) \right) = 0 \\ \\
+\sum_{k = 1}^{n}\frac{x_k-\mu}{\sigma ^ {'2}} = \frac{\left\| \mu - \mu_0 \right\|}{2\sigma_\mu^2}\\ \\
+\mu = \frac{\frac{\sum_{k = 1}^{n}x_k}{\sigma ^ {'2}} + \frac{\mu}{2\sigma_\mu^2}}{n+\frac{1}{2\sigma_\mu^2}}
+$
+
+
+
+
+%6
+\section{}
+$\Lagr (w)$: تابع هزینه\\
+$\Lagr_i (w)$: هزینه‌ی \lr{training example}ِ $i$ام\\
+$w^t$: وزن‌ها در گام $t$ام\\
+\begin{latin}
+$\\
+y =
+\begin{bmatrix}
+y_1 \\
+y_2 \\
+\vdots \\
+y_9
+\end{bmatrix},
+X =
+\begin{bmatrix}
+(X_1)^2 & X_1 & 1 \\
+(X_2)^2 & X_2 & 1 \\
+\vdots  & \vdots  & \vdots  \\
+(X_9)^2 & X_9 & 1
+\end{bmatrix},
+w =
+\begin{bmatrix}
+a \\
+b \\
+c
+\end{bmatrix}\\ \\
+\Lagr_i (w ^ {(t)}) = \frac{1}{2}\left( y_i - X_i ^ T w ^ {(t)} \right) ^ 2\\
+\nabla \Lagr_i (w ^ {(t)}) = -X_i\left( y_i - X_i^Tw^{(t)} \right)\\
+w ^ {(t + 1)} = w ^ {(t)} - \alpha \nabla \Lagr_i (w ^ {(t)})\\
+w ^ {(0)} = 
+\begin{bmatrix}
+0 \\
+0 \\
+0
+\end{bmatrix}\\
+w ^ {(1)} =%%%%%
+\begin{bmatrix}
+0.00000000e+00 \\
+0.00000000e+00 \\
+0.00000000e+00
+\end{bmatrix}
+-0.1 \times \left( -
+\begin{bmatrix}
+35.38^2 \\
+35.38 \\
+1
+\end{bmatrix}
+\left(
+2955.53 -
+\begin{bmatrix}
+35.38 ^ 2 & 35.38 & 1
+\end{bmatrix}
+\begin{bmatrix}
+0.00000000e+00 \\
+0.00000000e+00 \\
+0.00000000e+00
+\end{bmatrix}
+\right)
+\right)=
+\begin{bmatrix}
+3.69956813e+05 \\
+1.04566651e+04 \\
+2.95553000e+02
+\end{bmatrix}\\
+w ^ {(2)} =%%%%%
+\begin{bmatrix}
+3.69956813e+05 \\
+1.04566651e+04 \\
+2.95553000e+02
+\end{bmatrix}
+-0.1 \times \left( -
+\begin{bmatrix}
+15.32^2 \\
+15.32 \\
+1
+\end{bmatrix}
+\left(
+560.30 -
+\begin{bmatrix}
+15.32 ^ 2 & 15.32 & 1
+\end{bmatrix}
+\begin{bmatrix}
+3.69956813e+05 \\
+1.04566651e+04 \\
+2.95553000e+02
+\end{bmatrix}
+\right)
+\right)=
+\begin{bmatrix}
+-2.04129879e+09 \\
+-1.33257738e+08 \\
+-8.69867277e+06
+\end{bmatrix}\\
+w ^ {(3)} =%%%%%
+\begin{bmatrix}
+-2.04129879e+09 \\
+-1.33257738e+08 \\
+-8.69867277e+06
+\end{bmatrix}
+-0.1 \times \left( -
+\begin{bmatrix}
+11.74^2 \\
+11.74 \\
+1
+\end{bmatrix}
+\left(
+334.32 -
+\begin{bmatrix}
+11.74 ^ 2 & 11.74 & 1
+\end{bmatrix}
+\begin{bmatrix}
+-2.04129879e+09 \\
+-1.33257738e+08 \\
+-8.69867277e+06
+\end{bmatrix}
+\right)
+\right)=
+\begin{bmatrix}
+3.89738346e+12 \\
+3.32015359e+11 \\
+2.82833471e+10
+\end{bmatrix}\\
+w ^ {(4)} =%%%%%
+\begin{bmatrix}
+3.89738346e+12 \\
+3.32015359e+11 \\
+2.82833471e+10
+\end{bmatrix}
+-0.1 \times \left( -
+\begin{bmatrix}
+19.05^2 \\
+19.05 \\
+1
+\end{bmatrix}
+\left(
+864.44 -
+\begin{bmatrix}
+19.05 ^ 2 & 19.05 & 1
+\end{bmatrix}
+\begin{bmatrix}
+3.89738346e+12 \\
+3.32015359e+11 \\
+2.82833471e+10
+\end{bmatrix}
+\right)
+\right)=
+\begin{bmatrix}
+-5.15545092e+16 \\
+-2.70614602e+15 \\
+-1.42044054e+14
+\end{bmatrix}\\
+w ^ {(5)} =%%%%%
+\begin{bmatrix}
+-5.15545092e+16 \\
+-2.70614602e+15 \\
+-1.42044054e+14
+\end{bmatrix}
+-0.1 \times \left( -
+\begin{bmatrix}
+26.85^2 \\
+26.85 \\
+1
+\end{bmatrix}
+\left(
+1709.09 -
+\begin{bmatrix}
+26.85 ^ 2 & 26.85 & 1
+\end{bmatrix}
+\begin{bmatrix}
+-5.15545092e+16 \\
+-2.70614602e+15 \\
+-1.42044054e+14
+\end{bmatrix}
+\right)
+\right)=
+\begin{bmatrix}
+2.68463555e+21 \\
+9.99856406e+19 \\
+3.72381873e+18
+\end{bmatrix}\\
+w ^ {(6)} =%%%%%
+\begin{bmatrix}
+2.68463555e+21 \\
+9.99856406e+19 \\
+3.72381873e+18
+\end{bmatrix}
+-0.1 \times \left( -
+\begin{bmatrix}
+39.45^2 \\
+39.45 \\
+1
+\end{bmatrix}
+\left(
+3670.48 -
+\begin{bmatrix}
+39.45 ^ 2 & 39.45 & 1
+\end{bmatrix}
+\begin{bmatrix}
+2.68463555e+21 \\
+9.99856406e+19 \\
+3.72381873e+18
+\end{bmatrix}
+\right)
+\right)=
+\begin{bmatrix}
+-6.50851298e+26 \\
+-1.64980998e+25 \\
+-4.18201594e+23
+\end{bmatrix}\\
+w ^ {(7)} =%%%%%
+\begin{bmatrix}
+-6.50851298e+26 \\
+-1.64980998e+25 \\
+-4.18201594e+23
+\end{bmatrix}
+-0.1 \times \left( -
+\begin{bmatrix}
+30.51^2 \\
+30.51 \\
+1
+\end{bmatrix}
+\left(
+2202.93 -
+\begin{bmatrix}
+30.51 ^ 2 & 30.51 & 1
+\end{bmatrix}
+\begin{bmatrix}
+-6.50851298e+26 \\
+-1.64980998e+25 \\
+-4.18201594e+23
+\end{bmatrix}
+\right)
+\right)=
+\begin{bmatrix}
+5.64425427e+31 \\
+1.84997346e+30 \\
+6.06351097e+28
+\end{bmatrix}\\
+w ^ {(8)} =%%%%%
+\begin{bmatrix}
+5.64425427e+31 \\
+1.84997346e+30 \\
+6.06351097e+28
+\end{bmatrix}
+-0.1 \times \left( -
+\begin{bmatrix}
+3.98^2 \\
+3.98 \\
+1
+\end{bmatrix}
+\left(
+13.08 -
+\begin{bmatrix}
+30.51 ^ 2 & 30.51 & 1
+\end{bmatrix}
+\begin{bmatrix}
+5.64425427e+31 \\
+1.84997346e+30 \\
+6.06351097e+28
+\end{bmatrix}
+\right)
+\right)=
+\begin{bmatrix}
+-1.37156316e+33 \\
+-3.56945428e+32 \\
+-9.00889632e+31
+\end{bmatrix}\\
+w ^ {(9)} =%%%%%
+\begin{bmatrix}
+-1.37156316e+33 \\
+-3.56945428e+32 \\
+-9.00889632e+31
+\end{bmatrix}
+-0.1 \times \left( -
+\begin{bmatrix}
+0.29^2 \\
+0.29 \\
+1
+\end{bmatrix}
+\left(
+2.28 -
+\begin{bmatrix}
+0.29 ^ 2 & 0.29 & 1
+\end{bmatrix}
+\begin{bmatrix}
+-1.37156316e+33 \\
+-3.56945428e+32 \\
+-9.00889632e+31
+\end{bmatrix}
+\right)
+\right)=
+\begin{bmatrix}
+-1.36896487e+33 \\
+-3.47985832e+32 \\
+-5.91938034e+31
+\end{bmatrix}\\
+$
+\end{latin}
+
+
+در هر گام از بین \lr{training example}ها یکی را به صورت تصادفی انتخاب می‌کنیم. این کار را به تعداد \lr{training example}ها تکرار می‌کنیم تا کل داده‌ها توسط مدل دیده شوند.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1}
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}
