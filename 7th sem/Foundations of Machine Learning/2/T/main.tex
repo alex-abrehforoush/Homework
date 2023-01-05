@@ -132,7 +132,46 @@ $
 \end{latin}
 مرز تصمیم $x_2 = -x_1 + 2$ است.
 \subsection{ج}
-؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟
+\begin{latin}
+$
+z \ge 0: \quad 0.5 \le \sigma\left( z \right)\le 1 \\
+z \le 0: \quad 0 \le \sigma\left( z \right)\le 0.5 \\ \Rightarrow 
+\theta^t
+\begin{bmatrix}
+1 \\
+0 \\
+0
+\end{bmatrix} \le 0 \\
+0 \le \theta^t
+\begin{bmatrix}
+1 \\
+0 \\
+1
+\end{bmatrix} \\
+0 \le \theta^t
+\begin{bmatrix}
+1 \\
+1 \\
+0
+\end{bmatrix} \\
+0 \le \theta^t
+\begin{bmatrix}
+1 \\
+1 \\
+1
+\end{bmatrix} \\ \\ \Rightarrow 
+\theta_0+\theta_1\times0+\theta_2\times0 \le 0 \\
+\theta_0+\theta_1\times0+\theta_2\times1 \ge 0 \\
+\theta_0+\theta_1\times1+\theta_2\times0 \ge 0 \\
+\theta_0+\theta_1\times1+\theta_2\times1 \ge 0 \\ \Rightarrow 
+\theta =
+\begin{bmatrix}
+-1 \\
+1 \\
+1
+\end{bmatrix}
+$
+\end{latin}
 
 
 
@@ -190,342 +229,323 @@ $
 
 %3
 \section{}
-ستون \lr{A} که به نسبت سایر ستون‌ها ضرایب بزرگتری دارد فاقد \lr{regularization term} است. پس مربوط به تابع هزینه‌ی اول است.\\
-ستون \lr{B} فاقد ضرایب صفر است. می‌دانیم که امکان صفر شدن ضرایب در \lr{lasso regression} موجود است. پس مربوط به تابع دوم است.\\
-ستون \lr{C} دارای ضرایب صفر است. می‌دانیم که در \lr{ridge regression} هرگز ضرایب صفر نمی‌شوند. پس مربوط به تابع سوم است.
+\subsection{الف}
+\begin{latin}
+$
+x^1 =
+\begin{bmatrix}
+1 \\
+4
+\end{bmatrix},
+x^2 =
+\begin{bmatrix}
+2 \\
+3
+\end{bmatrix},
+x^3 =
+\begin{bmatrix}
+4 \\
+5
+\end{bmatrix},
+y^1 = -1, y^2 = -1, y^3 = 1 \\
+\mathcal{L}\left( w, b, \alpha \right) = \frac{1}{2} \left\| w \right\|_2^2 - \sum_{i = 1}^{3} \alpha_i\left( y^i\left( x^{i^T}w + b \right) -1 \right) \\=
+\frac{1}{2}w^Tw - \sum_{i = 1}^{3} \alpha_iy^ix^{i^T}w - b\left( \sum_{i = 1}^{3} \alpha_i y^i \right) + \sum_{i = 1}^{3} \alpha_i \\ \\ \\ \Rightarrow
+\frac{\partial \mathcal{L}}{\partial w} = w - \sum_{i = 1}^{3} \alpha_i y^i x^i = 0 \Rightarrow w^* = \sum_{i = 1}^{3} \alpha_i y^i x^i \\
+\frac{\partial \mathcal{L}}{\partial b} = \sum_{i = 1}^{3} \alpha_i y^i = 0 \\ \\ \\ \Rightarrow
+w^* = -\alpha_1
+\begin{bmatrix}
+1 \\
+4
+\end{bmatrix} -
+\alpha_2
+\begin{bmatrix}
+2 \\
+3
+\end{bmatrix}+
+\alpha_3
+\begin{bmatrix}
+4 \\
+5
+\end{bmatrix} \\
+-\alpha_1 -\alpha_2 + \alpha_3 = 0 \\ \\ \\ \Rightarrow 
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} \mathcal{L}\left( w, b, \alpha \right) = \underset{\alpha_1, \alpha_2, \alpha_3}{\max} \left[ \sum_{i = 1}^{3} \alpha_i - \frac{1}{2} \sum_{i, j = 1}^{3} y^i y^j \alpha_i \alpha_j x^{i^T} x^j - b\left( \sum_{i = 1}^{3} \alpha_i y^i \right) \right] \\=
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} \left[ \sum_{i = 1}^{3} \alpha_i - \frac{1}{2} \sum_{i, j = 1}^{3} y^i y^j \alpha_i \alpha_j x^{i^T} x^j \right] = \underset{\alpha_1, \alpha_2, \alpha_3}{\max} \left[ -\frac{1}{2} \sum_{i = 1}^{3} \sum_{j = 1}^{3} y^i y^j \alpha_i \alpha_j x^{i^T} x^j + \sum_{i = 1}^{3} \alpha_i \right] \\ \\
+x^{1^T}x^1 = 17, x^{1^T}x^2 = 14, x^{1^T}x^3 = 24, x^{2^T}x^2 = 13, x^{2^T}x^3 = 23, x^{3^T}x^3 = 41 \\ \\ \\ \Rightarrow 
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} -\frac{1}{2} \left[ 17\alpha_1^2 + 28\alpha_1\alpha_2 - 48 \alpha_1 \alpha_3 + 13\alpha_2^2 - 46\alpha_2\alpha_3 + 41 \alpha_3^2 \right] + \alpha_1 + \alpha_2 + \alpha_3 \\=
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} -\frac{1}{2}\left[ 17\alpha_1^2 + 28\alpha_1\alpha_2 -48\alpha_1^2 -48\alpha_1\alpha_2 + 13\alpha_2^2 -46\alpha_1\alpha_2 -46\alpha_2^2 + 41\alpha_1^2 +41\alpha_2^2+82\alpha_1\alpha_2\right] + 2\alpha_1+2\alpha_2 \\=
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} -5\alpha_1^2 - 8x^1 =
+\begin{bmatrix}
+1 \\
+4
+\end{bmatrix},
+x^2 =
+\begin{bmatrix}
+2 \\
+3
+\end{bmatrix},
+x^3 =
+\begin{bmatrix}
+4 \\
+5
+\end{bmatrix},
+y^1 = -1, y^2 = -1, y^3 = 1 \\
+\mathcal{L}\left( w, b, \alpha \right) = \frac{1}{2} \left\| w \right\|_2^2 - \sum_{i = 1}^{3} \alpha_i\left( y^i\left( x^{i^T}w + b \right) -1 \right) \\=
+\frac{1}{2}w^Tw - \sum_{i = 1}^{3} \alpha_iy^ix^{i^T}w - b\left( \sum_{i = 1}^{3} \alpha_i y^i \right) + \sum_{i = 1}^{3} \alpha_i \\ \\ \\ \Rightarrow
+\frac{\partial \mathcal{L}}{\partial w} = w - \sum_{i = 1}^{3} \alpha_i y^i x^i = 0 \Rightarrow w^* = \sum_{i = 1}^{3} \alpha_i y^i x^i \\
+\frac{\partial \mathcal{L}}{\partial b} = \sum_{i = 1}^{3} \alpha_i y^i = 0 \\ \\ \\ \Rightarrow
+w^* = -\alpha_1
+\begin{bmatrix}
+1 \\
+4
+\end{bmatrix} -
+\alpha_2
+\begin{bmatrix}
+2 \\
+3
+\end{bmatrix}+
+\alpha_3
+\begin{bmatrix}
+4 \\
+5
+\end{bmatrix} \\
+-\alpha_1 -\alpha_2 + \alpha_3 = 0 \\ \\ \\ \Rightarrow 
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} \mathcal{L}\left( w, b, \alpha \right) = \underset{\alpha_1, \alpha_2, \alpha_3}{\max} \left[ \sum_{i = 1}^{3} \alpha_i - \frac{1}{2} \sum_{i, j = 1}^{3} y^i y^j \alpha_i \alpha_j x^{i^T} x^j - b\left( \sum_{i = 1}^{3} \alpha_i y^i \right) \right] \\=
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} \left[ \sum_{i = 1}^{3} \alpha_i - \frac{1}{2} \sum_{i, j = 1}^{3} y^i y^j \alpha_i \alpha_j x^{i^T} x^j \right] = \underset{\alpha_1, \alpha_2, \alpha_3}{\max} \left[ -\frac{1}{2} \sum_{i = 1}^{3} \sum_{j = 1}^{3} y^i y^j \alpha_i \alpha_j x^{i^T} x^j + \sum_{i = 1}^{3} \alpha_i \right] \\ \\
+x^{1^T}x^1 = 17, x^{1^T}x^2 = 14, x^{1^T}x^3 = 24, x^{2^T}x^2 = 13, x^{2^T}x^3 = 23, x^{3^T}x^3 = 41 \\ \\ \\ \Rightarrow 
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} -\frac{1}{2} \left[ 17\alpha_1^2 + 28\alpha_1\alpha_2 - 48 \alpha_1 \alpha_3 + 13\alpha_2^2 - 46\alpha_2\alpha_3 + 41 \alpha_3^2 \right] + \alpha_1 + \alpha_2 + \alpha_3 \\=
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} -\frac{1}{2}\left[ 17\alpha_1^2 + 28\alpha_1\alpha_2 -48\alpha_1^2 -48\alpha_1\alpha_2 + 13\alpha_2^2 -46\alpha_1\alpha_2 -46\alpha_2^2 + 41\alpha_1^2 +41\alpha_2^2+82\alpha_1\alpha_2\right] + 2\alpha_1+2\alpha_2 \\=
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} -5\alpha_1 + 2\alpha_1+2\alpha_1x^1 =
+\begin{bmatrix}
+1 \\
+4
+\end{bmatrix},
+x^2 =
+\begin{bmatrix}
+2 \\
+3
+\end{bmatrix},
+x^3 =
+\begin{bmatrix}
+4 \\
+5
+\end{bmatrix},
+y^1 = -1, y^2 = -1, y^3 = 1 \\
+\mathcal{L}\left( w, b, \alpha \right) = \frac{1}{2} \left\| w \right\|_2^2 - \sum_{i = 1}^{3} \alpha_i\left( y^i\left( x^{i^T}w + b \right) -1 \right) \\=
+\frac{1}{2}w^Tw - \sum_{i = 1}^{3} \alpha_iy^ix^{i^T}w - b\left( \sum_{i = 1}^{3} \alpha_i y^i \right) + \sum_{i = 1}^{3} \alpha_i \\ \\ \\ \Rightarrow
+\frac{\partial \mathcal{L}}{\partial w} = w - \sum_{i = 1}^{3} \alpha_i y^i x^i = 0 \Rightarrow w^* = \sum_{i = 1}^{3} \alpha_i y^i x^i \\
+\frac{\partial \mathcal{L}}{\partial b} = \sum_{i = 1}^{3} \alpha_i y^i = 0 \\ \\ \\ \Rightarrow
+w^* = -\alpha_1
+\begin{bmatrix}
+1 \\
+4
+\end{bmatrix} -
+\alpha_2
+\begin{bmatrix}
+2 \\
+3
+\end{bmatrix}+
+\alpha_3
+\begin{bmatrix}
+4 \\
+5
+\end{bmatrix} \\
+-\alpha_1 -\alpha_2 + \alpha_3 = 0 \\ \\ \\ \Rightarrow 
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} \mathcal{L}\left( w, b, \alpha \right) = \underset{\alpha_1, \alpha_2, \alpha_3}{\max} \left[ \sum_{i = 1}^{3} \alpha_i - \frac{1}{2} \sum_{i, j = 1}^{3} y^i y^j \alpha_i \alpha_j x^{i^T} x^j - b\left( \sum_{i = 1}^{3} \alpha_i y^i \right) \right] \\=
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} \left[ \sum_{i = 1}^{3} \alpha_i - \frac{1}{2} \sum_{i, j = 1}^{3} y^i y^j \alpha_i \alpha_j x^{i^T} x^j \right] = \underset{\alpha_1, \alpha_2, \alpha_3}{\max} \left[ -\frac{1}{2} \sum_{i = 1}^{3} \sum_{j = 1}^{3} y^i y^j \alpha_i \alpha_j x^{i^T} x^j + \sum_{i = 1}^{3} \alpha_i \right] \\ \\
+x^{1^T}x^1 = 17, x^{1^T}x^2 = 14, x^{1^T}x^3 = 24, x^{2^T}x^2 = 13, x^{2^T}x^3 = 23, x^{3^T}x^3 = 41 \\ \\ \\ \Rightarrow 
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} -\frac{1}{2} \left[ 17\alpha_1^2 + 28\alpha_1\alpha_2 - 48 \alpha_1 \alpha_3 + 13\alpha_2^2 - 46\alpha_2\alpha_3 + 41 \alpha_3^2 \right] + \alpha_1 + \alpha_2 + \alpha_3 \\=
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} -\frac{1}{2}\left[ 17\alpha_1^2 + 28\alpha_1\alpha_2 -48\alpha_1^2 -48\alpha_1\alpha_2 + 13\alpha_2^2 -46\alpha_1\alpha_2 -46\alpha_2^2 + 41\alpha_1^2 +41\alpha_2^2+82\alpha_1\alpha_2\right] + 2\alpha_1+2\alpha_2 \\=
+\underset{\alpha_1, \alpha_2, \alpha_3}{\max} \left[ -5\alpha_1^2 - 8\alpha_1\alpha_2 - 4\alpha_2^2 + 2\alpha_1+2\alpha_2 \right] \\ \\ \\
+\Rightarrow J = -5\alpha_1^2 - 8\alpha_1\alpha_2 - 4\alpha_2^2 + 2\alpha_1+2\alpha_2 \\
+\frac{\partial J}{\alpha_1} = -10\alpha_1 -8\alpha_2 + 2 = 0 \Rightarrow \alpha_1 = -0.8\alpha_2+0.2 \\
+\frac{\partial J}{\alpha_2} = -8\alpha_1 -8\alpha_2 + 2 = 0 \Rightarrow 0.64\alpha_2-1.6-8\alpha_2 + 2 = 0 \\ \Rightarrow
+\alpha_2 \simeq 0.0543, \alpha_1 \simeq 0.1565, \alpha_3 = 0.2108 \\ \\ \\
+w^* \simeq -0.0543
+\begin{bmatrix}
+1 \\
+4
+\end{bmatrix} -
+0.1565
+\begin{bmatrix}
+2 \\
+3
+\end{bmatrix}+
+0.2108
+\begin{bmatrix}
+4 \\
+5
+\end{bmatrix} =
+\begin{bmatrix}
+0.4759 \\
+0.3673
+\end{bmatrix} \\
+b^* = -\begin{bmatrix}
+1 \\
+4
+\end{bmatrix}^T\begin{bmatrix}
+0.4759 \\
+0.3673
+\end{bmatrix}-b=1 \Rightarrow b = -2.9451 \\ \\ \\ \\ \\ \Rightarrow 
+0.4759x_2+0.3673x_1 - 2.9451 = 0
+$
+\end{latin}
+\subsection{ب}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/1.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+
+
 
 %4
 \section{}
+\subsection{الف}
 \begin{latin}
 $
-p\left( x_k | \theta \right) = \sqrt{\theta}x_k^{\sqrt{\theta} - 1}\\
-p\left( X | \theta \right) = \prod_{k = 1} ^ {n} p\left( x_k | \theta \right) \\ \\ \\
-\ln \left( p\left( X | \theta \right) \right) = \sum_{k = 1} ^ {n}\ln \left( p\left( x_k | \theta \right) \right) = \sum_{k = 1} ^ {n} \ln \left( \sqrt{\theta}x_k^{\sqrt{\theta} - 1} \right) = \sum_{k = 1} ^ {n} \left[ \frac{1}{2}\ln \left( \theta \right) + \left( \sqrt{\theta} - 1 \right) \ln \left( x_k \right) \right]\\ \\ \\
-\frac{\partial }{\partial \theta} \ln \left( p\left( X | \theta \right) \right) = \frac{n}{2\theta} - \frac{\sum_{k = 1}^{n} \ln \left( x_k \right)}{2\sqrt{\theta}} = 0 \\ \\
-\theta = \left( \frac{n}{\sum_{k = 1}^{n} \ln \left( x_k \right)} \right) ^ 2
+G\left( D \right) = 1 - \sum_{i=1}^{k} p_i ^ 2 =
+1 - \left( p_{c0}^2 + p_{c1}^2 \right) ^ 2 =
+1 - \left[ \left( \frac{10}{20} \right) ^ 2 + \left( \frac{10}{20} \right) ^ 2 \right] = \frac{1}{2}
 $
 \end{latin}
 
+\subsection{ب}
+\begin{latin}
+$
+\forall i \in \left\{ 1, 2, \cdots, 20 \right\}: \quad G_{CustomerID}\left( D_i \right) = 1 - \sum_{j=1}^{k} p_j ^ 2 = 1 - \left( \frac{1}{1} \right)^2 = 0 \\
+G_{CustomerID}\left( D \right) = 0
+$
+\end{latin}
+
+\subsection{ج}
+\begin{latin}
+$
+G_{Gender}\left( D_M \right) = 1 - \left[ \left( \frac{6}{10} \right)^2 + \left( \frac{4}{10} \right)^2 \right] = 0.48 \\
+G_{Gender}\left( D_F \right) = 1 - \left[ \left( \frac{4}{10} \right)^2 + \left( \frac{6}{10} \right)^2 \right] = 0.48 \\
+\frac{\left| D_M \right|}{D} = \frac{10}{20} = \frac{1}{2} \\
+\frac{\left| D_F \right|}{D} = \frac{10}{20} = \frac{1}{2} \\
+G_{Gender}\left( D \right) = \frac{1}{2} \times 0.48 + \frac{1}{2} \times 0.48 = 0.48
+$
+\end{latin}
+\subsection{د}
+\begin{latin}
+$
+G_{CarType}\left( D_{Family} \right) = 1 - \left[ \left( \frac{1}{4} \right)^2 + \left( \frac{3}{4} \right)^2 \right] = 0.375 \\
+G_{CarType}\left( D_{Sport} \right) = 1 - \left[ \left( \frac{8}{8} \right)^2 \right] = 0 \\
+G_{CarType}\left( D_{Luxury} \right) = 1 - \left[ \left( \frac{1}{8} \right)^2 + \left( \frac{7}{8} \right)^2 \right] = 0.21875 \\
+\frac{\left| D_{Family} \right|}{D} = \frac{4}{20} = 0.2 \\
+\frac{\left| D_{Sport} \right|}{D} = \frac{8}{20} = 0.4 \\
+\frac{\left| D_{Luxury} \right|}{D} = \frac{8}{20} = 0.4 \\
+G_{CarType}\left( D \right) = 0.2 \times 0.375 + 0.4 \times 0 + 0.4 \times 0.21875 = 0.1625
+$
+\end{latin}
+\subsection{و}
+\begin{latin}
+$
+G_{ShirtSize}\left( D_{Small} \right) = 1 - \left[ \left( \frac{3}{5} \right)^2 + \left( \frac{2}{5} \right)^2 \right] = 0.48 \\
+G_{ShirtSize}\left( D_{Medium} \right) = 1 - \left[ \left( \frac{2}{4} \right)^2 + \left( \frac{2}{4} \right)^2 \right] = \frac{24}{49} \\
+G_{ShirtSize}\left( D_{Large} \right) = 1 - \left[ \left( \frac{3}{7} \right)^2 + \left( \frac{4}{7} \right)^2 \right] = 0.5 \\
+G_{ShirtSize}\left( D_{ExtraLarge} \right) = 1 - \left[ \left( \frac{3}{7} \right)^2 + \left( \frac{4}{7} \right)^2 \right] = 0.5 \\
+\frac{\left| D_{Small} \right|}{D} = \frac{5}{20} = 0.25 \\
+\frac{\left| D_{Medium} \right|}{D} = \frac{7}{20} = 0.35 \\
+\frac{\left| D_{Large} \right|}{D} = \frac{4}{20} = 0.2 \\
+\frac{\left| D_{ExtraLarge} \right|}{D} = \frac{4}{20} = 0.2 \\
+G_{ShirtSize}\left( D \right) = 0.25 \times 0.48 + 0.35 \times \frac{24}{49} + 0.2 \times 0.5 + 0.2 \times 0.5 \simeq  0.4915
+$
+\end{latin}
+\subsection{ه}
+\begin{latin}
+$
+G_{CarType}\left( D \right) \le G_{Gender}\left( D \right) \le G_{ShirtSize}\left( D \right) 
+$
+\end{latin}
+از آنجایی که ویژگیِ \lr{Car Type} کمترین شاخص \lr{Gini} را دارد پس مناسب‌تر است.
+\subsection{ی}
+درست است که ویژگیِ \lr{Customer ID} دارای کمترین شاخص \lr{Gini} است. اما چون به ازای هر داده مقدار متمایزی دارد نمی‌توان از آن برای دسته‌بندی استفاده کرد.
 
 %5
 \section{}
-$
-p \left( \mu | X \right) \propto p \left( x_k | \mu \right) . p \left( \mu \right) \\ \\ \\
-p \left( \mu | X \right) = \left[ \prod_{k = 1} ^ {n} \frac{1}{\sqrt{2\pi\sigma ^ {'2}}}e ^ {-\frac{\left( x_k-\mu \right) ^ 2}{2\sigma ^ {'2}}} \right] . \frac{1}{\left(2\pi \right) ^ \frac{l}{2}\sigma_\mu^2}e ^ {-\frac{\left\| \mu - \mu_0\right\| ^ 2}{2\sigma_\mu^2}} \\ \\ \\
-\ln \left( p \left( \mu | X \right) \right) = \sum_{k = 1} ^ {n} \left[ -\ln \left( \sqrt{2\pi\sigma ^ {'2}} \right)-\frac{\left( x_k-\mu \right) ^ 2}{2\sigma ^ {'2}}  \right] - \ln \left( \left( 2\pi\right) ^ \frac{l}{2}\sigma_\mu^2 \right) - \frac{\left\| \mu - \mu_0\right\| ^ 2}{2\sigma_\mu^2}\\ \\ \\
-\frac{\partial }{\partial \mu} \ln \left( p \left( \mu | X \right) \right) = 0 \\ \\
-\sum_{k = 1}^{n}\frac{x_k-\mu}{\sigma ^ {'2}} = \frac{\left\| \mu - \mu_0 \right\|}{2\sigma_\mu^2}\\ \\
-\mu = \frac{\frac{\sum_{k = 1}^{n}x_k}{\sigma ^ {'2}} + \frac{\mu}{2\sigma_\mu^2}}{n+\frac{1}{2\sigma_\mu^2}}
-$
-
-
-
-
-%6
-\section{}
-$\Lagr (w)$: تابع هزینه\\
-$\Lagr_i (w)$: هزینه‌ی \lr{training example}ِ $i$ام\\
-$w^t$: وزن‌ها در گام $t$ام\\
+\subsection{الف}
 \begin{latin}
-$\\
-y =
-\begin{bmatrix}
-y_1 \\
-y_2 \\
-\vdots \\
-y_9
-\end{bmatrix},
-X =
-\begin{bmatrix}
-(X_1)^2 & X_1 & 1 \\
-(X_2)^2 & X_2 & 1 \\
-\vdots  & \vdots  & \vdots  \\
-(X_9)^2 & X_9 & 1
-\end{bmatrix},
-w =
-\begin{bmatrix}
-a \\
-b \\
-c
-\end{bmatrix}\\ \\
-\Lagr_i (w ^ {(t)}) = \frac{1}{2}\left( y_i - X_i ^ T w ^ {(t)} \right) ^ 2\\
-\nabla \Lagr_i (w ^ {(t)}) = -X_i\left( y_i - X_i^Tw^{(t)} \right)\\
-w ^ {(t + 1)} = w ^ {(t)} - \alpha \nabla \Lagr_i (w ^ {(t)})\\
-w ^ {(0)} = 
-\begin{bmatrix}
-0 \\
-0 \\
-0
-\end{bmatrix}\\
-w ^ {(1)} =%%%%%
-\begin{bmatrix}
-0.00000000e+00 \\
-0.00000000e+00 \\
-0.00000000e+00
-\end{bmatrix}
--0.1 \times \left( -
-\begin{bmatrix}
-35.38^2 \\
-35.38 \\
-1
-\end{bmatrix}
-\left(
-2955.53 -
-\begin{bmatrix}
-35.38 ^ 2 & 35.38 & 1
-\end{bmatrix}
-\begin{bmatrix}
-0.00000000e+00 \\
-0.00000000e+00 \\
-0.00000000e+00
-\end{bmatrix}
-\right)
-\right)=
-\begin{bmatrix}
-3.69956813e+05 \\
-1.04566651e+04 \\
-2.95553000e+02
-\end{bmatrix}\\
-w ^ {(2)} =%%%%%
-\begin{bmatrix}
-3.69956813e+05 \\
-1.04566651e+04 \\
-2.95553000e+02
-\end{bmatrix}
--0.1 \times \left( -
-\begin{bmatrix}
-15.32^2 \\
-15.32 \\
-1
-\end{bmatrix}
-\left(
-560.30 -
-\begin{bmatrix}
-15.32 ^ 2 & 15.32 & 1
-\end{bmatrix}
-\begin{bmatrix}
-3.69956813e+05 \\
-1.04566651e+04 \\
-2.95553000e+02
-\end{bmatrix}
-\right)
-\right)=
-\begin{bmatrix}
--2.04129879e+09 \\
--1.33257738e+08 \\
--8.69867277e+06
-\end{bmatrix}\\
-w ^ {(3)} =%%%%%
-\begin{bmatrix}
--2.04129879e+09 \\
--1.33257738e+08 \\
--8.69867277e+06
-\end{bmatrix}
--0.1 \times \left( -
-\begin{bmatrix}
-11.74^2 \\
-11.74 \\
-1
-\end{bmatrix}
-\left(
-334.32 -
-\begin{bmatrix}
-11.74 ^ 2 & 11.74 & 1
-\end{bmatrix}
-\begin{bmatrix}
--2.04129879e+09 \\
--1.33257738e+08 \\
--8.69867277e+06
-\end{bmatrix}
-\right)
-\right)=
-\begin{bmatrix}
-3.89738346e+12 \\
-3.32015359e+11 \\
-2.82833471e+10
-\end{bmatrix}\\
-w ^ {(4)} =%%%%%
-\begin{bmatrix}
-3.89738346e+12 \\
-3.32015359e+11 \\
-2.82833471e+10
-\end{bmatrix}
--0.1 \times \left( -
-\begin{bmatrix}
-19.05^2 \\
-19.05 \\
-1
-\end{bmatrix}
-\left(
-864.44 -
-\begin{bmatrix}
-19.05 ^ 2 & 19.05 & 1
-\end{bmatrix}
-\begin{bmatrix}
-3.89738346e+12 \\
-3.32015359e+11 \\
-2.82833471e+10
-\end{bmatrix}
-\right)
-\right)=
-\begin{bmatrix}
--5.15545092e+16 \\
--2.70614602e+15 \\
--1.42044054e+14
-\end{bmatrix}\\
-w ^ {(5)} =%%%%%
-\begin{bmatrix}
--5.15545092e+16 \\
--2.70614602e+15 \\
--1.42044054e+14
-\end{bmatrix}
--0.1 \times \left( -
-\begin{bmatrix}
-26.85^2 \\
-26.85 \\
-1
-\end{bmatrix}
-\left(
-1709.09 -
-\begin{bmatrix}
-26.85 ^ 2 & 26.85 & 1
-\end{bmatrix}
-\begin{bmatrix}
--5.15545092e+16 \\
--2.70614602e+15 \\
--1.42044054e+14
-\end{bmatrix}
-\right)
-\right)=
-\begin{bmatrix}
-2.68463555e+21 \\
-9.99856406e+19 \\
-3.72381873e+18
-\end{bmatrix}\\
-w ^ {(6)} =%%%%%
-\begin{bmatrix}
-2.68463555e+21 \\
-9.99856406e+19 \\
-3.72381873e+18
-\end{bmatrix}
--0.1 \times \left( -
-\begin{bmatrix}
-39.45^2 \\
-39.45 \\
-1
-\end{bmatrix}
-\left(
-3670.48 -
-\begin{bmatrix}
-39.45 ^ 2 & 39.45 & 1
-\end{bmatrix}
-\begin{bmatrix}
-2.68463555e+21 \\
-9.99856406e+19 \\
-3.72381873e+18
-\end{bmatrix}
-\right)
-\right)=
-\begin{bmatrix}
--6.50851298e+26 \\
--1.64980998e+25 \\
--4.18201594e+23
-\end{bmatrix}\\
-w ^ {(7)} =%%%%%
-\begin{bmatrix}
--6.50851298e+26 \\
--1.64980998e+25 \\
--4.18201594e+23
-\end{bmatrix}
--0.1 \times \left( -
-\begin{bmatrix}
-30.51^2 \\
-30.51 \\
-1
-\end{bmatrix}
-\left(
-2202.93 -
-\begin{bmatrix}
-30.51 ^ 2 & 30.51 & 1
-\end{bmatrix}
-\begin{bmatrix}
--6.50851298e+26 \\
--1.64980998e+25 \\
--4.18201594e+23
-\end{bmatrix}
-\right)
-\right)=
-\begin{bmatrix}
-5.64425427e+31 \\
-1.84997346e+30 \\
-6.06351097e+28
-\end{bmatrix}\\
-w ^ {(8)} =%%%%%
-\begin{bmatrix}
-5.64425427e+31 \\
-1.84997346e+30 \\
-6.06351097e+28
-\end{bmatrix}
--0.1 \times \left( -
-\begin{bmatrix}
-3.98^2 \\
-3.98 \\
-1
-\end{bmatrix}
-\left(
-13.08 -
-\begin{bmatrix}
-30.51 ^ 2 & 30.51 & 1
-\end{bmatrix}
-\begin{bmatrix}
-5.64425427e+31 \\
-1.84997346e+30 \\
-6.06351097e+28
-\end{bmatrix}
-\right)
-\right)=
-\begin{bmatrix}
--1.37156316e+33 \\
--3.56945428e+32 \\
--9.00889632e+31
-\end{bmatrix}\\
-w ^ {(9)} =%%%%%
-\begin{bmatrix}
--1.37156316e+33 \\
--3.56945428e+32 \\
--9.00889632e+31
-\end{bmatrix}
--0.1 \times \left( -
-\begin{bmatrix}
-0.29^2 \\
-0.29 \\
-1
-\end{bmatrix}
-\left(
-2.28 -
-\begin{bmatrix}
-0.29 ^ 2 & 0.29 & 1
-\end{bmatrix}
-\begin{bmatrix}
--1.37156316e+33 \\
--3.56945428e+32 \\
--9.00889632e+31
-\end{bmatrix}
-\right)
-\right)=
-\begin{bmatrix}
--1.36896487e+33 \\
--3.47985832e+32 \\
--5.91938034e+31
-\end{bmatrix}\\
+$
+E = - \sum_{i = 1}^{k} p_i \log_2 p_i \\ \Rightarrow 
+E = - \left( \frac{4}{9} \log_2 \frac{4}{9} + \frac{5}{9} \log_2 \frac{5}{9} \right) \simeq  - \left[ \frac{4}{9} \left( 2-3.17 \right) + \frac{5}{9}\left( 2.32 - 3.17 \right) \right] \simeq 0.99
 $
 \end{latin}
 
+\subsection{ب}
+\begin{latin}
+$
+E\left( D_T \right) = -\left[ \frac{3}{4} \ log_2 \frac{3}{4} + \frac{1}{4} \ log_2 \frac{1}{4} \right] \simeq 0.815 \\
+E\left( D_F \right) = -\left[ \frac{1}{5} \ log_2 \frac{1}{5} + \frac{4}{5} \ log_2 \frac{4}{5} \right] \simeq 0.72 \\
+E_{a_1}\left( D \right) = \frac{4}{9} E\left( D_T \right) + \frac{5}{9} E\left( D_F \right) \simeq 0.762  \\
+\alpha\left( a_1, D \right) = E\left( D \right) - E_{a_1} \left( D \right) \simeq 0.99 - 0.762 = 0.228 \\ \\
+E\left( D_T \right) = -\left[ \frac{2}{5} \ log_2 \frac{2}{5} + \frac{3}{5} \ log_2 \frac{3}{5} \right] \simeq 0.972 \\
+E\left( D_F \right) = -\left[ \frac{2}{4} \ log_2 \frac{2}{4} + \frac{2}{4} \ log_2 \frac{2}{4} \right] \simeq 1 \\
+E_{a_2}\left( D \right) = \frac{5}{9} E\left( D_T \right) + \frac{4}{9} E\left( D_F \right) \simeq 0.984 \\
+\alpha\left( a_2, D \right) = E\left( D \right) - E_{a_2} \left( D \right) \simeq 0.99 - 0.984 = 0.006
+$
+\end{latin}
 
-در هر گام از بین \lr{training example}ها یکی را به صورت تصادفی انتخاب می‌کنیم. این کار را به تعداد \lr{training example}ها تکرار می‌کنیم تا کل داده‌ها توسط مدل دیده شوند.
+\subsection{ج}
+\begin{latin}
+$
+E\left( D_1 \right) = -\left[ \frac{1}{1} \log_2 \frac{1}{1} + \frac{0}{1} \log_2 \frac{0}{1} \right] = 0 \\
+E\left( D_3 \right) = -\left[ \frac{0}{1} \log_2 \frac{0}{1} + \frac{1}{1} \log_2 \frac{1}{1} \right] = 0 \\
+E\left( D_4 \right) = -\left[ \frac{1}{1} \log_2 \frac{1}{1} + \frac{0}{1} \log_2 \frac{0}{1} \right] = 0 \\
+E\left( D_5 \right) = -\left[ \frac{2}{2} \log_2 \frac{2}{2} + \frac{0}{2} \log_2 \frac{0}{2} \right] = 0 \\
+E\left( D_6 \right) = -\left[ \frac{1}{1} \log_2 \frac{1}{1} + \frac{0}{1} \log_2 \frac{0}{1} \right] = 0 \\
+E\left( D_7 \right) = -\left[ \frac{1}{2} \log_2 \frac{1}{2} + \frac{1}{2} \log_2 \frac{1}{2} \right] = 1 \\
+E\left( D_8 \right) = -\left[ \frac{0}{1} \log_2 \frac{0}{1} + \frac{1}{1} \log_2 \frac{1}{1} \right] = 0 \\ \\
+E_{a_3}\left( D_1 \right) = \frac{1}{9}E\left( D_1 \right) = 0 \\
+E_{a_3}\left( D_3 \right) = \frac{1}{9}E\left( D_3 \right) = 0 \\
+E_{a_3}\left( D_4 \right) = \frac{1}{9}E\left( D_4 \right) = 0 \\
+E_{a_3}\left( D_5 \right) = \frac{2}{9}E\left( D_5 \right) = 0 \\
+E_{a_3}\left( D_6 \right) = \frac{1}{9}E\left( D_6 \right) = 0 \\
+E_{a_3}\left( D_7 \right) = \frac{2}{9}E\left( D_7 \right) = \frac{2}{9} \\
+E_{a_3}\left( D_8 \right) = \frac{1}{9}E\left( D_8 \right) = 0 \\ \\
+\alpha\left( a_3, D_1 \right) \simeq  0.99 - 0 = 0.99 \\
+\alpha\left( a_3, D_3 \right) \simeq  0.99 - 0 = 0.99 \\
+\alpha\left( a_3, D_4 \right) \simeq  0.99 - 0 = 0.99 \\
+\alpha\left( a_3, D_5 \right) \simeq  0.99 - 0 = 0.99 \\
+\alpha\left( a_3, D_6 \right) \simeq  0.99 - 0 = 0.99 \\
+\alpha\left( a_3, D_7 \right) \simeq  0.99 - \frac{2}{9} \simeq 0.77 \\
+\alpha\left( a_3, D_8 \right) \simeq  0.99 - 0 = 0.99 \\ \\ \\
+\alpha\left( a_3, D \right) \simeq  0.99 - \frac{2}{9} \simeq 0.77 \\
+$
+\end{latin}
 
+\subsection{د}
+با توجه به اینکه بین $a_1$ و $a_2$ ویژگیِ $a_1$ بیشترین \lr{information gain} را دارد. پس تقسیم‌بندی را بهتر انجام می‌دهد. \\
+با توجه به اینکه بین $a_1$ و $a_3$ ویژگیِ $a_3$ بیشترین \lr{information gain} را دارد. پس تقسیم‌بندی را بهتر انجام می‌دهد.
 
+\subsection{و}
+\begin{latin}
+$
+\text{classification error rate}_{a_1} = \frac{2}{9} \\
+\text{classification error rate}_{a_2} = \frac{5}{9} \\ \\
+\text{classification error rate}_{a_1} \le \text{classification error rate}_{a_2}
+$
+با توجه به اینکه ویژگیِ $a_1$ ميزان خطای طبقه‌بندی کمتری دارد تقسیم‌بندی را بهتر انجام می‌دهد.
+\end{latin}
+\subsection{ه}
+\begin{latin}
+$
+G_{a_1}\left( D_T \right) = 1 - \left[ \left( \frac{3}{4} \right) ^ 2 + \left( \frac{1}{4} \right) ^ 2  \right] = \frac{3}{8} = 0.375 \\
+G_{a_1}\left( D_F \right) = 1 - \left[ \left( \frac{1}{5} \right) ^ 2 + \left( \frac{4}{5} \right) ^ 2  \right] = \frac{8}{25} = 0.32 \\ \\
+G_{a_1}\left( D \right) = \frac{4}{9} \times \frac{3}{8} + \frac{5}{9} \times \frac{8}{25} \simeq 0.35 \\ \\ \\
+G_{a_2}\left( D_T \right) = 1 - \left[ \left( \frac{2}{5} \right) ^ 2 + \left( \frac{3}{5} \right) ^ 2  \right] = \frac{12}{25} = 0.48 \\
+G_{a_2}\left( D_F \right) = 1 - \left[ \left( \frac{2}{4} \right) ^ 2 + \left( \frac{2}{4} \right) ^ 2  \right] = \frac{1}{2} = 0.5 \\ \\
+G_{a_2}\left( D \right) = \frac{5}{9} \times \frac{12}{25} + \frac{4}{9} \times \frac{1}{2} \simeq 0.49
+$
+\end{latin}
+با توجه به اینکه بین $a_1$ و $a_2$ ویژگیِ $a_1$ کمترین شاخص \lr{Gini} را دارد. پس تقسیم‌بندی را بهتر انجام می‌دهد.
 
+%6
+\section{}
+به طور شهودی با هر بخش‌بندی، داده‌ها همگن‌تر می‌شوند. در نتیجه آنتروپی افزایش نمی‌یابد. در ادامه به اثبات این قضیه می‌پردازیم.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  3 JAN 2023 12:59
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  6 JAN 2023 01:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1043,42 +1043,33 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
 
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 226--229
+) [1] [2] [3] [4]
+File: figures/1.jpg Graphic file (type bmp)
+<figures/1.jpg>
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
+(Font)              scaled to size 10.79997pt on input line 397.
+
+
+LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
+(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 397.
+
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
+(Font)              scaled to size 10.79997pt on input line 397.
+[5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 494--518
 [][]
  []
 
-
-Overfull \hbox (5.028pt too wide) in paragraph at lines 230--522
-[]$\OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/
-10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ^^B [] \OT1/cmr/m/n/10
- =$[]
- []
-
-
-Overfull \hbox (10.02802pt too wide) in paragraph at lines 230--522
-[]$\OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/
-10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ^^B [] \OT1/cmr/m/n/10
- =$[]
- []
+[8]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 527.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 527.
 
 
-Overfull \hbox (10.02802pt too wide) in paragraph at lines 230--522
-[]$\OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/
-10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ^^B [] \OT1/cmr/m/n/10
- =$[]
- []
+LaTeX Warning: Empty `thebibliography' environment on input line 572.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--522
-[][]
- []
-
-[3] [4]
-
-LaTeX Warning: Empty `thebibliography' environment on input line 552.
-
-[5] (./main.aux)
+[9] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1087,12 +1078,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17785 strings out of 476919
- 362155 string characters out of 5825424
- 1235369 words of memory out of 5000000
- 37464 multiletter control sequences out of 15000+600000
- 405369 words of font info for 65 fonts, out of 8000000 for 9000
+ 17808 strings out of 476919
+ 362690 string characters out of 5825424
+ 1236379 words of memory out of 5000000
+ 37482 multiletter control sequences out of 15000+600000
+ 405393 words of font info for 68 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,11n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (6 pages).
+Output written on main.pdf (10 pages).
