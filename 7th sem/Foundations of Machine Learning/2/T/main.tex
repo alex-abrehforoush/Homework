@@ -528,8 +528,8 @@ $
 \text{classification error rate}_{a_2} = \frac{5}{9} \\ \\
 \text{classification error rate}_{a_1} \le \text{classification error rate}_{a_2}
 $
-با توجه به اینکه ویژگیِ $a_1$ ميزان خطای طبقه‌بندی کمتری دارد تقسیم‌بندی را بهتر انجام می‌دهد.
 \end{latin}
+با توجه به اینکه ویژگیِ $a_1$ ميزان خطای طبقه‌بندی کمتری دارد تقسیم‌بندی را بهتر انجام می‌دهد.
 \subsection{ه}
 \begin{latin}
 $
@@ -546,6 +546,32 @@ $
 %6
 \section{}
 به طور شهودی با هر بخش‌بندی، داده‌ها همگن‌تر می‌شوند. در نتیجه آنتروپی افزایش نمی‌یابد. در ادامه به اثبات این قضیه می‌پردازیم.
+\begin{latin}
+$
+E \left( D \right) = - \sum_{i = 1}^{k} p_i \log_2 p_i \\ \Rightarrow 
+E_{x_i} \left( y \right) = - \sum_{j = 1}^{k} p\left( y_j | x_i \right) \log_2 p\left( y_j | x_i \right) \\
+E_x \left( y \right) = - \sum_{i = 1}^{n_x} p\left( x_i \right) E_{x_i}\left( y \right) = - \sum_{i = 1}^{n_x} \sum_{j = 1}^{k} p\left( x_i \right)p\left( y_j | x_i \right) \log_2 p\left( y_j | x_i \right) = - \sum_{i = 1}^{n_x} \sum_{j = 1}^{k} p\left( y_j, x_i \right) \log_2 p\left( y_j | x_i \right) \\ \Rightarrow 
+E_x \left( y \right) - E \left( y \right) = - \sum_{i = 1}^{n_x} \sum_{j = 1}^{k} p\left( y_j, x_i \right) \log_2 p\left( y_j | x_i \right) - \left[ - \sum_{i = 1}^{n_x} \sum_{j = 1}^{k} p\left( y_j, x_i \right) \log_2 p\left( y_j \right) \right] \\= 
+\sum_{i = 1}^{n_x} \sum_{j = 1}^{k} p\left( y_j, x_i \right) \log_2 \frac{p\left( y_j \right)}{p\left( y_j | x_i \right)} = \sum_{i = 1}^{n_x} \sum_{j = 1}^{k} p\left( y_j, x_i \right) \log_2 \frac{p\left( y_j \right)}{\frac{p\left( y_j, x_i \right)}{p\left( x_i \right)}} = \sum_{i = 1}^{n_x} \sum_{j = 1}^{k} p\left( y_j, x_i \right) \log_2 \frac{p\left( y_j \right)p\left( x_i \right)}{p\left( y_j, x_i \right)} \\ \\
+\le \log_2 \left[ \sum_{i = 1}^{n_x} \sum_{j = 1}^{k} p\left( y_j, x_i \right) \log_2 \frac{p\left( y_j \right)p\left( x_i \right)}{p\left( y_j, x_i \right)} \right] = \log_2 \left[ \sum_{i = 1}^{n_x} p\left( x_i \right) \sum_{j = 1}^{k} p\left( y_j \right) \right] = \log_2 1 = 0 \\ \\ \\ \Rightarrow
+E_x \left( y \right) \le E \left( y \right)
+$
+\end{latin}
+
+%7
+\section{}
+\begin{latin}
+$
+\underset{\beta_0, \beta}{\min} \sum_{i = 1}^{N}\left[ 1-y_if\left( x_i \right) \right]_+ + \frac{\lambda}{2}\left\| \beta \right\| ^ 2 \overset{\lambda = \frac{1}{C}}{=}
+\underset{\beta_0, \beta}{\min} \sum_{i = 1}^{N}\left[ 1-y_if\left( x_i \right) \right]_+ + \frac{1}{2C}\left\| \beta \right\| ^ 2 \\ 
+\underset{\times C}{\Rightarrow}
+\underset{\beta_0, \beta}{\min} \frac{1}{2}\left\| \beta \right\| ^ 2 +  C \sum_{i = 1}^{N}\left[ 1-y_if\left( x_i \right) \right]_+ \overset{1-y_if\left( x_i \right) \le \zeta_i}{=}
+\underset{\beta_0, \beta}{\min} \frac{1}{2}\left\| \beta \right\| ^ 2 +  C \sum_{i = 1}^{N}\left[ \zeta_i \right]_+ \\ \overset{\zeta_i \ge 0}{=}
+\underset{\beta_0, \beta}{\min} \frac{1}{2}\left\| \beta \right\| ^ 2 +  C \sum_{i = 1}^{N} \zeta_i 
+$
+\end{latin}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

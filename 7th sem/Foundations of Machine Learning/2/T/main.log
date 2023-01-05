@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  6 JAN 2023 01:03
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  6 JAN 2023 01:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1066,10 +1066,18 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 (Font)              scaled to size 5.0pt on input line 527.
 
+Overfull \hbox (22.97914pt too wide) in paragraph at lines 550--559
+[]$\OML/cmm/m/it/10 E[] [] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@ [][] \OML/cmm
+/m/it/10 p [] E[] [] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@ [][] [][] \OML/cmm/
+m/it/10 p [] p [] [][] p [] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@ [][] [][] \O
+ML/cmm/m/it/10 p [] [][] p [] [] $[]
+ []
 
-LaTeX Warning: Empty `thebibliography' environment on input line 572.
+[9]
 
-[9] (./main.aux)
+LaTeX Warning: Empty `thebibliography' environment on input line 598.
+
+[10] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1086,4 +1094,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  97i,11n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (10 pages).
+Output written on main.pdf (11 pages).
