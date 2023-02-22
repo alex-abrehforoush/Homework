@@ -1,0 +1,270 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage[font={small,it}]{caption}
+\usepackage{placeins}
+\usepackage{xepersian}
+
+%\DeclareMathOperator*{\btie}{\bowtie}
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف دوم درس مهندسی فناوری اطلاعات}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+%%%%%%%%%%
+\lstset
+{
+    language=[latex]tex,
+    basicstyle=\ttfamily,
+    commentstyle=\color{black},
+    columns=fullflexible,
+    keepspaces=true,
+    upquote=true,
+    showstringspaces=false,
+    morestring=[s]\\\%,
+    stringstyle=\color{black},
+}
+%%%%%%%%%%
+%beginMatlab
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%endMatlab
+\begin{document}
+%beginMatlab
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%endMatlab
+\input{titlepage}
+
+%\tableofcontents
+\newpage
+
+
+%1
+\section{}
+\subsection{\lr{a}}
+\begin{latin}
+$
+\text{Subinterfaces of the router} =
+\begin{cases}
+       187.135.10.0/24 \\
+       187.135.20.0/24 \\
+\end{cases} \\
+\text{VLAN IDs of the router} =
+\begin{cases}
+       187.135.10.1 &\quad\text{EE} \\
+       187.135.20.1 &\quad\text{CE} \\
+\end{cases} \\
+\text{IP address of the EE devices} = 187.135.10.i \quad \forall \text{device }i \in \text{EE department} \\
+\text{IP address of the CE devices} = 187.135.20.i \quad \forall \text{device }i \in \text{CE department}
+$
+\end{latin}
+
+\subsection{\lr{b}}
+\begin{latin}
+An IP datagram going from the EE to the CS department would first cross the EE VLAN to reach the router and then be forwarded by the router back over the CS VLAN to the CS host.
+\end{latin}
+
+
+
+
+%2
+\section{}
+سوئیچ‌های لایه 3 عملکردی مشابه با سوئیچ‌های لایه 2 دارند؛ با این تفاوت که بر مبنای آدرس لایه‌ی شبکه (معمولا آدرس آی‌پی) کار می‌کنند. این سوئیچ‌ها مزیت‌های سوئیچ‌ها و روترها را با هم دارند. می‌توان آن‌ها را جای روترها به کار برد و از فواید سوئیچ‌های لایه 2 سنتی شامل انتقال سریع‌تر و تعداد پورت بیشترِ همزمان فعال نسبت به روترها بهره برد.
+\begin{latin}
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[H]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{ATTRIBUTE}                 & \multicolumn{1}{c|}{\textbf{LAYER 3 SWITCH}}                                                                 & \multicolumn{1}{c|}{\textbf{ROUTER}}                                                          \\ \hline
+\textbf{Scope}                     & LAN for Office, Data Center or Campus environment                                                            & WAN for Office, Data Center  or Campus environment                                            \\ \hline
+\textbf{Key Functionality}         & Routes across different subnets or VLANS on a campus LAN                                                     & Routes across different networks across WAN are communicated and Routed by a Router           \\ \hline
+\textbf{MPLS and VPN Services}     & Does not support MPLS and VPN services                                                                       & Router provides MPLS and VPN services like PPP etc.                                           \\ \hline
+\textbf{Edge Technologies Support} & Not supported.                                                                                               & NAT, firewalling, tunneling, IPSec                                                            \\ \hline
+\textbf{Size of Routing Table}     & Smaller Routing table compared to Router                                                                     & Considerably bigger to support multiple Route entries.                                        \\ \hline
+\textbf{Forwarding Decision}       & Forwarding is performed by specialized ASICs                                                                 & Performed by Software                                                                         \\ \hline
+\textbf{Example Of Routers}        & Cisco 3650, 3560 and 6500 Series are examples of Layer 3 Switches.                                           & Cisco 3900 , 4000 Series ISR Routers                                                          \\ \hline
+\textbf{Interface Support}         & As general case L3 Switches support Ethernet ports (Copper and Fiber). Does not support SONET, OC-N, T-1/T-3 & Support Ethernet ports (Fiber and Copper). Also support interfaces like SONT,OC-N, T1/T3 etc. \\ \hline
+\textbf{Throughout}                & High Throughput                                                                                              & Lower than Layer 3 Switches                                                                   \\ \hline
+\textbf{Switching Capacity}        & High Switching Capacity                                                                                      & Lower than Layer 3 Switches                                                                   \\ \hline
+\textbf{Cost}                      & Low Cost                                                                                                     & High Cost                                                                                     \\ \hline
+\textbf{Port Density}              & High                                                                                                         & Low                                                                                           \\ \hline
+\end{tabular}%
+}
+\end{table}
+\end{latin}
+
+
+%3
+\section{}
+\subsection{\lr{a}}
+با توجه به \lr{VLAN-based BB Network Design} یک روتر، یک سوئیچِ مرکزی (مثلا \lr{switched 10base-T}) و کابل (مثلا \lr{Category 5e}). همه‌ی \lr{device}ها را به سوئیچ مرکزی وصل می‌کنیم و به ازای هر \lr{office} یک \lr{VLAN} تعریف می‌کنیم و \lr{device}های نظیر آن \lr{office} را به \lr{VLAN} اضافه می‌کنیم تا \lr{device}های نظیر آن \lr{office} با هم ارتباط داشته باشند و ترافیک هر دو \lr{office} مجزا از هم جدا باشند.
+\subsection{\lr{b}}
+\begin{latin}
+$
+required\: bandwidth = 8 \text{ floors} \times\frac{10 \text{ offices}}{1 \text{ floor}} \times \frac{7 \text{ devices}}{1 \text{ offices}} \times \frac{8 \text{ Mbps}}{1 \text{ device}} = 4.480 \text{ Gbps}
+$
+\end{latin}
+\subsection{\lr{c}}
+در هر طبقه با توجه به شعاع تحت پوشش \lr{access point} مورد استفاده، به تعداد مورد نیاز \lr{access point} قرار می‌دهیم.
+
+%4
+\section{}
+\begin{latin}
+Transmits 1 bit in each of 16 sub channels using BPSK with FEC rate $=\frac{1}{2}$ and 4 bits in each remaining sub channels using 16QAM FEC rate $=\frac{3}{4}$ sent at $250 KHz$. Thus we have: \\
+$
+1b \times \frac{1}{2} \times 16 \times 250 KHz + 4b \times \frac{3}{4} \times \left( 48 - 16 \right) \times 250 KHz = 26 Mbps
+$
+\end{latin}
+
+
+%5
+\section{}
+
+\begin{latin}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Bit} & \textbf{Barker Sequence Code} \\ \hline
+0            & 10111010000                   \\ \hline
+1            & 01000101111                   \\ \hline
+\end{tabular}
+\end{table}
+$
+\text{Input Data} = 01110011 \\
+\text{Barker Sequence Codes} = 10111010000 \:\:01000101111 \:\:01000101111 \:\:01000101111 \:\: \\
+10111010000 \:\:10111010000 \:\:01000101111 \:\:01000101111 \:\:
+$
+\end{latin}
+
+
+
+
+%6
+\section{}
+\begin{latin}
+Following are the features of WiFi-6 (i.e. IEEE 802.11 ax ) wireless technology:
+\begin{itemize}
+\item Higher modulation scheme such as 1024-QAM
+\item More number of OFDM subcarriers in a symbol or long OFDM symbol
+\item Multiplexing users using MU-MIMO concept both in the uplink and downlink
+\item Beamforming and OFDMA technique
+\item 8 simultaneous MU-MIMO streams
+\item Uplink scheduling without any contention
+\item BSS color codes
+\item Use of both 2.4 GHz and 5 GHz bands
+\end{itemize}
+
+802.11 ax (i.e. WiFi 6) physical layer supports different bandwidth options such as 20 MHz, 40 MHz, 80 MHz, 80+80 MHz and 160 MHz. It supports FFT sizes e.g. 256, 512, 1024 and 2048. The subcarrier spacing is 78.125KHz. The symbol duration is 12.8 µs + 0.8/1.6/3.2 µs CP.
+
+Following are the benefits or advantages of WiFi 6 or 802.11 ax technology:
+\begin{itemize}
+\item It has been developed to deliver 40\% high peak data rates using single client device. Average throughput per user is improved by at least 4 times in dense environments.
+\item It offers four times increase in network efficiency compare to 802.11ac.
+\item It is backward compatible with 802.11n and 802.11ac devices.
+\item It uses OFDMA and hence multiple users can transmit at the same. The OFDMA based scheduling helps in reducing overhead and latency both.
+\item The battery life of 802.11 ax client devices have been enhanced due to introduction of new feature called TWT (Target Wake Time). TWT feature allows client devices to sleep and wake up at scheduled times.
+\item Mitigation of co-channel interference is possible using BSS color codes. This codes help 11ax stations to identify transmission from another network.
+\item It offers robust high efficiency signaling for better operation at significantly lower RSSI.
+\item It performs well both the the indoor and outdoor environments. To achieve the same, it uses longer symbol duration and cyclic prefix (CP) in outdoor environment where as it uses shorter CP in indoor environment. 
+\end{itemize}
+\end{latin}
+
+
+\begin{latin}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+\begin{table}[H]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|cccccccccccc|}
+\hline
+\multicolumn{12}{|c|}{\textbf{802.11 network standards}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\ \hline
+\multicolumn{1}{|c|}{\multirow{3}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Frequency\\ range,\\ or type\end{tabular}}}} & \multicolumn{1}{c|}{\multirow{3}{*}{\textbf{PHY}}} & \multicolumn{1}{c|}{\multirow{3}{*}{\textbf{Protocol}}}                                                        & \multicolumn{1}{c|}{\multirow{3}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Release\\ date\end{tabular}}}} & \multicolumn{1}{c|}{\multirow{3}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Frequency\\ (GHz)\end{tabular}}}} & \multicolumn{1}{c|}{\multirow{3}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Bandwidth\\ (GHz)\end{tabular}}}} & \multicolumn{1}{c|}{\multirow{3}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Maximum\\ Linkrate\\ (Mbps)\end{tabular}}}} & \multicolumn{1}{c|}{\multirow{3}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Stream\\ data rate\\ (Mbps)\end{tabular}}}}                                       & \multicolumn{1}{c|}{\multirow{3}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Allowable\\ MIMO streams\end{tabular}}}} & \multicolumn{1}{c|}{\multirow{3}{*}{\textbf{Modulation}}}                                                        & \multicolumn{2}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Approximate\\ range\end{tabular}}} \\ \cline{11-12} 
+\multicolumn{1}{|c|}{}                                                                                               & \multicolumn{1}{c|}{}                              & \multicolumn{1}{c|}{}                                                                                          & \multicolumn{1}{c|}{}                                                                                 & \multicolumn{1}{c|}{}                                                                                    & \multicolumn{1}{c|}{}                                                                                    & \multicolumn{1}{c|}{}                                                                                              & \multicolumn{1}{c|}{}                                                                                                                                    & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{1}{c|}{}                                                                                            & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{Indoor}}} & \multirow{2}{*}{\textbf{Outdoor}} \\
+\multicolumn{1}{|c|}{}                                                                                               & \multicolumn{1}{c|}{}                              & \multicolumn{1}{c|}{}                                                                                          & \multicolumn{1}{c|}{}                                                                                 & \multicolumn{1}{c|}{}                                                                                    & \multicolumn{1}{c|}{}                                                                                    & \multicolumn{1}{c|}{}                                                                                              & \multicolumn{1}{c|}{}                                                                                                                                    & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{1}{c|}{}                                                                                            & \multicolumn{1}{c|}{}                                 &                                   \\ \hline
+\multicolumn{1}{|c|}{\multirow{7}{*}{\textbf{1-6 GHz}}}                                                              & \multicolumn{1}{c|}{ERP-OFDM}                      & \multicolumn{1}{c|}{802.11g}                                                                                   & \multicolumn{1}{c|}{Jun 2003}                                                                         & \multicolumn{1}{c|}{2.4}                                                                                 & \multicolumn{1}{c|}{5/10/20}                                                                             & \multicolumn{1}{c|}{6 to 54}                                                                                       & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}6, 9, 12, 18, 24, 36, 48, 54\\ (for 20 MHz bandwidth,\\ divide by 2 and 4 for 10 and 5 MHz)\end{tabular}} & \multicolumn{1}{c|}{-}                                                                                          & \multicolumn{1}{c|}{OFDM}                                                                                        & \multicolumn{1}{c|}{38 m (125 ft)}                    & 140 m (460 ft)                    \\ \cline{2-12} 
+\multicolumn{1}{|c|}{}                                                                                               & \multicolumn{1}{c|}{\multirow{2}{*}{HT-OFDM}}      & \multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}802.11n\\ (Wi-Fi 4)\end{tabular}}}              & \multicolumn{1}{c|}{\multirow{2}{*}{Oct 2009}}                                                        & \multicolumn{1}{c|}{\multirow{2}{*}{2.4/5}}                                                              & \multicolumn{1}{c|}{20}                                                                                  & \multicolumn{1}{c|}{\multirow{2}{*}{72 to 600}}                                                                    & \multicolumn{1}{c|}{Up to 288.8}                                                                                                                         & \multicolumn{1}{c|}{\multirow{2}{*}{4}}                                                                         & \multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}MIMO-OFDM\\ (64-QAM)\end{tabular}}}               & \multicolumn{1}{c|}{\multirow{2}{*}{70 m (230 ft)}}   & \multirow{2}{*}{250 m (820 ft)}   \\ \cline{6-6} \cline{8-8}
+\multicolumn{1}{|c|}{}                                                                                               & \multicolumn{1}{c|}{}                              & \multicolumn{1}{c|}{}                                                                                          & \multicolumn{1}{c|}{}                                                                                 & \multicolumn{1}{c|}{}                                                                                    & \multicolumn{1}{c|}{40}                                                                                  & \multicolumn{1}{c|}{}                                                                                              & \multicolumn{1}{c|}{Up to 600}                                                                                                                           & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{1}{c|}{}                                                                                            & \multicolumn{1}{c|}{}                                 &                                   \\ \cline{2-12} 
+\multicolumn{1}{|c|}{}                                                                                               & \multicolumn{1}{c|}{\multirow{4}{*}{HE-OFDMA}}     & \multicolumn{1}{c|}{\multirow{4}{*}{\begin{tabular}[c]{@{}c@{}}802.11ax\\ (Wi-Fi 6,\\ Wi-Fi 6E)\end{tabular}}} & \multicolumn{1}{c|}{\multirow{4}{*}{May 2021}}                                                        & \multicolumn{1}{c|}{\multirow{4}{*}{2.4/5/6}}                                                            & \multicolumn{1}{c|}{20}                                                                                  & \multicolumn{1}{c|}{\multirow{4}{*}{574 to 9608}}                                                                  & \multicolumn{1}{c|}{Up to 1147}                                                                                                                          & \multicolumn{1}{c|}{\multirow{4}{*}{8}}                                                                         & \multicolumn{1}{c|}{\multirow{4}{*}{\begin{tabular}[c]{@{}c@{}}UL/DL\\ MU-MIMO OFDMA\\ (1024-QAM)\end{tabular}}} & \multicolumn{1}{c|}{\multirow{4}{*}{30 m (98 ft)}}    & \multirow{4}{*}{120 m (390 ft)}   \\ \cline{6-6} \cline{8-8}
+\multicolumn{1}{|c|}{}                                                                                               & \multicolumn{1}{c|}{}                              & \multicolumn{1}{c|}{}                                                                                          & \multicolumn{1}{c|}{}                                                                                 & \multicolumn{1}{c|}{}                                                                                    & \multicolumn{1}{c|}{40}                                                                                  & \multicolumn{1}{c|}{}                                                                                              & \multicolumn{1}{c|}{Up to 2294}                                                                                                                          & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{1}{c|}{}                                                                                            & \multicolumn{1}{c|}{}                                 &                                   \\ \cline{6-6} \cline{8-8}
+\multicolumn{1}{|c|}{}                                                                                               & \multicolumn{1}{c|}{}                              & \multicolumn{1}{c|}{}                                                                                          & \multicolumn{1}{c|}{}                                                                                 & \multicolumn{1}{c|}{}                                                                                    & \multicolumn{1}{c|}{80}                                                                                  & \multicolumn{1}{c|}{}                                                                                              & \multicolumn{1}{c|}{Up to 4804}                                                                                                                          & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{1}{c|}{}                                                                                            & \multicolumn{1}{c|}{}                                 &                                   \\ \cline{6-6} \cline{8-8}
+\multicolumn{1}{|c|}{}                                                                                               & \multicolumn{1}{c|}{}                              & \multicolumn{1}{c|}{}                                                                                          & \multicolumn{1}{c|}{}                                                                                 & \multicolumn{1}{c|}{}                                                                                    & \multicolumn{1}{c|}{80+80}                                                                               & \multicolumn{1}{c|}{}                                                                                              & \multicolumn{1}{c|}{Up to 9608}                                                                                                                          & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{1}{c|}{}                                                                                            & \multicolumn{1}{c|}{}                                 &                                   \\ \hline
+\end{tabular}%
+}
+\end{table}
+\end{latin}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1} https://www.rfwireless-world.com/Terminology/Advantages-and-Disadvantages-of-802-11ax.html
+\bibitem{b1} https://ipwithease.com/difference-between-router-and-layer-3-switch/
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}
