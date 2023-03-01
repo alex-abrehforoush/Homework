@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  1 MAR 2023 10:28
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  1 MAR 2023 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -998,6 +998,33 @@ LaTeX Warning: Label `fig:fig1' multiply defined.
 
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1143,50 +1170,74 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
 (Font)              scaled to size 10.79997pt on input line 103.
 File: figures/1b.jpg Graphic file (type bmp)
 <figures/1b.jpg>
+[1]
 File: figures/1c.jpg Graphic file (type bmp)
 <figures/1c.jpg>
-[1]
+ [2]
 File: figures/2a.jpg Graphic file (type bmp)
 <figures/2a.jpg>
 File: figures/2b.jpg Graphic file (type bmp)
 <figures/2b.jpg>
- [2]
+ [3]
 File: figures/2c.jpg Graphic file (type bmp)
 <figures/2c.jpg>
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 208.
- [3]
+ [4]
 File: figures/3aa.jpg Graphic file (type bmp)
 <figures/3aa.jpg>
- [4]
+ [5]
 File: figures/3ab.jpg Graphic file (type bmp)
 <figures/3ab.jpg>
 File: figures/3ac.jpg Graphic file (type bmp)
 <figures/3ac.jpg>
- [5]
+ [6]
 File: figures/3ba.jpg Graphic file (type bmp)
 <figures/3ba.jpg>
 File: figures/3bb.jpg Graphic file (type bmp)
 <figures/3bb.jpg>
+ [7]
 File: figures/3bc.jpg Graphic file (type bmp)
 <figures/3bc.jpg>
- [6]
 File: figures/4a.jpg Graphic file (type bmp)
 <figures/4a.jpg>
+ [8]
 File: figures/4b.jpg Graphic file (type bmp)
 <figures/4b.jpg>
 File: figures/4c.jpg Graphic file (type bmp)
 <figures/4c.jpg>
 File: figures/4d.jpg Graphic file (type bmp)
 <figures/4d.jpg>
- [7]
+ [9]
 File: figures/4e.jpg Graphic file (type bmp)
 <figures/4e.jpg>
+File: figures/5aa.jpg Graphic file (type bmp)
+<figures/5aa.jpg>
+ [10]
+File: figures/5ab.jpg Graphic file (type bmp)
+<figures/5ab.jpg>
+File: figures/5ba.jpg Graphic file (type bmp)
+<figures/5ba.jpg>
+ [11]
+File: figures/5ca.jpg Graphic file (type bmp)
+<figures/5ca.jpg>
+File: figures/5cb.jpg Graphic file (type bmp)
+<figures/5cb.jpg>
+File: figures/5cc.jpg Graphic file (type bmp)
+<figures/5cc.jpg>
+ [12]
+File: figures/5cd.jpg Graphic file (type bmp)
+<figures/5cd.jpg>
+File: figures/5ce.jpg Graphic file (type bmp)
+<figures/5ce.jpg>
+ [13]
+File: figures/5cf.jpg Graphic file (type bmp)
+<figures/5cf.jpg>
+ [14]
 
+LaTeX Warning: Empty `thebibliography' environment on input line 477.
 
-LaTeX Warning: Empty `thebibliography' environment on input line 400.
-
-[8] [9] (./main.aux)
+[15] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1198,12 +1249,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18036 strings out of 476919
- 366378 string characters out of 5825424
- 1381220 words of memory out of 5000000
- 37679 multiletter control sequences out of 15000+600000
+ 18090 strings out of 476919
+ 367224 string characters out of 5825424
+ 1382151 words of memory out of 5000000
+ 37724 multiletter control sequences out of 15000+600000
  405393 words of font info for 68 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,12n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (10 pages).
+Output written on main.pdf (16 pages).
