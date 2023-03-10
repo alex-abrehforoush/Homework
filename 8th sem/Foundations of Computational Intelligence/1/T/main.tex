@@ -29,7 +29,7 @@
 \renewcommand{\baselinestretch}{1.5}
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{تکلیف اول درس مبانی رمزنگاری}
+\rhead{تکلیف اول درس مبانی هوش محاسباتی}
 \lhead{\thepage}
 \rfoot{علیرضا ابره فروش}
 \lfoot{9816603}
@@ -76,6 +76,44 @@
 
 %\tableofcontents
 \newpage
+
+
+\section{}%1
+\subsection{نتیجه (خروجی)}
+\begin{latin}
+A linear regression model relies on a continuous dependent variable. This implies that the dependent variable takes up numeric values instead of being classified under categories or groups. In contrast, logistic regression models rely on binary dependent variables. The dependent (or response) variable can take up only two values – 0 or 1.
+Also, linear regression output has a continuous value (it gives a range of values). For example,
+\begin{itemize}
+	\item Length of the roof (25 inches, 19 inches, 5 ft)
+	\item Height (5 ft 8 inches, 6 ft 2 inches, 5 ft 10 inches)
+	\item Escape velocity (26000 mph, 21500 mph, 29500 mph)
+\end{itemize}
+On the other hand, the logistic regression model is revealed via probabilities. For example,
+\begin{itemize}
+	\item 84.3\% chance of losing a tennis match
+	\item 23.1\% chance of passing a bill in Congress
+	\item 65.1\% chance of imposing a curfew during a COVID-19 outbreak
+\end{itemize}
+Moreover, linear regression observes a normal or gaussian distribution, and logistic regression reveals a binomial distribution.
+\end{latin}
+
+\subsection{ارتباط بین متغیرها}
+\begin{latin}
+Understanding the relationship between variables is crucial when deciding the type of regression model to be used for different purposes.
+
+Linear regression describes a linear relationship between variables by plotting a straight line on a graph. It enables professionals to check on these linear relationships and track their movement over a period. On the contrary, logistic regression is known to study and examine the probability of an event occurrence. Since it does not denote a linear structure of a variable relationship, tracking logistic regression using linear structures is not required.
+\end{latin}
+
+\subsection{خطا}
+\begin{latin}
+
+\end{latin}
+
+
+
+
+
+
 
 
 \section{}%1
@@ -399,7 +437,7 @@ $
 9816603 \equiv 17 \:\:\:\:mod\:\: 26
 $
 \end{latin}
-کلید \lr{Substitution cipher} برابر \lr{fharjolyinectzspdbkwxgumvq} و \lr{offset} آن برابر 17 است. در واقع الفبای انگلیسی به ترتیب به \lr{NECTZSPDBKWXGUMVQFHARJOLYI} \lr{map} می‌شود. پس در نهایت به صورت زیر رمز می‌شود.
+کلید \lr{Substitution cipher} برابر \lr{fharjolyinectzspdbkwxgumvq} و \lr{offset} آن برابر 17 است. در واقع الفبای اگلیسی به ترتیب به \lr{NECTZSPDBKWXGUMVQFHARJOLYI} \lr{map} می‌شود. پس در نهایت به صورت زیر رمز می‌شود.
 \begin{latin}
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
@@ -482,10 +520,10 @@ $E(x)$ & H & r & c & c & z & h & h &  & r & h & r & n & x & x & y &  & c & m & g
 \end{table}
 \end{latin}
 %%%%%%%%%%%%%%
-همچنین کلید مورد استفاده در این الگوریتم به صورت زیر (حرف اول نام + حرف اول نام خانوادگی) ساخته می‌شود.
+همچنین کلید مورد استفاده در این الگوریتم به صورت زیر (سه حرف اول نام + سه حرف اول نام خانوادگی) ساخته می‌شود.
 \begin{latin}
 $
-ALIREZA\:\:ABREHFOROUSH \Rightarrow key = AA
+ALIREZA\:\:ABREHFOROUSH \Rightarrow key = ALIABR
 $
 \end{latin}
 حال \lr{key} را مکررا تکرار می‌کنیم تا طول آن برابر طول رشته‌ای که می‌خواهیم آن را رمز کنیم بشود (یا به عبارتی کاراکتر نظیر باقیمانده‌ی $i$ به پیمانه‌ی طول کلید (6) را در کلید به دست آوریم). برای رمز کردن کاراکترِ $i$ام در رشته، کاراکترِ اندیسِ باقیمانده‌ی $i$ به پیمانه‌ی طول کلید (6) در کلید ($key_i$) به همراه خود کاراکترِ $i$ام ($x_i$) به دست می‌آوریم. $cipher_i$ نظیر $x_i$ برابر کاراکتر قرار گرفته در سطرِ $key_i$ و ستون $x_i$ است.
@@ -493,12 +531,13 @@ $
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
 \begin{table}[H]
+\centering
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{key}               & A & a & a & a & a & a & a &  & a & a & a & a & a & a & a &  & a & a & a & a & a &  & a & a &  & a & a & a & a & a &  & a & a & a &  & a & a & a &  & a & a & a &  & a & a & a & a &  & a & a &  & a & a &  & a & a & a & a & a & a & a &  & a & a & a &  & a & a & . \\ \hline
-\textbf{$x$}               & S & u & c & c & e & s & s &  & u & s & u & a & l & l & y &  & c & o & m & e & s &  & t & o &  & t & h & o & s & e &  & w & h & o &  & a & r & e &  & t & o & o &  & b & u & s & y &  & t & o &  & b & e &  & l & o & o & k & i & n & g &  & f & o & r &  & i & t & . \\ \hline
-\textbf{$E\left(x\right)$} & S & u & c & c & e & s & s &  & u & s & u & a & l & l & y &  & c & o & m & e & s &  & t & o &  & t & h & o & s & e &  & w & h & o &  & a & r & e &  & t & o & o &  & b & u & s & y &  & t & o &  & b & e &  & l & o & o & k & i & n & g &  & f & o & r &  & i & t & . \\ \hline
+key    & A & l & i & a & b & r & a &  & l & i & a & b & r & a & l &  & i & a & b & r & a &  & l & i &  & a & b & r & a & l &  & i & a & b &  & r & a & l &  & i & a & b &  & r & a & l & i &  & a & b &  & r & a &  & l & i & a & b & r & a & l &  & i & a & b &  & r & a & . \\ \hline
+x      & S & u & c & c & e & s & s &  & u & s & u & a & l & l & y &  & c & o & m & e & s &  & t & o &  & t & h & o & s & e &  & w & h & o &  & a & r & e &  & t & o & o &  & b & u & s & y &  & t & o &  & b & e &  & l & o & o & k & i & n & g &  & f & o & r &  & i & t & . \\ \hline
+$E(x)$ & S & f & k & c & f & j & s &  & f & a & u & b & c & l & j &  & k & o & n & v & s &  & e & w &  & t & i & f & s & p &  & e & h & p &  & r & r & p &  & b & o & p &  & s & u & d & g &  & t & p &  & s & e &  & w & w & o & l & z & n & r &  & n & o & s &  & z & t & . \\ \hline
 \end{tabular}%
 }
 \end{table}
@@ -576,26 +615,8 @@ $E(x)$ & S & f & k & t & i & r & s &  & u & t & l & e & s & q & m &  & t & c & g
     \label{fig:fig1}
 \end{figure}
 
-\subsubsection{\lr{c}}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.75\textwidth]{figures/3ca.jpg}
-    \caption
-	{}
-    \label{fig:fig1}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.75\textwidth]{figures/3cb.jpg}
-    \caption
-	{}
-    \label{fig:fig1}
-\end{figure}
-آنتروپی در حالت اول و دوم به ترتیب برابر 3.86 و 4.26 است.
-\begin{latin}
-Entropy, in the context of cryptography, is related to random number generation, and more precisely, it refers to the “amount of unpredictable randomness” in a physical system. We call an entropy source the physical system that produces random signals.
-\end{latin}
-از آنجایی که در حالت دوم که طول کلید بیشتر است (کارکترهای متفاوت‌تری دارد) بی‌نظمی (\lr{randomness}) بیشتری وجود دارد، رمز امن‌تر است. در حالی که در حالت اول چون دو کاراکتر یکسان بودند صرفا از یک سطر (سطر اول که بدیهی هم هست) استفاده شده است و عبارت عملا رمز نشده است.
+\subsubsection{}
+؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟
 
 
 
@@ -667,26 +688,24 @@ Shifted by 6 &   &   &   &   &   &   & \cellcolor[HTML]{FFCCC9}\textbf{S} & \cel
 \lr{plaintext} مذکور را با \lr{OTP Key} مذکور به شکل زیر با تکنیک \lr{one-time pad} رمز می‌کنیم.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/5a0.jpg}
+    \includegraphics[width=0.75\textwidth]{figures/5aa.jpg}
     \caption
 	{}
     \label{fig:fig1}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/5a1.jpg}
+    \includegraphics[width=0.75\textwidth]{figures/5ab.jpg}
     \caption
 	{}
     \label{fig:fig1}
 \end{figure}
 
 \subsubsection{\lr{b}}
-\lr{plaintext} مذکور را به شکل زیر با تکنیک \lr{one-time pad} رمز می‌کنیم. از آنجایی که طول کلید \lr{OTP} بایستی بزرگتر مساوی طول رشته‌ای که می‌خواهیم رمز کنیم باشد؛ به سه روش کلید \lr{OTP} را انتخاب می‌کنیم. یک بار کلید را برابر \lr{"alirezaabrehforoush"}، یک بار تکرار منظم حروف \lr{ALIREZAABREHFOROUSH} (یعنی با حفظ ترتیب کاراکترها را مطابق با بزرگ یا کوچک بودن یا کاراکتر نمادی بودنِ \lr{plain text} انتخاب می‌کنیم) و بار دیگر صرفا تکرار مکرر \lr{"Alireza Abrehforoush"}. هر سه حالت کلیدهای مذکور به پاسخ تکلیف پیوست شده است. (در اینجا فقط حالت اول آورده شده است)
-
-
+\lr{plaintext} مذکور را به شکل زیر با تکنیک \lr{one-time pad} رمز می‌کنیم (از آنجایی که طول کلید \lr{OTP} بایستی بزرگتر مساوی طول رشته‌ای که می‌خواهیم رمز کنیم باشد؛ کلید \lr{OTP} را برابر تکرار رشته‌ی \lr{Alireza Abrehforoush} قرار می‌دهیم).
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/5b1.jpg}
+    \includegraphics[width=0.75\textwidth]{figures/5ba.jpg}
     \caption
 	{}
     \label{fig:fig1}
@@ -696,21 +715,21 @@ Shifted by 6 &   &   &   &   &   &   & \cellcolor[HTML]{FFCCC9}\textbf{S} & \cel
 به شکل زیر تحلیل برای کشف کلید \lr{OTP} به ترتیب برای قسمت \lr{a} و \lr{b} انجام می‌شود.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/5c1.jpg}
+    \includegraphics[width=0.75\textwidth]{figures/5ca.jpg}
     \caption
 	{}
     \label{fig:fig1}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/5c2.jpg}
+    \includegraphics[width=0.75\textwidth]{figures/5cb.jpg}
     \caption
 	{}
     \label{fig:fig1}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/5c3.jpg}
+    \includegraphics[width=0.75\textwidth]{figures/5cc.jpg}
     \caption
 	{}
     \label{fig:fig1}
@@ -720,29 +739,26 @@ Shifted by 6 &   &   &   &   &   &   & \cellcolor[HTML]{FFCCC9}\textbf{S} & \cel
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/5c4.jpg}
+    \includegraphics[width=0.75\textwidth]{figures/5cd.jpg}
     \caption
 	{}
     \label{fig:fig1}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/5c5.jpg}
+    \includegraphics[width=0.75\textwidth]{figures/5ce.jpg}
     \caption
 	{}
     \label{fig:fig1}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/5c6.jpg}
+    \includegraphics[width=0.75\textwidth]{figures/5cf.jpg}
     \caption
 	{}
     \label{fig:fig1}
 \end{figure}
 
-
-
-همانطور که مشاهده می‌کنیم در حالت دوم که کلید دارای عبارات و کاراکترهای تکراری است طول کلید به درستی حدس زده شده است و همجنین قسمت‌هایی از کلید به درستی تشخیص داده شده است. پس امنیت پایین‌تری دارد.
 
 %\begin{latin}
 %\lstinputlisting{sources/p2.m}

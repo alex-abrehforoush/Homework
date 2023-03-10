@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  10 MAR 2023 14:37
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  10 MAR 2023 11:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -949,89 +949,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
 \@quotelevel=\count469
 \@quotereset=\count470
- (./main.aux
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-)
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
@@ -1045,7 +963,8 @@ LaTeX Font Info:    ... okay on input line 56.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
 6.
- (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 56.
@@ -1150,81 +1069,80 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 (Font)              scaled to size 14.39996pt on input line 82.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 83.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 125
+.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 125
+.
 
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 98.
+(Font)              scaled to size 11.99997pt on input line 135.
  [1] [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
 [][]
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 285--289
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--298
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--309
+Underfull \hbox (badness 10000) in paragraph at lines 322--326
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--325
+Underfull \hbox (badness 10000) in paragraph at lines 329--335
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--346
 [][]
  []
 
 [5]
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 326.
-
-Underfull \hbox (badness 10000) in paragraph at lines 327--333
+Underfull \hbox (badness 10000) in paragraph at lines 348--362
 [][]
  []
 
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 353.
+(Font)              scaled to size 10.0pt on input line 363.
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--370
+[][]
+ []
+
 [6]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 14.4pt on input line 390.
 File: figures/1a.jpg Graphic file (type bmp)
 <figures/1a.jpg>
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 376.
+(Font)              scaled to size 10.79997pt on input line 413.
 
 
 LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 376.
+(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 413.
 
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 376.
+(Font)              scaled to size 10.79997pt on input line 413.
 File: figures/1b.jpg Graphic file (type bmp)
 <figures/1b.jpg>
 [7]
@@ -1254,46 +1172,41 @@ File: figures/3bb.jpg Graphic file (type bmp)
  [13]
 File: figures/3bc.jpg Graphic file (type bmp)
 <figures/3bc.jpg>
-File: figures/3ca.jpg Graphic file (type bmp)
-<figures/3ca.jpg>
-File: figures/3cb.jpg Graphic file (type bmp)
-<figures/3cb.jpg>
- [14]
 File: figures/4a.jpg Graphic file (type bmp)
 <figures/4a.jpg>
- [15]
+ [14]
 File: figures/4b.jpg Graphic file (type bmp)
 <figures/4b.jpg>
 File: figures/4c.jpg Graphic file (type bmp)
 <figures/4c.jpg>
- [16]
 File: figures/4d.jpg Graphic file (type bmp)
 <figures/4d.jpg>
+ [15]
 File: figures/4e.jpg Graphic file (type bmp)
 <figures/4e.jpg>
+File: figures/5aa.jpg Graphic file (type bmp)
+<figures/5aa.jpg>
+ [16]
+File: figures/5ab.jpg Graphic file (type bmp)
+<figures/5ab.jpg>
+File: figures/5ba.jpg Graphic file (type bmp)
+<figures/5ba.jpg>
  [17]
-File: figures/5a0.jpg Graphic file (type bmp)
-<figures/5a0.jpg>
-File: figures/5a1.jpg Graphic file (type bmp)
-<figures/5a1.jpg>
+File: figures/5ca.jpg Graphic file (type bmp)
+<figures/5ca.jpg>
+File: figures/5cb.jpg Graphic file (type bmp)
+<figures/5cb.jpg>
+File: figures/5cc.jpg Graphic file (type bmp)
+<figures/5cc.jpg>
  [18]
-File: figures/5b1.jpg Graphic file (type bmp)
-<figures/5b1.jpg>
-File: figures/5c1.jpg Graphic file (type bmp)
-<figures/5c1.jpg>
-File: figures/5c2.jpg Graphic file (type bmp)
-<figures/5c2.jpg>
+File: figures/5cd.jpg Graphic file (type bmp)
+<figures/5cd.jpg>
+File: figures/5ce.jpg Graphic file (type bmp)
+<figures/5ce.jpg>
  [19]
-File: figures/5c3.jpg Graphic file (type bmp)
-<figures/5c3.jpg>
+File: figures/5cf.jpg Graphic file (type bmp)
+<figures/5cf.jpg>
  [20]
-File: figures/5c4.jpg Graphic file (type bmp)
-<figures/5c4.jpg>
-File: figures/5c5.jpg Graphic file (type bmp)
-<figures/5c5.jpg>
-File: figures/5c6.jpg Graphic file (type bmp)
-<figures/5c6.jpg>
- [21]
 Missing character: There is no R (U+0052) in font [B-NAZANIN.TTF]/OT:script=ara
 b;language=dflt;mapping=persian-tex-text;!
 Missing character: There is no e (U+0065) in font [B-NAZANIN.TTF]/OT:script=ara
@@ -1316,26 +1229,34 @@ Missing character: There is no s (U+0073) in font [B-NAZANIN.TTF]/OT:script=ara
 b;language=dflt;mapping=persian-tex-text;!
 
 
-LaTeX Warning: Empty `thebibliography' environment on input line 772.
+LaTeX Warning: Empty `thebibliography' environment on input line 787.
 
-[22] (./main.aux)
+[21] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18103 strings out of 476919
- 367440 string characters out of 5825424
- 1381797 words of memory out of 5000000
- 37735 multiletter control sequences out of 15000+600000
+ 18091 strings out of 476919
+ 367252 string characters out of 5825424
+ 1382118 words of memory out of 5000000
+ 37725 multiletter control sequences out of 15000+600000
  405393 words of font info for 68 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,12n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (23 pages).
+Output written on main.pdf (22 pages).
