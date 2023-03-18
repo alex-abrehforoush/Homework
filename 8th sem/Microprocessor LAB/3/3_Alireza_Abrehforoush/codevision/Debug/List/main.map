@@ -1,0 +1,50 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+data_key                                                                          0x0187      16
+dataKeys                                                                          0x0197      16
+readRow                                                                           0x01A7       8
+row                                                                               0x01AF       4
+_base_y (alcd.lib)                                                                0x01B3       4
+_seed (stdlib.lib)                                                                0x01B7       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+lcdPos                                                                            R4,R5        2
+_lcd_x                                                                            R7           1
+_lcd_y                                                                            R6           1
+_lcd_maxx                                                                         R9           1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+main                                                                              0x00150     60
+part1                                                                             0x0018C     15
+part2                                                                             0x0019B     56
+keypad2                                                                           0x001D3     79
+part3                                                                             0x00222     13
+lcdBaseState                                                                      0x0022F      6
+readFromKeyPad                                                                    0x00235     81
+part4                                                                             0x00286     23
+part5                                                                             0x0029D    285
+_lcd_write_nibble_G100                                                            0x003BA     21
+_lcd_write_data                                                                   0x003CF     13
+lcd_gotoxy                                                                        0x003DC     18
+lcd_clear                                                                         0x003EE     12
+lcd_putchar                                                                       0x003FA     20
+lcd_puts                                                                          0x0040E     17
+lcd_init                                                                          0x0041F     47
+put_buff_G101                                                                     0x0044E     56
+_print_G101                                                                       0x00486    316
+sprintf                                                                           0x005C2     54
+atoi                                                                              0x005F8     55
+strlen                                                                            0x0062F     12
+strlenf                                                                           0x0063B     13
+strncpy                                                                           0x00648     21
+isdigit                                                                           0x0065D      9
+isspace                                                                           0x00666     11
