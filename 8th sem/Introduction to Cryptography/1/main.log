@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  10 MAR 2023 14:37
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  28 MAR 2023 17:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1031,6 +1031,21 @@ LaTeX Warning: Label `fig:fig1' multiply defined.
 
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1294,6 +1309,21 @@ File: figures/5c5.jpg Graphic file (type bmp)
 File: figures/5c6.jpg Graphic file (type bmp)
 <figures/5c6.jpg>
  [21]
+File: figures/6a0.jpg Graphic file (type bmp)
+<figures/6a0.jpg>
+File: figures/6a1.jpg Graphic file (type bmp)
+<figures/6a1.jpg>
+
+[22]
+File: figures/6a2.jpg Graphic file (type bmp)
+<figures/6a2.jpg>
+ [23]
+File: figures/6a3.jpg Graphic file (type bmp)
+<figures/6a3.jpg>
+ [24]
+File: figures/6a4.jpg Graphic file (type bmp)
+<figures/6a4.jpg>
+ [25] [26]
 Missing character: There is no R (U+0052) in font [B-NAZANIN.TTF]/OT:script=ara
 b;language=dflt;mapping=persian-tex-text;!
 Missing character: There is no e (U+0065) in font [B-NAZANIN.TTF]/OT:script=ara
@@ -1316,9 +1346,9 @@ Missing character: There is no s (U+0073) in font [B-NAZANIN.TTF]/OT:script=ara
 b;language=dflt;mapping=persian-tex-text;!
 
 
-LaTeX Warning: Empty `thebibliography' environment on input line 772.
+LaTeX Warning: Empty `thebibliography' environment on input line 812.
 
-[22] (./main.aux)
+[27] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1330,12 +1360,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18103 strings out of 476919
- 367440 string characters out of 5825424
+ 18133 strings out of 476919
+ 367910 string characters out of 5825424
  1381797 words of memory out of 5000000
- 37735 multiletter control sequences out of 15000+600000
+ 37760 multiletter control sequences out of 15000+600000
  405393 words of font info for 68 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,12n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (23 pages).
+Output written on main.pdf (28 pages).

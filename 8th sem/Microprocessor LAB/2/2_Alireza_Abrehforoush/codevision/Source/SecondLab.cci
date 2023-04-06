@@ -1,0 +1,8 @@
+VERSION:3 SOURCE_TIMESTAMP:568476A8
+NODE:I LEVEL:0 LINE:1 ".\Source\myheader.h"
+NODE:V LEVEL:0 LINE:3 "digits -> RAM:????"
+NODE:F LEVEL:0 LINE:5 "part1(unsigned char port_in)"
+NODE:F LEVEL:0 LINE:30 "part2(unsigned char data_in,unsigned char port_out)"
+NODE:F LEVEL:0 LINE:54 "part3(int number,unsigned int interval)"
+NODE:F LEVEL:0 LINE:67 "part4(void)"
+NODE:F LEVEL:0 LINE:75 "part5(int data,unsigned char data_port,unsigned char enable_data)"

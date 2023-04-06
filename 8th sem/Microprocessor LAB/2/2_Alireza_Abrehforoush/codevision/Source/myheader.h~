@@ -1,0 +1,15 @@
+#ifndef _myheader_INLCLUDED_
+#define _myheader_INLCLUDED_
+
+#define port_A 1
+#define port_B 2
+#define port_C 3
+#define port_D 4
+
+#include <mega16.h>
+#include <delay.h>
+#include <SecondLab.h>
+
+char digits[10] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f};
+
+#endif

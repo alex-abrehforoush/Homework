@@ -7,9 +7,9 @@ A=
 C=
 D=3/17/2023
 Files=2
-OpenedFiles=4
+OpenedFiles=0
 OF1=main.c
-ActiveTab=1
+ActiveTab=0
 DebugOutputListFilesDirectory=Debug\List
 DebugOutputObjectFilesDirectory=Debug
 DebugOutputExecutableFilesDirectory=Debug\Exe
@@ -569,7 +569,7 @@ Row=0
 Column=0
 ScrollPosX=0
 ScrollPosY=0
-TimeStamp=1450292561
+TimeStamp=1451512815
 [BookmarksFoldedCode]
 Files=6
 F1=C:\Users\Alireza\Desktop\HW\Homework\8th sem\Microprocessor LAB\3\3_Alireza_Abrehforoush\codevision\main.c
@@ -686,12 +686,6 @@ BK6=-1
 BK7=-1
 BK8=-1
 BK9=-1
-[FoldedCode5]
-Blocks=0
-[FoldedCode2]
-Blocks=0
-[FoldedCode3]
-Blocks=0
 [Bookmarks6]
 TimeStamp=1450292325
 Row=19
@@ -709,4 +703,10 @@ BK7=-1
 BK8=-1
 BK9=-1
 [FoldedCode6]
+Blocks=0
+[FoldedCode3]
+Blocks=0
+[FoldedCode2]
+Blocks=0
+[FoldedCode5]
 Blocks=0

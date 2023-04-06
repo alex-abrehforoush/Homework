@@ -1,0 +1,24 @@
+/*
+ * a.c
+ *
+ * Created: 4/4/2023 10:32:35 AM
+ * Author: Alireza Abrehforoush
+ */
+#include <myheader.h>
+
+char digits[10] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f};
+
+void main(void)
+{
+    while (1)
+    {
+        // Please write your application code here
+        part3(4, 500);
+        delay_ms(1000);
+        part4();
+        delay_ms(1000); 
+        part5(6789, port_C, port_D);   
+    }
+}
+
+
