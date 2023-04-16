@@ -1,0 +1,7 @@
+VERSION:3 SOURCE_TIMESTAMP:535C70D2
+NODE:I LEVEL:0 LINE:1 "C:\Users\Alireza\Desktop\HW\Homework\8th sem\Microprocessor LAB\4\4_Alireza_Abrehforoush\codevision\Source\headers.h"
+NODE:F LEVEL:0 LINE:3 "initPorts(void)"
+NODE:F LEVEL:0 LINE:30 "initTimer0(void)"
+NODE:F LEVEL:0 LINE:42 "initTimer1(void)"
+NODE:F LEVEL:0 LINE:69 "initExtInterrupts(void)"
+NODE:F LEVEL:0 LINE:83 "initBoard(void)"

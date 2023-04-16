@@ -80,7 +80,22 @@
 
 
 \section{}%1
+\subsection{}
+خطاهای شناسایی شده توسط تحلیلگر لغوی معمولا دارای ویژگی های زیر هستند:
+\begin{itemize}
+\item این خطاها زمانی رخ می‌دهند که دنباله ورودی از کاراکترهای معتبر در زبان برنامه‌نویسی مورد نظر تشخیص داده نمی‌شود.
+\item این خطاها به طور کلی توسط تحلیلگر لغوی تشخیص داده می‌شوند که در مرحله اول فرایند کامپایل است.
+\item این خطاها اغلب به دلیل خطاهای نحوی، مانند کلمات کلیدی یا شناسه‌های نوشتاری نادرست یا کاراکترهای نامعتبر یا نمادها ایجاد می‌شوند.
+\end{itemize}
 
+\subsection{}
+چهار نمونه مختلف از انواع خطاهای شناسایی شده توسط تحلیل‌گر لغوی، شامل موارد زیر می‌شوند:
+
+\begin{enumerate}
+\item کاراکترهای غیرمجاز: این کاراکترها که در زبان برنامه‌نویسی شناخته نشده‌اند، مانند کاراکترهای غیر چاپ‌پذیر یا نویسه‌هایی از زبان‌های دیگر هستند.
+\item عدم تطابق نقل قول: این خطا هنگامی رخ می‌دهد که یک متن رشته‌ای به درستی با نقل قول متناظر خاتمه نمی‌یابد. به عنوان مثال، \lr{"Hello، World!} احتمالاً به دلیل عدم وجود دابل کوتیشن پایانی، با خطای لغوی روبرو می‌شود.
+\item
+\end{enumerate}
 
 \section{}%2
 
@@ -105,21 +120,68 @@
 \subsection{}
 \begin{latin}
 $
-\left( 1 \cup 0\left( 00 \right) ^ * \right) ^ * \left( 00 \right) ^ + \left( 1 \cup 0\left( 00 \right) ^ * \right) ^ * \left( \left( 00 \right) ^ + \left( 1 \cup 0\left( 00 \right) ^ * \right) ^ * \right) ^ +
+\left( \varepsilon \cup \left( 0 \cup 1 \right) ^ {*} 1 \right) \left( 00 \right) ^ {+} \left( 1 \cup 1\left( 0 \cup 1 \right) ^ {*}1 \right) \left( 00 \right) ^ {+} \left( 1 \left( 0 \cup 1 \right) ^ {*} \cup \varepsilon \right)
 $
 \end{latin}
 \subsection{}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figures/3a.jpg}
+    \includegraphics[width=1\textwidth]{figures/3b.jpg}
     \caption
 	{}
     \label{fig:fig1}
 \end{figure}
 
 \section{}%4
+\subsection{الف}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/4a.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+\subsection{ب}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/4b.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+
+
 \section{}%5
+\subsection{الف}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/5a.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+\subsection{ب}
+قابل کمینه‌سازی نیست.
+
 \section{}%6
+\subsection{الف}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/6a.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+\subsection{ب}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/6b.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+
+
 
 \section{}%7
 \subsection{آ}
@@ -221,10 +283,11 @@ $
 \textbf{29} & ;                       & SEMI          \\ \hline
 \textbf{30} & b                       & ID            \\ \hline
 \textbf{31} & =                       & ASSIGNMENT    \\ \hline
-\textbf{32} & b                       & ID            \\ \hline
-\textbf{33} & ;                       & SEMI          \\ \hline
-\textbf{34} & \} & RBRACE      				  \\ \hline
-\textbf{35} &                         & EOF           \\ \hline
+\textbf{32} & *                       & STAR          \\ \hline
+\textbf{33} & b                       & ID            \\ \hline
+\textbf{34} & ;                       & SEMI          \\ \hline
+\textbf{35} & \} & RBRACE      				  \\ \hline
+\textbf{36} &                         & EOF           \\ \hline
 \end{longtable}
 \end{latin}
 
