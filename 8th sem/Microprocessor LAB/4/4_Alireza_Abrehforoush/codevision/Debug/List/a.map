@@ -1,0 +1,52 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+capacity                                                                          0x0166       2
+hour                                                                              0x0168       1
+minute                                                                            0x0169       1
+second                                                                            0x016A       1
+csec                                                                              0x016B       1
+_seed (stdlib.lib)                                                                0x016C       4
+_base_y (alcd.lib)                                                                0x0170       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+_lcd_x                                                                            R5           1
+_lcd_y                                                                            R4           1
+_lcd_maxx                                                                         R7           1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+ext_int0_isr                                                                      0x0008A      4
+ext_int1_isr                                                                      0x0008E      4
+timer0_ovf_isr                                                                    0x00092     79
+main                                                                              0x000E1      5
+displayTime                                                                       0x000E6     32
+displayCapacity                                                                   0x00106     27
+initDisplay                                                                       0x00121      7
+stopwatch                                                                         0x00128     28
+parking                                                                           0x00144     42
+displayPeriod                                                                     0x0016E     10
+initializePorts                                                                   0x00178     12
+initializeTimers                                                                  0x00184     21
+initializeExternalInterrupts                                                      0x00199     11
+initializeLCD                                                                     0x001A4      4
+initialize                                                                        0x001A8      5
+put_buff_G100                                                                     0x001AD     64
+_print_G100                                                                       0x001ED    316
+sprintf                                                                           0x00329     60
+strlen                                                                            0x00365     12
+strlenf                                                                           0x00371     13
+_lcd_write_nibble_G103                                                            0x0037E     20
+_lcd_write_data                                                                   0x00392     12
+lcd_gotoxy                                                                        0x0039E     13
+lcd_clear                                                                         0x003AB     12
+lcd_putchar                                                                       0x003B7     21
+lcd_puts                                                                          0x003CC     17
+lcd_init                                                                          0x003DD     46

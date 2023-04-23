@@ -1,0 +1,11 @@
+VERSION:3 SOURCE_TIMESTAMP:5696112B
+NODE:I LEVEL:0 LINE:23 "C:\Users\Alireza\Desktop\HW\Homework\8th sem\Microprocessor LAB\4\4_Alireza_Abrehforoush\codevision\Source\headers.h"
+NODE:V LEVEL:0 LINE:26 "capacity -> RAM:????"
+NODE:V LEVEL:0 LINE:27 "hour -> RAM:????"
+NODE:V LEVEL:0 LINE:27 "minute -> RAM:????"
+NODE:V LEVEL:0 LINE:27 "second -> RAM:????"
+NODE:V LEVEL:0 LINE:27 "csec -> RAM:????"
+NODE:F LEVEL:0 LINE:30 "ext_int0_isr(void)"
+NODE:F LEVEL:0 LINE:37 "ext_int1_isr(void)"
+NODE:F LEVEL:0 LINE:44 "timer0_ovf_isr(void)"
+NODE:F LEVEL:0 LINE:68 "main(void)"

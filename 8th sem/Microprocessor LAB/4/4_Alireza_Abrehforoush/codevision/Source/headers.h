@@ -11,12 +11,10 @@
 #include <alcd.h>
 
 // my headers
-#include "initboard.h"
-#include "funcs.h"
+#include "initialization.h"
+#include "functions.h"
 
-#define PERIOD_POSITION 11 
-
-extern char msec, second, minute, hour;
 extern int capacity;
+extern char hour, minute, second, csec;
 
 #endif
