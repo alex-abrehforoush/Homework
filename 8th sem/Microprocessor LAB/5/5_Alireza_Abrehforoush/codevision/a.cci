@@ -1,0 +1,10 @@
+VERSION:3 SOURCE_TIMESTAMP:56971A91
+NODE:I LEVEL:0 LINE:23 "C:\Users\Alireza\Desktop\HW\Homework\8th sem\Microprocessor LAB\5\5_Alireza_Abrehforoush\codevision\Source\headers.h"
+NODE:V LEVEL:0 LINE:27 "cnt -> R4,R5"
+NODE:V LEVEL:0 LINE:28 "ttl -> R6,R7"
+NODE:V LEVEL:0 LINE:29 "state -> R8,R9"
+NODE:F LEVEL:0 LINE:33 "ext_int0_isr(void)"
+NODE:F LEVEL:0 LINE:39 "ext_int1_isr(void)"
+NODE:F LEVEL:0 LINE:52 "timer2_ovf_isr(void)"
+NODE:F LEVEL:0 LINE:104 "modifyDC(void)"
+NODE:F LEVEL:0 LINE:112 "main(void)"

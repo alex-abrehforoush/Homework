@@ -1,8 +1,0 @@
-VERSION:3 SOURCE_TIMESTAMP:535C9F4B
-NODE:I LEVEL:0 LINE:1 "C:\Users\Alireza\Desktop\HW\Homework\8th sem\Microprocessor LAB\4\4_Alireza_Abrehforoush\codevision\Source\headers.h"
-NODE:F LEVEL:0 LINE:3 "displayTime(unsigned char hour,unsigned char minute,unsigned char second,unsigned char msec)"
-NODE:F LEVEL:0 LINE:11 "displayCapacity(int capacity)"
-NODE:F LEVEL:0 LINE:19 "displayPeriod(void)"
-NODE:F LEVEL:0 LINE:24 "initDisplay(void)"
-NODE:F LEVEL:0 LINE:30 "parking(void)"
-NODE:F LEVEL:0 LINE:42 "chronometer(void)"

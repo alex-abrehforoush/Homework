@@ -1,0 +1,96 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{xepersian}
+
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف پنجم آزمایشگاه ریزپردازنده}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%%%%%%%%%%%%%%%%
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+%%%%%%%%%%%%%%%%
+\begin{document}
+\input{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{}
+سروموتور (یا موتور سروو) (به انگلیسی: \lr{Servomotor}) یک محرک چرخشی یا محرک خطی است که امکان کنترل دقیق موقعیت زاویه ای یا خطی، سرعت و شتاب را فراهم می‌کند. این شامل یک موتور مناسب است که به یک سنسور برای بازخورد موقعیت متصل شده‌است. همچنین به یک کنترلر نسبتاً پیچیده نیاز دارد که اغلب یک ماژول اختصاصی است که به‌طور خاص برای استفاده با سروموتورها طراحی شده‌است.
+
+سروموتورها کلاس خاصی از موتور نیستند، اگرچه اصطلاح سروموتور اغلب برای اشاره به موتور مناسب برای استفاده در یک سیستم کنترل حلقه بسته استفاده می‌شود.
+
+سروموتورها در کاربردهایی مانند رباتیک، ماشین آلات \lr{CNC} و ساخت خودکار استفاده می‌شوند.
+
+\subsection{سازوکار}
+سروموتور یک سروومکانیسم حلقه بسته است که از بازخورد موقعیت برای کنترل حرکت و موقعیت نهایی خود استفاده می‌کند. ورودی کنترل آن یک سیگنال (آنالوگ یا دیجیتال) است که موقعیت فرمان شفت خروجی را نشان می‌دهد.
+
+موتور با نوعی از رمزگذار موقعیت جفت می‌شود تا بازخورد موقعیت و سرعت را ارائه دهد. در ساده‌ترین حالت، فقط موقعیت اندازه‌گیری می‌شود. موقعیت اندازه‌گیری شده خروجی با موقعیت فرمان، ورودی خارجی به کنترل‌کننده مقایسه می‌شود. اگر موقعیت خروجی با موقعیت مورد نیاز متفاوت باشد، یک سیگنال خطا تولید می‌شود که باعث می‌شود موتور در هر جهت بچرخد تا شفت خروجی را به موقعیت مناسب برساند. با نزدیک شدن به موقعیت‌ها، سیگنال خطا به صفر می‌رسد و موتور متوقف می‌شود.
+
+بسیار ساده‌ترین سروموتورها از سنجش موقعیت فقط از طریق پتانسیومتر و کنترل انفجار موتور خود استفاده می‌کنند. موتور همیشه با سرعت کامل می‌چرخد (یا متوقف می‌شود). این نوع سروموتور در کنترل حرکت صنعتی کاربرد زیادی ندارد، اما اساس سرووهای ساده و ارزان مورد استفاده در مدل‌های رادیویی را تشکیل می‌دهد.
+
+سروموتورهای پیچیده‌تر از یک رمزگذار مطلق (نوعی رمزگذار چرخشی) برای محاسبه موقعیت شفت و استنتاج سرعت شفت خروجی استفاده می‌کنند. برای کنترل سرعت موتور از یک درایو با سرعت متغیر استفاده می‌شود. هر دوی این پیشرفت‌ها، معمولاً در ترکیب با یک الگوریتم کنترل \lr{PID}، به سروموتور اجازه می‌دهند تا سریع‌تر و دقیق‌تر به موقعیت فرمان داده شده و با بیش‌پریشی کمتر به موقعیت فرمان‌دهی برسد.
+
+\section{}
+\begin{latin}
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}[c]{|l|c|c|c|c|c|}
+\hline
+PWM\_duty cycle\%      & 10 & 30 & 50 & 70  & 90  \\ \hline
+\endfirsthead
+%
+\endhead
+%
+Speed(rpm)             & 17 & 49 & 83 & 116 & 149 \\ \hline
+Compare register(OCR0) & 1A & 4D & 80 & B2  & E5  \\ \hline
+\end{longtable}
+\end{latin}
+
+
+\section{}
+\begin{latin}
+$
+OCR0 = Pwm\_duty\:\:cycle \times 2.55 + 0.5
+$
+\end{latin}
+
+
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1}https://fa.wikipedia.org/wiki/\%D8\%B3\%D8\%B1\%D9\%88\%D9\%88\_\%D9\%85\%D9\%88\%D8\%AA\%D9\%88\%D8\%B1
+
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}
