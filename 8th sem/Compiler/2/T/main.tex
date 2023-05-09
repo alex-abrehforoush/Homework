@@ -123,6 +123,36 @@ T ^ \prime \longrightarrow | nT ^ \prime | \varepsilon
 $
 \end{latin}
 
+\section{}%2
+
+\section{}%3
+\subsection{\lr{a}}
+تصویر زیر بیان شرط لازم و کافی برای \lr{LL(1)} بودن یک گرامر را شرح می‌دهد.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/3a.png}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+با توجه به این قضیه، داریم:
+
+\begin{latin}
+$
+FIRST(Z) = \lbrace b, \varepsilon \rbrace \\
+FIRST(Y) = \lbrace b, c \rbrace \\
+FIRST(bX) = \lbrace b \rbrace \\
+\Rightarrow FIRST(bX) \bigcap FIRST(Y) \neq \emptyset \\
+, \\
+FIRST(bZ) = \lbrace b \rbrace \\
+FOLLOW(Z) = \lbrace c \rbrace \\
+\Rightarrow FIRST(bZ) \bigcap FOLLOW(Z) = \emptyset
+$
+\end{latin}
+از آنجایی که $FIRST(bX) \bigcap FIRST(Y) \neq \emptyset$ پس گرامر \lr{LL(1)} نیست.
+
+\subsection{\lr{b}}
+با حذف \lr{production}ِ $X \longrightarrow bX$ گرامر \lr{LL(1)} می‌شود. چون بین دو شرط بالا اولی که با حذف $bX$ ارضا می‌شود و دومی هم برقرار است.
 
 
 
@@ -134,11 +164,7 @@ $
 
 
 
-
-
-
-
-\section{}%1
+\section{}
 \subsection{}
 خطاهای شناسایی شده توسط تحلیلگر لغوی معمولا دارای ویژگی های زیر هستند:
 \begin{itemize}
