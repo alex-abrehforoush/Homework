@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  9 MAY 2023 09:01
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  10 MAY 2023 01:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -980,6 +980,9 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1126,13 +1129,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: figures/1b.png Graphic file (type bmp)
 <figures/1b.png>
  [1]
-Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
+File: figures/3a.png Graphic file (type bmp)
+<figures/3a.png>
  [2]
+Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ara
+b;language=dflt;mapping=persian-tex-text;!
+ [3]
+Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ara
+b;language=dflt;mapping=persian-tex-text;!
+Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ara
+b;language=dflt;mapping=persian-tex-text;!
 Missing character: There is no R (U+0052) in font [B-NAZANIN.TTF]/OT:script=ara
 b;language=dflt;mapping=persian-tex-text;!
 Missing character: There is no e (U+0065) in font [B-NAZANIN.TTF]/OT:script=ara
@@ -1155,9 +1161,9 @@ Missing character: There is no s (U+0073) in font [B-NAZANIN.TTF]/OT:script=ara
 b;language=dflt;mapping=persian-tex-text;!
 
 
-LaTeX Warning: Empty `thebibliography' environment on input line 200.
+LaTeX Warning: Empty `thebibliography' environment on input line 226.
 
-[3] (./main.aux)
+[4] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1169,12 +1175,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18077 strings out of 476919
- 366976 string characters out of 5825424
- 1214046 words of memory out of 5000000
- 37728 multiletter control sequences out of 15000+600000
+ 18083 strings out of 476919
+ 367064 string characters out of 5825424
+ 1215046 words of memory out of 5000000
+ 37733 multiletter control sequences out of 15000+600000
  405385 words of font info for 67 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 97i,11n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 97i,12n,122p,1290b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (4 pages).
+Output written on main.pdf (5 pages).
