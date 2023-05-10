@@ -12,6 +12,7 @@
 \usepackage{textcomp}
 \usepackage{float}
 \usepackage{longtable}
+\usepackage{booktabs}
 \usepackage[sorting=none]{biblatex}
 \usepackage[margin=1in]{geometry}
 \usepackage[font={small,it}]{caption}
@@ -153,6 +154,60 @@ $
 
 \subsection{\lr{b}}
 با حذف \lr{production}ِ $X \longrightarrow bX$ گرامر \lr{LL(1)} می‌شود. چون بین دو شرط بالا اولی که با حذف $bX$ ارضا می‌شود و دومی هم برقرار است.
+
+
+\section{}%4
+
+\subsection{\lr{a}}
+\begin{latin}
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|}
+\hline
+              & FIRST                                              & FOLLOW                           \\ \hline
+S             & $\left\{ print, \textbf{ID}, \varepsilon \right\}$ & \{ \$ \}                         \\ \hline
+ComponentList & $\left\{ print, \textbf{ID}, \varepsilon \right\}$ & \{ \$ \}                         \\ \hline
+Component     & $\left\{ print, \textbf{ID} \right\}$              & $\left\{ ; \right\}$             \\ \hline
+Expression    & $\left\{ (, \textbf{ID}, \textbf{NUM} \right\}$    & $\left\{ ), ; \right\}$          \\ \hline
+Operator      & $\left\{ \textbf{ID}, \textbf{NUM} \right\}$       & $\left\{ +, -, *, ), ; \right\}$ \\ \hline
+NextStage     & $\left\{ +, -, *, \varepsilon \right\}$            & $\left\{ ), ; \right\}$          \\ \hline
+Operation     & $\left\{ +, -, * \right\}$                         & $\left\{ ), ; \right\}$          \\ \hline
+\end{tabular}%
+}
+\end{table}
+\end{latin}
+
+
+
+
+
+
+\subsection{\lr{b}}
+
+\begin{latin}
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+              & ;                                       & print                                                     & (                                         & )                                       & \textbackslash{}textbf\{ID\}                              & = & \textbackslash{}textbf\{NUM\}                  & +                                       & -                                       & *                                       & \$                                          \\ \hline
+S             &                                         & $S \longrightarrow ComponentList$                         &                                           &                                         & $S \longrightarrow ComponentList$                         &   &                                                &                                         &                                         &                                         & $S \longrightarrow ComponentList$           \\ \hline
+ComponentList &                                         & $ComponentList \longrightarrow Component ; ComponentList$ &                                           &                                         & $ComponentList \longrightarrow Component ; ComponentList$ &   &                                                &                                         &                                         &                                         & $ComponentList \longrightarrow \varepsilon$ \\ \hline
+Component     &                                         & $Component \longrightarrow print(Expression)$             &                                           &                                         & $Component \longrightarrow \textbf{ID} = Expression$      &   &                                                &                                         &                                         &                                         &                                             \\ \hline
+Expression    &                                         &                                                           & $Expression \longrightarrow (Expression)$ &                                         & $Expression \longrightarrow Operand NextStage$            &   & $Expression \longrightarrow Operand NextStage$ &                                         &                                         &                                         &                                             \\ \hline
+Operand       &                                         &                                                           &                                           &                                         & $Operand \longrightarrow \textbf{ID}$                     &   & $Operand \longrightarrow \textbf{NUM}$         &                                         &                                         &                                         &                                             \\ \hline
+NextStage     & $NextStage \longrightarrow \varepsilon$ &                                                           &                                           & $NextStage \longrightarrow \varepsilon$ &                                                           &   &                                                & $NextStage \longrightarrow Operation$   & $NextStage \longrightarrow Operation$   & $NextStage \longrightarrow Operation$   &                                             \\ \hline
+Operation     &                                         &                                                           &                                           &                                         &                                                           &   &                                                & $Operation \longrightarrow +Expression$ & $Operation \longrightarrow -Expression$ & $Operation \longrightarrow *Expression$ &                                             \\ \hline
+\end{tabular}%
+}
+\end{table}
+\end{latin}
+
 
 
 
