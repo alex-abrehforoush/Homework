@@ -1,0 +1,163 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{listings}
+%\usepackage{xcolor}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage[font={small,it}]{caption}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{placeins}
+\usepackage{xepersian}
+
+
+
+
+
+%\DeclareMathOperator*{\btie}{\bowtie}
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{گزارش پروژه‌ی آزمایشگاه پایگاه داده‌ها}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش، سپهر شیرانی، مسعود هادی}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+%%%%%%%%%%
+\lstset
+{
+    language=[latex]tex,
+    basicstyle=\ttfamily,
+    commentstyle=\color{black},
+    columns=fullflexible,
+    keepspaces=true,
+    upquote=true,
+    showstringspaces=false,
+    morestring=[s]\\\%,
+    stringstyle=\color{black},
+}
+%%%%%%%%%%
+%beginMatlab
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%endMatlab
+\begin{document}
+%beginMatlab
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%endMatlab
+\input{titlepage}
+
+%\tableofcontents
+\newpage
+
+
+\lr{BasMob} یک نرم افزار نمایش نتایج مسابقات بستکبال است. در این نرم افزار کاربران قادر به مشاهده‌ی نتایج بازی‌ها، امتیاز بازیکنان، عملکرد تیم‌ها، مربیان و  بازیکنان مختلف در طول فصل، رده‌بندی تیم‌ها در طول فصل در کنفرانس و دیویژن مرتبط به آن تیم به همراه برد و باخت‌های آن‌ها هستند.
+\section{\lr{Tables}}%1
+\lr{Table}‌های این پایگاه‌داده در جدول زیر به تفصیل معرفی شده‌اند.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+            & \textbf{نام \lr{Table}} & \textbf{توضیحات}                          \\ \hline
+\textbf{1}  & \lr{Player}          & مشخصات بازیکن                             \\ \hline
+\textbf{2}  & \lr{Team}            & مشخصات تیم                                \\ \hline
+\textbf{3}  & \lr{Game}            & مشخصات مسابقه اعم از زمان برگزاری و نتیجه \\ \hline
+\textbf{4}  & \lr{Confrence}       & کنفرانس (مفهوم گروه‌بندی)                 \\ \hline
+\textbf{5}  & \lr{TeamStat}        & عملکرد کلی تیم در طول یک فصل              \\ \hline
+\textbf{6}  & \lr{StatPerGame}     & عملکرد بازیکنان تیم در یک بازی            \\ \hline
+\textbf{7}  & \lr{StatPerSeason}   & عملکرد بازیکن در طول فصل                  \\ \hline
+\textbf{8}  & \lr{Ranking}         & رده‌بندی تیم‌ها در یک کنفرانس             \\ \hline
+\textbf{9}  & \lr{Division}        & دیویژن‌های یک لیگ                         \\ \hline
+\textbf{10} & \lr{Coach}           & مربی                                      \\ \hline
+\textbf{11} & \lr{CoachStat}       & عملکرد مربی در طول فصل                    \\ \hline
+\end{tabular}
+\end{table}
+
+\section{\lr{Functions}}%2
+\lr{Function}های این پایگاه‌داده در جدول زیر به تفصیل معرفی شده‌اند.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+           & \textbf{نام \lr{Function}}       & \textbf{توضیحات}                                                \\ \hline
+\textbf{1} & \lr{bestOfEachCategory} & بازیکنان را براساس کتگوری خواسته شده مرتب کرده و بازمی‌گرداند.  \\ \hline
+\textbf{2} & \lr{divisionRank}       & تیم‌ها را بر اساس دیویژن خواسته شده برمی‌گرداند.                \\ \hline
+\textbf{3} & \lr{draft}              & بازیکنانی که در سال خواسته شده وارد لیگ شده‌اند را برمی‌گرداند. \\ \hline
+\end{tabular}
+\end{table}
+
+\section{\lr{Stored procedures}}%3
+\lr{Stored procedure}های این پایگاه‌داده در جدول زیر به تفصیل معرفی شده‌اند.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+           & \textbf{نام \lr{Stored Procedure}} & \textbf{توضیحات}  \\ \hline
+\textbf{1} & \lr{addPlayer}                     & اضافه کردن بازیکن \\ \hline
+\textbf{2} & \lr{deletePlayer}                  & حذف بازیکن        \\ \hline
+\textbf{3} & \lr{addGame}                       & اضافه کردن بازی   \\ \hline
+\end{tabular}
+\end{table}
+
+
+\section{\lr{Triggers}}%4
+\lr{Trigger}های این پایگاه‌داده در جدول زیر به تفصیل معرفی شده‌اند.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+           & \textbf{نام \lr{Trigger}} & \textbf{توضیحات}                                                                                               \\ \hline
+\textbf{1} & \lr{setWinner}            & با استفاده از امتیاز بین تیم ها مشخص می‌کند که کدام تیم برنده شده و در جدول \lr{Game} این داده را وارد می‌کند. \\ \hline
+\textbf{2} & \lr{updateGameDate}       & با اضافه شدن بازی، تاریخ آن را با تاریخ ما همگام می‌کند.                                                       \\ \hline
+\textbf{3} & \lr{updateRanking}        & پس از هر مسابقه تعداد برد و باخت تیم‌های شرکت‌کننده در جدول رده‌بندی بروزرسانی می‌شود.                         \\ \hline
+\textbf{4} & \lr{updatePerSeason}      & پس از اضافه شدن \lr{StatsPerGame} برای یک بازیکن، مشخصات \lr{StatsPerSeason} او را بروز می‌کند.                \\ \hline
+\end{tabular}
+\end{table}
+
+\section{\lr{Views}}%5
+\lr{View}های این پایگاه‌داده در جدول زیر به تفصیل معرفی شده‌اند.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+           & \textbf{نام \lr{View}} & \textbf{توضیحات}                                                                    \\ \hline
+\textbf{1} & \lr{biggestHomeWin}    & مشخصات برترین برد داخل خانه تیم را نشان می‌دهد.                                     \\ \hline
+2          & \lr{biggestAwayWin}    & مشخصات برترین برد خارج خانه تیم را نشان می‌دهد.                                     \\ \hline
+\textbf{3} & \lr{lebronTeamMates}   & هم تیمی‌های \lr{lebron James} (معروف‌ترین بازیکن بسکتبال) را به کاربر نمایش می‌دهد. \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+\end{document}

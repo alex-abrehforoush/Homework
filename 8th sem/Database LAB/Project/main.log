@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  10 MAY 2023 20:11
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  11 MAY 2023 00:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -996,14 +996,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
 \@quotelevel=\count478
 \@quotereset=\count479
- (./main.aux
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-)
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
@@ -1017,7 +1010,8 @@ LaTeX Font Info:    ... okay on input line 58.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
 8.
- (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 58.
@@ -1109,105 +1103,54 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
 (Font)              scaled to size 24.88794pt on input line 11.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 (Font)              scaled to size 24.88794pt on input line 12.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 20.74pt on input line 12.
 [1
 
 ])
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 17.27994pt on input line 82.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 17.27994pt on input line 82.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 83.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 14.39996pt on input line 83.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 83.
-File: figures/1a.png Graphic file (type bmp)
-<figures/1a.png>
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 89.
-
-
-LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 89.
-
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 89.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 93.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 94.
+(Font)              scaled to size 10.0pt on input line 83.
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
+(Font)              scaled to size 17.27994pt on input line 84.
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
+(Font)              scaled to size 17.27994pt on input line 84.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 14.4pt on input line 84.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
 
-(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 94.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
 
 
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-File: figures/1b.png Graphic file (type bmp)
-<figures/1b.png>
- [1]
-File: figures/3a.png Graphic file (type bmp)
-<figures/3a.png>
- [2]
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
+(Font)              scaled to size 11.99997pt on input line 90.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 179.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 179.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 179.
- [3]
-Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
- [4]
-Missing character: There is no R (U+0052) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no e (U+0065) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no f (U+0066) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no e (U+0065) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no r (U+0072) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no e (U+0065) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no n (U+006E) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no c (U+0063) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no e (U+0065) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no s (U+0073) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
+(Font)              scaled to size 10.0pt on input line 90.
+ [1]
+Overfull \hbox (54.32948pt too wide) in paragraph at lines 137--145
+ [][][][] 
+ []
 
-
-LaTeX Warning: Empty `thebibliography' environment on input line 281.
-
-[5] (./main.aux)
+[2] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18154 strings out of 476919
- 368377 string characters out of 5825424
- 1230831 words of memory out of 5000000
- 37795 multiletter control sequences out of 15000+600000
- 405425 words of font info for 72 fonts, out of 8000000 for 9000
+ 18117 strings out of 476919
+ 367514 string characters out of 5825424
+ 1222816 words of memory out of 5000000
+ 37766 multiletter control sequences out of 15000+600000
+ 405385 words of font info for 67 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 97i,16n,122p,1290b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 97i,13n,122p,1290b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (6 pages).
+Output written on main.pdf (3 pages).
