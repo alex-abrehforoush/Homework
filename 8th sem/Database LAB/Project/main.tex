@@ -31,7 +31,7 @@
 \renewcommand{\baselinestretch}{1.5}
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{گزارش پروژه‌ی آزمایشگاه پایگاه داده‌ها}
+\rhead{فاز 1 و 2 پروژه‌ی آزمایشگاه پایگاه داده‌ها}
 \lhead{\thepage}
 \rfoot{علیرضا ابره فروش، سپهر شیرانی، مسعود هادی}
 \lfoot{9816603}
@@ -82,7 +82,7 @@
 
 \lr{BasMob} یک نرم افزار نمایش نتایج مسابقات بستکبال است. در این نرم افزار کاربران قادر به مشاهده‌ی نتایج بازی‌ها، امتیاز بازیکنان، عملکرد تیم‌ها، مربیان و  بازیکنان مختلف در طول فصل، رده‌بندی تیم‌ها در طول فصل در کنفرانس و دیویژن مرتبط به آن تیم به همراه برد و باخت‌های آن‌ها هستند.
 \section{\lr{Tables}}%1
-\lr{Table}‌های این پایگاه‌داده در جدول زیر به تفصیل معرفی شده‌اند.
+\lr{Table}‌های این پایگاه‌داده در جدول زیر معرفی شده‌اند.
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|}
@@ -101,6 +101,216 @@
 \textbf{11} & \lr{CoachStat}       & عملکرد مربی در طول فصل                    \\ \hline
 \end{tabular}
 \end{table}
+
+همچنین هر یک از \lr{Table}ها به صورت زیر به تفکیک \lr{attribute} توضیح داده شده‌اند.
+\subsection{\lr{Player}}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{}  & \textbf{نام \lr{attribute}} & نوع \lr{attribute} & \textbf{توضیحات}                  \\ \hline
+\textbf{1} & \lr{ID}                          & \lr{int}                & شناسه‌ی بازیکن                    \\ \hline
+\textbf{2} & \lr{TeamID}                     & \lr{int}                & شناسه‌ی تیم بازیکن                \\ \hline
+\textbf{3} & \lr{Name}                        & \lr{varchar(255)}            & نام بازیکن                        \\ \hline
+\textbf{4} & \lr{Position}                    & \lr{varchar(255)}            & پست بازیکن                        \\ \hline
+\textbf{5} & \lr{age}                         & \lr{int}                & سن                                \\ \hline
+\textbf{6} & \lr{Height}                      & \lr{int}                & قد                                \\ \hline
+\textbf{7} & \lr{Weight}                      & \lr{int}                & وزن                               \\ \hline
+\textbf{8} & \lr{DraftYear}                   & \lr{int}                & سال وقوع \lr{Draft}               \\ \hline
+\textbf{9} & \lr{DraftPick}                   & \lr{int}                & ترتیب انتخاب بازیکن در \lr{Draft} \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{\lr{Team}}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{}  & \textbf{نام \lr{attribute}} & نوع \lr{attribute} & \textbf{توضیحات} \\ \hline
+\textbf{1} & \lr{ID}                          & \lr{int}                & شناسه‌ی تیم      \\ \hline
+\textbf{2} & \lr{Name}                        & \lr{varchar(255)}            & نام تیم          \\ \hline
+\textbf{3} & \lr{Stadium}                     & \lr{varchar(255)}            & استادیوم         \\ \hline
+\textbf{4} & \lr{City}                        & \lr{varchar(255)}            & شهر              \\ \hline
+\textbf{5} & \lr{DivisionID}                  & \lr{int}                & شناسه دیویژن     \\ \hline
+\textbf{6} & \lr{ConferenceID}                & \lr{int}                & شناسه کنفرانس    \\ \hline
+\textbf{7} & \lr{CoachID}                     & \lr{int}                & شناسه مربی       \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{\lr{Game}}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{}  & \textbf{نام \lr{attribute}} & نوع \lr{attribute} & \textbf{توضیحات}  \\ \hline
+\textbf{1} & \lr{ID}                     & \lr{int}           & شناسه‌ی بازی      \\ \hline
+\textbf{2} & \lr{HostTeamID}             & \lr{int}           & شناسه تیم میزبان  \\ \hline
+\textbf{3} & \lr{GuestTeamID}            & \lr{int}           & شناسه تیم مهمان   \\ \hline
+\textbf{4} & \lr{HostTeamScore}          & \lr{int}           & امتیاز تیم میزبان \\ \hline
+\textbf{5} & \lr{GuestTeamScore}         & \lr{int}           & امتیاز تیم مهمان  \\ \hline
+\textbf{6} & \lr{GameDate}               & \lr{date}          & تاریخ بازی        \\ \hline
+\textbf{7} & \lr{WinnerTeam}             & \lr{varchar(1)}    & تیم برنده         \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{\lr{Confrence}}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{}  & \textbf{نام \lr{attribute}} & نوع \lr{attribute} & \textbf{توضیحات} \\ \hline
+\textbf{1} & \lr{ID}                     & \lr{int}           & شناسه‌ی کنفرانس  \\ \hline
+\textbf{2} & \lr{Name}                   & \lr{varchar(255)}       & نام کنفرانس      \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{\lr{TeamStat}}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{}  & \textbf{نام \lr{attribute}} & نوع \lr{attribute} & \textbf{توضیحات}   \\ \hline
+\textbf{1} & \lr{TeamID}                 & \lr{int}           & شناسه‌ی تیم        \\ \hline
+2          & \lr{Points}                 & \lr{int}           & امتیازها           \\ \hline
+3          & \lr{Rebounds}               & \lr{int}           & دریافت             \\ \hline
+4          & \lr{Assists}                & \lr{int}           & پاس گل             \\ \hline
+5          & \lr{TurnOvers}              & \lr{int}           & اشتباه             \\ \hline
+6          & \lr{Steals}                 & \lr{int}           & سرقت               \\ \hline
+7          & \lr{Blocks}                 & \lr{int}           & بلاک               \\ \hline
+8          & \lr{FieldGoalShots}         & \lr{int}           & شوت‌های زمینی      \\ \hline
+9          & \lr{FieldGoalMade}          & \lr{int}           & گل زده زمینی       \\ \hline
+10         & \lr{ThreeGoalShots}         & \lr{int}           & شوت‌های سه امتیازی \\ \hline
+11         & \lr{ThreeGoalMade}          & \lr{int}           & کل زده سه امتیازی  \\ \hline
+12         & \lr{FreeThrowShots}         & \lr{int}           & شوت‌های آزاد       \\ \hline
+13         & \lr{FreeThrowMade}          & \lr{int}           & گل زده آزاد        \\ \hline
+14         & \lr{Fouls}                  & \lr{int}           & خطا                \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{\lr{StatPerGame}}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{}  & \textbf{نام \lr{attribute}} & نوع \lr{attribute} & \textbf{توضیحات}   \\ \hline
+\textbf{1} & \lr{PlayerID}               & \lr{int}           & شناسه‌ی بازیکن     \\ \hline
+2          & \lr{TeamID}                 & \lr{int}           & شناسه تیم          \\ \hline
+3          & \lr{GameID}                 & \lr{int}           & شناسه بازی         \\ \hline
+4          & \lr{Minutes}                & \lr{int}           & دقایق              \\ \hline
+5          & \lr{Points}                 & \lr{int}           & امتیازها           \\ \hline
+6          & \lr{Rebounds}               & \lr{int}           & دریافت             \\ \hline
+7          & \lr{Assists}                & \lr{int}           & پاس گل             \\ \hline
+8          & \lr{TurnOvers}              & \lr{int}           & اشتباه             \\ \hline
+9          & \lr{Steals}                 & \lr{int}           & سرقت               \\ \hline
+10         & \lr{Blocks}                 & \lr{int}           & بلاک               \\ \hline
+11         & \lr{FieldGoalShots}         & \lr{int}           & شوت‌های زمینی      \\ \hline
+12         & \lr{FieldGoalMade}          & \lr{int}           & گل زده زمینی       \\ \hline
+13         & \lr{ThreeGoalShots}         & \lr{int}           & شوت‌های سه امتیازی \\ \hline
+14         & \lr{ThreeGoalMade}          & \lr{int}           & کل زده سه امتیازی  \\ \hline
+15         & \lr{FreeThrowShots}         & \lr{int}           & شوت‌های آزاد       \\ \hline
+16         & \lr{FreeThrowMade}          & \lr{int}           & گل زده آزاد        \\ \hline
+17         & \lr{Fouls}                  & \lr{int}           & خطا                \\ \hline
+18         & \lr{Started}                & \lr{int}           & شروع شده           \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{\lr{StatPerSeason}}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{}  & \textbf{نام \lr{attribute}} & نوع \lr{attribute} & \textbf{توضیحات}   \\ \hline
+\textbf{1} & \lr{PlayerID}               & \lr{int}           & شناسه‌ی بازیکن     \\ \hline
+2          & \lr{TeamID}                 & \lr{int}           & شناسه تیم          \\ \hline
+3          & \lr{Minutes}                & \lr{int}           & دقایق              \\ \hline
+4          & \lr{Points}                 & \lr{int}           & امتیازها           \\ \hline
+5          & \lr{Rebounds}               & \lr{int}           & دریافت             \\ \hline
+6          & \lr{Assists}                & \lr{int}           & پاس گل             \\ \hline
+7          & \lr{TurnOvers}              & \lr{int}           & اشتباه             \\ \hline
+8          & \lr{Steals}                 & \lr{int}           & سرقت               \\ \hline
+9          & \lr{Blocks}                 & \lr{int}           & بلاک               \\ \hline
+10         & \lr{FieldGoalShots}         & \lr{int}           & شوت‌های زمینی      \\ \hline
+11         & \lr{FieldGoalMade}          & \lr{int}           & گل زده زمینی       \\ \hline
+12         & \lr{ThreeGoalShots}         & \lr{int}           & شوت‌های سه امتیازی \\ \hline
+13         & \lr{ThreeGoalMade}          & \lr{int}           & کل زده سه امتیازی  \\ \hline
+14         & \lr{FreeThrowShots}         & \lr{int}           & شوت‌های آزاد       \\ \hline
+15         & \lr{FreeThrowMade}          & \lr{int}           & گل زده آزاد        \\ \hline
+16         & \lr{Fouls}                  & \lr{int}           & خطا                \\ \hline
+17         & \lr{Started}                & \lr{int}           & شروع شده           \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{\lr{Ranking}}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{}  & \textbf{نام \lr{attribute}} & نوع \lr{attribute} & \textbf{توضیحات} \\ \hline
+\textbf{1} & \lr{ConferenceID}           & \lr{int}           & شناسه‌ی کنفرانس  \\ \hline
+2          & \lr{TeamID}                 & \lr{int}           & شناسه تیم        \\ \hline
+3          & \lr{Wins}                   & \lr{int}           & برد              \\ \hline
+4          & \lr{Losses}                 & \lr{int}           & باخت             \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{\lr{Division}}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{}  & \textbf{نام \lr{attribute}} & نوع \lr{attribute} & \textbf{توضیحات} \\ \hline
+\textbf{1} & \lr{ID}                     & \lr{int}           & شناسه‌ی دیویژن   \\ \hline
+2          & \lr{Name}                   & varchar(255)       & نام دیویژن       \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{\lr{Coach}}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{}  & \textbf{نام \lr{attribute}} & نوع \lr{attribute} & \textbf{توضیحات} \\ \hline
+\textbf{1} & \lr{ID}                     & \lr{int}           & شناسه‌ی مربی     \\ \hline
+2          & \lr{Name}                   & \lr{varchar(255)}  & نام مربی         \\ \hline
+3          & \lr{Birthdate}              & \lr{date}          & تاریخ            \\ \hline
+4          & \lr{Experience}             & \lr{int}           & تجربه            \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{\lr{CoachStat}}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{}  & \textbf{نام \lr{attribute}} & نوع \lr{attribute} & \textbf{توضیحات}   \\ \hline
+\textbf{1} & \lr{CoachID}                & \lr{int}           & شناسه‌ی مربی       \\ \hline
+2          & \lr{TeamID}                 & \lr{int}           & شناسه تیم          \\ \hline
+3          & \lr{Wins}                   & \lr{int}           & برد                \\ \hline
+4          & \lr{Losses}                 & \lr{int}           & باخت               \\ \hline
+5          & \lr{Points}                 & \lr{int}           & امتیازها           \\ \hline
+6          & \lr{Rebounds}               & \lr{int}           & دریافت             \\ \hline
+7          & \lr{Assists}                & \lr{int}           & پاس گل             \\ \hline
+8          & \lr{TurnOvers}              & \lr{int}           & اشتباه             \\ \hline
+9          & \lr{Steals}                 & \lr{int}           & سرقت               \\ \hline
+10         & \lr{Blocks}                 & \lr{int}           & بلاک               \\ \hline
+11         & \lr{FieldGoalShots}         & \lr{int}           & شوت‌های زمینی      \\ \hline
+12         & \lr{FieldGoalMade}          & \lr{int}           & گل زده زمینی       \\ \hline
+13         & \lr{ThreeGoalShots}         & \lr{int}           & شوت‌های سه امتیازی \\ \hline
+14         & \lr{ThreeGoalMade}          & \lr{int}           & کل زده سه امتیازی  \\ \hline
+15         & \lr{FreeThrowShots}         & \lr{int}           & شوت‌های آزاد       \\ \hline
+16         & \lr{FreeThrowMade}          & \lr{int}           & گل زده آزاد        \\ \hline
+17         & \lr{Fouls}                  & \lr{int}           & خطا                \\ \hline
+18         & \lr{Started}                & \lr{int}           & شروع شده           \\ \hline
+\end{tabular}
+\end{table}
+
+
 
 \section{\lr{Functions}}%2
 \lr{Function}های این پایگاه‌داده در جدول زیر به تفصیل معرفی شده‌اند.

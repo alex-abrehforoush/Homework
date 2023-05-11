@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  11 MAY 2023 00:56
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  11 MAY 2023 21:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1131,12 +1131,34 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 (Font)              scaled to size 11.99997pt on input line 90.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 90.
- [1]
-Overfull \hbox (54.32948pt too wide) in paragraph at lines 137--145
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
+(Font)              scaled to size 14.39996pt on input line 106.
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
+(Font)              scaled to size 14.39996pt on input line 106.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 106.
+ [1] [2] [3] [4]
+Missing character: There is no v (U+0076) in font [B-NAZANIN.TTF]/OT:script=ara
+b;language=dflt;mapping=persian-tex-text;!
+Missing character: There is no a (U+0061) in font [B-NAZANIN.TTF]/OT:script=ara
+b;language=dflt;mapping=persian-tex-text;!
+Missing character: There is no r (U+0072) in font [B-NAZANIN.TTF]/OT:script=ara
+b;language=dflt;mapping=persian-tex-text;!
+Missing character: There is no c (U+0063) in font [B-NAZANIN.TTF]/OT:script=ara
+b;language=dflt;mapping=persian-tex-text;!
+Missing character: There is no h (U+0068) in font [B-NAZANIN.TTF]/OT:script=ara
+b;language=dflt;mapping=persian-tex-text;!
+Missing character: There is no a (U+0061) in font [B-NAZANIN.TTF]/OT:script=ara
+b;language=dflt;mapping=persian-tex-text;!
+Missing character: There is no r (U+0072) in font [B-NAZANIN.TTF]/OT:script=ara
+b;language=dflt;mapping=persian-tex-text;!
+
+[5] [6]
+Overfull \hbox (54.32948pt too wide) in paragraph at lines 347--355
  [][][][] 
  []
 
-[2] (./main.aux)
+[7] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1145,12 +1167,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18117 strings out of 476919
- 367514 string characters out of 5825424
- 1222816 words of memory out of 5000000
- 37766 multiletter control sequences out of 15000+600000
- 405385 words of font info for 67 fonts, out of 8000000 for 9000
+ 18122 strings out of 476919
+ 367729 string characters out of 5825424
+ 1228820 words of memory out of 5000000
+ 37769 multiletter control sequences out of 15000+600000
+ 405401 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,13n,122p,1290b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (3 pages).
+Output written on main.pdf (8 pages).
