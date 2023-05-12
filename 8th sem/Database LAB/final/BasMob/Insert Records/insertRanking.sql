@@ -1,0 +1,13 @@
+insert into Ranking values (1, 1, 20, 12)
+insert into Ranking values (1, 3, 16, 16)
+insert into Ranking values (1, 2, 17, 12)
+insert into Ranking values (2, 4, 16, 12)
+insert into Ranking values (1, 5, 10, 19)
+insert into Ranking values (2, 6, 13, 19)
+insert into Ranking values (2, 7, 15, 17)
+insert into Ranking values (1, 8, 16, 14)
+insert into Ranking values (1, 9, 12, 20)
+insert into Ranking values (1, 10, 20, 12)
+insert into Ranking values (2, 11, 22, 10)
+insert into Ranking values (1, 12, 17, 12)
+

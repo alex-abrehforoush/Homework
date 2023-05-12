@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 19.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "BasMob", "BasMob\BasMob.ssmssqlproj", "{9BE138D2-D810-4D99-AB1B-3FBC6CC2E327}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BE138D2-D810-4D99-AB1B-3FBC6CC2E327}.Default|Default.ActiveCfg = Default
+		{5D323DBD-3642-4EC4-BF58-9E605D628455}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B807582A-D0B4-45E7-989A-4C674E01B46A}
+	EndGlobalSection
+EndGlobal
