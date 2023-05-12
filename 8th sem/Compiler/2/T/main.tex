@@ -126,7 +126,7 @@ $
 \end{latin}
 
 \section{}%2
-بسته به اینکه ابتدا کدام \lr{production} نظیر \lr{S} را پارس کنیم درخت پارس می‌تواند متفاوت باشد. پس دو درخت پارس زیر برای تجزیه این رشته موجود است.
+بسته به اینکه ابتدا کدام \lr{production} نظیر \lr{S} را پارس کنیم درخت پارس می‌تواند متفاوت باشد. پس دو درخت پارس نظیر اینکه اول \lr{and} را تجزیه کنیم یا \lr{or} مشابه تصاویر پایین موجود است. سپس به ازای هر یک از 3 \lr{S} ظاهر شده دو تا راه برای رسیدن به \lr{a} می‌باشد. پس در کل تعداد حالات برابر است با $2 \times 2 ^ 3 = 16$ خواهد بود.
 
 \subsection{}
 \begin{figure}[H]
@@ -240,45 +240,54 @@ Operation     &                                         &                       
 \multicolumn{1}{|c|}{\textbf{Matched}}                                                & \multicolumn{1}{c|}{\textbf{Stack}}         & \multicolumn{1}{c|}{\textbf{Input}}                                                      & \multicolumn{1}{c|}{\textbf{Action}}                            \\ \hline
                                                                                       & S \$                                        & \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$ &                                                                 \\ \hline
                                                                                       & ComponentList \$                            & \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$ & output S $\longrightarrow$ ComponentList                        \\ \hline
-                                                                                      & Component ; ComponentList \$                & \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$ & output ComponentList $longrightarrow$ Component ; ComponentList \\ \hline
-                                                                                      & \textbf{ID} = Expression ; ComponentList \$ & \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$ & output Component $longrightarrow$ \textbf{ID} = Expression      \\ \hline
+                                                                                      & Component ; ComponentList \$                & \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$ & output ComponentList $\longrightarrow$ Component ; ComponentList \\ \hline
+                                                                                      & \textbf{ID} = Expression ; ComponentList \$ & \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$ & output Component $\longrightarrow$ \textbf{ID} = Expression      \\ \hline
 \textbf{ID}                                                                           & = Expression ; ComponentList \$             & = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$             & match \textbf{ID}                                               \\ \hline
 \textbf{ID} =                                                                         & Expression ; ComponentList \$               & \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$               & match =                                                         \\ \hline
-\textbf{ID} =                                                                         & Operand NextStage ; ComponentList \$        & \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$               & output Expression $longrightarrow$ Operand NextStage            \\ \hline
-\textbf{ID} =                                                                         & \textbf{NUM} NextStage ; ComponentList \$   & \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$               & output Operand $longrightarrow$ \textbf{NUM}                    \\ \hline
+\textbf{ID} =                                                                         & Operand NextStage ; ComponentList \$        & \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$               & output Expression $\longrightarrow$ Operand NextStage            \\ \hline
+\textbf{ID} =                                                                         & \textbf{NUM} NextStage ; ComponentList \$   & \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$               & output Operand $\longrightarrow$ \textbf{NUM}                    \\ \hline
 \textbf{ID} = \textbf{NUM}                                                            & NextStage ; ComponentList \$                & + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                            & match \textbf{NUM}                                              \\ \hline
-\textbf{ID} = \textbf{NUM}                                                            & Operation ; ComponentList \$                & + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                            & output NextStage $longrightarrow$ Operation                     \\ \hline
-\textbf{ID} = \textbf{NUM}                                                            & + Expression ; ComponentList \$             & + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                            & output Operation $longrightarrow$ + Expression                  \\ \hline
+\textbf{ID} = \textbf{NUM}                                                            & Operation ; ComponentList \$                & + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                            & output NextStage $\longrightarrow$ Operation                     \\ \hline
+\textbf{ID} = \textbf{NUM}                                                            & + Expression ; ComponentList \$             & + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                            & output Operation $\longrightarrow$ + Expression                  \\ \hline
 \textbf{ID} = \textbf{NUM} +                                                          & Expression ; ComponentList \$               & ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                              & match +                                                         \\ \hline
-\textbf{ID} = \textbf{NUM} +                                                          & ( Expression ) ; ComponentList \$           & ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                              & output Expression $longrightarrow$ ( Expression )               \\ \hline
+\textbf{ID} = \textbf{NUM} +                                                          & ( Expression ) ; ComponentList \$           & ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                              & output Expression $\longrightarrow$ ( Expression )               \\ \hline
 \textbf{ID} = \textbf{NUM} + (                                                        & Expression ) ; ComponentList \$             & \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                & match (                                                         \\ \hline
-\textbf{ID} = \textbf{NUM} + (                                                        & Operand NextStage ) ; ComponentList \$      & \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                & output Expression $longrightarrow$ Operand NextStage            \\ \hline
-\textbf{ID} = \textbf{NUM} + (                                                        & \textbf{NUM} NextStage ) ; ComponentList \$ & \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                & output Operand $longrightarrow$ \textbf{NUM}                    \\ \hline
+\textbf{ID} = \textbf{NUM} + (                                                        & Operand NextStage ) ; ComponentList \$      & \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                & output Expression $\longrightarrow$ Operand NextStage            \\ \hline
+\textbf{ID} = \textbf{NUM} + (                                                        & \textbf{NUM} NextStage ) ; ComponentList \$ & \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                & output Operand $\longrightarrow$ \textbf{NUM}                    \\ \hline
 \textbf{ID} = \textbf{NUM} + ( \textbf{NUM}                                           & NextStage ) ; ComponentList \$              & * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                             & match \textbf{NUM}                                              \\ \hline
-\textbf{ID} = \textbf{NUM} + ( \textbf{NUM}                                           & Operation ) ; ComponentList \$              & * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                             & output NextStage $longrightarrow$ Operation                     \\ \hline
-\textbf{ID} = \textbf{NUM} + ( \textbf{NUM}                                           & * Expression ) ; ComponentList \$           & * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                             & output Operation $longrightarrow$ * Expression                  \\ \hline
+\textbf{ID} = \textbf{NUM} + ( \textbf{NUM}                                           & Operation ) ; ComponentList \$              & * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                             & output NextStage $\longrightarrow$ Operation                     \\ \hline
+\textbf{ID} = \textbf{NUM} + ( \textbf{NUM}                                           & * Expression ) ; ComponentList \$           & * \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                             & output Operation $\longrightarrow$ * Expression                  \\ \hline
 \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} *                                         & Expression ) ; ComponentList \$             & \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                               & match *                                                         \\ \hline
-\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} *                                         & Operand NextStage ) ; ComponentList \$      & \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                               & output Expression $longrightarrow$ Operand NextStage            \\ \hline
-\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} *                                         & \textbf{ID} NextStage ) ; ComponentList \$  & \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                               & output Operand $longrightarrow$ \textbf{ID}                     \\ \hline
+\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} *                                         & Operand NextStage ) ; ComponentList \$      & \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                               & output Expression $\longrightarrow$ Operand NextStage            \\ \hline
+\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} *                                         & \textbf{ID} NextStage ) ; ComponentList \$  & \textbf{ID} ) ; print ( \textbf{ID} ) ; \$                                               & output Operand $\longrightarrow$ \textbf{ID}                     \\ \hline
 \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID}                             & NextStage ) ; ComponentList \$              & ) ; print ( \textbf{ID} ) ; \$                                                           & match \textbf{ID}                                               \\ \hline
-\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID}                             & ) ; ComponentList \$                        & ) ; print ( \textbf{ID} ) ; \$                                                           & output NextStage $longrightarrow \varepsilon$                   \\ \hline
+\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID}                             & ) ; ComponentList \$                        & ) ; print ( \textbf{ID} ) ; \$                                                           & output NextStage $\longrightarrow \varepsilon$                   \\ \hline
 \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} )                           & ; ComponentList \$                          & ; print ( \textbf{ID} ) ; \$                                                             & match )                                                         \\ \hline
 \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ;                         & ComponentList \$                            & print ( \textbf{ID} ) ; \$                                                               & match ;                                                         \\ \hline
-\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ;                         & Component ; ComponentList \$                & print ( \textbf{ID} ) ; \$                                                               & output ComponentList $longrightarrow$ Component ; ComponentList \\ \hline
-\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ;                         & print ( Experssion ) ; ComponentList \$     & print ( \textbf{ID} ) ; \$                                                               & output Component $longrightarrow$ print ( Expression )          \\ \hline
+\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ;                         & Component ; ComponentList \$                & print ( \textbf{ID} ) ; \$                                                               & output ComponentList $\longrightarrow$ Component ; ComponentList \\ \hline
+\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ;                         & print ( Experssion ) ; ComponentList \$     & print ( \textbf{ID} ) ; \$                                                               & output Component $\longrightarrow$ print ( Expression )          \\ \hline
 \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print                   & ( Experssion ) ; ComponentList \$           & ( \textbf{ID} ) ; \$                                                                     & match print                                                     \\ \hline
 \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print (                 & Experssion ) ; ComponentList \$             & \textbf{ID} ) ; \$                                                                       & match (                                                         \\ \hline
-\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print (                 & Operand NextStage ) ; ComponentList \$      & \textbf{ID} ) ; \$                                                                       & output Expression $longrightarrow$ Operand NextStage            \\ \hline
-\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print (                 & \textbf{ID} NextStage ) ; ComponentList \$  & \textbf{ID} ) ; \$                                                                       & output Operand $longrightarrow$ \textbf{ID}                     \\ \hline
+\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print (                 & Operand NextStage ) ; ComponentList \$      & \textbf{ID} ) ; \$                                                                       & output Expression $\longrightarrow$ Operand NextStage            \\ \hline
+\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print (                 & \textbf{ID} NextStage ) ; ComponentList \$  & \textbf{ID} ) ; \$                                                                       & output Operand $\longrightarrow$ \textbf{ID}                     \\ \hline
 \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID}     & NextStage ) ; ComponentList \$              & ) ; \$                                                                                   & match \textbf{ID}                                               \\ \hline
-\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID}     & ) ; ComponentList \$                        & ) ; \$                                                                                   & output NextStage $longrightarrow \varepsilon$                   \\ \hline
+\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID}     & ) ; ComponentList \$                        & ) ; \$                                                                                   & output NextStage $\longrightarrow \varepsilon$                   \\ \hline
 \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} )   & ; ComponentList \$                          & ; \$                                                                                     & match )                                                         \\ \hline
 \textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; & ComponentList \$                            & \$                                                                                       & match ;                                                         \\ \hline
-\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; & \$                                          & \$                                                                                       & output ComponentList $longrightarrow \varepsilon$               \\ \hline
+\textbf{ID} = \textbf{NUM} + ( \textbf{NUM} * \textbf{ID} ) ; print ( \textbf{ID} ) ; & \$                                          & \$                                                                                       & output ComponentList $\longrightarrow \varepsilon$               \\ \hline
 \end{tabular}%
 }
 \end{table}
 \end{latin}
+
+\subsection{\lr{d}}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/c7.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
 
 
 \section{}%5
@@ -356,6 +365,41 @@ E \longrightarrow id E ^ \prime \\
 E ^ \prime \longrightarrow E + E ^ \prime | E * E ^ \prime | \varepsilon
 $
 \end{latin}
+سپس \lr{left factoring} را انجام می‌دهیم.
+\begin{latin}
+$
+E \longrightarrow id E ^ \prime \\
+E ^ \prime \longrightarrow E E''  | \varepsilon \\
+E'' \longrightarrow + E ^ \prime | * E ^ \prime
+$
+\end{latin}
+
+تصویر زیر بیان شرط لازم و کافی برای \lr{LL(1)} بودن یک گرامر را شرح می‌دهد.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/3a.png}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+
+حال مجموعه‌های \lr{FIRST} و \lr{FOLLOW} را به دست می‌آوریم.
+\begin{latin}
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[H]
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|c|c|c|}
+\hline
+    & FIRST                              & FOLLOW       \\ \hline
+$E$   & $\left\{ id \right\}$              & \{ +, *, \$ \} \\ \hline
+$E'$  & $\left\{ id, \varepsilon \right\}$ & \{ +, *, \$ \} \\ \hline
+$E''$ & $\left\{ +, * \right\}$            & \{ +, *, \$ \} \\ \hline
+\end{tabular}%
+}
+\end{table}
+\end{latin}
+از آنجایی که \lr{FOLLOW($E'$)} با \lr{FIRST($EE''$)} اشتراک ندارد، پس  گرامر \lr{LL(1)} است.
 
 
 
