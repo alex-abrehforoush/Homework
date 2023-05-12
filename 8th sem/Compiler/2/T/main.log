@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  12 MAY 2023 12:35
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  12 MAY 2023 15:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1006,6 +1006,24 @@ LaTeX Warning: Label `fig:fig1' multiply defined.
 
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1152,49 +1170,40 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: figures/1b.png Graphic file (type bmp)
 <figures/1b.png>
  [1]
+File: figures/c1.jpg Graphic file (type bmp)
+<figures/c1.jpg>
+ [2]
+File: figures/c2.jpg Graphic file (type bmp)
+<figures/c2.jpg>
 File: figures/3a.png Graphic file (type bmp)
 <figures/3a.png>
- [2]
+ [3]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 180.
+(Font)              scaled to size 10.0pt on input line 199.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 180.
+(Font)              scaled to size 7.0pt on input line 199.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 180.
- [3] [4]
-Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-
+(Font)              scaled to size 5.0pt on input line 199.
+ [4]
 [5]
-Missing character: There is no R (U+0052) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no e (U+0065) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no f (U+0066) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no e (U+0065) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no r (U+0072) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no e (U+0065) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no n (U+006E) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no c (U+0063) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no e (U+0065) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
-Missing character: There is no s (U+0073) in font [B-NAZANIN.TTF]/OT:script=ara
-b;language=dflt;mapping=persian-tex-text;!
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
+(Font)              scaled to size 11.99997pt on input line 287.
+File: figures/c5.jpg Graphic file (type bmp)
+<figures/c5.jpg>
+ [6]
+File: figures/c6.jpg Graphic file (type bmp)
+<figures/c6.jpg>
+File: figures/c3.jpg Graphic file (type bmp)
+<figures/c3.jpg>
+ [7]
+File: figures/c4.jpg Graphic file (type bmp)
+<figures/c4.jpg>
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 337--342
+[][]
+ []
 
-
-LaTeX Warning: Empty `thebibliography' environment on input line 328.
-
-[6] (./main.aux)
+[9] [10] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1206,12 +1215,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18171 strings out of 476919
- 368682 string characters out of 5825424
- 1255996 words of memory out of 5000000
- 37809 multiletter control sequences out of 15000+600000
+ 18208 strings out of 476919
+ 369236 string characters out of 5825424
+ 1255995 words of memory out of 5000000
+ 37839 multiletter control sequences out of 15000+600000
  405425 words of font info for 72 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,16n,122p,1290b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (7 pages).
+Output written on main.pdf (11 pages).
