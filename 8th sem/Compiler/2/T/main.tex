@@ -126,6 +126,25 @@ $
 \end{latin}
 
 \section{}%2
+بسته به اینکه ابتدا کدام \lr{production} نظیر \lr{S} را پارس کنیم درخت پارس می‌تواند متفاوت باشد. پس دو درخت پارس زیر برای تجزیه این رشته موجود است.
+
+\subsection{}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/c1.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+\subsection{}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/c2.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+
 
 \section{}%3
 \subsection{\lr{a}}
@@ -262,70 +281,83 @@ Operation     &                                         &                       
 \end{latin}
 
 
+\section{}%5
+\subsection{\lr{a}}
+برای اینکه ثابت کنیم این گرامر مبهم است کافی‌ست رشته‌ای بیاوریم که بیش از یک درخت پارس داشته باشد. برای مثال رشته‌ی $a b a b a$ به دو نحو زیر پارس می‌شود:
+\subsubsection{}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/c5.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+\subsubsection{}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/c6.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
 
 
 
 
-%%%%%%%%%%%%%%%
+\subsection{\lr{b}}
+\begin{latin}
+$
+A \longrightarrow a A ^ \prime \\
+A ^ \prime \longrightarrow b A A ^ \prime | \varepsilon
+$
+\end{latin}
 
 
-\section{}
-\subsection{}
-خطاهای شناسایی شده توسط تحلیلگر لغوی معمولا دارای ویژگی های زیر هستند:
-\begin{itemize}
-\item این خطاها زمانی رخ می‌دهند که دنباله ورودی از کاراکترهای معتبر در زبان برنامه‌نویسی مورد نظر تشخیص داده نمی‌شود.
-\item این خطاها به طور کلی توسط تحلیلگر لغوی تشخیص داده می‌شوند که در مرحله اول فرایند کامپایل است.
-\item این خطاها اغلب به دلیل خطاهای نحوی، مانند کلمات کلیدی یا شناسه‌های نوشتاری نادرست یا کاراکترهای نامعتبر یا نمادها ایجاد می‌شوند.
-\end{itemize}
+\subsection{\lr{c}}
+مبهم است. برای مثال رشته‌ی $a b a b a$ به دو نحو زیر پارس می‌شود:
+\subsubsection{}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/c3.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+\subsubsection{}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/c4.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
 
-\subsection{}
-چهار نمونه مختلف از انواع خطاهای شناسایی شده توسط تحلیل‌گر لغوی، شامل موارد زیر می‌شوند:
-
-\begin{enumerate}
-\item کاراکترهای غیرمجاز: این کاراکترها که در زبان برنامه‌نویسی شناخته نشده‌اند، مانند کاراکترهای غیر چاپ‌پذیر یا نویسه‌هایی از زبان‌های دیگر هستند.
-\item عدم تطابق نقل قول: این خطا هنگامی رخ می‌دهد که یک متن رشته‌ای به درستی با نقل قول متناظر خاتمه نمی‌یابد. به عنوان مثال، \lr{"Hello، World!} احتمالاً به دلیل عدم وجود دابل کوتیشن پایانی، با خطای لغوی روبرو می‌شود.
-\item
-\end{enumerate}
-
-
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\begin{latin}
-%\lstinputlisting{sources/p2.m}
-%\end{latin}
+\subsection{\lr{c}}
+\begin{latin}
+$
+A \longrightarrow a A ^ \prime \\
+A ^ \prime \longrightarrow B A ^ \prime | \varepsilon \\
+B \longrightarrow b \\
+$
+\end{latin}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{}%6
+\begin{latin}
+$
+E \longrightarrow E E + | E E * | id
+$
+\end{latin}
+حال \lr{left recursion} را از این گرامر حذف می‌کنیم.
+\begin{latin}
+$
+E \longrightarrow id E ^ \prime \\
+E ^ \prime \longrightarrow E + E ^ \prime | E * E ^ \prime | \varepsilon
+$
+\end{latin}
+
+
 
 %------------------------------------------------------------------------------------------
-
-
-\subsection*{منابع}
-\renewcommand{\subsection}[2]{}%
-\begin{thebibliography}{99} % assumes less than 100 references
-%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
-
-
-\begin{LTRitems}
-
-\resetlatinfont
-
-\bibitem{b1}
-\end{LTRitems}
-
-\end{thebibliography}
-
-
 \end{document}
