@@ -1,0 +1,59 @@
+2023-05-26 22:35:09,057 INFO    MainThread:12036 [wandb_setup.py:_flush():76] Current SDK version is 0.15.3
+2023-05-26 22:35:09,059 INFO    MainThread:12036 [wandb_setup.py:_flush():76] Configure stats pid to 12036
+2023-05-26 22:35:09,059 INFO    MainThread:12036 [wandb_setup.py:_flush():76] Loading settings from C:\Users\Alireza\.config\wandb\settings
+2023-05-26 22:35:09,059 INFO    MainThread:12036 [wandb_setup.py:_flush():76] Loading settings from c:\Users\Alireza\Desktop\HW\Homework\8th sem\Foundations of Computational Intelligence\2\P\wandb\settings
+2023-05-26 22:35:09,059 INFO    MainThread:12036 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-05-26 22:35:09,059 INFO    MainThread:12036 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-05-26 22:35:09,060 INFO    MainThread:12036 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-05-26 22:35:09,061 INFO    MainThread:12036 [wandb_init.py:_log_setup():507] Logging user logs to c:\Users\Alireza\Desktop\HW\Homework\8th sem\Foundations of Computational Intelligence\2\P\wandb\run-20230526_223509-gbmukbqz\logs\debug.log
+2023-05-26 22:35:09,061 INFO    MainThread:12036 [wandb_init.py:_log_setup():508] Logging internal logs to c:\Users\Alireza\Desktop\HW\Homework\8th sem\Foundations of Computational Intelligence\2\P\wandb\run-20230526_223509-gbmukbqz\logs\debug-internal.log
+2023-05-26 22:35:09,062 INFO    MainThread:12036 [wandb_init.py:init():547] calling init triggers
+2023-05-26 22:35:09,062 INFO    MainThread:12036 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'lr': [0.001, 0.01, 0.1], 'batch_size': [16, 32, 64], 'num_epochs': [10, 20, 30]}
+2023-05-26 22:35:09,062 INFO    MainThread:12036 [wandb_init.py:init():596] starting backend
+2023-05-26 22:35:09,062 INFO    MainThread:12036 [wandb_init.py:init():600] setting up manager
+2023-05-26 22:35:09,067 INFO    MainThread:12036 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2023-05-26 22:35:09,071 INFO    MainThread:12036 [wandb_init.py:init():606] backend started and connected
+2023-05-26 22:35:09,107 INFO    MainThread:12036 [wandb_run.py:_label_probe_notebook():1238] probe notebook
+2023-05-26 22:35:09,107 INFO    MainThread:12036 [wandb_run.py:_label_probe_notebook():1248] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-05-26 22:35:09,107 INFO    MainThread:12036 [wandb_init.py:init():700] updated telemetry
+2023-05-26 22:35:09,236 INFO    MainThread:12036 [wandb_init.py:init():737] communicating run to backend with 60.0 second timeout
+2023-05-26 22:36:09,714 ERROR   MainThread:12036 [wandb_init.py:init():763] encountered error: Run initialization has timed out after 60.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2023-05-26 22:36:11,755 ERROR   MainThread:12036 [wandb_init.py:init():1168] Run initialization has timed out after 60.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+Traceback (most recent call last):
+  File "C:\Users\Alireza\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\wandb\sdk\wandb_init.py", line 1150, in init
+    run = wi.init()
+  File "C:\Users\Alireza\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\wandb\sdk\wandb_init.py", line 769, in init
+    raise error
+wandb.errors.CommError: Run initialization has timed out after 60.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2023-05-26 22:36:55,163 INFO    MainThread:12036 [wandb_setup.py:_flush():76] Current SDK version is 0.15.3
+2023-05-26 22:36:55,163 INFO    MainThread:12036 [wandb_setup.py:_flush():76] Configure stats pid to 12036
+2023-05-26 22:36:55,164 INFO    MainThread:12036 [wandb_setup.py:_flush():76] Loading settings from C:\Users\Alireza\.config\wandb\settings
+2023-05-26 22:36:55,164 INFO    MainThread:12036 [wandb_setup.py:_flush():76] Loading settings from c:\Users\Alireza\Desktop\HW\Homework\8th sem\Foundations of Computational Intelligence\2\P\wandb\settings
+2023-05-26 22:36:55,164 INFO    MainThread:12036 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-05-26 22:36:55,164 INFO    MainThread:12036 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-05-26 22:36:55,164 INFO    MainThread:12036 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-05-26 22:36:55,165 INFO    MainThread:12036 [wandb_init.py:_log_setup():507] Logging user logs to c:\Users\Alireza\Desktop\HW\Homework\8th sem\Foundations of Computational Intelligence\2\P\wandb\run-20230526_223655-bzayyl4k\logs\debug.log
+2023-05-26 22:36:55,165 INFO    MainThread:12036 [wandb_init.py:_log_setup():508] Logging internal logs to c:\Users\Alireza\Desktop\HW\Homework\8th sem\Foundations of Computational Intelligence\2\P\wandb\run-20230526_223655-bzayyl4k\logs\debug-internal.log
+2023-05-26 22:36:55,165 INFO    MainThread:12036 [wandb_init.py:init():547] calling init triggers
+2023-05-26 22:36:55,165 INFO    MainThread:12036 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'lr': [0.001, 0.01, 0.1], 'batch_size': [16, 32, 64], 'num_epochs': [10, 20, 30]}
+2023-05-26 22:36:55,165 INFO    MainThread:12036 [wandb_init.py:init():596] starting backend
+2023-05-26 22:36:55,166 INFO    MainThread:12036 [wandb_init.py:init():600] setting up manager
+2023-05-26 22:36:55,169 INFO    MainThread:12036 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2023-05-26 22:36:55,209 INFO    MainThread:12036 [wandb_init.py:init():606] backend started and connected
+2023-05-26 22:36:55,213 INFO    MainThread:12036 [wandb_run.py:_label_probe_notebook():1238] probe notebook
+2023-05-26 22:36:55,213 INFO    MainThread:12036 [wandb_run.py:_label_probe_notebook():1248] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-05-26 22:36:55,213 INFO    MainThread:12036 [wandb_init.py:init():700] updated telemetry
+2023-05-26 22:36:55,286 INFO    MainThread:12036 [wandb_init.py:init():737] communicating run to backend with 60.0 second timeout
+2023-05-26 22:36:56,645 ERROR   MainThread:12036 [wandb_init.py:init():763] encountered error: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+2023-05-26 22:36:58,677 ERROR   MainThread:12036 [wandb_init.py:init():1168] It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+Traceback (most recent call last):
+  File "C:\Users\Alireza\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\wandb\sdk\wandb_init.py", line 1150, in init
+    run = wi.init()
+  File "C:\Users\Alireza\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\wandb\sdk\wandb_init.py", line 769, in init
+    raise error
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
