@@ -1,0 +1,4 @@
+VERSION:3 SOURCE_TIMESTAMP:56B6B26C
+NODE:I LEVEL:0 LINE:23 "C:\Users\Alireza\Desktop\HW\Homework\8th sem\Microprocessor LAB\8\8_Alireza_Abrehforoush\codevision\Source\headers.h"
+NODE:F LEVEL:0 LINE:28 "timer0_ovf_isr(void)"
+NODE:F LEVEL:0 LINE:35 "main(void)"

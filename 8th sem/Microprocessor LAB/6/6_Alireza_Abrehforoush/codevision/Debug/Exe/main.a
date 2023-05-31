@@ -1,0 +1,130 @@
+;PCODE: $00000000 VOL: 0
+	#ifndef __SLEEP_DEFINED__
+;PCODE: $00000001 VOL: 0
+	#define __SLEEP_DEFINED__
+;PCODE: $00000002 VOL: 0
+	.EQU __se_bit=0x40
+;PCODE: $00000003 VOL: 0
+	.EQU __sm_mask=0xB0
+;PCODE: $00000004 VOL: 0
+	.EQU __sm_powerdown=0x20
+;PCODE: $00000005 VOL: 0
+	.EQU __sm_powersave=0x30
+;PCODE: $00000006 VOL: 0
+	.EQU __sm_standby=0xA0
+;PCODE: $00000007 VOL: 0
+	.EQU __sm_ext_standby=0xB0
+;PCODE: $00000008 VOL: 0
+	.EQU __sm_adc_noise_red=0x10
+;PCODE: $00000009 VOL: 0
+	.SET power_ctrl_reg=mcucr
+;PCODE: $0000000A VOL: 0
+	#endif
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;unsigned int adc_data[LAST_ADC_INPUT-FIRST_ADC_INPUT+1];
+;unsigned int previous_data[LAST_ADC_INPUT-FIRST_ADC_INPUT+1] = {0};
+;char firstUpdateDone[LAST_ADC_INPUT-FIRST_ADC_INPUT+1] = {0};
+;char buff1[16], buff2[16];
+;interrupt [ADC_INT] void adc_isr(void)
+; 0002 0022 {
+
+	.CSEG
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+; 0002 0023 static unsigned char input_index=0;
+; 0002 0024 
+; 0002 0025 // Read the AD conversion result
+; 0002 0026 adc_data[input_index] = ADCW;
+;PCODE: $0000000F VOL: 0
+;PCODE: $00000010 VOL: 0
+;PCODE: $00000011 VOL: 0
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0
+;PCODE: $00000014 VOL: 0
+;PCODE: $00000015 VOL: 0
+; 0002 0027 
+; 0002 0028 /*combined parts 1 and 2  */
+; 0002 0029 // print adc valuse
+; 0002 002A func1(input_index);
+;PCODE: $00000016 VOL: 0
+;PCODE: $00000017 VOL: 0
+; 0002 002B lcd_clear();
+;PCODE: $00000018 VOL: 0
+; 0002 002C lcd_gotoxy(0, 0);
+;PCODE: $00000019 VOL: 0
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+;PCODE: $0000001C VOL: 0
+; 0002 002D lcd_puts(buff1);
+;PCODE: $0000001D VOL: 0
+;PCODE: $0000001E VOL: 0
+; 0002 002E 
+; 0002 002F // check adc updates
+; 0002 0030 func2(input_index);
+;PCODE: $0000001F VOL: 0
+;PCODE: $00000020 VOL: 0
+; 0002 0031 lcd_gotoxy(0, 1);
+;PCODE: $00000021 VOL: 0
+;PCODE: $00000022 VOL: 0
+;PCODE: $00000023 VOL: 0
+;PCODE: $00000024 VOL: 0
+; 0002 0032 lcd_puts(buff2);
+;PCODE: $00000025 VOL: 0
+;PCODE: $00000026 VOL: 0
+; 0002 0033 
+; 0002 0034 /* set timer0 dutucyle in pwm mode */
+; 0002 0035 func3();
+;PCODE: $00000027 VOL: 0
+; 0002 0036 
+; 0002 0037 // delay for display
+; 0002 0038 delay_ms(125);
+;PCODE: $00000028 VOL: 0
+;PCODE: $00000029 VOL: 0
+;PCODE: $0000002A VOL: 0
+; 0002 0039 
+; 0002 003A // Select next ADC input
+; 0002 003B if (++input_index > (LAST_ADC_INPUT-FIRST_ADC_INPUT))
+;PCODE: $0000002B VOL: 0
+;PCODE: $0000002C VOL: 0
+;PCODE: $0000002D VOL: 0
+;PCODE: $0000002E VOL: 0
+;PCODE: $0000002F VOL: 0
+; 0002 003C input_index = 0;
+;PCODE: $00000030 VOL: 0
+;PCODE: $00000031 VOL: 0
+; 0002 003D ADMUX = (FIRST_ADC_INPUT | ADC_VREF_TYPE) + input_index;
+;PCODE: $00000032 VOL: 0
+;PCODE: $00000033 VOL: 0
+;PCODE: $00000034 VOL: 0
+; 0002 003E 
+; 0002 003F // Delay needed for the stabilization of the ADC input voltage
+; 0002 0040 delay_us(10);
+;PCODE: $00000035 VOL: 0
+; 0002 0041 
+; 0002 0042 // Start the AD conversion
+; 0002 0043 ADCSRA |= (1 << ADSC);
+;PCODE: $00000036 VOL: 0
+;PCODE: $00000037 VOL: 0
+; 0002 0044 }
+;PCODE: $00000038 VOL: 0
+;PCODE: $00000039 VOL: 0
+;PCODE: $0000003A VOL: 0
+;void main(void)
+; 0002 0047 {
+;PCODE: $0000003B VOL: 0
+; 0002 0048 // Declare your local variables here
+; 0002 0049 
+; 0002 004A initBoard();
+;PCODE: $0000003C VOL: 0
+; 0002 004B while (1)
+;PCODE: $0000003D VOL: 0
+; 0002 004C { // Place your code here
+; 0002 004D 
+; 0002 004E }
+;PCODE: $0000003E VOL: 0
+;PCODE: $0000003F VOL: 0
+; 0002 004F }
+;PCODE: $00000040 VOL: 0
+;PCODE: $00000041 VOL: 0
+;PCODE: $00000042 VOL: 0

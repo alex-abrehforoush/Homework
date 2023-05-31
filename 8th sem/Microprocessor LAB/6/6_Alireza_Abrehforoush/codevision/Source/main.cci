@@ -1,0 +1,10 @@
+VERSION:3 SOURCE_TIMESTAMP:56BE0EF9
+NODE:I LEVEL:0 LINE:23 "C:\Users\Alireza\Desktop\HW\Homework\8th sem\Microprocessor LAB\6\6_Alireza_Abrehforoush\codevision\Source\headers.h"
+NODE:V LEVEL:0 LINE:26 "adc_data -> RAM:????"
+NODE:V LEVEL:0 LINE:27 "previous_data -> RAM:????"
+NODE:V LEVEL:0 LINE:28 "firstUpdateDone -> RAM:????"
+NODE:V LEVEL:0 LINE:29 "buff1 -> RAM:????"
+NODE:V LEVEL:0 LINE:29 "buff2 -> RAM:????"
+NODE:F LEVEL:0 LINE:33 "adc_isr(void)"
+NODE:V LEVEL:0 LINE:35 "input_index_S0020000000 -> RAM:????"
+NODE:F LEVEL:0 LINE:70 "main(void)"

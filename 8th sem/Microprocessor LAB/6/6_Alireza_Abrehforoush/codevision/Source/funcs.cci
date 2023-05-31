@@ -1,0 +1,5 @@
+VERSION:3 SOURCE_TIMESTAMP:56BE0F27
+NODE:I LEVEL:0 LINE:1 "C:\Users\Alireza\Desktop\HW\Homework\8th sem\Microprocessor LAB\6\6_Alireza_Abrehforoush\codevision\Source\headers.h"
+NODE:F LEVEL:0 LINE:3 "func1(unsigned char input_index)"
+NODE:F LEVEL:0 LINE:13 "func2(unsigned char input_index)"
+NODE:F LEVEL:0 LINE:33 "func3(void)"

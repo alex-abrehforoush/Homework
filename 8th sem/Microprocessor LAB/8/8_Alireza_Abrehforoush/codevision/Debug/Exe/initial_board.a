@@ -1,0 +1,139 @@
+;PCODE: $00000000 VOL: 0
+	#ifndef __SLEEP_DEFINED__
+;PCODE: $00000001 VOL: 0
+	#define __SLEEP_DEFINED__
+;PCODE: $00000002 VOL: 0
+	.EQU __se_bit=0x40
+;PCODE: $00000003 VOL: 0
+	.EQU __sm_mask=0xB0
+;PCODE: $00000004 VOL: 0
+	.EQU __sm_powerdown=0x20
+;PCODE: $00000005 VOL: 0
+	.EQU __sm_powersave=0x30
+;PCODE: $00000006 VOL: 0
+	.EQU __sm_standby=0xA0
+;PCODE: $00000007 VOL: 0
+	.EQU __sm_ext_standby=0xB0
+;PCODE: $00000008 VOL: 0
+	.EQU __sm_adc_noise_red=0x10
+;PCODE: $00000009 VOL: 0
+	.SET power_ctrl_reg=mcucr
+;PCODE: $0000000A VOL: 0
+	#endif
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;void initialBoard(){
+; 0003 0003 void initialBoard(){
+
+	.CSEG
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+; 0003 0004 // Variable used to store graphic display
+; 0003 0005 // controller initialization data
+; 0003 0006 GLCDINIT_t glcd_init_data;
+; 0003 0007 
+; 0003 0008 
+; 0003 0009 // Input/Output Ports initialization
+; 0003 000A // Port A initialization
+; 0003 000B // Function: Bit7=Out Bit6=Out Bit5=Out Bit4=Out Bit3=Out Bit2=Out Bit1=Out Bit0 ...
+; 0003 000C DDRA=(1<<DDA7) | (1<<DDA6) | (1<<DDA5) | (1<<DDA4) | (1<<DDA3) | (1<<DDA2) | (1< ...
+;PCODE: $0000000F VOL: 0
+;	glcd_init_data -> Y+0
+;PCODE: $00000010 VOL: 0
+;PCODE: $00000011 VOL: 0
+; 0003 000D // State: Bit7=0 Bit6=0 Bit5=0 Bit4=0 Bit3=0 Bit2=0 Bit1=0 Bit0=0
+; 0003 000E PORTA=(0<<PORTA7) | (0<<PORTA6) | (0<<PORTA5) | (0<<PORTA4) | (0<<PORTA3) | (0<< ...
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0
+; 0003 000F 
+; 0003 0010 // Port B initialization
+; 0003 0011 // Function: Bit7=Out Bit6=Out Bit5=Out Bit4=Out Bit3=Out Bit2=Out Bit1=Out Bit0 ...
+; 0003 0012 DDRB=(1<<DDB7) | (1<<DDB6) | (1<<DDB5) | (1<<DDB4) | (1<<DDB3) | (1<<DDB2) | (1< ...
+;PCODE: $00000014 VOL: 0
+;PCODE: $00000015 VOL: 0
+; 0003 0013 // State: Bit7=0 Bit6=0 Bit5=0 Bit4=0 Bit3=0 Bit2=0 Bit1=0 Bit0=0
+; 0003 0014 PORTB=(0<<PORTB7) | (0<<PORTB6) | (0<<PORTB5) | (0<<PORTB4) | (0<<PORTB3) | (0<< ...
+;PCODE: $00000016 VOL: 0
+;PCODE: $00000017 VOL: 0
+; 0003 0015 
+; 0003 0016 // Port C initialization
+; 0003 0017 // Function: Bit7=Out Bit6=Out Bit5=Out Bit4=Out Bit3=Out Bit2=Out Bit1=Out Bit0 ...
+; 0003 0018 DDRC=(1<<DDC7) | (1<<DDC6) | (1<<DDC5) | (1<<DDC4) | (1<<DDC3) | (1<<DDC2) | (1< ...
+;PCODE: $00000018 VOL: 0
+;PCODE: $00000019 VOL: 0
+; 0003 0019 // State: Bit7=0 Bit6=0 Bit5=0 Bit4=0 Bit3=0 Bit2=0 Bit1=0 Bit0=0
+; 0003 001A PORTC=(0<<PORTC7) | (0<<PORTC6) | (0<<PORTC5) | (0<<PORTC4) | (0<<PORTC3) | (0<< ...
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+; 0003 001B 
+; 0003 001C // Port D initialization
+; 0003 001D // Function: Bit7=Out Bit6=Out Bit5=Out Bit4=Out Bit3=Out Bit2=Out Bit1=Out Bit0 ...
+; 0003 001E DDRD=(1<<DDD7) | (1<<DDD6) | (1<<DDD5) | (1<<DDD4) | (1<<DDD3) | (1<<DDD2) | (1< ...
+;PCODE: $0000001C VOL: 0
+;PCODE: $0000001D VOL: 0
+; 0003 001F // State: Bit7=0 Bit6=0 Bit5=0 Bit4=0 Bit3=0 Bit2=0 Bit1=0 Bit0=0
+; 0003 0020 PORTD=(0<<PORTD7) | (0<<PORTD6) | (0<<PORTD5) | (0<<PORTD4) | (0<<PORTD3) | (0<< ...
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+; 0003 0021 
+; 0003 0022 // Timer/Counter 0 initialization
+; 0003 0023 // Clock source: System Clock
+; 0003 0024 // Clock value: 7.813 kHz
+; 0003 0025 // Mode: Normal top=0xFF
+; 0003 0026 // OC0 output: Disconnected
+; 0003 0027 // Timer Period: 19.968 ms
+; 0003 0028 TCCR0=(0<<WGM00) | (0<<COM01) | (0<<COM00) | (0<<WGM01) | (1<<CS02) | (0<<CS01)  ...
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+; 0003 0029 TCNT0=0x64;
+;PCODE: $00000022 VOL: 0
+;PCODE: $00000023 VOL: 0
+; 0003 002A OCR0=0x00;
+;PCODE: $00000024 VOL: 0
+;PCODE: $00000025 VOL: 0
+; 0003 002B 
+; 0003 002C // Timer(s)/Counter(s) Interrupt(s) initialization
+; 0003 002D TIMSK=(0<<OCIE2) | (0<<TOIE2) | (0<<TICIE1) | (0<<OCIE1A) | (0<<OCIE1B) | (0<<TO ...
+;PCODE: $00000026 VOL: 0
+;PCODE: $00000027 VOL: 0
+; 0003 002E 
+; 0003 002F // Graphic Display Controller initialization
+; 0003 0030 // The KS0108 connections are specified in the
+; 0003 0031 // Project|Configure|C Compiler|Libraries|Graphic Display menu:
+; 0003 0032 // DB0 - PORTC Bit 0
+; 0003 0033 // DB1 - PORTC Bit 1
+; 0003 0034 // DB2 - PORTC Bit 2
+; 0003 0035 // DB3 - PORTC Bit 3
+; 0003 0036 // DB4 - PORTC Bit 4
+; 0003 0037 // DB5 - PORTC Bit 5
+; 0003 0038 // DB6 - PORTC Bit 6
+; 0003 0039 // DB7 - PORTC Bit 7
+; 0003 003A // E - PORTD Bit 0
+; 0003 003B // RD /WR - PORTD Bit 1
+; 0003 003C // RS - PORTD Bit 2
+; 0003 003D // /RST - PORTD Bit 3
+; 0003 003E // /CS1 - PORTD Bit 5
+; 0003 003F // /CS2 - PORTD Bit 4
+; 0003 0040 
+; 0003 0041 // Specify the current font for displaying text
+; 0003 0042 glcd_init_data.font=font5x7;
+;PCODE: $00000028 VOL: 0
+;PCODE: $00000029 VOL: 0
+; 0003 0043 // No function is used for reading
+; 0003 0044 // image data from external memory
+; 0003 0045 glcd_init_data.readxmem=NULL;
+;PCODE: $0000002A VOL: 0
+;PCODE: $0000002B VOL: 0
+; 0003 0046 // No function is used for writing
+; 0003 0047 // image data to external memory
+; 0003 0048 glcd_init_data.writexmem=NULL;
+;PCODE: $0000002C VOL: 0
+;PCODE: $0000002D VOL: 0
+; 0003 0049 
+; 0003 004A glcd_init(&glcd_init_data);
+;PCODE: $0000002E VOL: 0
+;PCODE: $0000002F VOL: 0
+; 0003 004B }
+;PCODE: $00000030 VOL: 0
+;PCODE: $00000031 VOL: 0
+;PCODE: $00000032 VOL: 0

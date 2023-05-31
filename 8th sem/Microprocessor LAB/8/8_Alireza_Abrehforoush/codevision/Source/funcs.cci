@@ -1,0 +1,12 @@
+VERSION:3 SOURCE_TIMESTAMP:56B6B9C6
+NODE:I LEVEL:0 LINE:1 "C:\Users\Alireza\Desktop\HW\Homework\8th sem\Microprocessor LAB\8\8_Alireza_Abrehforoush\codevision\Source\headers.h"
+NODE:C LEVEL:0 LINE:4 "dotMatrix -> FLASH"
+NODE:V LEVEL:0 LINE:10 "counter -> R4,R5"
+NODE:V LEVEL:0 LINE:10 "dc -> R6,R7"
+NODE:V LEVEL:0 LINE:10 "distance -> R8,R9"
+NODE:V LEVEL:0 LINE:11 "second -> R10,R11"
+NODE:V LEVEL:0 LINE:11 "minute -> R12,R13"
+NODE:V LEVEL:0 LINE:11 "hour -> RAM:????"
+NODE:F LEVEL:0 LINE:14 "func1(void)"
+NODE:F LEVEL:0 LINE:43 "func2(void)"
+NODE:F LEVEL:0 LINE:50 "func3(void)"
