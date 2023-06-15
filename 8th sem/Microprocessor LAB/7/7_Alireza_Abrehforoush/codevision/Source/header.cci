@@ -1,0 +1,7 @@
+VERSION:3 SOURCE_TIMESTAMP:56C1A4CC
+NODE:I LEVEL:0 LINE:1 "C:\Users\Alireza\Desktop\HW\Homework\8th sem\Microprocessor LAB\7\7_Alireza_Abrehforoush\codevision\Source\header.h"
+NODE:V LEVEL:0 LINE:3 "empty_line -> RAM:????"
+NODE:V LEVEL:0 LINE:4 "buff -> RAM:????"
+NODE:V LEVEL:0 LINE:5 "part -> RAM:????"
+NODE:F LEVEL:0 LINE:7 "initialize(void)"
+NODE:F LEVEL:0 LINE:61 "USART_Enable_Intrupt(void)"
