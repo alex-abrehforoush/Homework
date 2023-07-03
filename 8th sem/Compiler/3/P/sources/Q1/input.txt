@@ -1,0 +1,22 @@
+x = 20 + 5
+print(x)
+y = x - 7
+print(y)
+z = y * 2
+print(z)
+w = z / 6
+print(w)
+l = w ^ 3
+print(l)
+a = sin(0)
+print(a)
+b = cos(0)
+print(b)
+c = tan(0)
+print(c)
+d = cot(0)
+print(d)
+e = log(10000)
+print(e)
+f = exp(3)
+print(f)

@@ -334,6 +334,32 @@ $
 
 
 \section{}%8
+به ازای رول‌های به شکلِ
+\begin{latin}
+$\\
+S \longrightarrow A_i b_i
+$
+\end{latin}
+که منتج به کاهش می‌شوند هر کدام دو (نظیر حالات ممکن قرار گرفتن نقطه) آیتم $LR(0)$ داریم. پس تا اینجا حداقل $2n$ آیتم داریم.\\
+به ازای رول‌های به شکلِ
+\begin{latin}
+$\\
+A_i \longrightarrow a_j
+$
+\end{latin}
+که منتج به کاهش می‌شوند هر کدام دو (نظیر حالات ممکن قرار گرفتن نقطه) آیتم $LR(0)$ داریم. پس $2\frac{n(n-1)}{2}$ آیتم دیگر هم داریم.\\
+به ازای رول‌های به شکلِ
+\begin{latin}
+$\\
+A_i \longrightarrow a_j A_i
+$
+\end{latin}
+که منتج به کاهش می‌شوند $2^n$ تا آیتم داریم. پس در مجموع حداقل تعداد آیتم‌ها برابر است با:
+\begin{latin}
+$\\
+2 ^ n + n ^ 2 + n
+$
+\end{latin}
 
 
 
@@ -368,10 +394,123 @@ $
 \end{latin}
 
 با مشاهده‌ی بخشی از نمودار حالت $SLR(1)$ و \lr{FOLLOW}ی \lr{A} و \lr{S} که برابر با $\left\{ a, b, d \right\}$ است، می‌بینیم که یک کانفلیکتِ \lr{shift-reduce} در استیت 4 وجود دارد که نشان می‌دهد این گرامر $SLR(1)$ نیست.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/9a.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+
+\subsection{ب}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/9b.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+
+همانطور که در ماشین حالت بالا مشخص است، هیچ استیتی دارای کانفلیکت نیست. اما برای تجزیه‌ی $LALR(1)$ باید استیت‌های 5 و 6 ادغام شوند که باعث ایجاد کانفلیکت \lr{reduce-reduce} می‌شود.
 
 
+\section{}%10
+\subsection{آ}
+ابتدا سمبل‌های مختلف گرامر را به شکل زیر دسته‌بندی می‌کنیم.
+\begin{latin}
+\begin{table}[H]
+\begin{tabular}{|l|c|}
+\hline
+Terminal     & $\left\{ (, \mathbb{,}, ), a, b, \$ \right\} $ \\ \hline
+Non-terminal & $\left\{ S ^ \prime, S, A \right\}$            \\ \hline
+\end{tabular}
+\end{table}
+\end{latin}
+که $S^\prime$ استیت شروع است.\\
 
+با توجه به اینکه $GOTO(0, S)$ برابر 1 است پس داریم:
+\begin{latin}
+$\\
+S^\prime \longrightarrow S
+$
+\end{latin}
 
+با توجه به اینکه $GOTO(0, A)$ برابر 3 است، می‌دانیم که یکی از \lr{production} با \lr{A} آغاز می‌شود و از آن‌جایی که تنها \lr{r2} در استیت 3 دارای طول 1 است داریم:
+\begin{latin}
+$\\
+S \longrightarrow A
+$
+\end{latin}
+
+با توجه به استیت‌های 0، 6، 8، 9، 10 و مقادیر $GOTO$، $ACTION$، $shift$ و $reduce$شان داریم:
+\begin{latin}
+$\\
+S \longrightarrow (A, S)
+$
+\end{latin}
+با توجه به استیت‌های 0، 4، و 7 داریم:
+\begin{latin}
+$\\
+A \longrightarrow a S
+$
+\end{latin}
+
+و با توجه به استیت‌های 0، و 5 داریم:
+\begin{latin}
+$\\
+A \longrightarrow b
+$
+\end{latin}
+
+پس در نهایت گرامری كه جداول سوال از روی آن توليد شده است، به صورت زیر است:
+\begin{latin}
+$\\
+S ^ \prime \longrightarrow S \\
+S \longrightarrow (A, S) \\
+S \longrightarrow A \\
+A \longrightarrow a S \\
+A \longrightarrow b
+$
+\end{latin}
+
+\subsection{ب}
+مراحل تجزیه به صورت زیر می‌باشد:
+\begin{latin}
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\begin{tabular}{|llll|}
+\hline
+\multicolumn{4}{|c|}{\textbf{Trace}}                                                                                                                                                    \\ \hline
+\multicolumn{1}{|c|}{\textbf{Step}} & \multicolumn{1}{c|}{\textbf{Stack}}                                & \multicolumn{1}{c|}{\textbf{Input}}   & \multicolumn{1}{c|}{\textbf{Action}} \\ \hline
+\multicolumn{1}{|l|}{1}             & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0}}                      & \multicolumn{1}{l|}{( a a b , b ) \$} & s2                                   \\ \hline
+\multicolumn{1}{|l|}{2}             & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2}}                  & \multicolumn{1}{l|}{a a b , b ) \$}   & s4                                   \\ \hline
+\multicolumn{1}{|l|}{3}             & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 a 4}}              & \multicolumn{1}{l|}{a b , b ) \$}     & s4                                   \\ \hline
+\multicolumn{1}{|l|}{4}             & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 a 4 a 4}}          & \multicolumn{1}{l|}{b , b ) \$}       & s5                                   \\ \hline
+\multicolumn{1}{|l|}{5}             & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 a 4 a 4 b 5}}      & \multicolumn{1}{l|}{, b ) \$}         & r4                                   \\ \hline
+\multicolumn{1}{|l|}{6}             & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 a 4 a 4 A}}        & \multicolumn{1}{l|}{, b ) \$}         & {\color[HTML]{0000FF} 3}             \\ \hline
+\multicolumn{1}{|l|}{7}             & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 a 4 a 4 A 3}}      & \multicolumn{1}{l|}{, b ) \$}         & r2                                   \\ \hline
+\multicolumn{1}{|l|}{8}             & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 a 4 a 4 S}}        & \multicolumn{1}{l|}{, b ) \$}         & {\color[HTML]{0000FF} 7}             \\ \hline
+\multicolumn{1}{|l|}{9}             & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 a 4 a 4 S 7}}      & \multicolumn{1}{l|}{, b ) \$}         & r3                                   \\ \hline
+\multicolumn{1}{|l|}{10}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 a 4 A}}            & \multicolumn{1}{l|}{, b ) \$}         & {\color[HTML]{0000FF} 3}             \\ \hline
+\multicolumn{1}{|l|}{11}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 a 4 A 3}}          & \multicolumn{1}{l|}{, b ) \$}         & r2                                   \\ \hline
+\multicolumn{1}{|l|}{12}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 a 4 S}}            & \multicolumn{1}{l|}{, b ) \$}         & {\color[HTML]{0000FF} 7}             \\ \hline
+\multicolumn{1}{|l|}{13}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 a 4 S 7}}          & \multicolumn{1}{l|}{, b ) \$}         & r3                                   \\ \hline
+\multicolumn{1}{|l|}{14}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 A}}                & \multicolumn{1}{l|}{, b ) \$}         & {\color[HTML]{0000FF} 6}             \\ \hline
+\multicolumn{1}{|l|}{15}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 A 6}}              & \multicolumn{1}{l|}{, b ) \$}         & s8                                   \\ \hline
+\multicolumn{1}{|l|}{16}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 A 6 , 8}}          & \multicolumn{1}{l|}{b ) \$}           & s5                                   \\ \hline
+\multicolumn{1}{|l|}{17}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 A 6 , 8 b 5}}      & \multicolumn{1}{l|}{) \$}             & r4                                   \\ \hline
+\multicolumn{1}{|l|}{18}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 A 6 , 8 A}}        & \multicolumn{1}{l|}{) \$}             & {\color[HTML]{0000FF} 3}             \\ \hline
+\multicolumn{1}{|l|}{19}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 A 6 , 8 A 3}}      & \multicolumn{1}{l|}{) \$}             & r2                                   \\ \hline
+\multicolumn{1}{|l|}{20}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 A 6 , 8 S}}        & \multicolumn{1}{l|}{) \$}             & {\color[HTML]{0000FF} 9}             \\ \hline
+\multicolumn{1}{|l|}{21}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 A 6 , 8 S 9}}      & \multicolumn{1}{l|}{) \$}             & s10                                  \\ \hline
+\multicolumn{1}{|l|}{22}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 ( 2 A 6 , 8 S 9 ) 10}} & \multicolumn{1}{l|}{\$}               & r1                                   \\ \hline
+\multicolumn{1}{|l|}{23}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 S}}                    & \multicolumn{1}{l|}{\$}               & {\color[HTML]{0000FF} 1}             \\ \hline
+\multicolumn{1}{|l|}{24}            & \multicolumn{1}{l|}{{\color[HTML]{0000FF} 0 S 1}}                  & \multicolumn{1}{l|}{\$}               & {\color[HTML]{008000} acc}           \\ \hline
+\end{tabular}
+\end{table}
+\end{latin}
 
 
 
