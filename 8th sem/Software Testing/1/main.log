@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  3 JUL 2023 23:00
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  3 JUL 2023 00:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -567,11 +567,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 (c:/texlive/2021/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
-(c:/texlive/2021/texmf-dist/tex/xelatex/xepersian/xepersian.sty
-Package: xepersian 2020/05/17 v23.1 Persian typesetting in XeLaTeX
-
-(c:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.sty
-(c:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(c:/texlive/2021/texmf-dist/tex/latex/breqn/breqn.sty
 (c:/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2021-02-18 L3 programming layer (loader) 
 
@@ -588,6 +584,127 @@ File: l3backend-xetex.def 2021-03-18 L3 backend support: XeTeX
 \g__pdf_backend_annotation_int=\count418
 \g__pdf_backend_link_int=\count419
 ))
+Package: breqn 2020/09/24 v0.98k Breaking equations
+
+(c:/texlive/2021/texmf-dist/tex/latex/breqn/flexisym.sty
+Package: flexisym 2020/09/24 v0.98k Make math characters macros
+LaTeX Info: Redefining \textprime on input line 299.
+LaTeX Info: Redefining \not on input line 357.
+
+(c:/texlive/2021/texmf-dist/tex/latex/breqn/cmbase.sym
+File: cmbase.sym 2007/12/19 v0.92
+LaTeX Info: Redefining \hbar on input line 324.
+LaTeX Info: Redefining \surd on input line 326.
+LaTeX Info: Redefining \angle on input line 334.
+LaTeX Info: Redefining \neq on input line 335.
+LaTeX Info: Redefining \mapsto on input line 336.
+LaTeX Info: Redefining \cong on input line 337.
+LaTeX Info: Redefining \notin on input line 340.
+LaTeX Info: Redefining \rightleftharpoons on input line 341.
+LaTeX Info: Redefining \doteq on input line 342.
+LaTeX Info: Redefining \hookrightarrow on input line 343.
+LaTeX Info: Redefining \hookleftarrow on input line 344.
+LaTeX Info: Redefining \bowtie on input line 345.
+LaTeX Info: Redefining \models on input line 346.
+LaTeX Info: Redefining \Longrightarrow on input line 347.
+LaTeX Info: Redefining \longrightarrow on input line 348.
+LaTeX Info: Redefining \Longleftarrow on input line 349.
+LaTeX Info: Redefining \longleftarrow on input line 350.
+LaTeX Info: Redefining \longmapsto on input line 351.
+LaTeX Info: Redefining \longleftrightarrow on input line 352.
+LaTeX Info: Redefining \Longleftrightarrow on input line 353.
+LaTeX Info: Redefining \cdots on input line 357.
+LaTeX Info: Redefining \vdots on input line 360.
+LaTeX Info: Redefining \ddots on input line 365.
+)
+(c:/texlive/2021/texmf-dist/tex/latex/breqn/mathstyle.sty
+Package: mathstyle 2020/09/24 v0.98k Tracking mathstyle implicitly
+LaTeX Info: Redefining \displaystyle on input line 95.
+LaTeX Info: Redefining \textstyle on input line 97.
+LaTeX Info: Redefining \scriptstyle on input line 99.
+LaTeX Info: Redefining \scriptscriptstyle on input line 101.
+LaTeX Info: Redefining \genfrac on input line 149.
+))
+(c:/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count420
+\calc@Bcount=\count421
+\calc@Adimen=\dimen186
+\calc@Bdimen=\dimen187
+\calc@Askip=\skip94
+\calc@Bskip=\skip95
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count422
+\calc@Cskip=\skip96
+)
+\inf@bad=\count423
+\maxint=\count424
+\listwidth=\dimen188
+\eqnumsep=\dimen189
+\eqmargin=\dimen190
+\eqlinespacing=\skip97
+\eqlineskip=\skip98
+\eqlineskiplimit=\dimen191
+\eqbinoffset=\muskip22
+\eqdelimoffset=\muskip23
+\eqindentstep=\dimen192
+\eqstyle=\toks29
+\eqbreakdepth=\count425
+\eqinterlinepenalty=\count426
+\intereqpenalty=\count427
+\intereqskip=\skip99
+\prerelpenalty=\count428
+\prebinoppenalty=\count429
+\Dmedmuskip=\muskip24
+\Dthickmuskip=\muskip25
+\eqleftskip=\skip100
+\eqrightskip=\skip101
+\eq@vspan=\skip102
+\eq@binoffset=\muskip26
+\EQ@box=\box61
+\EQ@copy=\box62
+\EQ@numbox=\box63
+\eq@wdNum=\dimen193
+\GRP@numbox=\box64
+\grp@wdNum=\dimen194
+\eq@lines=\count430
+\eq@curline=\count431
+\eq@badness=\count432
+\EQ@vims=\count433
+\eq@dp=\dimen195
+\eq@wdL=\dimen196
+\eq@wdT=\dimen197
+\eq@wdMin=\dimen198
+\grp@wdL=\dimen199
+\grp@wdR=\dimen256
+\grp@wdT=\dimen257
+\eq@wdRmax=\dimen258
+\eq@firstht=\dimen259
+\eq@wdCond=\dimen260
+\eq@indentstep=\dimen261
+\eq@linewidth=\dimen262
+\grp@linewidth=\dimen263
+\eq@hshift=\dimen264
+\eq@given@sidespace=\dimen265
+\mathindent=\dimen266
+\eq@final@linecount=\count434
+\eq@wdR=\dimen267
+\EQ@continue=\toks30
+\lr@level=\count435
+\GRP@queue=\toks31
+\GRP@box=\box65
+\GRP@wholebox=\box66
+\darraycolsep=\skip103
+\cur@row=\count436
+\cur@col=\count437
+\conditionsep=\skip104
+)
+(c:/texlive/2021/texmf-dist/tex/xelatex/xepersian/xepersian.sty
+Package: xepersian 2020/05/17 v23.1 Persian typesetting in XeLaTeX
+
+(c:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.sty
+(c:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 (c:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty
 (c:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))
 Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
@@ -595,20 +712,20 @@ Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 (c:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count420
-\l__fontspec_language_int=\count421
-\l__fontspec_strnum_int=\count422
-\l__fontspec_tmp_int=\count423
-\l__fontspec_tmpa_int=\count424
-\l__fontspec_tmpb_int=\count425
-\l__fontspec_tmpc_int=\count426
-\l__fontspec_em_int=\count427
-\l__fontspec_emdef_int=\count428
-\l__fontspec_strong_int=\count429
-\l__fontspec_strongdef_int=\count430
-\l__fontspec_tmpa_dim=\dimen186
-\l__fontspec_tmpb_dim=\dimen187
-\l__fontspec_tmpc_dim=\dimen188
+\l__fontspec_script_int=\count438
+\l__fontspec_language_int=\count439
+\l__fontspec_strnum_int=\count440
+\l__fontspec_tmp_int=\count441
+\l__fontspec_tmpa_int=\count442
+\l__fontspec_tmpb_int=\count443
+\l__fontspec_tmpc_int=\count444
+\l__fontspec_em_int=\count445
+\l__fontspec_emdef_int=\count446
+\l__fontspec_strong_int=\count447
+\l__fontspec_strongdef_int=\count448
+\l__fontspec_tmpa_dim=\dimen268
+\l__fontspec_tmpb_dim=\dimen269
+\l__fontspec_tmpc_dim=\dimen270
 
 (c:/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
@@ -616,43 +733,43 @@ Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
 (c:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
 (c:/texlive/2021/texmf-dist/tex/xelatex/xepersian/xepersian-persiancal.sty
 Package: xepersian-persiancal 2012/07/25 v0.2 provides Persian calendar
-\XePersian@i=\count431
-\XePersian@y=\count432
-\XePersian@m=\count433
-\XePersian@d=\count434
-\XePersian@latini=\count435
-\XePersian@persiani=\count436
-\XePersian@latinii=\count437
-\XePersian@persianii=\count438
-\XePersian@latiniii=\count439
-\XePersian@persianiii=\count440
-\XePersian@latiniv=\count441
-\XePersian@persianiv=\count442
-\XePersian@latinv=\count443
-\XePersian@persianv=\count444
-\XePersian@latinvi=\count445
-\XePersian@persianvi=\count446
-\XePersian@latinvii=\count447
-\XePersian@persianvii=\count448
-\XePersian@latinviii=\count449
-\XePersian@persianviii=\count450
-\XePersian@latinix=\count451
-\XePersian@persianix=\count452
-\XePersian@latinx=\count453
-\XePersian@persianx=\count454
-\XePersian@latinxi=\count455
-\XePersian@persianxi=\count456
-\XePersian@latinxii=\count457
-\XePersian@persianxii=\count458
-\XePersian@persianxiii=\count459
-\XePersian@temp=\count460
-\XePersian@temptwo=\count461
-\XePersian@tempthree=\count462
-\XePersian@yModHundred=\count463
-\XePersian@thirtytwo=\count464
-\XePersian@dn=\count465
-\XePersian@sn=\count466
-\XePersian@mminusone=\count467
+\XePersian@i=\count449
+\XePersian@y=\count450
+\XePersian@m=\count451
+\XePersian@d=\count452
+\XePersian@latini=\count453
+\XePersian@persiani=\count454
+\XePersian@latinii=\count455
+\XePersian@persianii=\count456
+\XePersian@latiniii=\count457
+\XePersian@persianiii=\count458
+\XePersian@latiniv=\count459
+\XePersian@persianiv=\count460
+\XePersian@latinv=\count461
+\XePersian@persianv=\count462
+\XePersian@latinvi=\count463
+\XePersian@persianvi=\count464
+\XePersian@latinvii=\count465
+\XePersian@persianvii=\count466
+\XePersian@latinviii=\count467
+\XePersian@persianviii=\count468
+\XePersian@latinix=\count469
+\XePersian@persianix=\count470
+\XePersian@latinx=\count471
+\XePersian@persianx=\count472
+\XePersian@latinxi=\count473
+\XePersian@persianxi=\count474
+\XePersian@latinxii=\count475
+\XePersian@persianxii=\count476
+\XePersian@persianxiii=\count477
+\XePersian@temp=\count478
+\XePersian@temptwo=\count479
+\XePersian@tempthree=\count480
+\XePersian@yModHundred=\count481
+\XePersian@thirtytwo=\count482
+\XePersian@dn=\count483
+\XePersian@sn=\count484
+\XePersian@mminusone=\count485
 )
 (c:/texlive/2021/texmf-dist/tex/xelatex/xepersian/xepersian-mathsdigitspec.sty
 Package: xepersian-mathsdigitspec 2018/12/16 v1.1.7 Unicode Persian maths digit
@@ -688,23 +805,27 @@ Package: bidi 2020/05/17 v36.3 Bidirectional typesetting in plain TeX and LaTeX
 ****************************************************
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/biditools.sty
 Package: biditools 2020/05/13 v2 Programming tools for bidi package
-\@bidi@envbody=\toks29
-\@bidi@emptytoks=\toks30
-\bidi@poscount=\count468
+\@bidi@envbody=\toks32
+\@bidi@emptytoks=\toks33
+\bidi@poscount=\count486
 
 
 Package biditools Warning: Patching `\enddocument' failed on input line 916.
 
-\bidi@tempcountb=\count469
-\bidi@temptoksa=\toks31
-\bidi@temptoksb=\toks32
-\bidi@dummies=\count470
-\bidi@are@these@correct=\toks33
-\bidi@toks@lista=\toks34
-\bidi@toks@listb=\toks35
-\bidi@stack@length=\count471
-\bidi@empty@stack=\toks36
-\bidi@looprepeat@depth=\count472
+
+Package bidi Warning: Patching '\end' failed!
+(bidi)                '\bidi@AfterEndEnvironment' will not work.
+
+\bidi@tempcountb=\count487
+\bidi@temptoksa=\toks34
+\bidi@temptoksb=\toks35
+\bidi@dummies=\count488
+\bidi@are@these@correct=\toks36
+\bidi@toks@lista=\toks37
+\bidi@toks@listb=\toks38
+\bidi@stack@length=\count489
+\bidi@empty@stack=\toks39
+\bidi@looprepeat@depth=\count490
 ) (c:/texlive/2021/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
 
@@ -729,7 +850,7 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\c@abspage=\count473
+\c@abspage=\count491
 Package zref Info: New property: abspage on input line 66.
 )
 (c:/texlive/2021/texmf-dist/tex/latex/xkeyval/xkeyval.sty
@@ -737,10 +858,10 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 
 (c:/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (c:/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks37
-\XKV@tempa@toks=\toks38
+\XKV@toks=\toks40
+\XKV@tempa@toks=\toks41
 )
-\XKV@depth=\count474
+\XKV@depth=\count492
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \@bidi@copyins@=\insert252
@@ -748,14 +869,14 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/latex-xetex-bidi.def
 File: latex-xetex-bidi.def 2019/03/03 v1.3.7 bidi adaptations for `latex.ltx' f
 or XeTeX engine
-\bidi@n@everypar=\toks39
-\bidi@column@check@number=\count475
+\bidi@n@everypar=\toks42
+\bidi@column@check@number=\count493
 
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/footnote-xetex-bidi.def
 File: footnote-xetex-bidi.def 2017/08/09 v1.1 bidi footnote macros for XeTeX en
 gine
-\c@footdir@label=\count476
-\footdir@toks=\toks40
+\c@footdir@label=\count494
+\footdir@toks=\toks43
 )
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/article-xetex-bidi.def
 File: article-xetex-bidi.def 2017/06/09 v0.6 bidi adaptations for standard arti
@@ -768,6 +889,10 @@ ge for XeTeX engine
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/amstext-xetex-bidi.def
 File: amstext-xetex-bidi.def 2016/09/12 v0.2 bidi adaptations for amstext packa
 ge for XeTeX engine
+)
+(c:/texlive/2021/texmf-dist/tex/xelatex/bidi/breqn-xetex-bidi.def
+File: breqn-xetex-bidi.def 2016/09/12 v0.2 bidi adaptations for breqn package f
+or XeTeX engine
 )
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/caption-xetex-bidi.def
 File: caption-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for caption packa
@@ -828,7 +953,7 @@ kage for XeTeX engine
 File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the
  last package loaded
 )
-\bidi@digits=\count477
+\bidi@digits=\count495
 \bidi@digits@charclass=\XeTeXcharclass1
 \bidi@sepmark@charclass=\XeTeXcharclass2
 )
@@ -855,9 +980,9 @@ File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the
 * Primary author of xepersian package: Vafa Khalighi.
 * 
 ****************************************************
-\xepersian@tcl=\count478
-\xepersian@ilg=\dimen189
-\xepersian@strutilg=\dimen190
+\xepersian@tcl=\count496
+\xepersian@ilg=\dimen271
+\xepersian@strutilg=\dimen272
 (c:/texlive/2021/texmf-dist/tex/xelatex/xepersian/loadingorder-xepersian.def
 File: loadingorder-xepersian.def 2018/09/29 v0.5 making sure that xepersian is 
 the last package loaded
@@ -869,6 +994,9 @@ age
 (c:/texlive/2021/texmf-dist/tex/xelatex/xepersian/listings-xepersian.def
 File: listings-xepersian.def 2014/07/17 v0.3 bilingual captions for listings pa
 ckage
+)
+(c:/texlive/2021/texmf-dist/tex/xelatex/xepersian/breqn-xepersian.def
+File: breqn-xepersian.def 2010/07/25 v0.1 adaptations for breqn package
 )
 (c:/texlive/2021/texmf-dist/tex/xelatex/xepersian/article-xepersian.def
 File: article-xepersian.def 2010/07/25 v0.2 adaptations for standard article cl
@@ -937,7 +1065,7 @@ mapping=persian-tex-text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 11.99997pt on input line 31.
+(Font)              scaled to size 11.99997pt on input line 32.
 
 Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 (fontspec)             New Roman' with options [Ligatures=TeX,Scale=1].
@@ -972,7 +1100,7 @@ ext;"
 (fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
 text;"
 
-LaTeX Info: Redefining \latinfont on input line 32.
+LaTeX Info: Redefining \latinfont on input line 33.
 
 (c:/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -1004,49 +1132,37 @@ File: lstlang3.sty 2020/03/24 1.8d listings language file
 (c:/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
-\@quotelevel=\count479
-\@quotereset=\count480
+\@quotelevel=\count497
+\@quotereset=\count498
  (./main.aux
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
 
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
-9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
+0.
  (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-\c@lstlisting=\count481
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+\c@lstlisting=\count499
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -1072,8 +1188,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' not found.
 
 No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 59.
-Package biblatex Info: Reference segment=0 on input line 59.
+Package biblatex Info: Reference section=0 on input line 60.
+Package biblatex Info: Reference segment=0 on input line 60.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1132,73 +1248,57 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 
 ])
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 17.27994pt on input line 83.
+(Font)              scaled to size 17.27994pt on input line 84.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 17.27994pt on input line 83.
+(Font)              scaled to size 17.27994pt on input line 84.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 84.
+(Font)              scaled to size 14.39996pt on input line 85.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 14.39996pt on input line 84.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 86.
+(Font)              scaled to size 14.39996pt on input line 85.
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
+(Font)              scaled to size 11.99997pt on input line 86.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 86.
+File: figures/1a.jpg Graphic file (type bmp)
+<figures/1a.jpg>
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
+(Font)              scaled to size 10.79997pt on input line 91.
 
- (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
+(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 91.
+
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
+(Font)              scaled to size 10.79997pt on input line 91.
+File: figures/1b.jpg Graphic file (type bmp)
+<figures/1b.jpg>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 101
+.
+(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 86.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 101
+.
 
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 85--90
-[][]
- []
-
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 90.
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
-[][]
- []
-
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 122.
-[1]
-File: figures/5.jpg Graphic file (type bmp)
-<figures/5.jpg>
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 175.
-
-
-LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 175.
-
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 175.
-[2]
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 101.
+ [1] [2]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
 (Font)              scaled to size 10.0pt on input line 188.
- [3] [4]
-File: figures/6.jpg Graphic file (type bmp)
-<figures/6.jpg>
- [5] [6]
-File: figures/7a.jpg Graphic file (type bmp)
-<figures/7a.jpg>
- [7]
-File: figures/7b.jpg Graphic file (type bmp)
-<figures/7b.jpg>
- [8] [9]
-File: figures/9a.jpg Graphic file (type bmp)
-<figures/9a.jpg>
- [10]
-File: figures/9b.jpg Graphic file (type bmp)
-<figures/9b.jpg>
- [11]
-Underfull \hbox (badness 10000) in paragraph at lines 429--430
-[][]
+ [3]
+Overfull \hbox (11.12448pt too wide) in paragraph at lines 244--254
+[]$[] \OMS/cmsy/m/n/10 2 []$ []
  []
 
-[12] [13] [14] (./main.aux)
+[4]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 297.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 297.
+ [5] [6] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1210,12 +1310,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18236 strings out of 476919
- 369381 string characters out of 5825424
- 1243546 words of memory out of 5000000
- 37871 multiletter control sequences out of 15000+600000
- 405385 words of font info for 67 fonts, out of 8000000 for 9000
+ 19023 strings out of 476919
+ 379969 string characters out of 5825424
+ 1235245 words of memory out of 5000000
+ 38635 multiletter control sequences out of 15000+600000
+ 405417 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 97i,12n,122p,1290b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 97i,11n,122p,1290b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (15 pages).
+Output written on main.pdf (7 pages).
