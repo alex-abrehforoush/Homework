@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  3 JUL 2023 23:40
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  4 JUL 2023 11:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1138,6 +1138,9 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1278,32 +1281,66 @@ Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ar
 b;language=dflt;mapping=persian-tex-text;!
 Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ara
 b;language=dflt;mapping=persian-tex-text;!
-File: figures/1a.jpg Graphic file (type bmp)
-<figures/1a.jpg>
+Missing character: There is no • (U+2022) in font [B-NAZANIN.TTF]/OT:script=ara
+b;language=dflt;mapping=persian-tex-text;!
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 148.
+File: figures/swt1.jpg Graphic file (type bmp)
+<figures/swt1.jpg>
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 10.79997pt on input line 151.
+(Font)              scaled to size 10.79997pt on input line 153.
 
 
 LaTeX Font Warning: Font shape `TU/B-NAZANIN.TTF(0)/m/it' undefined
-(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 151.
+(Font)              using `TU/B-NAZANIN.TTF(0)/m/n' instead on input line 153.
 
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/it' will be
-(Font)              scaled to size 10.79997pt on input line 151.
-File: figures/1b.jpg Graphic file (type bmp)
-<figures/1b.jpg>
-[1] [2] [3]
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 248.
- [4]
-Overfull \hbox (11.12448pt too wide) in paragraph at lines 304--314
-[]$[] \OMS/cmsy/m/n/10 2 []$ []
+(Font)              scaled to size 10.79997pt on input line 153.
+[1]
+File: figures/swt2.jpg Graphic file (type bmp)
+<figures/swt2.jpg>
+ [2]
+File: figures/swt3.jpg Graphic file (type bmp)
+<figures/swt3.jpg>
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 225--232
+[][]
  []
 
+[4]
+Overfull \hbox (10.84915pt too wide) in paragraph at lines 268--281
+[][] \TU/TimesNewRoman(0)/m/n/10 For[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
+[][]
+ []
+
+Missing character: There is no ∗ ("2217) in font cmr10!
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 357.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 357.
-[5] [6] [7] (./main.aux)
+(Font)              scaled to size 12.0pt on input line 308.
+[5]
+Missing character: There is no − ("2212) in font cmr10!
+Missing character: There is no − ("2212) in font cmr10!
+Missing character: There is no × ("D7) in font cmr10!
+Missing character: There is no × ("D7) in font cmr10!
+Missing character: There is no × ("D7) in font cmr10!
+ [6]
+Overfull \hbox (22.72519pt too wide) in paragraph at lines 345--346
+[][]\TU/TimesNewRoman(0)/m/n/10 Transition: \TU/lmtt/m/n/10 [elements, size, fr
+ont, back] \TU/TimesNewRoman(0)/m/n/10 →→ \TU/lmtt/m/n/10 [updated elements, up
+dated size, front,[]
+ []
+
+
+Overfull \hbox (27.97519pt too wide) in paragraph at lines 360--361
+[][]\TU/TimesNewRoman(0)/m/n/10 Transition: \TU/lmtt/m/n/10 [elements, size, fr
+ont, back] \TU/TimesNewRoman(0)/m/n/10 →→ \TU/lmtt/m/n/10 [updated elements, up
+dated size, updated[]
+ []
+
+[7] [8] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1315,12 +1352,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19023 strings out of 476919
- 379969 string characters out of 5825424
- 1235245 words of memory out of 5000000
- 38635 multiletter control sequences out of 15000+600000
- 405417 words of font info for 71 fonts, out of 8000000 for 9000
+ 19027 strings out of 476919
+ 379997 string characters out of 5825424
+ 1236245 words of memory out of 5000000
+ 38639 multiletter control sequences out of 15000+600000
+ 405409 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 97i,12n,122p,1290b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 97i,11n,122p,1290b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (8 pages).
+Output written on main.pdf (9 pages).
