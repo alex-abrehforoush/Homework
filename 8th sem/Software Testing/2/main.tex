@@ -121,301 +121,275 @@ $
 \subsubsection{\lr{c}}
 \begin{latin}
 $
-(1,4,8), (1,5,9,6,2,5,8), (3,6,10), (3,7,10)
+(1,4,8), (3,6,10), (3,7,10), (1,5,9,6,2,5,8)
 $
 \end{latin}
 
 
 \subsection{سوال 7 فصل هفتم صفحه‌ی 179}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth]{figures/1a.jpg}
-    \caption
-	{}
-    \label{fig:fig1}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth]{figures/1b.jpg}
-    \caption
-	{}
-    \label{fig:fig1}
-\end{figure}
-اگر لیست ما تک عضوی باشد، برای مثال $\left\{ apple \right\}$ و عنصر مورد جستجوی ما \lr{apple} باشد، این عنصر در هر دو بلاک می‌تواند قرار گیرد. پس ویژگی \lr{“Location of element in list”} نمی‌تواند تهی بودن اشتراک بین هر دو بلاک را حفظ کند و در نتیجه فضای ورودی را به درستی افراز کند.
-
+\subsubsection{\lr{a}}
+\lr{p2} و \lr{p3} مسیر تست هستند. اما از آنجایی که \lr{p1} به نود پایانی ختم نشده است نمی‌تواند مسیر تست باشد. همچنین \lr{p4} نیز مسیر تست نیست چون با نود شروع آغاز نشده است. و در نهایت \lr{p5} نیز مسیر تست نیست چون یال $(3, 2)$ وجود ندارد.
 \subsubsection{\lr{b}}
-اگر عنصر در لیست وجود نداشته باشد هیچ بلاکی این حالت را در نظر نمی‌گیرد. برای مثال $\left\{ apple, orange, banana \right\}$ و عنصر مورد جستجو $melon$ باشد، هیچ یک از سه بلاک بالا این حالت را پوشش نمی‌دهند.
+\begin{itemize}
+\item \textbf{\lr{Edge-pair coverage}: }
+\begin{latin}
+$
+(1, 2, 1), (1, 2, 3), (1, 3, 1), (2, 1, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2), (3, 1, 3)
+$
+\end{latin}
+\end{itemize}
 
 \subsubsection{\lr{c}}
+هیچ یک از مسیر‌های \lr{p2} و \lr{p3} از جفت یال‌های $(3, 1, 3)$ و $(2, 1, 2)$ عبور نمی‌کند. سایر موارد کاندید هم مسیر تست نیستند.
+\subsubsection{\lr{d}}
+\lr{p3} مستقیما از این \lr{prime path} عبور نمی‌کند. اما \lr{p3} از \lr{prime path}ِ با \lr{sidetrip}ِ $(1, 2, 1)$ عبور می‌کند.
+
+\section{سوال اول صفحه‌ی 187}
+\subsection{\lr{a}}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/swt1.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+
+\subsection{\lr{b}}
+\begin{latin}
+$
+(1,2,6), (3,5,2,6), (1,2,3), (3,4,5,2,3), (3,5,2,3), (3,4,5,2,6)
+$
+\end{latin}
+
+\subsection{\lr{c}}
 \begin{latin}
 \begin{table}[H]
-\begin{tabular}{|l|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-                                                                                          & \textbf{Block: 1} & \textbf{Block: 2} \\ \hline
-\textbf{Characteristic: element is the first entry in list}                                 & True        & False       \\ \hline
-\textbf{Characteristic: element is the last entry in list}                                  & True        & False       \\ \hline
-\textbf{Characteristic: element is neither first nor last in the list but is in the list} & True        & False       \\ \hline
-\textbf{Characteristic: element is not in the list}                                       & True        & False       \\ \hline
+t1: & $(1, 2, 6)$                                \\ \hline
+t2: & $(3, 5, 2, 6), (3, 4, 5, 2, 3), (1, 2, 3)$ \\ \hline
+t3: & $(3, 5, 2, 3), (3, 4, 5, 2, 6), (1, 2, 3)$ \\ \hline
+t4: & $(3, 5, 2, 6), (1, 2, 3)$                  \\ \hline
 \end{tabular}
 \end{table}
 \end{latin}
 
-\subsection{سوال 4 فصل ششم}
-جهت افراز فضای ورودی برای کلاس \texttt{GenericStack} می‌توانیم ‌افرازها و بلوک‌های زیر در نظر بگیریم:
+\subsection{\lr{d}}
+\lr{def(1)} توسط همه‌ی مسیرهای تست به کار برده می‌شود و \lr{def(3)} توسط مسیرهای $\left\{ t2\right\}$ و $\left\{ t3\right\}$ و $\left\{ t4\right\}$ به کار برده می‌شود پس هر یک از مجموعه‌های $\left\{ t2\right\}$ و $\left\{ t3\right\}$ و $\left\{ t4\right\}$ می‌تواند یک مجموعه‌ی مینیمال باشد که همه‌ی \lr{def}ها را پوشش می‌دهد.
+
+\subsection{\lr{e}}
+$\left\{ t1, t2 \right\}$ و $\left\{ t1, t3 \right\}$ 
+
+\subsection{\lr{f}}
+$\left\{ t1, t2, t3 \right\}$ 
+
+
+\section{سوال اول صفحات 202 و 203}
+\subsection{\lr{a}}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/swt2.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
+\subsection{\lr{b}}
+1 و 2 و 3
+\subsection{\lr{c}}
+2 و 3 و 7
+\subsection{\lr{d}}
+خیر-از آنجایی که در نودهای 2 و 3 متغیر \lr{w} \lr{def} شده است و نتیجتا از نود 1 تا نود 7 مسیر \lr{def-clear} نداریم. پس \lr{du-path} نیز نداریم.
+\subsection{\lr{e}}
 \begin{latin}
-1. \texttt{GenericStack()} constructor:
-   \begin{itemize}
-   \item Partition 1: Empty stack creation
-   \item Partition 2: Stack creation with initial capacity
-   \item Partition 3: Stack creation with initial capacity less than 1
-   \item Partition 4: Stack creation with null initial capacity
-   \end{itemize}
-2. \texttt{push(Object X)} method:
-   \begin{itemize}
-   \item Partition 1: Pushing a non-null object onto an empty stack
-   \item Partition 2: Pushing a non-null object onto a non-empty stack
-   \item Partition 3: Pushing a null object onto an empty stack
-   \item Partition 4: Pushing a null object onto a non-empty stack
-   \end{itemize}
-3. \texttt{pop()} method:
-   \begin{itemize}
-   \item Partition 1: Popping from an empty stack
-   \item Partition 2: Popping from a non-empty stack
-   \end{itemize}
-4. \texttt{isEmpty()} method:
-   \begin{itemize}
-   \item Partition 1: Calling \texttt{isEmpty()} on an empty stack
-   \item Partition 2: Calling \texttt{isEmpty()} on a non-empty stack
-   \end{itemize}
-\end{latin}
-این تقسیم‌بندی‌ها فضای ورودی را به سناریوهای خاص تقسیم می‌کنند که جوانب مختلف کلاس \texttt{GenericStack} را پوشش می‌دهند. با انتخاب ورودی‌های آزمون از این تقسیم‌بندی‌ها، می‌توانیم پوشش مناسبی از قابلیت‌های ارائه شده توسط این کلاس را به دست آوریم.
-
-\begin{latin}
-\subsubsection{a}
-The input variables for the GenericStack class are:
-\begin{itemize}
-\item \textbf{X}: The object to be pushed onto the stack.
-\end{itemize}
-
-The state variables are:
-\begin{itemize}
-    \item \textbf{Stack}: The data structure used to store the elements in the stack.
-\end{itemize}
-
-\subsubsection{b}
-Characteristics of the input variables:
-\begin{itemize}
-    \item \textbf{X}:
-    \begin{itemize}
-        \item Type: Object
-        \item Valid values: Any object, including null
-    \end{itemize}
-\end{itemize}
-
-\subsubsection{c}
-Characteristics of inputs:
-\begin{itemize}
-    \item \textbf{Stack size}:
-    \begin{itemize}
-        \item Type: Integer
-        \item Range: Non-negative integers (including zero)
-        \item Invalid values: Negative values
-    \end{itemize}
-\end{itemize}
-
-\subsubsection{d}
-Partitioning the characteristics into blocks:
-\begin{itemize}
-    \item Partition 1: \textbf{Stack size}
-    \begin{itemize}
-        \item Block 1 (\textit{Base}): Zero size
-        \item Block 2: Non-zero size
-    \end{itemize}
-\end{itemize}
-
-\subsubsection{e}
-Values for each block:
-\begin{itemize}
-    \item Block 1 (\textit{Stack size}):
-    \begin{itemize}
-        \item \textit{Base}: size = 0
-    \end{itemize}
-    
-    \item Block 2 (\textit{Stack size}):
-    \begin{itemize}
-        \item \textit{Base}: size = 1
-        \item Additional: size = 2
-    \end{itemize}
-\end{itemize}
-
+$
+w:\:\:\:\:\:\:\:\:(2, 4, 5, 7), (3, 4, 5, 7), (2, 4, 6, 7), (3, 4, 6, 7)\\
+x:\:\:\:\:\:\:\:\:(5, 7), (6, 7)
+$
 \end{latin}
 
+\section{سوال‌های 3 و 4 صفحات 218 و 219}
 
 
-\section{}%2
-\subsection{سوال 4 فصل ششم صفحه‌ی 139}
+\subsection{سوال 3}
+
 \subsubsection{\lr{a}}
-بله شرط \lr{Completeness} را ارضا می‌کند. چون هر ورودی در یکی از سه حالت مذکور دسته‌بندی می‌شود.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{figures/swt3.jpg}
+    \caption
+	{}
+    \label{fig:fig1}
+\end{figure}
 \subsubsection{\lr{b}}
-بله شرط \lr{Disjointness} را ارضا می‌کند.
+\begin{latin}
+$
+t1:\:\:\:\:\:\:\:\: [f1, f3, f5, f6]\\
+t2:\:\:\:\:\:\:\:\: [f1, f3, f4, f6]\\
+t3:\:\:\:\:\:\:\:\: [f1, f2]\\
+t4:\:\:\:\:\:\:\:\: [f1, f3, f4, f6]\\
+t5:\:\:\:\:\:\:\:\: [f1, f2, f3, f4, f6]\\
+$
+\end{latin}
+
 \subsubsection{\lr{c}}
-بله شرط \lr{Completeness} را ارضا می‌کند.
+\begin{latin}
+$
+\left\{ t1, t5\right\}
+$
+\end{latin}
+
 \subsubsection{\lr{d}}
-خیر اگر $S_1$ و $S_2$ تهی باشند در هر چهار بلاک دسته‌بندی می‌شوند. پس شرط \lr{Disjointness} را حفظ نمی‌کند.
+\begin{latin}
+$
+\left\{ t1, t5\right\}
+$
+\end{latin}
+
 \subsubsection{\lr{e}}
 \begin{latin}
-$1 + \sum_{i = 1}^{Q} \left( B_i - 1 \right) = 1 + (3 - 1) + (4 - 1) = 1 + 2 + 3 = 6$
+$
+\left\{[f1, f3, f4, f6], [f1, f3, f5, f6], [f1, f2, f3, f4, f6], [f1, f2, f3, f5, f6]\right\}
+$
 \end{latin}
-\subsubsection{\lr{f}}
-\begin{latin}
-Characteristic: relation between s1 and s2
-   \begin{itemize}
-   \item s1 and s2 represent the same non-empty set
-   \item s1 is a non-empty subset of s2
-   \item s2 is a non-empty subset of s1
-   \item s1 and s2 do not have any elements in common (one or both could be empty)
-   \end{itemize}
-\end{latin}
+هیچ یک از مسیرهای تست $[f1, f2, f3, f5, f6]$ را پوشش نمی‌دهند.
 
-\subsection{سوال 5 فصل ششم صفحه‌ی 139}
+\subsection{سوال 4}
+
 \subsubsection{\lr{a}}
 \begin{latin}
-$\left( Value 1, Value 2, Operation \right) \in  \left\{ \left( -1, -1, '+' \right), \left( 0, 0, '-' \right), \left( 1, 1, '\times' \right), \left( -1, 2, '\div' \right) \right\}$
+\begin{itemize}
+\item Line 12: Calling \texttt{takeOut()} method in the \texttt{trash()} method.
+\item Line 20: Calling \texttt{takeOut()} method in the \texttt{takeOut()} method.
+\end{itemize}
 \end{latin}
+خط 12 و خط 13
 \subsubsection{\lr{b}}
 \begin{latin}
-$\text{Base choice: } Value 1 \ge 0, Value 2 \ge 0, Operation = '+' \\
-\left( Value 1, Value 2, Operation \right) \in \left\{ 
-\left( 1, 1, '-' \right),
-\left( 1, 1, '\times' \right),
-\left( 1, 1, '\div' \right),
-\left( 1, 0, '+' \right),
-\left( 1, -1, '+' \right),
-\left( -1, 1, '+' \right),
-\left( 0, 1, '+' \right)
- \right\}$
+$
+last-defs:\:\:\:\:\:\:\:\:  (x,1), (n,9), (n,11), (m,5), (m,7), (e,21), (e,23), (d,19), (a,15), (b,15)\\
+first-uses:\:\:\:\:\:\:\:\:  (o,13), (a,19), (b,21), (b,23), (x,6), (m,9), (m,11), (n,12), (e,24), (d,21), (d,23)\\
+$
+\resizebox{.99\hsize}{!}
+{$
+all pairs:\:\:\:\:\:\:\:\:
+(trash(), n, 9), (trash(), n, 9), (takeOut(), b, 21), (trash(), m, 5), (takeOut(), a, 19)
+(trash(), n, 11), (takeOut(), b, 21), (takeOut(), b, 23), (trash(), m, 7), (takeOut(), a, 19),
+(takeOut(), e, 21), (trash(), o, 13), (trash(), n, 11), (takeOut(), b, 23), (takeOut(), e, 23),
+(trash(), o, 13)
+$}
+For the \texttt{trash()} method:
+\begin{itemize}
+\item Last-def: Line 7 (\texttt{m = 4})
+\item First-use: Line 9 (\texttt{n = 3m})
+\item Last-def: Line 11 (\texttt{n = 4m})
+\item First-use: Line 12 (\texttt{takeOut(m, n)})\\
+\end{itemize}
+For the \texttt{takeOut()} method:
+\begin{itemize}
+\item Last-def: Line 19 (\texttt{d = 42a})
+\item First-use: Line 21 (\texttt{e = 2b+d})
+\item Last-def: Line 23 (\texttt{e = b+d})
+\item First-use: Line 24 (\texttt{return e})
+\end{itemize}
 \end{latin}
+
+
 \subsubsection{\lr{c}}
 \begin{latin}
-$3 \times 3 \times 4 = 36$
+\begin{itemize}
+\item Input: $x=10$
+\item Explanation: The condition $x>0$ is true, so $m=4$. Then the nested condition $x>5$ is also true, so $n=3∗m=12$. The call to \texttt{takeOut(m, n)} will pass $m=4$ and $n=12$ as arguments. The expected output will depend on the implementation of the \texttt{takeOut()} method.
+\end{itemize}
 \end{latin}
-\subsubsection{\lr{d}}
-(لطفا زوم کنید :))\\
-\resizebox{.9\hsize}{!}
-{$
-\left( Value 1, Value 2, Operation \right) \in \left\{ 
-\left( -1, -1, '+' \right),
-\left( -1, 0, '-' \right),
-\left( -1, 1, '\times' \right),
-\left( -1, -1, '\div' \right),
-\left( 0, 0, '+' \right),
-\left( 0, 1, '-' \right),
-\left( 0, -1, '\times' \right),
-\left( 0, 0, '\div' \right),
-\left( 1, 1, '+' \right),
-\left( 1, -1, '-' \right),
-\left( 1, 0, '\times' \right),
-\left( 1, 1, '\div' \right)
-\right\}
-$}
 
 
-\section{}%3
-(لطفا زوم کنید :))\\
-\resizebox{.9\hsize}{!}
-{$
-\left( \max_{i = 1} ^ Q (B_i) \right) \times \left( \max_{j = 1, j \neq i} ^ Q (B_j) \right) = 4 \times 4 = 16 \\
-\left\{
-(A1, B1, C1, D1), (A1, B2, C2, D2), (A1, B3, C3, D3), (A1, B4, C4, D4),
-(A2, B1, C2, D3), (A2, B2, C3, D4), (A2, B3, C4, D1), (A2, B4, C1, D2),
-(A3, B1, C3, D1), (A3, B2, C4, D2), (A3, B3, C1, D3), (A3, B4, C2, D4),
-(A4, B1, C4, D3), (A4, B2, C1, D4), (A4, B3, C2, D1), (A4, B4, C3, D2)
-\right\}
-$}
-
-
-
-\section{}%4
+\section{سوال اول صفحات 233 و 234}
 \begin{latin}
-\subsection{a}
-The input variables for the BoundedQueue class are:
+\subsection{\lr{a}}
+The variable "elements" in the \texttt{BoundedQueue2} class represents the elements present in the queue. Since we do not care about the specific objects, there are four useful values for this variable:
+
+\begin{enumerate}
+\item \texttt{null}: Represents an empty position in the queue.
+\item \texttt{obj}: Represents a non-null object stored in the queue.
+\item \texttt{obj1}: Represents a non-null object different from \texttt{obj} stored in the queue.
+\item \texttt{obj2}: Represents another non-null object different from \texttt{obj} and \texttt{obj1} stored in the queue.
+\end{enumerate}
+
+\subsection{\lr{b}}
+To determine the number of states, we need to consider all possible combinations of the representation variables \texttt{[elements, size, front, back]}. Let's analyze each variable:
+
 \begin{itemize}
-\item \textbf{capacity}: The maximum number of elements allowed in the queue.
-\item \textbf{X}: The object to be enqueued.
-\end{itemize}
-The state variables are:
-\begin{itemize}
-    \item \textbf{Queue}: The array or data structure used to store the elements in the queue.
-    \item \textbf{Size}: The current number of elements in the queue.
-    \item \textbf{Front}: The index of the front element in the queue.
-    \item \textbf{Rear}: The index of the rear element in the queue.
+\item \texttt{elements}: There are 4 useful values for this variable (as discussed in part (a)).
+\item \texttt{size}: The size can range from 0 to nn (the maximum capacity of the queue).
+\item \texttt{front}: The front can range from 0 to $n−1$.
+\item \texttt{back}: The back can range from 0 to $n−1$.
 \end{itemize}
 
-\subsection{b}
-Characteristics of the input variables:
+Considering these ranges, the total number of states is $(4×(n+1)×n×n)$, where nn is the maximum capacity of the queue.
+
+\subsection{\lr{c}}
+The reachable states are those that can be reached through valid method calls and operations on the \texttt{BoundedQueue2} object. To determine the number of reachable states, we need to identify the valid transitions between states based on the methods \texttt{enQueue()} and \texttt{deQueue()}.
+
+\subsection{\lr{d}}
+Since the exact maximum capacity $(n)$ of the queue is not specified, I cannot provide a specific drawing of the reachable states without this information.
+
+\subsection{\lr{e}}
+Adding edges for the \texttt{enQueue()} and \texttt{deQueue()} methods:
+
 \begin{itemize}
-    \item \textbf{capacity}:
-    \begin{itemize}
-        \item Type: Integer
-        \item Range: Positive integers (greater than zero)
-        \item Invalid values: Negative values, zero
-    \end{itemize}
-    
-    \item \textbf{X}:
-    \begin{itemize}
-        \item Type: Object
-        \item Valid values: Any object, including null
-    \end{itemize}
+\item \texttt{enQueue()}: This method adds an element to the back of the queue if it is not full. It updates the \texttt{elements}, \texttt{size}, and \texttt{back} variables accordingly.
+
+\begin{enumerate}
+\item If the queue is not full:
+\begin{itemize}
+\item Transition: \texttt{[elements, size, front, back]} →→ \texttt{[updated elements, updated size, front, updated back]}
 \end{itemize}
 
-\subsection{c}
-Partitioning the characteristics into blocks:
+\item If the queue is full (Exceptional Return):
 \begin{itemize}
-    \item Partition 1: \textbf{capacity}
-    \begin{itemize}
-        \item Block 1 (\textit{Base}): Positive value (e.g., 1)
-    \end{itemize}
-    
-    \item Partition 2: \textbf{X}
-    \begin{itemize}
-        \item Block 2 (\textit{Base}): Non-null object
-    \end{itemize}
+  \item Transition: \texttt{[elements, size, front, back]} $\rightarrow$ \texttt{[elements, size, front, back]}
 \end{itemize}
 
-\subsection{d}
-Values for each block:
+\end{enumerate}
+
+\item \texttt{deQueue()}: This method removes the element at the front of the queue if it is not empty. It updates the \texttt{elements}, \texttt{size}, and \texttt{front} variables accordingly.
+
+\begin{enumerate}
+\item If the queue is not empty:
 \begin{itemize}
-    \item Block 1 (\textit{capacity}):
-    \begin{itemize}
-        \item \textit{Base}: capacity = 1
-        \item Additional: capacity = 2
-    \end{itemize}
-    
-    \item Block 2 (\textit{X}):
-    \begin{itemize}
-        \item \textit{Base}: X = \texttt{new Object()}
-        \item Additional: X = null
-    \end{itemize}
+\item Transition: \texttt{[elements, size, front, back]} →→ \texttt{[updated elements, updated size, updated front, back]}
 \end{itemize}
+
+\item If the queue is empty (Exceptional Return):
+\begin{itemize}
+  \item Transition: \texttt{[elements, size, front, back]} $\rightarrow$ \texttt{[elements, size, front, back]}
+\end{itemize}
+
+\end{enumerate}
+
+\end{itemize}
+
+\subsection{\lr{f}}
+To achieve Edge Coverage, we need to design a test set that covers all possible edges or transitions between states. Since the specific maximum capacity (n) of the queue is not provided, it's challenging to provide a complete test set without this information. However, here's an example of a small test set:
+
+\begin{itemize}
+\item Create an empty queue with a capacity of 3.
+\item Call enQueue(obj1).
+\item Call enQueue(obj2).
+\item Call deQueue().
+\item Call enQueue(obj3).
+\end{itemize}
+
+This test set covers the following edges:
+
+\begin{itemize}
+\item Initial state to state with one element: [[null, null], 0, 0, 0] -> [[obj1, null], 1, 0, 1]
+\item State with one element to state with two elements: [[obj1, null], 1, 0, 1] -> [[obj1, obj2], 2, 0, 2]
+\item State with two elements to state with one element: [[obj1, obj2], 2, 0, 2] -> [[null, obj2], 1, 1, 2]
+\item State with one element to state with two elements again: [[null, obj2], 1, 1, 2] -> [[obj3, obj2], 2, 1, 0]
+\end{itemize}
+
 \end{latin}
-
 
 
 
