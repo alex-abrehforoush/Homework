@@ -1,0 +1,208 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/modeltech64_2020.4/examples
+T_opt
+!s110 1619384937
+V@<_0I3hD9?XSIea;@:3;c2
+04 9 4 work testMyReg fast 0
+=1-50eb716c8e1e-6085da68-1e9-6330
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1619467262
+V@74?PVQ7[mZ`REGj[S6PK3
+04 21 4 work testThirtyTwoBitMyReg fast 0
+=1-50eb716c8e1e-60871bfd-35f-6818
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1620674434
+VZjT6U<>7UC[FXhR>[e]4A3
+04 30 4 work testSixtyFourThirtyTwoBitMyReg fast 0
+=1-f875a41550eb-60998782-69-56ec
+R1
+R2
+n@_opt2
+R3
+vmyReg
+Z4 !s110 1620674423
+!i10b 1
+!s100 Qb36k5Jh6Jk7EIMk>V2<_2
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IU7L`^^=S<c:32bEC2`j4]0
+Z6 dC:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1
+w1619467312
+8C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_1.v
+FC:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_1.v
+!i122 433
+L0 1 40
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z9 !s108 1620674423.000000
+!s107 C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_1.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+nmy@reg
+vRegisterBank
+!s110 1619467255
+!i10b 1
+!s100 :03AR0m_O4Jli[kcI5T7E3
+R5
+ISFYk7b5J^];TU4l=Fg<P72
+R6
+w1619467229
+Z11 8C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v
+Z12 FC:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v
+!i122 304
+L0 23 10
+R7
+R8
+r1
+!s85 0
+31
+!s108 1619467255.000000
+Z13 !s107 C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v|
+Z14 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v|
+!i113 0
+R10
+R2
+n@register@bank
+vSixtyFourThirtyTwoBitMyReg
+R4
+!i10b 1
+!s100 ^n3G?>W<;_`gD?ZR`J^YU2
+R5
+IY7OBaT_]3Dj0ib;9:3]W=1
+R6
+Z15 w1620674415
+R11
+R12
+!i122 435
+L0 23 23
+R7
+R8
+r1
+!s85 0
+31
+R9
+R13
+R14
+!i113 0
+R10
+R2
+n@sixty@four@thirty@two@bit@my@reg
+vtestMyReg
+R4
+!i10b 1
+!s100 GzJGi[cZ]Xmm2hiJJbb[m3
+R5
+I`9]>4?DR6WbCHZ<imm]M71
+R6
+w1619467315
+8C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/TestQ1_1.v
+FC:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/TestQ1_1.v
+!i122 434
+L0 1 60
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/TestQ1_1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/TestQ1_1.v|
+!i113 0
+R10
+R2
+ntest@my@reg
+vtestSixtyFourThirtyTwoBitMyReg
+R4
+!i10b 1
+!s100 4ki@c9Egmg8`Rh7EnAz[B0
+R5
+IjUB[NjBXa0dEe2^Vi7:T?1
+R6
+w1620674333
+Z16 8C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/TestQ1_2.v
+Z17 FC:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/TestQ1_2.v
+!i122 436
+L0 1 75
+R7
+R8
+r1
+!s85 0
+31
+R9
+Z18 !s107 C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/TestQ1_2.v|
+Z19 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/TestQ1_2.v|
+!i113 0
+R10
+R2
+ntest@sixty@four@thirty@two@bit@my@reg
+vtestThirtyTwoBitMyReg
+!s110 1619681736
+!i10b 1
+!s100 @^];TkF01G68K?Xb6[in_2
+R5
+IXMHY;_H?DkO7@^>YGBV@=1
+R6
+w1619467317
+R16
+R17
+!i122 333
+L0 1 59
+R7
+R8
+r1
+!s85 0
+31
+!s108 1619681736.000000
+R18
+R19
+!i113 0
+R10
+R2
+ntest@thirty@two@bit@my@reg
+vthirtyTwoBitMyReg
+R4
+!i10b 1
+!s100 2hSED3_De^Oz=3OGlGzA50
+R5
+I@Rn8KcGPoFC>ZdFUHebQG0
+R6
+R15
+R11
+R12
+!i122 435
+L0 1 21
+R7
+R8
+r1
+!s85 0
+31
+R9
+R13
+R14
+!i113 0
+R10
+R2
+nthirty@two@bit@my@reg

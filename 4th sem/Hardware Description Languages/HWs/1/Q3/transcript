@@ -1,0 +1,56 @@
+# Reading pref.tcl
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# OpenFile C:/Users/Alireza/Desktop/Hw1_9816603/Q3/Q3.mpf
+# Loading project Q3
+# Compile of Q3_1.v was successful.
+# Compile of TestQ3_1.v was successful.
+# Compile of Q3_2.v was successful.
+# Compile of TestQ3_2.v was successful.
+# Compile of Q3_3.v was successful.
+# 5 compiles, 1 failed with no errors.
+# Compile of Q3_1.v was successful.
+# Compile of TestQ3_1.v was successful.
+# Compile of Q3_2.v was successful.
+# Compile of TestQ3_2.v was successful.
+# Compile of Q3_3.v was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of Q3_1.v was successful.
+# Compile of TestQ3_1.v was successful.
+# Compile of Q3_2.v was successful.
+# Compile of TestQ3_2.v was successful.
+# Compile of Q3_3.v was successful.
+# Compile of TestQ3_3.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.TestSixteenThirtyTwoByOneMux
+# vsim -voptargs="+acc" work.TestSixteenThirtyTwoByOneMux 
+# Start time: 05:41:43 on Apr 06,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.TestSixteenThirtyTwoByOneMux(fast)
+# Loading work.SixteenThirtyTwoByOneMux(fast)
+# Loading work.SixteenFourByOneMux(fast)
+# Loading work.FourByOneMux(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'a3'. The port definition is at: C:/Users/Alireza/Desktop/Hw1_9816603/Q3/Q3_2.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /TestSixteenThirtyTwoByOneMux/tester/z File: C:/Users/Alireza/Desktop/Hw1_9816603/Q3/Q3_3.v Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'a2'. The port definition is at: C:/Users/Alireza/Desktop/Hw1_9816603/Q3/Q3_2.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /TestSixteenThirtyTwoByOneMux/tester/z File: C:/Users/Alireza/Desktop/Hw1_9816603/Q3/Q3_3.v Line: 58
+run
+#                    0	a31 = xxxxxxxxxxxxxxxx, a30 = xxxxxxxxxxxxxxxx, a29 = xxxxxxxxxxxxxxxx, a28 = xxxxxxxxxxxxxxxx, a27 = xxxxxxxxxxxxxxxx, a26 = xxxxxxxxxxxxxxxx, a25 = xxxxxxxxxxxxxxxx, a24 = xxxxxxxxxxxxxxxx, a23 = xxxxxxxxxxxxxxxx, a22 = xxxxxxxxxxxxxxxx, a21 = xxxxxxxxxxxxxxxx, a20 = xxxxxxxxxxxxxxxx, a19 = xxxxxxxxxxxxxxxx, a18 = xxxxxxxxxxxxxxxx, a17 = xxxxxxxxxxxxxxxx, a16 = xxxxxxxxxxxxxxxx, a15 = xxxxxxxxxxxxxxxx, a14 = xxxxxxxxxxxxxxxx, a13 = xxxxxxxxxxxxxxxx, a12 = xxxxxxxxxxxxxxxx, a11 = xxxxxxxxxxxxxxxx, a10 = xxxxxxxxxxxxxxxx, a9 = xxxxxxxxxxxxxxxx, a8 = xxxxxxxxxxxxxxxx, a7 = xxxxxxxxxxxxxxxx, a6 = xxxxxxxxxxxxxxxx, a5 = xxxxxxxxxxxxxxxx, a4 = xxxxxxxxxxxxxxxx, a3 = xxxxxxxxxxxxxxxx, a2 = xxxxxxxxxxxxxxxx, a1 = xxxxxxxxxxxxxxxx, a0 = xxxxxxxxxxxxxxxx, s = xxxxx, d = xxxxxxxxxxxxxxxx
+#                   20	a31 = 0110001011001111, a30 = 0101100001101100, a29 = 0011001000000100, a28 = 1000100010111110, a27 = 1010100000000011, a26 = 1101010000011101, a25 = 1011100110101110, a24 = 1111011001111100, a23 = 0011100011101011, a22 = 1101010101010001, a21 = 1100101010110001, a20 = 0111000110000011, a19 = 1001110000011011, a18 = 1011001000100111, a17 = 1010011001000110, a16 = 1011010001000001, a15 = 0110110001011111, a14 = 1001001110011000, a13 = 0010011010001101, a12 = 1000110110111101, a11 = 0010000111110011, a10 = 0100001000001101, a9 = 0101100100010000, a8 = 0110000010100001, a7 = 1110111001000001, a6 = 1101000110000111, a5 = 1010101110011111, a4 = 0100100111011000, a3 = 0101101110100000, a2 = 1100101101111000, a1 = 1111001011010001, a0 = 1000001000000011, s = 01010, d = 0100001000001101
+#                   40	a31 = 0010001011101100, a30 = 0010000000101011, a29 = 0011110100010111, a28 = 1100100000101010, a27 = 0110010011101000, a26 = 0101111110111001, a25 = 0000100111100111, a24 = 1111000111000001, a23 = 1111010001011000, a22 = 0111101001101010, a21 = 0001010101010101, a20 = 0101011000001101, a19 = 0100000010101110, a18 = 1100110010011100, a17 = 1010101001101000, a16 = 0101101111000100, a15 = 0101001011100001, a14 = 1011101000101101, a13 = 0111110011111000, a12 = 0110101101011110, a11 = 1010010001001110, a10 = 1011001011011110, a9 = 1100110010001111, a8 = 1000001000011100, a7 = 1010010011100100, a6 = 0100011000011001, a5 = 1000001101011111, a4 = 1011100100111010, a3 = 1110100101011011, a2 = 1001010100000000, a1 = 1100110100110011, a0 = 0101101011100000, s = 11001, d = 0000100111100111
+#                   60	a31 = 0011001000000101, a30 = 1100100101101011, a29 = 0101101110011100, a28 = 1011100000000110, a27 = 1010111010001011, a26 = 0010001111111101, a25 = 1101010111000010, a24 = 0110111010011101, a23 = 0001010010100111, a22 = 0000000011001100, a21 = 0000100010001011, a20 = 1011111111000110, a19 = 0011111011111010, a18 = 0111111101111010, a17 = 0100011110001000, a16 = 1100011000111110, a15 = 1000101101101110, a14 = 0110110100110100, a13 = 1110011010000000, a12 = 1111000001011111, a11 = 0010001111100111, a10 = 1110001001101000, a9 = 0001010101011011, a8 = 1011101000011100, a7 = 0100110011111110, a6 = 1001010011101001, a5 = 0010101101111010, a4 = 0010010110111100, a3 = 0110110100100100, a2 = 1010001000010010, a1 = 1101010010111000, a0 = 0000011000010101, s = 10001, d = 0100011110001000
+#                   80	a31 = 1100101001100110, a30 = 1101000100011111, a29 = 1110100001001110, a28 = 1100101000011010, a27 = 1110001111011010, a26 = 1000011100010010, a25 = 1001110110101011, a24 = 1000010111000010, a23 = 1100010110110000, a22 = 1110011111001100, a21 = 0010101101110101, a20 = 0101001000100000, a19 = 1110110101100000, a18 = 0001100100111001, a17 = 1110000110001111, a16 = 0000101100010111, a15 = 0000011001011111, a14 = 0001010100000001, a13 = 0101110110001110, a12 = 0000001001111110, a11 = 0011101001001000, a10 = 0001000010010001, a9 = 1110100001001101, a8 = 1100011110101010, a7 = 1110110100101111, a6 = 0101110101111101, a5 = 0110101000011001, a4 = 0110110010011010, a3 = 0011001100110000, a2 = 1111111000111111, a1 = 0101101001101000, a0 = 0001101110100100, s = 00100, d = 0110110010011010
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/Alireza/Desktop/Hw1_9816603/Q3/WaveQ3_3.do
+# End time: 05:47:00 on Apr 06,2021, Elapsed time: 0:05:17
+# Errors: 0, Warnings: 9

@@ -1,0 +1,17 @@
+xst -intstyle ise -ifn "C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw3_9816603/Q4/Binary_Divisibility_By_7.xst" -ofn "C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw3_9816603/Q4/Binary_Divisibility_By_7.syr" 
+xst -intstyle ise -ifn "C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw3_9816603/Q4/Binary_Divisibility_By_7.xst" -ofn "C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw3_9816603/Q4/Binary_Divisibility_By_7.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Binary_Divisibility_By_7.ngc Binary_Divisibility_By_7.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Binary_Divisibility_By_7_map.ncd Binary_Divisibility_By_7.ngd Binary_Divisibility_By_7.pcf 
+par -w -intstyle ise -ol high -mt off Binary_Divisibility_By_7_map.ncd Binary_Divisibility_By_7.ncd Binary_Divisibility_By_7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Binary_Divisibility_By_7.twx Binary_Divisibility_By_7.ncd -o Binary_Divisibility_By_7.twr Binary_Divisibility_By_7.pcf 
+xst -intstyle ise -ifn "C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw3_9816603/Q4/Binary_Divisibility_By_7.xst" -ofn "C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw3_9816603/Q4/Binary_Divisibility_By_7.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Binary_Divisibility_By_7.ngc Binary_Divisibility_By_7.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Binary_Divisibility_By_7_map.ncd Binary_Divisibility_By_7.ngd Binary_Divisibility_By_7.pcf 
+par -w -intstyle ise -ol high -mt off Binary_Divisibility_By_7_map.ncd Binary_Divisibility_By_7.ncd Binary_Divisibility_By_7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Binary_Divisibility_By_7.twx Binary_Divisibility_By_7.ncd -o Binary_Divisibility_By_7.twr Binary_Divisibility_By_7.pcf 
+xst -intstyle ise -ifn "C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw3_9816603/Q4/Binary_Divisibility_By_7.xst" -ofn "C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw3_9816603/Q4/Binary_Divisibility_By_7.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Binary_Divisibility_By_7.ngc Binary_Divisibility_By_7.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Binary_Divisibility_By_7_map.ncd Binary_Divisibility_By_7.ngd Binary_Divisibility_By_7.pcf 
+par -w -intstyle ise -ol high -mt off Binary_Divisibility_By_7_map.ncd Binary_Divisibility_By_7.ncd Binary_Divisibility_By_7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Binary_Divisibility_By_7.twx Binary_Divisibility_By_7.ncd -o Binary_Divisibility_By_7.twr Binary_Divisibility_By_7.pcf 
+xst -intstyle ise -ifn "C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw3_9816603/Q4/Binary_Divisibility_By_7.xst" -ofn "C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw3_9816603/Q4/Binary_Divisibility_By_7.syr" 

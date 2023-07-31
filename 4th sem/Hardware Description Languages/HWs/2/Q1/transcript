@@ -1,0 +1,523 @@
+# Reading pref.tcl
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# OpenFile C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1.mpf
+# Loading project Q1
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v failed with 1 errors.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v was successful with warnings.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v failed with 1 errors.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v failed with 1 errors.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v failed with 1 errors.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v failed with 1 errors.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v failed with 1 errors.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v failed with 1 errors.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v failed with 1 errors.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v was successful.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.testSixtyFourThirtyTwoBitMyReg
+# vsim -voptargs="+acc" work.testSixtyFourThirtyTwoBitMyReg 
+# Start time: 12:00:55 on May 10,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# ** Error: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(81): Module 'reg_32bit' is not defined.
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=64, Warnings=0.
+# Error loading design
+# End time: 12:00:56 on May 10,2021, Elapsed time: 0:00:01
+# Errors: 64, Warnings: 11
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v failed with 2 errors.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 1 failed with 2 errors.
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v failed with 2 errors.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 1 failed with 2 errors.
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v failed with 1 errors.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v failed with 1 errors.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of Q1_1.v was successful.
+# Compile of TestQ1_1.v was successful.
+# Compile of Q1_2.v was successful.
+# Compile of TestQ1_2.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.testSixtyFourThirtyTwoBitMyReg
+# vsim -voptargs="+acc" work.testSixtyFourThirtyTwoBitMyReg 
+# Start time: 12:20:33 on May 10,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.testSixtyFourThirtyTwoBitMyReg(fast)
+# Loading work.SixtyFourThirtyTwoBitMyReg(fast)
+# Loading work.thirtyTwoBitMyReg(fast)
+# Loading work.myReg(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[63]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[62]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[61]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[60]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[59]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[58]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[57]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[56]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[55]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[54]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[53]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[52]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[51]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[50]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[49]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[48]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[47]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[46]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[45]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[44]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[43]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[42]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[41]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[40]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[39]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[38]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[37]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[36]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[35]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[34]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[33]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[32]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[31]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[30]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[29]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[28]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[27]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[26]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[25]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[24]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[23]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[22]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[21]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[20]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[19]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[18]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[17]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[16]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[15]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[14]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[13]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[12]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[11]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[10]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[9]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[8]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[7]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[6]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[5]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[4]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[3]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[2]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[1]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[0]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+run
+#                    0	clk = 0, flush = x, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, reg_select = xxxxxx, output_enable = x, reset = x, load = x, shift_right = x, shift_left = x, serial_in = x, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = x
+#                    5	clk = 1, flush = x, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, reg_select = xxxxxx, output_enable = x, reset = x, load = x, shift_right = x, shift_left = x, serial_in = x, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = x
+#                   10	clk = 0, flush = x, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, reg_select = xxxxxx, output_enable = x, reset = x, load = x, shift_right = x, shift_left = x, serial_in = x, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = x
+#                   15	clk = 1, flush = x, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, reg_select = xxxxxx, output_enable = x, reset = x, load = x, shift_right = x, shift_left = x, serial_in = x, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = x
+#                   20	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   25	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   30	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   35	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   40	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 0, shift_right = 1, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 1
+#                   45	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 0, shift_right = 1, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 1
+#                   50	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 0, shift_right = 1, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 1
+#                   55	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 0, shift_right = 1, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 1
+#                   60	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 111001, output_enable = 0, reset = 0, load = 0, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   65	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 111001, output_enable = 0, reset = 0, load = 0, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   70	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 111001, output_enable = 0, reset = 0, load = 0, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   75	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 111001, output_enable = 0, reset = 0, load = 0, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   80	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 010001, output_enable = 1, reset = 1, load = 0, shift_right = 0, shift_left = 1, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = x
+#                   85	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 010001, output_enable = 1, reset = 1, load = 0, shift_right = 0, shift_left = 1, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   90	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 010001, output_enable = 1, reset = 1, load = 0, shift_right = 0, shift_left = 1, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   95	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 010001, output_enable = 1, reset = 1, load = 0, shift_right = 0, shift_left = 1, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  100	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  105	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  110	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  115	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  120	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  125	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  130	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  135	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  140	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  145	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  150	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  155	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  160	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  165	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  170	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  175	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  180	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  185	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  190	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  195	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+quit -sim
+# End time: 12:21:03 on May 10,2021, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 70
+vsim -voptargs=+acc work.testSixtyFourThirtyTwoBitMyReg
+# vsim -voptargs="+acc" work.testSixtyFourThirtyTwoBitMyReg 
+# Start time: 12:21:10 on May 10,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading work.testSixtyFourThirtyTwoBitMyReg(fast)
+# Loading work.SixtyFourThirtyTwoBitMyReg(fast)
+# Loading work.thirtyTwoBitMyReg(fast)
+# Loading work.myReg(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[63]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[62]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[61]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[60]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[59]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[58]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[57]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[56]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[55]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[54]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[53]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[52]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[51]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[50]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[49]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[48]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[47]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[46]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[45]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[44]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[43]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[42]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[41]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[40]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[39]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[38]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[37]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[36]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[35]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[34]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[33]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[32]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[31]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[30]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[29]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[28]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[27]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[26]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[25]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[24]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[23]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[22]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[21]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[20]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[19]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[18]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[17]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[16]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[15]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[14]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[13]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[12]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[11]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[10]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[9]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[8]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[7]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[6]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[5]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[4]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[3]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[2]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[1]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (64) for port 'qdata'. The port definition is at: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testSixtyFourThirtyTwoBitMyReg/tester/genblk1[0]/RegisterBank File: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1/Q1_2.v Line: 41
+run
+#                    0	clk = 0, flush = x, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, reg_select = xxxxxx, output_enable = x, reset = x, load = x, shift_right = x, shift_left = x, serial_in = x, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = x
+#                    5	clk = 1, flush = x, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, reg_select = xxxxxx, output_enable = x, reset = x, load = x, shift_right = x, shift_left = x, serial_in = x, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = x
+#                   10	clk = 0, flush = x, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, reg_select = xxxxxx, output_enable = x, reset = x, load = x, shift_right = x, shift_left = x, serial_in = x, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = x
+#                   15	clk = 1, flush = x, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, reg_select = xxxxxx, output_enable = x, reset = x, load = x, shift_right = x, shift_left = x, serial_in = x, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = x
+#                   20	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   25	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   30	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   35	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   40	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 0, shift_right = 1, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 1
+#                   45	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 0, shift_right = 1, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 1
+#                   50	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 0, shift_right = 1, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 1
+#                   55	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 0, shift_right = 1, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 1
+#                   60	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 111001, output_enable = 0, reset = 0, load = 0, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   65	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 111001, output_enable = 0, reset = 0, load = 0, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   70	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 111001, output_enable = 0, reset = 0, load = 0, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   75	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 111001, output_enable = 0, reset = 0, load = 0, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   80	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 010001, output_enable = 1, reset = 1, load = 0, shift_right = 0, shift_left = 1, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = x
+#                   85	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 010001, output_enable = 1, reset = 1, load = 0, shift_right = 0, shift_left = 1, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   90	clk = 0, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 010001, output_enable = 1, reset = 1, load = 0, shift_right = 0, shift_left = 1, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                   95	clk = 1, flush = 0, data_in = 00001111000011110000111100001111, reg_select = 010001, output_enable = 1, reset = 1, load = 0, shift_right = 0, shift_left = 1, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  100	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  105	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  110	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  115	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  120	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  125	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  130	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  135	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  140	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  145	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  150	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  155	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  160	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  165	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  170	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  175	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  180	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  185	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  190	clk = 0, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+#                  195	clk = 1, flush = 1, data_in = 00001111000011110000111100001111, reg_select = 011011, output_enable = 1, reset = 0, load = 1, shift_right = 0, shift_left = 0, serial_in = 1, data_out = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz, serial_out = 0
+# End time: 12:23:34 on May 10,2021, Elapsed time: 0:02:24
+# Errors: 0, Warnings: 65

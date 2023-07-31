@@ -1,0 +1,92 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw3_9816603/Q2
+T_opt
+!s110 1621425217
+V3XAOF]ML76Qn7n<JNTEkH2
+04 13 4 work testM_counter fast 0
+04 4 4 work glbl fast 0
+=1-f875a41550eb-60a4fc41-137-3f0c
+o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+R0
+vglbl
+Z2 !s110 1621429521
+!i10b 1
+!s100 A2;7Y<mjg9G1MIPZ^zU:j1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IO_9E1W734;ai`5ZOPCc@11
+R0
+w1381681120
+8C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+FC:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+!i122 14
+L0 5 62
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z6 !s108 1621429521.000000
+!s107 C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!s90 -reportprogress|300|C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!i113 0
+Z7 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vm_counter
+R2
+!i10b 1
+!s100 co8WeCg64HXHH<2QlFd_02
+R3
+I`eFSBciQB6TbREhT4385B3
+R0
+w1621424401
+8Q2_1.v
+FQ2_1.v
+!i122 12
+L0 21 56
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 Q2_1.v|
+!s90 -reportprogress|300|Q2_1.v|
+!i113 0
+R7
+R1
+vtestM_counter
+R2
+!i10b 1
+!s100 ed9B?T7lKNXcBlKF0d5E51
+R3
+I[H?bi^^fB_<1Y`m^a?CQN2
+R0
+w1621424395
+8TestQ2_1.v
+FTestQ2_1.v
+!i122 13
+L0 25 142
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 TestQ2_1.v|
+!s90 -reportprogress|300|TestQ2_1.v|
+!i113 0
+R7
+R1
+ntest@m_counter
