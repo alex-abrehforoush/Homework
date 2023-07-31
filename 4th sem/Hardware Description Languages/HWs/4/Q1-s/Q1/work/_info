@@ -1,0 +1,140 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1-s/Q1
+T_opt
+!s110 1624987662
+VeUa^?6M324zz^2BL>mQ_U3
+04 4 4 work Game fast 0
+04 4 4 work glbl fast 0
+=1-f875a41550eb-60db580d-2b2-446c
+o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vCorrelation
+Z2 !s110 1624987660
+!i10b 1
+!s100 ?aE44e0H5;EcLgmIZ7e]g0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IBM==:1CWaX@FUD>J:XTaR3
+R0
+w1624969097
+8Correlation.v
+FCorrelation.v
+!i122 2
+L0 1 80
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z6 !s108 1624987660.000000
+!s107 Correlation.v|
+!s90 -reportprogress|300|Correlation.v|
+!i113 0
+Z7 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@correlation
+vDecision
+R2
+!i10b 1
+!s100 Qe9^<bAF>MfLO9F8L4[oY1
+R3
+IlnWfS`;`0>7F0O4`Jg94?2
+R0
+w1624966100
+8Decision.v
+FDecision.v
+!i122 1
+L0 1 42
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 Decision.v|
+!s90 -reportprogress|300|Decision.v|
+!i113 0
+R7
+R1
+n@decision
+vGame
+Z8 !s110 1624987661
+!i10b 1
+!s100 Kf`FAT4zjf03n9Q<U]LW22
+R3
+I28M2oBXBQMWaz2ePgC3]53
+R0
+w1624964125
+8Game.v
+FGame.v
+!i122 3
+L0 1 13
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 Game.v|
+!s90 -reportprogress|300|Game.v|
+!i113 0
+R7
+R1
+n@game
+vglbl
+R8
+!i10b 1
+!s100 A2;7Y<mjg9G1MIPZ^zU:j1
+R3
+IO_9E1W734;ai`5ZOPCc@11
+R0
+w1381681120
+8C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+FC:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+!i122 4
+L0 5 62
+R4
+R5
+r1
+!s85 0
+31
+!s108 1624987661.000000
+!s107 C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!s90 -reportprogress|300|C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!i113 0
+R7
+R1
+vWinner
+R2
+!i10b 1
+!s100 W09YTY>banOSYSTAPJz:41
+R3
+I4DfXSS3d3zRJ`5N8HNnEg3
+R0
+w1624962792
+8Winner.v
+FWinner.v
+!i122 0
+L0 1 6
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 Winner.v|
+!s90 -reportprogress|300|Winner.v|
+!i113 0
+R7
+R1
+n@winner

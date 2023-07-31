@@ -1,0 +1,15 @@
+C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q2/Q2_1.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q2/Q2_1.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module m_counter
+
+Top level modules:
+	m_counter
+
+} {} {}} C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q2/TestQ2_1.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q2/TestQ2_1.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module testM_counter
+
+Top level modules:
+	testM_counter
+
+} {} {}}

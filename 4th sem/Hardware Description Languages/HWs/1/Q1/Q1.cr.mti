@@ -1,0 +1,71 @@
+C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_2.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_2.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module TestFullAdder
+
+Top level modules:
+	TestFullAdder
+
+} {} {}} C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_2.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_2.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module FullAdder
+
+Top level modules:
+	FullAdder
+
+} {} {}} C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_3.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_3.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module OneBitCounter
+
+Top level modules:
+	OneBitCounter
+
+} {} {}} C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_3.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_3.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module TestOneBitCounter
+
+Top level modules:
+	TestOneBitCounter
+
+} {} {}} C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_4.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_4.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module FourBitFullAdder
+
+Top level modules:
+	FourBitFullAdder
+
+} {} {}} C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_4.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_4.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module TestFourBitFullAdder
+
+Top level modules:
+	TestFourBitFullAdder
+
+} {} {}} C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_5.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_5.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module TestSixteenBitAddSub
+
+Top level modules:
+	TestSixteenBitAddSub
+
+} {} {}} C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_5.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_5.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module SixteenBitAddSub
+
+Top level modules:
+	SixteenBitAddSub
+
+} {} {}} C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_1.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_1.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module TestHalfAdder
+
+Top level modules:
+	TestHalfAdder
+
+} {} {}} C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_1.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_1.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module HalfAdder
+
+Top level modules:
+	HalfAdder
+
+} {} {}}

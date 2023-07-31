@@ -1,0 +1,1 @@
+cmd_/home/alireza/Documents/3/HW3/module/char_device.ko := ld -r -m elf_x86_64  --build-id=sha1  -T scripts/module.lds -o /home/alireza/Documents/3/HW3/module/char_device.ko /home/alireza/Documents/3/HW3/module/char_device.o /home/alireza/Documents/3/HW3/module/char_device.mod.o;  true
