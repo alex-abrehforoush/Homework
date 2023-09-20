@@ -1,7 +1,7 @@
 <!-- <p align="center"> 
   <img src="gif/Pacman Logo2.jpg" alt="Pacman Logo" width="80px" height="80px">
 </p> -->
-<h1 align="center"> Imageful </h1>
+<h1 align="center"> AIHW </h1>
 <h3 align="center"> COMP 1734420 - Artificial Intelligence </h3>
 <h5 align="center"> Course Practical Homeworks - <a href="https://english.iut.ac.ir/">Isfahan University of Technology</a> (Winter & Spring 2022) </h5>
 
@@ -17,8 +17,9 @@
   <ol>
     <li><a href="#rubik's-cube"> ➤ Rubik's Cube (Using Local Search Techniques)</a></li>
     <li><a href="#graph-coloring"> ➤ Graph Coloring (Using Tabu Search)</a></li>
-    <li><a href="#my-method"> ➤ My Method</a></li>
-    <li><a href="#results"> ➤ Results</a></li>
+    <li><a href="#city-population"> ➤ City Population</a></li>
+    <li><a href="#balanced-map-coloring"> ➤ Balanced Map Coloring</a></li>
+    <li><a href="#european-playoff"> ➤ European Playoff</a></li>
     <li><a href="#references"> ➤ References</a></li>
     <li><a href="#credits"> ➤ Credits</a></li>
   </ol>
@@ -26,7 +27,7 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<!-- ABOUT THE PROJECT -->
+<!-- RUBIK'S CUBE -->
 <h2 id="rubik's-cube"> 🧠 Rubik's Cube (Using Local Search Techniques)</h2>
 
 <p align="justify">
@@ -52,7 +53,7 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<!-- PROJECT FILES DESCRIPTION -->
+<!-- GRAPH COLORING -->
 <h2 id="graph-coloring"> 🧠 Graph Coloring (Using Tabu Search)</h2>
 
 <p align="justify">
@@ -77,60 +78,76 @@
 
   🪛 ```main```: Reads input, constructs the adjacency matrix, initializes colors, and runs the Tabu Search algorithm until the one-minute time limit is reached.
 
-
-
 [![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/1/P/sources/Graph.py)
 
 </p>
 
-<!-- <ul>
-  <li><b>cair.m</b> - Where all of the functions reside.</li>
-  <li><b>main.m</b> - The main file that runs the algorithm.</li>
-</ul> -->
-
-<!-- <h3>Some other supporting files</h3>
-<ul>
-  <li><b>graphicsDisplay.py</b> - Graphics for Pacman.</li>
-</ul> -->
-
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<!-- GETTING STARTED -->
-<!-- <h2 id="getting-started"> 📖 Getting Started</h2>
+In the following two problems, we aim to solve two theoretical problems using the CSP modeling framework and implement solutions using the MiniZinc tool. Each student is required to find an appropriate solution for the assigned test case based on their student ID.
 
-<p>You are able to start the game by typing the following commands in the command line:</p>
-<pre><code>$ python pacman.py</code></pre>
-
-<p>You can see the list of all options and their default values via:</p>
-<pre><code>$ python pacman.py -h</code></pre>
-<i>Note that all of the commands that appear in this project also appear in <code>commands.txt</code>, for easy copying and pasting.</i>
-
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png) -->
-
-<!-- MY METHOD -->
-<h2 id="my-method"> 💡 My Method</h2>
+<!-- CITY POPULATION -->
+<h2 id="city-population"> 🧠 City Population</h2>
 
 <p align="justify"> 
-  As the classic seam carving algorithm was vulnerable to some properties of the images, such as the noisiness of the background and the existence of geometric structures, I modified the classic seam carving algorithm to make it convenient for a bigger group of images.
+  Consider a country with $n$ cities. These cities are connected by $m$ roads. The country has a peculiar law that mandates that any two neighboring cities must have a population difference of at least 2000 people. Additionally, to prevent the creation of mega-cities, the most populous city should not have a population more than three times that of the least populous city. If we consider the population of each city as a parameter, try to model the problem using CSP.
 
-  Generally speaking, my method consists of two main parts: first, modification of the seam carving algorithm, and second, providing a new importance map, both of which enhance the overall visual result.
+  Input:
 
-1.
-    While removing the seam having the least importance value in the importance map, it is sensible in the next iteration not to remove the seam containing adjacent pixels to the pixels of the removed seam in order to avoid distortions caused by the removal of adjacent seams. To handle this situation, I encountered that it would be beneficial to add a constant factor of the importance value of removed pixels to its adjacent ones. This trick works because in every iteration (respectively seam removal step), the seam with the minimum importance is chosen to be removed. So when we increase the importance of the pixels adjacent to the removed seam, it becomes more probable for the next seam not to consist of pixels adjacent to the previously removed seam. Therefore, in each iteration, I add 0.491/2 times x to each adjacent pixel's importance value on the right and left and 0.009/2 to each second-order adjacent importance value on the right and left.
+  - The first line provides two integers, $n$ and $m$, indicating the number of cities and roads, respectively.
+  The subsequent $m$ lines specify pairs of cities connected by a road.
 
-2.
-    The importance map used in this method is calculated through a linear combination of the normalized depth map, saliency map, gradient magnitude, and the maximum of values obtained by applying two 3 by 3 diagonal Sobel operators regarding edges of 45 or 135 degrees. The importance map is obtained as follows:
- $$map_{importance} = 3 nrml(map_{depth}) + nrml(map_{saliency\:map}) + nrml(map_{gradient\:magnitude}) + 3 nrml(max(map_{45\:degree\:Sobel}, map_{135\:degree\:Sobel}))$$
+  Output:
+
+  - You should print $n$ integers, where the $i$-th integer represents the population of the $i$-th city.
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/2/P/sources/1/1.mzn)
+
 </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-
-<!-- Results -->
-<h2 id="results"> 🎉 Results</h2>
+<!-- BALANCED MAP COLORING -->
+<h2 id="balanced-map-coloring"> 🧠 Balanced Map Coloring</h2>
 
 <p align="justify"> 
-  After applying my method to the provided images, here are the corresponding outputs that demonstrate a 50% reduction in width.
+  In this section, we will tackle the Balanced Map Coloring Problem, inspired by a theorem stating that any map can be colored using four colors in a way that adjacent regions have different colors. However, in this problem, we aim to color the map using four colors—blue, red, green, and white—in such a way that the following criteria are met:
+
+  1. Blue should be used the most frequently.
+  2. Red should be used next in frequency.
+  3. Green should be used less frequently.
+  4. White should be used the least.
+
+Additionally, the number of regions colored blue should be at most twice the number of regions colored white. We will model this problem using the Constraint Satisfaction Problem (CSP) paradigm in MiniZinc.
+
+Given an arbitrary map, you are required to find a valid color assignment for each region of the map, adhering to the constraints mentioned above.
+
+Input:
+
+- The input represents a map, but its specific format is not provided here.
+
+Output:
+
+- For each region on the map, you should print a color label: "blue," "red," "green," or "white."
+Ensure that the output satisfies the constraints mentioned in the problem statement.
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/2/P/sources/2/2.mzn)
+
+</p>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- EUROPEAN PLAYOFF -->
+<h2 id="european-playoff"> 🎉 European Playoff</h2>
+
+<p align="justify"> 
+  Introduction:
+
+In the upcoming match, the English national football team is set to face the winners of the European Playoff. The objective for the English team is to maximize their goal difference in this crucial match. To achieve this goal, we will utilize linear programming and a mixed strategy approach with a suitable LP solver.
+
+Linear Programming (LP) Framework:
+
+Linear programming is a mathematical technique used to optimize a linear objective function subject to linear inequality constraints. In this case, our objective is to maximize the goal difference while adhering to the constraints of the game.
 </p>
 
 <div style="display: flex; justify-content: center;">
