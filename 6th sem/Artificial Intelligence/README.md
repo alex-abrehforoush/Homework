@@ -148,6 +148,9 @@ In the upcoming match, the English national football team is set to face the win
 Linear Programming (LP) Framework:
 
 Linear programming is a mathematical technique used to optimize a linear objective function subject to linear inequality constraints. In this case, our objective is to maximize the goal difference while adhering to the constraints of the game.
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/3/source/AI_HW3_9816603_abrehforoush_theory.mzn)
+
 </p>
 
 <div style="display: flex; justify-content: center;">
