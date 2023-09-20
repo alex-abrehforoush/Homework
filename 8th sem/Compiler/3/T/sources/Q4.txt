@@ -1,1 +1,0 @@
-cryptool is very flexible and easy to use making it ideal for teaching people about cryptography it also contains several demonstration examples that are designed to be very easy to follow and break down the mathematics into small manageable steps.
