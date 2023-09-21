@@ -50,7 +50,7 @@
 
   Our program successfully solves the Rubik's Cubes which deviate from its solved state by at most two moves and some by three and provides the final configuration in the same format as the input, as well as the sequence of movements used to achieve the solution.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/1/P/sources/Rubik.py)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/HW/1/P/sources/Rubik.py)
 
 </p>
 
@@ -81,7 +81,7 @@
 
   🪛 ```main```: Reads input, constructs the adjacency matrix, initializes colors, and runs the Tabu Search algorithm until the one-minute time limit is reached.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/1/P/sources/Graph.py)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/HW/1/P/sources/Graph.py)
 
 </p>
 
@@ -104,7 +104,7 @@ In the following two problems, we aim to solve two theoretical problems using th
 
   - You should print $n$ integers, where the $i$-th integer represents the population of the $i$-th city.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/2/P/sources/1/1.mzn)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/HW/2/P/sources/1/1.mzn)
 
 </p>
 
@@ -134,7 +134,7 @@ Output:
 - For each region on the map, you should print a color label: "blue," "red," "green," or "white."
 Ensure that the output satisfies the constraints mentioned in the problem statement.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/2/P/sources/2/2.mzn)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/HW/2/P/sources/2/2.mzn)
 
 </p>
 
@@ -149,7 +149,7 @@ In the upcoming match, the English national football team is set to face the win
 
 Linear programming is a mathematical technique used to optimize a linear objective function subject to linear inequality constraints. In this case, our objective is to maximize the goal difference while adhering to the constraints of the game.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/3/source/AI_HW3_9816603_abrehforoush_theory.mzn)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/HW/3/source/AI_HW3_9816603_abrehforoush_theory.mzn)
 
 </p>
 
@@ -187,7 +187,7 @@ Algorithm Description:
   If it is possible to capture all opponent's pawns, record and print the coordinates of visited squares in separate rows, following their order of capture.
   If it is not possible to capture all opponent's pawns, print "Fail" on the first line, followed by the maximum number of pawns captured on the second line, and the coordinates of visited squares in the subsequent lines.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/3/source/8.py)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/HW/3/source/8.py)
 
 </p>
 
@@ -222,7 +222,7 @@ In the aStarSearch function, also located in the search.py file, implement Pacma
 
 Please note that the starting position of Pacman, as well as the positions of walls and the goal, remain constant and are as seen in the game. Additional explanations and details are provided as comments within the sampleSearch function. Ensure that any modifications you make are limited to the search.py file.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/3/source/9.py)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Artificial%20Intelligence/HW/3/source/9.py)
 
 </p>
 
@@ -244,7 +244,7 @@ The DIMACS CNF format used in the file conversion is defined as follows:
 
 The successful completion of this task demonstrated our ability to convert complex logical expressions from one canonical form to another, enhancing our understanding of logic manipulation.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/6th%20sem/Artificial%20Intelligence/4/sources/8)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/6th%20sem/Artificial%20Intelligence/HW/4/sources/8)
 
 </p>
 
@@ -268,7 +268,7 @@ Our goal in this task was to employ UBCSAT to solve the CNF-SAT problem provided
 
 The successful execution of this task demonstrated our ability to apply SAT-solving algorithms to complex Boolean satisfiability problems. This experience reinforced the importance of SAT solvers in various computational and decision-making contexts.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/6th%20sem/Artificial%20Intelligence/4/sources/9)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/6th%20sem/Artificial%20Intelligence/HW/4/sources/9)
 
 </p>
 
