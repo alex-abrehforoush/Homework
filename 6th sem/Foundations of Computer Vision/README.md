@@ -6,7 +6,7 @@
 <h5 align="center"> Course Practical Homeworks - <a href="https://english.iut.ac.ir/">Isfahan University of Technology</a> (Winter & Spring 2022) </h5>
 
 <p align="center"> 
-  <img src="images/cv.jpg" alt="Artificial Intelligence" height="2560px" width="1440px">
+  <img src="images/cv.jpg" alt="Artificial Intelligence" height="720px" width="1280px">
 </p>
 
 <!-- TABLE OF CONTENTS -->
