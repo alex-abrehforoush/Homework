@@ -88,21 +88,17 @@ In this problem, the objective is to rotate a color image by a user-defined angl
 
 ### Calculate New Dimensions
 To calculate the new dimensions (height and width) of the rotated image:
-$$
-\begin{align*}
+$$\begin{align*}
 \text{New Height (hnew)} & = \lceil |w \cdot \sin(\theta)| + |h \cdot \cos(\theta)| \rceil \\
 \text{New Width (wnew)} & = \lceil |h \cdot \sin(\theta)| + |w \cdot \cos(\theta)| \rceil
-\end{align*}
-$$
+\end{align*}$$
 
 ### Rotation Matrix
 The rotation matrix for a 2D transformation is:
-$$
-\begin{bmatrix}
+$$\begin{bmatrix}
 \cos(\theta) & -\sin(\theta) \\
 \sin(\theta) & \cos(\theta)
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 These equations provide the mathematical foundation for calculating the new dimensions of the image and performing pixel-wise rotation using the rotation matrix. The task is accomplished by the "rotateImage" function.
 
