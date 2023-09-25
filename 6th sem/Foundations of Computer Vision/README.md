@@ -419,7 +419,165 @@ To begin, we fix the four corner pieces of the puzzle image. To find the piece c
 
 Note: The efficiency of this algorithm may vary depending on the distribution of puzzle pieces and their edge similarities. In cases where the original image contains a significant number of pixels with extreme brightness levels, the algorithm may face challenges.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Foundations%20of%20Computer%20Vision/HW/3/sources/p3.m)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/6th%20sem/Foundations%20of%20Computer%20Vision/HW/4/sources)
+
+</p>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- HOMEWORK 4 -->
+<h2 id="hw4"> 👁️ HOMEWORK 4</h2>
+
+<p align="justify">
+
+## Problem 2
+
+### Part A
+
+#### Introduction
+In this part, I have developed a custom cell counting algorithm for grayscale-like images, similar to the attached image. The objective is to design and implement a function that counts cells without utilizing the built-in bwlabel function or similar commands. This custom algorithm provides an alternative approach to accurately count cells within an image, which can be applied to various fields, including biology, medical imaging, and quality control.
+
+#### Algorithm Description
+The custom cell counting algorithm operates recursively, systematically identifying and counting individual cells within the grayscale image. Here is a step-by-step description of the algorithm:
+
+ 1. Initialize the algorithm by selecting a 3x3 neighborhood around each pixel in the image.
+
+ 2. For each white (cell) pixel within the neighborhood, mark it as black, signifying that it has been processed.
+
+ 3. Run the algorithm recursively on the white pixels within the 3x3 neighborhood.
+
+ 4. If a white pixel does not have any white neighbors in its neighborhood, increment the cell counter by one. This signifies that a new cell has been detected.
+
+ 5. Continue this process until all pixels in the image have been traversed, ensuring that no white pixels remain unprocessed.
+
+ 6. To address the issue of cells merging together, we apply an erosion operation with a circular structuring element of radius 5. This operation helps separate cells that might have become connected during the counting process.
+
+#### Test
+
+<p align="center"> 
+  <img src="images/5/Cells.jpg" alt="" height="520px" width="634px">
+</p>
+
+The algorithm outputs 100 for the above image.
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Foundations%20of%20Computer%20Vision/HW/5/sources/countCells.m)
+
+
+### Part B
+
+#### Introduction
+In this part, I have developed a custom algorithm for cell labeling and statistics generation in images without using built-in functions like bwlabel or similar commands. The objective is to create a function that takes an image containing cells as input and produces an Excel file with detailed information about each cell, including its area and average brightness level. This algorithm has diverse applications in fields such as biology, medical imaging, and quality control, where cell analysis and characterization are essential.
+
+#### Algorithm Description
+The custom cell labeling and statistics generation algorithm operates recursively and systematically labels each cell within the input image while calculating its area and average brightness level. Here is a step-by-step description of the algorithm:
+
+1. Create a map (a matrix of the same size as the input image) to keep track of pixel labels, indicating which region each pixel belongs to.
+
+2. For each white (cell) pixel in the input image, label it and mark it as black in the map, signifying that it has been processed.
+
+3. Run the algorithm recursively on the white pixels within a 3x3 neighborhood of the current pixel.
+
+4. If a white pixel does not have any white neighbors in its neighborhood, increment the region counter by one, signifying the detection of a new cell. This counter corresponds to the cell label.
+
+5. Continue this process until all pixels in the image have been traversed, ensuring that no white pixels remain unprocessed.
+
+6. Calculate the area and average brightness level for each labeled cell by analyzing the corresponding pixels in the input image.
+
+7. Generate an Excel file with the received specifications, including the cell name and address, and store the cell statistics, such as area and average brightness, in rows corresponding to each cell.
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Foundations%20of%20Computer%20Vision/HW/5/sources/saveCellsData.m)
+
+
+## Problem 3
+
+### Introduction
+In this challenge, I have proposed and implemented a method for extracting blood vessels in retinal images from the DRIVE database. The primary objective is to calculate key performance metrics, including Specificity, Sensitivity, and Accuracy, for each image in the test set compared to ground-truth results provided by medical experts. Additionally, I will report the average values of these metrics in a comprehensive table. This project addresses an important aspect of medical image analysis and has significant potential applications in the diagnosis and monitoring of eye diseases.
+
+### Algorithm Description
+The blood vessel segmentation algorithm consists of several steps to enhance the visibility of blood vessels while reducing noise. Here's a breakdown of the algorithm:
+
+1. Applying a mask to the retinal images to make the background completely black, allowing better contrast for blood vessel detection.
+
+2. Employing an opening operation with a line-shaped structuring element of length 7 in 12 different directions to strengthen fine blood vessels and suppress non-linear noise.
+
+3. Applying unsharp masking to enhance the contrast of the retinal image.
+
+4. Utilizing a thresholding technique to convert the image into a binary black-and-white format. This step aids in isolating the blood vessels.
+
+5. Performing dilation with a line-shaped structuring element of length 6 in the horizontal direction to further enhance the blood vessels.
+
+6. Applying a median filter to reduce noise and refine the segmentation results.
+
+The algorithm is applied to each image in the test set independently, and the resulting binary images are compared with ground-truth data provided by medical experts.
+
+### Block diagram
+<p align="center"> 
+  <img src="images/5/bd.jpg" alt="" height="360px" width="640px">
+</p>
+
+
+### Conclusion
+The blood vessel segmentation algorithm presented in this project showcases my expertise in image processing and medical image analysis. By implementing a series of carefully designed steps, the algorithm effectively extracts blood vessels from retinal images. The calculated metrics, including Specificity, Sensitivity, and Accuracy, provide valuable insights into the algorithm's performance compared to manual annotations by medical professionals.
+
+### Results
+
+<div style="display: flex; justify-content: center;">
+  <img src="images/5/1_test.jpg" alt="" height="292px" width="282px">
+  <span style="margin: 0 10px; display: flex; justify-content: center; align-items: center;"> </span>
+  <img src="images/5/1.jpg" alt="" height="292px" width="282px">
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <img src="images/5/2_test.jpg" alt="" height="292px" width="282px">
+  <span style="margin: 0 10px; display: flex; justify-content: center; align-items: center;"> </span>
+  <img src="images/5/2.jpg" alt="" height="292px" width="282px">
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <img src="images/5/3_test.jpg" alt="" height="292px" width="282px">
+  <span style="margin: 0 10px; display: flex; justify-content: center; align-items: center;"> </span>
+  <img src="images/5/3.jpg" alt="" height="292px" width="282px">
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <img src="images/5/4_test.jpg" alt="" height="292px" width="282px">
+  <span style="margin: 0 10px; display: flex; justify-content: center; align-items: center;"> </span>
+  <img src="images/5/4.jpg" alt="" height="292px" width="282px">
+</div>
+
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Foundations%20of%20Computer%20Vision/HW/5/sources/p3.m)
+
+
+I also tried to enhance this process by new ideas based on K-Means algorithm with $k = 8$. Here are some of my outputs:
+
+<div style="display: flex; justify-content: center;">
+  <img src="images/5/4_test.jpg" alt="" height="292px" width="282px">
+  <span style="margin: 0 10px; display: flex; justify-content: center; align-items: center;"> </span>
+  <img src="images/5/4(8).jpg" alt="" height="292px" width="282px">
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <img src="images/5/8_test.jpg" alt="" height="292px" width="282px">
+  <span style="margin: 0 10px; display: flex; justify-content: center; align-items: center;"> </span>
+  <img src="images/5/8(8).jpg" alt="" height="292px" width="282px">
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <img src="images/5/13_test.jpg" alt="" height="292px" width="282px">
+  <span style="margin: 0 10px; display: flex; justify-content: center; align-items: center;"> </span>
+  <img src="images/5/13(8).jpg" alt="" height="292px" width="282px">
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <img src="images/5/18_test.jpg" alt="" height="292px" width="282px">
+  <span style="margin: 0 10px; display: flex; justify-content: center; align-items: center;"> </span>
+  <img src="images/5/18(8).jpg" alt="" height="292px" width="282px">
+</div>
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Foundations%20of%20Computer%20Vision/HW/5/sources/testSourceForDr.%20Karimi/p3.m)
+
+This project has the potential to contribute to the field of ophthalmology by automating blood vessel segmentation, which can aid in the early diagnosis and monitoring of eye diseases. The reported metrics offer a quantitative evaluation of the algorithm's effectiveness, making it a valuable tool for medical research and clinical applications.
 
 </p>
 
