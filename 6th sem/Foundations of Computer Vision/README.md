@@ -374,6 +374,57 @@ Note: The completed table, comparing the proposed method and the median filter's
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
+<!-- HOMEWORK 4 -->
+<h2 id="hw4"> 👁️ HOMEWORK 4</h2>
+
+<p align="justify">
+
+## Problem 3
+
+### Introduction
+
+In this project, I developed a program to solve a puzzle image composed of square pieces of the same size, each labeled with random names, and generate the original image. The program outputs a visually coherent arrangement of puzzle pieces, allowing the user to visualize the puzzle-solving process. For simplicity, four corner pieces have been provided in the output image named "Output.tif." The original image, labeled "Original.tif," is given to you solely for result evaluation. After completing the task, the program can compare the generated image with the original image, providing accuracy feedback to the user. In addition to the mentioned images, there is an image named "Shuffled_Patches.tif," which depicts a jumbled puzzle and is not intended for solving the problem. You are required to explain your proposed method and provide the code along with a block diagram for clarity. The number of pieces in each puzzle is specified in the folder name:
+a) Solve the problem for a 40-piece puzzle (Puzzle_1_40).
+b) Optionally and for extra points, solve the problem for a 160-piece puzzle (Puzzle_2_160).
+
+### Algorithm Description
+To begin, we fix the four corner pieces of the puzzle image. To find the piece corresponding to the current position, we utilize edge similarity measurements between pieces. For assessing the similarity between two puzzle pieces within the same row (column), we compute feature vectors for the piece on the left (above) by equating the brightness levels of the right (bottom) edge pixels of the left (above) piece to the left (above) edge pixels of the right (bottom) piece. We start traversing the image from the top-left corner, calculating the Euclidean distance squared between feature vectors of the gray-scale version of all available pieces and the gray-scale version of the fixed piece. The minimum of these distances corresponds to the piece that shares the highest edge similarity with the fixed piece.
+
+### Results
+
+#### 40-piece
+
+##### Input
+<p align="center"> 
+  <img src="images/4/Shuffled_Patches_a.jpg" alt="" height="600px" width="960px">
+</p>
+
+##### Output
+<p align="center"> 
+  <img src="images/4/p3a.jpg" alt="" height="510px" width="960px">
+</p>
+
+#### 160-piece
+
+##### Input
+<p align="center"> 
+  <img src="images/4/Shuffled_Patches_b.jpg" alt="" height="600px" width="960px">
+</p>
+
+##### Output
+<p align="center"> 
+  <img src="images/4/p3b.jpg" alt="" height="510px" width="960px">
+</p>
+
+
+Note: The efficiency of this algorithm may vary depending on the distribution of puzzle pieces and their edge similarities. In cases where the original image contains a significant number of pixels with extreme brightness levels, the algorithm may face challenges.
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Foundations%20of%20Computer%20Vision/HW/3/sources/p3.m)
+
+</p>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 <!-- CREDITS -->
 <h2 id="credits"> 📜 Credits</h2>
 
