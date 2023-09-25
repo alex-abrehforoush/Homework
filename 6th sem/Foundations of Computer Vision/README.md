@@ -425,8 +425,8 @@ Note: The efficiency of this algorithm may vary depending on the distribution of
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<!-- HOMEWORK 4 -->
-<h2 id="hw4"> 👁️ HOMEWORK 4</h2>
+<!-- HOMEWORK 5 -->
+<h2 id="hw5"> 👁️ HOMEWORK 5</h2>
 
 <p align="justify">
 
@@ -521,6 +521,61 @@ The blood vessel segmentation algorithm presented in this project showcases my e
 
 ### Results
 
+Here's the accuracy, specificity, and sensitivity parameters for 20 samples compared to first manual images:
+
+| # | Accuracy | Specificity | Sensitivity |
+|---|----------|-------------|-------------|
+| 1 | 90.66    | 91.25       | 84.63       |
+| 2 | 91.25    | 91.98       | 84.91       |
+| 3 | 88.82    | 89.56       | 82.08       |
+| 4 | 89.65    | 90.14       | 84.8        |
+| 5 | 90.12    | 91.06       | 81.07       |
+| 6 | 90.84    | 92.45       | 75.93       |
+| 7 | 89.69    | 90.5        | 81.64       |
+| 8 | 89.99    | 91.07       | 78.5        |
+| 9 | 92.22    | 94.13       | 70.59       |
+| 10 | 88.65   | 89.21       | 82.5        |
+| 11 | 89.73   | 90.65       | 80.45       |
+| 12 | 90.03   | 90.84       | 81.42       |
+| 13 | 90.69   | 92.19       | 76.8        |
+| 14 | 89.47   | 89.75       | 86.25       |
+| 15 | 80.02   | 79.03       | 92.87       |
+| 16 | 90.67   | 0.9191      | 78.25       |
+| 17 | 92.08   | 93.96       | 71.68       |
+| 18 | 91.3    | 92.43       | 78.18       |
+| 19 | 87.27   | 87.09       | 89.26       |
+| 20 | 90.66   | 91.23       | 83.4        |
+| Average | 89.69 | 90.52 | 81.26       |
+
+Here's the accuracy, specificity, and sensitivity parameters for 20 samples compared to first manual images:
+
+| # | Accuracy | Specificity | Sensitivity |
+|---|----------|-------------|-------------|
+| 1 | 90.68    | 91.18       | 85.45       |
+| 2 | 91.48    | 92.03       | 86.62       |
+| 3 | 88.93    | 89.16       | 86.58       |
+| 4 | 89.5     | 89.86       | 85.72       |
+| 5 | 90.35    | 90.63       | 87.24       |
+| 6 | 90.54    | 92.09       | 75.51       |
+| 7 | 89.26    | 89.41       | 87.38       |
+| 8 | 89.71    | 90.07       | 84.71       |
+| 9 | 92.02    | 94.01       | 69.42       |
+| 10 | 88.63   | 88.75       | 87.12       |
+| 11 | 90.07   | 90.55       | 84.81       |
+| 12 | 90.04   | 90.58       | 83.86       |
+| 13 | 90.56   | 92.28       | 75.24       |
+| 14 | 89.34   | 89.42       | 88.36       |
+| 15 | 80.2    | 79.22       | 92.36       |
+| 16 | 91.12   | 91.91       | 82.6        |
+| 17 | 92.69   | 93.79       | 78.84       |
+| 18 | 92.1    | 93.46       | 78.63       |
+| 19 | 87.97   | 88.15       | 86.35       |
+| 20 | 90.72   | 92.13       | 76.85       |
+| Average | 89.8  | 83.18 | 83.18       |
+
+
+Here are some of outputs of my algorithm:
+
 <div style="display: flex; justify-content: center;">
   <img src="images/5/1_test.jpg" alt="" height="292px" width="282px">
   <span style="margin: 0 10px; display: flex; justify-content: center; align-items: center;"> </span>
@@ -578,6 +633,52 @@ I also tried to enhance this process by new ideas based on K-Means algorithm wit
 [![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/6th%20sem/Foundations%20of%20Computer%20Vision/HW/5/sources/testSourceForDr.%20Karimi/p3.m)
 
 This project has the potential to contribute to the field of ophthalmology by automating blood vessel segmentation, which can aid in the early diagnosis and monitoring of eye diseases. The reported metrics offer a quantitative evaluation of the algorithm's effectiveness, making it a valuable tool for medical research and clinical applications.
+
+</p>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- HOMEWORK 6 -->
+<h2 id="hw6"> 👁️ HOMEWORK 6</h2>
+
+<p align="justify">
+
+## Problem 4
+
+### Introduction
+In this project, I have extended the concept of Hough Transform to detect circles in images. The general equation of a circle with three parameters, denoting the coordinates of the center $(c_1, c_2)$ and the radius $(c_3)$, is considered for circle detection. By adapting the Hough Transform, we create a three-dimensional parameter space, where each point represents a circle in the xy-space.
+
+### Algorithm Description
+Circle detection using the Hough Transform involves several key steps:
+
+1. Parameter Space Division (H): We divide the parameter space into cells based on the expected accuracy, initializing all cells to zero.
+
+2. Voting: For each white pixel $(x_i, y_i)$ in the image, and for all possible radii (rmin to rmax), we calculate the corresponding cell $(x_i, y_i, r)$ in the parameter space and increment its value by one for each point on the circle represented by $(x_i, y_i, r)$.
+
+3. Analysis: We analyze the data in the Hough space to identify the desired circles, effectively finding the coordinates of the circle centers with the highest accumulated votes.
+
+4. Circle Center Extraction: Finally, we extract the centers of the detected circles.
+
+The algorithm takes advantage of the similarity between the circle equation and the equation of a cone in 3D space $(x, y, z)$. By discretizing the parameter space and using an accumulation mechanism, we efficiently identify circles in the image.
+
+### Results
+
+<div style="display: flex; justify-content: center;">
+  <img src="images/6/1_test.jpg" alt="" height="292px" width="282px">
+  <span style="margin: 0 10px; display: flex; justify-content: center; align-items: center;"> </span>
+  <img src="images/6/1.jpg" alt="" height="292px" width="282px">
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <img src="images/6/25_training.jpg" alt="" height="292px" width="282px">
+  <span style="margin: 0 10px; display: flex; justify-content: center; align-items: center;"> </span>
+  <img src="images/6/25.jpg" alt="" height="292px" width="282px">
+</div>
+
+### Conclusion
+By dividing the parameter space, voting, analyzing the data, and extracting circle centers, this algorithm effectively identifies circles of interest in images, providing their coordinates and radii. This capability can be applied to various fields, including image-based quality control, robotics, and object tracking.
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/6th%20sem/Foundations%20of%20Computer%20Vision/HW/4/sources)
 
 </p>
 
