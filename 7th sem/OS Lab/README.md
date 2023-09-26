@@ -335,9 +335,9 @@ In the eighth session of the Operating System Lab, the assignment involves addin
 
 ## Task 1 - Custom System Call
 
-    - The main objective of this assignment is to extend the kernel with a custom system call.
-    - The custom system call should provide information about running processes, including their names and PIDs.
-    - The system call should enable user programs to retrieve this information from the kernel.
+  - The main objective of this assignment is to extend the kernel with a custom system call.
+  - The custom system call should provide information about running processes, including their names and PIDs.
+  - The system call should enable user programs to retrieve this information from the kernel.
 
 ## Task 2 - User Programs
 
