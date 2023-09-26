@@ -169,8 +169,8 @@ This project demonstrates our practical skills in implementing a simulated banki
 ## Summary
 In the Operating System Lab session, we were tasked with modifying the ioctl function in a given example. The objective was to enhance this function to handle two specific commands:
 
-    The first command should transfer data from user space to kernel space and print it in the kernel.
-    The second command should transfer data from kernel space to user space and print it in user space.
+ - The first command should transfer data from user space to kernel space and print it in the kernel.
+ - The second command should transfer data from kernel space to user space and print it in user space.
 
 ## Details
 
