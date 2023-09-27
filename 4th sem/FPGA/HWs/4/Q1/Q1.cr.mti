@@ -1,0 +1,57 @@
+C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/Correlation.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/Correlation.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module Correlation
+
+Top level modules:
+	Correlation
+
+} {} {}} C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/TestDecision.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/TestDecision.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module testDecision
+
+Top level modules:
+	testDecision
+
+} {} {}} C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/Game.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/Game.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module Game
+
+Top level modules:
+	Game
+
+} {} {}} C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/TestCorrelation.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/TestCorrelation.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module testCorrelation
+
+Top level modules:
+	testCorrelation
+
+} {} {}} C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/Decision.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/Decision.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module Decision
+
+Top level modules:
+	Decision
+
+} {} {}} C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/TestGame.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/TestGame.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module TestGame
+
+Top level modules:
+	TestGame
+
+} {} {}} C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/Winner.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/Winner.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module Winner
+
+Top level modules:
+	Winner
+
+} {} {}} C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/TestWinner.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw4_9816603/Q1/TestWinner.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module testWinner
+
+Top level modules:
+	testWinner
+
+} {} {}}

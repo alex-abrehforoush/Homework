@@ -1,0 +1,280 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/modeltech64_2020.4/examples
+T_opt
+!s110 1617628638
+Vki@zznc`CMU<BZaD7C[JY2
+04 20 4 work TestFourBitFullAdder fast 0
+=1-50eb716c8e1e-606b0dde-1ad-30d4
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1617639681
+V]UoFmn2^O1H7P`^TnM4F60
+Z4 04 20 4 work TestSixteenBitAddSub fast 0
+=1-50eb716c8e1e-606b3900-c6-6298
+R1
+R2
+n@_opt1
+R3
+T_opt2
+!s110 1617639591
+VfK1QSe5zT`Lm16oG0cELP3
+R4
+=1-50eb716c8e1e-606b38a6-277-50a0
+o-quiet -auto_acc_if_foreign -work work
+R2
+n@_opt2
+R3
+R0
+vFourBitFullAdder
+Z5 !s110 1617639672
+!i10b 1
+!s100 hD8?>GU@c0fT]Mc18S1>13
+Z6 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IEUgOGY^2XBMZacR@f49Y]1
+Z7 dC:/Users/Alireza/Desktop/Hw1_9816603/Q1
+w1617628497
+8C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_4.v
+FC:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_4.v
+!i122 277
+Z8 L0 2 10
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+Z10 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z11 !s108 1617639672.000000
+!s107 C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_4.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_4.v|
+!i113 0
+Z12 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@four@bit@full@adder
+vFullAdder
+Z13 !s110 1617639670
+!i10b 1
+!s100 IKKSXQNPVLS0MFS]M5?g52
+R6
+IKk_=0Me48ZPnODd[l7MNB0
+R7
+w1617571108
+8C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_2.v
+FC:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_2.v
+!i122 272
+L0 2 7
+R9
+R10
+r1
+!s85 0
+31
+Z14 !s108 1617639670.000000
+!s107 C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_2.v|
+!i113 0
+R12
+R2
+n@full@adder
+vHalfAdder
+R13
+!i10b 1
+!s100 C]21a;7[<>[mA=^kSh8zW2
+R6
+IJ6lD6KW]7I1G1dz:FFz`i2
+R7
+w1617563158
+8C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_1.v
+FC:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_1.v
+!i122 271
+L0 2 4
+R9
+R10
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_1.v|
+!i113 0
+R12
+R2
+n@half@adder
+vOneBitCounter
+Z15 !s110 1617639671
+!i10b 1
+!s100 >eWJ5>kDeiWO6=PVPhV3[1
+R6
+Idi1bHbj@oG4Z5^AU]Nzj71
+R7
+w1617624067
+8C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_3.v
+FC:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_3.v
+!i122 275
+R8
+R9
+R10
+r1
+!s85 0
+31
+Z16 !s108 1617639671.000000
+!s107 C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_3.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_3.v|
+!i113 0
+R12
+R2
+n@one@bit@counter
+vSixteenBitAddSub
+Z17 !s110 1617639673
+!i10b 1
+!s100 ADok?:_Z0z5Sg?XMn6zO]2
+R6
+IQz_M1PZkNOS7Xl3hkW?7J0
+R7
+w1617639552
+8C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_5.v
+FC:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_5.v
+!i122 279
+L0 2 26
+R9
+R10
+r1
+!s85 0
+31
+Z18 !s108 1617639673.000000
+!s107 C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_5.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Hw1_9816603/Q1/Q1_5.v|
+!i113 0
+R12
+R2
+n@sixteen@bit@add@sub
+vTestFourBitFullAdder
+R17
+!i10b 1
+!s100 <L@cb?OJRSa=ai@MYiUN;1
+R6
+ITZA;]Sc1B[QHW2]L27lbB2
+R7
+w1617628619
+8C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_4.v
+FC:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_4.v
+!i122 278
+Z19 L0 2 42
+R9
+R10
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_4.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_4.v|
+!i113 0
+R12
+R2
+n@test@four@bit@full@adder
+vTestFullAdder
+R15
+!i10b 1
+!s100 A>994AKgF8JXaZTgkcD[G3
+R6
+I`_jD3HdKzL=ZbQaeUF>B31
+R7
+w1617622763
+8C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_2.v
+FC:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_2.v
+!i122 274
+L0 2 49
+R9
+R10
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_2.v|
+!i113 0
+R12
+R2
+n@test@full@adder
+vTestHalfAdder
+R15
+!i10b 1
+!s100 ?n6888oT6nOOl]]]nc?Ja1
+R6
+IbgUgM3<5[LkKmgJ:z60Ni0
+R7
+w1617622775
+8C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_1.v
+FC:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_1.v
+!i122 273
+L0 2 24
+R9
+R10
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_1.v|
+!i113 0
+R12
+R2
+n@test@half@adder
+vTestOneBitCounter
+R5
+!i10b 1
+!s100 AcoS8;a`8JTJ2JKC68P@G1
+R6
+IK3hk2:fm<E2E`42z6UheC1
+R7
+w1617628031
+8C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_3.v
+FC:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_3.v
+!i122 276
+L0 2 51
+R9
+R10
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_3.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_3.v|
+!i113 0
+R12
+R2
+n@test@one@bit@counter
+vTestSixteenBitAddSub
+!s110 1617639674
+!i10b 1
+!s100 G6jnk4SW8cMo0enmAR5jo0
+R6
+IhaE1PfVcg>Nf=Xj2M;8TZ0
+R7
+w1617639555
+8C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_5.v
+FC:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_5.v
+!i122 280
+R19
+R9
+R10
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_5.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Hw1_9816603/Q1/TestQ1_5.v|
+!i113 0
+R12
+R2
+n@test@sixteen@bit@add@sub

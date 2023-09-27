@@ -1,0 +1,43 @@
+C:/Users/Alireza/Desktop/Hw1_9816603/Q3/TestQ3_2.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q3/TestQ3_2.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module TestSixteenFourByOneMux
+
+Top level modules:
+	TestSixteenFourByOneMux
+
+} {} {}} C:/Users/Alireza/Desktop/Hw1_9816603/Q3/Q3_2.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q3/Q3_2.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module SixteenFourByOneMux
+
+Top level modules:
+	SixteenFourByOneMux
+
+} {} {}} C:/Users/Alireza/Desktop/Hw1_9816603/Q3/TestQ3_3.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q3/TestQ3_3.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module TestSixteenThirtyTwoByOneMux
+
+Top level modules:
+	TestSixteenThirtyTwoByOneMux
+
+} {} {}} C:/Users/Alireza/Desktop/Hw1_9816603/Q3/Q3_3.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q3/Q3_3.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module SixteenThirtyTwoByOneMux
+
+Top level modules:
+	SixteenThirtyTwoByOneMux
+
+} {} {}} C:/Users/Alireza/Desktop/Hw1_9816603/Q3/TestQ3_1.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q3/TestQ3_1.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module TestFourByOneMux
+
+Top level modules:
+	TestFourByOneMux
+
+} {} {}} C:/Users/Alireza/Desktop/Hw1_9816603/Q3/Q3_1.v {1 {vlog -work work -vopt -stats=none C:/Users/Alireza/Desktop/Hw1_9816603/Q3/Q3_1.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module FourByOneMux
+
+Top level modules:
+	FourByOneMux
+
+} {} {}}

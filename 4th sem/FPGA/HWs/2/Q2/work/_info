@@ -1,0 +1,68 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q1
+T_opt
+!s110 1620666108
+V>7<oZ>j`K5dMUF@NkUX:z3
+04 13 4 work testM_counter fast 0
+=1-f875a41550eb-609966fc-f0-7fd4
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+R0
+vm_counter
+!s110 1620666413
+!i10b 1
+!s100 75HPMm;[Z]I5AmnWHzCHd1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I27JW@_]fzBU<_j;hF@J_k0
+Z3 dC:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q2
+w1620665862
+8C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q2/Q2_1.v
+FC:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q2/Q2_1.v
+!i122 74
+L0 1 57
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
+r1
+!s85 0
+31
+!s108 1620666413.000000
+!s107 C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q2/Q2_1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q2/Q2_1.v|
+!i113 0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtestM_counter
+!s110 1620666414
+!i10b 1
+!s100 eVPOI7APU_LmTK0OZLlS42
+R2
+I<:bVj5QlU3iHe[nz5o?Yj2
+R3
+w1620666088
+8C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q2/TestQ2_1.v
+FC:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q2/TestQ2_1.v
+!i122 75
+L0 1 142
+R4
+R5
+r1
+!s85 0
+31
+!s108 1620666414.000000
+!s107 C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q2/TestQ2_1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw2_9816603/Q2/TestQ2_1.v|
+!i113 0
+R6
+R1
+ntest@m_counter

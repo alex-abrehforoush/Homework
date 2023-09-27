@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Wed May 19 07:18:23 2021
+# Process ID: 19748
+# Log file: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw3_9816603/Q2/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/HWs/Hw3_9816603/Q2/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+couldn't load library "librdi_coretasks.dll": invalid argument
+Could not load library 'librdi_coretasks' needed by 'core', please check installation.
+    while executing
+"error "$result\nCould not load library '$library' needed by '$feature', please check installation.""
+    (procedure "rdi::load_library" line 4)
+    invoked from within
+"rdi::load_library core librdi_coretasks"
+    (file "C:/Xilinx/14.7/ISE_DS/PlanAhead\lib\scripts\rdi\features\core\core.tcl" line 5)
+ERROR: [Common 17-217] Failed to load feature 'core'.
+
+    while executing
+"source -notrace {C:/Xilinx/14.7/ISE_DS/PlanAhead\lib\scripts\rdi\features\core\core.tcl}"
+    invoked from within
+"load_features base core planahead ipservices"
+    (file "C:/Xilinx/14.7/ISE_DS/PlanAhead/lib/scripts/rdi/products/PlanAhead.tcl" line 5)
+INFO: [Common 17-206] Exiting PlanAhead at Wed May 19 07:18:24 2021...
+INFO: [Common 17-83] Releasing license: PlanAhead

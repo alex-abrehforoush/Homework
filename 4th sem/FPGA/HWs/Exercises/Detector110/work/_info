@@ -1,0 +1,44 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/Exercises/ALU8
+T_opt
+!s110 1617561595
+V579VYL94A4kLheN0C_j640
+04 11 4 work Detector110 fast 0
+=1-50eb716c8e1e-606a07f6-113-1e84
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vDetector110
+!s110 1616991662
+!i10b 1
+!s100 B>_aeO>X<>b[BU_G0jE0b1
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+Ikj<gBO`D58RY4CdJ6FlSl1
+dC:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/Exercises/Detector110
+w1616991644
+8C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/Exercises/Detector110/Detector110.v
+FC:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/Exercises/Detector110/Detector110.v
+!i122 2
+L0 1 16
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2020.4;71
+r1
+!s85 0
+31
+!s108 1616991661.000000
+!s107 C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/Exercises/Detector110/Detector110.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Alireza/Desktop/Programming/Verilog-Digital-System-Design/Exercises/Detector110/Detector110.v|
+!i113 0
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+n@detector110
