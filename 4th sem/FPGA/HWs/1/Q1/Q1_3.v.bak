@@ -1,0 +1,2 @@
+
+module OneBitCounter(input [7:0] data_in, output [3:0] data_out);
