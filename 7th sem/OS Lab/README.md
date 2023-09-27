@@ -69,7 +69,7 @@ In the first session of the Operating System Lab, students are assigned several 
  4. Find the number of system calls related to 'write' in this file.
  5. Copy the lines corresponding to these 'write' system calls into a new file named 'stdno_oslab1_q2.'
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/OSLAB_HW1_9816603_abrehforoush)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/HW/OSLAB_HW1_9816603_abrehforoush)
 
 </p>
 
@@ -112,7 +112,7 @@ Part (b): We created a Makefile for the project, capable of compiling and linkin
   - `uninstall`: Removes the installed project.
   - `clean`: Cleans the current directory of any generated files from previous build steps.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/OSLAB_HW2_9816603_abrehforoush)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/HW/OSLAB_HW2_9816603_abrehforoush)
 
 </p>
 
@@ -155,7 +155,7 @@ We have provided a file containing essential functions to create the banking sys
 ## Conclusion
 This project demonstrates our practical skills in implementing a simulated banking system in an operating system environment. It involves handling various transaction types, managing account balances, and providing feedback to users. This experience in system-level programming and simulation is valuable for understanding operating system internals and real-world applications.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/OSLAB_HW3_9816603_abrehforoush)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/HW/OSLAB_HW3_9816603_abrehforoush)
 
 </p>
 
@@ -182,7 +182,7 @@ We modified the ioctl function to accommodate these two additional commands, ena
 ## Conclusion
 This project involved enhancing the ioctl function, a critical part of the operating system's interface, to support new commands for data transfer and printing between user and kernel spaces. This experience demonstrates our proficiency in system-level programming and kernel modifications, which are essential skills for working on operating systems and device drivers.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/OSLAB_HW4_9816603_abrehforoush)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/HW/OSLAB_HW4_9816603_abrehforoush)
 
 </p>
 
@@ -222,7 +222,7 @@ Additionally, a secondary program, "app.cpp," simulates tasks with sleep duratio
 
 The goal of this exercise is to practice running programs using multiple processes, logging their execution times, and managing their replacement dynamically.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/OSLAB_HW5_9816603_abrehforoush)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/HW/OSLAB_HW5_9816603_abrehforoush)
 
 </p>
 
@@ -272,7 +272,7 @@ B) Explain whether it is possible to establish communication between child proce
 
 For enhanced clarity and better code organization, it's advisable to encapsulate commands and operands using a struct. This struct should include a character for the command ('m' or 'p') and two integer operands. Using a struct in your implementation will earn you extra points.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/OSLAB_HW6_9816603_abrehforoush)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/HW/OSLAB_HW6_9816603_abrehforoush)
 
 </p>
 
@@ -318,7 +318,7 @@ The third task focuses on dividing work among multiple processes using shared me
 ## Additional Note
 It's important to consider that handling signal responses in signal handlers (e.g., 'handler') involves significant low-level work due to how operating systems treat them differently from normal program execution. To simplify this task, it's recommended to perform most of the work in the regular child process code and only use a global variable to indicate signal reception in the signal handler.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/OSLAB_HW7_9816603_abrehforoush/7)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/HW/OSLAB_HW7_9816603_abrehforoush/7)
 
 </p>
 
@@ -345,7 +345,7 @@ In the eighth session of the Operating System Lab, the assignment involves addin
       - Retrieve a list of running processes.
       - Print the names and PIDs of these processes.
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/OSLAB_HW8_9816603_abrehforoush)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/HW/OSLAB_HW8_9816603_abrehforoush)
 
 </p>
 
@@ -386,7 +386,7 @@ In the ninth session of the Operating System Lab, we are tasked with two distinc
   - After eating, a philosopher places the forks on the table and thinks for a random duration of fewer than 3 seconds.
   - To prevent deadlocks, philosophers only begin eating when both forks are available (using busy waiting and semaphore checks).
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/OSLAB_HW9_9816603_abrehforoush)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/tree/master/7th%20sem/OS%20Lab/HW/OSLAB_HW9_9816603_abrehforoush)
 
 </p>
 
