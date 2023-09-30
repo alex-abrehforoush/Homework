@@ -15,15 +15,15 @@
 <details open="open">
   <summary>List of Homeworks</summary>
   <ol>
-    <li><a href="#hw1"> ➤ Homework 1</a></li>
-    <li><a href="#hw2"> ➤ Homework 2</a></li>
-    <li><a href="#hw3"> ➤ Homework 3</a></li>
-    <li><a href="#hw4"> ➤ Homework 4</a></li>
-    <li><a href="#hw5"> ➤ Homework 5</a></li>
-    <li><a href="#hw6"> ➤ Homework 6</a></li>
-    <li><a href="#hw7"> ➤ Homework 7</a></li>
-    <li><a href="#hw8"> ➤ Homework 8</a></li>
-    <li><a href="#hw9"> ➤ Homework 9</a></li>
+    <li><a href="#hw1"> ➤ Homework 1 (Introduction to Linux)</a></li>
+    <li><a href="#hw2"> ➤ Homework 2 (Scripts)</a></li>
+    <li><a href="#hw3"> ➤ Homework 3 (Kernel Module)</a></li>
+    <li><a href="#hw4"> ➤ Homework 4 (IOCTL)</a></li>
+    <li><a href="#hw5"> ➤ Homework 5 (Processes)</a></li>
+    <li><a href="#hw6"> ➤ Homework 6 (Inter-Process Communication (Pipe-Socket-Signal))</a></li>
+    <li><a href="#hw7"> ➤ Homework 7 (Inter-Process Communication (Shared Memory-Signal))</a></li>
+    <li><a href="#hw8"> ➤ Homework 8 (System Calls)</a></li>
+    <li><a href="#hw9"> ➤ Homework 9 (Threads)</a></li>
     <li><a href="#credits"> ➤ Credits</a></li>
   </ol>
 </details>
@@ -31,7 +31,7 @@
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- HOMEWORK 1 -->
-<h2 id="hw1"> 🧱 HOMEWORK 1</h2>
+<h2 id="hw1"> 🧱 HOMEWORK 1 (Introduction to Linux)</h2>
 
 <p align="justify">
 
@@ -76,7 +76,7 @@ In the first session of the Operating System Lab, students are assigned several 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- HOMEWORK 2 -->
-<h2 id="hw2"> 🧱 HOMEWORK 2</h2>
+<h2 id="hw2"> 🧱 HOMEWORK 2 (Scripts)</h2>
 
 <p align="justify">
 
@@ -119,7 +119,7 @@ Part (b): We created a Makefile for the project, capable of compiling and linkin
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- HOMEWORK 3 -->
-<h2 id="hw3"> 🧱 HOMEWORK 3</h2>
+<h2 id="hw3"> 🧱 HOMEWORK 3 (Kernel Module)</h2>
 
 <p align="justify">
 
@@ -162,7 +162,7 @@ This project demonstrates our practical skills in implementing a simulated banki
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- HOMEWORK 4 -->
-<h2 id="hw4"> 🧱 HOMEWORK 4</h2>
+<h2 id="hw4"> 🧱 HOMEWORK 4 (IOCTL)</h2>
 
 <p align="justify">
 
@@ -190,7 +190,7 @@ This project involved enhancing the ioctl function, a critical part of the opera
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- HOMEWORK 5 -->
-<h2 id="hw5"> 🧱 HOMEWORK 5</h2>
+<h2 id="hw5"> 🧱 HOMEWORK 5 (Processes)</h2>
 
 <p align="justify">
 
@@ -230,7 +230,7 @@ The goal of this exercise is to practice running programs using multiple process
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- HOMEWORK 6 -->
-<h2 id="hw6"> 🧱 HOMEWORK 6</h2>
+<h2 id="hw6"> 🧱 HOMEWORK 6 (Inter-Process Communication (Pipe-Socket-Signal))</h2>
 
 <p align="justify">
 
@@ -280,7 +280,7 @@ For enhanced clarity and better code organization, it's advisable to encapsulate
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- HOMEWORK 7 -->
-<h2 id="hw7"> 🧱 HOMEWORK 7</h2>
+<h2 id="hw7"> 🧱 HOMEWORK 7 (Inter-Process Communication (Shared Memory-Signal))</h2>
 
 <p align="justify">
 
@@ -326,7 +326,7 @@ It's important to consider that handling signal responses in signal handlers (e.
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- HOMEWORK 8 -->
-<h2 id="hw8"> 🧱 HOMEWORK 8</h2>
+<h2 id="hw8"> 🧱 HOMEWORK 8 (System Calls)</h2>
 
 <p align="justify">
 
@@ -353,7 +353,7 @@ In the eighth session of the Operating System Lab, the assignment involves addin
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- HOMEWORK 9 -->
-<h2 id="hw9"> 🧱 HOMEWORK 9</h2>
+<h2 id="hw9"> 🧱 HOMEWORK 9 (Threads)</h2>
 
 <p align="justify">
 
