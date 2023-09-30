@@ -27,7 +27,7 @@
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- MODULES -->
-<h2 id="modules"> 🧱 Modules</h2>
+<h2 id="modules"> ⚡ Modules</h2>
 
 <p align="justify">
 
@@ -50,7 +50,7 @@ Here are some basic modules I designed.
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- HOMEWORK 1 -->
-<h2 id="hw1"> 🧱 HOMEWORK 1</h2>
+<h2 id="hw1"> ⚡ HOMEWORK 1</h2>
 
 <p align="justify">
 
@@ -130,7 +130,7 @@ If the selection signal "sel" is set to 0, the circuit should connect station C 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- HOMEWORK 2 -->
-<h2 id="hw2"> 🧱 HOMEWORK 2</h2>
+<h2 id="hw2"> ⚡ HOMEWORK 2</h2>
 
 <p align="justify">
 
@@ -192,7 +192,7 @@ Here are the key features of the module:
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- HOMEWORK 3 -->
-<h2 id="hw3"> 🧱 HOMEWORK 3</h2>
+<h2 id="hw3"> ⚡ HOMEWORK 3</h2>
 
 <p align="justify">
 
@@ -225,7 +225,7 @@ The generated reports contain comprehensive details about resource utilization, 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- HOMEWORK 4 -->
-<h2 id="hw4"> 🧱 HOMEWORK 4</h2>
+<h2 id="hw4"> ⚡ HOMEWORK 4</h2>
 
 <p align="justify">
 
