@@ -2,8 +2,8 @@
   <img src="gif/Pacman Logo2.jpg" alt="Pacman Logo" width="80px" height="80px">
 </p> -->
 <h1 align="center"> OSHW </h1>
-<h3 align="center"> COMP 1730435 - Basics of Machine Learning</h3>
-<h5 align="center"> Course Homeworks - <a href="https://english.iut.ac.ir/">Isfahan University of Technology</a> (Fall 2022) </h5>
+<h3 align="center"> COMP 1730435 & COMP 1730403 - Basics of Machine Learning, Principles of Computational Intelligence</h3>
+<h5 align="center"> Course Practical Homeworks - <a href="https://english.iut.ac.ir/">Isfahan University of Technology</a> (Fall 2022, Spring & Winter 2023) </h5>
 
 <p align="center"> 
   <img src="images/ml.jpg" alt="OS Lab." height="408px" width="612px">
@@ -17,6 +17,8 @@
   <ol>
     <li><a href="#hw1"> ➤ Homework 1</a></li>
     <li><a href="#hw2"> ➤ Homework 2</a></li>
+    <li><a href="#hw3"> ➤ Homework 3</a></li>
+    <li><a href="#hw4"> ➤ Homework 4</a></li>
     <li><a href="#credits"> ➤ Credits</a></li>
   </ol>
 </details>
@@ -91,6 +93,94 @@ Optionally, we implement parts (a) and (b) using pre-existing libraries for line
 This question focuses on investigating the impact of loss functions in linear regression using the "insurance" dataset. By comparing the Mean Absolute Error (MAE) and Mean Squared Error (MSE) losses, we gain insights into how different loss functions affect the accuracy and convergence of linear regression models. Normalizing the data further helps us understand the importance of data preprocessing in machine learning.
 
 [![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/7th%20sem/Foundations%20of%20Machine%20Learning/HW/2/P/HW02_Programming_Abrehforoush_9816603.ipynb)
+
+</p>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- HOMEWORK 3 -->
+<h2 id="hw3"> 📍 HOMEWORK 3</h2>
+
+<p align="justify">
+
+## Implementation of Logistic Regression from Scratch
+### Introduction
+
+In this assignment, we are tasked with implementing logistic regression from scratch without using PyTorch or TensorFlow libraries. The goal is to create a logistic_regression function that takes several input parameters and trains a logistic regression model using gradient descent. We'll use a dataset containing information about thousands of different molecules, categorized into two classes: "Boudar" and "Bibo."
+### Implementation Steps
+1. Define the logistic_regression Function
+
+We need to create a Python function named logistic_regression that accepts the following input parameters:
+
+  - x: An array of shape (n_samples, n_features) representing the input data, where n_samples is the number of data points, and n_features is the number of features.
+  - y: A vector of length n_samples containing the labels for the input data.
+  - learning_rate: The learning rate for gradient descent.
+  num_iterations: The number of iterations for training.
+  - add_intercept: A boolean variable to determine whether to add an intercept term.
+
+Inside this function, we will implement logistic regression using gradient descent to learn the weights for a binary classification problem.
+
+2. Preprocess the Data
+
+Before training the model, we will preprocess the data, which includes normalizing the features.
+
+3. Training and Testing
+
+We will train the logistic regression model using a training dataset called clean2 and test it on another dataset called clean1. Both datasets contain information about different molecules categorized into "Boudar" and "Bibo." We will perform the following steps:
+
+  - Train the model with the training dataset.
+  - Test the model's performance on the test dataset.
+  - Repeat the above two steps with different learning rates (small and large).
+  - Visualize the model's performance by plotting relevant graphs.
+  - Evaluate the model's performance without using any external libraries by calculating accuracy and error parameters (optional).
+
+4. Optional: Evaluate Using Accuracy, Recall, and F1 Score
+
+Optionally, we can evaluate the model's performance using accuracy, recall, and F1 score. We may choose to use library functions to calculate these metrics and explain the significance of each metric.
+### Conclusion
+
+This assignment focuses on implementing logistic regression from scratch and applying it to a real-world dataset of molecule classification. We aim to gain insights into the impact of different learning rates and evaluate the model's performance using various evaluation metrics. Implementing logistic regression from scratch enhances our understanding of the underlying principles and is a valuable skill for machine learning practitioners.
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/8th%20sem/Foundations%20of%20Computational%20Intelligence/1/P/HW1_Programming_Abrehforoush_9816603.ipynb)
+
+</p>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- HOMEWORK 4 -->
+<h2 id="hw4"> 📍 HOMEWORK 4</h2>
+
+<p align="justify">
+
+## Convolutional Neural Network Training and Hyperparameter Tuning
+
+### Introduction
+
+In this practical assignment, we will explore the training of a Convolutional Neural Network (CNN) on a given dataset. It is important to note that we are not allowed to use pre-trained network weights or transfer learning in this section. Instead, we are required to train the CNN from scratch, including all weight-learning stages.
+
+### Scenario 1: Underfitting
+
+In the first scenario, our goal is to design a model that intentionally underfits the data. We need to create a CNN model that performs poorly on both the training and validation datasets. After training the model, we should provide insights into the factors and reasons behind underfitting.
+
+### Scenario 2: Overfitting and Remediation
+
+In the second scenario, we will intentionally design a model that overfits the data, resulting in high performance on the training set but poor generalization to the validation set. We must explain the factors and reasons for overfitting. Subsequently, we need to apply techniques or modifications to address this issue and improve model performance.
+### Scenario 3: Hyperparameter Tuning for Best Fit
+
+In the third scenario, we will leverage various techniques and tools to fine-tune the hyperparameters of the model to achieve the "best fit" model. The term "best fit" implies that the model should perform well on both training and validation data without overfitting or underfitting. We need to specify hyperparameter tuning settings and conduct this tuning process on a validation dataset.
+Hyperparameter Tuning Techniques:
+
+  - Hyperparameter tuning for the learning rate using grid search (Table 3).
+  - Hyperparameter tuning for the learning rate using tools like "wandb" or "come" (as mentioned in the assignment).
+
+### Evaluation
+
+For each scenario, we must generate error plots showing the loss on the training and validation datasets over epochs. Additionally, after training the model, we need to report the accuracy of the model on the test dataset, using the "Accuracy" metric.
+Conclusion
+
+This assignment focuses on training Convolutional Neural Networks from scratch and explores various scenarios, including underfitting, overfitting, and hyperparameter tuning. By experimenting with different model configurations and optimizing hyperparameters, we aim to gain a deep understanding of CNN training and achieve the best model fit for the given dataset.
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alireza-Abrehforoush/Homework/blob/master/8th%20sem/Foundations%20of%20Computational%20Intelligence/2/P/HW2_Programming_Abrehforoush_9816603.ipynb)
 
 </p>
 
