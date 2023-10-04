@@ -1,7 +1,7 @@
 <!-- <p align="center"> 
   <img src="gif/Pacman Logo2.jpg" alt="Pacman Logo" width="80px" height="80px">
 </p> -->
-<h1 align="center"> OSHW </h1>
+<h1 align="center"> MLCIHW </h1>
 <h3 align="center"> COMP 1730435 & COMP 1730403 - Basics of Machine Learning, Principles of Computational Intelligence</h3>
 <h5 align="center"> Course Practical Homeworks - <a href="https://english.iut.ac.ir/">Isfahan University of Technology</a> (Fall 2022, Spring & Winter 2023) </h5>
 
