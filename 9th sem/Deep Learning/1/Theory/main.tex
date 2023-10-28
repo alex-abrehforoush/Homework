@@ -585,6 +585,21 @@ $
 \\=
 2\left( \hat{y} - y \right)a_1\left( 1 - a_1 \right)x\left[ a_1 + a_2 ^ 2\left( 1 - a_2 \right) w_2 \right]
 $
+\\
+\\
+$
+\frac{\partial L}{\partial w_2} =
+\frac{\partial L}{\partial \hat{y}} \times
+\frac{\partial \hat{y}}{\partial z_3} \times
+\frac{\partial z_3}{\partial a_2} \times
+\frac{\partial a_2}{\partial z_2} \times
+\frac{\partial z_2}{\partial w_2} 
+\\=
+\frac{\partial L}{\partial a_2} \times
+\frac{\partial a_2}{\partial z_2} \times
+\frac{\partial z_2}{\partial w_2} =
+\left( \hat{y} - y \right)2a_2 \times a_2\left( 1 - a_2 \right) \times a_1
+$
 \end{latin}
 
 
