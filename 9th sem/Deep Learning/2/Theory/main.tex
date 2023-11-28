@@ -5,6 +5,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
+\usepackage{amsthm}
 \usepackage{fancyhdr}
 \usepackage{listings}
 \usepackage{xcolor}
@@ -78,6 +79,61 @@
 
 %\tableofcontents
 \newpage
+
+
+%1
+\section{}
+
+%2
+\section{}
+فرض کنیم که $\hat{y_i}$ها خروجی‌های شبکه باشند. بدون از دست رفتن کلیت فرض می‌کنیم
+$y_{k_{1}}, \cdots, y_{k_{L}}$
+برابر یک باشند ($k_1, \cdots, k_L$ کلاس‌های درست باشند). با توجه به اینکه مجموع $\hat{y_i}$ها برابر 1 است و دقیقا $L$تا از $y_i$ها برابر 1 هستند داریم:
+\begin{latin}
+$L\left( \hat{y}, y \right) = -\sum_{i = 1}^{n_y} y_i \log \hat{y}_i = -\sum_{j = 1}^{L} y_{k_j} \log \hat{y}_{k_j} = -\sum_{j = 1}^{L} \log \hat{y}_{k_j}$
+\end{latin}
+طبق نامساوی حسابی-هندسی داریم:
+\begin{latin}
+$
+\frac{\hat{y}_{k_1} + \cdots + \hat{y}_{k_L}}{L} \ge \sqrt[L]{\hat{y}_{k_1}\cdots\hat{y}_{k_L}}
+\\ \\ \overset{\text{both sides to the power of $L$} }{\Longrightarrow} \\ \\
+\left( \frac{\hat{y}_{k_1} + \cdots + \hat{y}_{k_L}}{L} \right) ^ {L} \ge \hat{y}_{k_1}\cdots\hat{y}_{k_L}
+\\ \\ \overset{1 \ge \hat{y}_{k_1} + \cdots + \hat{y}_{k_L}}{\Longrightarrow} \\ \\
+\left( \frac{1}{L} \right) ^ {L} \ge \left( \frac{\hat{y}_{k_1} + \cdots + \hat{y}_{k_L}}{L} \right) ^ {L} \ge \hat{y}_{k_1}\cdots\hat{y}_{k_L}
+\\ \\ \overset{\text{log of each side}}{\Longrightarrow} \\ \\
+-L \log L \ge \log \left( \hat{y}_{k_1}\cdots\hat{y}_{k_L} \right) \Longrightarrow
+-\log \left( \hat{y}_{k_1}\cdots\hat{y}_{k_L} \right) \ge L \log L 
+\\ \\ \Longrightarrow
+-\sum_{j = 1}^{L} \log \hat{y}_{k_j} \ge L \log L
+\\ \\ \Longrightarrow
+L\left( \hat{y}, y \right) \ge L \log L \\ \\
+\qedsymbol{}
+$
+\end{latin}
+
+
+%3
+\section{}
+با توجه به اینکه در انتهای نمودار \lr{Loss} در \lr{training} بسیار کمتر از \lr{validation} است، پس شبکه دچار \lr{overfitting} شده است.
+\subsection{}
+افزایش عمق شبکه عصبی می‌تواند به افزایش \lr{overfitting} منجر شود. شبکه‌های عمیق‌تر ظرفیت بالاتری برای یادگیری الگوهای پیچیده دارند، اما اگر مجموعه داده کافی بزرگ نباشد، \lr{overfitting} را تشدید خواهد کرد. اگر \lr{overfitting} ناشی از حافظه‌ی شبکه برای یادگیری نویز در داده‌های آموزش باشد، افزایش عمق ممکن است وضعیت را بدتر کند. با این حال، لازم به ذکر است اگر \lr{overfitting} به دلیل عدم یادگیری مدل از الگوهای موجود باشد، یک شبکه عمیق‌تر ممکن است به تعمیم بیشتر کمک کند.
+
+\subsection{}
+توقف زودهنگام یک تکنیک جهت جلوگیری از \lr{overfitting} است که شامل نظارت بر عملکرد مدل در یک مجموعه اعتبارسنجی و متوقف کردن فرآیند آموزش هنگامی که عملکرد شبکه بهبود چشمگیری نمی‌یابد یا شروع به افت می‌کند. این ممکن است در جلوگیری از \lr{overfitting} مؤثر باشد چرا که به مدل کمک می‌کند که خوب با داده‌های ناشناخته تعمیم پیدا کند. اگر یک مدل در حال \lr{overfitting} باشد، تکنیک توقف زودهنگام می‌تواند جلوی ادامه یادگیری نویز در داده‌های آموزش را بگیرد و بنابراین توانایی بهتری در تعمیم به داده‌های جدید برای آن ایجاد کند.
+\subsection{}
+آموزش بیشتر بدون هیچ گونه \lr{regularization} احتمالا \lr{overfitting} را تشدید می‌کند. ممکن است مدل به طور زیادی به داده‌های آموزش فیت شود و نتواند به داده‌های جدید و ناشناخته تعمیم پیدا کند. با این حال، اگر \lr{overfitting} ناشی از عدم یادگیری مدل از الگوهای موجود در داده‌ها باشد، آموزش بیشتر ممکن است به مدل کمک کند تا به یک وضعیت بهتر همگرا شود.
+\subsection{}
+\lr{Data Augmentation} شامل اعمال تبدیلات مختلف بر داده‌های آموزش، مانند چرخش‌ها، وارونه‌ها و جابجایی‌ها می‌شود. این می‌تواند به مدل کمک کند تا مقاومت بیشتری در برابر \lr{overfitting} پیدا کرده و با تغییرات در داده ورودی بهتر تعمیم پیدا کند. \lr{Data Augmentation} تکنیک خصوصاً زمانی که مجموعه داده محدود است. این می‌تواند با ارائه مدل به یک طیف گسترده‌تر از تغییرات در داده‌های آموزش، از \lr{overfitting} کاسته و توانایی بهتری در تعمیم ایجاد کند.
+
+
+
+
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %1

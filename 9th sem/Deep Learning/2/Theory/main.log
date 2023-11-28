@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  14 NOV 2023 20:52
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  29 NOV 2023 02:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -132,23 +132,35 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
 )
+(c:/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks22
+\thm@bodyfont=\toks23
+\thm@headfont=\toks24
+\thm@notefont=\toks25
+\thm@headpunct=\toks26
+\thm@preskip=\skip54
+\thm@postskip=\skip55
+\thm@headsep=\skip56
+\dth@everypar=\toks27
+)
 (c:/texlive/2021/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
-\f@nch@headwidth=\skip54
-\f@nch@O@elh=\skip55
-\f@nch@O@erh=\skip56
-\f@nch@O@olh=\skip57
-\f@nch@O@orh=\skip58
-\f@nch@O@elf=\skip59
-\f@nch@O@erf=\skip60
-\f@nch@O@olf=\skip61
-\f@nch@O@orf=\skip62
+\f@nch@headwidth=\skip57
+\f@nch@O@elh=\skip58
+\f@nch@O@erh=\skip59
+\f@nch@O@olh=\skip60
+\f@nch@O@orh=\skip61
+\f@nch@O@elf=\skip62
+\f@nch@O@erf=\skip63
+\f@nch@O@olf=\skip64
+\f@nch@O@orf=\skip65
 )
 (c:/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count196
 \lst@gtempboxa=\box50
-\lst@token=\toks22
+\lst@token=\toks28
 \lst@length=\count197
 \lst@currlwidth=\dimen150
 \lst@column=\count198
@@ -192,9 +204,9 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 (c:/texlive/2021/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count270
-\float@exts=\toks23
+\float@exts=\toks29
 \float@box=\box52
-\@float@everytoks=\toks24
+\@float@everytoks=\toks30
 \@floatcapt=\box53
 )
 (c:/texlive/2021/texmf-dist/tex/latex/neuralnetwork/neuralnetwork.sty
@@ -216,8 +228,8 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 
 (c:/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (c:/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks25
-\XKV@tempa@toks=\toks26
+\XKV@toks=\toks31
+\XKV@tempa@toks=\toks32
 )
 \XKV@depth=\count272
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
@@ -226,7 +238,7 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 (c:/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks27
+\pgfutil@everybye=\toks33
 \pgfutil@tempdima=\dimen154
 \pgfutil@tempdimb=\dimen155
 
@@ -246,11 +258,11 @@ Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
 Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
 
 (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks28
-\pgfkeys@temptoks=\toks29
+\pgfkeys@pathtoks=\toks34
+\pgfkeys@temptoks=\toks35
 
 (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks30
+\pgfkeys@tmptoks=\toks36
 ))
 \pgf@x=\dimen156
 \pgf@y=\dimen157
@@ -268,9 +280,9 @@ Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
 \c@pgf@countb=\count274
 \c@pgf@countc=\count275
 \c@pgf@countd=\count276
-\t@pgf@toka=\toks31
-\t@pgf@tokb=\toks32
-\t@pgf@tokc=\toks33
+\t@pgf@toka=\toks37
+\t@pgf@tokb=\toks38
+\t@pgf@tokc=\toks39
 \pgf@sys@id@count=\count277
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
@@ -305,9 +317,9 @@ Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
 \pgfmath@dimen=\dimen166
 \pgfmath@count=\count281
 \pgfmath@box=\box55
-\pgfmath@toks=\toks34
-\pgfmath@stack@operand=\toks35
-\pgfmath@stack@operation=\toks36
+\pgfmath@toks=\toks40
+\pgfmath@stack@operand=\toks41
+\pgfmath@stack@operation=\toks42
 )
 (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
@@ -444,8 +456,8 @@ Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
 (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen193
 \pgffor@skip=\dimen194
-\pgffor@stack=\toks37
-\pgffor@toks=\toks38
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
 ))
 (c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
@@ -492,13 +504,13 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \c@ALG@line=\count295
 \c@ALG@rem=\count296
 \c@ALG@nested=\count297
-\ALG@tlm=\skip63
-\ALG@thistlm=\skip64
+\ALG@tlm=\skip66
+\ALG@thistlm=\skip67
 \c@ALG@Lnr=\count298
 \c@ALG@blocknr=\count299
 \c@ALG@storecount=\count300
 \c@ALG@tmpcounter=\count301
-\ALG@tmplength=\skip65
+\ALG@tmplength=\skip68
 ) (c:/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
 
@@ -508,12 +520,12 @@ Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count303
 \calc@Adimen=\dimen260
 \calc@Bdimen=\dimen261
-\calc@Askip=\skip66
-\calc@Bskip=\skip67
+\calc@Askip=\skip69
+\calc@Bskip=\skip70
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count304
-\calc@Cskip=\skip68
+\calc@Cskip=\skip71
 )
 (c:/texlive/2021/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
@@ -524,7 +536,7 @@ LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \g_MT_multlinerow_int=\count305
 \l_MT_multwidth_dim=\dimen262
-\origjot=\skip69
+\origjot=\skip72
 \l_MT_shortvdotswithinadjustabove_dim=\dimen263
 \l_MT_shortvdotswithinadjustbelow_dim=\dimen264
 \l_MT_above_intertext_sep=\dimen265
@@ -608,9 +620,9 @@ Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
 
 (c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
 (c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks39
-\t@pgfplots@tokb=\toks40
-\t@pgfplots@tokc=\toks41
+\t@pgfplots@toka=\toks45
+\t@pgfplots@tokb=\toks46
+\t@pgfplots@tokc=\toks47
 \pgfplots@tmpa=\dimen270
 \c@pgfplots@coordindex=\count306
 \c@pgfplots@scanlineindex=\count307
@@ -636,7 +648,7 @@ ode.tex)
 (c:/texlive/2021/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.c
 ode.tex
 \c@pgfplotstable@counta=\count309
-\t@pgfplotstable@a=\toks42
+\t@pgfplotstable@a=\toks48
 )
 (c:/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.co
 de.tex)
@@ -787,14 +799,14 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@sectionciteorder@0=\count354
 \blx@entrysetcounter=\count355
 \blx@biblioinstance=\count356
-\labelnumberwidth=\skip70
-\labelalphawidth=\skip71
-\biblabelsep=\skip72
-\bibitemsep=\skip73
-\bibnamesep=\skip74
-\bibinitsep=\skip75
-\bibparsep=\skip76
-\bibhang=\skip77
+\labelnumberwidth=\skip73
+\labelalphawidth=\skip74
+\biblabelsep=\skip75
+\bibitemsep=\skip76
+\bibnamesep=\skip77
+\bibinitsep=\skip78
+\bibparsep=\skip79
+\bibhang=\skip80
 \blx@bcfin=\read3
 \blx@bcfout=\write4
 \blx@langwohyphens=\language87
@@ -877,20 +889,20 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedoriglanguage=\count425
 \c@pageref=\count426
 \c@savedpageref=\count427
-\shorthandwidth=\skip78
-\shortjournalwidth=\skip79
-\shortserieswidth=\skip80
-\shorttitlewidth=\skip81
-\shortauthorwidth=\skip82
-\shorteditorwidth=\skip83
-\locallabelnumberwidth=\skip84
-\locallabelalphawidth=\skip85
-\localshorthandwidth=\skip86
-\localshortjournalwidth=\skip87
-\localshortserieswidth=\skip88
-\localshorttitlewidth=\skip89
-\localshortauthorwidth=\skip90
-\localshorteditorwidth=\skip91
+\shorthandwidth=\skip81
+\shortjournalwidth=\skip82
+\shortserieswidth=\skip83
+\shorttitlewidth=\skip84
+\shortauthorwidth=\skip85
+\shorteditorwidth=\skip86
+\locallabelnumberwidth=\skip87
+\locallabelalphawidth=\skip88
+\localshorthandwidth=\skip89
+\localshortjournalwidth=\skip90
+\localshortserieswidth=\skip91
+\localshorttitlewidth=\skip92
+\localshortauthorwidth=\skip93
+\localshorteditorwidth=\skip94
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -973,7 +985,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen289
 \Gm@layouthoffset=\dimen290
 \Gm@layoutvoffset=\dimen291
-\Gm@dimlist=\toks43
+\Gm@dimlist=\toks49
 )
 (c:/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
@@ -1119,22 +1131,22 @@ Package: bidi 2020/05/17 v36.3 Bidirectional typesetting in plain TeX and LaTeX
 ****************************************************
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/biditools.sty
 Package: biditools 2020/05/13 v2 Programming tools for bidi package
-\@bidi@envbody=\toks44
-\@bidi@emptytoks=\toks45
+\@bidi@envbody=\toks50
+\@bidi@emptytoks=\toks51
 \bidi@poscount=\count499
 
 
 Package biditools Warning: Patching `\enddocument' failed on input line 916.
 
 \bidi@tempcountb=\count500
-\bidi@temptoksa=\toks46
-\bidi@temptoksb=\toks47
+\bidi@temptoksa=\toks52
+\bidi@temptoksb=\toks53
 \bidi@dummies=\count501
-\bidi@are@these@correct=\toks48
-\bidi@toks@lista=\toks49
-\bidi@toks@listb=\toks50
+\bidi@are@these@correct=\toks54
+\bidi@toks@lista=\toks55
+\bidi@toks@listb=\toks56
 \bidi@stack@length=\count502
-\bidi@empty@stack=\toks51
+\bidi@empty@stack=\toks57
 \bidi@looprepeat@depth=\count503
 ) (c:/texlive/2021/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
@@ -1168,14 +1180,14 @@ Package zref Info: New property: abspage on input line 66.
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/latex-xetex-bidi.def
 File: latex-xetex-bidi.def 2019/03/03 v1.3.7 bidi adaptations for `latex.ltx' f
 or XeTeX engine
-\bidi@n@everypar=\toks52
+\bidi@n@everypar=\toks58
 \bidi@column@check@number=\count505
 
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/footnote-xetex-bidi.def
 File: footnote-xetex-bidi.def 2017/08/09 v1.1 bidi footnote macros for XeTeX en
 gine
 \c@footdir@label=\count506
-\footdir@toks=\toks53
+\footdir@toks=\toks59
 )
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/article-xetex-bidi.def
 File: article-xetex-bidi.def 2017/06/09 v0.6 bidi adaptations for standard arti
@@ -1192,6 +1204,10 @@ ge for XeTeX engine
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/amstext-xetex-bidi.def
 File: amstext-xetex-bidi.def 2016/09/12 v0.2 bidi adaptations for amstext packa
 ge for XeTeX engine
+)
+(c:/texlive/2021/texmf-dist/tex/xelatex/bidi/amsthm-xetex-bidi.def
+File: amsthm-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for amsthm package
+ for XeTeX engine
 )
 (c:/texlive/2021/texmf-dist/tex/xelatex/bidi/caption-xetex-bidi.def
 File: caption-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for caption packa
@@ -1356,7 +1372,7 @@ mapping=persian-tex-text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 11.99997pt on input line 28.
+(Font)              scaled to size 11.99997pt on input line 29.
 
 Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 (fontspec)             New Roman' with options [Ligatures=TeX,Scale=1].
@@ -1391,7 +1407,7 @@ ext;"
 (fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
 text;"
 
-LaTeX Info: Redefining \latinfont on input line 29.
+LaTeX Info: Redefining \latinfont on input line 30.
 
 (c:/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -1441,27 +1457,27 @@ LaTeX Warning: Label `b1' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
-8.
+9.
  (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
 \c@lstlisting=\count511
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
@@ -1491,8 +1507,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' not found.
 
 No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 58.
-Package biblatex Info: Reference segment=0 on input line 58.
+Package biblatex Info: Reference section=0 on input line 59.
+Package biblatex Info: Reference segment=0 on input line 59.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1551,52 +1567,53 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 
 ])
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 17.27994pt on input line 84.
+(Font)              scaled to size 17.27994pt on input line 85.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 17.27994pt on input line 84.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
-(Font)              scaled to size 14.39996pt on input line 85.
-LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 14.39996pt on input line 85.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 87.
- [1]
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 108.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 109
-.
+(Font)              scaled to size 17.27994pt on input line 85.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
+
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 109
-.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 89.
+
 
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
-9.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 89
+.
 
 (c:/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 113.
+(Font)              scaled to size 10.0pt on input line 92.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 113.
+(Font)              scaled to size 7.0pt on input line 99.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 142.
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 142.
- [2] [3]
+(Font)              scaled to size 5.0pt on input line 99.
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
+(Font)              scaled to size 14.39996pt on input line 118.
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 214.
+(Font)              scaled to size 14.39996pt on input line 118.
+ [1] [2] [3]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 164.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 198.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
+(Font)              scaled to size 9.0pt on input line 198.
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
+[5]
+LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
+(Font)              scaled to size 11.99997pt on input line 270.
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 306--307
 [][]
  []
 
-[5]
+[7]
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
@@ -1710,39 +1727,39 @@ Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
- [6] [7]
-Overfull \hbox (285.04498pt too wide) in paragraph at lines 574--660
+ [8] [9]
+Overfull \hbox (285.04498pt too wide) in paragraph at lines 630--716
 [][][][] []
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 666--724
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 722--780
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 666--724
+Underfull \hbox (badness 10000) in paragraph at lines 722--780
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 666--724
+Underfull \hbox (badness 10000) in paragraph at lines 722--780
 [][]
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 756--757
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 812--813
 [][]\TU/TimesNewRoman(0)/m/n/10 https://medium.com/@amanatulla1606/vanishing-gr
 adient-problem-in-deep-learning-understanding-intuition-[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 758--759
+Underfull \hbox (badness 10000) in paragraph at lines 814--815
 [][]\TU/TimesNewRoman(0)/m/n/10 https://wandb.ai/ayush-thakur/dl-question-bank/
 reports/ReLU-vs-Sigmoid-Function-in-Deep-Neural-[]
  []
 
-[10] (./main.aux)
+[12] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1754,12 +1771,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41321 strings out of 476919
- 1006130 string characters out of 5825424
- 1964990 words of memory out of 5000000
- 60560 multiletter control sequences out of 15000+600000
+ 41396 strings out of 476919
+ 1007209 string characters out of 5825424
+ 1966279 words of memory out of 5000000
+ 60628 multiletter control sequences out of 15000+600000
  409335 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  102i,19n,122p,4798b,2288s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (11 pages).
+Output written on main.pdf (13 pages).
