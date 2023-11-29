@@ -116,14 +116,89 @@ $
 \section{}
 با توجه به اینکه در انتهای نمودار \lr{Loss} در \lr{training} بسیار کمتر از \lr{validation} است، پس شبکه دچار \lr{overfitting} شده است.
 \subsection{}
-افزایش عمق شبکه عصبی می‌تواند به افزایش \lr{overfitting} منجر شود. شبکه‌های عمیق‌تر ظرفیت بالاتری برای یادگیری الگوهای پیچیده دارند، اما اگر مجموعه داده کافی بزرگ نباشد، \lr{overfitting} را تشدید خواهد کرد. اگر \lr{overfitting} ناشی از حافظه‌ی شبکه برای یادگیری نویز در داده‌های آموزش باشد، افزایش عمق ممکن است وضعیت را بدتر کند. با این حال، لازم به ذکر است اگر \lr{overfitting} به دلیل عدم یادگیری مدل از الگوهای موجود باشد، یک شبکه عمیق‌تر ممکن است به تعمیم بیشتر کمک کند.
+افزایش عمق شبکه عصبی می‌تواند به افزایش \lr{overfitting} منجر شود. شبکه‌های عمیق‌تر ظرفیت بالاتری برای یادگیری الگوهای پیچیده دارند، اما اگر مجموعه داده کافی بزرگ نباشد، \lr{overfitting} را تشدید خواهد کرد. اگر \lr{overfitting} ناشی از ظرفیت شبکه برای یادگیری نویز در داده‌های آموزش باشد، افزایش عمق ممکن است وضعیت را بدتر کند. با این حال، لازم به ذکر است اگر \lr{overfitting} به دلیل عدم یادگیری مدل از الگوهای موجود باشد، یک شبکه عمیق‌تر ممکن است به تعمیم بیشتر کمک کند.
 
 \subsection{}
 توقف زودهنگام یک تکنیک جهت جلوگیری از \lr{overfitting} است که شامل نظارت بر عملکرد مدل در یک مجموعه اعتبارسنجی و متوقف کردن فرآیند آموزش هنگامی که عملکرد شبکه بهبود چشمگیری نمی‌یابد یا شروع به افت می‌کند. این ممکن است در جلوگیری از \lr{overfitting} مؤثر باشد چرا که به مدل کمک می‌کند که خوب با داده‌های ناشناخته تعمیم پیدا کند. اگر یک مدل در حال \lr{overfitting} باشد، تکنیک توقف زودهنگام می‌تواند جلوی ادامه یادگیری نویز در داده‌های آموزش را بگیرد و بنابراین توانایی بهتری در تعمیم به داده‌های جدید برای آن ایجاد کند.
 \subsection{}
 آموزش بیشتر بدون هیچ گونه \lr{regularization} احتمالا \lr{overfitting} را تشدید می‌کند. ممکن است مدل به طور زیادی به داده‌های آموزش فیت شود و نتواند به داده‌های جدید و ناشناخته تعمیم پیدا کند. با این حال، اگر \lr{overfitting} ناشی از عدم یادگیری مدل از الگوهای موجود در داده‌ها باشد، آموزش بیشتر ممکن است به مدل کمک کند تا به یک وضعیت بهتر همگرا شود.
 \subsection{}
-\lr{Data Augmentation} شامل اعمال تبدیلات مختلف بر داده‌های آموزش، مانند چرخش‌ها، وارونه‌ها و جابجایی‌ها می‌شود. این می‌تواند به مدل کمک کند تا مقاومت بیشتری در برابر \lr{overfitting} پیدا کرده و با تغییرات در داده ورودی بهتر تعمیم پیدا کند. \lr{Data Augmentation} تکنیک خصوصاً زمانی که مجموعه داده محدود است. این می‌تواند با ارائه مدل به یک طیف گسترده‌تر از تغییرات در داده‌های آموزش، از \lr{overfitting} کاسته و توانایی بهتری در تعمیم ایجاد کند.
+\lr{Data Augmentation} شامل اعمال تبدیلات مختلف بر داده‌های آموزش، مانند چرخش‌ها، وارونه‌ها و جابجایی‌ها می‌شود. این می‌تواند به مدل کمک کند تا مقاومت بیشتری در برابر \lr{overfitting} پیدا کرده و با تغییرات در داده ورودی بهتر تعمیم پیدا کند. \lr{Data Augmentation} خصوصاً زمانی که مجموعه داده محدود است، می‌تواند با ارائه مدل به یک طیف گسترده‌تر از تغییرات در داده‌های آموزش، از \lr{overfitting} کاسته و توانایی بهتری در تعمیم ایجاد کند.
+
+
+%4
+\section{}
+ابتدا تعریف می‌کنیم:
+\begin{latin}
+$
+\forall i \in \left\{ 1, 2, \cdots, K \right\}: \:\:\:\: u_i := z^{[2]}_i \\ \\
+A := \sum_{j = 1}^{K} e ^ {u_j}
+$
+\end{latin}
+
+\subsection{الف}
+\begin{latin}
+$
+\frac{\partial \hat{y}_k}{\partial z^{[2]}_k}
+= \frac{\partial \hat{y}_k}{\partial u_k}
+= \frac{\partial \left( \frac{e ^ {u_k}}{A} \right)}{\partial u_k}
+= \frac{\frac{\partial e ^ {u_k}}{\partial u_k} \times A  - \frac{\partial A}{\partial u_k} \times e ^ {u_k}}{A ^ 2}
+= \frac{e ^ {u_k}}{A} - \left( \frac{e ^ {u_k}}{A} \right) ^ {2}
+= \hat{y}_k - \hat{y} ^ 2_k 
+$
+\end{latin}
+
+\subsection{ب}
+\begin{latin}
+$
+\frac{\partial \hat{y}_k}{\partial z^{[2]}_i}
+= \frac{\partial \hat{y}_k}{\partial u_i}
+= \frac{\partial \left( \frac{e ^ {u_k}}{A} \right)}{\partial u_i}
+= \frac{\frac{\partial e ^ {u_k}}{\partial u_i} \times A  - \frac{\partial A}{\partial u_i} \times e ^ {u_k}}{A ^ 2}
+= 0 - \left( \frac{e ^ {u_i} e ^ {u_k}}{A ^ {2}} \right)
+= - \hat{y}_i \hat{y}_k
+$
+\end{latin}
+\subsection{ج}
+\begin{latin}
+$
+\frac{\partial L}{\partial z^{[2]}_i}
+= \frac{\partial L}{\partial u_i}
+= \frac{\partial \left( -\sum_{j = 1}^{K} y_j \log \hat{y}_j \right)}{\partial u_i}
+= -\sum_{j = 1}^{K} y_j \times \frac{\partial \left( \log \hat{y}_j \right)}{\partial u_i}
+= - 1 \times \frac{\partial \left( \log \hat{y}_k \right)}{\partial u_i}
+= - \frac{\partial \left( \log \hat{y}_k \right)}{\partial \hat{y}_k} \times \frac{\partial \hat{y}_k}{\partial u_i}
+= - \frac{1}{\hat{y}_k} \times \frac{\partial \hat{y}_k}{\partial u_i}
+\\
+= 
+     \begin{cases}
+       - \frac{1}{\hat{y}_k} \left( \hat{y}_k - \hat{y} ^ 2_k \right) &\quad i = k \\
+       - \frac{1}{\hat{y}_k} \left( - \hat{y}_i \hat{y}_k \right) &\quad i \neq k \\
+     \end{cases}
+=
+     \begin{cases}
+       \hat{y}_k - 1 &\quad i = k \\
+       \hat{y}_i &\quad i \neq k \\
+     \end{cases}
+$
+\end{latin}
+\subsection{د}
+\subsection{ه}
+مشکل این تابع در محاسبات عددی از آنجا آغاز می‌شود که اگر $z_i$ها اعداد بزرگی باشند، ممکن است شبکه با مشکلات پایداری عددی روبرو شود. از آنجایی که اعداد ممیز شناور محدودیت دارند، عملیات اعداد ممیز شناور با دقت محدودی انجام شود که ممکن است به کاهش دقت محاسبات منجر شود. این پدیده به عنوان "انفجار گرادیان" نیز شناخته می‌شود.
+
+برای جلوگیری از \lr{overflow} باید مانع از زیاد بزرگ شدن اعداد شویم. البته \lr{underflow} هم در این حالت ممکن است رخ دهد و این ایده‌آل ما نیست؛ در این حالت مقادیر عبارات 0 می‌شوند. اما این بهتر از مقدار بی‌نهایت یا تعریف نشده است.
+
+فرمول اصلاح شده به دلایل زیر می‌تواند به حل این مشکل کمک کند:
+\begin{enumerate}
+\item از آنجایی که
+$z^{[2]}_i - m \le 0$
+همه مقادیر
+$e ^ {z ^ {[2]}_i - m}$
+بین صفر و یک خواهند بود. این مشکل \lr{overflow} را برطرف می‌کند (البته مشکل \lr{underflow} سر جایش باقی است).
+\item حداقل یکی از مقادیر نمایی برابر 1 است (در حالتی که
+$z^{[2]}_i = m$
+باشد). در این صورت این را تضمین می‌کند که حداقل یک مقدار دچار \lr{underflow} نمی‌شود. همچنین مخرج کسر همواره بزرگتر مساوی 1 است که از تقسیم بر صفر جلوگیری می‌کند. و در نهایت حداقل 1 مقدار غیر صفر در صورت کسر وجود دارد و \lr{softmax} نمی‌تواند یک بردار صفر خروجی دهد.
+\end{enumerate}
 
 
 
@@ -808,11 +883,8 @@ $
 
 \resetlatinfont
 
-\bibitem{b1} https://www.shiksha.com/online-courses/articles/relu-and-sigmoid-activation-function/
-\bibitem{b1} https://medium.com/@amanatulla1606/vanishing-gradient-problem-in-deep-learning-understanding-intuition-and-solutions-da90ef4ecb54
-\bibitem{b1} https://en.wikipedia.org/wiki/Rectifier\_(neural\_networks)
-\bibitem{b1} https://wandb.ai/ayush-thakur/dl-question-bank/reports/ReLU-vs-Sigmoid-Function-in-Deep-Neural-Networks--VmlldzoyMDk0MzI
-\bibitem{b1} https://medium.com/swlh/why-are-neural-nets-non-linear-a46756c2d67f
+\bibitem{b1} https://jaykmody.com/blog/stable-softmax/
+
 \end{LTRitems}
 
 \end{thebibliography}
