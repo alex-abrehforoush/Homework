@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  29 NOV 2023 16:50
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.27)  30 NOV 2023 20:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1441,7 +1441,11 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
 \@quotelevel=\count509
 \@quotereset=\count510
- (./main.aux)
+ (./main.aux
+
+LaTeX Warning: Label `b1' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
@@ -1455,8 +1459,7 @@ LaTeX Font Info:    ... okay on input line 59.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
 9.
-
-(c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
+ (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 59.
@@ -1586,22 +1589,22 @@ LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
 (Font)              scaled to size 14.39996pt on input line 118.
  [1] [2] [3] [4]
+[5]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 239.
+(Font)              scaled to size 10.0pt on input line 295.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 273.
+(Font)              scaled to size 9.0pt on input line 329.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 273.
-
-[5] [6]
+(Font)              scaled to size 9.0pt on input line 329.
+ [6] [7]
 LaTeX Font Info:    Font shape `TU/B-NAZANIN.TTF(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 345.
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 381--382
+(Font)              scaled to size 11.99997pt on input line 401.
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
 [][]
  []
 
-[8]
+[9]
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
@@ -1715,29 +1718,32 @@ Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
- [9] [10]
-Overfull \hbox (285.04498pt too wide) in paragraph at lines 705--791
+ [10] [11]
+Overfull \hbox (285.04498pt too wide) in paragraph at lines 761--847
 [][][][] []
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 797--855
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 853--911
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 797--855
+Underfull \hbox (badness 10000) in paragraph at lines 853--911
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 797--855
+Underfull \hbox (badness 10000) in paragraph at lines 853--911
 [][]
  []
 
-[12] [13] (./main.aux)
+[13] [14] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
@@ -1746,10 +1752,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  41396 strings out of 476919
  1007209 string characters out of 5825424
- 1966241 words of memory out of 5000000
+ 1965280 words of memory out of 5000000
  60628 multiletter control sequences out of 15000+600000
  409335 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  102i,19n,122p,4798b,2288s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (14 pages).
+Output written on main.pdf (15 pages).
