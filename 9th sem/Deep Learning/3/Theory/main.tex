@@ -1,0 +1,127 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage{neuralnetwork}
+\usepackage{pgfplots}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage[font={small,it}]{caption}
+\usepackage{placeins}
+\usepackage{tikz}
+\usepackage{xepersian}
+
+\usetikzlibrary{positioning, arrows.meta}
+
+\pgfplotsset{width=8cm,compat=1.17}
+
+%\DeclareMathOperator*{\btie}{\bowtie}
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف سوم درس یادگیری عمیق}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+%%%%%%%%%%
+\lstset
+{
+    language=[latex]tex,
+    basicstyle=\ttfamily,
+    commentstyle=\color{black},
+    columns=fullflexible,
+    keepspaces=true,
+    upquote=true,
+    showstringspaces=false,
+    morestring=[s]\\\%,
+    stringstyle=\color{black},
+}
+%%%%%%%%%%
+%beginMatlab
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%endMatlab
+\begin{document}
+%beginMatlab
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%endMatlab
+\input{titlepage}
+
+%\tableofcontents
+\newpage
+
+
+%1
+\section{}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[>=Stealth, node distance=2cm]
+        % A: Input Image
+        \node (A) [draw, minimum size=1.5cm] at (0,0) {A: 7\\Size: $28 \times 28 \times 1$\\Params: 0};
+
+        % B: Convolutional Layer 1
+        \node (B) [draw, right=of A, minimum size=1.5cm] {B};
+        \draw [->] (A) -- (B) node[midway, above] {5x5, s=1, k=6, p=0};
+    \end{tikzpicture}
+    \caption{Your caption here}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1} https://www.shiksha.com/online-courses/articles/relu-and-sigmoid-activation-function/
+\bibitem{b1} https://medium.com/@amanatulla1606/vanishing-gradient-problem-in-deep-learning-understanding-intuition-and-solutions-da90ef4ecb54
+\bibitem{b1} https://en.wikipedia.org/wiki/Rectifier\_(neural\_networks)
+\bibitem{b1} https://wandb.ai/ayush-thakur/dl-question-bank/reports/ReLU-vs-Sigmoid-Function-in-Deep-Neural-Networks--VmlldzoyMDk0MzI
+\bibitem{b1} https://medium.com/swlh/why-are-neural-nets-non-linear-a46756c2d67f
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}
