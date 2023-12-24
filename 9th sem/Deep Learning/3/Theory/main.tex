@@ -21,7 +21,11 @@
 \usepackage{tikz}
 \usepackage{xepersian}
 
-\usetikzlibrary{positioning, arrows.meta}
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{fadings}
 
 \pgfplotsset{width=8cm,compat=1.17}
 
@@ -85,18 +89,94 @@
 
 %1
 \section{}
-\begin{figure}
-    \centering
-    \begin{tikzpicture}[>=Stealth, node distance=2cm]
-        % A: Input Image
-        \node (A) [draw, minimum size=1.5cm] at (0,0) {A: 7\\Size: $28 \times 28 \times 1$\\Params: 0};
 
-        % B: Convolutional Layer 1
-        \node (B) [draw, right=of A, minimum size=1.5cm] {B};
-        \draw [->] (A) -- (B) node[midway, above] {5x5, s=1, k=6, p=0};
-    \end{tikzpicture}
-    \caption{Your caption here}
+%2
+\section{}
+
+%3
+\section{}
+
+%4
+\section{}
+
+%5
+\section{}
+
+%6
+\section{}
+
+%7
+\section{}
+\begin{latin}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\node at (0.5,-1){\begin{tabular}{c}$Size = 28 * 28 * 1$\\$Params = 0$\end{tabular}};
+		
+		\draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0);
+		
+		\node at (3,3.5){\begin{tabular}{c}CONV1\\$Size = xxx * yyy * zzz$\\$Params = 0$\end{tabular}};
+		
+		\draw[fill=blue,opacity=0.2,draw=blue] (2.75,1.25) -- (3.75,1.25) -- (3.75,2.25) -- (2.75,2.25) -- (2.75,1.25);
+		\draw[fill=blue,opacity=0.2,draw=blue] (2.5,1) -- (3.5,1) -- (3.5,2) -- (2.5,2) -- (2.5,1);
+		\draw[fill=blue,opacity=0.2,draw=blue] (2.25,0.75) -- (3.25,0.75) -- (3.25,1.75) -- (2.25,1.75) -- (2.25,0.75);
+		\draw[fill=blue,opacity=0.2,draw=blue] (2,0.5) -- (3,0.5) -- (3,1.5) -- (2,1.5) -- (2,0.5);
+		\draw[fill=blue,opacity=0.2,draw=blue] (1.75,0.25) -- (2.75,0.25) -- (2.75,1.25) -- (1.75,1.25) -- (1.75,0.25);
+		\draw[fill=blue,opacity=0.2,draw=blue] (1.5,0) -- (2.5,0) -- (2.5,1) -- (1.5,1) -- (1.5,0);
+		
+		\node at (4.5,-1){\begin{tabular}{c}layer $l = 3$\end{tabular}};
+		
+		\draw[fill=yellow,opacity=0.2,draw=yellow] (5,1.25) -- (5.75,1.25) -- (5.75,2) -- (5,2) -- (5,1.25);
+		\draw[fill=yellow,opacity=0.2,draw=yellow] (4.75,1) -- (5.5,1) -- (5.5,1.75) -- (4.75,1.75) -- (4.75,1);
+		\draw[fill=yellow,opacity=0.2,draw=yellow] (4.5,0.75) -- (5.25,0.75) -- (5.25,1.5) -- (4.5,1.5) -- (4.5,0.75);
+		\draw[fill=yellow,opacity=0.2,draw=yellow] (4.25,0.5) -- (5,0.5) -- (5,1.25) -- (4.25,1.25) -- (4.25,0.5);
+		\draw[fill=yellow,opacity=0.2,draw=yellow] (4,0.25) -- (4.75,0.25) -- (4.75,1) -- (4,1) -- (4,0.25);
+		\draw[fill=yellow,opacity=0.2,draw=yellow] (3.75,0) -- (4.5,0) -- (4.5,0.75) -- (3.75,0.75) -- (3.75,0);
+		
+		\node at (7,3.5){\begin{tabular}{c}CONV2\\layer $l = 4$\end{tabular}};
+		
+		\draw[fill=blue,opacity=0.2,draw=blue] (7.5,1.75) -- (8.25,1.75) -- (8.25,2.5) -- (7.5,2.5) -- (7.5,1.75);
+		\draw[fill=blue,opacity=0.2,draw=blue] (7.25,1.5) -- (8,1.5) -- (8,2.25) -- (7.25,2.25) -- (7.25,1.5);
+		\draw[fill=blue,opacity=0.2,draw=blue] (7,1.25) -- (7.75,1.25) -- (7.75,2) -- (7,2) -- (7,1.25);
+		\draw[fill=blue,opacity=0.2,draw=blue] (6.75,1) -- (7.5,1) -- (7.5,1.75) -- (6.75,1.75) -- (6.75,1);
+		\draw[fill=blue,opacity=0.2,draw=blue] (6.5,0.75) -- (7.25,0.75) -- (7.25,1.5) -- (6.5,1.5) -- (6.5,0.75);
+		\draw[fill=blue,opacity=0.2,draw=blue] (6.25,0.5) -- (7,0.5) -- (7,1.25) -- (6.25,1.25) -- (6.25,0.5);
+		\draw[fill=blue,opacity=0.2,draw=blue] (6,0.25) -- (6.75,0.25) -- (6.75,1) -- (6,1) -- (6,0.25);
+		\draw[fill=blue,opacity=0.2,draw=blue] (5.75,0) -- (6.5,0) -- (6.5,0.75) -- (5.75,0.75) -- (5.75,0);
+		
+		\node at (9.5,-1){\begin{tabular}{c}layer $l = 6$\end{tabular}};
+		
+		\draw[fill=yellow,opacity=0.2,draw=yellow] (9.5,1.25) -- (10.25,1.25) -- (10.25,2) -- (9.5,2) -- (9.5,1.25);
+		\draw[fill=yellow,opacity=0.2,draw=yellow] (9.25,1) -- (10,1) -- (10,1.75) -- (9.25,1.75) -- (9.25,1);
+		\draw[fill=yellow,opacity=0.2,draw=yellow] (9,0.75) -- (9.75,0.75) -- (9.75,1.5) -- (9,1.5) -- (9,0.75);
+		\draw[fill=yellow,opacity=0.2,draw=yellow] (8.75,0.5) -- (9.5,0.5) -- (9.5,1.25) -- (8.75,1.25) -- (8.75,0.5);
+		\draw[fill=yellow,opacity=0.2,draw=yellow] (8.5,0.25) -- (9.25,0.25) -- (9.25,1) -- (8.5,1) -- (8.5,0.25);
+		\draw[fill=yellow,opacity=0.2,draw=yellow] (8.25,0) -- (9,0) -- (9,0.75) -- (8.25,0.75) -- (8.25,0);
+		
+		\node at (12,3.5){\begin{tabular}{c}FC\\layer $l = 7$\end{tabular}};
+		
+		\draw[fill=black,draw=black,opacity=0.5] (10.5,0) -- (11,0) -- (12.5,1.75) -- (12,1.75) -- (10.5,0);
+		
+		\node at (13,-1){\begin{tabular}{c}FC\\layer $l = 8$\end{tabular}};
+		
+		\draw[fill=black,draw=black,opacity=0.5] (12.5,0.5) -- (13,0.5) -- (13.65,1.25) -- (13.15,1.25) -- (12.5,0.5);
+
+		\node at (14.5,3.5){\begin{tabular}{c}Softmax\\layer $l = 9$\end{tabular}};
+		
+		\draw[fill=black,draw=black,opacity=0.5] (14,0.5) -- (14.5,0.5) -- (15.15,1.25) -- (14.65,1.25) -- (14,0.5);
+	\end{tikzpicture}
+	\caption[Architecture of a traditional convolutional neural network.]{The architecture of the original convolutional neural network, as introduced by LeCun et al. (1989), alternates between convolutional layers including hyperbolic tangent non-linearities and subsampling layers. In this illustration, the convolutional layers already include non-linearities and, thus, a convolutional layer actually represents two layers. The feature maps of the final subsampling layer are then fed into the actual classifier consisting of an arbitrary number of fully connected layers. The output layer usually uses softmax activation functions.}
+	\label{fig:traditional-convolutional-network}
 \end{figure}
+
+$
+\text{size after applying convolution layer} = \left\lfloor \frac{n + 2p - f}{s} + 1 \right\rfloor
+$
+
+\subsection{1}
+
+
+\end{latin}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
