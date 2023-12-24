@@ -89,6 +89,54 @@
 
 %1
 \section{}
+استفاده از تصاویر در شبکه‌های عصبی معمولی (\lr{MLP}) دارای مشکلاتی بود که با ظهور شبکه‌های عصبی کانولوشنی (\lr{CNN}) حل شد:
+\begin{enumerate}
+
+\item تعداد پارامترها و اتصالات:
+
+در \lr{MLP}، هر نورون لایه ورودی با تمام نورون‌های لایه خروجی متصل بود. این اتصالات کامل منجر به افزایش سریع تعداد پارامترها می‌شد، که با تعداد بزرگ تصاویر (از نظر تعداد پیکسل) به سرعت غیرقابل مدیریت می‌شد.
+    در \lr{CNN}، از لایه‌های کانولوشنی برای به اشتراک‌گذاری ویژگی‌ها در تصاویر استفاده می‌شود. این لایه‌ها با اعمال فیلترها (کرنل‌ها) به تصویر، ویژگی‌های مختلف را استخراج می‌کنند و این باعث کاهش تعداد پارامترها و اتصالات شبکه می‌شود. به عبارت دیگر، \lr{CNN} با استفاده از به اشتراک‌گذاری ویژگی‌ها، تعداد پارامترها را به شدت کاهش می‌دهد.
+
+\item مقاومت به تغییرات مکانی:
+
+\lr{MLP} به طور کامل حساس به تغییرات مکانی در تصویر بود. به عبارت دیگر، اگر یک الگو یا ویژگی در یک مکان خاص در تصویر وجود داشت، \lr{MLP} قادر به تشخیص آن در سایر نقاط تصویر نبود. \lr{CNN} با استفاده از لایه‌های کانولوشنی و استفاده از فیلترها، از این قابلیت برای شناسایی ویژگی‌ها در تمام تصویر به خوبی استفاده می‌کند. به این ترتیب، شبکه \lr{CNN} مقاوم‌تر به تغییرات مکانی در تصاویر می‌شود و توانایی خود را در تشخیص الگوها و ویژگی‌ها در مکان‌های مختلف تصویر افزایش می‌دهد.
+
+\item عدم حفظ ساختار مکانی:
+\lr{MLP}، ساختار مکانی تصویر حذف می‌شد و هر پیکسل به عنوان یک ویژگی مستقل در نظر گرفته می‌شد. این عدم حفظ ساختار مکانی اطلاعات مهمی را از دست می‌داد، به خصوص برای تصاویری که الگوها و اطلاعات مکانی مهمی دارند.
+    \lr{CNN} با استفاده از لایه‌های کانولوشنی و اعمال فیلترها، قابلیت حفظ ساختار مکانی را به شبکه اضافه کرده و اجازه می‌دهد تا ویژگی‌ها به صورت محلی در تصویر استخراج شوند. این امکان باعث می‌شود که شبکه بتواند اطلاعات مکانی را مورد توجه قرار داده و الگوهای مکانی پیچیده‌تری را در تصاویر تشخیص دهد.
+
+\item تفسیرپذیری پایین:
+
+    \lr{MLP}‌ها به دلیل تعداد بسیار زیاد پارامترها، به صورت کلی دارای تفسیرپذیری پایین بودند. یعنی مشخص کردن دقیق اینکه شبکه چگونه تصمیمات خود را اتخاذ کرده است، معمولاً مشکل بود.
+    \lr{CNN} با تعداد کمتر پارامترها و استفاده از فیلترها، قابلیت تفسیرپذیری بیشتری دارد. این به این معناست که می‌توان بهتر فهمید که شبکه در تصمیم‌گیری‌های خود چگونه از ویژگی‌ها استفاده می‌کند.
+
+\item حساسیت به اندازه تصویر:
+
+    \lr{MLP}‌ها به صورت ثابت و بدون توجه به ابعاد تصویر (مثلاً ابعاد ورودی ثابت دارای تعداد ثابت نورون‌ها) عمل می‌کردند. این باعث می‌شد که اگر تصویر ورودی ابعاد متفاوتی داشته باشد، شبکه به طور مستقیم با آن کار نکند.
+    \lr{CNN} با استفاده از لایه‌های کانولوشنی می‌تواند به تصاویر با ابعاد مختلف و با استفاده از فیلترهای متفاوت به خوبی پاسخ دهد و حساسیت کمتری نسبت به ابعاد تصویر نشان دهد.
+
+\item برخورد با تعداد زیاد پارامترها:
+
+    با افزایش اندازه تصاویر، تعداد پارامترهای مورد نیاز برای یک \lr{MLP} به صورت نمایی افزایش می‌یابد. این موضوع باعث ایجاد مدل‌های بسیار پیچیده و سنگین می‌شود که دشواری در آموزش، نگهداری و استفاده از آن‌ها را افزایش می‌دهد.
+
+\item عدم توانایی در مدل‌سازی ویژگی‌های سلسله‌مراتبی:
+
+    \lr{MLP} به طور مستقیم قادر به مدل‌سازی ویژگی‌های سلسله‌مراتبی و پیچیده تصاویر نیستند. به عبارت دیگر، آن‌ها قادر به استخراج ویژگی‌های موقعیت مکانی، الگوها و ساختارهای سلسله‌مراتبی نیستند که در بینایی ماشین بسیار مهم است.
+
+\item حساسیت به تغییرات شدت نور و ظروف نوری:
+
+    \lr{MLP} در مقابل تغییرات شدت نور و ظروف نوری حساس هستند. این به این معناست که تصاویر با نور متفاوت یا ظروف نوری متفاوت ممکن است تأثیر زیادی بر عملکرد \lr{MLP} داشته باشند.
+
+\item اشتباه‌زاهای غیرقابل کنترل:
+
+    به دلیل تعداد بالای پارامترها و عدم استفاده از الگوهای مکانی، \lr{MLP}‌ها ممکن است به آموزش بیش از حد به داده‌ها وابسته شوند و اشتباه‌زاهای غیرقابل کنترل در عملکرد آن‌ها ایجاد شود.
+
+\item کارایی ضعیف در مسائل تشخیص الگو:
+
+    در مسائل تشخیص الگو و ویژگی‌های پیچیده در تصاویر، \lr{MLP}‌ها عملکرد ضعیفی دارند. زیرا این مدل‌ها نمی‌توانند ویژگی‌های سلسله‌مراتبی و پیچیده را به صورت کامل مدل کنند.
+
+شبکه‌های عصبی کانولوشنی (\lr{CNN}) با توجه به مزایایی که در پردازش تصاویر دارند، این مشکلات را به حداقل می‌رسانند و بهبودهای مهمی را در زمینه بینایی ماشین و پردازش تصویر به ارمغان آورده‌اند.
+\end{enumerate}
 
 %2
 \section{}
@@ -98,24 +146,15 @@
 
 %4
 \section{}
-
-%5
-\section{}
-
-%6
-\section{}
-
-%7
-\section{}
 \begin{latin}
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\node at (0.5,-1){\begin{tabular}{c}$Size = 28 * 28 * 1$\\$Params = 0$\end{tabular}};
+		\node at (0.5,-1){\begin{tabular}{c}$Size = 28 \times 28 \times 1$\\$Params = 0$\end{tabular}};
 		
 		\draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0);
 		
-		\node at (3,3.5){\begin{tabular}{c}CONV1\\$Size = xxx * yyy * zzz$\\$Params = 0$\end{tabular}};
+		\node at (3,3.5){\begin{tabular}{c}CONV1\\$Size = 24 \times 24 \times 6$\\$Params = 0$\end{tabular}};
 		
 		\draw[fill=blue,opacity=0.2,draw=blue] (2.75,1.25) -- (3.75,1.25) -- (3.75,2.25) -- (2.75,2.25) -- (2.75,1.25);
 		\draw[fill=blue,opacity=0.2,draw=blue] (2.5,1) -- (3.5,1) -- (3.5,2) -- (2.5,2) -- (2.5,1);
@@ -124,7 +163,7 @@
 		\draw[fill=blue,opacity=0.2,draw=blue] (1.75,0.25) -- (2.75,0.25) -- (2.75,1.25) -- (1.75,1.25) -- (1.75,0.25);
 		\draw[fill=blue,opacity=0.2,draw=blue] (1.5,0) -- (2.5,0) -- (2.5,1) -- (1.5,1) -- (1.5,0);
 		
-		\node at (4.5,-1){\begin{tabular}{c}layer $l = 3$\end{tabular}};
+		\node at (4.5,-1){\begin{tabular}{c}AVG POOL1\\$Size = 12 \times 12 \times 6$\\$Params = 0$\end{tabular}};
 		
 		\draw[fill=yellow,opacity=0.2,draw=yellow] (5,1.25) -- (5.75,1.25) -- (5.75,2) -- (5,2) -- (5,1.25);
 		\draw[fill=yellow,opacity=0.2,draw=yellow] (4.75,1) -- (5.5,1) -- (5.5,1.75) -- (4.75,1.75) -- (4.75,1);
@@ -133,7 +172,7 @@
 		\draw[fill=yellow,opacity=0.2,draw=yellow] (4,0.25) -- (4.75,0.25) -- (4.75,1) -- (4,1) -- (4,0.25);
 		\draw[fill=yellow,opacity=0.2,draw=yellow] (3.75,0) -- (4.5,0) -- (4.5,0.75) -- (3.75,0.75) -- (3.75,0);
 		
-		\node at (7,3.5){\begin{tabular}{c}CONV2\\layer $l = 4$\end{tabular}};
+		\node at (7.5,3.5){\begin{tabular}{c}CONV2\\$Size = 8 \times 8 \times 16$\\$Params = 0$\end{tabular}};
 		
 		\draw[fill=blue,opacity=0.2,draw=blue] (7.5,1.75) -- (8.25,1.75) -- (8.25,2.5) -- (7.5,2.5) -- (7.5,1.75);
 		\draw[fill=blue,opacity=0.2,draw=blue] (7.25,1.5) -- (8,1.5) -- (8,2.25) -- (7.25,2.25) -- (7.25,1.5);
@@ -144,7 +183,7 @@
 		\draw[fill=blue,opacity=0.2,draw=blue] (6,0.25) -- (6.75,0.25) -- (6.75,1) -- (6,1) -- (6,0.25);
 		\draw[fill=blue,opacity=0.2,draw=blue] (5.75,0) -- (6.5,0) -- (6.5,0.75) -- (5.75,0.75) -- (5.75,0);
 		
-		\node at (9.5,-1){\begin{tabular}{c}layer $l = 6$\end{tabular}};
+		\node at (8.5,-1){\begin{tabular}{c}AVG POOL2\\$Size = 4 \times 4 \times 16$\\$Params = 0$\end{tabular}};
 		
 		\draw[fill=yellow,opacity=0.2,draw=yellow] (9.5,1.25) -- (10.25,1.25) -- (10.25,2) -- (9.5,2) -- (9.5,1.25);
 		\draw[fill=yellow,opacity=0.2,draw=yellow] (9.25,1) -- (10,1) -- (10,1.75) -- (9.25,1.75) -- (9.25,1);
@@ -165,18 +204,88 @@
 		
 		\draw[fill=black,draw=black,opacity=0.5] (14,0.5) -- (14.5,0.5) -- (15.15,1.25) -- (14.65,1.25) -- (14,0.5);
 	\end{tikzpicture}
-	\caption[Architecture of a traditional convolutional neural network.]{The architecture of the original convolutional neural network, as introduced by LeCun et al. (1989), alternates between convolutional layers including hyperbolic tangent non-linearities and subsampling layers. In this illustration, the convolutional layers already include non-linearities and, thus, a convolutional layer actually represents two layers. The feature maps of the final subsampling layer are then fed into the actual classifier consisting of an arbitrary number of fully connected layers. The output layer usually uses softmax activation functions.}
+	\caption{}
 	\label{fig:traditional-convolutional-network}
 \end{figure}
 
 $
-\text{size after applying convolution layer} = \left\lfloor \frac{n + 2p - f}{s} + 1 \right\rfloor
+\text{size after applying convolution layer} = \left\lfloor \frac{n + 2p - f}{s} + 1 \right\rfloor \times \left\lfloor \frac{n + 2p - f}{s} + 1 \right\rfloor \times k
 $
 
-\subsection{1}
+\subsection*{Input Layer:}
+\begin{itemize}
+    \item Size: $28 \times 28 \times 1$
+    \item Params: $0$
+    \item Number of Channels: 1
+\end{itemize}
 
+\subsection*{CONV1 Layer:}
+\begin{itemize}
+    \item Filter size: $5 \times 5$
+    \item Stride: 1
+    \item Number of filters ($k$): 6
+    \item Padding: 0
+    \item Size: $\left\lfloor \frac{28 + 2 \times 0 - 5}{1} + 1 \right\rfloor \times \left\lfloor \frac{28 + 2 \times 0 - 5}{1} + 1 \right\rfloor \times 6 = 24 \times 24 \times 6$
+    \item Params: $(5 \times 5 \times 1 + 1) \times 6 = 156$ (weights + bias for each filter)
+\end{itemize}
+
+\subsection*{Average Pooling Layer 1:}
+\begin{itemize}
+    \item Filter size: $2 \times 2$
+    \item Stride: 2
+    \item Size: $\left\lfloor \frac{24 + 2 \times 0 - 2}{2} + 1 \right\rfloor \times \left\lfloor \frac{24 + 2 \times 0 - 2}{2} + 1 \right\rfloor \times 6 = 12 \times 12 \times 6$
+    \item Params: $0$
+\end{itemize}
+
+\subsection*{CONV2 Layer:}
+\begin{itemize}
+    \item Filter size: $5 \times 5$
+    \item Stride: 1
+    \item Number of filters ($k$): 16
+    \item Padding: 0
+    \item Size: $\left\lfloor \frac{12 + 2 \times 0 - 5}{1} + 1 \right\rfloor \times \left\lfloor \frac{12 + 2 \times 0 - 5}{1} + 1 \right\rfloor \times 16 = 8 \times 8 \times 16$
+    \item Params: $(5 \times 5 \times 6 + 1) \times 16 = 2416$ (weights + bias for each filter)
+\end{itemize}
+
+\subsection*{Average Pooling Layer 2:}
+\begin{itemize}
+    \item Filter size: $2 \times 2$
+    \item Stride: 2
+    \item Size: $\left\lfloor \frac{8 + 2 \times 0 - 2}{2} + 1 \right\rfloor \times \left\lfloor \frac{8 + 2 \times 0 - 2}{2} + 1 \right\rfloor \times 16 = 4 \times 4 \times 16$
+    \item Params: $0$
+\end{itemize}
+
+\subsection*{FC1 Layer (Fully Connected):}
+\begin{itemize}
+    \item Number of neurons: 128
+    \item Params: $(4 \times 4 \times 16 + 1) \times 128 = 32896$ (weights + bias for each neuron)
+\end{itemize}
+
+\subsection*{FC2 Layer (Fully Connected):}
+\begin{itemize}
+    \item Number of neurons: 64
+    \item Params: $(128 + 1) \times 64 = 8256$ (weights + bias for each neuron)
+\end{itemize}
+
+\subsection*{Softmax Layer:}
+\begin{itemize}
+    \item Number of neurons: 10 (assuming classification)
+    \item Params: $(64 + 1) \times 10 = 650$ (weights + bias for each class)
+\end{itemize}
+
+$\textbf{Sum Parameters} = 156 + 2416 + 32896 + 8256 + 650 = 44374$
 
 \end{latin}
+
+
+%5
+\section{}
+
+%6
+\section{}
+
+%7
+\section{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
