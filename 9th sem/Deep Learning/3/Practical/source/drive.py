@@ -150,7 +150,7 @@ if __name__ == '__main__':
 
     # define model
     # model = LeNet()
-    model = NetworkNvidia()
+    model = SelfDriveCarNetwork()
 
     # check that model version is same as local PyTorch version
     try:

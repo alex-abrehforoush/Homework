@@ -1,38 +1,10 @@
-"""
-CNN model architecture.
-
-@author: Zhenye Na - https://github.com/Zhenye-Na
-@reference: "End to End Learning for Self-Driving Cars", arXiv:1604.07316
-"""
-
 import torch.nn as nn
 import torch.nn.functional as F
 
 
-class NetworkNvidia(nn.Module):
-    """NVIDIA model used in the paper."""
-
+class SelfDriveCarNetwork(nn.Module):
     def __init__(self):
-        """Initialize NVIDIA model.
-
-        NVIDIA model used
-            Image normalization to avoid saturation and make gradients work better.
-            Convolution: 5x5, filter: 24, strides: 2x2, activation: ELU
-            Convolution: 5x5, filter: 36, strides: 2x2, activation: ELU
-            Convolution: 5x5, filter: 48, strides: 2x2, activation: ELU
-            Convolution: 3x3, filter: 64, strides: 1x1, activation: ELU
-            Convolution: 3x3, filter: 64, strides: 1x1, activation: ELU
-            Drop out (0.5)
-            Fully connected: neurons: 100, activation: ELU
-            Fully connected: neurons: 50, activation: ELU
-            Fully connected: neurons: 10, activation: ELU
-            Fully connected: neurons: 1 (output)
-
-        the convolution layers are meant to handle feature engineering.
-        the fully connected layer for predicting the steering angle.
-        the elu activation function is for taking care of vanishing gradient problem.
-        """
-        super(NetworkNvidia, self).__init__()
+        super(SelfDriveCarNetwork, self).__init__()
         self.conv_layers = nn.Sequential(
             nn.Conv2d(3, 24, 5, stride=2),
             nn.ELU(),
@@ -55,7 +27,6 @@ class NetworkNvidia(nn.Module):
         )
 
     def forward(self, input):
-        """Forward pass."""
         input = input.view(input.size(0), 3, 70, 320)
         output = self.conv_layers(input)
         # print(output.shape)
