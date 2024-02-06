@@ -1,0 +1,688 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage{neuralnetwork}
+\usepackage{pgfplots}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage[font={small,it}]{caption}
+\usepackage{placeins}
+\usepackage{tikz}
+\usepackage{xepersian}
+
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{fadings}
+
+\pgfplotsset{width=8cm,compat=1.17}
+
+%\DeclareMathOperator*{\btie}{\bowtie}
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف چهارم درس یادگیری عمیق}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+%%%%%%%%%%
+\lstset
+{
+    language=[latex]tex,
+    basicstyle=\ttfamily,
+    commentstyle=\color{black},
+    columns=fullflexible,
+    keepspaces=true,
+    upquote=true,
+    showstringspaces=false,
+    morestring=[s]\\\%,
+    stringstyle=\color{black},
+}
+%%%%%%%%%%
+%beginMatlab
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%endMatlab
+\begin{document}
+%beginMatlab
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%endMatlab
+\input{titlepage}
+
+%\tableofcontents
+\newpage
+
+
+%1
+\section{}
+
+\begin{latin}
+Two common approaches are as follows:
+\subsection{Develop Model Approach}
+\begin{enumerate}
+    \item Select Source Task. You must select a related predictive modeling problem with an abundance of data where there is some relationship in the input data, output data, and/or concepts learned during the mapping from input to output data.
+    \item Develop Source Model. Next, you must develop a skillful model for this first task. The model must be better than a naive model to ensure that some feature learning has been performed.
+    \item Reuse Model. The model fit on the source task can then be used as the starting point for a model on the second task of interest. This may involve using all or parts of the model, depending on the modeling technique used.
+    \item Tune Model. Optionally, the model may need to be adapted or refined on the input-output pair data available for the task of interest.
+\end{enumerate}
+
+\subsection{Pre-trained Model Approach}
+\begin{enumerate}
+
+    \item Select Source Model. A pre-trained source model is chosen from available models. Many research institutions release models on large and challenging datasets that may be included in the pool of candidate models from which to choose from.
+    \item Reuse Model. The model pre-trained model can then be used as the starting point for a model on the second task of interest. This may involve using all or parts of the model, depending on the modeling technique used.
+    \item Tune Model. Optionally, the model may need to be adapted or refined on the input-output pair data available for the task of interest.
+
+\end{enumerate}
+This second type of transfer learning is common in the field of deep learning.
+
+The paper is employing the "Pre-trained Model Approach" for transfer learning. Here are the key points supporting this conclusion:
+
+\begin{enumerate}
+    \item Selection of Source Model:
+        The abstract mentions the use of a "high-capacity convolutional neural network (CNN)" for the proposed detection algorithm.
+        The paper references the success of Krizhevsky et al. [25] in 2012, which rekindled interest in CNNs and achieved higher image classification accuracy on the ImageNet challenge.
+
+    \item Reuse of Pre-trained Model:
+        The abstract explicitly mentions the approach of "supervised pre-training for an auxiliary task, followed by domain-specific fine-tuning," indicating the utilization of a pre-trained model on a related task.
+        The paper mentions that their method combines "region proposals with CNNs," and they name their approach "R-CNN: Regions with CNN features." This suggests the adoption of a pre-trained CNN for feature extraction.
+
+    \item Fine-tuning:
+        The abstract mentions the second key insight that "when labeled training data is scarce, supervised pre-training for an auxiliary task, followed by domain-specific fine-tuning, yields a significant performance boost."
+
+    \item Comparison with Another Model:
+        The paper compares their R-CNN approach with OverFeat, a sliding-window detector based on a similar CNN architecture, and reports that R-CNN outperforms OverFeat.
+\end{enumerate}
+In summary, the paper is using a pre-trained convolutional neural network for object detection, and it emphasizes the effectiveness of supervised pre-training on an auxiliary task followed by domain-specific fine-tuning to boost performance.
+\end{latin}
+
+
+%2
+\section{}
+
+\begin{latin}
+
+Here are the steps you can follow:
+
+\begin{enumerate}
+
+    \item Annotate Bounding Boxes: For each image in your dataset, you need to annotate the bounding boxes around the objects (cats and dogs in this case). The bounding box annotations should include the coordinates of the box, typically represented as (xmin, ymin, xmax, ymax).
+
+\item Update Data Pipeline: Modify your data loading and preprocessing pipeline to handle the new bounding box annotations. Your input data should now include both the image and the corresponding bounding box information.
+
+\end{enumerate}
+
+\end{latin}
+
+
+%3
+\section{}
+
+\begin{latin}
+In the context of object detection, several challenges need to be addressed, and modifications to the loss function are necessary to handle these challenges. Let's discuss the problems and corresponding modifications based on the Fast R-CNN paper:
+\begin{enumerate}
+    \item Localization Accuracy:
+        Problem: Accurate localization of objects within an image is crucial. Object detection involves predicting bounding boxes that tightly enclose the objects of interest.
+        Modification: The paper introduces a bounding box regression loss to improve localization accuracy. This loss helps the model learn to refine the predicted bounding box coordinates.
+
+    \item Multi-Object Detection:
+        Problem: An image may contain multiple objects of different classes, and the model needs to detect and classify each of them accurately.
+        Modification: The Fast R-CNN architecture includes a multi-task loss function that jointly optimizes for both classification and bounding-box regression. This modification allows the model to handle multiple object instances in a single forward pass.
+
+    \item Proposal Generation and Processing:
+        Problem: Generating and processing a large number of region proposals for object detection can be computationally expensive.
+        Modification: The RoI (Region of Interest) pooling layer is introduced to efficiently process region proposals. This layer extracts fixed-length feature vectors from the feature map, making the computation more tractable.
+
+    \item Training Speed and Efficiency:
+        Problem: Training deep networks for object detection can be time-consuming, particularly when using multi-stage pipelines like R-CNN.
+        Modification: The Fast R-CNN approach streamlines the training process into a single-stage algorithm, allowing for faster training. The hierarchical sampling strategy and shared computation during training further enhance efficiency.
+
+    \item Scale Invariance:
+        Problem: Objects in images can vary in size, and the model needs to be invariant to these scale differences.
+        Modification: The paper explores two approaches for achieving scale invariance. One is through "brute force" learning, where the network directly learns scale invariance during training. The other approach uses image pyramids during both training and testing to provide approximate scale invariance.
+
+    \item Loss Function Modifications:
+        Problem: Traditional classification loss may not be sufficient for object detection, where precise localization is crucial.
+        Modification: The Fast R-CNN introduces a multi-task loss function that includes both a classification loss (log loss) and a bounding-box regression loss. The classification loss penalizes incorrect class predictions, and the regression loss penalizes errors in bounding box predictions.
+\end{enumerate}
+
+In summary, Fast R-CNN addresses multiple challenges in object detection, including localization accuracy, handling multiple objects, efficient proposal processing, training speed, and scale invariance. The modifications in the loss function involve a multi-task approach, combining classification and bounding-box regression losses to train the model effectively for both tasks.
+\end{latin}
+
+
+%4
+\section{}
+\begin{latin}
+\subsection*{Accuracy in Object Detection}
+In object detection, accuracy is typically measured using metrics that consider both the classification and localization aspects of the detected objects. Common metrics include:
+
+\subsubsection*{Intersection over Union (IoU)}
+
+IoU measures the overlap between the predicted bounding box and the ground truth bounding box. It is calculated as the area of intersection divided by the area of the union.
+The IoU is calculated as:
+$
+IoU = \frac{\text{Area of Intersection}}{\text{Area of Union}}
+$
+A common IoU threshold for considering a detection as correct is 0.5, but this threshold can vary depending on the application.
+
+\subsubsection*{Precision, Recall, and F1 Score}
+Precision is the ratio of true positive detections to the total number of predicted positive detections. Recall is the ratio of true positive detections to the total number of ground truth positive instances. F1 Score is the harmonic mean of precision and recall.
+
+Precision, Recall, and F1 Score are defined as follows:
+$
+\text{Precision} = \frac{\text{True Positives}}{\text{True Positives + False Positives}}
+\\
+\text{Recall} = \frac{\text{True Positives}}{\text{True Positives + False Negatives}}
+\\
+\text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision + Recall}}
+$
+
+\subsection*{Mean Average Precision (mAP)}
+mAP is a widely used metric for evaluating the performance of object detection models. It considers precision and recall across different levels of confidence thresholds for object detections. Here are the steps involved in calculating mAP:
+
+\subsubsection*{Precision-Recall Curve}
+    For each class, calculate precision and recall at different confidence thresholds.
+    Precision is computed as the ratio of true positive detections to the total number of predicted positive detections at a given threshold.
+    Recall is computed as the ratio of true positive detections to the total number of ground truth positive instances at a given threshold.
+    Plot precision-recall pairs to form a curve.
+
+\subsubsection*{Interpolation of Precision-Recall Curve}
+    Interpolate the precision values at a set of equally spaced recall levels (e.g., recall levels from 0 to 1 with small steps).
+    This interpolation helps smooth the precision-recall curve.
+
+\subsubsection*{Average Precision (AP)}
+    Compute the area under the interpolated precision-recall curve.
+    AP represents the average precision across different recall levels for a specific class.
+$
+AP = \text{Area under Precision-Recall Curve}
+$
+
+\subsubsection*{Mean Average Precision (mAP)}
+The mean of the AP values across all classes is calculated:
+$
+mAP = \frac{\sum_{i=1}^{C} AP_i}{C}
+$
+where \(C\) is the number of classes.
+
+mAP provides a comprehensive evaluation of object detection performance by considering both precision and recall at various confidence thresholds. It is particularly useful when dealing with datasets with imbalanced class distributions and varying levels of difficulty in detection.
+\end{latin}
+
+
+
+%5
+\section{}
+\begin{latin}
+This term penalize the bounding box with inacurate height and width. The square root is present so that erors in small bounding boxes are more penalizing than errors in big bounding boxes. In other words, $w_i$ and $h_i$ are under square-root. This is done to penalize the smaller bounding boxes as we need better prediction on smaller objects than on bigger objects (author's call). Check out the table below and observe how the smaller values are punished more if we follow "square-root" method (look at the inflection point when we have 0.3 and 0.2 as the input values) (PS: I have kept the ratio of var1 and var2 same just for explanation):
+
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{var1} & \textbf{var2} & \textbf{(var1 - var2)\textasciicircum{}2} & \textbf{(sqrtvar1 - sqrtvar2)\textasciicircum{}2} \\ \hline
+0.0300        & 0.020         & 9.99e-05                                  & 0.001                                             \\ \hline
+0.0330        & 0.022         & 0.00012                                   & 0.0011                                            \\ \hline
+0.0693        & 0.046         & 0.000533                                  & 0.00233                                           \\ \hline
+0.2148        & 0.143         & 0.00512                                   & 0.00723                                           \\ \hline
+0.3030        & 0.202         & 0.01                                      & 0.01                                              \\ \hline
+0.8808        & 0.587         & 0.0862                                    & 0.0296                                            \\ \hline
+4.4920        & 2.994         & 2.2421                                    & 0.1512                                            \\ \hline
+\end{tabular}
+\end{table}
+\end{latin}
+
+%5
+\section{}
+\begin{latin}
+Vanishing and exploding gradient problems are common challenges associated with training Recurrent Neural Networks (RNNs).
+
+    \subsection{Vanishing Gradient:}
+\begin{enumerate}
+        \item Issue: During backpropagation through time (BPTT), gradients may become extremely small as they are propagated through many time steps. This makes it difficult for the network to learn long-term dependencies.
+        \item Cause: The repeated multiplication of small gradient values (typically less than 1.0) during BPTT leads to vanishing gradients.
+        \item Consequence: The model fails to capture information from earlier time steps, limiting its ability to learn sequential patterns over long distances.
+\end{enumerate}
+    \subsection{Exploding Gradient:}
+\begin{enumerate}
+        \item Issue: Gradients can also become extremely large during BPTT, leading to numeric instability and difficulty in training the network.
+        \item Cause: The repeated multiplication of large gradient values (typically greater than 1.0) during BPTT results in exploding gradients.
+        \item Consequence: Large gradients may cause the model parameters to be updated excessively, leading to poor convergence and potential divergence during training.
+\end{enumerate}
+\subsection{Solving Exploding Gradient Problem:}
+Solving the exploding gradient problem is relatively straightforward, and a common approach is to use gradient clipping. Gradient clipping involves scaling down the gradients if they exceed a predefined threshold.
+
+\end{latin}
+
+%6
+\section{}
+\begin{latin}
+\subsection*{1. What is \(C_{t-1}\)?}
+\(C_{t-1}\) represents the cell state at the previous time step (\(t-1\)) in the LSTM. The cell state is a memory unit that can store information over long sequences, allowing the LSTM to capture long-term dependencies in data. \(C_{t-1}\) carries information from the past and is updated and modified during the current time step based on input data and gating mechanisms.
+
+\subsection*{2. Why do we use the sigmoid function for making \(f_t\)?}
+In the LSTM, \(f_t\) is the forget gate activation vector at time step \(t\). The forget gate's purpose is to decide what information from the previous cell state (\(C_{t-1}\)) should be discarded or retained for the current time step. The sigmoid function is used to create the forget gate activation vector because it squashes values between 0 and 1, allowing the network to control the flow of information. If a component of \(f_t\) is close to 0, it means the LSTM should forget the corresponding information, and if it's close to 1, the information should be retained.
+
+\subsection*{3. What is the concept of \(C_{t-1} * f_t\)?}
+The term \(C_{t-1} * f_t\) represents an element-wise multiplication between the previous cell state (\(C_{t-1}\)) and the forget gate activation vector (\(f_t\)). This operation determines which information from the previous cell state should be preserved and which should be discarded. Element-wise multiplication scales each component of the cell state (\(C_{t-1}\)) by the corresponding component of the forget gate (\(f_t\)). If a component of \(f_t\) is close to 0, the information in the corresponding component of \(C_{t-1}\) will be scaled down or "forgotten." If \(f_t\) is close to 1, the information will be retained.
+
+\end{latin}
+
+
+%
+%%1
+%\section{}
+%استفاده از تصاویر در شبکه‌های عصبی معمولی (\lr{MLP}) دارای مشکلاتی بود که با ظهور شبکه‌های عصبی کانولوشنی (\lr{CNN}) حل شد:
+%\begin{enumerate}
+%
+%\item تعداد پارامترها و اتصالات:
+%
+%در \lr{MLP}، هر نورون لایه ورودی با تمام نورون‌های لایه خروجی متصل بود. این اتصالات منجر به افزایش شدید تعداد پارامترها می‌شد، که با تعداد بزرگ تصاویر (از نظر تعداد پیکسل) به سرعت غیرقابل مدیریت می‌شد.
+%    در \lr{CNN}، از لایه‌های کانولوشنی برای به اشتراک‌گذاری ویژگی‌ها در تصاویر استفاده می‌شود. این لایه‌ها با اعمال فیلترها (کرنل‌ها) به تصویر، ویژگی‌های مختلف را استخراج می‌کنند و این باعث کاهش چشم‌گیر تعداد پارامترها و اتصالات شبکه می‌شود. به عبارت دیگر، \lr{CNN} با استفاده از به اشتراک‌گذاری ویژگی‌ها، تعداد پارامترها را به شدت کاهش می‌دهد.
+%
+%\item مقاومت به تغییرات مکانی:
+%
+%\lr{MLP} به طور کامل حساس به تغییرات مکانی در تصویر بود. به عبارت دیگر، اگر یک الگو یا ویژگی در یک مکان خاص در تصویر وجود داشت، \lr{MLP} قادر به تشخیص آن در سایر نقاط تصویر نبود. \lr{CNN} با استفاده از لایه‌های کانولوشنی و استفاده از فیلترها، از این قابلیت برای شناسایی ویژگی‌ها در تمام تصویر به خوبی استفاده می‌کند. به این ترتیب، شبکه \lr{CNN} مقاوم‌تر به تغییرات مکانی در تصاویر می‌شود و توانایی خود را در تشخیص الگوها و ویژگی‌ها در مکان‌های مختلف تصویر افزایش می‌دهد.
+%
+%\item عدم حفظ ساختار مکانی:
+%\lr{MLP}، ساختار مکانی تصویر حذف می‌شد و هر پیکسل به عنوان یک ویژگی مستقل در نظر گرفته می‌شد. این عدم حفظ ساختار مکانی اطلاعات مهمی را از دست می‌داد، به خصوص برای تصاویری که الگوها و اطلاعات مکانی مهمی دارند.
+%    \lr{CNN} با استفاده از لایه‌های کانولوشنی و اعمال فیلترها، قابلیت حفظ ساختار مکانی را به شبکه اضافه کرده و اجازه می‌دهد تا ویژگی‌ها به صورت محلی در تصویر استخراج شوند. این امکان باعث می‌شود که شبکه بتواند اطلاعات مکانی را مورد توجه قرار داده و الگوهای مکانی پیچیده‌تری را در تصاویر تشخیص دهد.
+%
+%\item تفسیرپذیری پایین:
+%
+%    \lr{MLP}‌ها به دلیل تعداد بسیار زیاد پارامترها، به صورت کلی دارای تفسیرپذیری پایین بودند. یعنی مشخص کردن دقیق اینکه شبکه چگونه تصمیمات خود را اتخاذ کرده است، معمولاً مشکل بود.
+%    \lr{CNN} با تعداد کمتر پارامترها و استفاده از فیلترها، قابلیت تفسیرپذیری بیشتری دارد. این به این معناست که می‌توان بهتر فهمید که شبکه در تصمیم‌گیری‌های خود چگونه از ویژگی‌ها استفاده می‌کند.
+%
+%\item حساسیت به اندازه تصویر:
+%
+%    \lr{MLP}‌ها به صورت ثابت و بدون توجه به ابعاد تصویر (مثلاً ابعاد ورودی ثابت دارای تعداد ثابت نورون‌ها) عمل می‌کردند. این باعث می‌شد که اگر تصویر ورودی ابعاد متفاوتی داشته باشد، شبکه به طور مستقیم با آن کار نکند.
+%    \lr{CNN} با استفاده از لایه‌های کانولوشنی می‌تواند به تصاویر با ابعاد مختلف و با استفاده از فیلترهای متفاوت به خوبی پاسخ دهد و حساسیت کمتری نسبت به ابعاد تصویر نشان دهد.
+%
+%\item برخورد با تعداد زیاد پارامترها:
+%
+%    با افزایش اندازه تصاویر، تعداد پارامترهای مورد نیاز برای یک \lr{MLP} به صورت نمایی افزایش می‌یابد. این موضوع باعث ایجاد مدل‌های بسیار پیچیده و سنگین می‌شود که دشواری در آموزش، نگهداری و استفاده از آن‌ها را افزایش می‌دهد.
+%
+%\item عدم توانایی در مدل‌سازی ویژگی‌های سلسله‌مراتبی:
+%
+%    \lr{MLP} به طور مستقیم قادر به مدل‌سازی ویژگی‌های سلسله‌مراتبی و پیچیده تصاویر نیستند. به عبارت دیگر، آن‌ها قادر به استخراج ویژگی‌های موقعیت مکانی، الگوها و ساختارهای سلسله‌مراتبی نیستند که در بینایی ماشین بسیار مهم است.
+%
+%\item حساسیت به تغییرات شدت نور و ظروف نوری:
+%
+%    \lr{MLP} در مقابل تغییرات شدت نور و ظروف نوری حساس هستند. این به این معناست که تصاویر با نور متفاوت یا ظروف نوری متفاوت ممکن است تأثیر زیادی بر عملکرد \lr{MLP} داشته باشند.
+%
+%\item اشتباه‌زاهای غیرقابل کنترل:
+%
+%    به دلیل تعداد بالای پارامترها و عدم استفاده از الگوهای مکانی، \lr{MLP}‌ها ممکن است به آموزش بیش از حد به داده‌ها وابسته شوند و اشتباه‌زاهای غیرقابل کنترل در عملکرد آن‌ها ایجاد شود.
+%
+%\item کارایی ضعیف در مسائل تشخیص الگو:
+%
+%    در مسائل تشخیص الگو و ویژگی‌های پیچیده در تصاویر، \lr{MLP}‌ها عملکرد ضعیفی دارند. زیرا این مدل‌ها نمی‌توانند ویژگی‌های سلسله‌مراتبی و پیچیده را به صورت کامل مدل کنند.
+%
+%شبکه‌های عصبی کانولوشنی (\lr{CNN}) با توجه به مزایایی که در پردازش تصاویر دارند، این مشکلات را به حداقل می‌رسانند و بهبودهای مهمی را در زمینه بینایی ماشین و پردازش تصویر به ارمغان آورده‌اند.
+%\end{enumerate}
+%
+%
+%
+%
+%%2
+%\section{}
+%\begin{enumerate}
+%\item استفاده از لایه‌های کانولوشنی:
+%
+%    در بینایی کامپیوتر کلاسیک، اغلب از فیلترها و عملیات پردازش سیگنال سنتی برای استخراج ویژگی‌ها استفاده می‌شود. این روش‌ها معمولاً به صورت دستی تنظیم می‌شوند و برای ویژگی‌های خاص استفاده می‌شوند.
+%    در \lr{CNN}، از لایه‌های کانولوشنی استفاده می‌شود که خودشان یک نوع فیلتر هستند. این لایه‌ها با اعمال فیلترها به تصویر، ویژگی‌های مختلف را به صورت خودکار و سلسله‌مراتبی استخراج می‌کنند. این عمل باعث افزایش توانایی شبکه در تشخیص ویژگی‌های مکانی و سلسله‌مراتبی می‌شود.
+%
+%\item پارامترها و اتصالات کمتر:
+%
+%    در بینایی کامپیوتر کلاسیک، تعداد زیادی از پارامترها به صورت دستی تنظیم می‌شوند و شبکه‌ها ممکن است به سرعت پیچیده شوند.
+%    در \lr{CNN}، با به اشتراک‌گذاری ویژگی‌ها (استفاده از فیلترها)، تعداد پارامترها به شدت کاهش می‌یابد. این باعث می‌شود شبکه قابل مدیریت‌تر باشد و از اورفیتینگ (\lr{overfitting}) کاسته شود.
+%
+%\item حفظ ساختار مکانی:
+%
+%    بینایی کامپیوتر کلاسیک عمدتاً از روش‌هایی استفاده می‌کند که ساختار مکانی تصویر را حذف می‌کند و به هر پیکسل به عنوان یک واحد مستقل نگاه می‌کند.
+%    \lr{CNN} با لایه‌های کانولوشنی خود، قابلیت حفظ ساختار مکانی تصویر را فراهم می‌کند. این به این معناست که شبکه قادر است به ویژگی‌ها و الگوهای موقعیت مکانی توجه داشته باشد و این امکان را دارد که اطلاعات مکانی در تصویر را بهتر به کار بگیرد.
+%
+%\item آموزش انتقالی:
+%
+%    \lr{CNN} از آموزش انتقالی بهره می‌برد که به انتقال وزن‌های یک مدل آموزش دیده برای حل یک مسئله خاص می‌پردازد. این به شبکه‌ها این امکان را می‌دهد که از دانش کسب‌شده در یک مسئله به مسائل مشابه دیگر نیز استفاده کنند.
+%
+%\item نیاز به استخراج دستی ویژگی‌ها تصویر توسط یک متخصص:
+%
+%یکی از مشکلات عمده الگوریتم‌های یادگیری ماشین اولیه که در اوایل دهه 1960 به وجود آمد، نیاز به استخراج دستی و دقیق ویژگی‌ها از تصاویر توسط یک متخصص بود. حتی اگر اندکی اتوماسیون نیز در آن زمان مورد استفاده قرار می‌گرفت، نیاز به تنظیم دقیق توسط یک متخصص وجود داشت. زیرا الگوریتم‌هایی مانند \lr{SVM} یا \lr{KNN} برای یافتن ویژگی‌های مهم به کار می‌رفتند. این نیاز به ساخت یک مجموعه داده با ویژگی‌های مشخص برای مدل برای یادگیری از آن می‌رفت. بنابراین، تکنیک‌های یادگیری عمیق یک کمک بزرگ برای افراد تخصصی بود. چرا که دیگر نیازی به نگرانی درباره انتخاب دستی ویژگی‌ها برای یادگیری مدل نداشتند.
+%
+%\item نیاز به منابع محاسباتی سنگین:
+%
+%یادگیری عمیق یک وظیفه با وزن سنگین محاسباتی است که به همین دلیل در دهه 1950 به ندرت پیشرفتی در این زمینه دیده شد. با پیشرفت‌های عظیمی که در قابلیت‌های \lr{GPU} و سایر منابع محاسباتی مرتبط انجام شد، این زمان حال حاضر بهترین زمان برای پیشرفت در تحقیقات یادگیری عمیق بوده است. اما این با یک هشدار همراه است؛ منابع محاسباتی بزرگتر و بهتر هم هزینه سنگینی دارند که ممکن است برای اکثر افراد و شرکت‌ها اقتصادی نباشد. بنابراین، در زمینه منابع به راحتی دسترسی‌پذیر، رویکرد سنتی به نظر می‌رسد که بهترین گزینه مقابل یادگیری عمیق است.
+%
+%\item نیاز به مجموعه داده‌های بزرگ و برچسب‌گذاری‌شده:
+%
+%ما در زمانی زندگی می‌کنیم که در هر لحظه هزاران و هزاران پتابایت داده در سراسر جهان ایجاد و ذخیره می‌شود. این امر در ظاهر خبر خوبی است اما متاسفانه، بر خلاف باور متداول، ذخیره مقدار زیادی داده، به خصوص داده‌های تصویر، اقتصادی نه‌تنها نیست بلکه فرصت تجاری پایداری نیز ارائه نمی‌دهد. ممکن است شگفت‌زده شوید که بسیاری از شرکت‌ها دارای یک مجموعه داده غنی هستند. اما یا توانایی بهره‌مندی از آن را ندارند یا کسب‌وکار قانونی نمی‌تواند راه بیندازند. بنابراین، یافتن یک مجموعه داده مفید، برچسب‌گذاری شده و در سیاق آن کاربرد، وظیفه‌ای ساده برای یک راهکار یادگیری عمیق نیست.
+%
+%\item مدل‌های جعبه سیاه تفسیرناپذیر:
+%
+%رویکردهای سنتی از روش‌های آماری قابل فهم و تفسیری مانند \lr{SVM} و \lr{KNN} برای یافتن ویژگی‌ها برای حل مشکلات متداول بینایی کامپیوتر استفاده می‌کنند. در مقابل، یادگیری عمیق شامل استفاده از لایه‌های پیچیده از شبکه‌های چندلایه پرسپترون (\lr{MLP}) است. این \lr{MLP}‌ها ویژگی‌های اطلاعاتی را از تصاویر با فعال‌سازی مناطق مرتبط در تصاویر استخراج می‌کنند که اغلب قابل تفسیر نیستند. به عبارت دیگر، نمی‌توان به قطعیت گفت چرا بخش‌های خاصی از یک تصویر فعال شدند در حالی که بخش دیگر فعال نشد.
+%
+%\item کوچک و آسان برای حمل و یا استقرار درون یک میکروپردازنده:
+%
+%به علاوه از اینکه محاسباتی سنگین هستند، مدل‌های مورد استفاده در یک رویکرد یادگیری عمیق به اندازه قابل توجهی بزرگ‌تر از رویکردهای سنتی هستند. این مدل‌ها اغلب از اندازه چند صد مگابایت تا یک یا دو گیگابایت تغییر می‌کنند. در حالی که در مقابل، رویکردهای سنتی معمولاً یک مدل با اندازه چند مگابایتی تولید می‌کنند.
+%
+%\item دقت پیش‌بینی‌های دو رویکرد:
+%
+%یکی از عوامل موفقیت یادگیری عمیق برجسته شدن نسبت به دستاوردهای رویکردهای سنتی، دقت بسیار بالای پیش‌بینی‌هاست. این یک پیشرفت عظیم در اوایل دهه 90 تا اوایل قرن 21 بود که یان لوکان و همکارانش با \lr{LeNet} به وجود آمدند. این مدل از دقت‌های پیشین که با رویکردهای سنتی به دست آمده بودند، کاملاً فراتر رفت. از آن زمان، یادگیری عمیق تقریباً به عنوان ابزار معمول برای هر مسئله بینایی کامپیوتری در نظر گرفته می‌شود.
+%
+%\end{enumerate}
+%
+%%3
+%\section{}
+%استفاده از \lr{Max Pooling} به جای \lr{Avg Pooling} در شبکه‌های عصبی کانولوشنی (\lr{CNN}) در بینایی ماشین به دلایل مختلف ترجیح داده می‌شود از جمله:
+%\begin{enumerate}
+%
+%
+%\item    حفظ ویژگی‌های برجسته:
+%
+%         \lr{Max Pooling} با انتخاب بیشینه‌ی مقدار در هر ناحیه، ویژگی‌های برجسته و حساس به جزئیات را حفظ می‌کند. این باعث می‌شود که شبکه اطلاعات مهم را در طول لایه‌های پولینگ حفظ کند و از افت دقت در تشخیص ویژگی‌های مهم جلوگیری شود.
+%
+%\item    مقاومت به نویز:
+%
+%         \lr{Max Pooling} مقاومت بیشتری نسبت به نویز دارد. اگر در یک ناحیه از تصویر نویز وجود داشته باشد و این نویز تاثیر بیشینه‌گیری را داشته باشد، اثر آن بر کل ویژگی تاثیر زیادی نخواهد داشت. این موضوع به شبکه این امکان را می‌دهد که در مقابل نویز‌های کوچک و تغییرات جزئی در تصاویر مقاومت نشان دهد.
+%
+%\item    اهمیت نقاط کلیدی:
+%
+%        در بسیاری از حالات، نقاط کلیدی تصویر (مثل لبه‌ها و نقاط برجسته) اطلاعات مهمی در مورد شیء در تصویر حاصل می‌کنند.  \lr{Max Pooling} با انتخاب بیشینه‌ی مقدار، به ویژگی‌های کلیدی و برجسته اهمیت می‌دهد و این امکان را فراهم می‌کند که شبکه به ویژگی‌های مهم تر بیشتر دسترسی داشته باشد نهایتا به تفسیر آسان‌تر دست بیابد.
+%
+%\item    کاهش ابعاد:
+%
+%        یکی از اهداف مهم در طراحی شبکه‌های عصبی کانولوشنی، کاهش ابعاد تصاویر است. با افزایش تعداد لایه‌ها و افزودن عمق به شبکه، ابعاد تصاویر می‌توانند به سرعت افزایش یابند. \lr{Max Pooling} به شبکه این امکان را می‌دهد که از تصاویر به صورت مکمل و با اندازه‌های کوچکتر بهره‌مند شود.
+%به عنوان مثال، فرض کنید داریم تصویر ورودی با ابعاد $100\times 100$ داریم. اگر از یک لایه \lr{Max Pooling} با اندازه $2\times 2$  استفاده کنیم، ابعاد تصویر به نصف ($50\times 50$) کاهش می‌یابد. این کاهش ابعاد کمک می‌کند تا تعداد پارامترها کاهش یابد و همچنین محاسبات سریع‌تر انجام شود.
+%در مواردی که تصاویر بزرگ یا شبکه عصبی عظیم استفاده می‌شود، این کاهش ابعاد باعث می‌شود که آموزش شبکه سریعتر و موثرتر انجام شود. از این رو، \lr{Max Pooling} به عنوان یک عنصر کلیدی در تسهیل آموزش و استفاده از شبکه‌های عصبی کانولوشنی شناخته می‌شود.
+%
+%\item    عدم وابستگی به میانگین:
+%
+%         \lr{Avg Pooling} ممکن است به عنوان یک میانگین گیری عمل کند که ممکن است باعث از دست رفتن اطلاعات مهم در نواحی کلیدی شود. \lr{Max Pooling} این مشکل را حل می‌کند زیرا به جای میانگین، بیشینه‌ی مقدار را انتخاب می‌کند.
+%
+%
+%\end{enumerate}
+%به طور کلی،  \lr{Max Pooling} بهتر مناسب برای استخراج ویژگی‌های برجسته و حفظ اطلاعات مهم در تصاویر است. با این حال، در برخی موارد خاص، ممکن است  \lr{Avg Pooling} مورد استفاده قرار گیرد، اما اکثراً در شبکه‌های عصبی کانولوشنی،  \lr{Max Pooling} به عنوان انتخاب اصلی در لایه‌های پولینگ به کار گرفته می‌شود.
+%
+%
+%%4
+%\section{}
+%\begin{latin}
+%\begin{figure}[H]
+%	\centering
+%	\begin{tikzpicture}
+%		\node at (0.5,-1){\begin{tabular}{c}$Size = 28 \times 28 \times 1$\\$Params = 0$\end{tabular}};
+%		
+%		\draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0);
+%		
+%		\node at (3,3.5){\begin{tabular}{c}CONV1\\$Size = 24 \times 24 \times 6$\\$Params = 156$\end{tabular}};
+%		
+%		\draw[fill=blue,opacity=0.2,draw=blue] (2.75,1.25) -- (3.75,1.25) -- (3.75,2.25) -- (2.75,2.25) -- (2.75,1.25);
+%		\draw[fill=blue,opacity=0.2,draw=blue] (2.5,1) -- (3.5,1) -- (3.5,2) -- (2.5,2) -- (2.5,1);
+%		\draw[fill=blue,opacity=0.2,draw=blue] (2.25,0.75) -- (3.25,0.75) -- (3.25,1.75) -- (2.25,1.75) -- (2.25,0.75);
+%		\draw[fill=blue,opacity=0.2,draw=blue] (2,0.5) -- (3,0.5) -- (3,1.5) -- (2,1.5) -- (2,0.5);
+%		\draw[fill=blue,opacity=0.2,draw=blue] (1.75,0.25) -- (2.75,0.25) -- (2.75,1.25) -- (1.75,1.25) -- (1.75,0.25);
+%		\draw[fill=blue,opacity=0.2,draw=blue] (1.5,0) -- (2.5,0) -- (2.5,1) -- (1.5,1) -- (1.5,0);
+%		
+%		\node at (4.5,-1){\begin{tabular}{c}AVG POOL1\\$Size = 12 \times 12 \times 6$\\$Params = 0$\end{tabular}};
+%		
+%		\draw[fill=yellow,opacity=0.2,draw=yellow] (5,1.25) -- (5.75,1.25) -- (5.75,2) -- (5,2) -- (5,1.25);
+%		\draw[fill=yellow,opacity=0.2,draw=yellow] (4.75,1) -- (5.5,1) -- (5.5,1.75) -- (4.75,1.75) -- (4.75,1);
+%		\draw[fill=yellow,opacity=0.2,draw=yellow] (4.5,0.75) -- (5.25,0.75) -- (5.25,1.5) -- (4.5,1.5) -- (4.5,0.75);
+%		\draw[fill=yellow,opacity=0.2,draw=yellow] (4.25,0.5) -- (5,0.5) -- (5,1.25) -- (4.25,1.25) -- (4.25,0.5);
+%		\draw[fill=yellow,opacity=0.2,draw=yellow] (4,0.25) -- (4.75,0.25) -- (4.75,1) -- (4,1) -- (4,0.25);
+%		\draw[fill=yellow,opacity=0.2,draw=yellow] (3.75,0) -- (4.5,0) -- (4.5,0.75) -- (3.75,0.75) -- (3.75,0);
+%		
+%		\node at (7.5,3.5){\begin{tabular}{c}CONV2\\$Size = 8 \times 8 \times 16$\\$Params = 2416$\end{tabular}};
+%		
+%		\draw[fill=blue,opacity=0.2,draw=blue] (7.5,1.75) -- (8.25,1.75) -- (8.25,2.5) -- (7.5,2.5) -- (7.5,1.75);
+%		\draw[fill=blue,opacity=0.2,draw=blue] (7.25,1.5) -- (8,1.5) -- (8,2.25) -- (7.25,2.25) -- (7.25,1.5);
+%		\draw[fill=blue,opacity=0.2,draw=blue] (7,1.25) -- (7.75,1.25) -- (7.75,2) -- (7,2) -- (7,1.25);
+%		\draw[fill=blue,opacity=0.2,draw=blue] (6.75,1) -- (7.5,1) -- (7.5,1.75) -- (6.75,1.75) -- (6.75,1);
+%		\draw[fill=blue,opacity=0.2,draw=blue] (6.5,0.75) -- (7.25,0.75) -- (7.25,1.5) -- (6.5,1.5) -- (6.5,0.75);
+%		\draw[fill=blue,opacity=0.2,draw=blue] (6.25,0.5) -- (7,0.5) -- (7,1.25) -- (6.25,1.25) -- (6.25,0.5);
+%		\draw[fill=blue,opacity=0.2,draw=blue] (6,0.25) -- (6.75,0.25) -- (6.75,1) -- (6,1) -- (6,0.25);
+%		\draw[fill=blue,opacity=0.2,draw=blue] (5.75,0) -- (6.5,0) -- (6.5,0.75) -- (5.75,0.75) -- (5.75,0);
+%		
+%		\node at (8.5,-1){\begin{tabular}{c}AVG POOL2\\$Size = 4 \times 4 \times 16$\\$Params = 0$\end{tabular}};
+%		
+%		\draw[fill=yellow,opacity=0.2,draw=yellow] (9.5,1.25) -- (10.25,1.25) -- (10.25,2) -- (9.5,2) -- (9.5,1.25);
+%		\draw[fill=yellow,opacity=0.2,draw=yellow] (9.25,1) -- (10,1) -- (10,1.75) -- (9.25,1.75) -- (9.25,1);
+%		\draw[fill=yellow,opacity=0.2,draw=yellow] (9,0.75) -- (9.75,0.75) -- (9.75,1.5) -- (9,1.5) -- (9,0.75);
+%		\draw[fill=yellow,opacity=0.2,draw=yellow] (8.75,0.5) -- (9.5,0.5) -- (9.5,1.25) -- (8.75,1.25) -- (8.75,0.5);
+%		\draw[fill=yellow,opacity=0.2,draw=yellow] (8.5,0.25) -- (9.25,0.25) -- (9.25,1) -- (8.5,1) -- (8.5,0.25);
+%		\draw[fill=yellow,opacity=0.2,draw=yellow] (8.25,0) -- (9,0) -- (9,0.75) -- (8.25,0.75) -- (8.25,0);
+%		
+%		\node at (12,3.5){\begin{tabular}{c}FC1\\$Params = 32896$\end{tabular}};
+%		
+%		\draw[fill=black,draw=black,opacity=0.5] (10.5,0) -- (11,0) -- (12.5,1.75) -- (12,1.75) -- (10.5,0);
+%		
+%		\node at (13,-1){\begin{tabular}{c}FC2\\$Params = 8256$\end{tabular}};
+%		
+%		\draw[fill=black,draw=black,opacity=0.5] (12.5,0.5) -- (13,0.5) -- (13.65,1.25) -- (13.15,1.25) -- (12.5,0.5);
+%
+%		\node at (14.5,4){\begin{tabular}{c}Softmax\\$Params = 650$\end{tabular}};
+%		
+%		\draw[fill=black,draw=black,opacity=0.5] (14,0.5) -- (14.5,0.5) -- (15.15,1.25) -- (14.65,1.25) -- (14,0.5);
+%	\end{tikzpicture}
+%	\caption{}
+%	\label{fig:traditional-convolutional-network}
+%\end{figure}
+%
+%$
+%\text{size after applying convolution layer} = \left\lfloor \frac{n + 2p - f}{s} + 1 \right\rfloor \times \left\lfloor \frac{n + 2p - f}{s} + 1 \right\rfloor \times k
+%$
+%
+%\subsection*{Input Layer:}
+%\begin{itemize}
+%    \item Size: $28 \times 28 \times 1$
+%    \item Params: $0$
+%    \item Number of Channels: 1
+%\end{itemize}
+%
+%\subsection*{CONV1 Layer:}
+%\begin{itemize}
+%    \item Filter size: $5 \times 5$
+%    \item Stride: 1
+%    \item Number of filters ($k$): 6
+%    \item Padding: 0
+%    \item Size: $\left\lfloor \frac{28 + 2 \times 0 - 5}{1} + 1 \right\rfloor \times \left\lfloor \frac{28 + 2 \times 0 - 5}{1} + 1 \right\rfloor \times 6 = 24 \times 24 \times 6$
+%    \item Params: $(5 \times 5 \times 1 + 1) \times 6 = 156$ (weights + bias for each filter)
+%\end{itemize}
+%
+%\subsection*{Average Pooling Layer 1:}
+%\begin{itemize}
+%    \item Filter size: $2 \times 2$
+%    \item Stride: 2
+%    \item Size: $\left\lfloor \frac{24 + 2 \times 0 - 2}{2} + 1 \right\rfloor \times \left\lfloor \frac{24 + 2 \times 0 - 2}{2} + 1 \right\rfloor \times 6 = 12 \times 12 \times 6$
+%    \item Params: $0$
+%\end{itemize}
+%
+%\subsection*{CONV2 Layer:}
+%\begin{itemize}
+%    \item Filter size: $5 \times 5$
+%    \item Stride: 1
+%    \item Number of filters ($k$): 16
+%    \item Padding: 0
+%    \item Size: $\left\lfloor \frac{12 + 2 \times 0 - 5}{1} + 1 \right\rfloor \times \left\lfloor \frac{12 + 2 \times 0 - 5}{1} + 1 \right\rfloor \times 16 = 8 \times 8 \times 16$
+%    \item Params: $(5 \times 5 \times 6 + 1) \times 16 = 2416$ (weights + bias for each filter)
+%\end{itemize}
+%
+%\subsection*{Average Pooling Layer 2:}
+%\begin{itemize}
+%    \item Filter size: $2 \times 2$
+%    \item Stride: 2
+%    \item Size: $\left\lfloor \frac{8 + 2 \times 0 - 2}{2} + 1 \right\rfloor \times \left\lfloor \frac{8 + 2 \times 0 - 2}{2} + 1 \right\rfloor \times 16 = 4 \times 4 \times 16$
+%    \item Params: $0$
+%\end{itemize}
+%
+%\subsection*{FC1 Layer (Fully Connected):}
+%\begin{itemize}
+%    \item Number of neurons: 128
+%    \item Params: $(4 \times 4 \times 16 + 1) \times 128 = 32896$ (weights + bias for each neuron)
+%\end{itemize}
+%
+%\subsection*{FC2 Layer (Fully Connected):}
+%\begin{itemize}
+%    \item Number of neurons: 64
+%    \item Params: $(128 + 1) \times 64 = 8256$ (weights + bias for each neuron)
+%\end{itemize}
+%
+%\subsection*{Softmax Layer:}
+%\begin{itemize}
+%    \item Number of neurons: 10 (assuming classification)
+%    \item Params: $(64 + 1) \times 10 = 650$ (weights + bias for each class)
+%\end{itemize}
+%
+%$\textbf{Sum Parameters} = 156 + 2416 + 32896 + 8256 + 650 = 44374$
+%
+%\end{latin}
+%
+%
+%%5
+%\section{}
+%
+%\begin{enumerate}
+%
+%\item    استفاده از \lr{Receptive Fields} کوچک:
+%
+%        به جای استفاده از فیلترهای بزرگتر مانند $7\times7$ یا $11\times11$ با گام‌های طولی بزرگ، از فیلترهای $3\times3$ با گام 1 استفاده می‌شود. این فیلترها در تمام شبکه به اندازه 1 پیکسل در هر مرحله با تصویر ورودی همگام می‌شوند.
+%        با این رویکرد، از نظر شبکه‌های عصبی کانولوشنی (\lr{ConvNets}) کوچک، هر دو لایه $3\times3$ در واقع دارای یک \lr{Receptive Fields} پنج در پنج هستند. به عبارت دیگر، دو لایه $3\times3$ متوالی می‌توانند اطلاعات معادل یک لایه $5\times5$ را ادغام کنند. این امر به مدل این امکان را می‌دهد که از تصاویر با جزئیات بیشتری اطلاعات استخراج کند.
+%
+%\item    زیادکردن تعداد لایه‌ها و افزایش عمق:
+%
+%        استفاده از فیلترهای $3\times3$ به جای فیلترهای بزرگتر، این امکان را فراهم می‌کند که تعداد لایه‌ها در شبکه افزایش یابد. برای مثال، سه لایه $3\times3$ معادل با یک لایه $7\times7$ است. این افزایش در عمق باعث می‌شود که مدل قابلیت یادگیری و تعمیم بیشتری پیدا کند.
+%
+%\item    کاهش تعداد پارامترها:
+%
+%        از دیدگاه تعداد پارامترها، سه لایه $3\times3$ کمترین تعداد پارامتر را دارند نسبت به یک لایه $7\times7$. این امر به معنای کاهش تعداد وزن‌ها و پارامترها در شبکه است، که از یک سو به افت کمی در توانایی یادگیری منجر می‌شود، اما از سوی دیگر باعث می‌شود که مدل کم‌پیچیده‌تر و کارآمدتر باشد. فیلتر $3\times3$ تعداد پارامترهای کمتری نسبت به فیلترهای بزرگتر دارد. این موضوع باعث می‌شود که مدل‌ها سبک‌تر شوند و از نظر محاسباتی کارآمدتر باشند.
+%
+%\item    افزایش ناحیه غیرخطی‌سازی:
+%
+%        با استفاده از سه لایه $3\times3$ متوالی به جای یک لایه $7\times7$، مدل شامل سه لایه تصحیح غیرخطی (\lr{non-linear rectification}) می‌شود. این موضوع باعث افزایش توان تصمیم‌گیری مدل و افزایش تمایز‌پذیری تصمیم‌گیری می‌شود.
+%
+%\item قابلیت ترکیبی:
+%
+%    فیلتر $3\times3$ به دلیل اندازه کوچکتر، قابلیت ترکیبی بیشتری دارد. با ترکیب چندین فیلتر $3\times3$، می‌توان ویژگی‌های بزرگتر و پیچیده‌تری را استخراج کرد. به عبارت دیگر، تأثیرات یک فیلتر بزرگتر را می‌توان با استفاده از چندین فیلتر $3\times3$ شبیه‌سازی کرد.
+%
+%
+%\item استفاده مکرر:
+%
+%    استفاده مکرر از فیلترهای $3\times3$ در لایه‌های متوالی، امکان آموزش سلسله‌مراتبی و افزایش عمق (\lr{depth}) را بهبود می‌بخشد. این موضوع به مدل این امکان را می‌دهد که ویژگی‌های سطوح مختلف را استخراج کند
+%
+%\end{enumerate}
+%
+%به طور کلی، استفاده از فیلترهای $3\times3$ در شبکه‌های عصبی کانولوشنی به دلایل فوق منجر به افزایش قابلیت یادگیری، کاهش تعداد پارامترها، و افزایش قابلیت تمایز‌پذیری می‌شود. این رویکرد توسط شبکه‌های عصبی معروفی نظیر \lr{GoogLeNet} و شبکه‌های دیگر با موفقیت به کار گرفته شده است.
+%
+%
+%%6
+%\section{}
+%
+%
+%\lr{ResNet} نوعی از معماری‌های شبکه‌های عصبی پیچشی (\lr{CNN}) است که \lr{residual connections} را معرفی می‌کند، که مشکل گرادیان محو شونده را حل کرده و آموزش شبکه‌های بسیار عمیق را تسهیل می‌کند. در اکثر موارد، \lr{ResNet} نسبت به معماری‌های سنتی \lr{CNN} مزایای زیادی دارد. به ویژه زمانی که با شبکه‌های بسیار عمیق سروکار داریم. با این حال، مواقعی وجود دارد که استفاده از \lr{ResNet} مزیت قابل توجهی ندارد یا حتی ممکن است مناسب نباشد:
+%
+%\begin{enumerate}
+%
+%\item شبکه‌های کم عمق:
+%
+%\lr{ResNet} برای حل چالش‌های آموزش شبکه‌های بسیار عمیق طراحی شده است. اگر کار یا مجموعه داده شما نسبتاً ساده باشد و به یک معماری کم عمق نیاز نداشته باشد، استفاده از یک \lr{CNN} ساده ممکن است کافی باشد و افزودن اتصالات باقی‌مانده به ارتقاء چشمگیری منجر نشود.
+%
+%\item داده محدود:
+%
+%قابلیت \lr{ResNet} در یادگیری ویژگی‌های پیچیده در مواردی که تعداد داده‌های آموزشی کم است، مفیدتر نیست. در شرایطی که مجموعه داده کوچک است، یک معماری ساده‌تر ممکن است کمتر دچار بیش‌برازش (\lr{overfitting}) شده و بهتر عمل کند.
+%
+%\item منابع محاسباتی:
+%
+%آموزش شبکه‌های عمیق، به ویژه با اتصالات باقی‌مانده، ممکن است مصرف منابع محاسباتی زیادی را به همراه داشته باشد. اگر محدودیت منابع محاسباتی دارید، استفاده از یک \lr{CNN} ساده‌تر ممکن است عملی‌تر باشد.
+%
+%\item قابلیت تفسیر مدل:
+%
+%اتصالات باقی‌مانده ممکن است تفسیر ویژگی‌های یادگرفته‌شده را دشوارتر کنند. در برخی موارد، به ویژه زمانی که قابلیت تفسیر برای شما مهم است، یک \lr{CNN} سنتی با ساختار کم‌عمق‌تر ممکن است ترجیح داده شود.
+%
+%\item معماری‌های تخصصی:
+%
+%برای وظایف یا حوزه‌های خاص، ممکن است معماری‌های خاص \lr{CNN} وجود داشته باشد که مناسب‌تر باشند. به عنوان مثال، اگر وظیفه شما مرتبط با داده‌های متوالی باشد، شبکه‌های عصبی بازگشتی (\lr{RNN}) یا شبکه‌های حافظه کوتاه‌مدت طولانی (\lr{LSTM}) ممکن است مناسب‌تر باشند.
+%
+%\item انتقال یادگیری:
+%
+%در مواردی که مدل‌های پیش‌آموزش داده‌شده برای معماری‌های خاص \lr{CNN} موجود و وظیفه شما با ویژگی‌های یادگرفته‌شده توسط آن مدل همخوانی داشته باشد، ممکن است موثرتر باشد که از مدل پیش‌آموزش داده‌شده به جای \lr{ResNet} استفاده کنید.
+%\end{enumerate}
+%%7
+%\section{}
+%کاربردهای لایه‌ی مانولوشنی $1\times1$ (\lr{Conv} $1\times1$) به شرح زیر است:
+%\begin{enumerate}
+%
+%\item    کاهش/افزایش ابعاد:
+%
+%        \lr{Conv} $1\times1$ برای کاهش یا افزایش تعداد کانال‌ها در نقشه ویژگی استفاده می‌شود، که به طور مؤثر اعماق داده را در عین حفظ اطلاعات فضایی (ارتفاع و عرض) کاهش یا افزایش می‌دهد .
+%
+%\item    کاهش بار محاسباتی:
+%        با استفاده از \lr{Conv} $1\times1$ قبل از لایه‌های کانولوشن بزرگ‌تر (مثل $3\times3$ یا $5\times5$)، تعداد عملیات به طریق قابل توجهی کاهش می‌یابد که منجر به کارآیی محاسباتی می‌شود. این به ویژه زمانی مفید است که با نقشه‌های ویژگی ورودی بزرگ سر و کار داریم.
+%
+%\item    غیرخطیت بیشتر:
+%        \lr{Conv} $1\times1$ غیرخطیت را به شبکه می‌آورد و با اعمال توابع فعال‌سازی به خروجی کانولوشن، به توانایی ابراز مدل کمک می‌کند.
+%
+%\item    ایجاد شبکه‌های عمیق‌تر ("لایه \lr{Bottle-Neck}"):
+%        \lr{Conv} $1\times1$ در طراحی "لایه \lr{Bottle-Neck}" استفاده می‌شود، همانند معماری \lr{ResNet}. این لایه به کاهش و بازیابی ابعاد در دنباله‌ای از لایه‌های کانولوشن کمک می‌کند و ترتیب آموزش شبکه‌های بسیار عمیق را تسهیل می‌دهد.
+%
+%\item    ایجاد مدل‌های کوچک‌تر و با دقت بالاتر ("لایه \lr{Fire module}"):
+%        در مدل‌هایی مانند \lr{SqueezeNet}، \lr{Conv} $1\times1$ جزء حیاتی در "لایه \lr{Fire module}" برای کاهش کانال‌های ورودی قبل از تغذیه به لایه گسترشی استفاده می‌شود. این منجر به ایجاد یک مدل کوچکتر با تعداد کمتری پارامتر در حالی که دقت را حفظ می‌کند.
+%\end{enumerate}
+%به طور خلاصه، \lr{Conv} $1\times1$ ابزار چند منظوره‌ای در معماری شبکه‌های عصبی کانولوشنی است، که به منظور کاهش ابعاد، کارآیی محاسباتی، معرفی غیرخطیت، ایجاد شبکه‌های عمیق‌تر، و ایجاد مدل‌های کوچکتر با دقت بالاتر مورد استفاده قرار می‌گیرد.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1} https://machinelearningmastery.com/transfer-learning-for-deep-learning/
+\bibitem{b1} https://stats.stackexchange.com/questions/287486/yolo-loss-function-explanation
+
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}

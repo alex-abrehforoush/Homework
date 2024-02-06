@@ -83,7 +83,78 @@
 
 %1
 \section{}
+\begin{latin}
+\subsection{Question:}
+Prove that the lower bound for cross-entropy loss with $L$ correct classes is as following: \\
+\begin{center}
+$
+L\left( \hat{y}, y \right) \ge L \log L, \quad y \in \left\{ 0, 1 \right\} ^ {n_y}
+$
+\end{center}
+\subsection{Proof:}
+Let's assume that $\hat{y_i}$'s are the outputs of the network. Without loss of generality, we assume $y_{k_1}, \cdots , y_{k_L}$ to be equal to 1 ($k_1, \cdots , k_L$ are correct classes). Considering that the sum of $\hat{y_i}$'s is equal to 1 and exactly $L$ of the $y_i$'s are equal to 1, we have:\\
+\begin{center}
+$
+L\left( \hat{y}, y \right) = -\sum_{i = 1}^{n_y} y_i \log \hat{y}_i = -\sum_{j = 1}^{L} y_{k_j} \log \hat{y}_{k_j} = -\sum_{j = 1}^{L} \log \hat{y}_{k_j}
+$
+\end{center}
+Considering AM-GM Inequality we have the following:\\
+\begin{center}
+$
+\frac{\hat{y}_{k_1} + \cdots + \hat{y}_{k_L}}{L} \ge \sqrt[L]{\hat{y}_{k_1}\cdots\hat{y}_{k_L}}
+$
+\end{center}
+$
+\\ \\ \overset{\text{both sides to the power of $L$} }{\Longrightarrow} \\ \\
+$
+\begin{center}
+$
+\left( \frac{\hat{y}_{k_1} + \cdots + \hat{y}_{k_L}}{L} \right) ^ {L} \ge \hat{y}_{k_1}\cdots\hat{y}_{k_L}
+$
+\end{center}
+$
+\\ \\ \overset{1 \ge \hat{y}_{k_1} + \cdots + \hat{y}_{k_L}}{\Longrightarrow} \\ \\
+$
+\begin{center}
+$
+\left( \frac{1}{L} \right) ^ {L} \ge \left( \frac{\hat{y}_{k_1} + \cdots + \hat{y}_{k_L}}{L} \right) ^ {L} \ge \hat{y}_{k_1}\cdots\hat{y}_{k_L}
+$
+\end{center}
+$
+\\ \\ \overset{\text{log of each side}}{\Longrightarrow} \\ \\
+$
+\begin{center}
+$
+-L \log L \ge \log \left( \hat{y}_{k_1}\cdots\hat{y}_{k_L} \right) \Longrightarrow
+$
+\end{center}
+\begin{center}
+$
+-\log \left( \hat{y}_{k_1}\cdots\hat{y}_{k_L} \right) \ge L \log L 
+$
+\end{center}
+$
+\\ \\ \Longrightarrow
+$
+\begin{center}
+$
+-\sum_{j = 1}^{L} \log \hat{y}_{k_j} \ge L \log L
+$
+\end{center}
+$
+\\ \\ \Longrightarrow
+$
+\begin{center}
+$
+L\left( \hat{y}, y \right) \ge L \log L
+$
+\end{center}
+$
+\qedsymbol{}
+$
+\end{latin}
 
+\newpage
 %2
 \section{}
 فرض کنیم که $\hat{y_i}$ها خروجی‌های شبکه باشند. بدون از دست رفتن کلیت فرض می‌کنیم
