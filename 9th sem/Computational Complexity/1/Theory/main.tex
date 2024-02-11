@@ -1,0 +1,222 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage{neuralnetwork}
+\usepackage{pgfplots}
+\usepackage[sorting=none]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage[font={small,it}]{caption}
+\usepackage{placeins}
+\usepackage{xepersian}
+
+\pgfplotsset{width=8cm,compat=1.17}
+
+%\DeclareMathOperator*{\btie}{\bowtie}
+\addbibresource{bibliography.bib}
+\settextfont[Scale=1.2]{B-NAZANIN.TTF}
+\setlatintextfont[Scale=1]{Times New Roman}
+\renewcommand{\baselinestretch}{1.5}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{تکلیف اول درس پیچیدگی محاسباتی}
+\lhead{\thepage}
+\rfoot{علیرضا ابره فروش}
+\lfoot{9816603}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+%%%%%%%%%%
+\lstset
+{
+    language=[latex]tex,
+    basicstyle=\ttfamily,
+    commentstyle=\color{black},
+    columns=fullflexible,
+    keepspaces=true,
+    upquote=true,
+    showstringspaces=false,
+    morestring=[s]\\\%,
+    stringstyle=\color{black},
+}
+%%%%%%%%%%
+%beginMatlab
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%endMatlab
+\begin{document}
+%beginMatlab
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%endMatlab
+\input{titlepage}
+
+%\tableofcontents
+\newpage
+
+
+%1
+\section{}
+
+\begin{latin}
+$
+c_1.n^{2^{n}}.2^{c_2n.c_3^{n}} \in 2 ^ {2 ^ {O\left( n \right)}} \Longleftrightarrow \\
+\log \left( c_1 \right) + 2 ^ n\log \left( n \right) + c_2 n . c_3 ^ n \in 2 ^ {O\left( n \right)} 
+\overset{c_3 > 2}{\Longleftrightarrow} \\
+n . c_3 ^ n \in 2 ^ {O\left( n \right)} 
+\Longleftrightarrow \\
+\log \left( n \right) + n \log \left( c_3 \right) \in O\left( n \right) \Longleftrightarrow \\
+n \in O\left( n \right) \\
+\qedsymbol{}
+$
+\end{latin}
+
+%2
+\section{}
+\begin{latin}
+Let $A$ and $B$ be two languages in $P$. We aim to prove that there exists a polynomial-time reduction from $A$ to $B$. 
+
+Since $A$ is in $P$, there exists a deterministic polynomial-time Turing machine $M_A$ that decides $A$. Similarly, since $B$ is in $P$, there exists a deterministic polynomial-time Turing machine $M_B$ that decides $B$.
+
+Given a string $z$, we can check whether $z$ is in $A$ using $M_A$ in polynomial time.
+
+Now, let's define our reduction function $f$ as follows:
+
+Given an input string $z$:
+\begin{itemize}
+    \item If $z$ is in $A$, output $x$ (since $z$ is in $A$, $f(z)$ should be in $B$).
+    \item If $z$ is not in $A$, output $y$ (since $z$ is not in $A$, $f(z)$ should not be in $B$).
+\end{itemize}
+
+Since $M_B$ runs in polynomial time, and the construction of $f(z)$ also runs in polynomial time, the function $f$ is a polynomial-time computable function.
+
+Therefore, we've shown that there exists a polynomial-time reduction from $A$ to $B$.
+\end{latin}
+
+
+%3
+\section{}
+\subsection{}
+\begin{latin}
+Assume, for the sake of contradiction, that $B_1$ is decidable. 
+
+If $B_1$ is decidable, then there exists a Turing machine $M_{B_1}$ that decides it. 
+
+We can use $M_{B_1}$ to decide $A_1$ as follows:
+
+Given an input $< M >$, where $M$ is a Turing machine:
+\begin{enumerate}
+    \item Construct a Turing machine $N$ such that $L(N)$ is the complement of $L(M)$, i.e., $L(N) = \Sigma^* \setminus L(M)$.
+    \item Encode $< M >$ and the description of $N$ as input for $M_{B_1}$.
+    \item If $M_{B_1}$ accepts, output "accept". If $M_{B_1}$ rejects, output "reject".
+\end{enumerate}
+
+If $M_{B_1}$ accepts, it means that $N$ accepts all strings, i.e., $L(N) = \Sigma^*$. This implies that $L(M)$ is empty, and thus $< M > \in A_1$. 
+
+If $M_{B_1}$ rejects, it means that $N$ does not accept all strings, i.e., $L(N) \neq \Sigma^*$. This implies that $L(M)$ is not empty, and thus $< M > \notin A_1$. 
+
+However, we know that $A_1$ is undecidable, which contradicts our assumption that $B_1$ is decidable.
+
+Therefore, our initial assumption that $B_1$ is decidable must be false. Hence, $B_1$ is undecidable.
+\end{latin}
+
+
+\subsection{}
+
+
+%4
+\section{}
+\begin{latin}
+Use the construction: The TM $M'$ encodes the $k$ tapes of $M$ (including its input and output tapes) on a single tape by using locations $1, k + 1, 2k + 1, \cdots$ to encode the first tape, locations $2, k + 2, 2k + 2, \cdots$ to encode the second tape etc. For every symbol $a$ in $M$’s alphabet, $M'$ will contain both the symbol $a$ and the symbol $\hat{a}$. In the encoding of each tape, exactly one symbol will be of the "hat type," indicating that the corresponding head of $M$ is positioned in that location. $M'$ uses the input and output tape in the same way $M$ does. To simulate one step of $M$, the machine $M'$ makes two sweeps of its work tape: first it sweeps
+the tape in the left-to-right direction and records to its state register the $k$
+symbols that are hatted. Then $M'$ uses $M$’s transition function to determine
+the new state, symbols, and head movements and sweeps the tape back in
+the right-to-left direction to update the encoding accordingly."
+
+We really only need to make a few changes to this to make $M'$ into an
+oblivious TM $M''$:
+
+• When $M'$ updates the encoding in its right-to-left sweep, it may need
+to move the \^ marker to the right. However, $M''$ cannot stop and move
+right when it finds the hat, because it is oblivious. Therefore, the head
+of $M''$ must, on its right-to-left sweep, move LRL every time $M'$ would
+move L, so its movement pattern will look like LRLLRLLRL... That
+way, the head always has the opportunity to move the \^ marker either
+left or right when it is encountered.
+
+• We need to know how far out $M''$ needs to sweep. One option is to
+calculate $T(n)$ in advance and place a special marker at spot $kT(n)+1$,
+so that we always sweep out to $T (n) + 1$ and back to the beginning.
+Alternatively, we simply place a marker at spot $k + 1$ in step $1$, and at
+the end of every sweep right, we have $M''$ move the marker $k$ cells to
+the right. This will work because the original machine $M$ cannot have
+gone beyond spot $i$ in step $i$ of its calculation.
+
+• We also need to handle the case where $M$ might halt at different times
+depending on the input. We know that $M$ is computable in time $T (n)$
+for some time constructible $T$ . This means that there exists a machine
+$M_T$ such that on all inputs of length $n$, $M_T$ halts in exactly $T (n)$
+steps. We can simulate $M$ and $M_T$ simultaneously on the same input
+by adding $m$ tapes (this includes input/output tapes) for simulation
+of $M_T$ to $M''$. States of the machine $M''$ can then be considered as
+pairs of states of the above form corresponding to $M$ and $M_T$. $M'$ will
+continue sweeping back and forth in the oblivious manner described
+above until $M_T$ halts.
+Because we’re sweeping out to a maximum distance of $kT (n)$, and we do
+it $T (n)$ times, the machine $M''$ runs in time $O(T (n)2)$.
+\end{latin}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section*{منابع}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{99} % assumes less than 100 references
+%چنانچه مرجع فارسی نیز داشته باشید باید دستور فوق را فعال کنید و مراجع فارسی خود را بعد از این دستور وارد کنید
+
+
+\begin{LTRitems}
+
+\resetlatinfont
+
+\bibitem{b1} https://www.shiksha.com/online-courses/articles/relu-and-sigmoid-activation-function/
+\bibitem{b1} https://medium.com/@amanatulla1606/vanishing-gradient-problem-in-deep-learning-understanding-intuition-and-solutions-da90ef4ecb54
+\bibitem{b1} https://en.wikipedia.org/wiki/Rectifier\_(neural\_networks)
+\bibitem{b1} https://wandb.ai/ayush-thakur/dl-question-bank/reports/ReLU-vs-Sigmoid-Function-in-Deep-Neural-Networks--VmlldzoyMDk0MzI
+\bibitem{b1} https://medium.com/swlh/why-are-neural-nets-non-linear-a46756c2d67f
+\end{LTRitems}
+
+\end{thebibliography}
+
+
+\end{document}
